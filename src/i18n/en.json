@@ -260,6 +260,7 @@
     "compareWith": "Compare with (up to {n})",
     "glassDashboard": "WHO GLASS dashboard",
     "glassReport": "GLASS report 2022",
+    "sourceMore": "+{n} national surveillance systems (EARS-Net, JANIS, Kor-GLASS …)",
     "notice": {
       "title": "Provisional comparison — read the comparability notes first",
       "body": "Country values are approximate figures curated from the WHO GLASS 2022 report, the GLASS dashboard and national surveillance systems (bloodstream isolates, ~2021–2022). Taiwan is not a WHO Member State and does not report to GLASS: its values are computed by this site from the Taiwan CDC THAS annual reports, which use different specimens, breakpoints and counting rules.",

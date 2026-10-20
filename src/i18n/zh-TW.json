@@ -260,6 +260,7 @@
     "compareWith": "比較對象（最多 {n} 國）",
     "glassDashboard": "WHO GLASS 儀表板",
     "glassReport": "GLASS 2022 報告",
+    "sourceMore": "另含 {n} 個國家監測系統（EARS-Net、JANIS、Kor-GLASS 等）",
     "notice": {
       "title": "暫定比較：請先閱讀可比較性說明",
       "body": "各國數值為依 WHO GLASS 2022 報告、GLASS 儀表板及各國監測系統整理之近似值（血流檢體，約 2021–2022 年）。臺灣非 WHO 會員、未參與 GLASS，臺灣數值由本站依疾管署 THAS 年報計算，其檢體、判讀標準與計數規則均與 GLASS 不同。",

@@ -260,6 +260,7 @@
     "compareWith": "比較対象（最大{n}か国）",
     "glassDashboard": "WHO GLASSダッシュボード",
     "glassReport": "GLASS 2022年報告書",
+    "sourceMore": "ほか各国サーベイランス {n} 件（EARS-Net、JANIS、Kor-GLASS など）",
     "notice": {
       "title": "暫定的な比較です。まず比較可能性の注記をお読みください",
       "body": "各国の値は WHO GLASS 2022年報告書、GLASSダッシュボードおよび各国サーベイランスから整理した近似値です（血流由来株、2021〜2022年頃）。台湾はWHO非加盟でGLASSに参加していないため、台湾の値は台湾CDCのTHAS年報から本サイトが算出しており、検体・判定基準・集計方法がGLASSと異なります。",
