@@ -21,7 +21,12 @@ export function ResistanceHeatmap({ level = 'all', ward = 'all', setting = 'all'
   const ref = useRef<EChartHandle>(null);
   const { data: env, status, isFixture } = useDataset('resistance', { fixtureFallback });
   const pv = useMemo(() => (env ? pivotPathogenAntibiotic(env.records, { level, ward, setting, dims: env.dims, pathogens: HEATMAP_PATHOGENS, antibiotics: HEATMAP_ANTIBIOTICS }) : null), [env, level, ward, setting]);
-  const nameP = dimNamer(env?.dims?.pathogens, t.locale);
+  const longName = dimNamer(env?.dims?.pathogens, t.locale);
+  // Axis uses the conventional short binomial (meta.short, e.g. "S. aureus") when the pipeline provides it.
+  const nameP = useMemo(() => {
+    const short = new Map((env?.dims?.pathogens ?? []).map((d) => [d.code, typeof d.meta?.short === 'string' ? (d.meta.short as string) : undefined]));
+    return (code: string) => (t.locale === 'en' ? short.get(code) : undefined) ?? longName(code);
+  }, [env, t.locale, longName]);
   const nameA = dimNamer(env?.dims?.antibiotics, t.locale);
 
   const title = t('charts.resistanceHeatmap.title');
@@ -38,7 +43,7 @@ export function ResistanceHeatmap({ level = 'all', ward = 'all', setting = 'all'
           const v = (p as { value: [number, number, number, number | null] }).value;
           const esc = (x: string) => x.replace(/[&<>]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[m]!);
           return `<div style="font-weight:700;font-size:15px">${fmtPct(v[2], t.locale)}</div>
-            <div style="opacity:.8">${esc(nameP(pv.pathogens[v[1]]))} × ${esc(nameA(pv.antibiotics[v[0]]))}</div>
+            <div style="opacity:.8">${esc(longName(pv.pathogens[v[1]]))} × ${esc(nameA(pv.antibiotics[v[0]]))}</div>
             ${v[3] ? `<div style="opacity:.6;font-size:11.5px">${esc(t('common.isolates'))}: ${fmtNumber(v[3], t.locale)}</div>` : ''}`;
         },
       },
@@ -91,7 +96,7 @@ export function ResistanceHeatmap({ level = 'all', ward = 'all', setting = 'all'
         },
       ],
     } as EChartsOption;
-  }, [pv, ct.theme, ct.tokens, t, compact, nameP, nameA]);
+  }, [pv, ct.theme, ct.tokens, t, compact, nameP, nameA, longName]);
 
   // Apply per-cell label colours (textOn) after base option is built.
   const finalOption = useMemo<EChartsOption>(() => {
@@ -134,7 +139,11 @@ export function ResistanceHeatmap({ level = 'all', ward = 'all', setting = 'all'
       compact={compact}
       height={height}
     >
-      <EChart ref={ref} option={finalOption} height={height} ariaLabel={`${title}. ${t('charts.resistanceHeatmap.aria')}`} />
+      <div style={{ overflowX: 'auto', overflowY: 'hidden' }}>
+        <div style={{ minWidth: pv ? pv.antibiotics.length * 34 + 150 : undefined }}>
+          <EChart ref={ref} option={finalOption} height={height} ariaLabel={`${title}. ${t('charts.resistanceHeatmap.aria')}`} />
+        </div>
+      </div>
     </ChartCard>
   );
 }
