@@ -1,3 +1,4 @@
+import { MotionConfig } from 'framer-motion';
 import { useCallback, type ReactNode } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { Shell } from '../components/layout/Shell';
@@ -28,10 +29,13 @@ function Providers({ children }: { children: ReactNode }) {
 
 export function App() {
   return (
-    <HashRouter>
-      <Providers>
-        <Shell />
-      </Providers>
+    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      {/* honour prefers-reduced-motion for every framer-motion transform (§5) */}
+      <MotionConfig reducedMotion="user">
+        <Providers>
+          <Shell />
+        </Providers>
+      </MotionConfig>
     </HashRouter>
   );
 }

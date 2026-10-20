@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 import s from './layout.module.css';
+import { HeadingLevelContext } from '../ui/headingLevel';
 
 export interface PageHeaderProps {
   eyebrow?: ReactNode;
@@ -36,7 +37,7 @@ export function Section({ title, aside, children, id }: { title?: ReactNode; asi
           {aside}
         </div>
       )}
-      {children}
+      {title ? <HeadingLevelContext.Provider value={3}>{children}</HeadingLevelContext.Provider> : children}
     </section>
   );
 }

@@ -90,7 +90,9 @@ function ChatDrawer({ open, onClose, request }: { open: boolean; onClose: () => 
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = prevOverflow;
-      prevFocus?.focus?.();
+      // the launcher that opened the drawer is unmounted while it is open → focus its replacement
+      if (prevFocus?.isConnected) prevFocus.focus();
+      else requestAnimationFrame(() => document.querySelector<HTMLElement>('[data-chat-launcher]')?.focus());
     };
   }, [open, onClose]);
 

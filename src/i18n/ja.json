@@ -102,7 +102,9 @@
       "trendIntro": "2017–2024年の病院種別ごとの多剤耐性菌の推移。最大4つの表現型を同じグラフで比較できます。グラフ下のブラシをドラッグすると年を絞り込めます。",
       "antibiogramIntro": "指定した年と病院種別の全国累積アンチバイオグラム（非感性率 = 100 − %S）。セルを選ぶとその菌種を開きます。",
       "pathogenIntro": "1つの菌種を深掘り：発症区分・検体別の耐性率、3年間のアンチバイオグラムの変化、分離株数の推移。",
-      "compareIntro": "2〜4つの表現型または「菌種 × 抗菌薬」を1つのグラフで比較し、最新年の病院種別を比べます。"
+      "compareIntro": "2〜4つの表現型または「菌種 × 抗菌薬」を1つのグラフで比較し、最新年の病院種別を比べます。",
+      "isolates": "菌株数",
+      "isolatesIntro": "菌種ごとの報告菌株数の推移（検体別または市中／院内発症別）と、最新年の菌株数上位10菌種。棒を選択すると菌種を切り替えます。"
     },
     "levelShort": {
       "all": "全体",
@@ -247,6 +249,19 @@
         "term": "初回分離株ルール",
         "body": "アンチバイオグラムは病院ごとに患者・菌種・年あたりの初回分離株を集計し（同日複数の場合は最も悪い結果）、重複株によるバイアスを抑えています。"
       }
+    },
+    "isolates": {
+      "allOrganisms": "全菌種",
+      "scope": "検体／発症区分",
+      "railNote": "菌株数は総数のみ（多剤耐性菌の I+R／S 内訳は加算しません）。病院区分別は全検体と市中／院内発症のみです。",
+      "trendTitle": "{organism}：菌株数の推移",
+      "trendSubtitle": "報告菌株数、{level} · {group}",
+      "bySpecimen": "検体別",
+      "byOnset": "市中／院内発症別",
+      "trendAria": "検体別・発症区分別の菌株数推移の折れ線グラフ",
+      "topTitle": "菌株数上位10菌種（{year}年）",
+      "topSubtitle": "{scope}、{level} · 棒を選択して菌種を切替",
+      "topAria": "菌株数上位10菌種の横棒グラフ"
     }
   },
   "international": {
@@ -790,14 +805,18 @@
     "up": "{year}年から {value} 上昇",
     "down": "{year}年から {value} 低下",
     "flat": "{year}年から横ばい",
-    "trend": "{from}〜{to}年の推移"
+    "trend": "{from}〜{to}年の推移",
+    "ppShort": "pt"
   },
   "charts": {
     "resistanceTrend": {
       "title": "{phenotype} の耐性率推移",
       "titleGeneric": "{pathogen} の {antibiotic} 耐性",
       "subtitle": "病院区分別の耐性株割合・{scope}",
-      "aria": "耐性率の経年推移を示す折れ線グラフ"
+      "aria": "耐性率の経年推移を示す折れ線グラフ",
+      "basisMixed": "{trendYears}：多剤耐性菌の推移データ（年報本文・図）；{abYears}：アンチバイオグラム表の値（非感性 = 100 − %S）",
+      "basisAb": "アンチバイオグラム表の値 {abYears}（非感性 = 100 − %S）",
+      "basisTrend": "多剤耐性菌の推移データ {trendYears}（年報本文・図）"
     },
     "resistanceHeatmap": {
       "title": "耐性マップ：菌種 × 抗菌薬",

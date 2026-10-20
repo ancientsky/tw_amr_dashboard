@@ -22,6 +22,32 @@
 .card:hover {
   box-shadow: var(--card-shadow-hover);
 }
+/* backdrop-filter makes the card a stacking context: lift it while its Share/menu popover is open so
+   the popover clears neighbouring cards and the floating chat launcher */
+.card:has([aria-expanded='true']) {
+  z-index: calc(var(--z-drawer) - 1);
+}
+/* deep-link target (`chart=<id>`): brief accent ring */
+.flash {
+  animation: cardFlash 2.4s var(--ease-out) both;
+}
+@keyframes cardFlash {
+  0%,
+  60% {
+    box-shadow:
+      0 0 0 3px var(--accent),
+      0 0 32px rgb(0 179 126 / 0.35);
+  }
+  100% {
+    box-shadow: var(--card-shadow);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flash {
+    animation: none;
+    box-shadow: 0 0 0 3px var(--accent);
+  }
+}
 :root[data-theme='dark'] .card:hover {
   border-color: rgb(0 227 140 / 0.2);
 }

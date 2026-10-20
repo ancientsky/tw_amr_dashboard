@@ -102,7 +102,9 @@
       "trendIntro": "MDRO trends 2017–2024 by hospital level. Choose up to four phenotypes to compare them on one chart; drag the brush under the chart to zoom years.",
       "antibiogramIntro": "The national cumulative antibiogram (% non-susceptible = 100 − %S) for one year and hospital level. Select a cell to open that pathogen.",
       "pathogenIntro": "One pathogen in depth: resistance by onset setting and specimen, its three-year antibiogram change, and isolate volume over time.",
-      "compareIntro": "Put 2–4 phenotypes or pathogen × antibiotic pairs on one chart, then compare hospital levels for the latest year."
+      "compareIntro": "Put 2–4 phenotypes or pathogen × antibiotic pairs on one chart, then compare hospital levels for the latest year.",
+      "isolates": "Isolates",
+      "isolatesIntro": "Reported isolate volume over time for one organism, by specimen or by community/hospital onset, plus the ten most frequent organisms in the latest year. Select a bar to switch organism."
     },
     "levelShort": {
       "all": "All",
@@ -247,6 +249,19 @@
         "term": "First-isolate rule",
         "body": "Antibiograms count the first isolate per patient, species and year in each hospital (worst result on the same day), limiting duplicate-isolate bias."
       }
+    },
+    "isolates": {
+      "allOrganisms": "All organisms",
+      "scope": "Specimen / onset",
+      "railNote": "Counts are totals only (MDRO I+R / S splits are never added). Hospital-level counts exist for all specimens and CO/HO only.",
+      "trendTitle": "{organism}: isolates over time",
+      "trendSubtitle": "Reported isolates, {level} · {group}",
+      "bySpecimen": "by specimen",
+      "byOnset": "by community / hospital onset",
+      "trendAria": "Line chart of isolate counts over time by specimen or onset",
+      "topTitle": "Top 10 organisms by isolates, {year}",
+      "topSubtitle": "{scope}, {level} · select a bar to switch organism",
+      "topAria": "Horizontal bar chart of the ten organisms with the most isolates"
     }
   },
   "international": {
@@ -790,14 +805,18 @@
     "up": "Up {value} from {year}",
     "down": "Down {value} from {year}",
     "flat": "Unchanged from {year}",
-    "trend": "Trend {from}–{to}"
+    "trend": "Trend {from}–{to}",
+    "ppShort": "pp"
   },
   "charts": {
     "resistanceTrend": {
       "title": "{phenotype} resistance trend",
       "titleGeneric": "{pathogen} resistant to {antibiotic}",
       "subtitle": "% resistant isolates by hospital level · {scope}",
-      "aria": "Line chart of percentage resistant over time"
+      "aria": "Line chart of percentage resistant over time",
+      "basisMixed": "{trendYears}: MDRO trend series (report text/charts); {abYears}: antibiogram table values (non-susceptible = 100 − %S)",
+      "basisAb": "Antibiogram table values {abYears} (non-susceptible = 100 − %S)",
+      "basisTrend": "MDRO trend series {trendYears} (report text/charts)"
     },
     "resistanceHeatmap": {
       "title": "Resistance map: pathogen × antibiotic",

@@ -12,6 +12,9 @@ import { resistanceSource, useResistanceModel, type Names } from './model';
 import type { ColSort, ExplorerState, RowSort } from './useExplorerState';
 import s from './resistance.module.css';
 
+/** embed ids whose "Open in TW-AMR Watch" link targets this card */
+const EMBED_ALIASES = ['resistance-heatmap'];
+
 type Update = (p: Partial<Record<keyof ExplorerState, unknown>>) => void;
 
 function sortRows(codes: string[], how: RowSort, names: Names, meanOf: (p: string) => number | null, locale: string): string[] {
@@ -255,6 +258,7 @@ export function AntibiogramView({ state, update, link }: { state: ExplorerState;
     <div className={s.viewStack}>
       <ChartCard
         id="resistance-antibiogram"
+        aliases={EMBED_ALIASES}
         title={title}
         subtitle={t('resistance.antibiogram.subtitle', { year: year ?? '—', level: names.level(state.level) })}
         {...common}

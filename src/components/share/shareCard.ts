@@ -112,8 +112,15 @@ export async function drawShareCard(canvas: HTMLCanvasElement, c: ShareCardConte
   // key number
   if (c.keyValue) {
     y += story ? 60 : 28;
-    const numSize = story ? 220 : 150;
+    // shrink to fit the content width (e.g. zh "+23.0 個百分點")
+    let numSize = story ? 220 : 150;
     ctx.font = `750 ${numSize}px ${FONT_STACK}`;
+    const maxW = W - P * 2;
+    const nw = ctx.measureText(c.keyValue).width;
+    if (nw > maxW) {
+      numSize = Math.max(64, Math.floor((numSize * maxW) / nw));
+      ctx.font = `750 ${numSize}px ${FONT_STACK}`;
+    }
     ctx.fillStyle = dark ? '#00e38c' : k.accent;
     if (dark) {
       ctx.shadowColor = 'rgba(0,227,140,0.45)';
@@ -121,7 +128,7 @@ export async function drawShareCard(canvas: HTMLCanvasElement, c: ShareCardConte
     }
     ctx.fillText(c.keyValue, P - 6, y);
     ctx.shadowBlur = 0;
-    y += numSize * 1.02;
+    y += numSize * 1.1;
     if (c.keyLabel) {
       ctx.fillStyle = k.ink2;
       ctx.font = `550 30px ${FONT_STACK}`;
@@ -180,6 +187,19 @@ export async function drawShareCard(canvas: HTMLCanvasElement, c: ShareCardConte
   ctx.fillText(label, P, fy);
   const lw = ctx.measureText(label).width;
   ctx.fillStyle = dark ? '#00e38c' : k.accent;
-  const ul = wrapText(ctx, urlText, W - P * 2 - lw, 1);
-  ctx.fillText(ul[0] ?? '', P + lw, fy);
+  // a deep link has no spaces to wrap at → keep the start (site + route) and ellipsize the query
+  ctx.fillText(fitText(ctx, urlText, W - P * 2 - lw), P + lw, fy);
+}
+
+/** Truncate `text` with "…" so it fits `maxW` at the current ctx.font. */
+export function fitText(ctx: CanvasRenderingContext2D, text: string, maxW: number): string {
+  if (ctx.measureText(text).width <= maxW) return text;
+  let lo = 0;
+  let hi = text.length;
+  while (lo < hi) {
+    const mid = Math.ceil((lo + hi) / 2);
+    if (ctx.measureText(`${text.slice(0, mid)}…`).width <= maxW) lo = mid;
+    else hi = mid - 1;
+  }
+  return `${text.slice(0, lo)}…`;
 }

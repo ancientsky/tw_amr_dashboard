@@ -26,7 +26,7 @@ WHO GLASS 進行國際比較。對象為感染管制人員、臨床微生物師�
 | 路徑 | 內容 |
 |---|---|
 | `#/` | 總覽：重點指標、趨勢、熱圖 |
-| `#/resistance` | 抗藥性趨勢（菌種、抗生素、醫院層級、感染起源、檢體） |
+| `#/resistance` | 抗藥性探索器：`view=trend`（多重抗藥菌趨勢）· `antibiogram`（敏感性圖譜）· `pathogen`（單一菌種）· `compare`（比較）· `isolates`（菌株數） |
 | `#/antibiotic-use` | 抗生素使用量（類別、AWaRe） |
 | `#/hai` | 醫療照護相關感染（感染密度、CLABSI/CAUTI/VAP、裝置使用率） |
 | `#/international` | WHO GLASS 國際比較 |
@@ -35,7 +35,17 @@ WHO GLASS 進行國際比較。對象為感染管制人員、臨床微生物師�
 | `#/about` | 方法說明與資料來源 |
 | `#/chat` | AMR 問答 |
 
-網址參數範例：`#/resistance?pathogen=ABA&antibiotic=MEM&level=medical_center&years=2018-2024&lang=en&theme=dark`
+網址參數範例：`#/resistance?phenotype=CRAB&level=medical_center&years=2018-2024&lang=en&theme=dark`
+
+各頁可讀取的參數（所有頁面另支援 `lang=zh-TW|en|ja`、`theme=light|dark`，以及 `chart=<圖卡 id>`：開啟時自動捲動並標示該圖卡）：
+
+| 頁面 | 參數 |
+|---|---|
+| `#/resistance` | `view`、`phenotype`（可逗號分隔最多 4 個）、`pathogen`、`antibiotic`、`level`、`setting`、`specimen`、`years`、`year`、`items`（compare）、`organism`／`scope`（isolates） |
+| `#/international` | `indicator`、`countries`、`region`、`year`、`bars` |
+| `#/antibiotic-use` | `level`、`metric`、`classes`、`years` |
+| `#/hai` | `level`、`icu`、`metric`、`years`、`site` |
+| `#/resources` | `q`、`cat`、`region`、`view` |
 
 ### 資料來源與暫定資料說明
 - **抗藥性（`resistance.json`）與菌株數（`isolates.json`）**：轉錄自使用者提供的三份《臺灣抗生素抗藥性監視年報》
@@ -82,11 +92,26 @@ npm run build && node scripts/screenshot.mjs   # Playwright 截圖：各頁 × �
         data-chart="resistance-trend" data-pathogen="KPN" data-antibiotic="MEM"
         data-lang="zh-TW" data-theme="light" async></script>
 ```
-可用圖表：`resistance-trend`、`resistance-heatmap`、`kpi-strip`。完整說明見 [docs/EMBED.md](docs/EMBED.md)。
+可用圖表：`resistance-trend`、`resistance-heatmap`、`kpi-strip`、`resistance-co-ho`、`resistance-pathogen-bars`、
+`glass-map`、`glass-bars`、`amu-stacked`、`amu-aware`、`hai-trend`、`hai-bump`（後六者為暫定資料，圖卡會標示）。
+iframe 會以 `postMessage`（`twamr:resize`）自動調整高度；每張圖卡的「分享 → 複製嵌入碼」可產生目前檢視的程式碼。
+完整說明見 [docs/EMBED.md](docs/EMBED.md)。
 
 ### API
 靜態 JSON／CSV API：`https://ancientsky.github.io/tw_amr_dashboard/api/v1/`（[docs/API.md](docs/API.md)、
-[openapi.yaml](https://ancientsky.github.io/tw_amr_dashboard/api/v1/openapi.yaml)）。
+[openapi.yaml](https://ancientsky.github.io/tw_amr_dashboard/api/v1/openapi.yaml)）。GitHub Pages 允許跨來源存取（CORS）：
+
+```js
+const base = 'https://ancientsky.github.io/tw_amr_dashboard/api/v1/';
+const crkp = await (await fetch(base + 'resistance/phenotype/CRKP.json')).json();
+console.log(crkp.records.filter((r) => r.level === 'all' && r.setting === 'all').map((r) => [r.year, r.resistant_pct]));
+```
+其他路徑：`index.json`（目錄）、`<dataset>.json|.csv`、`resistance/pathogen/{CODE}.json`、`resistance/year/{YYYY}.json`、
+`glass/indicator/{CODE}.json` 等；`#/data` 頁面內建 API 試用器。
+
+### 品質檢查
+`npm run build && node scripts/qa.mjs`：以 Playwright 逐頁（三語 × 淺／深）檢查主控台錯誤、未翻譯鍵值、`<html lang>`／標題、
+每頁單一 h1、手機寬度（360px）水平溢位，以及所有嵌入圖表的 `twamr:resize` 訊息。
 
 ---
 
@@ -101,8 +126,11 @@ teams, clinical microbiologists, ID physicians and hospital epidemiologists.
 table, branded PNG, CSV, copy-link and share (X, Threads, Facebook, LINE, Web Share, Instagram cards, embed code) ·
 URL-addressable state · one-line hospital embeds · open JSON/CSV static API · in-browser AMR assistant.
 
-**Routes:** `#/` overview · `#/resistance` · `#/antibiotic-use` · `#/hai` · `#/international` · `#/data` (downloads,
-API, embed builder) · `#/resources` · `#/about` (methodology) · `#/chat`.
+**Routes:** `#/` overview · `#/resistance` (explorer: `view=trend|antibiogram|pathogen|compare|isolates`) ·
+`#/antibiotic-use` · `#/hai` · `#/international` · `#/data` (downloads, API, embed builder) · `#/resources` ·
+`#/about` (methodology) · `#/chat`. All state lives in the hash query, e.g.
+`#/resistance?phenotype=CRKP&setting=ho&years=2019-2024`; every page also accepts `lang`, `theme` and `chart=<card id>`
+(scrolls to and highlights that card). The per-page parameter list is in the table in the Chinese section above.
 
 ### Data provenance
 - `resistance.json` and `isolates.json` are **transcribed from the three Taiwan CDC AMR annual reports** supplied in `raw/`
@@ -115,9 +143,11 @@ API, embed builder) · `#/resources` · `#/about` (methodology) · `#/chat`.
 - Independent project — not an official Taiwan CDC or WHO publication, not medical advice.
 
 ### Adding report PDFs
-Drop PDFs into `raw/` keeping the CE year in the file name (e.g. `raw/臺灣抗生素使用量監視年報(2024年).pdf`), push, and
-the ingest workflow regenerates `public/data/` and `public/api/v1/` (locally: `bash scripts/ingest/run_all.sh`). See
-[data/source/README.md](data/source/README.md) and [docs/DATA.md](docs/DATA.md).
+Drop PDFs into `raw/` keeping the CE year in the file name (e.g. `raw/臺灣抗生素使用量監視年報(2024年).pdf` for antibiotic use,
+`raw/醫療照護相關感染監視年報(2024年).pdf` for HAI), push, and the ingest workflow regenerates `public/data/` and
+`public/api/v1/` (locally: `bash scripts/ingest/run_all.sh`). Once a dataset's
+`provisional` flag turns `false` its provisional chips and notices disappear automatically. See
+[data/source/README.md](data/source/README.md), [docs/DATA.md](docs/DATA.md) and [docs/TRANSCRIPTION.md](docs/TRANSCRIPTION.md).
 
 ### Development
 ```bash
@@ -129,9 +159,31 @@ npm run build && node scripts/screenshot.mjs   # smoke screenshots (routes × li
 Stack: Vite 5 · React 18 · TypeScript (strict) · react-router HashRouter · Apache ECharts 5 · framer-motion · CSS Modules +
 design tokens. Architecture and shared contracts: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
-### Embeds & API
-Embed any registered chart with one script tag — see [docs/EMBED.md](docs/EMBED.md). Static API base:
-`https://ancientsky.github.io/tw_amr_dashboard/api/v1/` — see [docs/API.md](docs/API.md).
+### Embeds
+```html
+<script src="https://ancientsky.github.io/tw_amr_dashboard/embed.js"
+        data-chart="resistance-trend" data-pathogen="KPN" data-antibiotic="MEM"
+        data-lang="en" data-theme="light" async></script>
+```
+11 charts can be embedded (`resistance-trend`, `resistance-heatmap`, `kpi-strip`, `resistance-co-ho`,
+`resistance-pathogen-bars`, `glass-map`, `glass-bars`, `amu-stacked`, `amu-aware`, `hai-trend`, `hai-bump`); the iframe
+auto-resizes via `postMessage` (`twamr:resize`). Every card's **Share → Copy embed code** generates the snippet for the
+current view. Details: [docs/EMBED.md](docs/EMBED.md).
+
+### API
+Static, CORS-enabled JSON/CSV at `https://ancientsky.github.io/tw_amr_dashboard/api/v1/` ([docs/API.md](docs/API.md),
+[openapi.yaml](https://ancientsky.github.io/tw_amr_dashboard/api/v1/openapi.yaml)):
+
+```bash
+curl -s https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance/phenotype/CRAB.json | jq '.records[0]'
+curl -sO https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance.csv
+```
+`#/data` has a live API explorer, a downloads grid for every dataset and the embed builder.
+
+### Quality checks
+`npm run build && node scripts/qa.mjs` drives Playwright over every route (3 languages × light/dark) and fails on console
+errors, raw i18n keys, wrong `<html lang>`/title, ≠ 1 `<h1>`, horizontal overflow at 360 px, or an embed that never posts
+`twamr:resize`.
 
 ### License
 Code: MIT. Data: subject to the terms of the original sources (Taiwan CDC, WHO GLASS).

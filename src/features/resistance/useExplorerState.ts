@@ -2,10 +2,11 @@ import { useCallback, useMemo } from 'react';
 import { useHashQuery } from '../../app/hooks/useHashQuery';
 import type { QueryPatch } from '../../app/url';
 import { formatYearRange, parseYearRange, type YearRange } from '../../data/select';
-import type { Level, OnsetSetting, Specimen } from '../../data/types';
-import { LEVEL_KEYS, MDROS, SETTING_KEYS, SPECIMEN_KEYS, parseItem, parseList } from './lib';
+import type { IsolateScope, Level, OnsetSetting, Specimen } from '../../data/types';
+import { LEVEL_KEYS, MDROS, PATHOGEN_TO_ISOLATE, PHENOTYPE_PAIR, SETTING_KEYS, SPECIMEN_KEYS, parseItem, parseList } from './lib';
 
-export const VIEWS = ['trend', 'antibiogram', 'pathogen', 'compare'] as const;
+export const VIEWS = ['trend', 'antibiogram', 'pathogen', 'compare', 'isolates'] as const;
+const SCOPE_KEYS = ['all', 'blood', 'urine', 'sputum', 'pus', 'stool', 'co', 'ho'] as const;
 export type View = (typeof VIEWS)[number];
 export type CompareLevels = 'none' | 'grid' | 'diff';
 export type RowSort = 'order' | 'name' | 'mean';
@@ -35,6 +36,9 @@ export interface ExplorerState {
   csort: ColSort;
   /** compare view items: phenotype codes or PATHOGEN.ANTIBIOTIC pairs */
   items: string[];
+  /** isolates view: isolates.json organism code (TOTAL = all organisms) and scope */
+  organism: string;
+  scope: IsolateScope;
 }
 
 const pick = <T extends string>(v: string | null, allowed: readonly T[], fallback: T): T =>
@@ -56,11 +60,20 @@ export function useExplorerState() {
       .map((x) => parseItem(x)?.id)
       .filter((x): x is string => !!x)
       .slice(0, 4);
+    const view = pick(get('view'), VIEWS, 'trend');
+    const phenotypes = phenos.length ? [...new Set(phenos)] : ['CRAB'];
+    // Drug-level pair defaults to the selected phenotype's defining pair (CRAB → ABA × MEM) on the
+    // trend view, or whenever a phenotype is named in the URL — unless pathogen/antibiotic are explicit.
+    const pair = view === 'trend' || phenos.length ? PHENOTYPE_PAIR[phenotypes[0]] : undefined;
+    const rawPathogen = get('pathogen');
+    const rawAntibiotic = get('antibiotic');
+    const pathogen = (rawPathogen ?? pair?.pathogen ?? 'KPN').toUpperCase();
+    const antibiotic = (rawAntibiotic ?? (rawPathogen && rawPathogen.toUpperCase() !== pair?.pathogen ? 'MEM' : pair?.antibiotic) ?? 'MEM').toUpperCase();
     return {
-      view: pick(get('view'), VIEWS, 'trend'),
-      phenotypes: phenos.length ? [...new Set(phenos)] : ['CRAB'],
-      pathogen: (get('pathogen') ?? 'KPN').toUpperCase(),
-      antibiotic: (get('antibiotic') ?? 'MEM').toUpperCase(),
+      view,
+      phenotypes,
+      pathogen,
+      antibiotic,
       level: pick(get('level'), LEVEL_KEYS, 'all'),
       setting: pick(get('setting'), SETTING_KEYS, 'all'),
       specimen: pick(get('specimen'), SPECIMEN_KEYS, 'all'),
@@ -73,6 +86,8 @@ export function useExplorerState() {
       sort: pick(get('sort'), ['order', 'name', 'mean'] as const, 'order'),
       csort: pick(get('csort'), ['class', 'name', 'mean'] as const, 'class'),
       items: items.length ? [...new Set(items)] : DEFAULT_ITEMS,
+      organism: (get('organism') ?? (rawPathogen ? (PATHOGEN_TO_ISOLATE[pathogen] ?? pathogen) : 'TOTAL')).toUpperCase(),
+      scope: pick(get('scope'), SCOPE_KEYS, 'all'),
     };
   }, [get]);
 
@@ -112,7 +127,11 @@ export function useExplorerState() {
           case 'level':
           case 'setting':
           case 'specimen':
+          case 'scope':
             out[k] = v === 'all' ? null : (v as string);
+            break;
+          case 'organism':
+            out.organism = v === 'TOTAL' ? null : (v as string);
             break;
           case 'cmp':
             out.cmp = v === 'none' ? null : (v as string);

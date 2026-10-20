@@ -100,16 +100,28 @@ function lineChart(title: string, lines: { name: string; rows: ResistanceRecord[
   };
 }
 
+/** MDRO phenotypes the explorer's trend view can chart (others are drug-level pairs). */
+const EXPLORER_PHENOTYPES = new Set(['CRAB', 'CRE', 'CR-ECO', 'CRKP', 'CRPA', 'MRSA', 'VRE', 'VR-EFA', 'VR-EFM']);
+
 function explorerLink(x: ExecCtx, subj: Subject, s: Stratum, years: number[]) {
-  return link(x, 'link.explorer', '/resistance', {
-    phenotype: subj.phenotype,
-    pathogen: subj.pathogen,
-    antibiotic: subj.antibiotic,
-    level: s.level !== 'all' ? s.level : null,
-    setting: s.setting !== 'all' ? s.setting : null,
-    specimen: s.specimen !== 'all' ? s.specimen : null,
-    years: years.length ? `${Math.min(...years)}-${Math.max(...years)}` : null,
-  });
+  const level = s.level !== 'all' ? s.level : null;
+  const span = years.length ? `${Math.min(...years)}-${Math.max(...years)}` : null;
+  if (subj.phenotype && EXPLORER_PHENOTYPES.has(subj.phenotype)) {
+    return link(x, 'link.explorer', '/resistance', {
+      phenotype: subj.phenotype,
+      pathogen: subj.pathogen,
+      antibiotic: subj.antibiotic,
+      level,
+      setting: s.setting !== 'all' ? s.setting : null,
+      specimen: s.specimen !== 'all' ? s.specimen : null,
+      years: span,
+    });
+  }
+  // Drug-level pair: the pathogen view has the specimen breakdown; otherwise the compare view charts the pair over time.
+  if (s.specimen !== 'all' || !subj.pathogen || !subj.antibiotic) {
+    return link(x, 'link.explorer', '/resistance', { view: 'pathogen', pathogen: subj.pathogen, antibiotic: subj.antibiotic, level, specimen: s.specimen !== 'all' ? s.specimen : null });
+  }
+  return link(x, 'link.explorer', '/resistance', { view: 'compare', items: `${subj.pathogen}.${subj.antibiotic}`, level, setting: s.setting !== 'all' ? s.setting : null, years: span });
 }
 
 function seriesFact(subj: Subject, s: Stratum, rows: ResistanceRecord[]): string {
@@ -414,7 +426,7 @@ function execProfile(x: ExecCtx, intent: DataIntent, all: ResistanceRecord[]): E
       series: [{ name: pathogenName(x, p), data: shown.map((r) => r.resistant_pct) }],
       unit: 'pct',
     },
-    links: [link(x, 'link.explorer', '/resistance', { pathogen: p, level: level !== 'all' ? level : null })],
+    links: [link(x, 'link.explorer', '/resistance', { view: 'pathogen', pathogen: p, level: level !== 'all' ? level : null })],
     chips,
     facts,
     intent,

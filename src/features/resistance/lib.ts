@@ -10,6 +10,19 @@ export type RRec = ResistanceRecord & { ci_low?: number | null; ci_high?: number
 
 /** The nine THAS section-4 MDRO indicators, in report order. */
 export const MDROS = ['CRAB', 'CRE', 'CR-ECO', 'CRKP', 'CRPA', 'MRSA', 'VRE', 'VR-EFA', 'VR-EFM'] as const;
+
+/** Defining pathogen × antibiotic pair of each MDRO phenotype (mirrors dims.phenotypes[].meta). */
+export const PHENOTYPE_PAIR: Record<string, { pathogen: string; antibiotic: string }> = {
+  CRAB: { pathogen: 'ABA', antibiotic: 'MEM' },
+  CRE: { pathogen: 'ENB', antibiotic: 'MEM' },
+  'CR-ECO': { pathogen: 'ECO', antibiotic: 'MEM' },
+  CRKP: { pathogen: 'KPN', antibiotic: 'MEM' },
+  CRPA: { pathogen: 'PAE', antibiotic: 'MEM' },
+  MRSA: { pathogen: 'SAU', antibiotic: 'OXA' },
+  VRE: { pathogen: 'ENC', antibiotic: 'VAN' },
+  'VR-EFA': { pathogen: 'EFA', antibiotic: 'VAN' },
+  'VR-EFM': { pathogen: 'EFM', antibiotic: 'VAN' },
+};
 export type Mdro = (typeof MDROS)[number];
 export const GRAM_NEG_MDROS: readonly string[] = ['CRAB', 'CRE', 'CR-ECO', 'CRKP', 'CRPA'];
 export const GRAM_POS_MDROS: readonly string[] = ['MRSA', 'VRE', 'VR-EFA', 'VR-EFM'];

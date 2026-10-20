@@ -46,3 +46,18 @@
 :root[data-theme='dark'] .accent .dot {
   box-shadow: 0 0 8px currentColor;
 }
+
+/* Light theme: tinted text on a 9–16 % tint of itself lands at ~4.1–4.3:1; darken it ~14 % to clear
+   WCAG AA 4.5:1 for 11.5px chip text (dark theme already passes). */
+:root[data-theme='light'] .accent {
+  color: color-mix(in srgb, var(--accent) 86%, #000);
+}
+:root[data-theme='light'] .info {
+  color: color-mix(in srgb, var(--accent-2) 84%, #000);
+}
+:root[data-theme='light'] .warn {
+  color: color-mix(in srgb, var(--warn) 86%, #000);
+}
+:root[data-theme='light'] .danger {
+  color: color-mix(in srgb, var(--danger) 86%, #000);
+}

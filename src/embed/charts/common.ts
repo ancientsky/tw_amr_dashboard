@@ -41,7 +41,9 @@ export function sourceLine(env: Envelope<unknown> | null | undefined, locale: Lo
   const yr = years.length ? (Math.min(...years) === Math.max(...years) ? `${years[0]}` : `${Math.min(...years)}–${Math.max(...years)}`) : '';
   const strip = (x: string) => x.replace(/[\s,，、(（]*(?:\d{4})[)）年]?\s*$/u, '').trim();
   const titles = [...new Set(list.map((s) => strip(localized(s.title, locale))))].join('; ');
-  const pub = list[0]?.publisher;
+  const raw = list[0]?.publisher;
+  // bilingual publisher ("衛生福利部疾病管制署 Taiwan CDC") → the part matching the UI language
+  const pub = raw && (locale === 'en' ? raw.replace(/^[^A-Za-z]+/, '') || raw : raw.replace(/\s*[A-Za-z][A-Za-z ]*$/, '') || raw);
   return [pub, titles].filter(Boolean).join(' · ') + (yr ? ` (${yr})` : '');
 }
 

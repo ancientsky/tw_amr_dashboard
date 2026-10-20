@@ -16,7 +16,9 @@
   if (!script || script.getAttribute('data-twamr-done')) return;
   script.setAttribute('data-twamr-done', '1');
 
-  var ALLOWED = ['chart', 'pathogen', 'antibiotic', 'level', 'ward', 'setting', 'years', 'lang', 'theme', 'compact'];
+  // keep in sync with src/embed/registry.ts (params each chart reads from the embed hash)
+  var ALLOWED = ['chart', 'pathogen', 'antibiotic', 'level', 'ward', 'setting', 'years', 'year', 'indicator', 'region', 'bars',
+    'metric', 'classes', 'icu', 'site', 'lang', 'theme', 'compact'];
   var src = script.getAttribute('src') || '';
   var base = src.replace(/embed\.js(?:[?#].*)?$/, '');
   var params = [];

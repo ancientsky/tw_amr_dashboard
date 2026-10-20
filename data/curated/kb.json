@@ -594,8 +594,9 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "VRE",
-          "pathogen": "EFM"
+          "phenotype": "VRE,VR-EFM,VR-EFA",
+          "pathogen": "EFM",
+          "antibiotic": "VAN"
         }
       },
       "tags": [
@@ -619,8 +620,9 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "VRE",
-          "pathogen": "EFM"
+          "phenotype": "VRE,VR-EFM,VR-EFA",
+          "pathogen": "EFM",
+          "antibiotic": "VAN"
         }
       },
       "tags": [
@@ -644,8 +646,9 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "VRE",
-          "pathogen": "EFM"
+          "phenotype": "VRE,VR-EFM,VR-EFA",
+          "pathogen": "EFM",
+          "antibiotic": "VAN"
         }
       },
       "tags": [
@@ -981,7 +984,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "3GC-R-ECO",
+          "view": "pathogen",
           "pathogen": "ECO",
           "antibiotic": "CRO"
         }
@@ -1009,7 +1012,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "3GC-R-ECO",
+          "view": "pathogen",
           "pathogen": "ECO",
           "antibiotic": "CRO"
         }
@@ -1037,7 +1040,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "3GC-R-ECO",
+          "view": "pathogen",
           "pathogen": "ECO",
           "antibiotic": "CRO"
         }
@@ -1064,7 +1067,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "FQ-R-ECO",
+          "view": "pathogen",
           "pathogen": "ECO",
           "antibiotic": "CIP"
         }
@@ -1090,7 +1093,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "FQ-R-ECO",
+          "view": "pathogen",
           "pathogen": "ECO",
           "antibiotic": "CIP"
         }
@@ -1116,7 +1119,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "FQ-R-ECO",
+          "view": "pathogen",
           "pathogen": "ECO",
           "antibiotic": "CIP"
         }
@@ -1142,7 +1145,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "PNSP",
+          "view": "pathogen",
           "pathogen": "SPN",
           "antibiotic": "PEN"
         }
@@ -1167,7 +1170,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "PNSP",
+          "view": "pathogen",
           "pathogen": "SPN",
           "antibiotic": "PEN"
         }
@@ -1192,7 +1195,7 @@
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "PNSP",
+          "view": "pathogen",
           "pathogen": "SPN",
           "antibiotic": "PEN"
         }
@@ -3033,8 +3036,10 @@
       "chart": {
         "route": "/resistance",
         "params": {
+          "view": "pathogen",
           "pathogen": "ECO",
-          "antibiotic": "CRO"
+          "antibiotic": "CRO",
+          "specimen": "urine"
         }
       },
       "tags": [
@@ -3059,8 +3064,10 @@
       "chart": {
         "route": "/resistance",
         "params": {
+          "view": "pathogen",
           "pathogen": "ECO",
-          "antibiotic": "CRO"
+          "antibiotic": "CRO",
+          "specimen": "urine"
         }
       },
       "tags": [
@@ -3085,8 +3092,10 @@
       "chart": {
         "route": "/resistance",
         "params": {
+          "view": "pathogen",
           "pathogen": "ECO",
-          "antibiotic": "CRO"
+          "antibiotic": "CRO",
+          "specimen": "urine"
         }
       },
       "tags": [

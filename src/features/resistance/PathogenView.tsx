@@ -164,7 +164,7 @@ function SlopeCard({ state, link }: { state: ExplorerState; link: (extra?: Recor
 }
 
 /** Isolate counts over time: specimen breakdown (stacked) with the all-specimen total. */
-function IsolatesCard({ pathogen, link }: { pathogen: string; link: (extra?: Record<string, string | null>) => string }) {
+export function IsolatesCard({ pathogen, label, link }: { pathogen: string; label?: string; link: (extra?: Record<string, string | null>) => string }) {
   const t = useT();
   const ct = useChartTheme();
   const ref = useRef<EChartHandle>(null);
@@ -240,7 +240,8 @@ function IsolatesCard({ pathogen, link }: { pathogen: string; link: (extra?: Rec
     for (const b of model.byScope) row[names.specimen(b.scope)] = b.data[i];
     return row;
   });
-  const title = t('resistance.pathogen.isolatesTitle', { pathogen: names.pathogenShort(pathogen) });
+  const shortName = label ?? names.pathogenShort(pathogen);
+  const title = t('resistance.pathogen.isolatesTitle', { pathogen: shortName });
   const last = model.totalData[model.totalData.length - 1];
   return (
     <ChartCard
@@ -255,7 +256,7 @@ function IsolatesCard({ pathogen, link }: { pathogen: string; link: (extra?: Rec
       tableRows={tableRows}
       fileName={`twamr-${pathogen}-isolates`.toLowerCase()}
       link={link({ chart: 'resistance-pathogen-isolates' })}
-      keyNumber={last ? { value: fmtNumber(last, t.locale), label: `${names.pathogenShort(pathogen)} · ${model.years[model.years.length - 1]}` } : undefined}
+      keyNumber={last ? { value: fmtNumber(last, t.locale), label: `${shortName} · ${model.years[model.years.length - 1]}` } : undefined}
       height={340}
     >
       <EChart ref={ref} option={option} height={340} ariaLabel={`${title}. ${t('resistance.pathogen.isolatesAria')}`} />

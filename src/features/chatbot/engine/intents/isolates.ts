@@ -74,7 +74,7 @@ export function execIsolates(x: ExecCtx, intent: DataIntent): EngineAnswer | nul
         series: [{ name: tc(x.locale, 'ct.isolates'), data: top.map((r) => r.isolates) }],
         unit: 'count',
       },
-      links: [link(x, 'link.isolates', '/resistance', { view: 'isolates', scope: scope !== 'all' ? scope : null, level: level !== 'all' ? level : null })],
+      links: [link(x, 'link.isolates', '/resistance', { view: 'isolates', scope: scope !== 'all' ? scope : null, level: level !== 'all' ? level : null, year })],
       chips: [tc(x.locale, 'chip.isoTotal')],
       facts: [`Top organisms by isolate count, ${year}, scope ${scope}, level ${level}: ${top.map((r) => `${organismName(x, r.organism, 'en')} ${r.isolates}`).join('; ')}`],
       intent,

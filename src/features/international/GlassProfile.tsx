@@ -107,10 +107,11 @@ export function GlassRadar({
       },
       radar: {
         center: ['50%', '48%'],
-        radius: narrow ? '58%' : '66%',
+        radius: narrow ? '52%' : '66%',
         indicator: m.codes.map((c) => ({ name: indicatorShort(env, c), max: 100, min: 0 })),
         axisName: { color: tok.ink2, fontSize: narrow ? 10.5 : 11.5, fontWeight: 600 },
-        splitNumber: 4,
+        // 20% rings: 25-point rings trip ECharts' "ticks may be not readable" (alignTicks) warning
+        splitNumber: 5,
         splitLine: { lineStyle: { color: tok.grid } },
         splitArea: { show: false },
         axisLine: { lineStyle: { color: tok.grid } },

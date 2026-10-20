@@ -33,8 +33,8 @@ function applyTheme(t: Theme) {
   const el = document.documentElement;
   el.dataset.theme = t;
   el.style.colorScheme = t;
-  const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.setAttribute('content', t === 'dark' ? '#070b0a' : '#f7f8f7');
+  // index.html ships one theme-color per prefers-color-scheme; an explicit choice overrides both
+  document.querySelectorAll('meta[name="theme-color"]').forEach((m) => m.setAttribute('content', t === 'dark' ? '#070b0a' : '#f7f8f7'));
 }
 
 /**

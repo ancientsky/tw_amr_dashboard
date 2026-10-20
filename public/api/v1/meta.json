@@ -1,7 +1,7 @@
 {
   "dataset": "meta",
   "version": "1.0.0",
-  "generatedAt": "2026-10-20T07:45:31Z",
+  "generatedAt": "2026-10-20T08:00:21Z",
   "provisional": false,
   "latestYear": 2024,
   "yearsAvailable": [
@@ -49,8 +49,8 @@
       }
     ]
   },
-  "lastBuild": "2026-10-20T07:45:31Z",
-  "contentDigest": "f71ffdecb1f48675a306f5389d3b4ad639fc4920e9e589d7013afe846e11cd43",
+  "lastBuild": "2026-10-20T08:00:21Z",
+  "contentDigest": "b2d08d43b03607bbde81d1b6b5aed07f8c470f4d3cf27ef2b613e8c4ac9298a3",
   "sources": [
     {
       "id": "tw-cdc-amr-2022",

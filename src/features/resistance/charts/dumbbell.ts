@@ -30,7 +30,7 @@ export interface DumbbellSpec {
   /** draw an arrowhead at b */
   arrow?: boolean;
   compact?: boolean;
-  /** right column width (px) for notes */
+  /** minimum right column width (px) for notes; the actual width is measured from the notes */
   noteWidth?: number;
   labelWidth?: number;
   /** phone layout: lift more left labels above their marker */
@@ -46,7 +46,10 @@ export function dumbbellOption(spec: DumbbellSpec): EChartsOption {
   const { rows, tokens: k, fmt } = spec;
   const all = rows.flatMap((r) => [r.a.value, r.b.value, r.mid?.value ?? 0]);
   const max = spec.max ?? Math.min(100, Math.max(10, Math.ceil((Math.max(0, ...all) + 6) / 10) * 10));
-  const noteW = spec.noteWidth ?? (rows.some((r) => r.note) ? 76 : 16);
+  const noteFont = spec.compact ? 11.5 : 12.5;
+  // right column = widest note (+10px offset from the plot, +8px breathing room) so labels never clip
+  const measured = rows.reduce((m, r) => (r.note ? Math.max(m, textWidth(r.note, noteFont) + 18) : m), 16);
+  const noteW = Math.max(spec.noteWidth ?? 0, measured);
   const dot = (p: Point, color: string, size: number) => ({
     value: [p.value, 0],
     symbolSize: size,
@@ -139,7 +142,7 @@ export function dumbbellOption(spec: DumbbellSpec): EChartsOption {
               type: 'text',
               x: cs.x + cs.width + 10,
               y: p0[1],
-              style: { text: r.note, fill: k.ink, font: `650 ${spec.compact ? 11.5 : 12.5}px Inter Variable, system-ui, sans-serif`, verticalAlign: 'middle', align: 'left' },
+              style: { text: r.note, fill: k.ink, font: `650 ${noteFont}px Inter Variable, system-ui, sans-serif`, verticalAlign: 'middle', align: 'left' },
             });
           }
           return { type: 'group', children };
@@ -152,4 +155,11 @@ export function dumbbellOption(spec: DumbbellSpec): EChartsOption {
       { type: 'scatter', name: spec.nameB, z: 4, itemStyle: { color: spec.colorB }, data: pts(spec_b, spec.colorB, 12, 'outer') },
     ],
   } as EChartsOption;
+}
+
+/** Rough rendered width of a label (CJK full-width ≈ 1em, digits/latin ≈ 0.6em) — no DOM needed. */
+export function textWidth(text: string, px: number): number {
+  let w = 0;
+  for (const ch of text) w += /[\u2E80-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF\uFF00-\uFF60]/.test(ch) ? px : ch === ' ' ? px * 0.3 : px * 0.62;
+  return Math.ceil(w);
 }

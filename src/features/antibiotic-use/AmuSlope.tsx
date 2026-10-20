@@ -59,7 +59,7 @@ export function AmuSlope({ level, years, link }: { level: Level; years?: YearRan
       Math.ceil((Math.max(...vals, group === 'Access' ? WHO_ACCESS_TARGET : 0) + 5) / 5) * 5,
     );
     return {
-      grid: { left: narrow ? 8 : 24, right: narrow ? 110 : 150, top: 30, bottom: 8, containLabel: true },
+      grid: { left: narrow ? 8 : 24, right: narrow ? 86 : 150, top: 30, bottom: 8, containLabel: true },
       tooltip: {
         trigger: 'item',
         formatter: (p: unknown) => {
@@ -94,7 +94,8 @@ export function AmuSlope({ level, years, link }: { level: Level; years?: YearRan
           itemStyle: { color: c, borderColor: tok.surface, borderWidth: 2 },
           endLabel: {
             show: true,
-            formatter: () => `${fmtPct(m.b, t.locale)}  ${t(`levels.${m.level}`)}`,
+            // phones: short level names so the label column fits
+            formatter: () => `${fmtPct(m.b, t.locale)}  ${t(narrow ? `resistance.levelShort.${m.level}` : `levels.${m.level}`)}`,
             color: tok.ink2,
             fontSize: 11,
             fontWeight: focus ? 700 : 500,

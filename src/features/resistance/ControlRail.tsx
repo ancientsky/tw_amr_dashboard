@@ -6,7 +6,9 @@ import { Select, type SelectOption } from '../../components/ui/Select';
 import { Button } from '../../components/ui/IconButton';
 import { antibioticsFor } from '../../data/select';
 import type { Envelope, Level, OnsetSetting, ResistanceRecord, Specimen, WhoPriority } from '../../data/types';
+import { useDataset } from '../../data/load';
 import { useT } from '../../i18n';
+import { ISOLATE_SCOPES, useOrganismNamer, useScopeName } from './IsolatesView';
 import { PrecisionLegend, RailGroup, Switch } from './bits';
 import { antibiogramYears, isTrendRow, LEVEL_KEYS, MDROS, orderAntibiotics, parseItem, pathogenStrata, SPECIMEN_KEYS, type AntibiogramIndex } from './lib';
 import type { Names } from './model';
@@ -68,6 +70,15 @@ export function ControlRail({ state, update, env, ab, names }: Props) {
   const abYears = ab ? antibiogramYears(ab) : [2022, 2023, 2024];
   const strata = useMemo(() => (env && state.view === 'pathogen' ? pathogenStrata(env.records, state.pathogen, undefined, env.dims) : null), [env, state.view, state.pathogen]);
   const specimenOpts = SPECIMEN_KEYS.filter((k) => k === 'all' || strata?.bySpecimen.has(k)).map((k) => ({ value: k, label: names.specimen(k) }));
+
+  const iso = useDataset('isolates');
+  const orgName = useOrganismNamer();
+  const scopeName = useScopeName();
+  const organismOptions = useMemo<SelectOption[]>(() => {
+    const codes = (iso.data?.dims?.organisms ?? []).map((d) => d.code).filter((c) => c !== 'OTHER' && c !== 'TOTAL');
+    return ['TOTAL', ...codes].map((c) => ({ value: c, label: orgName(c), hint: c === 'TOTAL' ? undefined : c }));
+  }, [iso.data, orgName]);
+  const scopeOpts = ISOLATE_SCOPES.map((sc) => ({ value: sc, label: scopeName(sc) }));
 
   const setPathogen = (p: string) => {
     const abx = env ? antibioticsFor(env.records.filter((r) => !isTrendRow(r)), p) : [];
@@ -234,6 +245,18 @@ export function ControlRail({ state, update, env, ab, names }: Props) {
           {settingSeg}
           <Switch checked={state.norm} onChange={(v) => update({ norm: v })} label={t('resistance.rail.norm')} hint={t('resistance.rail.normHint')} />
           {yearsSlider}
+        </>
+      )}
+      {state.view === 'isolates' && (
+        <>
+          <RailGroup label={t('common.pathogen')}>
+            <Select options={organismOptions} value={state.organism} onChange={(v) => update({ organism: v })} label={t('common.pathogen')} className={s.full} />
+          </RailGroup>
+          <RailGroup label={t('resistance.isolates.scope')}>
+            <Select options={scopeOpts} value={state.scope} onChange={(v) => update({ scope: v })} label={t('resistance.isolates.scope')} className={s.full} />
+          </RailGroup>
+          {levelSeg}
+          <p className={s.railNote}>{t('resistance.isolates.railNote')}</p>
         </>
       )}
       <div className={s.railDivider} />

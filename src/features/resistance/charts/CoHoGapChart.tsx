@@ -35,6 +35,7 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
   const rows = useMemo(() => (trend ? coHoGaps(trend, level, year, phenotypes) : []), [trend, level, year, phenotypes]);
   const y = rows[0]?.year;
   const pp = t('kpi.pp');
+  const ppShort = t('kpi.ppShort');
   const narrow = useNarrow();
 
   const option = useMemo(() => {
@@ -43,7 +44,7 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
       label: r.phenotype,
       a: r.co,
       b: r.ho,
-      note: narrow ? fmtDelta(r.gap, t.locale) : `${fmtDelta(r.gap, t.locale)} ${pp}`,
+      note: narrow ? fmtDelta(r.gap, t.locale) : `${fmtDelta(r.gap, t.locale)} ${ppShort}`,
     }));
     return dumbbellOption({
       rows: data,
@@ -54,7 +55,6 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
       tokens: ct.tokens,
       fmt: (v) => fmtPct(v, t.locale),
       compact,
-      noteWidth: narrow ? 44 : 84,
       narrow,
       labelWidth: 70,
       tooltip: (d) => {
@@ -66,7 +66,7 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
           <div style="margin-top:4px">${esc(t('resistance.coho.gap'))}: <b>${fmtDelta(g.gap, t.locale)} ${esc(pp)}</b> · ×${Number.isFinite(g.ratio) ? g.ratio.toFixed(1) : '—'}</div>${est}`;
       },
     });
-  }, [rows, ct.theme, ct.tokens, t, pp, compact, names, narrow]);
+  }, [rows, ct.theme, ct.tokens, t, pp, ppShort, compact, names, narrow]);
 
   const top = rows[0];
   const title = t('resistance.coho.title');

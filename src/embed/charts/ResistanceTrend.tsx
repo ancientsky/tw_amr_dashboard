@@ -6,9 +6,10 @@ import { LEVEL_ORDER, colorMap } from '../../components/chart/palette';
 import { useChartTheme } from '../../components/chart/useChartTheme';
 import { useDataset } from '../../data/load';
 import { dimNamer, fmtPct } from '../../data/format';
-import { latestValue, resistanceTrend, seriesToRows } from '../../data/select';
+import { isBetterRecord, latestValue, resistanceTrend, seriesToRows } from '../../data/select';
 import type { ResistanceRecord } from '../../data/types';
 import { useT } from '../../i18n';
+import { useNarrow } from '../../features/resistance/useNarrow';
 import { phenotypeFor, sourceLine, type ChartParams } from './common';
 
 /**
@@ -20,6 +21,7 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, w
   const ct = useChartTheme();
   const ref = useRef<EChartHandle>(null);
   const { data: env, status, isFixture } = useDataset('resistance', { fixtureFallback });
+  const narrow = useNarrow(480);
 
   const model = useMemo(() => {
     if (!env) return null;
@@ -30,7 +32,17 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, w
     const pheno = phenotypeFor(env, pathogen, antibiotic);
     const kpiLevel = level ?? 'all';
     const kv = latestValue(recs, (r) => r.level === kpiLevel) ?? latestValue(recs, (r) => r.level === 'all');
-    return { set, recs, pheno, kv, kpiLevel };
+    // Which source wins each year (antibiogram table rows 2022–2024 vs MDRO trend rows 2017–2024)
+    const best = new Map<number, ResistanceRecord>();
+    for (const r of recs) {
+      if (r.level !== kpiLevel || (years && (r.year < years[0] || r.year > years[1]))) continue;
+      const prev = best.get(r.year);
+      if (!prev || isBetterRecord(r, prev)) best.set(r.year, r);
+    }
+    const span = (ys: number[]) => (ys.length ? (ys[0] === ys[ys.length - 1] ? String(ys[0]) : `${ys[0]}–${ys[ys.length - 1]}`) : '');
+    const sorted = [...best.values()].sort((a, b) => a.year - b.year);
+    const basis = { trendYears: span(sorted.filter((r) => r.phenotype).map((r) => r.year)), abYears: span(sorted.filter((r) => !r.phenotype).map((r) => r.year)) };
+    return { set, recs, pheno, kv, kpiLevel, basis };
   }, [env, pathogen, antibiotic, level, setting, years, ward]);
 
   const nameP = dimNamer(env?.dims?.pathogens, t.locale);
@@ -42,7 +54,17 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, w
     ? t('charts.resistanceTrend.title', { phenotype: namePh(model.pheno) })
     : t('charts.resistanceTrend.titleGeneric', { pathogen: nameP(pathogen), antibiotic: nameA(antibiotic) });
   const scope = [t(`wards.${ward}`), setting !== 'all' ? t(`settings.${setting}`) : null].filter(Boolean).join(' · ');
-  const subtitle = t('charts.resistanceTrend.subtitle', { scope });
+  const basis = model?.basis;
+  const basisText = !basis
+    ? ''
+    : basis.trendYears && basis.abYears
+      ? t('charts.resistanceTrend.basisMixed', basis)
+      : basis.abYears
+        ? t('charts.resistanceTrend.basisAb', basis)
+        : basis.trendYears
+          ? t('charts.resistanceTrend.basisTrend', basis)
+          : '';
+  const subtitle = [t('charts.resistanceTrend.subtitle', { scope }), basisText].filter(Boolean).join(' · ');
 
   const option = useMemo<EChartsOption>(() => {
     if (!model) return {};
@@ -56,7 +78,8 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, w
     const minGap = lasts.slice(1).reduce((g, v, i) => Math.min(g, v - lasts[i]), Infinity);
     const showEnd = set.series.length <= 4 && (lasts.length < 2 || minGap / span > 0.07);
     return {
-      grid: { left: 4, right: compact ? 56 : 72, top: 40, bottom: 4, containLabel: true },
+      // ≤480px the 4 level names wrap to two legend rows
+      grid: { left: 4, right: compact ? 56 : 72, top: narrow ? 66 : 40, bottom: 4, containLabel: true },
       legend: { top: 0, left: 0, data: set.series.map((s) => levelLabel(s.key)) },
       tooltip: {
         trigger: 'axis',
@@ -91,7 +114,7 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, w
       }),
     } as EChartsOption;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [model, ct.theme, ct.tokens, t, compact, level]);
+  }, [model, ct.theme, ct.tokens, t, compact, level, narrow]);
 
   const tableRows = useMemo(() => (model ? seriesToRows(model.set, levelLabel) : undefined), [model, t]); // eslint-disable-line react-hooks/exhaustive-deps
   const empty = status === 'ready' && model && model.set.series.length === 0;

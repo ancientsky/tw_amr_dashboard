@@ -75,7 +75,9 @@ export function HaiTrend({
   const gapY = 46;
   const n = model?.data.length ?? 1;
   const rowsN = Math.ceil(n / cols);
-  const height = rowsN * (panelH + gapY) + 34;
+  // phones: the 2-item legend can wrap to two lines (long metric names in zh/ja)
+  const head = narrow ? 58 : 34;
+  const height = rowsN * (panelH + gapY) + head;
 
   const option = useMemo<EChartsOption>(() => {
     if (!model) return {};
@@ -91,15 +93,16 @@ export function HaiTrend({
     model.data.forEach((d, i) => {
       const c = i % cols;
       const r = Math.floor(i / cols);
-      const top = 34 + r * (panelH + gapY);
+      const top = head + r * (panelH + gapY);
       const left = `${c * w + 1}%`;
       const focus = d.icu === icu;
-      grids.push({ left, width: `${w - 7}%`, top: top + 30, height: panelH - 30, containLabel: true });
+      // leave room on the right for the end label
+      grids.push({ left, width: `${w - (narrow ? 10 : 7)}%`, top: top + 30, height: panelH - 30, containLabel: true });
       titles.push({
         text: nameIcu(d.icu),
         left,
         top,
-        textStyle: { fontSize: 12, fontWeight: focus ? 750 : 600, color: focus ? tok.accent : tok.ink },
+        textStyle: { fontSize: 12, fontWeight: focus ? 750 : 600, color: focus ? tok.accent : tok.ink, width: narrow || compact ? 132 : 230, overflow: 'truncate' },
       });
       xAxes.push({
         type: 'category',
@@ -183,7 +186,7 @@ export function HaiTrend({
       yAxis: yAxes,
       series,
     } as EChartsOption;
-  }, [model, ct, cols, panelH, shared, icu, nameIcu, nameM, metric, t]);
+  }, [model, ct, cols, panelH, head, narrow, compact, shared, icu, nameIcu, nameM, metric, t]);
 
   const tableRows = useMemo(() => {
     if (!model) return undefined;

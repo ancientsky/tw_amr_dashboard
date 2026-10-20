@@ -1,6 +1,7 @@
 import '@fontsource-variable/inter';
 import '../styles/global.css';
 import './embed.css';
+import { MotionConfig } from 'framer-motion';
 import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { DataProvider } from '../app/providers/DataProvider';
@@ -58,7 +59,7 @@ function EmbedView({ q }: { q: URLSearchParams }) {
       </div>
     );
   }
-  const linkParams: Record<string, string> = {};
+  const linkParams: Record<string, string> = { ...def.routeParams };
   for (const k of def.params) {
     const v = q.get(k);
     if (v) linkParams[k] = v;
@@ -101,6 +102,8 @@ function EmbedApp() {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <EmbedApp />
+    <MotionConfig reducedMotion="user">
+      <EmbedApp />
+    </MotionConfig>
   </StrictMode>,
 );

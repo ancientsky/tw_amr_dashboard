@@ -1,4 +1,4 @@
-import { useCallback, useId, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react';
 import { useDatasetProvisional } from '../../app/providers/DataProvider';
 import { useTheme } from '../../app/providers/ThemeProvider';
 import { deepLink, parseHashPath, parseHashQuery, SITE_URL, type QueryPatch } from '../../app/url';
@@ -9,6 +9,7 @@ import { useT } from '../../i18n';
 import { copyText, downloadCsv, downloadDataUrl } from '../../lib/download';
 import { DataTable, type Column, type Row } from '../ui/DataTable';
 import { EmptyState } from '../ui/EmptyState';
+import { useHeadingLevel } from '../ui/headingLevel';
 import { Button } from '../ui/IconButton';
 import { Skeleton } from '../ui/Skeleton';
 import { useToast } from '../ui/Toast';
@@ -22,6 +23,8 @@ import s from './chart.module.css';
 export interface ChartCardProps {
   /** stable id: DOM anchor, `chart=` deep-link param, default file name */
   id?: string;
+  /** other `chart=` values that should also scroll to / highlight this card (e.g. its embed id) */
+  aliases?: readonly string[];
   title: string;
   subtitle?: string;
   /** plain-text source line (also printed on PNG exports and share cards) */
@@ -72,6 +75,7 @@ export interface ChartCardProps {
  */
 export function ChartCard({
   id,
+  aliases,
   title,
   subtitle,
   source,
@@ -104,6 +108,7 @@ export function ChartCard({
   const toast = useToast();
   const { theme } = useTheme();
   const autoId = useId();
+  const Heading = `h${useHeadingLevel()}` as 'h2' | 'h3';
   const headingId = `${id ?? autoId}-title`;
   const card = useRef<HTMLElement>(null);
   const body = useRef<HTMLDivElement>(null);
@@ -168,6 +173,7 @@ export function ChartCard({
 
   const features: ToolbarFeatures = toolbar === true ? {} : toolbar === false ? {} : toolbar;
   const ready = status === 'ready';
+  const flash = useDeepLinkFocus(card, id, aliases, ready);
 
   return (
     <>
@@ -176,7 +182,7 @@ export function ChartCard({
         ref={card}
         id={id}
         aria-labelledby={headingId}
-        className={[s.card, compact ? s.compact : '', fs.fallback ? s.pseudoFull : '', className].filter(Boolean).join(' ')}
+        className={[s.card, compact ? s.compact : '', fs.fallback ? s.pseudoFull : '', flash ? s.flash : '', className].filter(Boolean).join(' ')}
         style={style}
         onKeyDown={(e) => fs.fallback && e.key === 'Escape' && fs.exit()}
       >
@@ -184,9 +190,9 @@ export function ChartCard({
           <div className={s.titles}>
             {eyebrow && <span className="eyebrow">{eyebrow}</span>}
             <div className={s.titleRow}>
-              <h3 id={headingId} className={s.title}>
+              <Heading id={headingId} className={s.title}>
                 {title}
-              </h3>
+              </Heading>
               {isProvisional && <ProvisionalChip />}
               {precision && <PrecisionBadge precision={precision} />}
               {isFixture && <FixtureChip />}
@@ -258,6 +264,46 @@ export function ChartCard({
       </section>
     </>
   );
+}
+
+/** `${route}|${chart}` already handled this page load — scroll once, not on every re-render / filter change. */
+let handledTarget: string | null = null;
+
+/**
+ * Deep links / embed "Open in" links carry `chart=<id>`: once the matching card's data is
+ * ready, scroll it into view (below the sticky nav via scroll-margin) and flash a ring.
+ */
+function useDeepLinkFocus(card: RefObject<HTMLElement>, id: string | undefined, aliases: readonly string[] | undefined, ready: boolean): boolean {
+  const [flash, setFlash] = useState(false);
+  const aliasKey = aliases?.join(',') ?? '';
+  useEffect(() => {
+    if (!id || !ready || typeof window === 'undefined') return;
+    const want = parseHashQuery().get('chart');
+    if (!want || (want !== id && !aliasKey.split(',').includes(want))) return;
+    const key = `${parseHashPath()}|${want}`;
+    if (handledTarget === key) return;
+    handledTarget = key;
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const timers: number[] = [];
+    const go = (behavior: ScrollBehavior) => card.current?.scrollIntoView({ behavior, block: 'start' });
+    // let sibling cards above finish loading (skeleton → chart heights) before scrolling
+    timers.push(
+      window.setTimeout(() => {
+        go(reduced ? 'auto' : 'smooth');
+        setFlash(true);
+      }, 450),
+    );
+    // correct once if late layout shifts moved the card
+    timers.push(
+      window.setTimeout(() => {
+        const top = card.current?.getBoundingClientRect().top ?? 0;
+        if (top < 0 || top > window.innerHeight * 0.5) go('auto');
+      }, 1500),
+    );
+    timers.push(window.setTimeout(() => setFlash(false), 2900));
+    return () => timers.forEach((t) => window.clearTimeout(t));
+  }, [card, id, aliasKey, ready]);
+  return flash;
 }
 
 export function ChartSkeleton({ height = 300, label }: { height?: number; label?: string }) {

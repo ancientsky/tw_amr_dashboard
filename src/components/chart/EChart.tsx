@@ -78,17 +78,19 @@ export const EChart = forwardRef<EChartHandle, EChartProps>(function EChart(
   // events
   useEffect(() => {
     const chart = inst.current;
-    if (!chart || !onEvents) return;
+    if (!chart || chart.isDisposed() || !onEvents) return;
     const entries = Object.entries(onEvents);
     for (const [ev, fn] of entries) chart.on(ev, fn as (p: unknown) => void);
     return () => {
+      // on theme change the init effect's cleanup has already disposed this instance
+      if (chart.isDisposed()) return;
       for (const [ev, fn] of entries) chart.off(ev, fn as (p: unknown) => void);
     };
   }, [onEvents, name]);
 
   useEffect(() => {
     const chart = inst.current;
-    if (!chart) return;
+    if (!chart || chart.isDisposed()) return;
     if (loading) chart.showLoading('default', { text: '', color: 'var(--accent)', maskColor: 'rgba(0,0,0,0)', spinnerRadius: 12, lineWidth: 2 });
     else chart.hideLoading();
   }, [loading, name]);
@@ -101,6 +103,7 @@ export const EChart = forwardRef<EChartHandle, EChartProps>(function EChart(
       className={[s.echart, className].filter(Boolean).join(' ')}
       style={{ height, ...style }}
       data-chart-root=""
+      data-echarts-theme={name}
     />
   );
 });

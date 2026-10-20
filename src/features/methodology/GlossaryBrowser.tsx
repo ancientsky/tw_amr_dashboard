@@ -139,10 +139,10 @@ export function GlossaryBrowser() {
                   </div>
                 )}
                 <div className={[s.glItem, flash === e.abbr ? s.glFlash : ''].join(' ')} data-abbr={e.abbr}>
-                  <h4 className={s.glTerm}>
+                  <h3 className={s.glTerm}>
                     <span className={s.glAbbr}>{e.abbr}</span>
                     <span className={s.glName}>{e.term[t.locale] || e.term.en}</span>
-                  </h4>
+                  </h3>
                   {others.length > 0 && <div className={s.glOthers}>{others.join(' · ')}</div>}
                   <p className={s.glDef}>{e.definition[t.locale] || e.definition.en}</p>
                   {e.related.length > 0 && (

@@ -9,6 +9,7 @@ import { useDataset } from '../../data/load';
 import { buildSeries, filterYears, seriesToRows, type YearRange } from '../../data/select';
 import type { IcuType, Level } from '../../data/types';
 import { useT } from '../../i18n';
+import { useNarrow } from '../international/kit/hooks';
 import { envSourceLine } from '../international/kit/util';
 import { UTIL_METRICS } from './haiModel';
 
@@ -30,6 +31,7 @@ export function HaiUtil({
   const { data: env, status } = useDataset('hai');
   const nameM = dimNamer(env?.dims?.metrics, t.locale);
   const nameIcu = dimNamer(env?.dims?.icuTypes, t.locale);
+  const narrow = useNarrow();
 
   const set = useMemo(() => {
     if (!env) return null;
@@ -50,7 +52,8 @@ export function HaiUtil({
     if (!set) return {};
     const tok = ct.tokens;
     return {
-      grid: { left: 4, right: 56, top: 58, bottom: 4, containLabel: true },
+      // phones: one legend row per series (long ratio names wrap)
+      grid: { left: 4, right: 56, top: narrow ? 26 * set.series.length + 14 : 58, bottom: 4, containLabel: true },
       legend: { top: 0, left: 0, data: set.series.map((s) => nameM(s.key)) },
       tooltip: { trigger: 'axis', valueFormatter: (v) => fmtNumber(v as number, t.locale, { digits: 3 }) },
       xAxis: { type: 'category', data: set.years.map(String), boundaryGap: false },
@@ -81,7 +84,7 @@ export function HaiUtil({
         };
       }),
     } as EChartsOption;
-  }, [set, ct, nameM, t]);
+  }, [set, ct, nameM, t, narrow]);
 
   const title = t('hai.util.title');
   const subtitle = t('hai.util.subtitle', { level: t(`levels.${level}`), icu: nameIcu(icu) });

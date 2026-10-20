@@ -102,7 +102,9 @@
       "trendIntro": "2017–2024 年各醫院層級多重抗藥菌趨勢。最多可選四種表現型於同一圖比較；拖曳圖下方的時間軸可縮放年份。",
       "antibiogramIntro": "指定年份與醫院層級的全國累積敏感性圖譜（不敏感比率 = 100 − %S）。點選方格即可開啟該菌種。",
       "pathogenIntro": "深入單一菌種：依感染來源與檢體的抗藥比率、三年敏感性圖譜變化，以及歷年分離菌株數。",
-      "compareIntro": "將 2–4 個表現型或「菌種 × 抗生素」組合放在同一張圖，並比較最新年度各醫院層級。"
+      "compareIntro": "將 2–4 個表現型或「菌種 × 抗生素」組合放在同一張圖，並比較最新年度各醫院層級。",
+      "isolates": "菌株數",
+      "isolatesIntro": "各菌種通報菌株數的逐年變化：依檢體或社區／醫院起源分層，並列出最新年度菌株數前十名。點選長條可切換菌種。"
     },
     "levelShort": {
       "all": "全部",
@@ -247,6 +249,19 @@
         "term": "首株原則",
         "body": "敏感性圖譜以各醫院每位病人、每菌種、每年之首株計算（同日多筆取最差結果），以降低重複菌株偏差。"
       }
+    },
+    "isolates": {
+      "allOrganisms": "全部菌種",
+      "scope": "檢體／起源",
+      "railNote": "菌株數僅計總數，不含多重抗藥菌 I+R／S 分項；各醫院層級僅有全部檢體與社區／醫院起源資料。",
+      "trendTitle": "{organism}：菌株數趨勢",
+      "trendSubtitle": "通報菌株數，{level} · {group}",
+      "bySpecimen": "依檢體",
+      "byOnset": "依社區／醫院起源",
+      "trendAria": "各檢體或起源之菌株數逐年折線圖",
+      "topTitle": "菌株數前十名菌種（{year} 年）",
+      "topSubtitle": "{scope}，{level} · 點選長條切換菌種",
+      "topAria": "菌株數前十名菌種橫條圖"
     }
   },
   "international": {
@@ -790,14 +805,18 @@
     "up": "較 {year} 上升 {value}",
     "down": "較 {year} 下降 {value}",
     "flat": "與 {year} 持平",
-    "trend": "{from}–{to} 趨勢"
+    "trend": "{from}–{to} 趨勢",
+    "ppShort": "百分點"
   },
   "charts": {
     "resistanceTrend": {
       "title": "{phenotype} 抗藥性趨勢",
       "titleGeneric": "{pathogen} 對 {antibiotic} 抗藥",
       "subtitle": "依醫院層級之抗藥菌株比率・{scope}",
-      "aria": "抗藥率逐年變化折線圖"
+      "aria": "抗藥率逐年變化折線圖",
+      "basisMixed": "{trendYears} 為多重抗藥菌趨勢序列（年報內文／圖表）；{abYears} 為敏感性圖譜表格值（不敏感 = 100 − %S）",
+      "basisAb": "敏感性圖譜表格值 {abYears}（不敏感 = 100 − %S）",
+      "basisTrend": "多重抗藥菌趨勢序列 {trendYears}（年報內文／圖表）"
     },
     "resistanceHeatmap": {
       "title": "抗藥性地圖：菌種 × 抗生素",

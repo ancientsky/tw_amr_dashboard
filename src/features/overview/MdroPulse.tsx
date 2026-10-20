@@ -10,6 +10,9 @@ import { alignPoints, GRAM_NEG_MDROS, GRAM_POS_MDROS, isEstimate, MDROS, summari
 import { resistanceSource, useResistanceModel } from '../resistance/model';
 import s from './overview.module.css';
 
+/** embed ids whose "Open in TW-AMR Watch" link targets this card */
+const EMBED_ALIASES = ['kpi-strip'];
+
 /** Heat band label for a % value (shown in the tile's colour chip). */
 function band(v: number): 'low' | 'moderate' | 'high' | 'veryHigh' {
   return v < 10 ? 'low' : v < 25 ? 'moderate' : v < 50 ? 'high' : 'veryHigh';
@@ -75,6 +78,7 @@ export function MdroPulse() {
   return (
     <ChartCard
       id="overview-pulse"
+      aliases={EMBED_ALIASES}
       eyebrow={t('overview.pulse.eyebrow')}
       title={title}
       subtitle={t('overview.pulse.subtitle', { year: year ?? '—', from: tiles[0]?.sm?.first.year ?? '—' })}

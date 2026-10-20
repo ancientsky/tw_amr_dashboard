@@ -8,6 +8,7 @@ import { usePrefersReducedMotion } from '../../components/ui/usePrefersReducedMo
 import { useT } from '../../i18n';
 import { AntibiogramView } from './AntibiogramView';
 import { CompareView } from './CompareView';
+import { IsolatesView } from './IsolatesView';
 import { ControlRail } from './ControlRail';
 import { Methodology } from './Methodology';
 import { useResistanceModel } from './model';
@@ -20,7 +21,7 @@ import s from './resistance.module.css';
 export default function ResistancePage() {
   const t = useT();
   const reduced = usePrefersReducedMotion();
-  const { state, update, link } = useExplorerState();
+  const { state, update, link, query } = useExplorerState();
   const { env, ab, names } = useResistanceModel();
   const [drawer, setDrawer] = useState(false);
   const idBase = 'rx';
@@ -35,7 +36,10 @@ export default function ResistancePage() {
         <Tabs
           items={VIEWS.map((v) => ({ value: v, label: t(`resistance.views.${v}`) }))}
           value={state.view}
-          onChange={(v: View) => update({ view: v })}
+          onChange={(v: View) =>
+            // keep a phenotype-derived drug pair (e.g. CRAB → ABA × MEM) when leaving the trend view
+            update(state.view === 'trend' && !query.get('pathogen') && v !== 'trend' ? { view: v, pathogen: state.pathogen, antibiotic: state.antibiotic } : { view: v })
+          }
           label={t('resistance.views.label')}
           idBase={idBase}
           className={s.tabs}
@@ -66,6 +70,7 @@ export default function ResistancePage() {
               {state.view === 'antibiogram' && <AntibiogramView state={state} update={update} link={link} />}
               {state.view === 'pathogen' && <PathogenView state={state} update={update} link={link} />}
               {state.view === 'compare' && <CompareView state={state} link={link} />}
+              {state.view === 'isolates' && <IsolatesView state={state} update={update} link={link} />}
             </motion.div>
           </AnimatePresence>
           <Methodology />
@@ -86,6 +91,8 @@ function summaryChips(state: ReturnType<typeof useExplorerState>['state'], t: Re
       return [String(state.year ?? t('resistance.common.latest')), names.level(state.level)];
     case 'pathogen':
       return [names.pathogenShort(state.pathogen), state.antibiotic, names.level(state.level)];
+    case 'isolates':
+      return [state.organism === 'TOTAL' ? t('resistance.isolates.allOrganisms') : state.organism, state.scope === 'co' || state.scope === 'ho' ? names.setting(state.scope) : names.specimen(state.scope), names.level(state.level)];
     default:
       return [state.items.join(' · '), names.level(state.level)];
   }

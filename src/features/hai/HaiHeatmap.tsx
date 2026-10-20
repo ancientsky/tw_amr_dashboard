@@ -84,11 +84,11 @@ export function HaiHeatmap({
         } else {
           const tt = st.max > st.min ? (v - st.min) / (st.max - st.min) : 0.5;
           const fill = mix(SEQ[ct.theme][0], SEQ[ct.theme][1], Math.max(0, Math.min(1, tt)));
+          // 4th dimension = position within the column's range → hidden visualMap (same ramp as `fill`)
           data.push({
-            value: [xi, yi, v],
+            value: [xi, yi, v, Math.max(0, Math.min(1, tt))],
             raw: v,
             z,
-            itemStyle: { color: fill },
             label: { color: textOn(fill) },
           });
         }
@@ -132,7 +132,14 @@ export function HaiHeatmap({
               textStyle: { color: tok.ink3, fontSize: 11 },
               dimension: 2,
             }
-          : undefined,
+          : {
+              type: 'continuous',
+              show: false,
+              min: 0,
+              max: 1,
+              dimension: 3,
+              inRange: { color: [SEQ[ct.theme][0], SEQ[ct.theme][1]] },
+            },
       xAxis: {
         type: 'category',
         data: model.metrics.map(short),

@@ -20,6 +20,8 @@ export interface EmbedChartDef {
   id: string;
   /** route in the main app that hosts this chart (used for "Open in TW-AMR Watch") */
   route: string;
+  /** fixed params for that route (e.g. the explorer view hosting the chart) */
+  routeParams?: Record<string, string>;
   /** query params this chart understands (documented in docs/EMBED.md) */
   params: (keyof ChartParams)[];
   Component: ComponentType<ChartParams>;
@@ -35,6 +37,7 @@ export const EMBED_REGISTRY: Record<string, EmbedChartDef> = {
   'resistance-heatmap': {
     id: 'resistance-heatmap',
     route: '/resistance',
+    routeParams: { view: 'antibiogram' },
     params: ['level', 'ward', 'setting'],
     Component: ResistanceHeatmap,
   },
@@ -66,5 +69,5 @@ registerEmbedChart({ id: 'hai-bump', route: '/hai', params: extraParams('level',
 /* ---- resistance explorer / overview (feature agent: overview+resistance) ----
  * resistance-pathogen-bars: % non-susceptible per antibiotic by onset (all/CO/HO) for one pathogen (years=YYYY picks the data year).
  * resistance-co-ho: community- vs hospital-onset % for the nine MDROs (level, years=YYYY). */
-registerEmbedChart({ id: 'resistance-pathogen-bars', route: '/resistance', params: ['pathogen', 'years'], Component: PathogenBarsChart });
+registerEmbedChart({ id: 'resistance-pathogen-bars', route: '/resistance', routeParams: { view: 'pathogen' }, params: ['pathogen', 'years'], Component: PathogenBarsChart });
 registerEmbedChart({ id: 'resistance-co-ho', route: '/resistance', params: ['level', 'years'], Component: CoHoGapChart });

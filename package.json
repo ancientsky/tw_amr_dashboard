@@ -15,7 +15,8 @@
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\" \"*.{ts,js,json,md}\"",
     "test": "vitest run",
-    "screenshot": "node scripts/screenshot.mjs"
+    "screenshot": "node scripts/screenshot.mjs",
+    "qa": "node scripts/qa.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
