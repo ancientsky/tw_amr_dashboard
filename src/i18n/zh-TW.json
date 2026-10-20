@@ -320,7 +320,7 @@
       "n": "通報國家數"
     },
     "toast": {
-      "added": "已將{country}加入比較",
+      "added": "已將 {country} 加入比較，結果見下方「比較結果」",
       "already": "{country}已在比較清單中"
     },
     "comp": {
@@ -396,6 +396,22 @@
       "fallback": "替代來源",
       "yes": "是",
       "no": "否"
+    },
+    "compare": {
+      "section": "比較結果：臺灣 vs 已選國家",
+      "title": "臺灣與所選國家的比較",
+      "subtitle": "已選 {n} 國 · 左：{indicator}；右：十項指標總表（▲ 表示臺灣高於該國、▼ 表示低於）",
+      "subtitleEmpty": "尚未選擇比較國家",
+      "selected": "已選比較國家",
+      "remove": "移除 {country}",
+      "emptyTitle": "選幾個國家來比較",
+      "emptyBody": "點選上方地圖上的國家，或使用篩選列的「比較對象」下拉選單（最多 5 國）。結果會顯示在這裡。",
+      "matrixTitle": "十項指標總表（血流檢體抗藥比率 %）",
+      "value": "抗藥比率",
+      "source": "來源",
+      "aria": "臺灣與所選國家在 {indicator} 的抗藥比率長條圖",
+      "diffTitle": "臺灣減去 {country} 的差距（個百分點）",
+      "note": "顏色＝抗藥比率（綠低、紅高）。各國為 GLASS 最新可得年份（約 2021–2022），臺灣為 2024 年 THAS 推算值；暫定資料，詳見下方可比性說明。"
     }
   },
   "amu": {

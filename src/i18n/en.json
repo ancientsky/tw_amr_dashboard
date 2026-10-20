@@ -320,7 +320,7 @@
       "n": "Countries reporting"
     },
     "toast": {
-      "added": "{country} added to the comparison",
+      "added": "{country} added — see “Comparison result” below",
       "already": "{country} is already in the comparison"
     },
     "comp": {
@@ -396,6 +396,22 @@
       "fallback": "Fallback",
       "yes": "Yes",
       "no": "No"
+    },
+    "compare": {
+      "section": "Comparison result: Taiwan vs selected countries",
+      "title": "Taiwan compared with the selected countries",
+      "subtitle": "{n} selected · left: {indicator}; right: all ten indicators (▲ Taiwan higher than that country, ▼ lower)",
+      "subtitleEmpty": "No comparison countries selected yet",
+      "selected": "Selected comparison countries",
+      "remove": "Remove {country}",
+      "emptyTitle": "Pick countries to compare",
+      "emptyBody": "Click countries on the map above or use the “Compare with” selector in the filter bar (up to 5). The result appears here.",
+      "matrixTitle": "All ten indicators (% resistant, bloodstream isolates)",
+      "value": "% resistant",
+      "source": "Source",
+      "aria": "Bar chart of {indicator} resistance for Taiwan and the selected countries",
+      "diffTitle": "Taiwan minus {country}, percentage points",
+      "note": "Colour = % resistant (green low, red high). Countries show the latest GLASS year available (≈2021–2022); Taiwan is the 2024 THAS-derived value. Provisional data; see comparability notes below."
     }
   },
   "amu": {

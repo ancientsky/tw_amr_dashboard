@@ -10,6 +10,7 @@ import { useDataset } from '../../data/load';
 import { useT } from '../../i18n';
 import { Comparability } from './Comparability';
 import { GlassBars, type BarsView } from './GlassBars';
+import { GlassCompare } from './GlassCompare';
 import { GlassMap } from './GlassMap';
 import { GlassRadar, GlassStrip, compareColors } from './GlassProfile';
 import {
@@ -161,6 +162,14 @@ export default function InternationalPage() {
           onCountryClick={addCountry}
           link={link('glass-map')}
         />
+        <Section id="compare" title={t('international.compare.section')}>
+          <GlassCompare
+            indicator={indicator}
+            countries={compare}
+            onRemove={(iso) => setCountries(compare.filter((c) => c !== iso))}
+            link={link('glass-compare')}
+          />
+        </Section>
         <div className={`${k.grid2} ${k.grid2narrow}`}>
           <GlassBars
             indicator={indicator}
