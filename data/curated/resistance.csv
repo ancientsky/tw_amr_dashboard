@@ -1062,8 +1062,8 @@ year,pathogen,antibiotic,phenotype,level,ward,setting,specimen,isolates,resistan
 2019,EFA,VAN,VR-EFA,district,all,all,all,1700,2.5,,,,text,2024,2024/p105/圖4-8-1-2
 2020,EFA,VAN,VR-EFA,district,all,all,all,2000,2.3,,,,chart_estimate,2024,2024/p105/圖4-8-1-2
 2021,EFA,VAN,VR-EFA,district,all,all,all,3800,1.8,,,,chart_estimate,2024,2024/p105/圖4-8-1-2
-2022,EFA,VAN,VR-EFA,district,all,all,all,4500,1.3,,,,chart_estimate,2024,2024/p105/圖4-8-1-2
-2023,EFA,VAN,VR-EFA,district,all,all,all,6400,1.4,,,,chart_estimate,2024,2024/p105/圖4-8-1-2
+2022,EFA,VAN,VR-EFA,district,all,all,all,4500,1.1,,,,text,2022,2022/p110/圖4-8-1-2
+2023,EFA,VAN,VR-EFA,district,all,all,all,6400,1.5,,,,text,2023,2023/p106/圖4-8-1-2
 2024,EFA,VAN,VR-EFA,district,all,all,all,5900,1.3,,,,text,2024,2024/p105/圖4-8-1-2
 2017,EFA,VAN,VR-EFA,district,all,co,all,750,1.4,,,,chart_estimate,2022,2022/p111/圖4-8-2-2
 2018,EFA,VAN,VR-EFA,district,all,co,all,900,2,,,,chart_estimate,2023,2023/p107/圖4-8-2-2
@@ -5689,8 +5689,8 @@ year,pathogen,antibiotic,phenotype,level,ward,setting,specimen,isolates,resistan
 2019,ABA,MEM,CRAB,all,all,all,all,19133,55.1,,,,text,2024,2024/p77/圖4-1-1-2
 2020,ABA,MEM,CRAB,all,all,all,all,18673,57.5,,,,chart_estimate,2024,2024/p77/圖4-1-1-2
 2021,ABA,MEM,CRAB,all,all,all,all,19153,61,,,,chart_estimate,2024,2024/p77/圖4-1-1-2
-2022,ABA,MEM,CRAB,all,all,all,all,20441,63,,,,chart_estimate,2024,2024/p77/圖4-1-1-2
-2023,ABA,MEM,CRAB,all,all,all,all,21432,61.5,,,,chart_estimate,2024,2024/p77/圖4-1-1-2
+2022,ABA,MEM,CRAB,all,all,all,all,20441,64.6,,,,text,2022,2022/p82/圖4-1-1-2
+2023,ABA,MEM,CRAB,all,all,all,all,21432,61.9,,,,text,2023,2023/p78/圖4-1-1-2
 2024,ABA,MEM,CRAB,all,all,all,all,19911,58.4,,,,text,2024,2024/p77/圖4-1-1-2
 2017,ABA,MEM,CRAB,all,all,co,all,9497,46.5,,,,chart_estimate,2022,2022/p83/圖4-1-2-2
 2018,ABA,MEM,CRAB,all,all,co,all,7536,46.5,,,,chart_estimate,2023,2023/p79/圖4-1-2-2

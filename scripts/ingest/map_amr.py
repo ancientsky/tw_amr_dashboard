@@ -16,7 +16,7 @@ Outputs:
 
 De-duplication: the same key (year, pathogen, antibiotic, phenotype, level, ward, setting, specimen) can appear in
 several report editions (e.g. MDRO trends 2019–2022 appear in the 2022, 2023 and 2024 reports) and in several figure
-types. The winner is the row with the newest report year, then the highest precision (table > text > chart_estimate).
+types. The winner is the row with the highest precision (table > text > chart_estimate), then the newest report year.
 
 Usage: python3 scripts/ingest/map_amr.py [--transcribed DIR] [--out DIR] [--quiet]
 """
@@ -268,7 +268,11 @@ class Mapper:
     # ---------------- de-duplication ----------------
     @staticmethod
     def _rank(r):
-        return (r["reportYear"] or 0, PRECISION_RANK.get(r["precision"], 0))
+        # Exact values (table > text) beat chart estimates even from a newer edition;
+        # ties go to the newest report year. Overrides (reportYear 9999) always win.
+        if (r["reportYear"] or 0) == 9999:
+            return (99, 9999)
+        return (PRECISION_RANK.get(r["precision"], 0), r["reportYear"] or 0)
 
     def dedup(self, rows, keyf, valf, dataset, log):
         best: dict[tuple, dict] = {}

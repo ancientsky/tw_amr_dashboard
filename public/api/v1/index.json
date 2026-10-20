@@ -2,7 +2,7 @@
   "api": "TW-AMR Watch static data API",
   "version": "v1",
   "baseUrl": "https://ancientsky.github.io/tw_amr_dashboard/api/v1",
-  "generatedAt": "2026-10-20T06:49:22Z",
+  "generatedAt": "2026-10-20T07:03:12Z",
   "provisionalDatasets": [
     "antibiotic_use",
     "hai",

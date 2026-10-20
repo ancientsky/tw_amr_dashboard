@@ -3039,8 +3039,8 @@ resistance,2022|ABA|AMK||all|all|all|all,59,2022,table,2022/p48/圖3-1-1,59,2022
 resistance,2022|ABA|DOR||all|all|all|all,63,2022,table,2022/p48/圖3-1-1,62.8,2022,text,2022/p66/圖3-2-1(A),0.2
 resistance,2022|ABA|GEN||all|all|all|all,62,2022,table,2022/p48/圖3-1-1,62.5,2022,chart_estimate,2022/p66/圖3-2-1(A),-0.5
 resistance,2022|ABA|IPM||all|all|all|all,64,2022,table,2022/p48/圖3-1-1,64.5,2022,chart_estimate,2022/p66/圖3-2-1(A),-0.5
-resistance,2022|ABA|MEM|CRAB|all|all|all|all,62,2023,chart_estimate,2023/p78/圖4-1-1-2,64.6,2022,text,2022/p82/圖4-1-1-2,-2.6
-resistance,2022|ABA|MEM|CRAB|all|all|all|all,63,2024,chart_estimate,2024/p77/圖4-1-1-2,62,2023,chart_estimate,2023/p78/圖4-1-1-2,1
+resistance,2022|ABA|MEM|CRAB|all|all|all|all,64.6,2022,text,2022/p82/圖4-1-1-2,62,2023,chart_estimate,2023/p78/圖4-1-1-2,2.6
+resistance,2022|ABA|MEM|CRAB|all|all|all|all,64.6,2022,text,2022/p82/圖4-1-1-2,63,2024,chart_estimate,2024/p77/圖4-1-1-2,1.6
 resistance,2022|ABA|MEM|CRAB|all|all|co|all,54.5,2023,chart_estimate,2023/p79/圖4-1-2-2,56,2022,chart_estimate,2022/p83/圖4-1-2-2,-1.5
 resistance,2022|ABA|MEM|CRAB|all|all|co|all,55.5,2024,chart_estimate,2024/p78/圖4-1-2-2,54.5,2023,chart_estimate,2023/p79/圖4-1-2-2,1
 resistance,2022|ABA|MEM|CRAB|all|all|ho|all,69,2023,chart_estimate,2023/p80/圖4-1-3-2,71.5,2022,chart_estimate,2022/p84/圖4-1-3-2,-2.5
@@ -3113,8 +3113,8 @@ resistance,2022|EFA|VAN|VR-EFA|all|all|co|all,0.5,2023,chart_estimate,2023/p107/
 resistance,2022|EFA|VAN|VR-EFA|all|all|co|all,0.4,2024,chart_estimate,2024/p106/圖4-8-2-2,0.5,2023,chart_estimate,2023/p107/圖4-8-2-2,-0.1
 resistance,2022|EFA|VAN|VR-EFA|all|all|ho|all,1.5,2023,chart_estimate,2023/p108/圖4-8-3-2,1.3,2022,chart_estimate,2022/p112/圖4-8-3-2,0.2
 resistance,2022|EFA|VAN|VR-EFA|all|all|ho|all,1.4,2024,chart_estimate,2024/p107/圖4-8-3-2,1.5,2023,chart_estimate,2023/p108/圖4-8-3-2,-0.1
-resistance,2022|EFA|VAN|VR-EFA|district|all|all|all,1,2023,chart_estimate,2023/p106/圖4-8-1-2,1.1,2022,text,2022/p110/圖4-8-1-2,-0.1
-resistance,2022|EFA|VAN|VR-EFA|district|all|all|all,1.3,2024,chart_estimate,2024/p105/圖4-8-1-2,1,2023,chart_estimate,2023/p106/圖4-8-1-2,0.3
+resistance,2022|EFA|VAN|VR-EFA|district|all|all|all,1.1,2022,text,2022/p110/圖4-8-1-2,1,2023,chart_estimate,2023/p106/圖4-8-1-2,0.1
+resistance,2022|EFA|VAN|VR-EFA|district|all|all|all,1.1,2022,text,2022/p110/圖4-8-1-2,1.3,2024,chart_estimate,2024/p105/圖4-8-1-2,-0.2
 resistance,2022|EFA|VAN|VR-EFA|district|all|co|all,0.5,2023,chart_estimate,2023/p107/圖4-8-2-2,0.7,2022,chart_estimate,2022/p111/圖4-8-2-2,-0.2
 resistance,2022|EFA|VAN|VR-EFA|district|all|co|all,0.8,2024,chart_estimate,2024/p106/圖4-8-2-2,0.5,2023,chart_estimate,2023/p107/圖4-8-2-2,0.3
 resistance,2022|EFA|VAN|VR-EFA|district|all|ho|all,3,2023,chart_estimate,2023/p108/圖4-8-3-2,2.9,2022,chart_estimate,2022/p112/圖4-8-3-2,0.1
@@ -3323,7 +3323,7 @@ resistance,2023|ABA|AMK||all|all|all|all,58,2023,table,2023/p46/圖3-1-1,59.5,20
 resistance,2023|ABA|DOR||all|all|all|all,65,2023,table,2023/p46/圖3-1-1,65,2023,chart_estimate,2023/p62/圖3-2-1(A),0
 resistance,2023|ABA|GEN||all|all|all|all,62,2023,table,2023/p46/圖3-1-1,63,2023,chart_estimate,2023/p62/圖3-2-1(A),-1
 resistance,2023|ABA|IPM||all|all|all|all,65,2023,table,2023/p46/圖3-1-1,65.5,2023,chart_estimate,2023/p62/圖3-2-1(A),-0.5
-resistance,2023|ABA|MEM|CRAB|all|all|all|all,61.5,2024,chart_estimate,2024/p77/圖4-1-1-2,61.9,2023,text,2023/p78/圖4-1-1-2,-0.4
+resistance,2023|ABA|MEM|CRAB|all|all|all|all,61.9,2023,text,2023/p78/圖4-1-1-2,61.5,2024,chart_estimate,2024/p77/圖4-1-1-2,0.4
 resistance,2023|ABA|MEM|CRAB|all|all|co|all,54,2024,chart_estimate,2024/p78/圖4-1-2-2,54.5,2023,chart_estimate,2023/p79/圖4-1-2-2,-0.5
 resistance,2023|ABA|MEM|CRAB|all|all|ho|all,69.5,2024,chart_estimate,2024/p79/圖4-1-3-2,69,2023,chart_estimate,2023/p80/圖4-1-3-2,0.5
 resistance,2023|ABA|MEM|CRAB|district|all|all|all,70.5,2024,chart_estimate,2024/p77/圖4-1-1-2,70.5,2023,chart_estimate,2023/p78/圖4-1-1-2,0
@@ -3370,7 +3370,7 @@ resistance,2023|EFA|TGC||all|all|all|all,0,2023,table,2023/p42/圖3-1-1,0.5,2023
 resistance,2023|EFA|VAN|VR-EFA|all|all|all|all,0.6,2024,chart_estimate,2024/p105/圖4-8-1-2,0.5,2023,chart_estimate,2023/p106/圖4-8-1-2,0.1
 resistance,2023|EFA|VAN|VR-EFA|all|all|co|all,0.4,2024,chart_estimate,2024/p106/圖4-8-2-2,0.5,2023,chart_estimate,2023/p107/圖4-8-2-2,-0.1
 resistance,2023|EFA|VAN|VR-EFA|all|all|ho|all,1.4,2024,chart_estimate,2024/p107/圖4-8-3-2,1,2023,chart_estimate,2023/p108/圖4-8-3-2,0.4
-resistance,2023|EFA|VAN|VR-EFA|district|all|all|all,1.4,2024,chart_estimate,2024/p105/圖4-8-1-2,1.5,2023,text,2023/p106/圖4-8-1-2,-0.1
+resistance,2023|EFA|VAN|VR-EFA|district|all|all|all,1.5,2023,text,2023/p106/圖4-8-1-2,1.4,2024,chart_estimate,2024/p105/圖4-8-1-2,0.1
 resistance,2023|EFA|VAN|VR-EFA|district|all|co|all,0.9,2024,chart_estimate,2024/p106/圖4-8-2-2,1,2023,chart_estimate,2023/p107/圖4-8-2-2,-0.1
 resistance,2023|EFA|VAN|VR-EFA|district|all|ho|all,4,2024,chart_estimate,2024/p107/圖4-8-3-2,4,2023,chart_estimate,2023/p108/圖4-8-3-2,0
 resistance,2023|EFA|VAN|VR-EFA|medical_center|all|all|all,0.3,2024,chart_estimate,2024/p105/圖4-8-1-2,0.5,2023,chart_estimate,2023/p106/圖4-8-1-2,-0.2
