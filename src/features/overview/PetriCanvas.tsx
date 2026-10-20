@@ -56,9 +56,10 @@ export function PetriCanvas({ className }: { className?: string }) {
     const draw = (time: number) => {
       ctx.clearRect(0, 0, w, h);
       const narrow = w < 700;
-      const R = narrow ? Math.min(w, h) * 0.62 : Math.min(h * 0.62, w * 0.36);
-      const cx = narrow ? w * 0.82 : w * 0.8;
-      const cy = narrow ? h * 0.18 : h * 0.5;
+      // phones: a smaller dish tucked into the top-right corner, away from the text
+      const R = narrow ? w * 0.42 : Math.min(h * 0.62, w * 0.36);
+      const cx = narrow ? w * 0.92 : w * 0.8;
+      const cy = narrow ? R * 0.55 : h * 0.5;
       // agar wash
       const g = ctx.createRadialGradient(cx, cy, R * 0.1, cx, cy, R * 1.05);
       g.addColorStop(0, dark ? 'rgba(0,227,140,0.07)' : 'rgba(14,124,91,0.06)');
@@ -87,7 +88,7 @@ export function PetriCanvas({ className }: { className?: string }) {
           ctx.shadowColor = p.color;
           ctx.shadowBlur = 10;
         }
-        ctx.globalAlpha = dark ? 0.85 : 0.7;
+        ctx.globalAlpha = (dark ? 0.85 : 0.7) * (narrow ? 0.55 : 1);
         ctx.fillStyle = p.color;
         ctx.beginPath();
         ctx.arc(x, y, p.size, 0, Math.PI * 2);

@@ -2,7 +2,7 @@
  * The assistant body used by both the floating drawer and the #/chat page:
  * toolbar (mode badge, settings, clear), message list, follow-up chips, composer.
  */
-import { useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState, type KeyboardEvent, type MouseEvent, type ReactNode } from 'react';
 import { Icon } from '../../../components/ui/icons';
 import { useToast } from '../../../components/ui/Toast';
 import { useT } from '../../../i18n';
@@ -26,7 +26,7 @@ export interface ChatPanelProps {
   /** called when an in-app link inside an answer is followed (the drawer closes itself) */
   onNavigate?: () => void;
   /** extra toolbar content (e.g. "open full page" in the drawer) */
-  toolbarExtra?: React.ReactNode;
+  toolbarExtra?: ReactNode;
 }
 
 export function ChatPanel({ variant = 'drawer', request, onNavigate, toolbarExtra }: ChatPanelProps) {
@@ -38,6 +38,7 @@ export function ChatPanel({ variant = 'drawer', request, onNavigate, toolbarExtr
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const handled = useRef<number | null>(null);
+  const hintId = useId();
 
   useEffect(() => {
     if (!request || handled.current === request.nonce) return;
@@ -156,7 +157,7 @@ export function ChatPanel({ variant = 'drawer', request, onNavigate, toolbarExtr
           onKeyDown={onKey}
           placeholder={t('chat.placeholder')}
           aria-label={t('chat.placeholder')}
-          aria-describedby="chat-composer-hint"
+          aria-describedby={hintId}
           maxLength={600}
           data-autofocus={variant === 'drawer' ? true : undefined}
         />
@@ -170,7 +171,7 @@ export function ChatPanel({ variant = 'drawer', request, onNavigate, toolbarExtr
           </button>
         )}
       </form>
-      <p id="chat-composer-hint" className={s.hint}>
+      <p id={hintId} className={s.hint}>
         {t('chat.ui.composerHint')}
       </p>
     </div>

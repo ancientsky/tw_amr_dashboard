@@ -3,7 +3,10 @@ import { localized } from '../../../data/format';
 
 /** Escape text placed inside ECharts HTML tooltips. */
 export function esc(s: unknown): string {
-  return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+  return String(s ?? '').replace(
+    /[&<>"']/g,
+    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!,
+  );
 }
 
 /** Tooltip row: coloured dot · label · right-aligned value. */
@@ -50,9 +53,13 @@ export function niceMax(v: number, cap = 100): number {
 }
 
 /** Map of source id → localized title (with publisher fallback) for an envelope. */
-export function sourceTitles(env: Envelope<unknown> | null | undefined, locale: Locale): Map<string, { title: string; publisher: string; url?: string; year: number }> {
+export function sourceTitles(
+  env: Envelope<unknown> | null | undefined,
+  locale: Locale,
+): Map<string, { title: string; publisher: string; url?: string; year: number }> {
   const m = new Map<string, { title: string; publisher: string; url?: string; year: number }>();
-  for (const s of env?.sources ?? []) m.set(s.id, { title: localized(s.title, locale), publisher: s.publisher, url: s.url, year: s.year });
+  for (const s of env?.sources ?? [])
+    m.set(s.id, { title: localized(s.title, locale), publisher: s.publisher, url: s.url, year: s.year });
   return m;
 }
 
@@ -72,17 +79,27 @@ export function hashParam(key: string): string | undefined {
 }
 
 /** Source line listing every source title of an envelope (keeps provisional/model sources visible). */
-export function envSourceLine(env: Envelope<unknown> | null | undefined, locale: Locale, ids?: string[]): string | undefined {
+export function envSourceLine(
+  env: Envelope<unknown> | null | undefined,
+  locale: Locale,
+  ids?: string[],
+): string | undefined {
   const list = (env?.sources ?? []).filter((s) => !ids || ids.includes(s.id));
   if (!list.length) return undefined;
   return list.map((s) => localized(s.title, locale)).join('; ');
 }
 
 /** GLASS source line: WHO GLASS + Taiwan CDC report, then "+N national systems". */
-export function glassSourceLine(env: Envelope<unknown> | null | undefined, locale: Locale, more: (n: number) => string): string | undefined {
+export function glassSourceLine(
+  env: Envelope<unknown> | null | undefined,
+  locale: Locale,
+  more: (n: number) => string,
+): string | undefined {
   const src = env?.sources ?? [];
   if (!src.length) return undefined;
   const main = src.filter((s) => s.kind === 'glass' || s.id.startsWith('tw-cdc'));
   const rest = src.length - main.length;
-  return [...main.map((s) => localized(s.title, locale)), rest > 0 ? more(rest) : ''].filter(Boolean).join('; ');
+  return [...main.map((s) => localized(s.title, locale)), rest > 0 ? more(rest) : '']
+    .filter(Boolean)
+    .join('; ');
 }

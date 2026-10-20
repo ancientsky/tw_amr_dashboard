@@ -66,7 +66,7 @@
         "有哪些功能",
         "幫助"
       ],
-      "a": "我可以回答 AMR 基本概念、各類抗藥菌（MRSA、VRE、CRAB、CRKP 等）、THAS／TNIS 監測制度、DID 與 HAI 密度的解讀、感染管制重點，以及資料下載、API 與嵌入圖表的方法。我不會編造臺灣的具體百分比，需要數據時會引導您到對應的圖表頁面；詳細方法請見「關於與方法學」。",
+      "a": "我可以直接回答臺灣抗藥性數據問題，例如「2024 年 CRKP 在醫學中心多少？」「CRAB 哪個層級最高？」「台灣的 CRAB 跟日本比」，數字取自疾管署 2022–2024 年版抗藥性年報（資料年 2017–2024），並附小圖表與探索器連結；也能說明 AMR 基本概念、MRSA／VRE／CRAB／CRKP 等抗藥菌、THAS／TNIS 制度、感染管制重點，以及資料下載、API 與嵌入圖表的方法。資料中沒有的臺灣數字我不會編造；詳細方法請見「關於與方法學」。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -87,7 +87,7 @@
         "features",
         "what topics do you cover"
       ],
-      "a": "I can answer questions on AMR basics, key resistant organisms (MRSA, VRE, CRAB, CRKP and others), the THAS/TNIS surveillance systems, interpreting DID and HAI density, infection-control priorities, and how to download data, use the API or embed charts. I will not invent Taiwan-specific percentages; for numbers I'll point you to the relevant chart page. See About / Methodology for details.",
+      "a": "I can answer Taiwan data questions directly — e.g. “CRKP in medical centres in 2024?”, “Which hospital level has the highest CRAB?” or “Compare Taiwan's CRAB with Japan” — using figures from the Taiwan CDC AMR annual reports (2022–2024 editions, data years 2017–2024), with a mini chart and a link to the explorer. I also explain AMR basics, key resistant organisms (MRSA, VRE, CRAB, CRKP and others), the THAS/TNIS systems, infection-control priorities, and how to download data, use the API or embed charts. I never invent Taiwan figures that are not in the data; see About / Methodology for details.",
       "chart": {
         "route": "/about",
         "params": {}
@@ -108,7 +108,7 @@
         "機能一覧",
         "help"
       ],
-      "a": "AMR の基本、主要な耐性菌（MRSA・VRE・CRAB・CRKP など）、THAS／TNIS の仕組み、DID や HAI 密度の読み方、感染対策の要点、データのダウンロード・API・グラフの埋め込み方法についてお答えします。台湾の具体的なパーセンテージを作り上げることはせず、数値が必要な場合は該当するグラフのページをご案内します。詳細は「概要・方法論」をご覧ください。",
+      "a": "「2024年の医学センターの CRKP は？」「CRAB はどの病院種別で最も高い？」「台湾の CRAB を日本と比較」のような台湾のデータに関する質問に、台湾CDC薬剤耐性年報（2022〜2024年版、データ年 2017〜2024）の数値で直接お答えし、ミニグラフとエクスプローラーへのリンクを表示します。AMR の基本、主要な耐性菌（MRSA・VRE・CRAB・CRKP など）、THAS／TNIS の仕組み、感染対策の要点、データのダウンロード・API・グラフの埋め込み方法も説明します。データにない台湾の数値を作り上げることはありません。詳細は「概要・方法論」をご覧ください。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -513,11 +513,13 @@
         "MRSA 趨勢怎麼看",
         "MRSA 抗藥率"
       ],
-      "a": "MRSA 是對 methicillin／oxacillin 抗藥的金黃色葡萄球菌，可造成血流、皮膚軟組織與肺部感染，治療常需使用 vancomycin 等藥物。WHO 將其列為 high 優先病原。臺灣的 MRSA 趨勢請至「抗藥性探索」選擇 MRSA 並依醫院層級、病房別檢視。",
+      "a": "MRSA 是對 methicillin／oxacillin 抗藥的金黃色葡萄球菌，可造成血流、皮膚軟組織與肺部感染，治療常需使用 vancomycin 等藥物。WHO 將其列為 high 優先病原。依疾管署年報，臺灣全國 MRSA 比率 2017–2024 年大致持平於 45–49%（2024 年約 48.0%，由圖表判讀）。請至「抗藥性探索」選擇 MRSA，並依醫院層級與社區／醫療相關感染檢視。",
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "MRSA"
+          "phenotype": "MRSA",
+          "pathogen": "SAU",
+          "antibiotic": "OXA"
         }
       },
       "tags": [
@@ -537,11 +539,13 @@
         "MRSA resistance rate",
         "MRSA meaning"
       ],
-      "a": "MRSA is Staphylococcus aureus resistant to methicillin/oxacillin, causing bloodstream, skin and soft tissue, and pulmonary infections that often require agents such as vancomycin. WHO classifies it as a high-priority pathogen. For Taiwan trends, open the Resistance explorer, select MRSA and filter by hospital level and ward.",
+      "a": "MRSA is Staphylococcus aureus resistant to methicillin/oxacillin, causing bloodstream, skin and soft tissue, and pulmonary infections that often require agents such as vancomycin. WHO classifies it as a high-priority pathogen. In the Taiwan CDC reports, national MRSA has stayed roughly flat at 45–49% from 2017 to 2024 (about 48.0% in 2024, read from a chart). Open the Resistance explorer, select MRSA and filter by hospital level and community- vs hospital-onset.",
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "MRSA"
+          "phenotype": "MRSA",
+          "pathogen": "SAU",
+          "antibiotic": "OXA"
         }
       },
       "tags": [
@@ -560,11 +564,13 @@
         "MRSA の推移の見方",
         "MRSA の耐性率"
       ],
-      "a": "MRSA はメチシリン／オキサシリンに耐性の黄色ブドウ球菌で、血流・皮膚軟部組織・肺の感染を起こし、バンコマイシンなどの使用が必要になることが多い菌です。WHO は high 優先病原体に分類しています。台湾の推移は「耐性エクスプローラー」で MRSA を選び、病院区分や病棟別に確認してください。",
+      "a": "MRSA はメチシリン／オキサシリンに耐性の黄色ブドウ球菌で、血流・皮膚軟部組織・肺の感染を起こし、バンコマイシンなどの使用が必要になることが多い菌です。WHO は high 優先病原体に分類しています。台湾CDC年報では、全国の MRSA は2017〜2024年にほぼ45〜49%で横ばいです（2024年は約48.0%、グラフ読み取り）。「耐性エクスプローラー」で MRSA を選び、病院区分や市中／医療関連感染別に確認してください。",
       "chart": {
         "route": "/resistance",
         "params": {
-          "phenotype": "MRSA"
+          "phenotype": "MRSA",
+          "pathogen": "SAU",
+          "antibiotic": "OXA"
         }
       },
       "tags": [
@@ -654,19 +660,18 @@
       "q": [
         "CRAB 是什麼",
         "碳青黴烯類抗藥鮑氏不動桿菌",
-        "CRAB 在加護病房的趨勢",
+        "CRAB 各層級的趨勢",
         "鮑氏不動桿菌抗藥",
         "CRAB 為何是 WHO critical",
         "CRAB 怎麼隔離"
       ],
-      "a": "CRAB 是對碳青黴烯類抗藥的 Acinetobacter baumannii，易存活於環境表面並在加護病房造成群聚，治療選擇極為有限，WHO 列為 critical 優先病原。臺灣的趨勢請見「抗藥性探索 → CRAB → 加護病房趨勢」，並可切換醫院層級比較。",
+      "a": "CRAB 是對碳青黴烯類抗藥的 Acinetobacter baumannii，易存活於環境表面並在加護病房造成群聚，治療選擇極為有限，WHO 列為 critical 優先病原。依疾管署年報，全國 CRAB 比率由 2017 年約 53% 升至 2022 年 64.6% 的高峰，2024 年為 58.4%，以地區醫院最高。可在「抗藥性探索」選 CRAB 檢視趨勢，並切換醫院層級與社區／醫療相關感染。",
       "chart": {
         "route": "/resistance",
         "params": {
           "phenotype": "CRAB",
           "pathogen": "ABA",
-          "antibiotic": "MEM",
-          "ward": "icu"
+          "antibiotic": "MEM"
         }
       },
       "tags": [
@@ -682,19 +687,18 @@
       "q": [
         "what is CRAB",
         "carbapenem-resistant Acinetobacter baumannii",
-        "CRAB trend in ICU",
+        "CRAB trend by hospital level",
         "Acinetobacter resistance",
         "why is CRAB WHO critical",
         "how to manage CRAB isolation"
       ],
-      "a": "CRAB is Acinetobacter baumannii resistant to carbapenems; it persists on surfaces, causes ICU clusters and leaves very few treatment options, which is why WHO lists it as a critical priority pathogen. For Taiwan trends see the Resistance explorer → CRAB → ICU trend, and switch hospital levels to compare.",
+      "a": "CRAB is Acinetobacter baumannii resistant to carbapenems; it persists on surfaces, causes ICU clusters and leaves very few treatment options, which is why WHO lists it as a critical priority pathogen. In the Taiwan CDC reports, national CRAB rose from about 53% in 2017 to a 64.6% peak in 2022 and was 58.4% in 2024, highest in district hospitals. Open the Resistance explorer → CRAB for the trend, and switch hospital level or community- vs hospital-onset.",
       "chart": {
         "route": "/resistance",
         "params": {
           "phenotype": "CRAB",
           "pathogen": "ABA",
-          "antibiotic": "MEM",
-          "ward": "icu"
+          "antibiotic": "MEM"
         }
       },
       "tags": [
@@ -710,19 +714,18 @@
       "q": [
         "CRAB とは",
         "カルバペネム耐性アシネトバクター",
-        "ICU での CRAB の推移",
+        "病院区分別の CRAB の推移",
         "アシネトバクターの耐性",
         "なぜ CRAB は WHO critical？",
         "CRAB の隔離"
       ],
-      "a": "CRAB はカルバペネムに耐性の Acinetobacter baumannii で、環境表面に長く生存し ICU で集団発生を起こしやすく、治療選択肢が極めて限られるため、WHO は critical 優先病原体としています。台湾の推移は「耐性エクスプローラー → CRAB → ICU の推移」で確認でき、病院区分を切り替えて比較できます。",
+      "a": "CRAB はカルバペネムに耐性の Acinetobacter baumannii で、環境表面に長く生存し ICU で集団発生を起こしやすく、治療選択肢が極めて限られるため、WHO は critical 優先病原体としています。台湾CDC年報では、全国の CRAB は2017年の約53%から2022年に64.6%でピークとなり、2024年は58.4%で、地区病院が最も高い値でした。「耐性エクスプローラー → CRAB」で推移を確認し、病院区分や市中／医療関連感染を切り替えられます。",
       "chart": {
         "route": "/resistance",
         "params": {
           "phenotype": "CRAB",
           "pathogen": "ABA",
-          "antibiotic": "MEM",
-          "ward": "icu"
+          "antibiotic": "MEM"
         }
       },
       "tags": [
@@ -1346,7 +1349,7 @@
         "下載圖表資料",
         "資料授權"
       ],
-      "a": "到「資料與 API」頁可下載各資料集的 JSON 與 CSV；每張圖卡的工具列也可直接下載該圖資料（CSV）或圖片（PNG）。請注意目前資料若標示為暫定（provisional），僅供示範與教育用途；引用或再利用時請一併標註來源與資料狀態。",
+      "a": "到「資料與 API」頁可下載各資料集的 JSON 與 CSV；每張圖卡的工具列也可直接下載該圖資料（CSV）或圖片（PNG）。抗藥性與菌株數資料轉錄自疾管署 2022–2024 年版抗藥性年報，每筆附精確度標示（表格／內文／圖表判讀）；抗生素使用量、醫療照護相關感染與國際比較仍為暫定估計。再利用時請標註來源年報與資料狀態。",
       "chart": {
         "route": "/data",
         "params": {}
@@ -1369,7 +1372,7 @@
         "download chart data",
         "data licence"
       ],
-      "a": "Open the Data & API page to download each dataset as JSON or CSV; every chart card's toolbar also lets you download that chart's data (CSV) or image (PNG). If the data is flagged provisional it is for demonstration and education only; please credit the source and data status when reusing it.",
+      "a": "Open the Data & API page to download each dataset as JSON or CSV; every chart card's toolbar also lets you download that chart's data (CSV) or image (PNG). The resistance and isolate datasets are transcribed from the Taiwan CDC AMR annual reports (2022–2024 editions), with a precision flag on every value (table, text or chart reading); antibiotic use, HAI and the international comparison are still provisional estimates. Please credit the source report and data status when reusing them.",
       "chart": {
         "route": "/data",
         "params": {}
@@ -1392,7 +1395,7 @@
         "グラフのデータを保存したい",
         "データのライセンス"
       ],
-      "a": "「データ・API」ページで各データセットを JSON または CSV でダウンロードできます。各グラフカードのツールバーからも、そのグラフのデータ（CSV）や画像（PNG）を保存できます。データが暫定（provisional）と表示されている場合はデモと教育目的のみに限られます。再利用の際は出典とデータの状態を明記してください。",
+      "a": "「データ・API」ページで各データセットを JSON または CSV でダウンロードできます。各グラフカードのツールバーからも、そのグラフのデータ（CSV）や画像（PNG）を保存できます。耐性と分離株数のデータは台湾CDC薬剤耐性年報（2022〜2024年版）から転記したもので、各値に精度（表・本文・グラフ読み取り）が付いています。抗菌薬使用量、医療関連感染、国際比較は引き続き暫定推計です。再利用の際は出典の年報とデータの状態を明記してください。",
       "chart": {
         "route": "/data",
         "params": {}
@@ -1483,7 +1486,7 @@
         "iframe 嵌入",
         "分享圖表到自己網站"
       ],
-      "a": "在「資料與 API」頁的嵌入產生器選擇圖表、菌種、藥物、語言與主題，即可取得 embed.js 的 script 標籤或 iframe 程式碼貼到院內網站。嵌入圖表會沿用本站資料與暫定狀態標示；請保留來源標註，並避免改動圖表標題造成誤導。",
+      "a": "在「資料與 API」頁的嵌入產生器選擇圖表、菌種、藥物、語言與主題，即可取得 embed.js 的 script 標籤或 iframe 程式碼貼到院內網站。嵌入圖表會沿用本站資料，並保留精確度標示（例如由圖表判讀的數值）以及抗生素使用量、HAI、國際比較等暫定資料的標示；請保留來源標註，並避免改動圖表標題造成誤導。",
       "chart": {
         "route": "/data",
         "params": {}
@@ -1505,7 +1508,7 @@
         "iframe embed",
         "put a chart on my own site"
       ],
-      "a": "In the embed builder on the Data & API page choose the chart, pathogen, antibiotic, language and theme to get a script tag for embed.js or iframe code to paste into your hospital website. Embedded charts use this site's data and keep the provisional flag; please keep the source credit and avoid altering titles in ways that mislead.",
+      "a": "In the embed builder on the Data & API page choose the chart, pathogen, antibiotic, language and theme to get a script tag for embed.js or iframe code to paste into your hospital website. Embedded charts use this site's data and keep its precision badges (e.g. values read from charts) and the provisional flag on antibiotic-use, HAI and international data; please keep the source credit and avoid altering titles in ways that mislead.",
       "chart": {
         "route": "/data",
         "params": {}
@@ -1527,7 +1530,7 @@
         "iframe で埋め込み",
         "自分のサイトにグラフを載せたい"
       ],
-      "a": "「データ・API」ページの埋め込みビルダーで、グラフ・菌種・薬剤・言語・テーマを選ぶと、embed.js の script タグまたは iframe コードが得られ、院内サイトに貼り付けられます。埋め込みグラフは本サイトのデータと暫定表示をそのまま使います。出典表記を残し、誤解を招くようなタイトルの改変は避けてください。",
+      "a": "「データ・API」ページの埋め込みビルダーで、グラフ・菌種・薬剤・言語・テーマを選ぶと、embed.js の script タグまたは iframe コードが得られ、院内サイトに貼り付けられます。埋め込みグラフは本サイトのデータを使い、精度バッジ（グラフ読み取り値など）や、抗菌薬使用量・医療関連感染・国際比較の暫定表示もそのまま保持します。出典表記を残し、誤解を招くようなタイトルの改変は避けてください。",
       "chart": {
         "route": "/data",
         "params": {}
@@ -1549,7 +1552,7 @@
         "資料出處怎麼寫",
         "簡報要標示來源嗎"
       ],
-      "a": "建議寫成：TW-AMR Watch. 臺灣抗藥性監測儀表板. https://ancientsky.github.io/tw_amr_dashboard/（存取日期）。因本站數據係依疾管署年報彙整，正式發表時請同時引用原始的疾管署年報，並說明資料是否為暫定。",
+      "a": "建議寫成：TW-AMR Watch. 臺灣抗藥性監測儀表板. https://ancientsky.github.io/tw_amr_dashboard/（存取日期）。抗藥性與菌株數據轉錄自疾管署《臺灣抗生素抗藥性監視年報》，正式發表時請同時引用原始年報（註明年版），並說明由圖表判讀的數值約有 ±1–2 個百分點誤差；抗生素使用量、HAI 與國際比較為暫定估計，不宜作為正式引用數據。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -1570,7 +1573,7 @@
         "how to credit the data",
         "do I need to cite in slides"
       ],
-      "a": "A suggested form is: TW-AMR Watch. Taiwan AMR surveillance dashboard. https://ancientsky.github.io/tw_amr_dashboard/ (accessed date). Because the figures are compiled from Taiwan CDC annual reports, also cite the original Taiwan CDC report in formal publications and state whether the data are provisional.",
+      "a": "A suggested form is: TW-AMR Watch. Taiwan AMR surveillance dashboard. https://ancientsky.github.io/tw_amr_dashboard/ (accessed date). Resistance and isolate figures are transcribed from the Taiwan CDC Antimicrobial Resistance Surveillance Annual Report, so in formal publications also cite the original report (with its edition) and note that values read from charts carry about ±1–2 points of uncertainty; antibiotic-use, HAI and international figures are provisional estimates and should not be cited as official data.",
       "chart": {
         "route": "/about",
         "params": {}
@@ -1591,7 +1594,7 @@
         "データの出典の書き方",
         "スライドに出典は必要？"
       ],
-      "a": "引用例：TW-AMR Watch. 台湾 AMR サーベイランス・ダッシュボード. https://ancientsky.github.io/tw_amr_dashboard/（閲覧日）。本サイトの数値は台湾 CDC の年報を基に整理しているため、正式な発表では元の台湾 CDC 年報も引用し、データが暫定かどうかも明記してください。",
+      "a": "引用例：TW-AMR Watch. 台湾 AMR サーベイランス・ダッシュボード. https://ancientsky.github.io/tw_amr_dashboard/（閲覧日）。耐性と分離株数の数値は台湾CDC『台湾抗菌薬耐性監視年報』から転記したものなので、正式な発表では元の年報（版を明記）も引用し、グラフから読み取った値には約±1〜2ポイントの誤差があることを記してください。抗菌薬使用量・医療関連感染・国際比較は暫定推計のため、公式データとして引用しないでください。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2192,7 +2195,7 @@
         "可以用在正式報告嗎",
         "暫定估計值"
       ],
-      "a": "在三份疾管署年報完成匯入之前，本站數字為依已發表臺灣 CDC／THAS 資料與趨勢建模的暫定估計，並以橫幅標示，不代表官方數據。請勿以此作為正式通報、政策或論文的唯一依據；需要正式數字時請查閱疾管署年報，匯入後橫幅會移除。",
+      "a": "抗藥性與菌株數資料已由使用者提供的三份疾管署《臺灣抗生素抗藥性監視年報》（2022、2023、2024 年版，資料年 2017–2024）匯入，不是暫定資料；每個數值標示精確度：表格（精確）、內文明列，或由圖表判讀（約 ±1–2 個百分點）。目前仍為暫定估計的只有抗生素使用量、醫療照護相關感染（HAI）與國際（GLASS）比較，這些頁面會以橫幅標示，不代表官方數據；放入對應年報 PDF 後即可取代。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2200,7 +2203,9 @@
       "tags": [
         "provisional",
         "limitations",
-        "data-quality"
+        "data-quality",
+        "real-data",
+        "precision"
       ]
     },
     {
@@ -2214,7 +2219,7 @@
         "can I use this in an official report",
         "provisional estimates"
       ],
-      "a": "Until the three Taiwan CDC annual reports have been ingested, the figures here are provisional estimates modelled on published Taiwan CDC/THAS data and trends, flagged with a banner; they are not official statistics. Do not use them as the sole basis for formal reporting, policy or papers; consult the Taiwan CDC annual reports for official numbers. The banner is removed once ingestion is complete.",
+      "a": "The resistance and isolate data have been ingested from the three Taiwan CDC Antimicrobial Resistance Surveillance Annual Reports supplied (2022, 2023 and 2024 editions; data years 2017–2024), so they are not provisional; every value carries a precision flag: table (exact), stated in the text, or read from a chart (≈ ±1–2 points). Only antibiotic use, healthcare-associated infections (HAI) and the international (GLASS) comparison remain provisional estimates; those pages show a banner and are not official statistics until the corresponding reports are added.",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2222,7 +2227,9 @@
       "tags": [
         "provisional",
         "limitations",
-        "data-quality"
+        "data-quality",
+        "real-data",
+        "precision"
       ]
     },
     {
@@ -2236,7 +2243,7 @@
         "公式報告に使える？",
         "暫定推計値"
       ],
-      "a": "台湾 CDC の 3 つの年報の取り込みが完了するまで、本サイトの数値は、公表済みの台湾 CDC／THAS のデータと傾向に基づくモデル化された暫定推計で、バナーで示されています。公式統計ではありません。正式な報告、政策、論文の唯一の根拠にはせず、公式な数値は台湾 CDC の年報で確認してください。取り込み完了後にバナーは削除されます。",
+      "a": "耐性と分離株数のデータは、提供された台湾CDC『台湾抗菌薬耐性監視年報』3冊（2022・2023・2024年版、データ年 2017〜2024）から取り込み済みで、暫定ではありません。各値には精度が付いています：表（正確）、本文記載、グラフからの読み取り（約±1〜2ポイント）。現在も暫定推計なのは抗菌薬使用量、医療関連感染（HAI）、国際（GLASS）比較のみで、これらのページにはバナーが表示され、該当する年報が追加されるまでは公式統計ではありません。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2244,7 +2251,9 @@
       "tags": [
         "provisional",
         "limitations",
-        "data-quality"
+        "data-quality",
+        "real-data",
+        "precision"
       ]
     },
     {
@@ -2257,7 +2266,7 @@
         "CRAB 國際比較",
         "亞洲國家抗藥性比較"
       ],
-      "a": "「國際比較」頁以 WHO GLASS 指標（如血流感染的 MRSA、3GC 抗藥大腸桿菌、碳青黴烯類抗藥鮑氏不動桿菌等）並列臺灣與其他國家，可依 WHO 區域篩選。因檢體、去重規則與分母不同，臺灣數值已加註可比性說明，請先閱讀備註。更多國際儀表板見「資源」頁。",
+      "a": "「國際比較」頁以 WHO GLASS 指標（如血流感染的 MRSA、3GC 抗藥大腸桿菌、碳青黴烯類抗藥鮑氏不動桿菌等）並列臺灣與其他國家，可依 WHO 區域篩選。臺灣數值由本站年報資料推導（優先採全國血液檢體），其他國家為暫定的整理估計；因檢體、去重規則與分母不同，請先閱讀可比性說明。也可以直接問我「台灣的 CRAB 跟日本比」。更多國際儀表板見「資源」頁。",
       "chart": {
         "route": "/international",
         "params": {
@@ -2281,7 +2290,7 @@
         "CRAB international comparison",
         "Asian countries resistance comparison"
       ],
-      "a": "The International page places Taiwan alongside other countries using WHO GLASS indicators such as MRSA, 3GC-resistant E. coli and carbapenem-resistant A. baumannii in bloodstream infections, filterable by WHO region. Because specimens, deduplication and denominators differ, Taiwan values carry a comparability note, so read it first. More international dashboards are listed on the Resources page.",
+      "a": "The International page places Taiwan alongside other countries using WHO GLASS indicators such as MRSA, 3GC-resistant E. coli and carbapenem-resistant A. baumannii in bloodstream infections, filterable by WHO region. Taiwan's values are derived from the annual-report data (national blood isolates where available), while other countries' values are provisional curated estimates; specimens, deduplication and denominators differ, so read the comparability note first. You can also ask me “Compare Taiwan's CRAB with Japan”. More international dashboards are listed on the Resources page.",
       "chart": {
         "route": "/international",
         "params": {
@@ -2305,7 +2314,7 @@
         "CRAB の国際比較",
         "アジア諸国の耐性比較"
       ],
-      "a": "「国際比較」ページでは、血流感染における MRSA、3GC 耐性大腸菌、カルバペネム耐性アシネトバクターなどの WHO GLASS 指標で台湾と他国を並べて表示し、WHO 地域で絞り込めます。検体、重複除去、分母が異なるため台湾の値には比較可能性の注記を付しています。先に注記をお読みください。他の国際ダッシュボードは「リソース」ページにあります。",
+      "a": "「国際比較」ページでは、血流感染における MRSA、3GC 耐性大腸菌、カルバペネム耐性アシネトバクターなどの WHO GLASS 指標で台湾と他国を並べて表示し、WHO 地域で絞り込めます。台湾の値は本サイトの年報データから算出し（可能な場合は全国の血液検体）、他国の値は暫定の整理推計です。検体、重複除去、分母が異なるため、先に比較可能性の注記をお読みください。「台湾の CRAB を日本と比較」と直接質問することもできます。他の国際ダッシュボードは「リソース」ページにあります。",
       "chart": {
         "route": "/international",
         "params": {
@@ -2395,7 +2404,7 @@
         "本站多久更新",
         "新年報何時匯入"
       ],
-      "a": "疾管署的抗藥性、抗生素使用與醫療照護相關感染監視報告原則上為年度彙整，實際公布時間每年不一，請以疾管署公告為準。本站在新的年報放入資料來源資料夾後重新產生資料並更新網站；目前涵蓋的年度與資料狀態請見「關於與方法學」及頁首的資料狀態標示。",
+      "a": "疾管署的抗藥性、抗生素使用與醫療照護相關感染監視報告原則上為年度彙整，實際公布時間每年不一，請以疾管署公告為準。本站目前的抗藥性與菌株數資料涵蓋 2017–2024 年（最新為 2024 年版年報）；新的年報放入資料來源資料夾後會重新產生資料並更新網站，涵蓋年度與資料狀態請見「關於與方法學」。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2417,7 +2426,7 @@
         "how often is this site updated",
         "when will new reports be ingested"
       ],
-      "a": "Taiwan CDC's resistance, antibiotic use and healthcare-associated infection surveillance reports are compiled annually, with release timing varying from year to year, so check Taiwan CDC announcements. This site regenerates its data and rebuilds once new annual reports are placed in the source folder; the years covered and data status appear in About / Methodology and in the status banner.",
+      "a": "Taiwan CDC's resistance, antibiotic use and healthcare-associated infection surveillance reports are compiled annually, with release timing varying from year to year, so check Taiwan CDC announcements. The resistance and isolate data here currently cover 2017–2024 (latest: the 2024 edition of the AMR annual report); the site regenerates its data and rebuilds once new annual reports are placed in the source folder, and the years covered and data status appear in About / Methodology.",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2439,7 +2448,7 @@
         "このサイトの更新頻度",
         "新しい年報はいつ取り込まれる？"
       ],
-      "a": "台湾 CDC の薬剤耐性、抗菌薬使用、医療関連感染のサーベイランス報告は年次の集計が基本で、公表時期は年により異なるため、台湾 CDC の発表をご確認ください。本サイトは、新しい年報がソースフォルダに追加されるとデータを再生成して更新します。現在の対象年とデータの状態は「概要・方法論」およびステータスバナーで確認できます。",
+      "a": "台湾 CDC の薬剤耐性、抗菌薬使用、医療関連感染のサーベイランス報告は年次の集計が基本で、公表時期は年により異なるため、台湾 CDC の発表をご確認ください。本サイトの耐性と分離株数のデータは現在 2017〜2024年（最新は薬剤耐性年報2024年版）を対象としています。新しい年報がソースフォルダに追加されるとデータを再生成して更新し、対象年とデータの状態は「概要・方法論」で確認できます。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2794,7 +2803,7 @@
         "圖表連結複製",
         "社群分享圖卡"
       ],
-      "a": "每張圖卡的工具列有「分享」選單，可複製連結、下載 PNG、使用裝置分享，或分享到 X、Threads、Facebook、LINE，並能產生適合社群的 1080×1080 與 1080×1920 圖卡。分享的連結會保留目前的篩選條件與語言，並隨附暫定資料標示。",
+      "a": "每張圖卡的工具列有「分享」選單，可複製連結、下載 PNG、使用裝置分享，或分享到 X、Threads、Facebook、LINE，並能產生適合社群的 1080×1080 與 1080×1920 圖卡。分享的連結會保留目前的篩選條件與語言，圖卡也會附上資料來源與精確度（暫定資料另有標示）。問答助理的答案也可直接分享。",
       "chart": {
         "route": "/data",
         "params": {}
@@ -2816,7 +2825,7 @@
         "copy chart link",
         "social media cards"
       ],
-      "a": "Each chart card toolbar has a Share menu to copy the link, download a PNG, use the device share sheet, or post to X, Threads, Facebook and LINE, and it can generate 1080×1080 and 1080×1920 social cards. Shared links keep your current filters and language and carry the provisional-data flag.",
+      "a": "Each chart card toolbar has a Share menu to copy the link, download a PNG, use the device share sheet, or post to X, Threads, Facebook and LINE, and it can generate 1080×1080 and 1080×1920 social cards. Shared links keep your current filters and language, and cards carry the source and precision (plus a flag on provisional data). Assistant answers can be shared too.",
       "chart": {
         "route": "/data",
         "params": {}
@@ -2838,7 +2847,7 @@
         "グラフのリンクをコピー",
         "SNS 用カード"
       ],
-      "a": "各グラフカードのツールバーにある「共有」メニューから、リンクのコピー、PNG のダウンロード、端末の共有機能、X・Threads・Facebook・LINE への共有ができ、SNS 向けの 1080×1080 と 1080×1920 のカードも作成できます。共有リンクは現在の絞り込み条件と言語を保持し、暫定データの表示も付きます。",
+      "a": "各グラフカードのツールバーにある「共有」メニューから、リンクのコピー、PNG のダウンロード、端末の共有機能、X・Threads・Facebook・LINE への共有ができ、SNS 向けの 1080×1080 と 1080×1920 のカードも作成できます。共有リンクは現在の絞り込み条件と言語を保持し、カードには出典と精度（暫定データにはその表示）が付きます。アシスタントの回答も共有できます。",
       "chart": {
         "route": "/data",
         "params": {}
@@ -2860,7 +2869,7 @@
         "隱私",
         "可以離線使用嗎"
       ],
-      "a": "預設情況下，問答助理在您的瀏覽器中比對本站內建的知識庫回答，不需金鑰。若您自行輸入 Anthropic API 金鑰，問題才會由您的瀏覽器直接送到 Anthropic 的 API 以取得較彈性的回答；請勿在公用電腦輸入金鑰，也請勿輸入任何病人個資。助理回答僅供參考，不能取代臨床判斷。",
+      "a": "預設情況下，問答助理完全在您的瀏覽器中運作：比對本站內建知識庫，並直接從儀表板資料（抗藥性、菌株數、國際比較）計算數字與小圖表，不需金鑰。若您在設定中自行輸入 Anthropic API 金鑰，問題與助理算出的相關數據才會由您的瀏覽器直接送到 Anthropic 的 API，由 Claude 撰寫較彈性的回答；金鑰只存放在此瀏覽器，可隨時「忘記金鑰」。請勿在公用電腦輸入金鑰，也請勿輸入任何病人個資；回答僅供參考，不能取代臨床判斷。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2882,7 +2891,7 @@
         "privacy",
         "does it work offline"
       ],
-      "a": "By default the assistant matches your question against this site's built-in knowledge base inside your browser and needs no key. Only if you enter your own Anthropic API key are questions sent from your browser directly to Anthropic's API for more flexible answers; avoid entering a key on shared computers and never type patient-identifiable information. Answers are informational and do not replace clinical judgement.",
+      "a": "By default the assistant runs entirely in your browser: it matches the built-in knowledge base and computes figures and mini charts straight from the dashboard data (resistance, isolates, international comparison), with no key needed. Only if you enter your own Anthropic API key in Settings are your question and the facts the assistant computed sent from your browser directly to Anthropic's API, so Claude can write a more flexible answer; the key is stored only in this browser and can be forgotten at any time. Avoid entering a key on shared computers and never type patient-identifiable information; answers are informational and do not replace clinical judgement.",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2904,7 +2913,7 @@
         "プライバシー",
         "オフラインで使える？"
       ],
-      "a": "既定では、アシスタントはブラウザ内で本サイトの内蔵ナレッジベースと照合して回答するため、キーは不要です。ご自身の Anthropic API キーを入力した場合のみ、質問がブラウザから直接 Anthropic の API に送信され、より柔軟な回答が得られます。共用パソコンでのキー入力や、患者を特定できる情報の入力は避けてください。回答は情報提供であり、臨床判断の代わりにはなりません。",
+      "a": "既定では、アシスタントはすべてブラウザ内で動作します。内蔵ナレッジベースと照合し、ダッシュボードのデータ（耐性、分離株数、国際比較）から数値とミニグラフを直接計算するため、キーは不要です。設定でご自身の Anthropic API キーを入力した場合のみ、質問とアシスタントが計算した関連データがブラウザから直接 Anthropic の API に送られ、Claude がより柔軟な回答を作成します。キーはこのブラウザにのみ保存され、いつでも削除できます。共用パソコンでのキー入力や患者を特定できる情報の入力は避けてください。回答は情報提供であり、臨床判断の代わりにはなりません。",
       "chart": {
         "route": "/about",
         "params": {}
@@ -2926,19 +2935,23 @@
         "為什麼要分層看",
         "ICU 抗藥率比較高嗎"
       ],
-      "a": "本站依醫院層級（醫學中心、區域醫院、地區醫院）與病房別（加護病房、非加護病房）分層呈現。ICU 病人病況重、裝置與抗生素暴露多，抗藥菌通常較常見；醫學中心也因收治轉診重症病人而與其他層級的菌種組成不同。分層比較能避免病人組合造成的誤判，請於「抗藥性探索」切換層級與病房別。",
+      "a": "本站依醫院層級（醫學中心、區域醫院、地區醫院）與感染類別（社區相關 CO／醫療相關 HO）分層呈現；疾管署年報公開資料未提供加護病房／一般病房的分層。醫療相關感染的抗藥率普遍高於社區相關（例如 2024 年 CRKP：HO 29.5%、CO 11.5%），醫學中心則因收治轉診重症而菌種組成不同。分層比較能避免病人組合造成的誤判，請於「抗藥性探索」切換層級與感染類別。",
       "chart": {
         "route": "/resistance",
         "params": {
+          "phenotype": "CRKP",
           "level": "medical_center",
-          "ward": "icu"
+          "setting": "ho"
         }
       },
       "tags": [
         "hospital-level",
         "icu",
         "stratification",
-        "methodology"
+        "methodology",
+        "onset",
+        "community-onset",
+        "hospital-onset"
       ]
     },
     {
@@ -2951,19 +2964,23 @@
         "why stratify",
         "is resistance higher in ICUs"
       ],
-      "a": "The site stratifies by hospital level (medical centre, regional, district) and ward type (ICU versus non-ICU). ICU patients are sicker with more device and antibiotic exposure, so resistant organisms are usually more common there, and medical centres see different case mix because they receive referred critical patients. Stratified comparison avoids case-mix misreading; switch level and ward in the Resistance explorer.",
+      "a": "The site stratifies by hospital level (medical centre, regional, district) and by onset (community-onset CO vs hospital-onset HO); the published Taiwan CDC reports do not break resistance down by ICU vs non-ICU ward. Hospital-onset rates are consistently higher than community-onset ones (e.g. CRKP in 2024: HO 29.5% vs CO 11.5%), and medical centres see a different case mix because they receive referred critical patients. Stratified comparison avoids case-mix misreading; switch level and onset in the Resistance explorer.",
       "chart": {
         "route": "/resistance",
         "params": {
+          "phenotype": "CRKP",
           "level": "medical_center",
-          "ward": "icu"
+          "setting": "ho"
         }
       },
       "tags": [
         "hospital-level",
         "icu",
         "stratification",
-        "methodology"
+        "methodology",
+        "onset",
+        "community-onset",
+        "hospital-onset"
       ]
     },
     {
@@ -2976,19 +2993,23 @@
         "なぜ層別化して見るの？",
         "ICU では耐性率が高い？"
       ],
-      "a": "本サイトは病院区分（医学センター、地域病院、地区病院）と病棟別（ICU・非 ICU）で層別化して表示します。ICU は重症で、デバイスや抗菌薬への曝露が多く、一般に耐性菌が多く見られます。医学センターも、紹介された重症患者を受け入れるため、他の区分とは菌種構成が異なります。層別化した比較は患者構成による誤読を防ぎます。「耐性エクスプローラー」で区分と病棟を切り替えてください。",
+      "a": "本サイトは病院区分（医学センター、地域病院、地区病院）と感染の区分（市中関連 CO／医療関連 HO）で層別化して表示します。台湾CDC年報の公開データには ICU／一般病棟別の層別はありません。医療関連感染の耐性率は市中関連より一貫して高く（例：2024年の CRKP は HO 29.5%、CO 11.5%）、医学センターは紹介された重症患者を受け入れるため菌種構成が異なります。層別化した比較は患者構成による誤読を防ぎます。「耐性エクスプローラー」で区分と感染の区分を切り替えてください。",
       "chart": {
         "route": "/resistance",
         "params": {
+          "phenotype": "CRKP",
           "level": "medical_center",
-          "ward": "icu"
+          "setting": "ho"
         }
       },
       "tags": [
         "hospital-level",
         "icu",
         "stratification",
-        "methodology"
+        "methodology",
+        "onset",
+        "community-onset",
+        "hospital-onset"
       ]
     },
     {
@@ -3001,7 +3022,7 @@
         "呼吸道檢體抗藥性",
         "檢體來源會影響結果嗎"
       ],
-      "a": "不同檢體的菌群與抗藥率不同：血液為無菌部位，臨床意義明確，是國際比較首選；尿液以腸內菌為主，呼吸道檢體常有定居菌需審慎判讀。本站提供血液、尿液、呼吸道與全部檢體的切換，解讀時請注意各檢體的採檢條件與樣本數，樣本數少時百分比波動較大。",
+      "a": "不同檢體的菌群與抗藥率不同：血液為無菌部位，臨床意義明確，是國際比較首選；尿液以腸內菌為主，呼吸道檢體常有定居菌需審慎判讀。本站的抗藥率可依血液、尿液、膿／傷口、糞便與全部檢體切換（依年報菌種別圖表，2022–2024 年），痰液檢體僅有菌株數資料。解讀時請注意採檢條件與樣本數，樣本數少時百分比波動較大。",
       "chart": {
         "route": "/resistance",
         "params": {
@@ -3027,7 +3048,7 @@
         "respiratory specimen resistance",
         "does specimen source affect results"
       ],
-      "a": "Organism mix and resistance differ by specimen: blood is a normally sterile site with clear clinical meaning and is preferred for international comparison; urine is dominated by Enterobacterales, and respiratory specimens often contain colonisers that need careful interpretation. The site lets you switch among blood, urine, respiratory and all specimens; mind sampling practices and isolate counts, as percentages fluctuate with small numbers.",
+      "a": "Organism mix and resistance differ by specimen: blood is a normally sterile site with clear clinical meaning and is preferred for international comparison; urine is dominated by Enterobacterales, and respiratory specimens often contain colonisers that need careful interpretation. Resistance on this site can be switched among blood, urine, pus/wound, stool and all specimens (from the reports' pathogen charts, 2022–2024), while sputum appears only in the isolate counts. Mind sampling practices and isolate counts, as percentages fluctuate with small numbers.",
       "chart": {
         "route": "/resistance",
         "params": {
@@ -3053,7 +3074,7 @@
         "呼吸器検体の耐性",
         "検体の由来は結果に影響する？"
       ],
-      "a": "検体によって菌の構成と耐性率は異なります。血液は本来無菌の部位で臨床的意義が明確なため、国際比較に適しています。尿は腸内細菌目細菌が中心で、呼吸器検体は保菌菌を含むことが多く慎重な解釈が必要です。本サイトでは血液・尿・呼吸器・全検体を切り替えられます。採取状況や分離株数に注意し、数が少ない場合は割合が大きく変動することを念頭に置いてください。",
+      "a": "検体によって菌の構成と耐性率は異なります。血液は本来無菌の部位で臨床的意義が明確なため、国際比較に適しています。尿は腸内細菌目細菌が中心で、呼吸器検体は保菌菌を含むことが多く慎重な解釈が必要です。本サイトの耐性率は血液・尿・膿／創部・便・全検体で切り替えられ（年報の菌種別グラフ、2022〜2024年）、喀痰は分離株数のデータのみです。採取状況や分離株数に注意し、数が少ない場合は割合が大きく変動することを念頭に置いてください。",
       "chart": {
         "route": "/resistance",
         "params": {

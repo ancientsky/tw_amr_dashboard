@@ -88,7 +88,7 @@ function subjectFor(x: ExecCtx, intent: DataIntent, rows: ResistanceRecord[], st
   };
 }
 
-function lineChart(x: ExecCtx, title: string, lines: { name: string; rows: ResistanceRecord[] }[], note?: string): MiniChartSpec {
+function lineChart(_x: ExecCtx, title: string, lines: { name: string; rows: ResistanceRecord[] }[], note?: string): MiniChartSpec {
   const years = [...new Set(lines.flatMap((l) => l.rows.map((r) => r.year)))].sort((a, b) => a - b);
   return {
     kind: 'line',

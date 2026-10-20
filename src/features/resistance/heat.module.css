@@ -12,7 +12,7 @@
   border-collapse: separate;
   border-spacing: 2px;
   font-variant-numeric: tabular-nums;
-  margin-inline: auto 0;
+  width: 100%;
 }
 .corner {
   position: sticky;

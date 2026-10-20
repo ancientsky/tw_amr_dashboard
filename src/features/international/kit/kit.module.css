@@ -252,7 +252,43 @@ button.legendItem:hover {
   align-items: center;
   gap: var(--space-2) var(--space-3);
 }
+.scrollX {
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.scrollX::-webkit-scrollbar {
+  display: none;
+}
 .hint {
   font-size: var(--fs-xs);
   color: var(--ink-3);
+}
+@media (max-width: 640px) {
+  .stackTable thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .stackTable tr {
+    display: block;
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .stackTable th,
+  .stackTable td {
+    display: block;
+    border: 0;
+    padding: 2px var(--space-1);
+    white-space: normal;
+  }
+  .stackTable td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-size: var(--fs-xs);
+    font-weight: 650;
+    color: var(--ink-3);
+  }
 }

@@ -52,8 +52,8 @@ export function CompareView({ state, link }: { state: ExplorerState; link: (extr
     const k = ct.tokens;
     const vals = series.flatMap((x) => x.values).filter((v): v is number => v !== null);
     return {
-      grid: { left: 4, right: 24, top: 44, bottom: 4, containLabel: true },
-      legend: { top: 0, left: 0, data: series.map((x) => x.label) },
+      grid: { left: 4, right: 104, top: 44, bottom: 4, containLabel: true },
+      legend: { top: 0, left: 0, type: 'scroll', data: series.map((x) => x.label) },
       tooltip: {
         trigger: 'axis',
         formatter: (raw: unknown) => {
@@ -72,16 +72,16 @@ export function CompareView({ state, link }: { state: ExplorerState; link: (extr
       },
       xAxis: { type: 'category', data: years.map(String), boundaryGap: false },
       yAxis: state.norm
-        ? { type: 'value', min: Math.max(0, Math.floor((Math.min(100, ...vals) - 10) / 10) * 10), name: t('resistance.trend.indexAxis') }
+        ? { type: 'value', min: Math.max(0, Math.floor((Math.min(100, ...vals) - 10) / 10) * 10) }
         : { type: 'value', min: 0, max: Math.min(100, Math.max(10, Math.ceil((Math.max(0, ...vals) + 4) / 10) * 10)), axisLabel: { formatter: '{value}%' } },
       series: series.map((x) => ({
         name: x.label,
         type: 'line',
         connectNulls: true,
         showSymbol: true,
-        lineStyle: { width: 2, color: x.color, type: x.it.kind === 'pair' ? 'solid' : 'solid' },
+        lineStyle: { width: 2, color: x.color },
         itemStyle: { color: x.color },
-        endLabel: { show: series.length <= 4, formatter: x.label, color: k.ink2, fontSize: 11.5, fontWeight: 600, distance: 6 },
+        endLabel: { show: series.length <= 4, formatter: x.label, color: k.ink2, fontSize: 11.5, fontWeight: 600, distance: 6, width: 94, overflow: 'truncate' },
         data: x.values.map((v, i) =>
           v === null
             ? null
@@ -132,7 +132,7 @@ export function CompareView({ state, link }: { state: ExplorerState; link: (extr
         },
       },
       xAxis: { type: 'value', min: 0, max: 100, axisLabel: { formatter: '{value}%' } },
-      yAxis: { type: 'category', inverse: true, data: bullet.map((b) => `${b.label}${b.year ? ` (${b.year})` : ''}`), axisLine: { show: false }, axisLabel: { color: k.ink2, fontWeight: 600 } },
+      yAxis: { type: 'category', inverse: true, data: bullet.map((b) => `${b.label}${b.year ? ` (${b.year})` : ''}\n${b.nat ? fmtPct(b.nat.value, t.locale) : '—'}`), axisLine: { show: false }, axisLabel: { color: k.ink2, fontWeight: 600 } },
       series: [
         {
           name: names.level('all'),
@@ -140,7 +140,6 @@ export function CompareView({ state, link }: { state: ExplorerState; link: (extr
           barWidth: 14,
           data: bullet.map((b) => b.nat?.value ?? null),
           itemStyle: { color: withAlpha(lc('all'), 0.35), borderRadius: [0, 4, 4, 0] },
-          label: { show: true, position: 'insideRight', formatter: (p: { value: number }) => fmtPct(p.value, t.locale), color: k.ink, fontWeight: 650, fontSize: 11.5 },
         },
         ...lvls.map((l, i) => ({
           name: names.level(l),

@@ -13,7 +13,17 @@ import { envSourceLine } from '../international/kit/util';
 import { UTIL_METRICS } from './haiModel';
 
 /** Device utilisation ratios (device-days / patient-days) over time for the selected level & ICU. */
-export function HaiUtil({ level, icu, years, link }: { level: Level; icu: IcuType; years?: YearRange; link?: string }) {
+export function HaiUtil({
+  level,
+  icu,
+  years,
+  link,
+}: {
+  level: Level;
+  icu: IcuType;
+  years?: YearRange;
+  link?: string;
+}) {
   const t = useT();
   const ct = useChartTheme();
   const ref = useRef<EChartHandle>(null);
@@ -23,8 +33,16 @@ export function HaiUtil({ level, icu, years, link }: { level: Level; icu: IcuTyp
 
   const set = useMemo(() => {
     if (!env) return null;
-    const rows = filterYears(env.records, years).filter((r) => r.level === level && r.icu_type === icu && (UTIL_METRICS as readonly string[]).includes(r.metric));
-    return buildSeries(rows, (r) => r.metric, (r) => r.value, { keyOrder: [...UTIL_METRICS] });
+    const rows = filterYears(env.records, years).filter(
+      (r) =>
+        r.level === level && r.icu_type === icu && (UTIL_METRICS as readonly string[]).includes(r.metric),
+    );
+    return buildSeries(
+      rows,
+      (r) => r.metric,
+      (r) => r.value,
+      { keyOrder: [...UTIL_METRICS] },
+    );
   }, [env, level, icu, years]);
 
   const height = 300;
@@ -32,11 +50,16 @@ export function HaiUtil({ level, icu, years, link }: { level: Level; icu: IcuTyp
     if (!set) return {};
     const tok = ct.tokens;
     return {
-      grid: { left: 4, right: 56, top: 40, bottom: 4, containLabel: true },
+      grid: { left: 4, right: 56, top: 58, bottom: 4, containLabel: true },
       legend: { top: 0, left: 0, data: set.series.map((s) => nameM(s.key)) },
       tooltip: { trigger: 'axis', valueFormatter: (v) => fmtNumber(v as number, t.locale, { digits: 3 }) },
       xAxis: { type: 'category', data: set.years.map(String), boundaryGap: false },
-      yAxis: { type: 'value', min: 0, max: (v: { max: number }) => Math.min(1, Math.ceil((v.max + 0.05) * 10) / 10), axisLabel: { formatter: (v: number) => fmtNumber(v, t.locale, { digits: 1 }) } },
+      yAxis: {
+        type: 'value',
+        min: 0,
+        max: (v: { max: number }) => Math.min(1, Math.ceil((v.max + 0.05) * 10) / 10),
+        axisLabel: { formatter: (v: number) => fmtNumber(v, t.locale, { digits: 1 }) },
+      },
       series: set.series.map((s, i) => {
         const c = seriesColor(i + 1, ct.theme);
         return {
@@ -46,7 +69,13 @@ export function HaiUtil({ level, icu, years, link }: { level: Level; icu: IcuTyp
           showSymbol: false,
           lineStyle: { color: c, width: 2 },
           itemStyle: { color: c, borderColor: tok.surface, borderWidth: 2 },
-          endLabel: { show: true, formatter: (p: { value: number }) => fmtNumber(p.value, t.locale, { digits: 2 }), color: tok.ink2, fontSize: 11, distance: 6 },
+          endLabel: {
+            show: true,
+            formatter: (p: { value: number }) => fmtNumber(p.value, t.locale, { digits: 2 }),
+            color: tok.ink2,
+            fontSize: 11,
+            distance: 6,
+          },
           labelLayout: { moveOverlap: 'shiftY' },
           emphasis: { focus: 'series' },
         };

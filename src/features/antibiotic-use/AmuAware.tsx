@@ -10,7 +10,15 @@ import type { Level } from '../../data/types';
 import { useT } from '../../i18n';
 import { tipRow, tipTitle, envSourceLine } from '../international/kit/util';
 import { useNarrow } from '../international/kit/hooks';
-import { AWARE_COLORS, AWARE_ORDER, WHO_ACCESS_TARGET, awareByYear, levelsOf, share, type AwareKey } from './amuModel';
+import {
+  AWARE_COLORS,
+  AWARE_ORDER,
+  WHO_ACCESS_TARGET,
+  awareByYear,
+  levelsOf,
+  share,
+  type AwareKey,
+} from './amuModel';
 import { parseAmuExtras, type AmuChartProps } from './AmuStacked';
 
 /** AWaRe share (100 % stacked bars) by year, one small multiple per hospital level. */
@@ -27,13 +35,16 @@ export function AmuAware(props: AmuChartProps) {
 
   const model = useMemo(() => {
     if (!env) return null;
-    return levels.map((l) => ({ level: l, rows: awareByYear(env.records, dims, l).filter((s) => inYearRange(s.year, years)) }));
+    return levels.map((l) => ({
+      level: l,
+      rows: awareByYear(env.records, dims, l).filter((s) => inYearRange(s.year, years)),
+    }));
   }, [env, dims, levels, years]);
 
   const cols = narrow || compact ? 1 : 2;
   const panelH = compact ? 150 : narrow ? 170 : 190;
   const rowsN = Math.ceil((model?.length ?? 4) / cols);
-  const height = rowsN * (panelH + 40) + 40;
+  const height = rowsN * (panelH + 40) + (narrow ? 64 : 40);
 
   const option = useMemo<EChartsOption>(() => {
     if (!model) return {};
@@ -48,11 +59,33 @@ export function AmuAware(props: AmuChartProps) {
       const c = i % cols;
       const r = Math.floor(i / cols);
       const leftPct = (c * 100) / cols;
-      const top = 36 + r * (panelH + 40);
-      grids.push({ left: `${leftPct + (c ? 3 : 0.5)}%`, width: `${100 / cols - 4}%`, top: top + 22, height: panelH - 22, containLabel: true });
-      titles.push({ text: t(`levels.${m.level}`), left: `${leftPct + (c ? 3 : 0.5)}%`, top, textStyle: { fontSize: 12.5, fontWeight: 650, color: m.level === level ? tok.accent : tok.ink } });
-      xAxes.push({ type: 'category', gridIndex: i, data: m.rows.map((x) => String(x.year)), axisLabel: { fontSize: 10.5 } });
-      yAxes.push({ type: 'value', gridIndex: i, max: 100, splitNumber: 2, axisLabel: { formatter: '{value}%', fontSize: 10.5 } });
+      const top = (narrow ? 60 : 36) + r * (panelH + 40);
+      grids.push({
+        left: `${leftPct + (c ? 3 : 0.5)}%`,
+        width: `${100 / cols - 4}%`,
+        top: top + 22,
+        height: panelH - 22,
+        containLabel: true,
+      });
+      titles.push({
+        text: t(`levels.${m.level}`),
+        left: `${leftPct + (c ? 3 : 0.5)}%`,
+        top,
+        textStyle: { fontSize: 12.5, fontWeight: 650, color: m.level === level ? tok.accent : tok.ink },
+      });
+      xAxes.push({
+        type: 'category',
+        gridIndex: i,
+        data: m.rows.map((x) => String(x.year)),
+        axisLabel: { fontSize: 10.5 },
+      });
+      yAxes.push({
+        type: 'value',
+        gridIndex: i,
+        max: 100,
+        splitNumber: 2,
+        axisLabel: { formatter: '{value}%', fontSize: 10.5 },
+      });
       keys.forEach((k, ki) => {
         series.push({
           type: 'bar',
@@ -62,7 +95,12 @@ export function AmuAware(props: AmuChartProps) {
           stack: `l${i}`,
           barMaxWidth: 22,
           data: m.rows.map((x) => Math.round(share(x, k) * 10) / 10),
-          itemStyle: { color: AWARE_COLORS[ct.theme][k], borderColor: tok.surface, borderWidth: 1, borderRadius: ki === keys.length - 1 ? [3, 3, 0, 0] : 0 },
+          itemStyle: {
+            color: AWARE_COLORS[ct.theme][k],
+            borderColor: tok.surface,
+            borderWidth: 1,
+            borderRadius: ki === keys.length - 1 ? [3, 3, 0, 0] : 0,
+          },
           emphasis: { focus: 'series' },
           markLine:
             ki === 0
@@ -70,7 +108,13 @@ export function AmuAware(props: AmuChartProps) {
                   symbol: 'none',
                   silent: true,
                   lineStyle: { color: tok.ink, width: 1, type: 'solid', opacity: 0.6 },
-                  label: { show: i === 0, formatter: t('amu.target.short'), position: 'insideEndTop', color: tok.ink2, fontSize: 10 },
+                  label: {
+                    show: i === 0,
+                    formatter: t('amu.target.short'),
+                    position: 'insideEndTop',
+                    color: tok.ink2,
+                    fontSize: 10,
+                  },
                   data: [{ yAxis: WHO_ACCESS_TARGET }],
                 }
               : undefined,
@@ -85,9 +129,19 @@ export function AmuAware(props: AmuChartProps) {
         axisPointer: { type: 'shadow' },
         confine: true,
         formatter: (ps: unknown) => {
-          const arr = ps as { axisIndex?: number; seriesName: string; value: number; color: string; name: string; xAxisIndex?: number }[];
+          const arr = ps as {
+            axisIndex?: number;
+            seriesName: string;
+            value: number;
+            color: string;
+            name: string;
+            xAxisIndex?: number;
+          }[];
           if (!arr.length) return '';
-          return tipTitle(arr[0].name) + arr.map((p) => tipRow(p.color, p.seriesName, fmtPct(p.value, t.locale))).join('');
+          return (
+            tipTitle(arr[0].name) +
+            arr.map((p) => tipRow(p.color, p.seriesName, fmtPct(p.value, t.locale))).join('')
+          );
         },
       },
       grid: grids,
@@ -95,7 +149,7 @@ export function AmuAware(props: AmuChartProps) {
       yAxis: yAxes,
       series,
     } as EChartsOption;
-  }, [model, ct, cols, panelH, t, level]);
+  }, [model, ct, cols, panelH, t, level, narrow]);
 
   const tableRows = useMemo(
     () =>
@@ -129,11 +183,23 @@ export function AmuAware(props: AmuChartProps) {
       fileName="twamr-amu-aware-by-level"
       link={link}
       embed={{ chart: 'amu-aware', params: { level: level !== 'all' ? (level as Level) : null } }}
-      keyNumber={lastSel ? { value: fmtPct(share(lastSel, 'Access'), t.locale), label: `${t('amu.aware.Access')} · ${t(`levels.${level}`)} · ${lastSel.year}` } : undefined}
+      keyNumber={
+        lastSel
+          ? {
+              value: fmtPct(share(lastSel, 'Access'), t.locale),
+              label: `${t('amu.aware.Access')} · ${t(`levels.${level}`)} · ${lastSel.year}`,
+            }
+          : undefined
+      }
       compact={compact}
       height={height}
     >
-      <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${t('amu.awareBars.subtitle')}`} />
+      <EChart
+        ref={ref}
+        option={option}
+        height={height}
+        ariaLabel={`${title}. ${t('amu.awareBars.subtitle')}`}
+      />
     </ChartCard>
   );
 }

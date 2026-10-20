@@ -27,7 +27,7 @@ export function MiniChart({ spec }: { spec: MiniChartSpec }) {
     const legend: EChartsOption['legend'] = multi ? { top: 0, left: 0, itemGap: 10, textStyle: { fontSize: 11 } } : { show: false };
     if (spec.kind === 'line') {
       return {
-        grid: { left: 4, right: 12, top: multi ? 30 : 12, bottom: 4, containLabel: true },
+        grid: { left: 4, right: multi ? 12 : 44, top: multi ? 30 : 12, bottom: 4, containLabel: true },
         tooltip,
         legend,
         xAxis: { type: 'category', data: spec.categories.map(String), boundaryGap: false, axisLabel: { fontSize: 10.5 } },
@@ -87,7 +87,7 @@ export function MiniChart({ spec }: { spec: MiniChartSpec }) {
         <caption>{spec.title}</caption>
         <thead>
           <tr>
-            <th scope="col">{t('common.year')}</th>
+            <th scope="col">{spec.kind === 'line' ? t('common.year') : t('common.value')}</th>
             {spec.series.map((se) => (
               <th key={se.name} scope="col">
                 {se.name}

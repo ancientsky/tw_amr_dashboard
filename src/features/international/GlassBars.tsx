@@ -12,6 +12,8 @@ import type { GlassChartProps } from './GlassMap';
 import { DEFAULT_INDICATOR, WHO_REGIONS, glassRows } from './glassModel';
 import { hashParam, median, niceMax, tipRow, tipTitle, glassSourceLine } from './kit/util';
 import { useNarrow } from './kit/hooks';
+import { LegendSwatch } from './kit/Kit';
+import k from './kit/kit.module.css';
 
 export type BarsView = 'countries' | 'regions';
 
@@ -45,7 +47,9 @@ export function GlassBars({
   const ind = indicator ?? hashParam('indicator') ?? DEFAULT_INDICATOR;
   const reg = region ?? hashParam('region') ?? 'all';
   const yr = year ?? hashParam('year') ?? 'latest';
-  const [localView, setLocalView] = useState<BarsView>((hashParam('bars') as BarsView) === 'regions' ? 'regions' : 'countries');
+  const [localView, setLocalView] = useState<BarsView>(
+    (hashParam('bars') as BarsView) === 'regions' ? 'regions' : 'countries',
+  );
   const mode = view ?? localView;
   const setMode = onViewChange ?? setLocalView;
   const t = useT();
@@ -59,7 +63,11 @@ export function GlassBars({
 
   const model = useMemo(() => {
     if (!env) return null;
-    const rows = glassRows(env.records, { indicator: ind, region: mode === 'regions' ? 'all' : reg, year: yr });
+    const rows = glassRows(env.records, {
+      indicator: ind,
+      region: mode === 'regions' ? 'all' : reg,
+      year: yr,
+    });
     const others = rows.filter((r) => r.iso3 !== 'TWN');
     const med = median(others.map((r) => r.resistant_pct));
     const tw = rows.find((r) => r.iso3 === 'TWN');
@@ -67,14 +75,39 @@ export function GlassBars({
     if (mode === 'regions') {
       items = WHO_REGIONS.map((rg) => {
         const vals = others.filter((r) => r.whoRegion === rg).map((r) => r.resistant_pct);
-        return { key: rg, label: nameR(rg), region: rg, value: median(vals) ?? NaN, n: vals.length, isTw: false };
+        return {
+          key: rg,
+          label: nameR(rg),
+          region: rg,
+          value: median(vals) ?? NaN,
+          n: vals.length,
+          isTw: false,
+        };
       }).filter((x) => Number.isFinite(x.value));
-      if (tw) items.push({ key: 'TWN', label: nameC('TWN'), region: tw.whoRegion, value: tw.resistant_pct, year: tw.year, isTw: true });
+      if (tw)
+        items.push({
+          key: 'TWN',
+          label: nameC('TWN'),
+          region: tw.whoRegion,
+          value: tw.resistant_pct,
+          year: tw.year,
+          isTw: true,
+        });
     } else {
-      items = rows.map((r) => ({ key: r.iso3, label: nameC(r.iso3), region: r.whoRegion, value: r.resistant_pct, year: r.year, isTw: r.iso3 === 'TWN' }));
+      items = rows.map((r) => ({
+        key: r.iso3,
+        label: nameC(r.iso3),
+        region: r.whoRegion,
+        value: r.resistant_pct,
+        year: r.year,
+        isTw: r.iso3 === 'TWN',
+      }));
     }
     items.sort((a, b) => b.value - a.value);
-    const twRank = tw ? [...others, tw].sort((a, b) => b.resistant_pct - a.resistant_pct).findIndex((r) => r.iso3 === 'TWN') + 1 : undefined;
+    const twRank = tw
+      ? [...others, tw].sort((a, b) => b.resistant_pct - a.resistant_pct).findIndex((r) => r.iso3 === 'TWN') +
+        1
+      : undefined;
     return { items, med, tw, twRank, total: others.length + (tw ? 1 : 0) };
   }, [env, ind, reg, yr, mode, nameC, nameR]);
 
@@ -94,14 +127,31 @@ export function GlassBars({
       const vals = model.items.map((x) => (!x.isTw && x.region === rg ? x.value : '-'));
       if (!vals.some((v) => v !== '-')) continue;
       const name = nameR(rg);
-      series.push({ type: 'bar', name, stack: 'lol', data: vals, barWidth: 3, itemStyle: { color, borderRadius: [0, 2, 2, 0] }, emphasis: { focus: 'series' } });
+      series.push({
+        type: 'bar',
+        name,
+        stack: 'lol',
+        data: vals,
+        barWidth: 3,
+        itemStyle: { color, borderRadius: [0, 2, 2, 0] },
+        emphasis: { focus: 'series' },
+      });
       series.push({
         type: 'scatter',
         name,
         data: model.items.map((x, i) => (!x.isTw && x.region === rg ? [x.value, i] : null)).filter(Boolean),
         symbolSize: mode === 'regions' ? 12 : 9,
         itemStyle: { color, borderColor: tok.surface, borderWidth: 2 },
-        label: mode === 'regions' ? { show: true, position: 'right', formatter: (p: { value: number[] }) => fmtPct(p.value[0], t.locale), color: tok.ink2, fontSize: 11.5 } : undefined,
+        label:
+          mode === 'regions'
+            ? {
+                show: true,
+                position: 'right',
+                formatter: (p: { value: number[] }) => fmtPct(p.value[0], t.locale),
+                color: tok.ink2,
+                fontSize: 11.5,
+              }
+            : undefined,
         emphasis: { focus: 'series' },
         z: 3,
       });
@@ -121,7 +171,12 @@ export function GlassBars({
               symbol: 'none',
               silent: true,
               lineStyle: { color: tok.ink3, width: 1, type: 'solid' },
-              label: { formatter: t('international.bars.median', { value: fmtPct(model.med, t.locale) }), color: tok.ink2, fontSize: 11, position: 'end' },
+              label: {
+                formatter: t('international.bars.median', { value: fmtPct(model.med, t.locale) }),
+                color: tok.ink2,
+                fontSize: 11,
+                position: 'start',
+              },
               data: [{ xAxis: model.med }],
             }
           : undefined,
@@ -131,13 +186,27 @@ export function GlassBars({
       name: twName,
       data: model.items.map((x, i) => (x.isTw ? [x.value, i] : null)).filter(Boolean),
       symbolSize: 14,
-      itemStyle: { color: tok.ink, borderColor: tok.surface, borderWidth: 2, shadowBlur: ct.theme === 'dark' ? 14 : 0, shadowColor: tok.accent },
-      label: { show: true, position: 'right', distance: 8, formatter: (p: { value: number[] }) => `${twName} ${fmtPct(p.value[0], t.locale)}`, color: tok.ink, fontWeight: 700, fontSize: 12 },
+      itemStyle: {
+        color: tok.ink,
+        borderColor: tok.surface,
+        borderWidth: 2,
+        shadowBlur: ct.theme === 'dark' ? 14 : 0,
+        shadowColor: tok.accent,
+      },
+      label: {
+        show: true,
+        position: 'right',
+        distance: 8,
+        formatter: (p: { value: number[] }) => `${twName} ${fmtPct(p.value[0], t.locale)}`,
+        color: tok.ink,
+        fontWeight: 700,
+        fontSize: 12,
+      },
       z: 4,
     });
     return {
-      grid: { left: 4, right: narrow ? 70 : 96, top: 36, bottom: 8, containLabel: true },
-      legend: { top: 0, left: 0, type: 'scroll', data: [twName, ...groups.map((g) => nameR(g))] },
+      grid: { left: 4, right: narrow ? 70 : 96, top: 22, bottom: 8, containLabel: true },
+      legend: { show: false, data: [twName, ...groups.map((g) => nameR(g))] },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
@@ -152,7 +221,9 @@ export function GlassBars({
             tipRow(color, nameI(ind), fmtPct(it.value, t.locale), true) +
             (it.year ? tipRow(undefined, t('common.year'), String(it.year)) : '') +
             (it.n !== undefined ? tipRow(undefined, t('international.bars.nCountries'), String(it.n)) : '') +
-            (!it.isTw && mode === 'countries' ? tipRow(undefined, t('international.region'), nameR(it.region)) : '')
+            (!it.isTw && mode === 'countries'
+              ? tipRow(undefined, t('international.region'), nameR(it.region))
+              : '')
           );
         },
       },
@@ -179,7 +250,11 @@ export function GlassBars({
   const title = t('international.bars.title', { indicator: nameI(ind) });
   const subtitle =
     model?.twRank && model.tw
-      ? t('international.bars.subtitleRank', { rank: model.twRank, total: model.total, value: fmtPct(model.tw.resistant_pct, t.locale) })
+      ? t('international.bars.subtitleRank', {
+          rank: model.twRank,
+          total: model.total,
+          value: fmtPct(model.tw.resistant_pct, t.locale),
+        })
       : t('international.bars.subtitle');
   const tableRows = useMemo(
     () =>
@@ -187,7 +262,9 @@ export function GlassBars({
         '#': i + 1,
         [mode === 'regions' ? t('international.region') : t('international.country')]: x.label,
         [t('common.resistantPct')]: x.value,
-        ...(mode === 'regions' ? { [t('international.bars.nCountries')]: x.n ?? null } : { [t('common.year')]: x.year ?? null }),
+        ...(mode === 'regions'
+          ? { [t('international.bars.nCountries')]: x.n ?? null }
+          : { [t('common.year')]: x.year ?? null }),
       })),
     [model, mode, t],
   );
@@ -205,22 +282,34 @@ export function GlassBars({
       fileName={`twamr-glass-bars-${ind}-${mode}`.toLowerCase()}
       link={link}
       embed={{ chart: 'glass-bars', params: { indicator: ind, bars: mode === 'regions' ? 'regions' : null } }}
-      keyNumber={model?.twRank ? { value: `#${model.twRank}/${model.total}`, label: `${nameC('TWN')} · ${nameI(ind)}` } : undefined}
+      keyNumber={
+        model?.twRank
+          ? { value: `#${model.twRank}/${model.total}`, label: `${nameC('TWN')} · ${nameI(ind)}` }
+          : undefined
+      }
       compact={compact}
       height={height}
       actions={
-        <SegmentedControl<BarsView>
-          size="sm"
-          label={t('international.bars.viewLabel')}
-          value={mode}
-          onChange={setMode}
-          options={[
-            { value: 'countries', label: t('international.bars.allCountries') },
-            { value: 'regions', label: t('international.bars.regionMedians') },
-          ]}
-        />
+        <div className={k.scrollX}>
+          <SegmentedControl<BarsView>
+            size="sm"
+            label={t('international.bars.viewLabel')}
+            value={mode}
+            onChange={setMode}
+            options={[
+              { value: 'countries', label: t('international.bars.allCountries') },
+              { value: 'regions', label: t('international.bars.regionMedians') },
+            ]}
+          />
+        </div>
       }
     >
+      <div className={k.legend} style={{ padding: '0 4px 6px' }}>
+        <LegendSwatch color={ct.tokens.ink} label={nameC('TWN')} />
+        {WHO_REGIONS.map((rg) => (
+          <LegendSwatch key={rg} color={regionColor(rg, ct.theme)} label={nameR(rg)} />
+        ))}
+      </div>
       <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${subtitle}`} />
     </ChartCard>
   );

@@ -43,13 +43,25 @@ export function AmuScatter({ years, link }: { years?: YearRange; link?: string }
   const [pair, setPair] = useState<Pair>('crkp');
   const amu = useDataset('antibiotic_use');
   const res = useDataset('resistance');
-  const status = amu.status === 'ready' && res.status === 'ready' ? 'ready' : amu.status === 'error' || res.status === 'error' ? 'error' : 'loading';
+  const status =
+    amu.status === 'ready' && res.status === 'ready'
+      ? 'ready'
+      : amu.status === 'error' || res.status === 'error'
+        ? 'error'
+        : 'loading';
 
   const model = useMemo(() => {
     if (!amu.data || !res.data) return null;
     const cfg = PAIRS[pair];
     const levels = levelsOf(amu.data);
-    const rrows = res.data.records.filter((r) => cfg.pick(r) && r.ward === 'all' && (r.setting ?? 'all') === 'all' && r.specimen === 'all' && inYearRange(r.year, years));
+    const rrows = res.data.records.filter(
+      (r) =>
+        cfg.pick(r) &&
+        r.ward === 'all' &&
+        (r.setting ?? 'all') === 'all' &&
+        r.specimen === 'all' &&
+        inYearRange(r.year, years),
+    );
     const best = dedupeRecords(rrows, (r) => `${r.level}|${r.year}`);
     const pts: Pt[] = [];
     for (const r of best) {
@@ -72,8 +84,10 @@ export function AmuScatter({ years, link }: { years?: YearRange; link?: string }
     const pad = (a: number, b: number) => Math.max(1, (b - a) * 0.12);
     const [x0, x1] = [Math.min(...xs), Math.max(...xs)];
     const [y0, y1] = [Math.min(...ys), Math.max(...ys)];
+    const xr = x1 - x0;
+    const xStep = xr > 60 ? 20 : xr > 25 ? 10 : 5;
     return {
-      grid: { left: 8, right: 24, top: 40, bottom: 8, containLabel: true },
+      grid: { left: 8, right: 28, top: 64, bottom: 30, containLabel: true },
       legend: { top: 0, left: 0, data: model.levels.map((l) => t(`levels.${l}`)) },
       tooltip: {
         trigger: 'item',
@@ -82,7 +96,11 @@ export function AmuScatter({ years, link }: { years?: YearRange; link?: string }
           if (!d) return '';
           return (
             tipTitle(`${t(`levels.${d.level}`)} · ${d.year}`) +
-            tipRow(color(d.level), t(`amu.scatter.x.${pair}`), `${fmtNumber(d.x, t.locale, { digits: 1 })} DID`) +
+            tipRow(
+              color(d.level),
+              t(`amu.scatter.x.${pair}`),
+              `${fmtNumber(d.x, t.locale, { digits: 1 })} DID`,
+            ) +
             tipRow(color(d.level), t(`amu.scatter.y.${pair}`), fmtPct(d.y, t.locale), true)
           );
         },
@@ -92,16 +110,18 @@ export function AmuScatter({ years, link }: { years?: YearRange; link?: string }
         name: t(`amu.scatter.x.${pair}`),
         nameLocation: 'middle',
         nameGap: 28,
-        min: Math.floor(x0 - pad(x0, x1)),
-        max: Math.ceil(x1 + pad(x0, x1)),
+        min: Math.floor((x0 - pad(x0, x1)) / xStep) * xStep,
+        max: Math.ceil((x1 + pad(x0, x1)) / xStep) * xStep,
+        interval: xStep,
         splitLine: { show: true },
       },
       yAxis: {
         type: 'value',
         name: t(`amu.scatter.y.${pair}`),
         nameTextStyle: { align: 'left' },
-        min: Math.max(0, Math.floor(y0 - pad(y0, y1))),
-        max: Math.min(100, Math.ceil(y1 + pad(y0, y1))),
+        nameGap: 14,
+        min: Math.max(0, Math.floor((y0 - pad(y0, y1)) / 5) * 5),
+        max: Math.min(100, Math.ceil((y1 + pad(y0, y1)) / 5) * 5),
         axisLabel: { formatter: '{value}%' },
       },
       series: model.levels.map((l) => {
@@ -114,7 +134,16 @@ export function AmuScatter({ years, link }: { years?: YearRange; link?: string }
             value: [p.x, p.y],
             pt: p,
             symbolSize: i === pts.length - 1 ? 11 : 7,
-            label: i === 0 || i === pts.length - 1 ? { show: true, formatter: String(p.year), position: i === 0 ? 'left' : 'right', color: tok.ink3, fontSize: 10.5 } : undefined,
+            label:
+              i === 0 || i === pts.length - 1
+                ? {
+                    show: true,
+                    formatter: String(p.year),
+                    position: i === 0 ? 'left' : 'right',
+                    color: tok.ink3,
+                    fontSize: 10.5,
+                  }
+                : undefined,
           })),
           showSymbol: true,
           symbol: 'circle',
@@ -149,16 +178,26 @@ export function AmuScatter({ years, link }: { years?: YearRange; link?: string }
       link={link}
       height={height}
       actions={
-        <SegmentedControl<Pair>
-          size="sm"
-          label={t('amu.scatter.pairLabel')}
-          value={pair}
-          onChange={setPair}
-          options={(['crkp', 'crab', 'fq'] as Pair[]).map((p) => ({ value: p, label: t(`amu.scatter.pairs.${p}`) }))}
-        />
+        <div className={k.scrollX}>
+          <SegmentedControl<Pair>
+            size="sm"
+            label={t('amu.scatter.pairLabel')}
+            value={pair}
+            onChange={setPair}
+            options={(['crkp', 'crab', 'fq'] as Pair[]).map((p) => ({
+              value: p,
+              label: t(`amu.scatter.pairs.${p}`),
+            }))}
+          />
+        </div>
       }
     >
-      <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${t('amu.scatter.subtitle')}`} />
+      <EChart
+        ref={ref}
+        option={option}
+        height={height}
+        ariaLabel={`${title}. ${t('amu.scatter.subtitle')}`}
+      />
       <div className={k.chartNote}>
         <span>{t('amu.scatter.caveat')}</span>
       </div>

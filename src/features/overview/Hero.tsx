@@ -38,7 +38,13 @@ export function Hero() {
             {t('overview.hero.eyebrow', { from: firstYear ?? '—', to: latestYear ?? '—' })}
           </motion.span>
           <motion.h1 id="ov-title" className={s.heroTitle} {...fade(0.05)}>
-            {t('overview.hero.title')}
+            {t('overview.hero.title')
+              .split('|')
+              .map((part, i) => (
+                <span key={i} className={s.titlePart}>
+                  {part}
+                </span>
+              ))}
           </motion.h1>
           <motion.p className={s.heroThesis} {...fade(0.12)}>
             {t('overview.hero.thesis')}

@@ -38,7 +38,11 @@ export default function AntibioticUsePage() {
   const bounds = useMemo(() => (env ? extentYears(env.records) : undefined), [env]);
   const nameCls = dimNamer(dims, t.locale);
 
-  const [level, setLevel] = useQueryParam<Level>('level', 'all', levels.length ? levels : ['all', 'medical_center', 'regional', 'district']);
+  const [level, setLevel] = useQueryParam<Level>(
+    'level',
+    'all',
+    levels.length ? levels : ['all', 'medical_center', 'regional', 'district'],
+  );
   const [metric, setMetric] = useQueryParam<AmuMetric>('metric', 'DID', ['DID', 'share']);
   const [classes, setClasses] = useListParam('classes', env ? order : undefined, NO_CLASSES);
   const [years, setYears] = useYearRangeParam('years', bounds);
@@ -52,7 +56,10 @@ export default function AntibioticUsePage() {
         subtitle={t('pages.antibioticUse.subtitle')}
         aside={<AmuMethodology />}
       />
-      <Notice title={t('amu.notice.title')} links={[{ href: TW_CDC_URL, label: t('amu.notice.cdcLink'), external: true }]}>
+      <Notice
+        title={t('amu.notice.title')}
+        links={[{ href: TW_CDC_URL, label: t('amu.notice.cdcLink'), external: true }]}
+      >
         <p>{t('amu.notice.body')}</p>
         <p>
           {t('amu.notice.how')} <code>raw/</code>
@@ -87,13 +94,27 @@ export default function AntibioticUsePage() {
           options={order.map((c) => ({ value: c, label: nameCls(c), color: classColor(dims, c, ct.theme) }))}
         />
         {bounds && years && (
-          <RangeSlider className={k.filterGrow} label={t('common.years')} min={bounds[0]} max={bounds[1]} value={years} onChange={setYears} />
+          <RangeSlider
+            className={k.filterGrow}
+            label={t('common.years')}
+            min={bounds[0]}
+            max={bounds[1]}
+            value={years}
+            onChange={setYears}
+          />
         )}
       </FilterBar>
 
       <div className={k.stack}>
         <AmuKpis level={level} years={years} link={link('amu-kpis')} />
-        <AmuStacked level={level} metric={metric} classes={classes.length ? classes : undefined} years={years} onClassesChange={setClasses} link={link('amu-stacked')} />
+        <AmuStacked
+          level={level}
+          metric={metric}
+          classes={classes.length ? classes : undefined}
+          years={years}
+          onClassesChange={setClasses}
+          link={link('amu-stacked')}
+        />
         <div className={k.grid2}>
           <AmuAware level={level} years={years} link={link('amu-aware')} />
           <div className={k.stack}>

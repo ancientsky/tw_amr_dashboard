@@ -8,6 +8,7 @@ import type { ChartParams } from '../../../embed/charts/common';
 import { useT } from '../../../i18n';
 import { coHoGaps, isEstimate, MDROS } from '../lib';
 import { resistanceSource, useResistanceModel } from '../model';
+import { useNarrow } from '../useNarrow';
 import { dumbbellOption, type DumbbellRow } from './dumbbell';
 
 /** Slots shared with the trend chart's CO/HO overlay. */
@@ -34,6 +35,7 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
   const rows = useMemo(() => (trend ? coHoGaps(trend, level, year, phenotypes) : []), [trend, level, year, phenotypes]);
   const y = rows[0]?.year;
   const pp = t('kpi.pp');
+  const narrow = useNarrow();
 
   const option = useMemo(() => {
     const data: DumbbellRow[] = rows.map((r) => ({
@@ -41,7 +43,7 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
       label: r.phenotype,
       a: r.co,
       b: r.ho,
-      note: `${fmtDelta(r.gap, t.locale)} ${pp}`,
+      note: narrow ? fmtDelta(r.gap, t.locale) : `${fmtDelta(r.gap, t.locale)} ${pp}`,
     }));
     return dumbbellOption({
       rows: data,
@@ -52,7 +54,8 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
       tokens: ct.tokens,
       fmt: (v) => fmtPct(v, t.locale),
       compact,
-      noteWidth: 84,
+      noteWidth: narrow ? 44 : 84,
+      narrow,
       labelWidth: 70,
       tooltip: (d) => {
         const g = rows.find((r) => r.phenotype === d.key)!;
@@ -63,7 +66,7 @@ export function CoHoGapChart({ level = 'all', years, compact, link, fixtureFallb
           <div style="margin-top:4px">${esc(t('resistance.coho.gap'))}: <b>${fmtDelta(g.gap, t.locale)} ${esc(pp)}</b> · ×${Number.isFinite(g.ratio) ? g.ratio.toFixed(1) : '—'}</div>${est}`;
       },
     });
-  }, [rows, ct.theme, ct.tokens, t, pp, compact, names]);
+  }, [rows, ct.theme, ct.tokens, t, pp, compact, names, narrow]);
 
   const top = rows[0];
   const title = t('resistance.coho.title');

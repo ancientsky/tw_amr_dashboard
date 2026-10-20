@@ -4,15 +4,32 @@ import { ChartCard } from '../../components/chart/ChartCard';
 import { EChart, type EChartHandle } from '../../components/chart/EChart';
 import { resistanceColor, resistanceRamp } from '../../components/chart/palette';
 import { useChartTheme } from '../../components/chart/useChartTheme';
-import { ensureWorldMap } from '../../components/chart/worldMap';
 import { usePrefersReducedMotion } from '../../components/ui/usePrefersReducedMotion';
 import { dimNamer, fmtPct } from '../../data/format';
 import { useDataset } from '../../data/load';
 import type { GlassRecord } from '../../data/types';
 import type { ChartParams } from '../../embed/charts/common';
 import { useT } from '../../i18n';
-import { DEFAULT_INDICATOR, GLASS_DASHBOARD_URL, NE_NAME, REGION_VIEW, TAIWAN_COORD, glassRows, ISO_BY_NE } from './glassModel';
-import { esc, hashParam, niceMax, sourceTitles, tipNote, tipRow, tipTitle, glassSourceLine } from './kit/util';
+import { WORLD_MAP, ensureWorldMapFixed } from './worldMapFixed';
+import {
+  DEFAULT_INDICATOR,
+  GLASS_DASHBOARD_URL,
+  NE_NAME,
+  REGION_VIEW,
+  TAIWAN_COORD,
+  glassRows,
+  ISO_BY_NE,
+} from './glassModel';
+import {
+  esc,
+  hashParam,
+  niceMax,
+  sourceTitles,
+  tipNote,
+  tipRow,
+  tipTitle,
+  glassSourceLine,
+} from './kit/util';
 import { useNarrow } from './kit/hooks';
 import k from './kit/kit.module.css';
 
@@ -27,7 +44,16 @@ export interface GlassChartProps extends ChartParams {
 }
 
 /** World choropleth of % resistant (bloodstream isolates) with a pulsing Taiwan marker + callout. */
-export function GlassMap({ indicator, region, year, countries = [], onCountryClick, compact, link, fixtureFallback }: GlassChartProps) {
+export function GlassMap({
+  indicator,
+  region,
+  year,
+  countries = [],
+  onCountryClick,
+  compact,
+  link,
+  fixtureFallback,
+}: GlassChartProps) {
   const ind = indicator ?? hashParam('indicator') ?? DEFAULT_INDICATOR;
   const reg = region ?? hashParam('region') ?? 'all';
   const yr = year ?? hashParam('year') ?? 'latest';
@@ -42,7 +68,7 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
 
   useEffect(() => {
     let alive = true;
-    ensureWorldMap().then(
+    ensureWorldMapFixed().then(
       () => alive && setMapReady(true),
       () => alive && setMapError(true),
     );
@@ -56,7 +82,10 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
   const nameR = dimNamer(env?.dims?.whoRegions, t.locale);
   const srcs = useMemo(() => sourceTitles(env, t.locale), [env, t.locale]);
 
-  const rows = useMemo(() => (env ? glassRows(env.records, { indicator: ind, region: reg, year: yr }) : []), [env, ind, reg, yr]);
+  const rows = useMemo(
+    () => (env ? glassRows(env.records, { indicator: ind, region: reg, year: yr }) : []),
+    [env, ind, reg, yr],
+  );
   const tw = rows.find((r) => r.iso3 === 'TWN');
   const vmax = useMemo(() => niceMax(Math.max(0, ...rows.map((r) => r.resistant_pct))), [rows]);
   const height = compact ? 300 : narrow ? 300 : 480;
@@ -75,7 +104,11 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
         name: NE_NAME[r.iso3],
         itemStyle: outline ? { borderColor: tok.ink, borderWidth: 1.4 } : undefined,
         emphasis: {
-          itemStyle: { areaColor: resistanceColor((r.resistant_pct / vmax) * 100, ct.theme), borderColor: tok.ink, borderWidth: 1.6 },
+          itemStyle: {
+            areaColor: resistanceColor((r.resistant_pct / vmax) * 100, ct.theme),
+            borderColor: tok.ink,
+            borderWidth: 1.6,
+          },
           label: { show: false },
         },
       };
@@ -94,7 +127,13 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
       zlevel: 2,
       rippleEffect: { brushType: 'stroke', scale: 3.2, period: 3.2 },
       showEffectOn: 'render',
-      itemStyle: { color: tok.ink, borderColor: tok.surface, borderWidth: 2, shadowBlur: ct.theme === 'dark' ? 12 : 0, shadowColor: tok.accent },
+      itemStyle: {
+        color: tok.ink,
+        borderColor: tok.surface,
+        borderWidth: 2,
+        shadowBlur: ct.theme === 'dark' ? 12 : 0,
+        shadowColor: tok.accent,
+      },
       label: {
         show: true,
         formatter: label,
@@ -119,7 +158,9 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
         confine: true,
         formatter: (p: unknown) => {
           const pp = p as { name: string; seriesType?: string };
-          const iso = ISO_BY_NE[pp.name] ?? (pp.seriesType === 'effectScatter' || pp.seriesType === 'scatter' ? 'TWN' : undefined);
+          const iso =
+            ISO_BY_NE[pp.name] ??
+            (pp.seriesType === 'effectScatter' || pp.seriesType === 'scatter' ? 'TWN' : undefined);
           const r = iso ? byIso.get(iso) : undefined;
           if (!r) return `${tipTitle(pp.name)}${tipNote(t('international.map.noData'))}`;
           const src = srcs.get(r.source);
@@ -151,7 +192,7 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
         textStyle: { color: tok.ink3, fontSize: 11 },
       },
       geo: {
-        map: 'world',
+        map: WORLD_MAP,
         roam: false,
         center: view.center,
         zoom: view.zoom,
@@ -159,7 +200,7 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
         emphasis: { itemStyle: { areaColor: tok.surface2 }, label: { show: false } },
         select: { disabled: true },
         tooltip: { show: true },
-        regions: [{ name: 'Antarctica', itemStyle: { opacity: 0, borderWidth: 0 }, silent: true }, ...regions],
+        regions: [...regions],
       },
       series: [
         {
@@ -170,7 +211,24 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
         markerSeries,
       ],
     } as EChartsOption;
-  }, [mapReady, env, ct, reg, countries, rows, tw, nameC, nameI, nameR, t, reduced, narrow, srcs, vmax, onCountryClick]);
+  }, [
+    mapReady,
+    env,
+    ct,
+    reg,
+    countries,
+    rows,
+    tw,
+    nameC,
+    nameI,
+    nameR,
+    t,
+    reduced,
+    narrow,
+    srcs,
+    vmax,
+    onCountryClick,
+  ]);
 
   const onEvents = useMemo(
     () => ({
@@ -184,7 +242,10 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
   );
 
   const title = t('international.map.title', { indicator: nameI(ind) });
-  const subtitle = t('international.map.subtitle', { region: reg === 'all' ? t('international.allRegions') : nameR(reg), year: yr === 'latest' ? t('international.latestAvailable') : yr });
+  const subtitle = t('international.map.subtitle', {
+    region: reg === 'all' ? t('international.allRegions') : nameR(reg),
+    year: yr === 'latest' ? t('international.latestAvailable') : yr,
+  });
   const tableRows = useMemo(
     () =>
       [...rows]
@@ -213,7 +274,11 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
       fileName={`twamr-glass-map-${ind}`.toLowerCase()}
       link={link}
       embed={{ chart: 'glass-map', params: { indicator: ind, region: reg !== 'all' ? reg : null } }}
-      keyNumber={tw ? { value: fmtPct(tw.resistant_pct, t.locale), label: `${nameC('TWN')} · ${nameI(ind)}` } : undefined}
+      keyNumber={
+        tw
+          ? { value: fmtPct(tw.resistant_pct, t.locale), label: `${nameC('TWN')} · ${nameI(ind)}` }
+          : undefined
+      }
       compact={compact}
       height={height}
       footer={
@@ -224,11 +289,27 @@ export function GlassMap({ indicator, region, year, countries = [], onCountryCli
         )
       }
     >
-      <EChart ref={ref} option={option} height={height} onEvents={onEvents} loading={!mapReady} ariaLabel={`${title}. ${t('international.map.aria')}`} />
+      <EChart
+        ref={ref}
+        option={option}
+        height={height}
+        onEvents={onEvents}
+        loading={!mapReady}
+        ariaLabel={`${title}. ${t('international.map.aria')}`}
+      />
       <div className={k.chartNote}>
         <span>{t('international.map.legend')}</span>
         <span>
-          <span className={k.swatch} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: 6, background: ct.tokens.surface2, border: `1px solid ${ct.tokens.axis}` }} />
+          <span
+            className={k.swatch}
+            style={{
+              display: 'inline-block',
+              verticalAlign: 'middle',
+              marginRight: 6,
+              background: ct.tokens.surface2,
+              border: `1px solid ${ct.tokens.axis}`,
+            }}
+          />
           {t('international.map.noDataLegend')}
         </span>
         {onCountryClick && <span>{t('international.map.clickHint')}</span>}

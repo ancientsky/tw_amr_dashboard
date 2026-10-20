@@ -62,6 +62,9 @@
 :root[data-theme='dark'] .heroTitle {
   text-shadow: 0 0 48px rgb(0 227 140 / 0.18);
 }
+.titlePart {
+  display: inline-block;
+}
 .heroThesis {
   font-size: var(--fs-md);
   line-height: 1.6;
@@ -156,6 +159,18 @@
   display: grid;
   gap: var(--space-3);
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+}
+@media (max-width: 560px) {
+  .pulseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+  .pulseTile {
+    padding: var(--space-3) !important;
+  }
+  .sectionAside {
+    display: none;
+  }
 }
 @media (min-width: 1200px) {
   .pulseGrid {

@@ -17,6 +17,8 @@ export const GRAM_POS_MDROS: readonly string[] = ['MRSA', 'VRE', 'VR-EFA', 'VR-E
 export const LEVEL_KEYS: readonly Level[] = ['all', 'medical_center', 'regional', 'district'];
 export const SETTING_KEYS: readonly OnsetSetting[] = ['all', 'co', 'ho'];
 export const SPECIMEN_KEYS: readonly Specimen[] = ['all', 'blood', 'urine', 'sputum', 'pus', 'stool'];
+/** Fixed categorical slots per specimen (skips the ochre slot, too close to amber when all specimens show). */
+export const SPECIMEN_SLOT: Record<Specimen, number> = { all: 0, blood: 1, urine: 2, sputum: 3, pus: 5, stool: 6 };
 
 /* ---------------- row kinds ---------------- */
 

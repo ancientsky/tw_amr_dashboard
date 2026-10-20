@@ -11,7 +11,8 @@ import { inYearRange, yearsOf } from '../../data/select';
 import type { IcuType } from '../../data/types';
 import type { ChartParams } from '../../embed/charts/common';
 import { useT } from '../../i18n';
-import { hashParam, tipRow, tipTitle, envSourceLine } from '../international/kit/util';
+import k from '../international/kit/kit.module.css';
+import { hashParam, niceMax, tipRow, tipTitle, envSourceLine } from '../international/kit/util';
 import { useNarrow } from '../international/kit/hooks';
 import { TREND_METRICS, haiSeries, icuTypesFor, unitKey, type TrendMetric } from './haiModel';
 
@@ -22,10 +23,20 @@ export interface HaiChartProps extends ChartParams {
 }
 
 /** Small multiples: one panel per ICU type for the chosen metric, with the all-ICU line as muted reference. */
-export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, compact, link, fixtureFallback }: HaiChartProps) {
+export function HaiTrend({
+  level: lvl,
+  icu: icuProp,
+  metric: metricProp,
+  years,
+  compact,
+  link,
+  fixtureFallback,
+}: HaiChartProps) {
   const level = lvl ?? 'all';
   const metricRaw = metricProp ?? hashParam('metric') ?? 'clabsi';
-  const metric: TrendMetric = (TREND_METRICS as readonly string[]).includes(metricRaw) ? (metricRaw as TrendMetric) : 'clabsi';
+  const metric: TrendMetric = (TREND_METRICS as readonly string[]).includes(metricRaw)
+    ? (metricRaw as TrendMetric)
+    : 'clabsi';
   const icu = (icuProp ?? hashParam('icu') ?? 'all') as IcuType;
   const t = useT();
   const ct = useChartTheme();
@@ -41,7 +52,9 @@ export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, 
     if (!env) return null;
     const types = icuTypesFor(env.records, level);
     const panels = types.filter((x) => x !== 'all' || types.length === 1);
-    const rows = env.records.filter((r) => r.level === level && r.metric === metric && inYearRange(r.year, years));
+    const rows = env.records.filter(
+      (r) => r.level === level && r.metric === metric && inYearRange(r.year, years),
+    );
     const ys = yearsOf(rows);
     const val = (it: IcuType) => {
       const m = new Map(haiSeries(rows, level, it, metric).map((r) => [r.year, r.value]));
@@ -49,7 +62,11 @@ export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, 
     };
     const ref = val('all');
     const data = panels.map((p) => ({ icu: p, values: val(p) }));
-    const max = Math.max(0, ...data.flatMap((d) => d.values.filter((v): v is number => v !== null)), ...ref.filter((v): v is number => v !== null));
+    const max = Math.max(
+      0,
+      ...data.flatMap((d) => d.values.filter((v): v is number => v !== null)),
+      ...ref.filter((v): v is number => v !== null),
+    );
     return { ys, data, ref, max };
   }, [env, level, metric, years]);
 
@@ -70,17 +87,35 @@ export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, 
     const titles: Record<string, unknown>[] = [];
     const series: Record<string, unknown>[] = [];
     const w = 100 / cols;
-    const sharedMax = Math.ceil(model.max * 1.1 * 2) / 2;
+    const sharedMax = niceMax(model.max, 1000);
     model.data.forEach((d, i) => {
       const c = i % cols;
       const r = Math.floor(i / cols);
       const top = 34 + r * (panelH + gapY);
       const left = `${c * w + 1}%`;
       const focus = d.icu === icu;
-      grids.push({ left, width: `${w - 3}%`, top: top + 20, height: panelH - 20, containLabel: true });
-      titles.push({ text: nameIcu(d.icu), left, top, textStyle: { fontSize: 12, fontWeight: focus ? 750 : 600, color: focus ? tok.accent : tok.ink } });
-      xAxes.push({ type: 'category', gridIndex: i, data: model.ys.map(String), boundaryGap: false, axisLabel: { fontSize: 10, interval: 'auto' } });
-      yAxes.push({ type: 'value', gridIndex: i, min: 0, max: shared ? sharedMax : undefined, splitNumber: 2, axisLabel: { fontSize: 10, formatter: (v: number) => fmtNumber(v, t.locale) } });
+      grids.push({ left, width: `${w - 7}%`, top: top + 30, height: panelH - 30, containLabel: true });
+      titles.push({
+        text: nameIcu(d.icu),
+        left,
+        top,
+        textStyle: { fontSize: 12, fontWeight: focus ? 750 : 600, color: focus ? tok.accent : tok.ink },
+      });
+      xAxes.push({
+        type: 'category',
+        gridIndex: i,
+        data: model.ys.map(String),
+        boundaryGap: false,
+        axisLabel: { fontSize: 10, interval: 'auto' },
+      });
+      yAxes.push({
+        type: 'value',
+        gridIndex: i,
+        min: 0,
+        max: shared ? sharedMax : undefined,
+        splitNumber: 2,
+        axisLabel: { fontSize: 10, formatter: (v: number) => fmtNumber(v, t.locale) },
+      });
       if (d.icu !== 'all')
         series.push({
           type: 'line',
@@ -105,7 +140,13 @@ export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, 
         lineStyle: { color: main, width: focus ? 2.75 : 2 },
         itemStyle: { color: main, borderColor: tok.surface, borderWidth: 2 },
         areaStyle: focus ? { color: main, opacity: 0.1 } : undefined,
-        endLabel: { show: true, formatter: (p: { value: number }) => fmtNumber(p.value, t.locale, { digits: 1 }), color: tok.ink2, fontSize: 10.5, distance: 4 },
+        endLabel: {
+          show: true,
+          formatter: (p: { value: number }) => fmtNumber(p.value, t.locale, { digits: 1 }),
+          color: tok.ink2,
+          fontSize: 10.5,
+          distance: 4,
+        },
         z: 2,
       });
     });
@@ -116,12 +157,25 @@ export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, 
         trigger: 'axis',
         confine: true,
         formatter: (ps: unknown) => {
-          const arr = ps as { axisIndex: number; seriesName: string; value: number; color: string; name: string; xAxisIndex?: number; componentIndex: number }[];
+          const arr = ps as {
+            axisIndex: number;
+            seriesName: string;
+            value: number;
+            color: string;
+            name: string;
+            xAxisIndex?: number;
+            componentIndex: number;
+          }[];
           if (!arr.length) return '';
           const first = arr[0] as unknown as { axisIndex?: number; xAxisIndex?: number; seriesIndex: number };
           const s = series[first.seriesIndex] as { xAxisIndex: number };
           const d = model.data[s?.xAxisIndex ?? 0];
-          return tipTitle(`${d ? nameIcu(d.icu) : ''} · ${arr[0].name}`) + arr.map((p) => tipRow(p.color, p.seriesName, fmtNumber(p.value, t.locale, { digits: 2 }))).join('');
+          return (
+            tipTitle(`${d ? nameIcu(d.icu) : ''} · ${arr[0].name}`) +
+            arr
+              .map((p) => tipRow(p.color, p.seriesName, fmtNumber(p.value, t.locale, { digits: 2 })))
+              .join('')
+          );
         },
       },
       grid: grids,
@@ -142,7 +196,10 @@ export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, 
   }, [model, t, nameIcu]);
 
   const title = t('hai.trend.title', { metric: nameM(metric) });
-  const subtitle = t('hai.trend.subtitle', { level: t(`levels.${level}`), unit: nameU(unitKey(env, metric)) });
+  const subtitle = t('hai.trend.subtitle', {
+    level: t(`levels.${level}`),
+    unit: nameU(unitKey(env, metric)),
+  });
   return (
     <ChartCard
       id="hai-trend"
@@ -155,20 +212,25 @@ export function HaiTrend({ level: lvl, icu: icuProp, metric: metricProp, years, 
       tableRows={tableRows}
       fileName={`twamr-hai-trend-${metric}-${level}`}
       link={link}
-      embed={{ chart: 'hai-trend', params: { metric, level: level !== 'all' ? level : null, icu: icu !== 'all' ? icu : null } }}
+      embed={{
+        chart: 'hai-trend',
+        params: { metric, level: level !== 'all' ? level : null, icu: icu !== 'all' ? icu : null },
+      }}
       compact={compact}
       height={height}
       actions={
-        <SegmentedControl<'shared' | 'free'>
-          size="sm"
-          label={t('hai.trend.yLabel')}
-          value={shared ? 'shared' : 'free'}
-          onChange={(v) => setShared(v === 'shared')}
-          options={[
-            { value: 'shared', label: t('hai.trend.sharedY') },
-            { value: 'free', label: t('hai.trend.freeY') },
-          ]}
-        />
+        <div className={k.scrollX}>
+          <SegmentedControl<'shared' | 'free'>
+            size="sm"
+            label={t('hai.trend.yLabel')}
+            value={shared ? 'shared' : 'free'}
+            onChange={(v) => setShared(v === 'shared')}
+            options={[
+              { value: 'shared', label: t('hai.trend.sharedY') },
+              { value: 'free', label: t('hai.trend.freeY') },
+            ]}
+          />
+        </div>
       }
     >
       <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${subtitle}`} />

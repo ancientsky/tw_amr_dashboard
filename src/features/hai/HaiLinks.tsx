@@ -33,7 +33,15 @@ export function HaiLinks({ level: lvl }: { level: Level }) {
         const pheno = dim?.meta?.keyPhenotype as string | undefined;
         const lv =
           pheno && res.data
-            ? latestValue(res.data.records, (x) => x.phenotype === pheno && x.level === 'all' && (x.setting ?? 'all') === 'all' && x.specimen === 'all' && x.ward === 'all')
+            ? latestValue(
+                res.data.records,
+                (x) =>
+                  x.phenotype === pheno &&
+                  x.level === 'all' &&
+                  (x.setting ?? 'all') === 'all' &&
+                  x.specimen === 'all' &&
+                  x.ward === 'all',
+              )
             : undefined;
         return { ...r, pheno, lv, inThas: resCodes.size ? resCodes.has(r.pathogen) : true };
       });
@@ -63,7 +71,11 @@ export function HaiLinks({ level: lvl }: { level: Level }) {
             </div>
           )}
           {x.inThas ? (
-            <a className={s.linkBtn} href={`#/resistance?pathogen=${encodeURIComponent(x.pathogen)}`} title={x.pheno ? namePh(x.pheno) : undefined}>
+            <a
+              className={s.linkBtn}
+              href={`#/resistance?pathogen=${encodeURIComponent(x.pathogen)}`}
+              title={x.pheno ? namePh(x.pheno) : undefined}
+            >
               {t('hai.links.cta', { org: organismShort(hp.data, x.pathogen, nameP(x.pathogen)) })}
               <Icon name="chevron-right" size={14} />
             </a>

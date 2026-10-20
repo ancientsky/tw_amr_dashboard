@@ -11,7 +11,17 @@ import s from '../antibiotic-use/amu.module.css';
 import { KPI_METRICS, haiSeries, unitKey } from './haiModel';
 
 /** KPI row: HAI density, CLABSI, CAUTI, VAP (latest year in range) with deltas + sparklines. */
-export function HaiKpis({ level, icu, years, link }: { level: Level; icu: IcuType; years?: YearRange; link?: string }) {
+export function HaiKpis({
+  level,
+  icu,
+  years,
+  link,
+}: {
+  level: Level;
+  icu: IcuType;
+  years?: YearRange;
+  link?: string;
+}) {
   const t = useT();
   const { data: env, status } = useDataset('hai');
   const nameM = dimNamer(env?.dims?.metrics, t.locale);
@@ -48,7 +58,14 @@ export function HaiKpis({ level, icu, years, link }: { level: Level; icu: IcuTyp
       tableRows={rows}
       fileName={`twamr-hai-kpis-${level}-${icu}`}
       link={link}
-      keyNumber={items[1]?.cur ? { value: fmtNumber(items[1].cur.value, t.locale, { digits: 2 }), label: `CLABSI · ${items[1].cur.year}` } : undefined}
+      keyNumber={
+        items[1]?.cur
+          ? {
+              value: fmtNumber(items[1].cur.value, t.locale, { digits: 2 }),
+              label: `CLABSI · ${items[1].cur.year}`,
+            }
+          : undefined
+      }
       toolbar={{ fullscreen: false }}
       height={170}
     >

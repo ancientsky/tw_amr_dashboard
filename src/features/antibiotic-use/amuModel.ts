@@ -30,7 +30,11 @@ export function classOrder(classes: Dim[] | undefined): string[] {
   const list = (classes ?? []).filter((c) => c.code !== TOTAL && !c.meta?.isTotal);
   return list
     .slice()
-    .sort((a, b) => AWARE_ORDER.indexOf(awareOf(classes, a.code)) - AWARE_ORDER.indexOf(awareOf(classes, b.code)) || (a.order ?? 0) - (b.order ?? 0))
+    .sort(
+      (a, b) =>
+        AWARE_ORDER.indexOf(awareOf(classes, a.code)) - AWARE_ORDER.indexOf(awareOf(classes, b.code)) ||
+        (a.order ?? 0) - (b.order ?? 0),
+    )
     .map((c) => c.code);
 }
 
@@ -43,11 +47,15 @@ export function classColor(classes: Dim[] | undefined, code: string, theme: Them
   const n = fam.length;
   if (n <= 1) return base;
   const tt = -0.32 + (i / (n - 1)) * 0.82; // dark → light
-  return tt < 0 ? mix(base, theme === 'dark' ? '#03100a' : '#0b1a14', -tt) : mix(base, '#ffffff', tt * (theme === 'dark' ? 0.75 : 0.9));
+  return tt < 0
+    ? mix(base, theme === 'dark' ? '#03100a' : '#0b1a14', -tt)
+    : mix(base, '#ffffff', tt * (theme === 'dark' ? 0.75 : 0.9));
 }
 
 export function amuRows(records: readonly AmuRecord[], level: Level, metric = 'DID'): AmuRecord[] {
-  return records.filter((r) => r.level === level && r.metric === metric && (r.setting ?? 'inpatient') === 'inpatient');
+  return records.filter(
+    (r) => r.level === level && r.metric === metric && (r.setting ?? 'inpatient') === 'inpatient',
+  );
 }
 
 export interface AwareSplit {
@@ -60,7 +68,11 @@ export interface AwareSplit {
 }
 
 /** DID by AWaRe group per year (TOTAL excluded from class sums; `total` = sum of classes). */
-export function awareByYear(records: readonly AmuRecord[], classes: Dim[] | undefined, level: Level): AwareSplit[] {
+export function awareByYear(
+  records: readonly AmuRecord[],
+  classes: Dim[] | undefined,
+  level: Level,
+): AwareSplit[] {
   const by = new Map<number, AwareSplit>();
   for (const r of amuRows(records, level)) {
     if (r.className === TOTAL) continue;
@@ -79,12 +91,23 @@ export function awareByYear(records: readonly AmuRecord[], classes: Dim[] | unde
 export const share = (s: AwareSplit, k: AwareKey): number => (s.total > 0 ? (s[k] / s.total) * 100 : 0);
 
 /** Value of one class (or TOTAL) for a level/year. */
-export function classValue(records: readonly AmuRecord[], level: Level, cls: string, year: number): number | undefined {
-  return records.find((r) => r.level === level && r.className === cls && r.year === year && r.metric === 'DID')?.value;
+export function classValue(
+  records: readonly AmuRecord[],
+  level: Level,
+  cls: string,
+  year: number,
+): number | undefined {
+  return records.find(
+    (r) => r.level === level && r.className === cls && r.year === year && r.metric === 'DID',
+  )?.value;
 }
 
 /** TOTAL J01 DID per year (falls back to the class sum when TOTAL is missing). */
-export function totalByYear(records: readonly AmuRecord[], classes: Dim[] | undefined, level: Level): Map<number, number> {
+export function totalByYear(
+  records: readonly AmuRecord[],
+  classes: Dim[] | undefined,
+  level: Level,
+): Map<number, number> {
   const m = new Map<number, number>();
   for (const r of amuRows(records, level)) if (r.className === TOTAL) m.set(r.year, r.value);
   if (!m.size) for (const s of awareByYear(records, classes, level)) m.set(s.year, s.total);

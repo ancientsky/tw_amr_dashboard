@@ -33,6 +33,8 @@ export interface DumbbellSpec {
   /** right column width (px) for notes */
   noteWidth?: number;
   labelWidth?: number;
+  /** phone layout: lift more left labels above their marker */
+  narrow?: boolean;
 }
 
 /**
@@ -58,12 +60,14 @@ export function dumbbellOption(spec: DumbbellSpec): EChartsOption {
         const d = dot(p, color, size);
         const other = pick === spec_a ? r.b : r.a;
         const left = side === 'outer' && p.value <= other.value;
+        // a left label near the axis start would collide with the category labels → put it above
+        const pos = left ? (p.value / max < (spec.narrow ? 0.4 : 0.12) ? 'top' : 'left') : p.value / max > (spec.narrow ? 0.72 : 0.9) ? 'top' : 'right';
         return {
           ...d,
           value: [p.value, i],
           label:
             side === 'outer'
-              ? { show: true, position: left ? 'left' : 'right', distance: 8, formatter: fmt(p.value), color: k.ink2, fontSize: spec.compact ? 11 : 12, fontWeight: 600 }
+              ? { show: true, position: pos, distance: pos === 'top' ? 5 : 8, formatter: fmt(p.value), color: k.ink2, fontSize: spec.compact || spec.narrow ? 10.5 : 12, fontWeight: 600 }
               : { show: false },
         };
       })

@@ -10,6 +10,7 @@ import { useDataset } from '../../data/load';
 import { inYearRange, type YearRange } from '../../data/select';
 import type { Level } from '../../data/types';
 import { useT } from '../../i18n';
+import k from '../international/kit/kit.module.css';
 import { tipRow, tipTitle, envSourceLine } from '../international/kit/util';
 import { useNarrow } from '../international/kit/hooks';
 import { WHO_ACCESS_TARGET, awareByYear, levelsOf, share } from './amuModel';
@@ -49,8 +50,14 @@ export function AmuSlope({ level, years, link }: { level: Level; years?: YearRan
     const from = model[0].from;
     const to = model[0].to;
     const vals = model.flatMap((m) => [m.a, m.b]);
-    const lo = Math.max(0, Math.floor((Math.min(...vals, group === 'Access' ? WHO_ACCESS_TARGET : 100) - 5) / 5) * 5);
-    const hi = Math.min(100, Math.ceil((Math.max(...vals, group === 'Access' ? WHO_ACCESS_TARGET : 0) + 5) / 5) * 5);
+    const lo = Math.max(
+      0,
+      Math.floor((Math.min(...vals, group === 'Access' ? WHO_ACCESS_TARGET : 100) - 5) / 5) * 5,
+    );
+    const hi = Math.min(
+      100,
+      Math.ceil((Math.max(...vals, group === 'Access' ? WHO_ACCESS_TARGET : 0) + 5) / 5) * 5,
+    );
     return {
       grid: { left: narrow ? 8 : 24, right: narrow ? 110 : 150, top: 30, bottom: 8, containLabel: true },
       tooltip: {
@@ -59,10 +66,20 @@ export function AmuSlope({ level, years, link }: { level: Level; years?: YearRan
           const pp = p as { seriesIndex: number };
           const m = model[pp.seriesIndex];
           if (!m) return '';
-          return tipTitle(t(`levels.${m.level}`)) + tipRow(color(m.level), String(m.from), fmtPct(m.a, t.locale)) + tipRow(color(m.level), String(m.to), fmtPct(m.b, t.locale), true);
+          return (
+            tipTitle(t(`levels.${m.level}`)) +
+            tipRow(color(m.level), String(m.from), fmtPct(m.a, t.locale)) +
+            tipRow(color(m.level), String(m.to), fmtPct(m.b, t.locale), true)
+          );
         },
       },
-      xAxis: { type: 'category', data: [String(from), String(to)], boundaryGap: false, axisLabel: { fontWeight: 650, color: tok.ink2 }, axisLine: { show: false } },
+      xAxis: {
+        type: 'category',
+        data: [String(from), String(to)],
+        boundaryGap: false,
+        axisLabel: { fontWeight: 650, color: tok.ink2 },
+        axisLine: { show: false },
+      },
       yAxis: { type: 'value', min: lo, max: hi, axisLabel: { formatter: '{value}%' } },
       series: model.map((m, i) => {
         const c = color(m.level);
@@ -90,7 +107,12 @@ export function AmuSlope({ level, years, link }: { level: Level; years?: YearRan
                   symbol: 'none',
                   silent: true,
                   lineStyle: { color: tok.ink3, width: 1, type: 'solid' },
-                  label: { formatter: t('amu.target.short'), position: 'insideStartTop', color: tok.ink2, fontSize: 10.5 },
+                  label: {
+                    formatter: t('amu.target.short'),
+                    position: 'insideStartTop',
+                    color: tok.ink2,
+                    fontSize: 10.5,
+                  },
                   data: [{ yAxis: WHO_ACCESS_TARGET }],
                 }
               : undefined,
@@ -121,16 +143,26 @@ export function AmuSlope({ level, years, link }: { level: Level; years?: YearRan
       link={link}
       height={height}
       actions={
-        <SegmentedControl<Group>
-          size="sm"
-          label={t('amu.slope.groupLabel')}
-          value={group}
-          onChange={setGroup}
-          options={(['Access', 'Watch', 'Reserve'] as Group[]).map((g) => ({ value: g, label: t(`amu.aware.${g}`) }))}
-        />
+        <div className={k.scrollX}>
+          <SegmentedControl<Group>
+            size="sm"
+            label={t('amu.slope.groupLabel')}
+            value={group}
+            onChange={setGroup}
+            options={(['Access', 'Watch', 'Reserve'] as Group[]).map((g) => ({
+              value: g,
+              label: t(`amu.aware.${g}`),
+            }))}
+          />
+        </div>
       }
     >
-      <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${t('amu.slope.subtitle', { span })}`} />
+      <EChart
+        ref={ref}
+        option={option}
+        height={height}
+        ariaLabel={`${title}. ${t('amu.slope.subtitle', { span })}`}
+      />
     </ChartCard>
   );
 }

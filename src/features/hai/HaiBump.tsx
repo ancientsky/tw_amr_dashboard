@@ -11,17 +11,29 @@ import { inYearRange, latestYear, yearsOf } from '../../data/select';
 import { useT } from '../../i18n';
 import { hashParam, tipRow, tipTitle, envSourceLine } from '../international/kit/util';
 import { useNarrow } from '../international/kit/hooks';
+import { LegendSwatch } from '../international/kit/Kit';
+import k from '../international/kit/kit.module.css';
 import { SITES, organismColors, organismShort, pathogenLevel, type Site } from './haiModel';
 import type { HaiChartProps } from './HaiTrend';
 
 /** Bump chart: pathogen rank (top 10) by year for one infection site; hover highlights an organism. */
-export function HaiBump({ level: lvl, site: siteProp, onSiteChange, years, compact, link, fixtureFallback }: HaiChartProps & { onSiteChange?: (s: Site) => void }) {
+export function HaiBump({
+  level: lvl,
+  site: siteProp,
+  onSiteChange,
+  years,
+  compact,
+  link,
+  fixtureFallback,
+}: HaiChartProps & { onSiteChange?: (s: Site) => void }) {
   const t = useT();
   const ct = useChartTheme();
   const narrow = useNarrow();
   const ref = useRef<EChartHandle>(null);
   const initial = (siteProp ?? hashParam('site') ?? 'bsi') as Site;
-  const [localSite, setLocalSite] = useState<Site>((SITES as readonly string[]).includes(initial) ? initial : 'bsi');
+  const [localSite, setLocalSite] = useState<Site>(
+    (SITES as readonly string[]).includes(initial) ? initial : 'bsi',
+  );
   const site = siteProp && (SITES as readonly string[]).includes(siteProp) ? (siteProp as Site) : localSite;
   const setSite = onSiteChange ?? setLocalSite;
   const { data: env, status } = useDataset('hai_pathogens', { fixtureFallback });
@@ -33,7 +45,9 @@ export function HaiBump({ level: lvl, site: siteProp, onSiteChange, years, compa
 
   const model = useMemo(() => {
     if (!env) return null;
-    const rows = env.records.filter((r) => r.level === level && r.site === site && inYearRange(r.year, years) && r.rank <= 10);
+    const rows = env.records.filter(
+      (r) => r.level === level && r.site === site && inYearRange(r.year, years) && r.rank <= 10,
+    );
     const ys = yearsOf(rows);
     const orgs = [...new Set(rows.map((r) => r.pathogen))];
     const last = latestYear(rows);
@@ -53,13 +67,26 @@ export function HaiBump({ level: lvl, site: siteProp, onSiteChange, years, compa
         trigger: 'item',
         confine: true,
         formatter: (p: unknown) => {
-          const pp = p as { seriesName: string; data: { org: string; year: number; pct: number; rank: number } };
+          const pp = p as {
+            seriesName: string;
+            data: { org: string; year: number; pct: number; rank: number };
+          };
           const d = pp.data;
           if (!d) return '';
-          return tipTitle(`${nameP(d.org)}`) + tipRow(color(d.org), `${d.year} · ${t('hai.bump.rank')}`, `#${d.rank}`, true) + tipRow(undefined, t('hai.bump.share'), fmtPct(d.pct, t.locale));
+          return (
+            tipTitle(`${nameP(d.org)}`) +
+            tipRow(color(d.org), `${d.year} · ${t('hai.bump.rank')}`, `#${d.rank}`, true) +
+            tipRow(undefined, t('hai.bump.share'), fmtPct(d.pct, t.locale))
+          );
         },
       },
-      xAxis: { type: 'category', data: model.ys.map(String), boundaryGap: false, axisLine: { show: false }, splitLine: { show: true, lineStyle: { color: tok.grid } } },
+      xAxis: {
+        type: 'category',
+        data: model.ys.map(String),
+        boundaryGap: false,
+        axisLine: { show: false },
+        splitLine: { show: true, lineStyle: { color: tok.grid } },
+      },
       yAxis: {
         type: 'value',
         inverse: true,
@@ -86,8 +113,19 @@ export function HaiBump({ level: lvl, site: siteProp, onSiteChange, years, compa
           showSymbol: true,
           lineStyle: { color: c, width: muted ? 2 : 3 },
           itemStyle: { color: c, borderColor: tok.surface, borderWidth: 2 },
-          endLabel: { show: true, formatter: short(o), color: tok.ink2, fontSize: 11, fontWeight: 600, distance: 8 },
-          emphasis: { focus: 'series', lineStyle: { width: 4.5 }, endLabel: { color: tok.ink, fontWeight: 750 } },
+          endLabel: {
+            show: model.at.has(`${o}|${model.last}`),
+            formatter: short(o),
+            color: tok.ink2,
+            fontSize: 11,
+            fontWeight: 600,
+            distance: 8,
+          },
+          emphasis: {
+            focus: 'series',
+            lineStyle: { width: 4.5 },
+            endLabel: { color: tok.ink, fontWeight: 750 },
+          },
           blur: { lineStyle: { opacity: 0.12 }, itemStyle: { opacity: 0.12 }, endLabel: { opacity: 0.3 } },
           z: muted ? 1 : 2,
         };
@@ -108,7 +146,15 @@ export function HaiBump({ level: lvl, site: siteProp, onSiteChange, years, compa
   const csvRows = useMemo(
     () =>
       model
-        ? [...model.at.values()].map((r) => ({ year: r.year, site: r.site, level: r.level, rank: r.rank, pathogen: r.pathogen, name: nameP(r.pathogen), pct: r.pct }))
+        ? [...model.at.values()].map((r) => ({
+            year: r.year,
+            site: r.site,
+            level: r.level,
+            rank: r.rank,
+            pathogen: r.pathogen,
+            name: nameP(r.pathogen),
+            pct: r.pct,
+          }))
         : undefined,
     [model, nameP],
   );
@@ -130,17 +176,21 @@ export function HaiBump({ level: lvl, site: siteProp, onSiteChange, years, compa
       fileName={`twamr-hai-pathogen-rank-${site}-${level}`}
       link={link}
       embed={{ chart: 'hai-bump', params: { site, level: level !== 'all' ? level : null } }}
-      keyNumber={top && model?.last ? { value: short(top), label: `#1 · ${nameS(site)} · ${model.last}` } : undefined}
+      keyNumber={
+        top && model?.last ? { value: short(top), label: `#1 · ${nameS(site)} · ${model.last}` } : undefined
+      }
       compact={compact}
       height={height}
       actions={
-        <SegmentedControl<Site>
-          size="sm"
-          label={t('hai.bump.siteLabel')}
-          value={site}
-          onChange={setSite}
-          options={SITES.map((s) => ({ value: s, label: t(`hai.sites.${s}`) }))}
-        />
+        <div className={k.scrollX}>
+          <SegmentedControl<Site>
+            size="sm"
+            label={t('hai.bump.siteLabel')}
+            value={site}
+            onChange={setSite}
+            options={SITES.map((s) => ({ value: s, label: t(`hai.sites.${s}`) }))}
+          />
+        </div>
       }
     >
       <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${subtitle}`} />
@@ -170,11 +220,13 @@ export function HaiShare({ level: lvl, years, link }: HaiChartProps) {
     for (const r of cur) totals.set(r.pathogen, (totals.get(r.pathogen) ?? 0) + r.pct);
     const orgs = [...totals.keys()].sort((a, b) => (totals.get(b) ?? 0) - (totals.get(a) ?? 0));
     const at = new Map(cur.map((r) => [`${r.site}|${r.pathogen}`, r.pct]));
-    const other = sites.map((s) => Math.max(0, 100 - cur.filter((r) => r.site === s).reduce((a, r) => a + r.pct, 0)));
+    const other = sites.map((s) =>
+      Math.max(0, 100 - cur.filter((r) => r.site === s).reduce((a, r) => a + r.pct, 0)),
+    );
     return { year, sites, orgs, at, other };
   }, [env, level, years]);
 
-  const height = narrow ? 300 : 280;
+  const height = narrow ? 240 : 220;
   const option = useMemo<EChartsOption>(() => {
     if (!model) return {};
     const tok = ct.tokens;
@@ -188,7 +240,8 @@ export function HaiShare({ level: lvl, years, link }: HaiChartProps) {
       itemStyle: { color: c, borderColor: tok.surface, borderWidth: 1.5 },
       label: {
         show: true,
-        formatter: (p: { value: number; seriesName: string }) => (p.value >= (narrow ? 14 : 9) ? p.seriesName : ''),
+        formatter: (p: { value: number; seriesName: string }) =>
+          !narrow && p.value >= 12 ? p.seriesName : '',
         fontSize: 10,
         color: textOn(c),
         overflow: 'truncate',
@@ -196,22 +249,41 @@ export function HaiShare({ level: lvl, years, link }: HaiChartProps) {
       emphasis: { focus: 'series' },
     });
     return {
-      grid: { left: 4, right: 12, top: 8, bottom: 56, containLabel: true },
-      legend: { bottom: 0, left: 0, type: 'scroll', data: [...model.orgs.map(short), otherName] },
+      grid: { left: 4, right: 12, top: 8, bottom: 4, containLabel: true },
+      legend: { show: false, data: [...model.orgs.map(short), otherName] },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
         confine: true,
         formatter: (ps: unknown) => {
-          const arr = (ps as { seriesName: string; value: number; color: string; name: string }[]).filter((p) => p.value > 0).sort((a, b) => b.value - a.value);
-          return tipTitle(`${arr[0]?.name ?? ''} · ${model.year}`) + arr.map((p) => tipRow(p.color, p.seriesName, fmtPct(p.value, t.locale))).join('');
+          const arr = (ps as { seriesName: string; value: number; color: string; name: string }[])
+            .filter((p) => p.value > 0)
+            .sort((a, b) => b.value - a.value);
+          return (
+            tipTitle(`${arr[0]?.name ?? ''} · ${model.year}`) +
+            arr.map((p) => tipRow(p.color, p.seriesName, fmtPct(p.value, t.locale))).join('')
+          );
         },
       },
       xAxis: { type: 'value', max: 100, axisLabel: { formatter: '{value}%' } },
-      yAxis: { type: 'category', data: model.sites.map((s) => t(`hai.sites.${s}`)), inverse: true, axisLine: { show: false } },
+      yAxis: {
+        type: 'category',
+        data: model.sites.map((s) => t(`hai.sites.${s}`)),
+        inverse: true,
+        axisLine: { show: false },
+      },
       series: [
-        ...model.orgs.map((o) => mk(short(o), model.sites.map((s) => model.at.get(`${s}|${o}`) ?? 0), color(o))),
-        { ...mk(otherName, model.other, ct.theme === 'dark' ? '#2a3a32' : '#d7ddd9'), label: { show: false } },
+        ...model.orgs.map((o) =>
+          mk(
+            short(o),
+            model.sites.map((s) => model.at.get(`${s}|${o}`) ?? 0),
+            color(o),
+          ),
+        ),
+        {
+          ...mk(otherName, model.other, ct.theme === 'dark' ? '#2a3a32' : '#d7ddd9'),
+          label: { show: false },
+        },
       ],
     } as EChartsOption;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -244,6 +316,12 @@ export function HaiShare({ level: lvl, years, link }: HaiChartProps) {
       height={height}
     >
       <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${subtitle}`} />
+      <div className={k.legend} style={{ padding: '6px 4px 0' }}>
+        {(model?.orgs ?? []).map((o) => (
+          <LegendSwatch key={o} color={color(o)} label={short(o)} />
+        ))}
+        <LegendSwatch color={ct.theme === 'dark' ? '#2a3a32' : '#d7ddd9'} label={t('hai.share.other')} />
+      </div>
     </ChartCard>
   );
 }

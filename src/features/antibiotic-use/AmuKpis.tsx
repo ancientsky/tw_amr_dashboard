@@ -11,7 +11,16 @@ import { inYearRange, type YearRange } from '../../data/select';
 import type { Level } from '../../data/types';
 import { useT } from '../../i18n';
 import { tipRow, tipTitle, envSourceLine } from '../international/kit/util';
-import { AWARE_COLORS, CARB, WHO_ACCESS_TARGET, awareByYear, classValue, levelsOf, share, totalByYear } from './amuModel';
+import {
+  AWARE_COLORS,
+  CARB,
+  WHO_ACCESS_TARGET,
+  awareByYear,
+  classValue,
+  levelsOf,
+  share,
+  totalByYear,
+} from './amuModel';
 import s from './amu.module.css';
 
 /** KPI row: total DID, AWaRe shares, carbapenem DID (latest year in range, selected level). */
@@ -34,17 +43,43 @@ export function AmuKpis({ level, years, link }: { level: Level; years?: YearRang
     return { cur, prev, splits, carb, tot, ys };
   }, [env, dims, level, years]);
 
-  const d = (a?: number | null, b?: number | null) => (a !== undefined && a !== null && b !== undefined && b !== null ? a - b : undefined);
+  const d = (a?: number | null, b?: number | null) =>
+    a !== undefined && a !== null && b !== undefined && b !== null ? a - b : undefined;
   const vs = m?.prev ? t('kpi.vsPrev', { year: m.prev.year }) : undefined;
   const n = m?.tot.length ?? 0;
 
   const rows = m
     ? [
-        { [t('amu.kpi.metric')]: t('amu.kpi.total'), [t('common.year')]: m.cur.year, [t('common.value')]: m.tot[n - 1] ?? null, Δ: d(m.tot[n - 1], m.tot[n - 2]) ?? null },
-        { [t('amu.kpi.metric')]: t('amu.kpi.accessShare'), [t('common.year')]: m.cur.year, [t('common.value')]: Math.round(share(m.cur, 'Access') * 10) / 10, Δ: m.prev ? Math.round((share(m.cur, 'Access') - share(m.prev, 'Access')) * 10) / 10 : null },
-        { [t('amu.kpi.metric')]: t('amu.kpi.watchShare'), [t('common.year')]: m.cur.year, [t('common.value')]: Math.round(share(m.cur, 'Watch') * 10) / 10, Δ: m.prev ? Math.round((share(m.cur, 'Watch') - share(m.prev, 'Watch')) * 10) / 10 : null },
-        { [t('amu.kpi.metric')]: t('amu.kpi.reserveShare'), [t('common.year')]: m.cur.year, [t('common.value')]: Math.round(share(m.cur, 'Reserve') * 10) / 10, Δ: m.prev ? Math.round((share(m.cur, 'Reserve') - share(m.prev, 'Reserve')) * 10) / 10 : null },
-        { [t('amu.kpi.metric')]: t('amu.kpi.carb'), [t('common.year')]: m.cur.year, [t('common.value')]: m.carb[n - 1] ?? null, Δ: d(m.carb[n - 1], m.carb[n - 2]) ?? null },
+        {
+          [t('amu.kpi.metric')]: t('amu.kpi.total'),
+          [t('common.year')]: m.cur.year,
+          [t('common.value')]: m.tot[n - 1] ?? null,
+          Δ: d(m.tot[n - 1], m.tot[n - 2]) ?? null,
+        },
+        {
+          [t('amu.kpi.metric')]: t('amu.kpi.accessShare'),
+          [t('common.year')]: m.cur.year,
+          [t('common.value')]: Math.round(share(m.cur, 'Access') * 10) / 10,
+          Δ: m.prev ? Math.round((share(m.cur, 'Access') - share(m.prev, 'Access')) * 10) / 10 : null,
+        },
+        {
+          [t('amu.kpi.metric')]: t('amu.kpi.watchShare'),
+          [t('common.year')]: m.cur.year,
+          [t('common.value')]: Math.round(share(m.cur, 'Watch') * 10) / 10,
+          Δ: m.prev ? Math.round((share(m.cur, 'Watch') - share(m.prev, 'Watch')) * 10) / 10 : null,
+        },
+        {
+          [t('amu.kpi.metric')]: t('amu.kpi.reserveShare'),
+          [t('common.year')]: m.cur.year,
+          [t('common.value')]: Math.round(share(m.cur, 'Reserve') * 10) / 10,
+          Δ: m.prev ? Math.round((share(m.cur, 'Reserve') - share(m.prev, 'Reserve')) * 10) / 10 : null,
+        },
+        {
+          [t('amu.kpi.metric')]: t('amu.kpi.carb'),
+          [t('common.year')]: m.cur.year,
+          [t('common.value')]: m.carb[n - 1] ?? null,
+          Δ: d(m.carb[n - 1], m.carb[n - 2]) ?? null,
+        },
       ]
     : undefined;
 
@@ -61,7 +96,14 @@ export function AmuKpis({ level, years, link }: { level: Level; years?: YearRang
       tableRows={rows}
       fileName={`twamr-amu-kpis-${level}`}
       link={link}
-      keyNumber={m ? { value: fmtPct(share(m.cur, 'Access'), t.locale), label: `${t('amu.kpi.accessShare')} · ${m.cur.year}` } : undefined}
+      keyNumber={
+        m
+          ? {
+              value: fmtPct(share(m.cur, 'Access'), t.locale),
+              label: `${t('amu.kpi.accessShare')} · ${m.cur.year}`,
+            }
+          : undefined
+      }
       toolbar={{ fullscreen: false }}
       height={170}
     >
@@ -165,7 +207,11 @@ export function AmuTarget({ level, years, link }: { level: Level; years?: YearRa
           return (
             tipTitle(`${t(`levels.${it.level}`)} · ${it.year}`) +
             tipRow(accessC, t('amu.kpi.accessShare'), fmtPct(it.access, t.locale), true) +
-            tipRow(undefined, t('amu.target.gap'), `${fmtNumber(it.access - WHO_ACCESS_TARGET, t.locale, { digits: 1 })} ${t('kpi.pp')}`)
+            tipRow(
+              undefined,
+              t('amu.target.gap'),
+              `${fmtNumber(it.access - WHO_ACCESS_TARGET, t.locale, { digits: 1 })} ${t('kpi.pp')}`,
+            )
           );
         },
       },
@@ -175,7 +221,12 @@ export function AmuTarget({ level, years, link }: { level: Level; years?: YearRa
         data: cats,
         inverse: true,
         axisLine: { show: false },
-        axisLabel: { color: tok.ink2, fontWeight: 600, formatter: (v: string, i: number) => (items[i]?.level === level ? `{b|${v}}` : v), rich: { b: { fontWeight: 700, color: tok.ink } } },
+        axisLabel: {
+          color: tok.ink2,
+          fontWeight: 600,
+          formatter: (v: string, i: number) => (items[i]?.level === level ? `{b|${v}}` : v),
+          rich: { b: { fontWeight: 700, color: tok.ink } },
+        },
       },
       series: [
         {
@@ -190,15 +241,31 @@ export function AmuTarget({ level, years, link }: { level: Level; years?: YearRa
         {
           type: 'bar',
           name: t('amu.kpi.accessShare'),
-          data: items.map((x) => ({ value: Math.round(x.access * 10) / 10, itemStyle: { color: accessC, opacity: x.level === level ? 1 : 0.7 } })),
+          data: items.map((x) => ({
+            value: Math.round(x.access * 10) / 10,
+            itemStyle: { color: accessC, opacity: x.level === level ? 1 : 0.7 },
+          })),
           barWidth: 8,
           itemStyle: { borderRadius: [0, 4, 4, 0] },
-          label: { show: true, position: 'right', formatter: (p: { value: number }) => fmtPct(p.value, t.locale), color: tok.ink2, fontSize: 11.5, fontWeight: 600 },
+          label: {
+            show: true,
+            position: 'right',
+            formatter: (p: { value: number }) => fmtPct(p.value, t.locale),
+            color: tok.ink2,
+            fontSize: 11.5,
+            fontWeight: 600,
+          },
           markLine: {
             symbol: 'none',
             silent: true,
             lineStyle: { color: tok.ink, width: 2, type: 'solid' },
-            label: { formatter: t('amu.target.line', { target: WHO_ACCESS_TARGET }), color: tok.ink, fontWeight: 650, fontSize: 11, position: 'end' },
+            label: {
+              formatter: t('amu.target.line', { target: WHO_ACCESS_TARGET }),
+              color: tok.ink,
+              fontWeight: 650,
+              fontSize: 11,
+              position: 'start',
+            },
             data: [{ xAxis: WHO_ACCESS_TARGET }],
           },
         },
@@ -217,12 +284,22 @@ export function AmuTarget({ level, years, link }: { level: Level; years?: YearRa
       dataset="antibiotic_use"
       status={status === 'ready' && !items.length ? 'empty' : status}
       chartRef={ref}
-      tableRows={items.map((x) => ({ [t('common.level')]: t(`levels.${x.level}`), [t('common.year')]: x.year, [t('amu.kpi.accessShare')]: Math.round(x.access * 10) / 10, [t('amu.target.gap')]: Math.round((x.access - WHO_ACCESS_TARGET) * 10) / 10 }))}
+      tableRows={items.map((x) => ({
+        [t('common.level')]: t(`levels.${x.level}`),
+        [t('common.year')]: x.year,
+        [t('amu.kpi.accessShare')]: Math.round(x.access * 10) / 10,
+        [t('amu.target.gap')]: Math.round((x.access - WHO_ACCESS_TARGET) * 10) / 10,
+      }))}
       fileName="twamr-amu-who-access-target"
       link={link}
       height={height}
     >
-      <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${t('amu.target.subtitle', { target: WHO_ACCESS_TARGET })}`} />
+      <EChart
+        ref={ref}
+        option={option}
+        height={height}
+        ariaLabel={`${title}. ${t('amu.target.subtitle', { target: WHO_ACCESS_TARGET })}`}
+      />
     </ChartCard>
   );
 }

@@ -2,7 +2,7 @@
   "overview": {
     "hero": {
       "eyebrow": "THAS 全国サーベイランス · {from}–{to}",
-      "title": "台湾の薬剤耐性をひと目で",
+      "title": "台湾の薬剤耐性を|ひと目で",
       "thesis": "9つの多剤耐性菌、8年間の全国サーベイランス、ひとつの明確なシグナル——耐性はケアが最も集中する場所に集まる。すべての多剤耐性菌で、医療関連（HO）株の耐性率は市中（CO）株を上回っています。",
       "ctaResistance": "耐性を詳しく見る",
       "ctaInternational": "国際比較",
@@ -33,7 +33,7 @@
       "explore": "詳しく見る",
       "coho": "{phenotype}：{year}年の医療関連（HO）は {ho}、市中（CO）は {co}——HO は CO の {ratio} 倍。",
       "peak": "{phenotype} は {peakYear}年に {peak} でピークに達し、{year}年には {latest} まで低下しました。",
-      "rise": "{phenotype} は {firstYear}年の {first} から {year}年の {latest} へ上昇しました（{change}、相対的に {rel}）。",
+      "rise": "{phenotype} は {firstYear}年の {first} から {year}年の {latest} へ上昇しました（{change}、相対 {rel}）。",
       "levels": "{phenotype} は病院種別による差が最も大きい：{year}年、{high} {highV}、{low} {lowV}。",
       "isolates": "報告された臨床分離株は {fromYear}年の {from} 株から {year}年の {to} 株へ増加しました（{rel}）。",
       "range": "{year}年、最も耐性率が高い多剤耐性菌は引き続き {high}（{highV}）、最も低いのは {low}（{lowV}）です。",
@@ -134,7 +134,7 @@
       "overlayHint": "全国の市中・医療関連の推移線",
       "norm": "初年 = 100 で指数化",
       "normHint": "水準ではなく相対的な変化を比較",
-      "drugLevel": "薬剤レベルの推移（アンチバイオグラム、2022–2024）：",
+      "drugLevel": "「菌種 × 抗菌薬」の推移（多剤耐性菌グラフの下に表示）：",
       "compareLevels": "病院種別を比較",
       "cmpNone": "オフ",
       "cmpGrid": "4種別",

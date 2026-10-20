@@ -8,8 +8,9 @@ import { fmtNumber, fmtPct } from '../../../data/format';
 import type { OnsetSetting, Specimen } from '../../../data/types';
 import type { ChartParams } from '../../../embed/charts/common';
 import { useT } from '../../../i18n';
-import { pathogenStrata, SPECIMEN_KEYS, type Point } from '../lib';
+import { pathogenStrata, SPECIMEN_KEYS, SPECIMEN_SLOT, type Point } from '../lib';
 import { resistanceSource, useResistanceModel } from '../model';
+import { useNarrow } from '../useNarrow';
 import { CO_SLOT, HO_SLOT } from './CoHoGapChart';
 
 export interface PathogenBarsProps extends ChartParams {
@@ -48,13 +49,14 @@ export function PathogenBarsChart({ pathogen = 'KPN', mode = 'setting', year, ye
     return SPECIMEN_KEYS.filter((k) => ps.bySpecimen.get(k)?.size && (specimen === 'all' || k === 'all' || k === specimen)).map((k) => ({
       key: k,
       name: names.specimen(k),
-      color: seriesColor(SPECIMEN_KEYS.indexOf(k), ct.theme),
+      color: seriesColor(SPECIMEN_SLOT[k], ct.theme),
       points: ps.bySpecimen.get(k)!,
     }));
   }, [ps, mode, names, ct.theme, specimen]);
 
   const antibiotics = useMemo(() => (ps ? ps.antibiotics.filter((a) => strata.some((s) => s.points.has(a))) : []), [ps, strata]);
   const n = strata.length;
+  const narrow = useNarrow();
   const barH = compact ? 7 : 9;
   const rowH = Math.max(26, n * (barH + 3) + 12);
   const height = Math.max(220, antibiotics.length * rowH + 70);
@@ -62,7 +64,7 @@ export function PathogenBarsChart({ pathogen = 'KPN', mode = 'setting', year, ye
   const option = useMemo<EChartsOption>(() => {
     const k = ct.tokens;
     return {
-      grid: { left: 4, right: 24, top: 34, bottom: 4, containLabel: true },
+      grid: { left: 4, right: narrow ? 10 : 24, top: narrow && n > 2 ? 54 : 34, bottom: 4, containLabel: true },
       legend: { top: 0, left: 0, data: strata.map((s) => s.name) },
       tooltip: {
         trigger: 'item',
@@ -86,7 +88,7 @@ export function PathogenBarsChart({ pathogen = 'KPN', mode = 'setting', year, ye
         data: antibiotics.map((a) => names.antibiotic(a)),
         axisLine: { show: false },
         axisLabel: {
-          width: compact ? 110 : 150,
+          width: compact || narrow ? 96 : 150,
           overflow: 'truncate',
           color: k.ink2,
           formatter: (v: string, i: number) => (antibiotics[i] === highlight ? `{hl|${v}}` : v),
@@ -116,19 +118,23 @@ export function PathogenBarsChart({ pathogen = 'KPN', mode = 'setting', year, ye
           const off = (si - (n - 1) / 2) * (barH + 3);
           const y = base[1] + off - barH / 2;
           const w = Math.max(1, end[0] - base[0]);
-          const dim = highlight && antibiotics[cat] !== highlight;
+          const hl = highlight && antibiotics[cat] === highlight;
+          const band = a.size([0, 1])[1];
           const children: unknown[] = [
+            ...(hl && si === 0
+              ? [{ type: 'rect', silent: true, z2: -1, shape: { x: base[0] - 4, y: base[1] - band / 2 + 1, width: a.coord([100, cat])[0] - base[0] + 8, height: band - 2, r: 6 }, style: { fill: k.accent, opacity: 0.08 } }]
+              : []),
             {
               type: 'rect',
               shape: { x: base[0], y, width: w, height: barH, r: [0, Math.min(4, barH / 2), Math.min(4, barH / 2), 0] },
-              style: { fill: s.color, opacity: dim ? 0.45 : 1 },
+              style: { fill: s.color },
             },
           ];
           if (lo >= 0 && hi >= 0) {
             const x0 = a.coord([lo, cat])[0];
             const x1 = a.coord([hi, cat])[0];
             const cy = y + barH / 2;
-            const st = { stroke: k.ink, lineWidth: 1.25, opacity: dim ? 0.35 : 0.8 };
+            const st = { stroke: k.ink, lineWidth: 1.25, opacity: 0.8 };
             children.push(
               { type: 'line', shape: { x1: x0, y1: cy, x2: x1, y2: cy }, style: st },
               { type: 'line', shape: { x1: x0, y1: cy - 3, x2: x0, y2: cy + 3 }, style: st },
@@ -139,7 +145,7 @@ export function PathogenBarsChart({ pathogen = 'KPN', mode = 'setting', year, ye
         },
       })),
     } as EChartsOption;
-  }, [ct.tokens, strata, antibiotics, names, t, compact, highlight, n, barH]);
+  }, [ct.tokens, strata, antibiotics, names, t, compact, highlight, n, barH, narrow]);
 
   const onEvents = useMemo(
     () =>

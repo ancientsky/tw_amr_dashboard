@@ -14,6 +14,7 @@ import { CoHoGapChart, CO_SLOT, HO_SLOT } from './charts/CoHoGapChart';
 import { alignPoints, indexSeries, inRange, isEstimate, summarize, trendPoints, yearSpan, type Point, type TrendIndex } from './lib';
 import { resistanceSource, useResistanceModel, type Names } from './model';
 import { TREND_BOUNDS, type ExplorerState } from './useExplorerState';
+import { useNarrow } from './useNarrow';
 import s from './resistance.module.css';
 
 interface Line {
@@ -90,6 +91,7 @@ function PhenotypeTrendCard({
   const range = state.years;
   const ph = state.phenotypes[0];
   const norm = multi && state.norm;
+  const narrow = useNarrow();
 
   const lines = useMemo<Line[]>(() => {
     const levelColor = colorMap([...LEVEL_ORDER], ct.theme);
@@ -101,7 +103,7 @@ function PhenotypeTrendCard({
       if (state.overlay && state.setting === 'all') {
         for (const st of ['co', 'ho'] as const) {
           const pts = alignPoints(trendPoints(trend, ph, 'all', st), years);
-          out.push({ key: st, name: `${names.level('all')} · ${names.setting(st)}`, color: seriesColor(st === 'co' ? CO_SLOT : HO_SLOT, ct.theme), points: pts, values: pts.map((p) => p?.value ?? null), dashed: true });
+          out.push({ key: st, name: names.setting(st), color: seriesColor(st === 'co' ? CO_SLOT : HO_SLOT, ct.theme), points: pts, values: pts.map((p) => p?.value ?? null), dashed: true });
         }
       }
       return out;
@@ -141,8 +143,8 @@ function PhenotypeTrendCard({
           ]
         : [];
     return {
-      grid: { left: 4, right: 20, top: 44, bottom: 52, containLabel: true },
-      legend: { top: 0, left: 0, data: lines.map((l) => l.name) },
+      grid: { left: 4, right: 20, top: narrow || lines.length <= 4 ? 44 : 66, bottom: 52, containLabel: true },
+      legend: { top: 0, left: 0, type: narrow ? 'scroll' : 'plain', data: lines.map((l) => l.name) },
       tooltip: {
         trigger: 'axis',
         formatter: (raw: unknown) => {
@@ -164,7 +166,7 @@ function PhenotypeTrendCard({
       },
       xAxis: { type: 'category', data: years.map(String), boundaryGap: false },
       yAxis: norm
-        ? { type: 'value', min: Math.max(0, Math.floor((vmin - 10) / 10) * 10), axisLabel: { formatter: '{value}' }, name: t('resistance.trend.indexAxis'), nameLocation: 'end', nameTextStyle: { align: 'left' } }
+        ? { type: 'value', min: Math.max(0, Math.floor((vmin - 10) / 10) * 10), axisLabel: { formatter: '{value}' } }
         : { type: 'value', min: 0, max: yMax, axisLabel: { formatter: '{value}%' } },
       dataZoom: [
         {
@@ -205,7 +207,7 @@ function PhenotypeTrendCard({
         })),
       ],
     } as EChartsOption;
-  }, [ct.tokens, lines, years, startIdx, endIdx, norm, t]);
+  }, [ct.tokens, lines, years, startIdx, endIdx, norm, t, narrow]);
 
   // Year brush → URL (debounced)
   const timer = useRef<number>();
@@ -331,7 +333,7 @@ function PhenotypeTrendCard({
         </Narrative>
       )}
       <div className={s.tableCard}>
-        <DataTable rows={tableRows} caption={title} csvName={`twamr-trend-${state.phenotypes.join('-')}`.toLowerCase()} maxHeight={320} />
+        <DataTable rows={tableRows} caption={title} csvName={`twamr-trend-${state.phenotypes.join('-')}`.toLowerCase()} maxHeight={420} />
       </div>
     </>
   );

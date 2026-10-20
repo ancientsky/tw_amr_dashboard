@@ -5,6 +5,8 @@ import { buildKbIndex, decideKb, searchKb } from '../kb';
 import { stem, tokenize } from '../text';
 import { DATA } from './fixtures';
 import type { KbRecord } from '../../../../data/types';
+import { translate } from '../../../../i18n';
+import { SUGGESTION_GROUPS, WELCOME_KEYS } from '../../suggestions';
 
 const ask = (q: string, locale: Locale = 'zh-TW') => answerQuestion(q, { locale, data: DATA });
 
@@ -91,6 +93,19 @@ describe('KB retrieval', () => {
     expect(decideKb(searchKb(idx, 'what is VRE', 'en')).confident).toBe(true);
     expect(decideKb(searchKb(idx, 'banana', 'en')).confident).toBe(false);
   });
+});
+
+describe('suggested questions', () => {
+  const keys = [...new Set([...WELCOME_KEYS, ...SUGGESTION_GROUPS.flatMap((g) => g.keys)])];
+  for (const locale of ['zh-TW', 'en', 'ja'] as const) {
+    it(`every suggestion gets a confident answer (${locale})`, () => {
+      for (const k of keys) {
+        const q = translate(locale, `chat.q.${k}`);
+        const a = ask(q, locale);
+        expect([k, a.kind]).toEqual([k, SUGGESTION_GROUPS.find((g) => g.keys.includes(k))!.topic === 'concepts' || SUGGESTION_GROUPS.find((g) => g.keys.includes(k))!.topic === 'site' ? 'kb' : 'data']);
+      }
+    });
+  }
 });
 
 describe('text', () => {

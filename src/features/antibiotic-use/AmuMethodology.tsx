@@ -33,7 +33,10 @@ export function AmuMethodology() {
       <ul>
         {(['Access', 'Watch', 'Reserve'] as const).map((a) => (
           <li key={a}>
-            <span className={k.swatch} style={{ display: 'inline-block', marginRight: 6, background: AWARE_COLORS[ct.theme][a] }} />
+            <span
+              className={k.swatch}
+              style={{ display: 'inline-block', marginRight: 6, background: AWARE_COLORS[ct.theme][a] }}
+            />
             <strong>{t(`amu.aware.${a}`)}</strong> — {t(`amu.method.aware${a}`)}
           </li>
         ))}
@@ -58,7 +61,14 @@ export function AmuMethodology() {
                   <td>{nameCls(c)}</td>
                   <td className={k.num}>{String(d?.meta?.atc ?? '—')}</td>
                   <td>
-                    <span className={k.swatch} style={{ display: 'inline-block', marginRight: 6, background: AWARE_COLORS[ct.theme][aw] }} />
+                    <span
+                      className={k.swatch}
+                      style={{
+                        display: 'inline-block',
+                        marginRight: 6,
+                        background: AWARE_COLORS[ct.theme][aw],
+                      }}
+                    />
                     {t(`amu.aware.${aw}`)}
                   </td>
                 </tr>

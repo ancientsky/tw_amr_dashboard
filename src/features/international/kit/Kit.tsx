@@ -25,7 +25,11 @@ export function Notice({
         {links && links.length > 0 && (
           <div className={s.noticeLinks}>
             {links.map((l) => (
-              <a key={l.href + l.label} href={l.href} {...(l.external ? { target: '_blank', rel: 'noreferrer' } : {})}>
+              <a
+                key={l.href + l.label}
+                href={l.href}
+                {...(l.external ? { target: '_blank', rel: 'noreferrer' } : {})}
+              >
                 {l.label}
                 {l.external ? ' ↗' : ' →'}
               </a>
@@ -38,7 +42,15 @@ export function Notice({
 }
 
 /** "Methodology" button + side drawer. */
-export function MethodDrawer({ label, title, children }: { label: string; title: ReactNode; children: ReactNode }) {
+export function MethodDrawer({
+  label,
+  title,
+  children,
+}: {
+  label: string;
+  title: ReactNode;
+  children: ReactNode;
+}) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -62,7 +74,19 @@ export function FilterBar({ children, label }: { children: ReactNode; label: str
 }
 
 /** Small swatch + label legend item (HTML legends next to charts). */
-export function LegendSwatch({ color, label, muted, onClick, pressed }: { color: string; label: ReactNode; muted?: boolean; onClick?: () => void; pressed?: boolean }) {
+export function LegendSwatch({
+  color,
+  label,
+  muted,
+  onClick,
+  pressed,
+}: {
+  color: string;
+  label: ReactNode;
+  muted?: boolean;
+  onClick?: () => void;
+  pressed?: boolean;
+}) {
   const content = (
     <>
       <span className={s.swatch} style={{ background: color }} aria-hidden="true" />
@@ -71,7 +95,12 @@ export function LegendSwatch({ color, label, muted, onClick, pressed }: { color:
   );
   if (onClick)
     return (
-      <button type="button" className={`${s.legendItem} ${muted ? s.legendMuted : ''}`} onClick={onClick} aria-pressed={pressed}>
+      <button
+        type="button"
+        className={`${s.legendItem} ${muted ? s.legendMuted : ''}`}
+        onClick={onClick}
+        aria-pressed={pressed}
+      >
         {content}
       </button>
     );

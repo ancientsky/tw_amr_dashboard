@@ -62,7 +62,8 @@ export function useYearRangeParam(
 /** True below the given viewport width (re-renders on change). */
 export function useNarrow(maxWidth = 640): boolean {
   const query = `(max-width: ${maxWidth}px)`;
-  const get = () => (typeof window !== 'undefined' && window.matchMedia ? window.matchMedia(query).matches : false);
+  const get = () =>
+    typeof window !== 'undefined' && window.matchMedia ? window.matchMedia(query).matches : false;
   const [narrow, setNarrow] = useState(get);
   useEffect(() => {
     if (!window.matchMedia) return;

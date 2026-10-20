@@ -18,7 +18,15 @@ import { HaiLinks } from './HaiLinks';
 import { HaiMethodology, TNIS_URL } from './HaiMethodology';
 import { HaiTrend } from './HaiTrend';
 import { HaiUtil } from './HaiUtil';
-import { ICU_ORDER, LEVELS_HAI, SITES, TREND_METRICS, icuTypesFor, type Site, type TrendMetric } from './haiModel';
+import {
+  ICU_ORDER,
+  LEVELS_HAI,
+  SITES,
+  TREND_METRICS,
+  icuTypesFor,
+  type Site,
+  type TrendMetric,
+} from './haiModel';
 
 /** Route "/hai" — healthcare-associated infections in ICUs (provisional model data). */
 export default function HaiPage() {
@@ -40,8 +48,16 @@ export default function HaiPage() {
 
   return (
     <div className={`container ${k.page}`}>
-      <PageHeader eyebrow={t('pages.hai.eyebrow')} title={t('pages.hai.title')} subtitle={t('pages.hai.subtitle')} aside={<HaiMethodology />} />
-      <Notice title={t('hai.notice.title')} links={[{ href: TNIS_URL, label: t('hai.notice.cdcLink'), external: true }]}>
+      <PageHeader
+        eyebrow={t('pages.hai.eyebrow')}
+        title={t('pages.hai.title')}
+        subtitle={t('pages.hai.subtitle')}
+        aside={<HaiMethodology />}
+      />
+      <Notice
+        title={t('hai.notice.title')}
+        links={[{ href: TNIS_URL, label: t('hai.notice.cdcLink'), external: true }]}
+      >
         <p>{t('hai.notice.body')}</p>
         <p>
           {t('hai.notice.how')} <code>raw/</code>
@@ -49,10 +65,37 @@ export default function HaiPage() {
       </Notice>
 
       <FilterBar label={t('hai.filters')}>
-        <Select showLabel label={t('common.level')} value={level} onChange={setLevel} options={LEVELS_HAI.map((l) => ({ value: l, label: t(`levels.${l}`) }))} />
-        <Select showLabel label={t('hai.icu')} value={icu} onChange={setIcu} options={icus.map((i) => ({ value: i, label: nameIcu(i) }))} />
-        <Select showLabel label={t('hai.metric')} value={metric} onChange={setMetric} options={TREND_METRICS.map((m) => ({ value: m, label: nameM(m) }))} />
-        {bounds && years && <RangeSlider className={k.filterGrow} label={t('common.years')} min={bounds[0]} max={bounds[1]} value={years} onChange={setYears} />}
+        <Select
+          showLabel
+          label={t('common.level')}
+          value={level}
+          onChange={setLevel}
+          options={LEVELS_HAI.map((l) => ({ value: l, label: t(`levels.${l}`) }))}
+        />
+        <Select
+          showLabel
+          label={t('hai.icu')}
+          value={icu}
+          onChange={setIcu}
+          options={icus.map((i) => ({ value: i, label: nameIcu(i) }))}
+        />
+        <Select
+          showLabel
+          label={t('hai.metric')}
+          value={metric}
+          onChange={setMetric}
+          options={TREND_METRICS.map((m) => ({ value: m, label: nameM(m) }))}
+        />
+        {bounds && years && (
+          <RangeSlider
+            className={k.filterGrow}
+            label={t('common.years')}
+            min={bounds[0]}
+            max={bounds[1]}
+            value={years}
+            onChange={setYears}
+          />
+        )}
       </FilterBar>
 
       <div className={k.stack}>
@@ -67,7 +110,11 @@ export default function HaiPage() {
       </div>
 
       <Section title={t('hai.sectionPathogens')}>
-        {level === 'district' && <p className={k.hint} style={{ marginBottom: 12 }}>{t('hai.districtFallback')}</p>}
+        {level === 'district' && (
+          <p className={k.hint} style={{ marginBottom: 12 }}>
+            {t('hai.districtFallback')}
+          </p>
+        )}
         <div className={`${k.grid2} ${k.grid2wide}`}>
           <HaiBump level={level} site={site} onSiteChange={setSite} years={years} link={link('hai-bump')} />
           <HaiShare level={level} years={years} link={link('hai-share')} />

@@ -12,7 +12,16 @@ import { Comparability } from './Comparability';
 import { GlassBars, type BarsView } from './GlassBars';
 import { GlassMap } from './GlassMap';
 import { GlassRadar, GlassStrip, compareColors } from './GlassProfile';
-import { DEFAULT_COUNTRIES, DEFAULT_INDICATOR, GLASS_CSV, GLASS_DASHBOARD_URL, GLASS_REPORT_URL, MAX_COMPARE, WHO_REGIONS, indicatorCodes } from './glassModel';
+import {
+  DEFAULT_COUNTRIES,
+  DEFAULT_INDICATOR,
+  GLASS_CSV,
+  GLASS_DASHBOARD_URL,
+  GLASS_REPORT_URL,
+  MAX_COMPARE,
+  WHO_REGIONS,
+  indicatorCodes,
+} from './glassModel';
 import { useChartTheme } from '../../components/chart/useChartTheme';
 import { FilterBar, Notice } from './kit/Kit';
 import { useListParam } from './kit/hooks';
@@ -26,14 +35,33 @@ export default function InternationalPage() {
   const ct = useChartTheme();
   const { data: env } = useDataset('glass');
   const indicators = useMemo(() => indicatorCodes(env), [env]);
-  const countryCodes = useMemo(() => (env?.dims?.countries ?? []).map((c) => c.code).filter((c) => c !== 'TWN'), [env]);
-  const years = useMemo(() => [...new Set((env?.records ?? []).filter((r) => r.iso3 !== 'TWN').map((r) => String(r.year)))].sort(), [env]);
+  const countryCodes = useMemo(
+    () => (env?.dims?.countries ?? []).map((c) => c.code).filter((c) => c !== 'TWN'),
+    [env],
+  );
+  const years = useMemo(
+    () =>
+      [...new Set((env?.records ?? []).filter((r) => r.iso3 !== 'TWN').map((r) => String(r.year)))].sort(),
+    [env],
+  );
 
-  const [indicator, setIndicator] = useQueryParam<string>('indicator', DEFAULT_INDICATOR, indicators.length ? indicators : undefined);
+  const [indicator, setIndicator] = useQueryParam<string>(
+    'indicator',
+    DEFAULT_INDICATOR,
+    indicators.length ? indicators : undefined,
+  );
   const [region, setRegion] = useQueryParam<string>('region', 'all', ['all', ...WHO_REGIONS]);
-  const [year, setYear] = useQueryParam<string>('year', 'latest', years.length ? ['latest', ...years] : undefined);
+  const [year, setYear] = useQueryParam<string>(
+    'year',
+    'latest',
+    years.length ? ['latest', ...years] : undefined,
+  );
   const [bars, setBars] = useQueryParam<BarsView>('bars', 'countries', ['countries', 'regions']);
-  const [countries, setCountries] = useListParam('countries', env ? countryCodes : undefined, DEFAULT_COUNTRIES);
+  const [countries, setCountries] = useListParam(
+    'countries',
+    env ? countryCodes : undefined,
+    DEFAULT_COUNTRIES,
+  );
   const compare = countries.slice(0, MAX_COMPARE);
 
   const nameC = dimNamer(env?.dims?.countries, t.locale);
@@ -96,14 +124,20 @@ export default function InternationalPage() {
           label={t('international.region')}
           value={region}
           onChange={setRegion}
-          options={[{ value: 'all', label: t('international.allRegions') }, ...WHO_REGIONS.map((r) => ({ value: r, label: nameR(r) }))]}
+          options={[
+            { value: 'all', label: t('international.allRegions') },
+            ...WHO_REGIONS.map((r) => ({ value: r, label: nameR(r) })),
+          ]}
         />
         <Select
           showLabel
           label={t('international.dataYear')}
           value={year}
           onChange={setYear}
-          options={[{ value: 'latest', label: t('international.latestAvailable') }, ...years.map((y) => ({ value: y, label: y }))]}
+          options={[
+            { value: 'latest', label: t('international.latestAvailable') },
+            ...years.map((y) => ({ value: y, label: y })),
+          ]}
         />
         <MultiSelect
           showLabel
@@ -119,9 +153,23 @@ export default function InternationalPage() {
       </FilterBar>
 
       <div className={k.stack}>
-        <GlassMap indicator={indicator} region={region} year={year} countries={compare} onCountryClick={addCountry} link={link('glass-map')} />
+        <GlassMap
+          indicator={indicator}
+          region={region}
+          year={year}
+          countries={compare}
+          onCountryClick={addCountry}
+          link={link('glass-map')}
+        />
         <div className={`${k.grid2} ${k.grid2narrow}`}>
-          <GlassBars indicator={indicator} region={region} year={year} view={bars} onViewChange={setBars} link={link('glass-bars')} />
+          <GlassBars
+            indicator={indicator}
+            region={region}
+            year={year}
+            view={bars}
+            onViewChange={setBars}
+            link={link('glass-bars')}
+          />
           <div className={k.stack}>
             <GlassRadar countries={compare} link={link('glass-radar')} />
             <GlassStrip countries={compare} onCountryClick={addCountry} link={link('glass-strip')} />

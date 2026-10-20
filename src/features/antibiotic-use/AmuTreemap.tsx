@@ -25,7 +25,9 @@ export function AmuTreemap({ level, years, link }: { level: Level; years?: YearR
 
   const model = useMemo(() => {
     if (!env) return null;
-    const rows = amuRows(env.records, level).filter((r) => r.className !== TOTAL && inYearRange(r.year, years));
+    const rows = amuRows(env.records, level).filter(
+      (r) => r.className !== TOTAL && inYearRange(r.year, years),
+    );
     const year = latestYear(rows);
     const cur = rows.filter((r) => r.year === year);
     const total = cur.reduce((a, r) => a + r.value, 0);
@@ -42,13 +44,24 @@ export function AmuTreemap({ level, years, link }: { level: Level; years?: YearR
       return {
         name: t(`amu.aware.${aw}`),
         value: sum,
-        itemStyle: { color: AWARE_COLORS[ct.theme][aw], borderColor: tok.surface, borderWidth: 3, gapWidth: 2 },
+        itemStyle: {
+          color: AWARE_COLORS[ct.theme][aw],
+          borderColor: tok.surface,
+          borderWidth: 3,
+          gapWidth: 2,
+        },
         upperLabel: { color: textOn(AWARE_COLORS[ct.theme][aw]) },
         children: kids
           .sort((a, b) => b.value - a.value)
           .map((r) => {
             const c = classColor(dims, r.className, ct.theme);
-            return { name: nameCls(r.className), code: r.className, value: r.value, itemStyle: { color: c }, label: { color: textOn(c) } };
+            return {
+              name: nameCls(r.className),
+              code: r.className,
+              value: r.value,
+              itemStyle: { color: c },
+              label: { color: textOn(c) },
+            };
           }),
       };
     }).filter((g) => g.value > 0);
@@ -58,7 +71,12 @@ export function AmuTreemap({ level, years, link }: { level: Level; years?: YearR
         formatter: (p: unknown) => {
           const pp = p as { name: string; value: number; treePathInfo: { name: string }[] };
           const path = pp.treePathInfo?.map((x) => x.name).filter(Boolean) ?? [];
-          return tipTitle(pp.name) + (path.length > 2 ? tipRow(undefined, t('amu.awareLabel'), path[1]) : '') + tipRow(undefined, 'DID', fmtNumber(pp.value, t.locale, { digits: 1 }), true) + tipRow(undefined, t('amu.treemap.share'), fmtPct((pp.value / model.total) * 100, t.locale));
+          return (
+            tipTitle(pp.name) +
+            (path.length > 2 ? tipRow(undefined, t('amu.awareLabel'), path[1]) : '') +
+            tipRow(undefined, 'DID', fmtNumber(pp.value, t.locale, { digits: 1 }), true) +
+            tipRow(undefined, t('amu.treemap.share'), fmtPct((pp.value / model.total) * 100, t.locale))
+          );
         },
       },
       series: [
@@ -73,16 +91,30 @@ export function AmuTreemap({ level, years, link }: { level: Level; years?: YearR
           left: 0,
           squareRatio: 0.9,
           data,
-          upperLabel: { show: true, height: 22, fontWeight: 650, fontSize: 12, formatter: (p: { name: string; value: number }) => `${p.name} · ${fmtPct((p.value / model.total) * 100, t.locale, 0)}` },
           label: {
             show: true,
             fontSize: 11,
             lineHeight: 15,
             overflow: 'truncate',
-            formatter: (p: { name: string; value: number }) => `${p.name}\n${fmtNumber(p.value, t.locale, { digits: 1 })}`,
+            formatter: (p: { name: string; value: number }) =>
+              `${p.name}\n${fmtNumber(p.value, t.locale, { digits: 1 })}`,
           },
           itemStyle: { borderColor: tok.surface, borderWidth: 1, gapWidth: 2 },
-          levels: [{ itemStyle: { borderWidth: 0, gapWidth: 4 } }, { itemStyle: { gapWidth: 2, borderWidth: 2, borderColor: tok.surface } }, {}],
+          levels: [
+            { upperLabel: { show: false }, itemStyle: { borderWidth: 0, gapWidth: 4 } },
+            {
+              upperLabel: {
+                show: true,
+                height: 22,
+                fontWeight: 650,
+                fontSize: 12,
+                formatter: (p: { name: string; value: number }) =>
+                  `${p.name} · ${fmtPct((p.value / model.total) * 100, t.locale, 0)}`,
+              },
+              itemStyle: { gapWidth: 2, borderWidth: 3, borderColor: tok.surface },
+            },
+            { upperLabel: { show: false } },
+          ],
         },
       ],
     } as EChartsOption;
@@ -93,7 +125,10 @@ export function AmuTreemap({ level, years, link }: { level: Level; years?: YearR
     <ChartCard
       id="amu-treemap"
       title={title}
-      subtitle={t('amu.treemap.subtitle', { level: t(`levels.${level}`), total: fmtNumber(model?.total, t.locale, { digits: 0 }) })}
+      subtitle={t('amu.treemap.subtitle', {
+        level: t(`levels.${level}`),
+        total: fmtNumber(model?.total, t.locale, { digits: 0 }),
+      })}
       source={envSourceLine(env, t.locale)}
       dataset="antibiotic_use"
       status={status}
@@ -101,7 +136,13 @@ export function AmuTreemap({ level, years, link }: { level: Level; years?: YearR
       tableRows={(model?.cur ?? [])
         .slice()
         .sort((a, b) => b.value - a.value)
-        .map((r) => ({ [t('amu.class')]: nameCls(r.className), ATC: r.atc, [t('amu.awareLabel')]: t(`amu.aware.${awareOf(dims, r.className)}`), DID: r.value, [t('amu.treemap.share')]: Math.round((r.value / (model?.total || 1)) * 1000) / 10 }))}
+        .map((r) => ({
+          [t('amu.class')]: nameCls(r.className),
+          ATC: r.atc,
+          [t('amu.awareLabel')]: t(`amu.aware.${awareOf(dims, r.className)}`),
+          DID: r.value,
+          [t('amu.treemap.share')]: Math.round((r.value / (model?.total || 1)) * 1000) / 10,
+        }))}
       fileName={`twamr-amu-treemap-${level}-${model?.year ?? ''}`}
       link={link}
       height={height}

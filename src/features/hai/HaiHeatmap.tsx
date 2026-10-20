@@ -10,6 +10,7 @@ import { useDataset } from '../../data/load';
 import { inYearRange, latestYear, type YearRange } from '../../data/select';
 import type { IcuType, Level } from '../../data/types';
 import { useT } from '../../i18n';
+import k from '../international/kit/kit.module.css';
 import { mean, sd, tipRow, tipTitle, envSourceLine } from '../international/kit/util';
 import { useNarrow } from '../international/kit/hooks';
 import { HEAT_METRICS, icuTypesFor } from './haiModel';
@@ -24,7 +25,19 @@ const DIVERGING = {
 const SEQ = { light: ['#eef5f1', '#0e7c5b'], dark: ['#15241c', '#00c97c'] } as const;
 
 /** Heatmap ICU type × metric for the latest year (raw values coloured within column, or z-scores). */
-export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; icu: IcuType; years?: YearRange; metric?: string; link?: string }) {
+export function HaiHeatmap({
+  level,
+  icu,
+  years,
+  metric,
+  link,
+}: {
+  level: Level;
+  icu: IcuType;
+  years?: YearRange;
+  metric?: string;
+  link?: string;
+}) {
   const t = useT();
   const ct = useChartTheme();
   const narrow = useNarrow();
@@ -43,7 +56,10 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
     const val = new Map(cur.map((r) => [`${r.icu_type}|${r.metric}`, r.value]));
     const stats = new Map(
       metrics.map((m) => {
-        const vs = icus.filter((i) => i !== 'all').map((i) => val.get(`${i}|${m}`)).filter((v): v is number => v !== undefined);
+        const vs = icus
+          .filter((i) => i !== 'all')
+          .map((i) => val.get(`${i}|${m}`))
+          .filter((v): v is number => v !== undefined);
         return [m, { mean: mean(vs) ?? 0, sd: sd(vs) ?? 1, min: Math.min(...vs), max: Math.max(...vs) }];
       }),
     );
@@ -68,7 +84,13 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
         } else {
           const tt = st.max > st.min ? (v - st.min) / (st.max - st.min) : 0.5;
           const fill = mix(SEQ[ct.theme][0], SEQ[ct.theme][1], Math.max(0, Math.min(1, tt)));
-          data.push({ value: [xi, yi, v], raw: v, z, itemStyle: { color: fill }, label: { color: textOn(fill) } });
+          data.push({
+            value: [xi, yi, v],
+            raw: v,
+            z,
+            itemStyle: { color: fill },
+            label: { color: textOn(fill) },
+          });
         }
       }),
     );
@@ -81,12 +103,35 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
           const d = (p as { data: { value: number[]; raw: number; z: number } }).data;
           const m = model.metrics[d.value[0]];
           const i = model.icus[d.value[1]];
-          return tipTitle(`${nameIcu(i)} · ${model.year}`) + tipRow(undefined, short(m), fmtNumber(d.raw, t.locale, { digits: m.endsWith('_util') ? 3 : 2 }), true) + tipRow(undefined, t('hai.heat.zLabel'), fmtNumber(d.z, t.locale, { digits: 2 }));
+          return (
+            tipTitle(`${nameIcu(i)} · ${model.year}`) +
+            tipRow(
+              undefined,
+              short(m),
+              fmtNumber(d.raw, t.locale, { digits: m.endsWith('_util') ? 3 : 2 }),
+              true,
+            ) +
+            tipRow(undefined, t('hai.heat.zLabel'), fmtNumber(d.z, t.locale, { digits: 2 }))
+          );
         },
       },
       visualMap:
         mode === 'z'
-          ? { type: 'continuous', min: -2, max: 2, orient: 'horizontal', top: 0, right: 8, itemHeight: narrow ? 110 : 160, itemWidth: 10, calculable: false, text: ['+2σ', '−2σ'], inRange: { color: [...dv] }, textStyle: { color: tok.ink3, fontSize: 11 }, dimension: 2 }
+          ? {
+              type: 'continuous',
+              min: -2,
+              max: 2,
+              orient: 'horizontal',
+              top: 0,
+              right: 8,
+              itemHeight: narrow ? 110 : 160,
+              itemWidth: 10,
+              calculable: false,
+              text: ['+2σ', '−2σ'],
+              inRange: { color: [...dv] },
+              textStyle: { color: tok.ink3, fontSize: 11 },
+              dimension: 2,
+            }
           : undefined,
       xAxis: {
         type: 'category',
@@ -95,10 +140,19 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
         axisLabel: {
           interval: 0,
           rotate: narrow ? 50 : 0,
-          fontSize: narrow ? 10 : 11,
+          fontSize: narrow ? 10 : 10.5,
+          lineHeight: 13,
           fontWeight: 600,
           color: tok.ink2,
-          formatter: (v: string, idx: number) => (model.metrics[idx] === metric ? `{b|${v}}` : v),
+          formatter: (v: string, idx: number) => {
+            const w = narrow ? v : v.replace(/ /g, '\n');
+            return model.metrics[idx] === metric
+              ? w
+                  .split('\n')
+                  .map((x) => `{b|${x}}`)
+                  .join('\n')
+              : w;
+          },
           rich: { b: { fontWeight: 750, color: tok.accent, fontSize: narrow ? 10 : 11 } },
         },
         axisLine: { show: false },
@@ -109,7 +163,11 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
         data: model.icus.map((i) => nameIcu(i)),
         inverse: true,
         axisLine: { show: false },
-        axisLabel: { fontSize: 11, formatter: (v: string, idx: number) => (model.icus[idx] === icu ? `{b|${v}}` : v), rich: { b: { fontWeight: 750, color: tok.accent } } },
+        axisLabel: {
+          fontSize: 11,
+          formatter: (v: string, idx: number) => (model.icus[idx] === icu ? `{b|${v}}` : v),
+          rich: { b: { fontWeight: 750, color: tok.accent } },
+        },
       },
       series: [
         {
@@ -119,7 +177,11 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
             show: !narrow || model.metrics.length <= 6,
             fontSize: 10.5,
             formatter: (p: { data: { value: number[]; raw: number } }) =>
-              mode === 'z' ? fmtNumber(p.data.value[2], t.locale, { digits: 1 }) : fmtNumber(p.data.raw, t.locale, { digits: model.metrics[p.data.value[0]].endsWith('_util') ? 2 : 1 }),
+              mode === 'z'
+                ? fmtNumber(p.data.value[2], t.locale, { digits: 1 })
+                : fmtNumber(p.data.raw, t.locale, {
+                    digits: model.metrics[p.data.value[0]].endsWith('_util') ? 2 : 1,
+                  }),
           },
           itemStyle: { borderColor: tok.surface, borderWidth: 2, borderRadius: 4 },
           emphasis: { itemStyle: { borderColor: tok.ink, borderWidth: 1.5 } },
@@ -141,7 +203,10 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
   );
 
   const title = t('hai.heat.title', { year: model?.year ?? '—' });
-  const subtitle = mode === 'z' ? t('hai.heat.subtitleZ', { level: t(`levels.${level}`) }) : t('hai.heat.subtitleRaw', { level: t(`levels.${level}`) });
+  const subtitle =
+    mode === 'z'
+      ? t('hai.heat.subtitleZ', { level: t(`levels.${level}`) })
+      : t('hai.heat.subtitleRaw', { level: t(`levels.${level}`) });
   return (
     <ChartCard
       id="hai-heatmap"
@@ -156,16 +221,18 @@ export function HaiHeatmap({ level, icu, years, metric, link }: { level: Level; 
       link={link}
       height={height}
       actions={
-        <SegmentedControl<Mode>
-          size="sm"
-          label={t('hai.heat.modeLabel')}
-          value={mode}
-          onChange={setMode}
-          options={[
-            { value: 'raw', label: t('hai.heat.raw') },
-            { value: 'z', label: t('hai.heat.z') },
-          ]}
-        />
+        <div className={k.scrollX}>
+          <SegmentedControl<Mode>
+            size="sm"
+            label={t('hai.heat.modeLabel')}
+            value={mode}
+            onChange={setMode}
+            options={[
+              { value: 'raw', label: t('hai.heat.raw') },
+              { value: 'z', label: t('hai.heat.z') },
+            ]}
+          />
+        </div>
       }
     >
       <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${subtitle}`} />

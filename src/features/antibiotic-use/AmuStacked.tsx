@@ -24,7 +24,12 @@ export interface AmuChartProps extends ChartParams {
   onClassesChange?: (v: string[]) => void;
 }
 
-export function parseAmuExtras(p: AmuChartProps): { level: Level; metric: AmuMetric; classes?: string[]; years?: YearRange } {
+export function parseAmuExtras(p: AmuChartProps): {
+  level: Level;
+  metric: AmuMetric;
+  classes?: string[];
+  years?: YearRange;
+} {
   const metric = (p.metric ?? (hashParam('metric') === 'share' ? 'share' : 'DID')) as AmuMetric;
   const cls = p.classes ?? hashParam('classes')?.split(',').filter(Boolean);
   return { level: p.level ?? 'all', metric, classes: cls && cls.length ? cls : undefined, years: p.years };
@@ -42,12 +47,22 @@ export function AmuStacked(props: AmuChartProps) {
   const dims = env?.dims?.classes;
   const nameCls = dimNamer(dims, t.locale);
   const order = useMemo(() => classOrder(dims), [dims]);
-  const selected = useMemo(() => (classes ? order.filter((c) => classes.includes(c)) : order), [classes, order]);
+  const selected = useMemo(
+    () => (classes ? order.filter((c) => classes.includes(c)) : order),
+    [classes, order],
+  );
 
   const model = useMemo(() => {
     if (!env) return null;
-    const rows = filterYears(amuRows(env.records, level), years).filter((r) => r.className !== TOTAL && selected.includes(r.className));
-    const set = buildSeries(rows, (r) => r.className, (r) => r.value, { keyOrder: order });
+    const rows = filterYears(amuRows(env.records, level), years).filter(
+      (r) => r.className !== TOTAL && selected.includes(r.className),
+    );
+    const set = buildSeries(
+      rows,
+      (r) => r.className,
+      (r) => r.value,
+      { keyOrder: order },
+    );
     const sums = set.years.map((_, i) => set.series.reduce((a, s) => a + (s.data[i] ?? 0), 0));
     return { set, sums };
   }, [env, level, years, selected, order]);
@@ -65,14 +80,33 @@ export function AmuStacked(props: AmuChartProps) {
         trigger: 'axis',
         confine: true,
         formatter: (ps: unknown) => {
-          const arr = ps as { dataIndex: number; seriesName: string; value: number; color: string; seriesId: string }[];
+          const arr = ps as {
+            dataIndex: number;
+            seriesName: string;
+            value: number;
+            color: string;
+            seriesId: string;
+          }[];
           if (!arr.length) return '';
           const i = arr[0].dataIndex;
           const rows = [...arr].sort((a, b) => (b.value ?? 0) - (a.value ?? 0)).slice(0, 12);
           return (
             tipTitle(`${set.years[i]} · ${t(`levels.${level}`)}`) +
-            tipRow(undefined, t('amu.stacked.sumSelected'), `${fmtNumber(sums[i], t.locale, { digits: 1 })} DID`, true) +
-            rows.map((p) => tipRow(p.color, p.seriesName, isShare ? fmtPct(p.value, t.locale) : fmtNumber(p.value, t.locale, { digits: 1 }))).join('') +
+            tipRow(
+              undefined,
+              t('amu.stacked.sumSelected'),
+              `${fmtNumber(sums[i], t.locale, { digits: 1 })} DID`,
+              true,
+            ) +
+            rows
+              .map((p) =>
+                tipRow(
+                  p.color,
+                  p.seriesName,
+                  isShare ? fmtPct(p.value, t.locale) : fmtNumber(p.value, t.locale, { digits: 1 }),
+                ),
+              )
+              .join('') +
             (arr.length > 12 ? tipRow(undefined, '…', '') : '')
           );
         },
@@ -116,11 +150,17 @@ export function AmuStacked(props: AmuChartProps) {
 
   const last = model?.set.years.length ? model.set.years.length - 1 : -1;
   const title = metric === 'share' ? t('amu.stacked.titleShare') : t('amu.stacked.title');
-  const subtitle = t('amu.stacked.subtitle', { level: t(`levels.${level}`), n: selected.length, total: order.length });
+  const subtitle = t('amu.stacked.subtitle', {
+    level: t(`levels.${level}`),
+    n: selected.length,
+    total: order.length,
+  });
 
   const toggle = (code: string) => {
     if (!onClassesChange) return;
-    const next = selected.includes(code) ? selected.filter((c) => c !== code) : order.filter((c) => selected.includes(c) || c === code);
+    const next = selected.includes(code)
+      ? selected.filter((c) => c !== code)
+      : order.filter((c) => selected.includes(c) || c === code);
     onClassesChange(next.length === order.length ? [] : next);
   };
   const soloGroup = (aware: string) => {
@@ -142,8 +182,18 @@ export function AmuStacked(props: AmuChartProps) {
       tableRows={tableRows}
       fileName={`twamr-amu-classes-${level}-${metric}`}
       link={link}
-      embed={{ chart: 'amu-stacked', params: { level: level !== 'all' ? level : null, metric: metric !== 'DID' ? metric : null } }}
-      keyNumber={model && last >= 0 ? { value: `${fmtNumber(model.sums[last], t.locale, { digits: 0 })} DID`, label: `${t(`levels.${level}`)} · ${model.set.years[last]}` } : undefined}
+      embed={{
+        chart: 'amu-stacked',
+        params: { level: level !== 'all' ? level : null, metric: metric !== 'DID' ? metric : null },
+      }}
+      keyNumber={
+        model && last >= 0
+          ? {
+              value: `${fmtNumber(model.sums[last], t.locale, { digits: 0 })} DID`,
+              label: `${t(`levels.${level}`)} · ${model.set.years[last]}`,
+            }
+          : undefined
+      }
       compact={compact}
       height={height}
     >
@@ -156,9 +206,19 @@ export function AmuStacked(props: AmuChartProps) {
             return (
               <div key={aw}>
                 <div className={k.legendGroupTitle}>
-                  <span className={k.swatch} style={{ background: AWARE_COLORS[ct.theme][aw] }} aria-hidden="true" />
+                  <span
+                    className={k.swatch}
+                    style={{ background: AWARE_COLORS[ct.theme][aw] }}
+                    aria-hidden="true"
+                  />
                   {onClassesChange ? (
-                    <button type="button" className={k.legendItem} style={{ fontWeight: 650, color: 'var(--ink)' }} onClick={() => soloGroup(aw)} title={t('amu.stacked.soloHint')}>
+                    <button
+                      type="button"
+                      className={k.legendItem}
+                      style={{ fontWeight: 650, color: 'var(--ink)' }}
+                      onClick={() => soloGroup(aw)}
+                      title={t('amu.stacked.soloHint')}
+                    >
                       {t(`amu.aware.${aw}`)}
                     </button>
                   ) : (

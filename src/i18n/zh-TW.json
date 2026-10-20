@@ -2,7 +2,7 @@
   "overview": {
     "hero": {
       "eyebrow": "THAS 全國監測 · {from}–{to}",
-      "title": "臺灣抗生素抗藥性，一眼掌握",
+      "title": "臺灣抗生素抗藥性，|一眼掌握",
       "thesis": "九種多重抗藥性細菌、八年全國監測，一個清楚的訊號：抗藥性集中在照護最密集之處——每一種多重抗藥菌，醫療照護相關（HO）菌株的抗藥比率都高於社區相關（CO）菌株。",
       "ctaResistance": "探索抗藥性",
       "ctaInternational": "國際比較",
@@ -33,7 +33,7 @@
       "explore": "深入探索",
       "coho": "{phenotype}：{year} 年醫療照護相關（HO）{ho}，社區相關（CO）{co}——HO 為 CO 的 {ratio} 倍。",
       "peak": "{phenotype} 於 {peakYear} 年達高峰 {peak}，{year} 年已降至 {latest}。",
-      "rise": "{phenotype} 由 {firstYear} 年的 {first} 上升至 {year} 年的 {latest}（{change}，相對增加 {rel}）。",
+      "rise": "{phenotype} 由 {firstYear} 年的 {first} 上升至 {year} 年的 {latest}（{change}；相對 {rel}）。",
       "levels": "{phenotype} 的醫院層級差異最大：{year} 年{high} {highV}，{low} {lowV}。",
       "isolates": "通報之臨床分離菌株由 {fromYear} 年 {from} 株增至 {year} 年 {to} 株（{rel}）。",
       "range": "{year} 年抗藥比率最高的多重抗藥菌仍為 {high}（{highV}）；最低為 {low}（{lowV}）。",
@@ -134,7 +134,7 @@
       "overlayHint": "全國社區相關與醫療照護相關趨勢線",
       "norm": "以首年 = 100 指數化",
       "normHint": "比較相對變化而非絕對水準",
-      "drugLevel": "藥物層級趨勢（敏感性圖譜，2022–2024）：",
+      "drugLevel": "「菌種 × 抗生素」趨勢（顯示於多重抗藥菌圖表下方）：",
       "compareLevels": "比較醫院層級",
       "cmpNone": "關閉",
       "cmpGrid": "四層級",

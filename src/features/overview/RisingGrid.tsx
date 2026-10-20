@@ -106,7 +106,7 @@ function Mini({ ph, trend, setting, years }: { ph: string; trend: TrendIndex; se
     const k = ct.tokens;
     return {
       animationDuration: 700,
-      grid: { left: 2, right: 8, top: 8, bottom: 2, containLabel: true },
+      grid: { left: 2, right: 18, top: 8, bottom: 2, containLabel: true },
       tooltip: {
         trigger: 'axis',
         confine: true,

@@ -11,7 +11,17 @@ import { indicatorShort } from './GlassProfile';
 import { glassMeta, indicatorCodes } from './glassModel';
 import k from './kit/kit.module.css';
 
-const DIFF_ROWS = ['system', 'scope', 'specimen', 'unit', 'measure', 'breakpoints', 'network', 'years', 'precision'] as const;
+const DIFF_ROWS = [
+  'system',
+  'scope',
+  'specimen',
+  'unit',
+  'measure',
+  'breakpoints',
+  'network',
+  'years',
+  'precision',
+] as const;
 const CAVEATS = ['member', 'breakpoints', 'unit', 'nonsusceptible', 'curated'] as const;
 
 /** Methodological differences GLASS vs THAS + how each Taiwan value was derived (from glass.meta.comparability). */
@@ -40,12 +50,15 @@ export function Comparability({ link }: { link?: string }) {
         d,
         row: {
           [t('international.indicator')]: nameI(c),
-          [t('international.comp.basis')]: d.pathogen && d.antibiotic ? `${d.pathogen} × ${d.antibiotic}` : (d.phenotype ?? '—'),
+          [t('international.comp.basis')]:
+            d.pathogen && d.antibiotic ? `${d.pathogen} × ${d.antibiotic}` : (d.phenotype ?? '—'),
           [t('international.comp.tier')]: d.tier ? t(`international.comp.tiers.${d.tier}`) : '—',
           [t('common.specimen')]: d.specimen ? t(`specimens.${d.specimen}`) : '—',
           [t('common.year')]: d.year ?? null,
           [t('precision.label')]: d.precision ? t(`precision.${d.precision}`) : '—',
-          [t('international.comp.fallback')]: d.fallback ? t('international.comp.yes') : t('international.comp.no'),
+          [t('international.comp.fallback')]: d.fallback
+            ? t('international.comp.yes')
+            : t('international.comp.no'),
         },
       };
     });
@@ -68,7 +81,7 @@ export function Comparability({ link }: { link?: string }) {
         height={300}
       >
         <div className={k.tableWrap}>
-          <table className={k.table}>
+          <table className={`${k.table} ${k.stackTable}`}>
             <thead>
               <tr>
                 <th scope="col">{t('international.comp.aspect')}</th>
@@ -80,8 +93,10 @@ export function Comparability({ link }: { link?: string }) {
               {DIFF_ROWS.map((r) => (
                 <tr key={r}>
                   <th scope="row">{t(`international.comp.rows.${r}.label`)}</th>
-                  <td>{t(`international.comp.rows.${r}.glass`)}</td>
-                  <td>{t(`international.comp.rows.${r}.thas`)}</td>
+                  <td data-label="WHO GLASS">{t(`international.comp.rows.${r}.glass`)}</td>
+                  <td data-label={t('international.comp.thasCol')}>
+                    {t(`international.comp.rows.${r}.thas`)}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -89,7 +104,9 @@ export function Comparability({ link }: { link?: string }) {
         </div>
         <div className={k.chartNote} style={{ display: 'block' }}>
           <strong style={{ color: 'var(--ink-2)' }}>{t('international.comp.caveatsTitle')}</strong>
-          <ul style={{ paddingLeft: '1.2em', marginTop: 4, display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <ul
+            style={{ paddingLeft: '1.2em', marginTop: 4, display: 'flex', flexDirection: 'column', gap: 2 }}
+          >
             {CAVEATS.map((c) => (
               <li key={c}>{t(`international.comp.caveats.${c}`)}</li>
             ))}
@@ -110,7 +127,7 @@ export function Comparability({ link }: { link?: string }) {
         height={300}
       >
         <div className={k.tableWrap}>
-          <table className={k.table}>
+          <table className={`${k.table} ${k.stackTable}`}>
             <thead>
               <tr>
                 <th scope="col">{t('international.indicator')}</th>
@@ -126,8 +143,10 @@ export function Comparability({ link }: { link?: string }) {
                   <th scope="row" title={nameI(code)}>
                     {indicatorShort(env, code)}
                   </th>
-                  <td className={k.num}>{d.pathogen && d.antibiotic ? `${d.pathogen} × ${d.antibiotic}` : (d.phenotype ?? '—')}</td>
-                  <td>
+                  <td className={k.num} data-label={t('international.comp.basis')}>
+                    {d.pathogen && d.antibiotic ? `${d.pathogen} × ${d.antibiotic}` : (d.phenotype ?? '—')}
+                  </td>
+                  <td data-label={t('international.comp.tier')}>
                     {d.tier ? t(`international.comp.tiers.${d.tier}`) : '—'}
                     {d.fallback && (
                       <>
@@ -136,8 +155,12 @@ export function Comparability({ link }: { link?: string }) {
                       </>
                     )}
                   </td>
-                  <td className={k.num}>{d.year ?? '—'}</td>
-                  <td>{d.precision ? <PrecisionBadge precision={d.precision as Precision} showExact /> : '—'}</td>
+                  <td className={k.num} data-label={t('common.year')}>
+                    {d.year ?? '—'}
+                  </td>
+                  <td data-label={t('precision.label')}>
+                    {d.precision ? <PrecisionBadge precision={d.precision as Precision} showExact /> : '—'}
+                  </td>
                 </tr>
               ))}
             </tbody>

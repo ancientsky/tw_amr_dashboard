@@ -12,6 +12,8 @@ import { useT } from '../../i18n';
 import { glassRows, indicatorCodes, percentileRank } from './glassModel';
 import { tipRow, tipTitle, glassSourceLine } from './kit/util';
 import { useNarrow } from './kit/hooks';
+import { LegendSwatch } from './kit/Kit';
+import k from './kit/kit.module.css';
 
 type Scale = 'abs' | 'rank';
 
@@ -22,7 +24,11 @@ export function indicatorShort(env: Envelope<GlassRecord> | null | undefined, co
 }
 
 /** Comparison colours: Taiwan = ink, selected countries = categorical slots 1…5 in selection order. */
-export function compareColors(countries: readonly string[], theme: 'light' | 'dark', ink: string): (iso: string) => string {
+export function compareColors(
+  countries: readonly string[],
+  theme: 'light' | 'dark',
+  ink: string,
+): (iso: string) => string {
   return (iso) => {
     if (iso === 'TWN') return ink;
     const i = countries.filter((c) => c !== 'TWN').indexOf(iso);
@@ -42,7 +48,15 @@ function useGlassMatrix(env: Envelope<GlassRecord> | null) {
 }
 
 /** Radar: Taiwan vs up to 5 countries across all 10 indicators (absolute % or percentile rank). */
-export function GlassRadar({ countries, compact, link }: { countries: string[]; compact?: boolean; link?: string }) {
+export function GlassRadar({
+  countries,
+  compact,
+  link,
+}: {
+  countries: string[];
+  compact?: boolean;
+  link?: string;
+}) {
   const t = useT();
   const ct = useChartTheme();
   const narrow = useNarrow();
@@ -79,7 +93,12 @@ export function GlassRadar({ countries, compact, link }: { countries: string[]; 
               .map((c) => {
                 const r = m.by.get(`${iso}|${c}`);
                 const v = valueOf(iso, c);
-                const txt = v === null ? '—' : scale === 'abs' ? fmtPct(v, t.locale) : `P${fmtNumber(v, t.locale)}${r ? ` (${fmtPct(r.resistant_pct, t.locale)})` : ''}`;
+                const txt =
+                  v === null
+                    ? '—'
+                    : scale === 'abs'
+                      ? fmtPct(v, t.locale)
+                      : `P${fmtNumber(v, t.locale)}${r ? ` (${fmtPct(r.resistant_pct, t.locale)})` : ''}`;
                 return tipRow(undefined, indicatorShort(env, c), txt);
               })
               .join('')
@@ -138,7 +157,9 @@ export function GlassRadar({ countries, compact, link }: { countries: string[]; 
     <ChartCard
       id="glass-radar"
       title={title}
-      subtitle={scale === 'abs' ? t('international.radar.subtitleAbs') : t('international.radar.subtitleRank')}
+      subtitle={
+        scale === 'abs' ? t('international.radar.subtitleAbs') : t('international.radar.subtitleRank')
+      }
       source={glassSourceLine(env, t.locale, (n) => t('international.sourceMore', { n }))}
       dataset="glass"
       status={status}
@@ -149,25 +170,40 @@ export function GlassRadar({ countries, compact, link }: { countries: string[]; 
       compact={compact}
       height={height}
       actions={
-        <SegmentedControl<Scale>
-          size="sm"
-          label={t('international.radar.scaleLabel')}
-          value={scale}
-          onChange={setScale}
-          options={[
-            { value: 'abs', label: t('international.radar.abs') },
-            { value: 'rank', label: t('international.radar.rank') },
-          ]}
-        />
+        <div className={k.scrollX}>
+          <SegmentedControl<Scale>
+            size="sm"
+            label={t('international.radar.scaleLabel')}
+            value={scale}
+            onChange={setScale}
+            options={[
+              { value: 'abs', label: t('international.radar.abs') },
+              { value: 'rank', label: t('international.radar.rank') },
+            ]}
+          />
+        </div>
       }
     >
-      <EChart ref={ref} option={option} height={height} ariaLabel={`${title}. ${t('international.radar.aria')}`} />
+      <EChart
+        ref={ref}
+        option={option}
+        height={height}
+        ariaLabel={`${title}. ${t('international.radar.aria')}`}
+      />
     </ChartCard>
   );
 }
 
 /** Strip plot: every country as a dot per indicator; Taiwan and the comparison set highlighted. */
-export function GlassStrip({ countries, onCountryClick, link }: { countries: string[]; onCountryClick?: (iso: string) => void; link?: string }) {
+export function GlassStrip({
+  countries,
+  onCountryClick,
+  link,
+}: {
+  countries: string[];
+  onCountryClick?: (iso: string) => void;
+  link?: string;
+}) {
   const t = useT();
   const ct = useChartTheme();
   const narrow = useNarrow();
@@ -186,20 +222,35 @@ export function GlassStrip({ countries, onCountryClick, link }: { countries: str
     const cats = m.codes.map((c) => indicatorShort(env, c));
     const ci = new Map(m.codes.map((c, i) => [c, i]));
     const others = m.rows.filter((r) => !set.includes(r.iso3));
-    const point = (r: GlassRecord) => ({ value: [r.resistant_pct, ci.get(r.indicator)!], iso: r.iso3, ind: r.indicator, year: r.year });
+    const point = (r: GlassRecord) => ({
+      value: [r.resistant_pct, ci.get(r.indicator)!],
+      iso: r.iso3,
+      ind: r.indicator,
+      year: r.year,
+    });
     return {
-      grid: { left: 4, right: 16, top: 36, bottom: 8, containLabel: true },
-      legend: { top: 0, left: 0, type: 'scroll', data: [t('international.strip.others'), ...set.map((c) => nameC(c))] },
+      grid: { left: 4, right: 16, top: 16, bottom: 8, containLabel: true },
+      legend: { show: false, data: [t('international.strip.others'), ...set.map((c) => nameC(c))] },
       tooltip: {
         trigger: 'item',
         confine: true,
         formatter: (p: unknown) => {
           const d = (p as { data: { iso: string; ind: string; value: number[]; year: number } }).data;
-          return tipTitle(nameC(d.iso)) + tipRow(undefined, nameI(d.ind), fmtPct(d.value[0], t.locale), true) + tipRow(undefined, t('common.year'), String(d.year));
+          return (
+            tipTitle(nameC(d.iso)) +
+            tipRow(undefined, nameI(d.ind), fmtPct(d.value[0], t.locale), true) +
+            tipRow(undefined, t('common.year'), String(d.year))
+          );
         },
       },
       xAxis: { type: 'value', min: 0, max: 100, axisLabel: { formatter: '{value}%' } },
-      yAxis: { type: 'category', data: cats, inverse: true, axisLabel: { fontWeight: 600, interval: 0 }, splitLine: { show: true, lineStyle: { color: tok.grid } } },
+      yAxis: {
+        type: 'category',
+        data: cats,
+        inverse: true,
+        axisLabel: { fontWeight: 600, interval: 0 },
+        splitLine: { show: true, lineStyle: { color: tok.grid } },
+      },
       series: [
         {
           type: 'scatter',
@@ -222,7 +273,15 @@ export function GlassStrip({ countries, onCountryClick, link }: { countries: str
             z: iso === 'TWN' ? 5 : 4,
             label:
               iso === 'TWN' && !narrow
-                ? { show: true, position: 'top', distance: 4, formatter: (p: { value: number[] }) => fmtPct(p.value[0], t.locale, 0), color: tok.ink, fontSize: 10.5, fontWeight: 650 }
+                ? {
+                    show: true,
+                    position: 'top',
+                    distance: 4,
+                    formatter: (p: { value: number[] }) => fmtPct(p.value[0], t.locale, 0),
+                    color: tok.ink,
+                    fontSize: 10.5,
+                    fontWeight: 650,
+                  }
                 : undefined,
           })),
       ],
@@ -271,7 +330,19 @@ export function GlassStrip({ countries, onCountryClick, link }: { countries: str
       link={link}
       height={height}
     >
-      <EChart ref={ref} option={option} height={height} onEvents={onEvents} ariaLabel={`${title}. ${t('international.strip.subtitle')}`} />
+      <div className={k.legend} style={{ padding: '0 4px 4px' }}>
+        <LegendSwatch color={MUTED[ct.theme]} label={t('international.strip.others')} />
+        {set.map((c) => (
+          <LegendSwatch key={c} color={color(c)} label={nameC(c)} />
+        ))}
+      </div>
+      <EChart
+        ref={ref}
+        option={option}
+        height={height}
+        onEvents={onEvents}
+        ariaLabel={`${title}. ${t('international.strip.subtitle')}`}
+      />
     </ChartCard>
   );
 }

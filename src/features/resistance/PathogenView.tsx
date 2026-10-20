@@ -7,11 +7,11 @@ import { useChartTheme } from '../../components/chart/useChartTheme';
 import { Badge } from '../../components/ui/Badge';
 import { useDataset } from '../../data/load';
 import { fmtDelta, fmtNumber, fmtPct } from '../../data/format';
-import type { IsolateScope, WhoPriority } from '../../data/types';
+import type { IsolateScope, Specimen, WhoPriority } from '../../data/types';
 import { useT } from '../../i18n';
 import { dumbbellOption, type DumbbellRow } from './charts/dumbbell';
 import { PathogenBarsChart } from './charts/PathogenBarsChart';
-import { antibiogramYears, isolateTotals, orderAntibiotics, PATHOGEN_TO_ISOLATE, pathogenStrata, toPoint, yearSpan } from './lib';
+import { antibiogramYears, isolateTotals, orderAntibiotics, PATHOGEN_TO_ISOLATE, pathogenStrata, SPECIMEN_SLOT, toPoint, yearSpan } from './lib';
 import { resistanceSource, useResistanceModel } from './model';
 import type { ExplorerState } from './useExplorerState';
 import s from './resistance.module.css';
@@ -39,31 +39,27 @@ export function PathogenView({ state, update, link }: { state: ExplorerState; up
           {typeof dim?.meta?.keyPhenotype === 'string' && <Badge tone="accent">{dim.meta.keyPhenotype as string}</Badge>}
         </div>
       </div>
-      <div className={s.twoCol}>
+      <PathogenBarsChart
+        pathogen={state.pathogen}
+        mode="setting"
+        year={state.year}
+        highlight={state.antibiotic}
+        onSelectAntibiotic={(a) => update({ antibiotic: a })}
+        link={link({ chart: 'resistance-pathogen-bars' })}
+      />
+      {hasSpecimen && (
         <PathogenBarsChart
           pathogen={state.pathogen}
-          mode="setting"
+          mode="specimen"
           year={state.year}
+          specimen={state.specimen}
           highlight={state.antibiotic}
           onSelectAntibiotic={(a) => update({ antibiotic: a })}
-          link={link({ chart: 'resistance-pathogen-bars' })}
+          link={link({ chart: 'resistance-pathogen-specimen' })}
         />
-        {hasSpecimen ? (
-          <PathogenBarsChart
-            pathogen={state.pathogen}
-            mode="specimen"
-            year={state.year}
-            specimen={state.specimen}
-            highlight={state.antibiotic}
-            onSelectAntibiotic={(a) => update({ antibiotic: a })}
-            link={link({ chart: 'resistance-pathogen-specimen' })}
-          />
-        ) : (
-          <SlopeCard state={state} link={link} />
-        )}
-      </div>
+      )}
       <div className={s.twoCol}>
-        {hasSpecimen && <SlopeCard state={state} link={link} />}
+        <SlopeCard state={state} link={link} />
         <IsolatesCard pathogen={state.pathogen} link={link} />
       </div>
     </div>
@@ -198,21 +194,21 @@ function IsolatesCard({ pathogen, link }: { pathogen: string; link: (extra?: Rec
     const k = ct.tokens;
     const stackable = model.byScope.length > 0 && model.other.some((v) => v !== null);
     return {
-      grid: { left: 4, right: 16, top: 40, bottom: 4, containLabel: true },
-      legend: { top: 0, left: 0, type: 'scroll' },
+      grid: { left: 4, right: 16, top: 56, bottom: 4, containLabel: true },
+      legend: { top: 0, left: 0 },
       tooltip: { trigger: 'axis', valueFormatter: (v) => fmtNumber(v as number, t.locale) },
       xAxis: { type: 'category', data: model.years.map(String), boundaryGap: stackable },
       yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtNumber(v, t.locale, { compact: true }) } },
       series: [
         ...(stackable
           ? [
-              ...model.byScope.map((b, i) => ({
+              ...model.byScope.map((b) => ({
                 name: names.specimen(b.scope),
                 type: 'bar',
                 stack: 'spec',
                 data: b.data,
                 barMaxWidth: 28,
-                itemStyle: { color: seriesColor(i + 1, ct.theme), borderColor: k.surface, borderWidth: 1, borderRadius: 0 },
+                itemStyle: { color: seriesColor(SPECIMEN_SLOT[b.scope as Specimen], ct.theme), borderColor: k.surface, borderWidth: 1, borderRadius: 0 },
               })),
               {
                 name: t('resistance.pathogen.otherSpecimens'),
