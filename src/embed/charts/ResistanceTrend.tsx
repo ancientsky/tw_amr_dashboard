@@ -49,6 +49,12 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, w
     const color = colorMap([...LEVEL_ORDER], ct.theme);
     const { set } = model;
     const emphasis = level && level !== 'all' ? level : undefined;
+    // Direct end-labels only when they don't collide (dataviz: never stack converging labels).
+    const lasts = set.series.map((x) => [...x.data].reverse().find((v) => v !== null) ?? null).filter((v): v is number => v !== null).sort((a, b) => a - b);
+    const all = set.series.flatMap((x) => x.data).filter((v): v is number => v !== null);
+    const span = Math.max(1, Math.max(...all, 0) - 0);
+    const minGap = lasts.slice(1).reduce((g, v, i) => Math.min(g, v - lasts[i]), Infinity);
+    const showEnd = set.series.length <= 4 && (lasts.length < 2 || minGap / span > 0.07);
     return {
       grid: { left: 4, right: compact ? 56 : 72, top: 40, bottom: 4, containLabel: true },
       legend: { top: 0, left: 0, data: set.series.map((s) => levelLabel(s.key)) },
@@ -73,7 +79,7 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, w
           itemStyle: { color: c, borderColor: ct.tokens.surface, borderWidth: 2 },
           areaStyle: s.key === (emphasis ?? 'all') ? { color: c, opacity: 0.08 } : undefined,
           endLabel: {
-            show: set.series.length <= 4,
+            show: showEnd,
             formatter: (p: { value: unknown }) => fmtPct(Number(p.value), t.locale),
             color: ct.tokens.ink2,
             fontSize: 11.5,

@@ -60,6 +60,7 @@ export function ResistanceHeatmap({ level = 'all', ward = 'all', setting = 'all'
       },
       visualMap: {
         type: 'continuous',
+        dimension: 2,
         min: 0,
         max: 100,
         calculable: false,

@@ -69,6 +69,7 @@
 }
 .foot {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-3);
@@ -98,6 +99,7 @@
   background: var(--surface-2);
 }
 .deltaNote {
+  white-space: nowrap;
   font-size: var(--fs-xs);
   color: var(--ink-3);
   margin-left: 6px;

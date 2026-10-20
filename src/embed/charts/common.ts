@@ -39,7 +39,8 @@ export function sourceLine(env: Envelope<unknown> | null | undefined, locale: Lo
   const list = (real.length ? real : env.sources).slice(0, 2);
   const years = env.sources.map((s) => s.year).filter(Boolean);
   const yr = years.length ? (Math.min(...years) === Math.max(...years) ? `${years[0]}` : `${Math.min(...years)}–${Math.max(...years)}`) : '';
-  const titles = [...new Set(list.map((s) => localized(s.title, locale)))].join('；');
+  const strip = (x: string) => x.replace(/[\s,，、(（]*(?:\d{4})[)）年]?\s*$/u, '').trim();
+  const titles = [...new Set(list.map((s) => strip(localized(s.title, locale))))].join('; ');
   const pub = list[0]?.publisher;
   return [pub, titles].filter(Boolean).join(' · ') + (yr ? ` (${yr})` : '');
 }

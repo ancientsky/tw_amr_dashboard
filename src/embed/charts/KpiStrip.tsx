@@ -5,7 +5,7 @@ import { useChartTheme } from '../../components/chart/useChartTheme';
 import { Kpi } from '../../components/ui/Kpi';
 import { useDataset } from '../../data/load';
 import { dimNamer, fmtPct } from '../../data/format';
-import { buildSeries, latestValue, sliceResistance } from '../../data/select';
+import { buildSeries, dedupeRecords, latestValue, sliceResistance } from '../../data/select';
 import { useT } from '../../i18n';
 import { phenotypeFor, sourceLine, type ChartParams } from './common';
 import s from './charts.module.css';
@@ -54,7 +54,7 @@ export function KpiStrip({ level = 'all', ward = 'all', setting = 'all', compact
       subtitle={subtitle}
       source={sourceLine(env, t.locale)}
       provisional={env?.provisional}
-      precision={items.flatMap((x) => x.recs.slice(-1))}
+      precision={items.flatMap((x) => dedupeRecords(x.recs.filter((r) => r.year === x.lv!.year)))}
       isFixture={isFixture}
       status={status === 'ready' && items.length === 0 ? 'empty' : status}
       tableRows={rows}
