@@ -1,341 +1,341 @@
 report_year,data_year,pathogen,antibiotic,infection_setting,specimen,resistant_pct,ci_low,ci_high,read_method,pdf_page,figure
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,all,all,30.0,29.5,30.5,text,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,all,all,19.5,18.5,21.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,all,all,62.5,62.0,63.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,all,all,59.0,58.0,59.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,all,all,64.5,63.5,65.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,all,all,65.4,64.5,66.0,text,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,all,all,62.8,60.0,65.0,text,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,all,blood,29.0,27.0,31.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,all,blood,14.0,11.0,18.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,all,blood,51.0,49.0,53.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,all,blood,50.5,47.5,53.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,all,blood,53.0,51.0,55.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,all,blood,55.5,52.5,58.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,all,blood,55.5,46.0,64.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,co,all,23.0,22.0,24.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,co,all,16.5,15.0,18.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,co,all,56.5,55.5,57.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,co,all,52.5,51.5,54.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,co,all,55.5,54.5,56.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,co,all,56.0,55.0,57.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,co,all,62.0,59.0,65.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,ho,all,35.5,34.5,36.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,ho,all,22.5,21.0,24.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,ho,all,68.0,67.0,69.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,ho,all,64.5,63.5,65.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,ho,all,71.5,70.5,72.0,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,ho,all,72.5,71.5,73.5,bar_estimate,66,3-2-1
-2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,ho,all,66.0,61.5,70.0,bar_estimate,66,3-2-1
-2022,2022,Escherichia coli,Co-trimoxazole,all,all,42.5,42.5,42.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ciprofloxacin,all,all,41.6,41.5,42.0,text,67,3-2-2
-2022,2022,Escherichia coli,Levofloxacin,all,all,42.7,42.5,43.0,text,67,3-2-2
-2022,2022,Escherichia coli,Ceftriaxone,all,all,28.0,28.0,28.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Cefotaxime,all,all,29.5,29.0,29.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ceftazidime,all,all,21.5,21.0,21.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Cefepime,all,all,16.5,16.0,16.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Imipenem,all,all,2.5,2.5,2.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Meropenem,all,all,3.2,3.0,3.5,text,67,3-2-2
-2022,2022,Escherichia coli,Ertapenem,all,all,2.5,2.5,2.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Doripenem,all,all,1.7,1.5,2.5,text,67,3-2-2
-2022,2022,Escherichia coli,Ampicillin,all,all,72.5,72.0,73.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Co-trimoxazole,all,blood,45.0,44.0,45.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ciprofloxacin,all,blood,38.5,37.5,39.0,text,67,3-2-2
-2022,2022,Escherichia coli,Levofloxacin,all,blood,39.7,39.0,40.0,text,67,3-2-2
-2022,2022,Escherichia coli,Ceftriaxone,all,blood,30.5,30.0,31.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Cefotaxime,all,blood,31.0,30.5,32.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ceftazidime,all,blood,23.0,22.5,23.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Cefepime,all,blood,16.5,16.0,17.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Imipenem,all,blood,2.0,2.0,2.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Meropenem,all,blood,3.5,3.0,4.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ertapenem,all,blood,2.5,2.0,3.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Doripenem,all,blood,1.0,1.0,1.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ampicillin,all,blood,72.0,71.0,72.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Co-trimoxazole,all,urine,40.5,40.5,41.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ciprofloxacin,all,urine,41.6,41.5,41.6,text,67,3-2-2
-2022,2022,Escherichia coli,Levofloxacin,all,urine,42.6,42.0,42.6,text,67,3-2-2
-2022,2022,Escherichia coli,Ceftriaxone,all,urine,26.0,26.0,26.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Cefotaxime,all,urine,27.5,27.5,27.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ceftazidime,all,urine,19.5,19.5,19.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Cefepime,all,urine,16.0,15.5,16.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Imipenem,all,urine,1.5,1.5,2.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Meropenem,all,urine,2.5,2.5,2.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ertapenem,all,urine,1.5,1.5,2.0,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Doripenem,all,urine,1.5,1.0,1.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Ampicillin,all,urine,71.5,71.5,71.5,bar_estimate,67,3-2-2
-2022,2022,Escherichia coli,Co-trimoxazole,co,all,41.0,41.0,41.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ciprofloxacin,co,all,40.0,40.0,40.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Levofloxacin,co,all,41.5,41.0,41.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ceftriaxone,co,all,25.5,25.5,26.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Cefotaxime,co,all,27.0,26.5,27.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ceftazidime,co,all,19.5,19.0,19.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Cefepime,co,all,14.5,14.0,15.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Imipenem,co,all,1.5,1.5,2.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Meropenem,co,all,2.5,2.5,3.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ertapenem,co,all,1.5,1.5,2.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Doripenem,co,all,1.5,1.0,1.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ampicillin,co,all,71.5,71.0,72.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Co-trimoxazole,ho,all,55.0,54.0,55.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ciprofloxacin,ho,all,55.5,54.5,56.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Levofloxacin,ho,all,56.0,55.0,56.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ceftriaxone,ho,all,53.0,52.0,54.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Cefotaxime,ho,all,54.5,53.0,55.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ceftazidime,ho,all,42.5,41.5,43.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Cefepime,ho,all,32.5,31.5,33.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Imipenem,ho,all,6.0,5.5,6.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Meropenem,ho,all,7.0,6.5,8.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ertapenem,ho,all,6.5,6.0,6.5,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Doripenem,ho,all,8.0,5.5,11.0,bar_estimate,68,3-2-2
-2022,2022,Escherichia coli,Ampicillin,ho,all,86.0,85.0,86.5,bar_estimate,68,3-2-2
-2022,2022,Klebsiella pneumoniae,Co-trimoxazole,all,all,36.5,36.5,37.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ciprofloxacin,all,all,35.5,35.0,36.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Levofloxacin,all,all,35.5,35.0,36.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftriaxone,all,all,29.5,29.0,30.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefotaxime,all,all,35.0,34.5,35.5,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftazidime,all,all,34.0,34.0,34.5,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefepime,all,all,22.5,22.5,23.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Imipenem,all,all,13.0,12.5,13.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Meropenem,all,all,12.6,12.5,13.0,text,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ertapenem,all,all,13.0,13.0,13.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Doripenem,all,all,17.6,16.5,19.0,text,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Co-trimoxazole,all,blood,31.3,30.0,32.5,text,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ciprofloxacin,all,blood,32.5,31.5,33.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Levofloxacin,all,blood,31.0,30.0,32.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftriaxone,all,blood,26.5,25.5,28.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefotaxime,all,blood,30.5,29.5,32.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftazidime,all,blood,28.4,27.5,29.5,text,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefepime,all,blood,19.0,18.5,20.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Imipenem,all,blood,12.5,12.0,13.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Meropenem,all,blood,13.0,12.0,14.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ertapenem,all,blood,13.5,13.0,14.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Doripenem,all,blood,12.0,10.0,15.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Co-trimoxazole,all,urine,42.3,42.0,43.0,text,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ciprofloxacin,all,urine,40.0,39.5,40.5,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Levofloxacin,all,urine,40.0,39.5,40.5,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftriaxone,all,urine,32.0,31.5,32.5,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefotaxime,all,urine,39.5,38.5,40.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftazidime,all,urine,39.0,38.5,39.5,text,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefepime,all,urine,25.5,25.0,26.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Imipenem,all,urine,15.0,14.5,15.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Meropenem,all,urine,14.5,13.5,15.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Ertapenem,all,urine,14.5,14.0,15.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Doripenem,all,urine,18.0,15.5,20.0,bar_estimate,69,3-2-3
-2022,2022,Klebsiella pneumoniae,Co-trimoxazole,co,all,32.5,32.5,33.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ciprofloxacin,co,all,30.5,30.0,30.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Levofloxacin,co,all,30.0,29.5,30.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftriaxone,co,all,23.0,22.5,23.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefotaxime,co,all,29.0,28.5,30.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftazidime,co,all,28.0,27.5,28.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefepime,co,all,17.0,17.0,17.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Imipenem,co,all,9.0,9.0,9.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Meropenem,co,all,8.5,8.0,9.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ertapenem,co,all,9.0,8.5,9.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Doripenem,co,all,15.0,13.5,16.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Co-trimoxazole,ho,all,49.5,48.5,50.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ciprofloxacin,ho,all,51.5,51.0,52.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Levofloxacin,ho,all,53.0,52.5,54.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftriaxone,ho,all,48.5,47.5,49.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefotaxime,ho,all,54.5,53.0,55.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ceftazidime,ho,all,52.0,51.5,53.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Cefepime,ho,all,38.0,37.5,39.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Imipenem,ho,all,24.0,23.0,24.5,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Meropenem,ho,all,25.0,24.0,26.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Ertapenem,ho,all,25.0,24.5,26.0,bar_estimate,70,3-2-3
-2022,2022,Klebsiella pneumoniae,Doripenem,ho,all,35.5,32.0,39.0,bar_estimate,70,3-2-3
-2022,2022,Pseudomonas aeruginosa,Amikacin,all,all,3.0,3.0,3.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Gentamicin,all,all,11.5,11.0,11.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Imipenem,all,all,12.5,12.0,12.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Meropenem,all,all,12.6,12.5,13.0,text,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Doripenem,all,all,8.1,7.5,8.5,text,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ceftazidime,all,all,11.5,11.0,11.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Cefepime,all,all,11.5,11.0,11.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,all,all,18.6,18.5,19.0,text,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Levofloxacin,all,all,24.8,24.5,25.0,text,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,all,all,15.0,14.5,15.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Amikacin,all,blood,3.0,2.5,3.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Gentamicin,all,blood,8.0,7.0,8.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Imipenem,all,blood,13.0,11.5,14.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Meropenem,all,blood,15.0,13.0,16.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Doripenem,all,blood,10.5,7.5,14.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ceftazidime,all,blood,12.0,11.0,13.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Cefepime,all,blood,11.0,10.0,12.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,all,blood,15.5,14.0,16.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Levofloxacin,all,blood,21.5,20.0,23.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,all,blood,15.0,13.5,16.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Amikacin,co,all,3.0,3.0,3.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Gentamicin,co,all,11.5,11.5,12.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Imipenem,co,all,10.0,10.0,10.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Meropenem,co,all,9.5,9.0,10.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Doripenem,co,all,7.5,6.5,8.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ceftazidime,co,all,9.0,8.5,9.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Cefepime,co,all,9.5,9.0,9.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,co,all,18.5,18.0,19.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Levofloxacin,co,all,24.0,23.5,24.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,co,all,12.0,11.5,12.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Amikacin,ho,all,3.5,3.0,3.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Gentamicin,ho,all,11.5,11.0,12.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Imipenem,ho,all,17.5,17.0,18.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Meropenem,ho,all,19.0,18.0,20.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Doripenem,ho,all,11.0,10.0,12.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ceftazidime,ho,all,17.5,17.0,18.0,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Cefepime,ho,all,17.0,16.5,17.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,ho,all,20.0,19.0,20.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Levofloxacin,ho,all,28.0,27.0,28.5,bar_estimate,71,3-2-4
-2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,ho,all,21.5,20.5,22.0,bar_estimate,71,3-2-4
-2022,2022,Enterococcus faecalis,Gentamicin-High,all,all,41.0,40.5,41.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Vancomycin,all,all,1.0,0.5,1.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Daptomycin,all,all,25.6,25.0,26.5,text,72,3-2-5
-2022,2022,Enterococcus faecalis,Linezolid,all,all,10.0,9.5,10.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Ampicillin,all,all,1.0,1.0,1.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Tigecycline,all,all,0.5,0.5,0.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Gentamicin-High,all,blood,41.5,39.0,43.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Vancomycin,all,blood,1.5,1.5,2.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Daptomycin,all,blood,31.0,29.0,33.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Linezolid,all,blood,10.5,9.5,12.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Ampicillin,all,blood,2.5,2.0,3.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Tigecycline,all,blood,0.5,0.5,1.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Gentamicin-High,co,all,41.0,40.5,41.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Vancomycin,co,all,0.5,0.5,0.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Daptomycin,co,all,23.5,23.0,24.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Linezolid,co,all,9.5,9.5,10.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Ampicillin,co,all,0.5,0.5,1.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Tigecycline,co,all,0.5,,,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Gentamicin-High,ho,all,41.0,39.5,42.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Vancomycin,ho,all,1.5,1.0,1.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Daptomycin,ho,all,32.0,30.0,33.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Linezolid,ho,all,9.5,8.5,10.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Ampicillin,ho,all,1.5,1.5,2.0,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecalis,Tigecycline,ho,all,0.5,0.5,0.5,bar_estimate,72,3-2-5
-2022,2022,Enterococcus faecium,Gentamicin-High,all,all,35.0,34.5,36.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Vancomycin,all,all,56.0,55.0,56.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Daptomycin,all,all,3.0,2.5,3.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Linezolid,all,all,2.0,2.0,2.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Ampicillin,all,all,92.0,91.5,92.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Tigecycline,all,all,1.0,1.0,1.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Gentamicin-High,all,blood,36.0,34.0,38.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Vancomycin,all,blood,57.0,55.0,59.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Daptomycin,all,blood,2.5,1.5,4.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Linezolid,all,blood,3.0,2.5,3.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Ampicillin,all,blood,89.5,88.0,91.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Tigecycline,all,blood,2.0,1.0,3.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Gentamicin-High,co,all,34.5,33.5,36.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Vancomycin,co,all,50.5,49.5,51.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Daptomycin,co,all,3.0,2.0,4.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Linezolid,co,all,2.0,1.5,2.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Ampicillin,co,all,86.5,86.0,87.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Tigecycline,co,all,0.5,0.5,1.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Gentamicin-High,ho,all,35.5,35.0,36.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Vancomycin,ho,all,59.5,59.0,60.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Daptomycin,ho,all,2.5,2.0,3.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Linezolid,ho,all,2.0,1.5,2.0,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Ampicillin,ho,all,95.5,94.5,95.5,bar_estimate,73,3-2-6
-2022,2022,Enterococcus faecium,Tigecycline,ho,all,1.0,1.0,1.5,bar_estimate,73,3-2-6
-2022,2022,Staphylococcus aureus,Cefoxitin,all,all,46.0,45.0,47.5,bar_estimate,74,3-2-7
-2022,2022,Staphylococcus aureus,Oxacillin,all,all,43.9,43.5,44.0,text,74,3-2-7
-2022,2022,Staphylococcus aureus,Cefoxitin,all,blood,52.0,48.0,55.5,bar_estimate,74,3-2-7
-2022,2022,Staphylococcus aureus,Oxacillin,all,blood,44.0,43.0,45.0,bar_estimate,74,3-2-7
-2022,2022,Staphylococcus aureus,Cefoxitin,co,all,43.0,41.0,44.5,bar_estimate,74,3-2-7
-2022,2022,Staphylococcus aureus,Oxacillin,co,all,42.0,41.5,42.0,bar_estimate,74,3-2-7
-2022,2022,Staphylococcus aureus,Cefoxitin,ho,all,58.5,55.5,62.0,bar_estimate,74,3-2-7
-2022,2022,Staphylococcus aureus,Oxacillin,ho,all,54.5,53.5,55.5,bar_estimate,74,3-2-7
-2022,2022,Neisseria gonorrhoeae,Cefixime,all,all,2.5,0.5,13.0,bar_estimate,75,3-2-8
-2022,2022,Neisseria gonorrhoeae,Ceftriaxone,all,all,0.5,0.5,1.0,bar_estimate,75,3-2-8
-2022,2022,Neisseria gonorrhoeae,Ciprofloxacin,all,all,97.6,96.5,98.0,text,75,3-2-8
-2022,2022,Neisseria gonorrhoeae,Ceftriaxone,all,pus,1.0,0.5,3.5,bar_estimate,75,3-2-8
-2022,2022,Neisseria gonorrhoeae,Ciprofloxacin,all,pus,97.5,94.0,99.0,bar_estimate,75,3-2-8
-2022,2022,Neisseria gonorrhoeae,Cefixime,co,all,2.5,0.5,12.5,bar_estimate,75,3-2-8
-2022,2022,Neisseria gonorrhoeae,Ceftriaxone,co,all,0.5,0.5,1.0,bar_estimate,75,3-2-8
-2022,2022,Neisseria gonorrhoeae,Ciprofloxacin,co,all,97.5,96.5,98.5,bar_estimate,75,3-2-8
-2022,2022,Streptococcus pneumoniae,Oxacillin,all,all,86.0,72.5,93.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Penicillin G,all,all,31.5,26.5,37.0,text,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Co-trimoxazole,all,all,43.5,41.0,46.0,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Ceftriaxone,all,all,17.8,15.5,20.0,text,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Cefotaxime,all,all,31.3,28.5,34.0,text,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Penicillin G,all,blood,58.3,42.0,73.0,text,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Co-trimoxazole,all,blood,51.5,43.0,59.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Ceftriaxone,all,blood,15.5,10.0,23.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Cefotaxime,all,blood,28.5,21.0,37.0,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Oxacillin,co,all,84.5,69.5,92.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Penicillin G,co,all,30.0,25.0,35.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Co-trimoxazole,co,all,42.5,40.0,44.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Ceftriaxone,co,all,17.5,15.0,20.0,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Cefotaxime,co,all,32.0,29.5,34.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Penicillin G,ho,all,43.0,28.0,59.0,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Co-trimoxazole,ho,all,55.0,47.5,62.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Ceftriaxone,ho,all,21.5,14.5,30.5,bar_estimate,76,3-2-9
-2022,2022,Streptococcus pneumoniae,Cefotaxime,ho,all,26.5,19.0,35.0,bar_estimate,76,3-2-9
-2022,2022,Shigella spp.,Ciprofloxacin,all,all,47.8,39.5,56.0,text,77,3-2-10
-2022,2022,Shigella spp.,Levofloxacin,all,all,58.5,32.0,80.5,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Ceftriaxone,all,all,11.5,7.0,18.5,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Cefotaxime,all,all,11.0,4.5,25.0,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Ceftazidime,all,all,6.9,2.0,22.0,text,77,3-2-10
-2022,2022,Shigella spp.,Ciprofloxacin,all,stool,88.3,77.5,94.0,text,77,3-2-10
-2022,2022,Shigella spp.,Ceftriaxone,all,stool,14.5,6.0,29.5,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Cefotaxime,all,stool,9.0,3.0,23.0,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Ceftazidime,all,stool,4.0,0.5,19.5,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Ciprofloxacin,co,all,47.5,39.0,56.0,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Ceftriaxone,co,all,10.5,6.0,17.5,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Cefotaxime,co,all,11.0,4.5,24.5,bar_estimate,77,3-2-10
-2022,2022,Shigella spp.,Ceftazidime,co,all,7.0,2.0,22.5,bar_estimate,77,3-2-10
-2022,2022,Salmonella spp.,Ciprofloxacin,all,all,24.0,23.0,25.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Levofloxacin,all,all,18.0,16.5,20.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ceftriaxone,all,all,7.6,7.0,8.5,text,78,3-2-11
-2022,2022,Salmonella spp.,Cefotaxime,all,all,13.5,12.5,15.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ceftazidime,all,all,13.0,12.0,14.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Imipenem,all,all,1.0,1.0,1.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Meropenem,all,all,2.5,1.5,4.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ertapenem,all,all,1.0,0.5,1.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ciprofloxacin,all,blood,19.5,17.0,21.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Levofloxacin,all,blood,9.5,7.0,13.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ceftriaxone,all,blood,5.5,4.0,7.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Cefotaxime,all,blood,9.5,7.5,12.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ceftazidime,all,blood,5.5,4.0,7.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Imipenem,all,blood,1.5,0.5,2.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Meropenem,all,blood,2.5,1.0,6.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ertapenem,all,blood,0.5,0.5,1.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ciprofloxacin,all,stool,27.0,25.5,28.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Levofloxacin,all,stool,20.5,18.5,22.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ceftriaxone,all,stool,9.0,8.0,10.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Cefotaxime,all,stool,15.0,13.5,16.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ceftazidime,all,stool,16.0,14.5,18.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Imipenem,all,stool,1.5,0.5,1.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Meropenem,all,stool,4.0,2.5,6.5,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ertapenem,all,stool,1.0,0.5,1.0,bar_estimate,78,3-2-11
-2022,2022,Salmonella spp.,Ciprofloxacin,co,all,25.0,24.0,26.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Levofloxacin,co,all,19.5,17.5,21.0,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Ceftriaxone,co,all,7.5,7.0,8.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Cefotaxime,co,all,14.0,12.5,15.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Ceftazidime,co,all,13.5,12.0,15.0,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Imipenem,co,all,1.0,1.0,1.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Meropenem,co,all,3.0,2.0,5.0,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Ertapenem,co,all,0.5,0.5,1.0,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Ciprofloxacin,ho,all,43.0,38.0,47.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Levofloxacin,ho,all,37.0,27.0,47.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Ceftriaxone,ho,all,24.0,19.0,29.0,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Cefotaxime,ho,all,37.0,30.0,43.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Ceftazidime,ho,all,31.0,25.0,37.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Imipenem,ho,all,3.0,1.0,7.5,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Meropenem,ho,all,11.0,4.0,27.0,bar_estimate,79,3-2-11
-2022,2022,Salmonella spp.,Ertapenem,ho,all,3.0,1.5,7.0,bar_estimate,79,3-2-11
-2022,2022,Haemophilus influenzae,Ceftriaxone,all,all,3.2,2.0,5.0,text,80,3-2-12
-2022,2022,Haemophilus influenzae,Cefotaxime,all,all,4.0,2.5,5.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,all,all,73.0,70.0,76.0,text,80,3-2-12
-2022,2022,Haemophilus influenzae,Ampicillin,all,all,59.2,56.0,62.0,text,80,3-2-12
-2022,2022,Haemophilus influenzae,Ciprofloxacin,all,all,59.5,55.0,64.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Levofloxacin,all,all,65.0,61.0,69.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ceftriaxone,all,blood,4.5,0.5,22.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Cefotaxime,all,blood,10.5,3.5,27.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,all,blood,79.5,63.0,89.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ampicillin,all,blood,76.0,62.0,86.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ceftriaxone,co,all,2.5,1.5,4.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Cefotaxime,co,all,3.0,2.0,5.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,co,all,71.0,67.5,74.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ampicillin,co,all,55.0,51.5,58.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ciprofloxacin,co,all,59.0,53.5,64.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Levofloxacin,co,all,64.0,59.5,68.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ceftriaxone,ho,all,4.5,2.5,10.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Cefotaxime,ho,all,5.5,3.5,10.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,ho,all,78.5,73.0,83.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ampicillin,ho,all,69.5,64.5,75.0,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Ciprofloxacin,ho,all,60.5,50.5,70.5,bar_estimate,80,3-2-12
-2022,2022,Haemophilus influenzae,Levofloxacin,ho,all,67.0,59.0,74.5,bar_estimate,80,3-2-12
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,all,all,30.0,29.5,30.5,text,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,all,all,19.5,18.5,21.0,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,all,all,62.5,62.0,63.0,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,all,all,59.0,58.0,59.5,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,all,all,64.5,63.5,65.0,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,all,all,65.4,64.5,66.0,text,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,all,all,62.8,60.0,65.0,text,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,all,blood,29.0,27.0,31.5,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,all,blood,14.0,11.0,18.0,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,all,blood,51.0,49.0,53.5,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,all,blood,50.5,47.5,53.5,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,all,blood,53.0,51.0,55.5,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,all,blood,55.5,52.5,58.5,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,all,blood,55.5,46.0,64.5,bar_estimate,66,圖 3-2-1(A)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,co,all,23.0,22.0,24.0,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,co,all,16.5,15.0,18.5,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,co,all,56.5,55.5,57.5,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,co,all,52.5,51.5,54.0,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,co,all,55.5,54.5,56.0,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,co,all,56.0,55.0,57.5,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,co,all,62.0,59.0,65.0,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Tigecycline,ho,all,35.5,34.5,36.5,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Minocycline,ho,all,22.5,21.0,24.5,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Gentamicin,ho,all,68.0,67.0,69.0,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Amikacin,ho,all,64.5,63.5,65.5,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Imipenem,ho,all,71.5,70.5,72.0,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Meropenem,ho,all,72.5,71.5,73.5,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Acinetobacter baumannii-calcoaceticus complex,Doripenem,ho,all,66.0,61.5,70.0,bar_estimate,66,圖 3-2-1(B)
+2022,2022,Escherichia coli,Co-trimoxazole,all,all,42.5,42.5,42.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ciprofloxacin,all,all,41.6,41.5,42.0,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Levofloxacin,all,all,42.7,42.5,43.0,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ceftriaxone,all,all,28.0,28.0,28.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Cefotaxime,all,all,29.5,29.0,29.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ceftazidime,all,all,21.5,21.0,21.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Cefepime,all,all,16.5,16.0,16.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Imipenem,all,all,2.5,2.5,2.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Meropenem,all,all,3.2,3.0,3.5,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ertapenem,all,all,2.5,2.5,2.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Doripenem,all,all,1.7,1.5,2.5,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ampicillin,all,all,72.5,72.0,73.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Co-trimoxazole,all,blood,45.0,44.0,45.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ciprofloxacin,all,blood,38.5,37.5,39.0,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Levofloxacin,all,blood,39.7,39.0,40.0,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ceftriaxone,all,blood,30.5,30.0,31.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Cefotaxime,all,blood,31.0,30.5,32.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ceftazidime,all,blood,23.0,22.5,23.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Cefepime,all,blood,16.5,16.0,17.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Imipenem,all,blood,2.0,2.0,2.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Meropenem,all,blood,3.5,3.0,4.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ertapenem,all,blood,2.5,2.0,3.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Doripenem,all,blood,1.0,1.0,1.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ampicillin,all,blood,72.0,71.0,72.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Co-trimoxazole,all,urine,40.5,40.5,41.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ciprofloxacin,all,urine,41.6,41.5,41.6,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Levofloxacin,all,urine,42.6,42.0,42.6,text,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ceftriaxone,all,urine,26.0,26.0,26.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Cefotaxime,all,urine,27.5,27.5,27.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ceftazidime,all,urine,19.5,19.5,19.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Cefepime,all,urine,16.0,15.5,16.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Imipenem,all,urine,1.5,1.5,2.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Meropenem,all,urine,2.5,2.5,2.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ertapenem,all,urine,1.5,1.5,2.0,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Doripenem,all,urine,1.5,1.0,1.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Ampicillin,all,urine,71.5,71.5,71.5,bar_estimate,67,圖 3-2-2(A)
+2022,2022,Escherichia coli,Co-trimoxazole,co,all,41.0,41.0,41.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ciprofloxacin,co,all,40.0,40.0,40.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Levofloxacin,co,all,41.5,41.0,41.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ceftriaxone,co,all,25.5,25.5,26.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Cefotaxime,co,all,27.0,26.5,27.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ceftazidime,co,all,19.5,19.0,19.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Cefepime,co,all,14.5,14.0,15.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Imipenem,co,all,1.5,1.5,2.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Meropenem,co,all,2.5,2.5,3.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ertapenem,co,all,1.5,1.5,2.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Doripenem,co,all,1.5,1.0,1.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ampicillin,co,all,71.5,71.0,72.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Co-trimoxazole,ho,all,55.0,54.0,55.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ciprofloxacin,ho,all,55.5,54.5,56.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Levofloxacin,ho,all,56.0,55.0,56.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ceftriaxone,ho,all,53.0,52.0,54.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Cefotaxime,ho,all,54.5,53.0,55.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ceftazidime,ho,all,42.5,41.5,43.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Cefepime,ho,all,32.5,31.5,33.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Imipenem,ho,all,6.0,5.5,6.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Meropenem,ho,all,7.0,6.5,8.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ertapenem,ho,all,6.5,6.0,6.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Doripenem,ho,all,8.0,5.5,11.0,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Escherichia coli,Ampicillin,ho,all,86.0,85.0,86.5,bar_estimate,68,圖 3-2-2(B)
+2022,2022,Klebsiella pneumoniae,Co-trimoxazole,all,all,36.5,36.5,37.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ciprofloxacin,all,all,35.5,35.0,36.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Levofloxacin,all,all,35.5,35.0,36.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ceftriaxone,all,all,29.5,29.0,30.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Cefotaxime,all,all,35.0,34.5,35.5,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ceftazidime,all,all,34.0,34.0,34.5,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Cefepime,all,all,22.5,22.5,23.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Imipenem,all,all,13.0,12.5,13.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Meropenem,all,all,12.6,12.5,13.0,text,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ertapenem,all,all,13.0,13.0,13.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Doripenem,all,all,17.6,16.5,19.0,text,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Co-trimoxazole,all,blood,31.3,30.0,32.5,text,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ciprofloxacin,all,blood,32.5,31.5,33.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Levofloxacin,all,blood,31.0,30.0,32.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ceftriaxone,all,blood,26.5,25.5,28.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Cefotaxime,all,blood,30.5,29.5,32.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ceftazidime,all,blood,28.4,27.5,29.5,text,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Cefepime,all,blood,19.0,18.5,20.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Imipenem,all,blood,12.5,12.0,13.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Meropenem,all,blood,13.0,12.0,14.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ertapenem,all,blood,13.5,13.0,14.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Doripenem,all,blood,12.0,10.0,15.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Co-trimoxazole,all,urine,42.3,42.0,43.0,text,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ciprofloxacin,all,urine,40.0,39.5,40.5,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Levofloxacin,all,urine,40.0,39.5,40.5,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ceftriaxone,all,urine,32.0,31.5,32.5,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Cefotaxime,all,urine,39.5,38.5,40.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ceftazidime,all,urine,39.0,38.5,39.5,text,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Cefepime,all,urine,25.5,25.0,26.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Imipenem,all,urine,15.0,14.5,15.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Meropenem,all,urine,14.5,13.5,15.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Ertapenem,all,urine,14.5,14.0,15.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Doripenem,all,urine,18.0,15.5,20.0,bar_estimate,69,圖 3-2-3(A)
+2022,2022,Klebsiella pneumoniae,Co-trimoxazole,co,all,32.5,32.5,33.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ciprofloxacin,co,all,30.5,30.0,30.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Levofloxacin,co,all,30.0,29.5,30.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ceftriaxone,co,all,23.0,22.5,23.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Cefotaxime,co,all,29.0,28.5,30.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ceftazidime,co,all,28.0,27.5,28.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Cefepime,co,all,17.0,17.0,17.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Imipenem,co,all,9.0,9.0,9.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Meropenem,co,all,8.5,8.0,9.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ertapenem,co,all,9.0,8.5,9.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Doripenem,co,all,15.0,13.5,16.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Co-trimoxazole,ho,all,49.5,48.5,50.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ciprofloxacin,ho,all,51.5,51.0,52.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Levofloxacin,ho,all,53.0,52.5,54.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ceftriaxone,ho,all,48.5,47.5,49.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Cefotaxime,ho,all,54.5,53.0,55.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ceftazidime,ho,all,52.0,51.5,53.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Cefepime,ho,all,38.0,37.5,39.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Imipenem,ho,all,24.0,23.0,24.5,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Meropenem,ho,all,25.0,24.0,26.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Ertapenem,ho,all,25.0,24.5,26.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Klebsiella pneumoniae,Doripenem,ho,all,35.5,32.0,39.0,bar_estimate,70,圖 3-2-3(B)
+2022,2022,Pseudomonas aeruginosa,Amikacin,all,all,3.0,3.0,3.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Gentamicin,all,all,11.5,11.0,11.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Imipenem,all,all,12.5,12.0,12.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Meropenem,all,all,12.6,12.5,13.0,text,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Doripenem,all,all,8.1,7.5,8.5,text,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Ceftazidime,all,all,11.5,11.0,11.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Cefepime,all,all,11.5,11.0,11.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,all,all,18.6,18.5,19.0,text,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Levofloxacin,all,all,24.8,24.5,25.0,text,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,all,all,15.0,14.5,15.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Amikacin,all,blood,3.0,2.5,3.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Gentamicin,all,blood,8.0,7.0,8.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Imipenem,all,blood,13.0,11.5,14.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Meropenem,all,blood,15.0,13.0,16.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Doripenem,all,blood,10.5,7.5,14.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Ceftazidime,all,blood,12.0,11.0,13.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Cefepime,all,blood,11.0,10.0,12.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,all,blood,15.5,14.0,16.5,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Levofloxacin,all,blood,21.5,20.0,23.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,all,blood,15.0,13.5,16.0,bar_estimate,71,圖 3-2-4(A)
+2022,2022,Pseudomonas aeruginosa,Amikacin,co,all,3.0,3.0,3.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Gentamicin,co,all,11.5,11.5,12.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Imipenem,co,all,10.0,10.0,10.5,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Meropenem,co,all,9.5,9.0,10.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Doripenem,co,all,7.5,6.5,8.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Ceftazidime,co,all,9.0,8.5,9.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Cefepime,co,all,9.5,9.0,9.5,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,co,all,18.5,18.0,19.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Levofloxacin,co,all,24.0,23.5,24.5,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,co,all,12.0,11.5,12.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Amikacin,ho,all,3.5,3.0,3.5,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Gentamicin,ho,all,11.5,11.0,12.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Imipenem,ho,all,17.5,17.0,18.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Meropenem,ho,all,19.0,18.0,20.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Doripenem,ho,all,11.0,10.0,12.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Ceftazidime,ho,all,17.5,17.0,18.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Cefepime,ho,all,17.0,16.5,17.5,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Ciprofloxacin,ho,all,20.0,19.0,20.5,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Levofloxacin,ho,all,28.0,27.0,28.5,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Pseudomonas aeruginosa,Piperacillin/Tazobactam,ho,all,21.5,20.5,22.0,bar_estimate,71,圖 3-2-4(B)
+2022,2022,Enterococcus faecalis,Gentamicin-High,all,all,41.0,40.5,41.5,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Vancomycin,all,all,1.0,0.5,1.0,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Daptomycin,all,all,25.6,25.0,26.5,text,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Linezolid,all,all,10.0,9.5,10.0,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Ampicillin,all,all,1.0,1.0,1.0,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Tigecycline,all,all,0.5,0.5,0.5,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Gentamicin-High,all,blood,41.5,39.0,43.5,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Vancomycin,all,blood,1.5,1.5,2.5,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Daptomycin,all,blood,31.0,29.0,33.5,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Linezolid,all,blood,10.5,9.5,12.0,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Ampicillin,all,blood,2.5,2.0,3.5,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Tigecycline,all,blood,0.5,0.5,1.0,bar_estimate,72,圖 3-2-5(A)
+2022,2022,Enterococcus faecalis,Gentamicin-High,co,all,41.0,40.5,41.5,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Vancomycin,co,all,0.5,0.5,0.5,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Daptomycin,co,all,23.5,23.0,24.5,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Linezolid,co,all,9.5,9.5,10.5,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Ampicillin,co,all,0.5,0.5,1.0,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Tigecycline,co,all,0.5,,,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Gentamicin-High,ho,all,41.0,39.5,42.0,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Vancomycin,ho,all,1.5,1.0,1.5,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Daptomycin,ho,all,32.0,30.0,33.5,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Linezolid,ho,all,9.5,8.5,10.0,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Ampicillin,ho,all,1.5,1.5,2.0,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecalis,Tigecycline,ho,all,0.5,0.5,0.5,bar_estimate,72,圖 3-2-5(B)
+2022,2022,Enterococcus faecium,Gentamicin-High,all,all,35.0,34.5,36.0,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Vancomycin,all,all,56.0,55.0,56.5,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Daptomycin,all,all,3.0,2.5,3.5,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Linezolid,all,all,2.0,2.0,2.5,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Ampicillin,all,all,92.0,91.5,92.0,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Tigecycline,all,all,1.0,1.0,1.5,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Gentamicin-High,all,blood,36.0,34.0,38.0,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Vancomycin,all,blood,57.0,55.0,59.0,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Daptomycin,all,blood,2.5,1.5,4.0,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Linezolid,all,blood,3.0,2.5,3.5,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Ampicillin,all,blood,89.5,88.0,91.0,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Tigecycline,all,blood,2.0,1.0,3.0,bar_estimate,73,圖 3-2-6(A)
+2022,2022,Enterococcus faecium,Gentamicin-High,co,all,34.5,33.5,36.0,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Vancomycin,co,all,50.5,49.5,51.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Daptomycin,co,all,3.0,2.0,4.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Linezolid,co,all,2.0,1.5,2.0,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Ampicillin,co,all,86.5,86.0,87.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Tigecycline,co,all,0.5,0.5,1.0,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Gentamicin-High,ho,all,35.5,35.0,36.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Vancomycin,ho,all,59.5,59.0,60.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Daptomycin,ho,all,2.5,2.0,3.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Linezolid,ho,all,2.0,1.5,2.0,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Ampicillin,ho,all,95.5,94.5,95.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Enterococcus faecium,Tigecycline,ho,all,1.0,1.0,1.5,bar_estimate,73,圖 3-2-6(B)
+2022,2022,Staphylococcus aureus,Cefoxitin,all,all,46.0,45.0,47.5,bar_estimate,74,圖 3-2-7(A)
+2022,2022,Staphylococcus aureus,Oxacillin,all,all,43.9,43.5,44.0,text,74,圖 3-2-7(A)
+2022,2022,Staphylococcus aureus,Cefoxitin,all,blood,52.0,48.0,55.5,bar_estimate,74,圖 3-2-7(A)
+2022,2022,Staphylococcus aureus,Oxacillin,all,blood,44.0,43.0,45.0,bar_estimate,74,圖 3-2-7(A)
+2022,2022,Staphylococcus aureus,Cefoxitin,co,all,43.0,41.0,44.5,bar_estimate,74,圖 3-2-7(B)
+2022,2022,Staphylococcus aureus,Oxacillin,co,all,42.0,41.5,42.0,bar_estimate,74,圖 3-2-7(B)
+2022,2022,Staphylococcus aureus,Cefoxitin,ho,all,58.5,55.5,62.0,bar_estimate,74,圖 3-2-7(B)
+2022,2022,Staphylococcus aureus,Oxacillin,ho,all,54.5,53.5,55.5,bar_estimate,74,圖 3-2-7(B)
+2022,2022,Neisseria gonorrhoeae,Cefixime,all,all,2.5,0.5,13.0,bar_estimate,75,圖 3-2-8(A)
+2022,2022,Neisseria gonorrhoeae,Ceftriaxone,all,all,0.5,0.5,1.0,bar_estimate,75,圖 3-2-8(A)
+2022,2022,Neisseria gonorrhoeae,Ciprofloxacin,all,all,97.6,96.5,98.0,text,75,圖 3-2-8(A)
+2022,2022,Neisseria gonorrhoeae,Ceftriaxone,all,pus,1.0,0.5,3.5,bar_estimate,75,圖 3-2-8(A)
+2022,2022,Neisseria gonorrhoeae,Ciprofloxacin,all,pus,97.5,94.0,99.0,bar_estimate,75,圖 3-2-8(A)
+2022,2022,Neisseria gonorrhoeae,Cefixime,co,all,2.5,0.5,12.5,bar_estimate,75,圖 3-2-8(B)
+2022,2022,Neisseria gonorrhoeae,Ceftriaxone,co,all,0.5,0.5,1.0,bar_estimate,75,圖 3-2-8(B)
+2022,2022,Neisseria gonorrhoeae,Ciprofloxacin,co,all,97.5,96.5,98.5,bar_estimate,75,圖 3-2-8(B)
+2022,2022,Streptococcus pneumoniae,Oxacillin,all,all,86.0,72.5,93.5,bar_estimate,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Penicillin G,all,all,31.5,26.5,37.0,text,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Co-trimoxazole,all,all,43.5,41.0,46.0,bar_estimate,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Ceftriaxone,all,all,17.8,15.5,20.0,text,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Cefotaxime,all,all,31.3,28.5,34.0,text,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Penicillin G,all,blood,58.3,42.0,73.0,text,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Co-trimoxazole,all,blood,51.5,43.0,59.5,bar_estimate,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Ceftriaxone,all,blood,15.5,10.0,23.5,bar_estimate,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Cefotaxime,all,blood,28.5,21.0,37.0,bar_estimate,76,圖 3-2-9(A)
+2022,2022,Streptococcus pneumoniae,Oxacillin,co,all,84.5,69.5,92.5,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Penicillin G,co,all,30.0,25.0,35.5,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Co-trimoxazole,co,all,42.5,40.0,44.5,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Ceftriaxone,co,all,17.5,15.0,20.0,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Cefotaxime,co,all,32.0,29.5,34.5,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Penicillin G,ho,all,43.0,28.0,59.0,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Co-trimoxazole,ho,all,55.0,47.5,62.5,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Ceftriaxone,ho,all,21.5,14.5,30.5,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Streptococcus pneumoniae,Cefotaxime,ho,all,26.5,19.0,35.0,bar_estimate,76,圖 3-2-9(B)
+2022,2022,Shigella spp.,Ciprofloxacin,all,all,47.8,39.5,56.0,text,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Levofloxacin,all,all,58.5,32.0,80.5,bar_estimate,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Ceftriaxone,all,all,11.5,7.0,18.5,bar_estimate,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Cefotaxime,all,all,11.0,4.5,25.0,bar_estimate,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Ceftazidime,all,all,6.9,2.0,22.0,text,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Ciprofloxacin,all,stool,88.3,77.5,94.0,text,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Ceftriaxone,all,stool,14.5,6.0,29.5,bar_estimate,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Cefotaxime,all,stool,9.0,3.0,23.0,bar_estimate,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Ceftazidime,all,stool,4.0,0.5,19.5,bar_estimate,77,圖 3-2-10(A)
+2022,2022,Shigella spp.,Ciprofloxacin,co,all,47.5,39.0,56.0,bar_estimate,77,圖 3-2-10(B)
+2022,2022,Shigella spp.,Ceftriaxone,co,all,10.5,6.0,17.5,bar_estimate,77,圖 3-2-10(B)
+2022,2022,Shigella spp.,Cefotaxime,co,all,11.0,4.5,24.5,bar_estimate,77,圖 3-2-10(B)
+2022,2022,Shigella spp.,Ceftazidime,co,all,7.0,2.0,22.5,bar_estimate,77,圖 3-2-10(B)
+2022,2022,Salmonella spp.,Ciprofloxacin,all,all,24.0,23.0,25.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Levofloxacin,all,all,18.0,16.5,20.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ceftriaxone,all,all,7.6,7.0,8.5,text,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Cefotaxime,all,all,13.5,12.5,15.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ceftazidime,all,all,13.0,12.0,14.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Imipenem,all,all,1.0,1.0,1.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Meropenem,all,all,2.5,1.5,4.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ertapenem,all,all,1.0,0.5,1.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ciprofloxacin,all,blood,19.5,17.0,21.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Levofloxacin,all,blood,9.5,7.0,13.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ceftriaxone,all,blood,5.5,4.0,7.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Cefotaxime,all,blood,9.5,7.5,12.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ceftazidime,all,blood,5.5,4.0,7.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Imipenem,all,blood,1.5,0.5,2.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Meropenem,all,blood,2.5,1.0,6.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ertapenem,all,blood,0.5,0.5,1.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ciprofloxacin,all,stool,27.0,25.5,28.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Levofloxacin,all,stool,20.5,18.5,22.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ceftriaxone,all,stool,9.0,8.0,10.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Cefotaxime,all,stool,15.0,13.5,16.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ceftazidime,all,stool,16.0,14.5,18.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Imipenem,all,stool,1.5,0.5,1.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Meropenem,all,stool,4.0,2.5,6.5,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ertapenem,all,stool,1.0,0.5,1.0,bar_estimate,78,圖 3-2-11(A)
+2022,2022,Salmonella spp.,Ciprofloxacin,co,all,25.0,24.0,26.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Levofloxacin,co,all,19.5,17.5,21.0,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Ceftriaxone,co,all,7.5,7.0,8.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Cefotaxime,co,all,14.0,12.5,15.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Ceftazidime,co,all,13.5,12.0,15.0,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Imipenem,co,all,1.0,1.0,1.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Meropenem,co,all,3.0,2.0,5.0,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Ertapenem,co,all,0.5,0.5,1.0,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Ciprofloxacin,ho,all,43.0,38.0,47.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Levofloxacin,ho,all,37.0,27.0,47.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Ceftriaxone,ho,all,24.0,19.0,29.0,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Cefotaxime,ho,all,37.0,30.0,43.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Ceftazidime,ho,all,31.0,25.0,37.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Imipenem,ho,all,3.0,1.0,7.5,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Meropenem,ho,all,11.0,4.0,27.0,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Salmonella spp.,Ertapenem,ho,all,3.0,1.5,7.0,bar_estimate,79,圖 3-2-11(B)
+2022,2022,Haemophilus influenzae,Ceftriaxone,all,all,3.2,2.0,5.0,text,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Cefotaxime,all,all,4.0,2.5,5.5,bar_estimate,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,all,all,73.0,70.0,76.0,text,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Ampicillin,all,all,59.2,56.0,62.0,text,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Ciprofloxacin,all,all,59.5,55.0,64.0,bar_estimate,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Levofloxacin,all,all,65.0,61.0,69.0,bar_estimate,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Ceftriaxone,all,blood,4.5,0.5,22.0,bar_estimate,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Cefotaxime,all,blood,10.5,3.5,27.5,bar_estimate,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,all,blood,79.5,63.0,89.5,bar_estimate,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Ampicillin,all,blood,76.0,62.0,86.0,bar_estimate,80,圖 3-2-12(A)
+2022,2022,Haemophilus influenzae,Ceftriaxone,co,all,2.5,1.5,4.5,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Cefotaxime,co,all,3.0,2.0,5.0,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,co,all,71.0,67.5,74.0,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Ampicillin,co,all,55.0,51.5,58.5,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Ciprofloxacin,co,all,59.0,53.5,64.0,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Levofloxacin,co,all,64.0,59.5,68.5,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Ceftriaxone,ho,all,4.5,2.5,10.5,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Cefotaxime,ho,all,5.5,3.5,10.0,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Trimethoprim/Sulfamethoxazole,ho,all,78.5,73.0,83.5,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Ampicillin,ho,all,69.5,64.5,75.0,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Ciprofloxacin,ho,all,60.5,50.5,70.5,bar_estimate,80,圖 3-2-12(B)
+2022,2022,Haemophilus influenzae,Levofloxacin,ho,all,67.0,59.0,74.5,bar_estimate,80,圖 3-2-12(B)
