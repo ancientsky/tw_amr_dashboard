@@ -209,7 +209,7 @@
     },
     "kpiStrip": {
       "title": "Key resistance indicators",
-      "subtitle": "ICU, {year} · change vs previous year"
+      "subtitle": "{ward}, {year} · change vs previous year"
     }
   },
   "embed": {

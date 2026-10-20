@@ -1,0 +1,10 @@
+dataset,file,records,provisional,yearMin,yearMax
+resistance,data/resistance.json,5703,false,2018,2024
+isolates,data/isolates.json,1254,false,2017,2024
+antibiotic_use,data/antibiotic_use.json,736,true,2017,2024
+hai,data/hai.json,2080,true,2017,2024
+hai_pathogens,data/hai_pathogens.json,960,true,2017,2024
+glass,data/glass.json,402,true,2021,2023
+links,data/links.json,60,false,,
+glossary,data/glossary.json,70,false,,
+kb,data/kb.json,138,false,,

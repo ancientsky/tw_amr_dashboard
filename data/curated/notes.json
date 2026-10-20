@@ -1,0 +1,33 @@
+{
+  "_comment": "Localized envelope notes. Placeholders in {braces} are filled by scripts/build_data.py.",
+  "resistance": {
+    "zh-TW": "資料來源：衛生福利部疾病管制署《臺灣抗生素抗藥性監視年報》2022、2023、2024 年版（THAS 抗生素抗藥性管理通報模組），涵蓋資料年 {years}。數值由 PDF 轉錄：敏感性圖譜（表格，精確）{table} 筆；報告內文明列 {text} 筆；由圖表判讀（約 ±1–2 個百分點）{chart} 筆。敏感性圖譜之抗藥性百分比 = 100 − 敏感百分比（即不敏感比率，含中間型）。同一數據點出現於多個年版時，採用最新年版，其次採用較精確者。有 phenotype 欄位者為「肆、多重抗藥菌」趨勢指標。",
+    "en": "Source: Taiwan CDC, Antimicrobial Resistance Surveillance Annual Report, Taiwan — 2022, 2023 and 2024 editions (THAS AR module), data years {years}. Values were transcribed from the PDFs: {table} antibiogram table values (exact), {text} values stated in the report text, and {chart} values read from charts (≈ ±1–2 points). For antibiogram rows, resistant_pct = 100 − %susceptible (i.e. non-susceptible, including intermediate). Where a data point appears in several editions, the newest edition wins, then the more precise value. Rows with a `phenotype` are the section-4 MDRO trend indicators.",
+    "ja": "出典：台湾CDC『台湾抗菌薬耐性監視年報』2022・2023・2024年版（THAS 薬剤耐性モジュール）、データ年 {years}。PDFから転記：アンチバイオグラム表の数値（正確）{table}件、本文記載の数値 {text}件、グラフからの読み取り（約±1〜2ポイント）{chart}件。アンチバイオグラム由来の耐性率 = 100 − 感性率（中間を含む非感性率）。同じデータ点が複数の版にある場合は最新版を優先し、次に精度の高い値を採用。phenotype 付きの行は第4章「多剤耐性菌」の推移指標です。"
+  },
+  "isolates": {
+    "zh-TW": "資料來源：《臺灣抗生素抗藥性監視年報》2022–2024 年版「貳、臨床分離菌株數監測」表 2-x（由 PDF 文字層直接解析，精確）及「肆」各多重抗藥菌菌株數圖。涵蓋資料年 {years}。各年版之歷史年度菌株數可能因通報醫院變動而有修正，同一數據點採用最新年版。",
+    "en": "Source: Antimicrobial Resistance Surveillance Annual Report, Taiwan 2022–2024 editions — section 2 isolate-count tables (表 2-x; parsed from the PDF text layer, exact) and the section-4 MDRO isolate-count charts. Data years {years}. Historical counts are revised between editions as the set of reporting hospitals changes; the newest edition is used for each data point.",
+    "ja": "出典：『台湾抗菌薬耐性監視年報』2022〜2024年版 第2章 分離株数表（表2-x、PDFテキスト層から解析・正確）および第4章 多剤耐性菌分離株数グラフ。データ年 {years}。報告病院の変動により過去年の株数は版ごとに改訂されることがあり、各データ点には最新版を採用しています。"
+  },
+  "provisional": {
+    "zh-TW": "暫定估計：本資料集之原始年報（{report}）尚未提供，數值為依臺灣疾管署已發表趨勢建立之模型估計，並非官方數據。請將年報 PDF 放入 raw/ 以更新。",
+    "en": "Provisional estimates: the source report ({report}) has not been supplied. Figures are model estimates shaped on published Taiwan CDC trends and are NOT official data. Add the report PDF to raw/ to replace them.",
+    "ja": "暫定推計：本データセットの元となる年報（{report}）は未提供です。数値は台湾CDCの公表傾向に基づくモデル推計であり、公式データではありません。年報PDFを raw/ に追加すると置き換えられます。"
+  },
+  "glass": {
+    "zh-TW": "國際比較：各國數值為依 WHO GLASS 2022 報告／GLASS 儀表板及各國監測系統（EARS-Net、JANIS、Kor-GLASS、CARSS、AURA 等）整理之近似值（血液檢體、約 2021–2022 年），屬暫定整理，請以原始來源為準。臺灣（TWN）列由本站之臺灣抗藥性資料自動計算（優先使用血液檢體、全國、CO+HO），推導方式見 meta.comparability。臺灣非 WHO 會員，未參與 GLASS；各國之檢驗標準（CLSI／EUCAST）、去重複規則與採檢策略不同，比較時請審慎解讀。",
+    "en": "International comparison: country values are approximate figures curated from the WHO GLASS 2022 report / GLASS dashboard and national systems (EARS-Net, JANIS, Kor-GLASS, CARSS, AURA, …) for bloodstream isolates (~2021–2022); they are provisional — consult the original sources. Taiwan (TWN) rows are computed automatically from this site's Taiwan resistance data (blood, national, CO+HO preferred); see meta.comparability for the derivation. Taiwan is not a WHO Member State and does not report to GLASS; breakpoints (CLSI vs EUCAST), de-duplication and sampling differ between systems, so interpret comparisons with caution.",
+    "ja": "国際比較：各国の値は WHO GLASS 2022 報告書／GLASSダッシュボードおよび各国サーベイランス（EARS-Net、JANIS、Kor-GLASS、CARSS、AURA 等）から整理した血液由来株の近似値（2021〜2022年頃）で、暫定的なものです。原典をご確認ください。台湾（TWN）の行は本サイトの台湾耐性データから自動算出しています（血液・全国・CO+HO を優先）。算出方法は meta.comparability を参照。台湾はWHO非加盟でGLASSに参加していません。判定基準（CLSI/EUCAST）、重複除去、検体採取方針が異なるため、比較は慎重に解釈してください。"
+  },
+  "meta": {
+    "zh-TW": "抗藥性與菌株數資料取自使用者提供之三份臺灣疾管署抗藥性年報（非暫定）；抗生素使用量、醫療照護相關感染及國際比較資料為暫定估計。",
+    "en": "Resistance and isolate data come from the three Taiwan CDC AMR annual reports supplied by the user (not provisional); antibiotic use, healthcare-associated infection and international comparison data are provisional estimates.",
+    "ja": "耐性・分離株数データはユーザー提供の台湾CDC薬剤耐性年報3冊に基づきます（暫定ではありません）。抗菌薬使用量、医療関連感染、国際比較データは暫定推計です。"
+  },
+  "content": {
+    "zh-TW": "內容資料（連結、名詞解釋、問答知識庫）尚未提供。",
+    "en": "Content dataset not supplied yet.",
+    "ja": "コンテンツデータはまだ提供されていません。"
+  }
+}

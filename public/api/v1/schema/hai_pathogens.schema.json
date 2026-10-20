@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/hai_pathogens.schema.json",
+  "title": "HAI pathogen ranking (provisional)",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "hai_pathogens"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "year",
+              "level",
+              "site",
+              "rank",
+              "pathogen",
+              "pct"
+            ],
+            "properties": {
+              "year": {
+                "type": "integer",
+                "minimum": 2000,
+                "maximum": 2100
+              },
+              "level": {
+                "enum": [
+                  "all",
+                  "medical_center",
+                  "regional",
+                  "district"
+                ]
+              },
+              "site": {
+                "enum": [
+                  "all",
+                  "bsi",
+                  "uti",
+                  "pneu"
+                ]
+              },
+              "rank": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50
+              },
+              "pathogen": {
+                "type": "string",
+                "pattern": "^[A-Z0-9][A-Za-z0-9_-]*$"
+              },
+              "pct": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,590 @@
+{
+  "dataset": "hai",
+  "version": "1.0.0-provisional",
+  "generatedAt": "2026-10-20T06:42:41Z",
+  "provisional": true,
+  "sources": [
+    {
+      "id": "tw-amr-watch-model",
+      "title": {
+        "zh-TW": "TW-AMR Watch 暫定估計模型（非官方數據）",
+        "en": "TW-AMR Watch provisional estimates (not official data)",
+        "ja": "TW-AMR Watch 暫定推計モデル（公式データではありません）"
+      },
+      "publisher": "TW-AMR Watch",
+      "year": 2026,
+      "kind": "curated"
+    },
+    {
+      "id": "tw-cdc-hai-ref",
+      "title": {
+        "zh-TW": "醫療照護相關感染監視年報（TNIS；尚未提供，僅作為暫定估計之參考架構）",
+        "en": "Healthcare-associated Infection Surveillance Annual Report (TNIS; not yet supplied; reference framework for the provisional estimates only)",
+        "ja": "医療関連感染監視年報（TNIS・未提供・暫定推計の参照枠組みとしてのみ使用）"
+      },
+      "publisher": "衛生福利部疾病管制署 Taiwan CDC",
+      "year": 2025,
+      "url": "https://www.cdc.gov.tw/Category/MPage/4G8HuDdUN1k4xaBJhbPzKQ",
+      "kind": "annual-report"
+    }
+  ],
+  "notes": {
+    "zh-TW": "暫定估計：本資料集之原始年報（醫療照護相關感染監視年報 (TNIS)）尚未提供，數值為依臺灣疾管署已發表趨勢建立之模型估計，並非官方數據。請將年報 PDF 放入 raw/ 以更新。",
+    "en": "Provisional estimates: the source report (醫療照護相關感染監視年報 (TNIS)) has not been supplied. Figures are model estimates shaped on published Taiwan CDC trends and are NOT official data. Add the report PDF to raw/ to replace them.",
+    "ja": "暫定推計：本データセットの元となる年報（醫療照護相關感染監視年報 (TNIS)）は未提供です。数値は台湾CDCの公表傾向に基づくモデル推計であり、公式データではありません。年報PDFを raw/ に追加すると置き換えられます。"
+  },
+  "slice": {
+    "by": "year",
+    "value": 2020,
+    "of": "hai"
+  },
+  "dims": {
+    "levels": [
+      {
+        "code": "all",
+        "name": {
+          "zh-TW": "全國（全部層級）",
+          "en": "National (all levels)",
+          "ja": "全国（全病院）"
+        },
+        "order": 0
+      },
+      {
+        "code": "medical_center",
+        "name": {
+          "zh-TW": "醫學中心",
+          "en": "Medical centres",
+          "ja": "医学センター"
+        },
+        "order": 1
+      },
+      {
+        "code": "regional",
+        "name": {
+          "zh-TW": "區域醫院",
+          "en": "Regional hospitals",
+          "ja": "地域病院"
+        },
+        "order": 2
+      },
+      {
+        "code": "district",
+        "name": {
+          "zh-TW": "地區醫院",
+          "en": "District hospitals",
+          "ja": "地区病院"
+        },
+        "order": 3
+      }
+    ],
+    "icuTypes": [
+      {
+        "code": "all",
+        "name": {
+          "zh-TW": "全部加護病房",
+          "en": "All ICUs",
+          "ja": "全ICU"
+        },
+        "order": 0
+      },
+      {
+        "code": "medical",
+        "name": {
+          "zh-TW": "內科加護病房",
+          "en": "Medical ICU",
+          "ja": "内科系ICU"
+        },
+        "order": 1
+      },
+      {
+        "code": "surgical",
+        "name": {
+          "zh-TW": "外科加護病房",
+          "en": "Surgical ICU",
+          "ja": "外科系ICU"
+        },
+        "order": 2
+      },
+      {
+        "code": "mixed",
+        "name": {
+          "zh-TW": "內外科混合加護病房",
+          "en": "Mixed medical–surgical ICU",
+          "ja": "内科・外科混合ICU"
+        },
+        "order": 3
+      },
+      {
+        "code": "cardiac",
+        "name": {
+          "zh-TW": "心臟加護病房",
+          "en": "Cardiac ICU",
+          "ja": "心臓ICU（CCU）"
+        },
+        "order": 4
+      },
+      {
+        "code": "neuro",
+        "name": {
+          "zh-TW": "神經加護病房",
+          "en": "Neuro ICU",
+          "ja": "神経ICU"
+        },
+        "order": 5
+      },
+      {
+        "code": "pediatric",
+        "name": {
+          "zh-TW": "兒科加護病房",
+          "en": "Paediatric ICU",
+          "ja": "小児ICU"
+        },
+        "order": 6
+      },
+      {
+        "code": "neonatal",
+        "name": {
+          "zh-TW": "新生兒加護病房",
+          "en": "Neonatal ICU",
+          "ja": "新生児ICU（NICU）"
+        },
+        "order": 7
+      },
+      {
+        "code": "burn",
+        "name": {
+          "zh-TW": "燒燙傷加護病房",
+          "en": "Burn ICU",
+          "ja": "熱傷ICU"
+        },
+        "order": 8
+      }
+    ],
+    "metrics": [
+      {
+        "code": "hai_density",
+        "name": {
+          "zh-TW": "醫療照護相關感染密度",
+          "en": "HAI density",
+          "ja": "医療関連感染密度"
+        },
+        "group": "density",
+        "order": 1,
+        "meta": {
+          "unit": "per_1000_patient_days"
+        }
+      },
+      {
+        "code": "bsi_density",
+        "name": {
+          "zh-TW": "血流感染密度",
+          "en": "Bloodstream infection density",
+          "ja": "血流感染密度"
+        },
+        "group": "density",
+        "order": 2,
+        "meta": {
+          "unit": "per_1000_patient_days"
+        }
+      },
+      {
+        "code": "uti_density",
+        "name": {
+          "zh-TW": "泌尿道感染密度",
+          "en": "Urinary tract infection density",
+          "ja": "尿路感染密度"
+        },
+        "group": "density",
+        "order": 3,
+        "meta": {
+          "unit": "per_1000_patient_days"
+        }
+      },
+      {
+        "code": "pneu_density",
+        "name": {
+          "zh-TW": "肺炎密度",
+          "en": "Pneumonia density",
+          "ja": "肺炎密度"
+        },
+        "group": "density",
+        "order": 4,
+        "meta": {
+          "unit": "per_1000_patient_days"
+        }
+      },
+      {
+        "code": "clabsi",
+        "name": {
+          "zh-TW": "中心導管相關血流感染（CLABSI）",
+          "en": "CLABSI",
+          "ja": "中心ライン関連血流感染（CLABSI）"
+        },
+        "group": "device",
+        "order": 5,
+        "meta": {
+          "unit": "per_1000_device_days",
+          "device": "central_line_util"
+        }
+      },
+      {
+        "code": "cauti",
+        "name": {
+          "zh-TW": "導尿管相關泌尿道感染（CAUTI）",
+          "en": "CAUTI",
+          "ja": "カテーテル関連尿路感染（CAUTI）"
+        },
+        "group": "device",
+        "order": 6,
+        "meta": {
+          "unit": "per_1000_device_days",
+          "device": "urinary_cath_util"
+        }
+      },
+      {
+        "code": "vap",
+        "name": {
+          "zh-TW": "呼吸器相關肺炎（VAP）",
+          "en": "VAP",
+          "ja": "人工呼吸器関連肺炎（VAP）"
+        },
+        "group": "device",
+        "order": 7,
+        "meta": {
+          "unit": "per_1000_device_days",
+          "device": "ventilator_util"
+        }
+      },
+      {
+        "code": "central_line_util",
+        "name": {
+          "zh-TW": "中心導管使用率",
+          "en": "Central-line utilisation ratio",
+          "ja": "中心ライン使用比"
+        },
+        "group": "utilization",
+        "order": 8,
+        "meta": {
+          "unit": "ratio"
+        }
+      },
+      {
+        "code": "urinary_cath_util",
+        "name": {
+          "zh-TW": "導尿管使用率",
+          "en": "Urinary-catheter utilisation ratio",
+          "ja": "尿道カテーテル使用比"
+        },
+        "group": "utilization",
+        "order": 9,
+        "meta": {
+          "unit": "ratio"
+        }
+      },
+      {
+        "code": "ventilator_util",
+        "name": {
+          "zh-TW": "呼吸器使用率",
+          "en": "Ventilator utilisation ratio",
+          "ja": "人工呼吸器使用比"
+        },
+        "group": "utilization",
+        "order": 10,
+        "meta": {
+          "unit": "ratio"
+        }
+      }
+    ],
+    "units": [
+      {
+        "code": "per_1000_patient_days",
+        "name": {
+          "zh-TW": "每千住院人日",
+          "en": "per 1,000 patient-days",
+          "ja": "1,000患者日あたり"
+        },
+        "order": 1
+      },
+      {
+        "code": "per_1000_device_days",
+        "name": {
+          "zh-TW": "每千裝置使用人日",
+          "en": "per 1,000 device-days",
+          "ja": "1,000デバイス日あたり"
+        },
+        "order": 2
+      },
+      {
+        "code": "ratio",
+        "name": {
+          "zh-TW": "比率（裝置日／住院人日）",
+          "en": "ratio (device-days / patient-days)",
+          "ja": "比（デバイス日／患者日）"
+        },
+        "order": 3
+      }
+    ]
+  },
+  "records": [
+    {"year":2020,"level":"all","icu_type":"all","metric":"hai_density","value":5.37,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"bsi_density","value":2.45,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"uti_density","value":1.64,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"pneu_density","value":0.81,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"clabsi","value":3.77,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"cauti","value":2.82,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"vap","value":1.29,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"central_line_util","value":0.547,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"urinary_cath_util","value":0.536,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"all","metric":"ventilator_util","value":0.421,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"hai_density","value":6.15,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"bsi_density","value":2.83,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"uti_density","value":1.95,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"pneu_density","value":0.91,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"clabsi","value":4.28,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"cauti","value":3.09,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"vap","value":1.3,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"central_line_util","value":0.571,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"urinary_cath_util","value":0.59,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"medical","metric":"ventilator_util","value":0.487,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"hai_density","value":5.56,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"bsi_density","value":2.34,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"uti_density","value":1.86,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"pneu_density","value":0.89,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"clabsi","value":3.19,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"cauti","value":2.75,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"vap","value":1.44,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"central_line_util","value":0.614,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"urinary_cath_util","value":0.629,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"surgical","metric":"ventilator_util","value":0.429,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"hai_density","value":4.87,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"bsi_density","value":2.11,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"uti_density","value":1.55,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"pneu_density","value":0.75,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"clabsi","value":3.5,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"cauti","value":2.72,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"vap","value":1.19,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"central_line_util","value":0.492,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"urinary_cath_util","value":0.522,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"mixed","metric":"ventilator_util","value":0.4,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"hai_density","value":4.61,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"bsi_density","value":2.11,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"uti_density","value":1.36,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"pneu_density","value":0.67,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"clabsi","value":2.49,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"cauti","value":1.94,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"vap","value":1.05,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"central_line_util","value":0.695,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"urinary_cath_util","value":0.636,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"cardiac","metric":"ventilator_util","value":0.381,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"hai_density","value":5.67,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"bsi_density","value":1.92,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"uti_density","value":2.25,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"pneu_density","value":1.04,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"clabsi","value":3.15,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"cauti","value":3.72,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"vap","value":1.73,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"central_line_util","value":0.487,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"urinary_cath_util","value":0.571,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"neuro","metric":"ventilator_util","value":0.44,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"hai_density","value":3.84,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"bsi_density","value":2.34,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"uti_density","value":0.41,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"pneu_density","value":0.63,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"clabsi","value":4.63,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"cauti","value":1.54,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"vap","value":0.95,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"central_line_util","value":0.422,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"urinary_cath_util","value":0.18,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"pediatric","metric":"ventilator_util","value":0.374,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"hai_density","value":3.44,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"bsi_density","value":2.36,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"uti_density","value":0.14,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"pneu_density","value":0.47,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"clabsi","value":6.95,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"cauti","value":0.62,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"vap","value":0.83,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"central_line_util","value":0.285,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"urinary_cath_util","value":0.027,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"neonatal","metric":"ventilator_util","value":0.236,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"hai_density","value":11.27,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"bsi_density","value":6.52,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"uti_density","value":3.13,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"pneu_density","value":1.15,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"clabsi","value":9.01,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"cauti","value":4.81,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"vap","value":2.57,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"central_line_util","value":0.681,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"urinary_cath_util","value":0.624,"unit":"ratio"},
+    {"year":2020,"level":"all","icu_type":"burn","metric":"ventilator_util","value":0.342,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"hai_density","value":6.06,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"bsi_density","value":2.84,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"uti_density","value":1.84,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"pneu_density","value":0.91,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"clabsi","value":4.23,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"cauti","value":3.04,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"vap","value":1.46,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"central_line_util","value":0.58,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"urinary_cath_util","value":0.563,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"all","metric":"ventilator_util","value":0.436,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"hai_density","value":6.98,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"bsi_density","value":3.31,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"uti_density","value":2.16,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"pneu_density","value":1.04,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"clabsi","value":4.87,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"cauti","value":3.23,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"vap","value":1.49,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"central_line_util","value":0.602,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"urinary_cath_util","value":0.63,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"medical","metric":"ventilator_util","value":0.512,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"hai_density","value":6.06,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"bsi_density","value":2.58,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"uti_density","value":2.05,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"pneu_density","value":0.96,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"clabsi","value":3.43,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"cauti","value":2.92,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"vap","value":1.54,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"central_line_util","value":0.641,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"urinary_cath_util","value":0.658,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"surgical","metric":"ventilator_util","value":0.449,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"hai_density","value":6.06,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"bsi_density","value":2.69,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"uti_density","value":2.01,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"pneu_density","value":0.88,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"clabsi","value":4.33,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"cauti","value":3.33,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"vap","value":1.43,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"central_line_util","value":0.534,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"urinary_cath_util","value":0.566,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"mixed","metric":"ventilator_util","value":0.426,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"hai_density","value":4.98,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"bsi_density","value":2.31,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"uti_density","value":1.49,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"pneu_density","value":0.71,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"clabsi","value":2.7,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"cauti","value":2.07,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"vap","value":1.1,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"central_line_util","value":0.715,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"urinary_cath_util","value":0.656,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"cardiac","metric":"ventilator_util","value":0.393,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"hai_density","value":5.67,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"bsi_density","value":1.92,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"uti_density","value":2.25,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"pneu_density","value":1.04,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"clabsi","value":3.15,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"cauti","value":3.72,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"vap","value":1.73,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"central_line_util","value":0.487,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"urinary_cath_util","value":0.571,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"neuro","metric":"ventilator_util","value":0.44,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"hai_density","value":4.14,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"bsi_density","value":2.55,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"uti_density","value":0.45,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"pneu_density","value":0.67,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"clabsi","value":4.98,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"cauti","value":1.68,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"vap","value":1.03,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"central_line_util","value":0.435,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"urinary_cath_util","value":0.189,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"pediatric","metric":"ventilator_util","value":0.389,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"hai_density","value":3.79,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"bsi_density","value":2.68,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"uti_density","value":0.15,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"pneu_density","value":0.5,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"clabsi","value":7.77,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"cauti","value":0.69,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"vap","value":0.93,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"central_line_util","value":0.295,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"urinary_cath_util","value":0.028,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"neonatal","metric":"ventilator_util","value":0.243,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"hai_density","value":11.27,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"bsi_density","value":6.52,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"uti_density","value":3.13,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"pneu_density","value":1.15,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"clabsi","value":9.01,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"cauti","value":4.81,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"vap","value":2.57,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"central_line_util","value":0.681,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"urinary_cath_util","value":0.624,"unit":"ratio"},
+    {"year":2020,"level":"medical_center","icu_type":"burn","metric":"ventilator_util","value":0.342,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"hai_density","value":4.92,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"bsi_density","value":2.2,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"uti_density","value":1.5,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"pneu_density","value":0.75,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"clabsi","value":3.43,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"cauti","value":2.65,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"vap","value":1.16,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"central_line_util","value":0.529,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"urinary_cath_util","value":0.519,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"all","metric":"ventilator_util","value":0.414,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"hai_density","value":5.61,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"bsi_density","value":2.5,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"uti_density","value":1.82,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"pneu_density","value":0.82,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"clabsi","value":3.84,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"cauti","value":3.0,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"vap","value":1.15,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"central_line_util","value":0.553,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"urinary_cath_util","value":0.564,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"medical","metric":"ventilator_util","value":0.475,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"hai_density","value":5.06,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"bsi_density","value":2.1,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"uti_density","value":1.67,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"pneu_density","value":0.81,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"clabsi","value":2.93,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"cauti","value":2.58,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"vap","value":1.32,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"central_line_util","value":0.587,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"urinary_cath_util","value":0.599,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"surgical","metric":"ventilator_util","value":0.409,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"hai_density","value":4.84,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"bsi_density","value":2.1,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"uti_density","value":1.52,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"pneu_density","value":0.75,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"clabsi","value":3.53,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"cauti","value":2.62,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"vap","value":1.17,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"central_line_util","value":0.486,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"urinary_cath_util","value":0.532,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"mixed","metric":"ventilator_util","value":0.407,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"hai_density","value":3.99,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"bsi_density","value":1.77,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"uti_density","value":1.14,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"pneu_density","value":0.61,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"clabsi","value":2.09,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"cauti","value":1.68,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"vap","value":0.94,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"central_line_util","value":0.661,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"urinary_cath_util","value":0.601,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"cardiac","metric":"ventilator_util","value":0.359,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"hai_density","value":3.46,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"bsi_density","value":2.07,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"uti_density","value":0.36,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"pneu_density","value":0.57,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"clabsi","value":4.15,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"cauti","value":1.34,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"vap","value":0.85,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"central_line_util","value":0.406,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"urinary_cath_util","value":0.17,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"pediatric","metric":"ventilator_util","value":0.356,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"hai_density","value":3.03,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"bsi_density","value":1.99,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"uti_density","value":0.14,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"pneu_density","value":0.43,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"clabsi","value":5.91,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"cauti","value":0.53,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"vap","value":0.71,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"central_line_util","value":0.272,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"urinary_cath_util","value":0.025,"unit":"ratio"},
+    {"year":2020,"level":"regional","icu_type":"neonatal","metric":"ventilator_util","value":0.226,"unit":"ratio"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"hai_density","value":4.38,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"bsi_density","value":1.86,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"uti_density","value":1.37,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"pneu_density","value":0.69,"unit":"per_1000_patient_days"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"clabsi","value":3.06,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"cauti","value":2.5,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"vap","value":1.07,"unit":"per_1000_device_days"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"central_line_util","value":0.483,"unit":"ratio"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"urinary_cath_util","value":0.494,"unit":"ratio"},
+    {"year":2020,"level":"district","icu_type":"all","metric":"ventilator_util","value":0.387,"unit":"ratio"}
+  ]
+}

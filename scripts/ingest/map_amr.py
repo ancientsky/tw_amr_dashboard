@@ -131,7 +131,7 @@ class Mapper:
                 n_before = (len(self.res), len(self.iso))
                 getattr(self, "read_" + fname.replace(".csv", ""))(ry, rows, f"{ry}/{fname}")
                 added = (len(self.res) - n_before[0]) + (len(self.iso) - n_before[1])
-                self.files_used.append({"file": str(path.relative_to(ROOT)), "rows": len(rows), "mapped": added,
+                self.files_used.append({"file": str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else str(path), "rows": len(rows), "mapped": added,
                                         "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
         self.apply_overrides()
 
@@ -234,7 +234,7 @@ class Mapper:
                 continue
             self.iso.append({"year": year, "organism": org, "scope": scope, "level": "all", "rank": to_int(r.get("rank")),
                              "isolates": n, "precision": "table", "reportYear": ry,
-                             "source_ref": self._ref(ry, r, "table")})
+                             "source_ref": self._ref(ry, r, "table"), "_table": True})
 
     def apply_overrides(self):
         path = CURATED / "resistance_overrides.csv"
@@ -278,8 +278,32 @@ class Mapper:
                         "dropped_precision": lose["precision"], "dropped_ref": lose["source_ref"], "delta": fmt(dv)})
         return list(best.values())
 
+    def whole_tables(self, log):
+        """Isolate-count tables (表 2-x) are ranked top-N lists: mixing rows from different editions would leak
+        organisms ranked only in an older edition (and double count them inside 'Other'). So for every
+        (year, scope, level) take the complete table from the newest edition that has it."""
+        newest = {}
+        for r in self.iso:
+            if r.get("_table"):
+                k = (r["year"], r["scope"], r["level"])
+                newest[k] = max(newest.get(k, 0), r["reportYear"])
+        keep = []
+        for r in self.iso:
+            if r.get("_table") and r["reportYear"] != newest[(r["year"], r["scope"], r["level"])]:
+                log.append({"dataset": "isolates", "key": "|".join(fmt(x) for x in (r["year"], r["organism"], r["scope"], r["level"])),
+                            "kept_value": "", "kept_reportYear": newest[(r["year"], r["scope"], r["level"])], "kept_precision": "table",
+                            "kept_ref": "whole table from newer edition", "dropped_value": fmt(r["isolates"]),
+                            "dropped_reportYear": r["reportYear"], "dropped_precision": r["precision"], "dropped_ref": r["source_ref"],
+                            "delta": ""})
+                continue
+            keep.append(r)
+        for r in keep:
+            r.pop("_table", None)
+        self.iso = keep
+
     def finalize(self):
         log: list[dict] = []
+        self.whole_tables(log)
         res = self.dedup(self.res, lambda r: (r["year"], r["pathogen"], r["antibiotic"], r["phenotype"] or "", r["level"],
                                               r["ward"], r["setting"], r["specimen"]),
                          lambda r: r["resistant_pct"], "resistance", log)

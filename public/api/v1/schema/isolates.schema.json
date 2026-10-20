@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/isolates.schema.json",
+  "title": "Isolate counts (THAS AR annual reports)",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "isolates"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "year",
+              "organism",
+              "scope",
+              "isolates"
+            ],
+            "properties": {
+              "year": {
+                "type": "integer",
+                "minimum": 2000,
+                "maximum": 2100
+              },
+              "organism": {
+                "type": "string",
+                "pattern": "^[A-Z0-9][A-Za-z0-9_-]*$"
+              },
+              "scope": {
+                "enum": [
+                  "all",
+                  "blood",
+                  "urine",
+                  "sputum",
+                  "pus",
+                  "stool",
+                  "co",
+                  "ho"
+                ]
+              },
+              "level": {
+                "enum": [
+                  "all",
+                  "medical_center",
+                  "regional",
+                  "district"
+                ]
+              },
+              "rank": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "isolates": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "precision": {
+                "enum": [
+                  "table",
+                  "text",
+                  "chart_estimate"
+                ]
+              },
+              "reportYear": {
+                "type": "integer",
+                "minimum": 2000,
+                "maximum": 2100
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

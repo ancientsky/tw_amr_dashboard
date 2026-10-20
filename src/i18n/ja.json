@@ -209,7 +209,7 @@
     },
     "kpiStrip": {
       "title": "主要な薬剤耐性指標",
-      "subtitle": "ICU、{year}年・前年比"
+      "subtitle": "{ward}、{year}年・前年比"
     }
   },
   "embed": {

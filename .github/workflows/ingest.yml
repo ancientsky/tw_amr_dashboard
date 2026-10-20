@@ -1,0 +1,60 @@
+name: Ingest data (PDFs / transcriptions -> public/data + public/api)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "raw/*.pdf"
+      - "data/source/transcribed/**"
+      - "data/curated/**"
+      - "data/schema/**"
+      - "scripts/build_data.py"
+      - "scripts/ingest/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: ingest-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install poppler (pdftotext) and Python deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          pip install -r scripts/requirements.txt
+
+      - name: Parse text-layer tables + map + build
+        run: bash scripts/ingest/run_all.sh
+
+      - name: Verify build is reproducible
+        run: python3 scripts/build_data.py --no-map --check
+
+      - name: Commit regenerated data
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "data: regenerate public/data and public/api from raw/ + transcriptions"
+          file_pattern: "public/data/** public/api/** data/curated/*.csv data/curated/_provenance.json data/source/transcribed/*/isolate_counts.csv"
+
+      # Commits pushed with GITHUB_TOKEN do not trigger other workflows, but workflow_dispatch does.
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changes_detected == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref "${{ github.ref_name }}"

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-TW" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>TW-AMR Watch — 臺灣抗藥性監測儀表板</title>
+    <meta
+      name="description"
+      content="TW-AMR Watch：臺灣抗生素抗藥性、抗生素使用量與醫療照護相關感染監測互動儀表板（繁中／English／日本語）。Interactive dashboard of Taiwan antimicrobial-resistance surveillance."
+    />
+    <meta name="theme-color" content="#f7f8f7" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="/tw_amr_dashboard/favicon.svg" />
+    <link rel="manifest" href="/tw_amr_dashboard/manifest.webmanifest" />
+    <link rel="canonical" href="https://ancientsky.github.io/tw_amr_dashboard/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TW-AMR Watch" />
+    <meta property="og:title" content="TW-AMR Watch — 臺灣抗藥性監測儀表板" />
+    <meta property="og:description" content="Taiwan antimicrobial resistance, antibiotic use and HAI surveillance — interactive, multilingual, open data." />
+    <meta property="og:url" content="https://ancientsky.github.io/tw_amr_dashboard/" />
+    <meta property="og:image" content="https://ancientsky.github.io/tw_amr_dashboard/og/twamr-og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://ancientsky.github.io/tw_amr_dashboard/og/twamr-og.png" />
+    <script>
+      (function () {
+        try {
+          var h = location.hash, i = h.indexOf("?"), q = new URLSearchParams(i >= 0 ? h.slice(i + 1) : "");
+          var t = q.get("theme");
+          if (t !== "light" && t !== "dark") t = true ? localStorage.getItem("twamr.theme") : null;
+          if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", t);
+          document.documentElement.style.colorScheme = t;
+          var l = q.get("lang") || (true ? localStorage.getItem("twamr.lang") : null);
+          if (l === "en" || l === "ja" || l === "zh-TW") document.documentElement.lang = l;
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>TW-AMR Watch requires JavaScript. 本網站需要啟用 JavaScript。</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

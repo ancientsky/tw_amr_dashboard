@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-TW" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TW-AMR Watch · Embed</title>
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="/tw_amr_dashboard/favicon.svg" />
+    <script>
+      (function () {
+        try {
+          var h = location.hash, i = h.indexOf("?"), q = new URLSearchParams(i >= 0 ? h.slice(i + 1) : "");
+          var t = q.get("theme");
+          if (t !== "light" && t !== "dark") t = false ? localStorage.getItem("twamr.theme") : null;
+          if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", t);
+          document.documentElement.style.colorScheme = t;
+          var l = q.get("lang") || (false ? localStorage.getItem("twamr.lang") : null);
+          if (l === "en" || l === "ja" || l === "zh-TW") document.documentElement.lang = l;
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/embed/main.tsx"></script>
+  </body>
+</html>

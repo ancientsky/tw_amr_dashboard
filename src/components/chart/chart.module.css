@@ -1,0 +1,217 @@
+.echart {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ---------- ChartCard ---------- */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
+  transition:
+    box-shadow var(--dur-slow) var(--ease-out),
+    border-color var(--dur-slow) var(--ease-out);
+}
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+:root[data-theme='dark'] .card:hover {
+  border-color: rgb(0 227 140 / 0.2);
+}
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-5) var(--space-2);
+}
+.titles {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.titleRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.title {
+  font-size: var(--fs-md);
+  font-weight: 650;
+  letter-spacing: -0.012em;
+  line-height: var(--lh-snug);
+  color: var(--ink);
+}
+.subtitle {
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+  line-height: var(--lh-snug);
+}
+.headRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: none;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  padding: 0 var(--space-5) var(--space-2);
+}
+.body {
+  position: relative;
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  min-height: var(--body-min-h, 0);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chartLayer {
+  flex: 1;
+  min-width: 0;
+}
+.chartHidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+.tableLayer {
+  position: absolute;
+  inset: var(--space-2) var(--space-4) var(--space-3);
+  overflow: auto;
+  --table-max-h: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tableLayer > * {
+  flex: 1;
+  min-height: 0;
+}
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5) var(--space-4);
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.source {
+  min-width: 0;
+  line-height: 1.45;
+}
+.source strong {
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.compact .head {
+  padding: var(--space-4) var(--space-4) var(--space-1);
+}
+.compact .body {
+  padding: var(--space-1) var(--space-3) var(--space-2);
+}
+.compact .foot {
+  padding: var(--space-2) var(--space-4) var(--space-3);
+}
+
+/* fullscreen (native) */
+.card:fullscreen {
+  border-radius: 0;
+  padding: var(--space-4);
+  background: var(--paper);
+  overflow: auto;
+}
+.card:fullscreen .body {
+  flex: 1;
+}
+.card:fullscreen [data-chart-root] {
+  height: 100% !important;
+  min-height: 60vh;
+}
+/* fullscreen fallback (pseudo-modal) */
+.pseudoFull {
+  position: fixed;
+  inset: 12px;
+  z-index: var(--z-modal);
+  overflow: auto;
+  background: var(--surface);
+  box-shadow: 0 30px 80px -20px rgb(0 0 0 / 0.5);
+}
+:root[data-theme='dark'] .pseudoFull {
+  background: linear-gradient(180deg, #132019, #0e1512);
+}
+.pseudoFull [data-chart-root] {
+  height: calc(100dvh - 220px) !important;
+}
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-modal) - 1);
+  background: var(--overlay);
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- Toolbar ---------- */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border-radius: var(--radius-sm);
+  opacity: 0.86;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+.card:hover .toolbar,
+.toolbar:focus-within {
+  opacity: 1;
+}
+.toolbarSep {
+  width: 1px;
+  height: 18px;
+  margin: 0 4px;
+  background: var(--line-strong);
+}
+@media (max-width: 560px) {
+  .head {
+    flex-direction: column;
+  }
+  .headRight {
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+  .hideNarrow {
+    display: none;
+  }
+}
+
+/* ---------- states ---------- */
+.state {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+.skeletonChart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 4px;
+  width: 100%;
+}
+.skeletonBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100%;
+  padding: 8px 8px 0;
+}

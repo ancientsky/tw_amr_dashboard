@@ -1,0 +1,44 @@
+{
+  "classes": [
+    {"code": "PEN", "name": {"zh-TW": "青黴素類（窄效／廣效）", "en": "Penicillins (narrow/extended-spectrum)", "ja": "ペニシリン系（狭域・広域）"}, "group": "Access", "order": 1, "meta": {"atc": "J01CA/J01CE/J01CF", "aware": "Access"}},
+    {"code": "AMC_SAM", "name": {"zh-TW": "胺基青黴素＋β-內醯胺酶抑制劑", "en": "Aminopenicillin + β-lactamase inhibitor", "ja": "アミノペニシリン＋β-ラクタマーゼ阻害薬"}, "group": "Access", "order": 2, "meta": {"atc": "J01CR01/J01CR02", "aware": "Access"}},
+    {"code": "PIP_TAZ", "name": {"zh-TW": "哌拉西林／他唑巴坦", "en": "Piperacillin-tazobactam", "ja": "ピペラシリン・タゾバクタム"}, "group": "Watch", "order": 3, "meta": {"atc": "J01CR05", "aware": "Watch"}},
+    {"code": "CEPH1", "name": {"zh-TW": "第一代頭孢菌素", "en": "1st-gen cephalosporins", "ja": "第1世代セファロスポリン"}, "group": "Access", "order": 4, "meta": {"atc": "J01DB", "aware": "Access"}},
+    {"code": "CEPH2", "name": {"zh-TW": "第二代頭孢菌素", "en": "2nd-gen cephalosporins", "ja": "第2世代セファロスポリン"}, "group": "Watch", "order": 5, "meta": {"atc": "J01DC", "aware": "Watch"}},
+    {"code": "CEPH3", "name": {"zh-TW": "第三代頭孢菌素", "en": "3rd-gen cephalosporins", "ja": "第3世代セファロスポリン"}, "group": "Watch", "order": 6, "meta": {"atc": "J01DD", "aware": "Watch"}},
+    {"code": "CEPH4", "name": {"zh-TW": "第四代頭孢菌素", "en": "4th-gen cephalosporins", "ja": "第4世代セファロスポリン"}, "group": "Watch", "order": 7, "meta": {"atc": "J01DE", "aware": "Watch"}},
+    {"code": "BL_NOVEL", "name": {"zh-TW": "新型 β-內醯胺複方（ceftazidime-avibactam 等）", "en": "Novel β-lactam combinations (ceftazidime-avibactam etc.)", "ja": "新規β-ラクタム配合剤（セフタジジム・アビバクタム等）"}, "group": "Reserve", "order": 8, "meta": {"atc": "J01DD52/J01DI54/J01DI02", "aware": "Reserve"}},
+    {"code": "CARB", "name": {"zh-TW": "碳青黴烯類", "en": "Carbapenems", "ja": "カルバペネム系"}, "group": "Watch", "order": 9, "meta": {"atc": "J01DH", "aware": "Watch"}},
+    {"code": "FQ", "name": {"zh-TW": "氟喹諾酮類", "en": "Fluoroquinolones", "ja": "フルオロキノロン系"}, "group": "Watch", "order": 10, "meta": {"atc": "J01MA", "aware": "Watch"}},
+    {"code": "GLYCO", "name": {"zh-TW": "醣肽類（萬古黴素、泰考拉寧）", "en": "Glycopeptides (vancomycin, teicoplanin)", "ja": "グリコペプチド系（バンコマイシン、テイコプラニン）"}, "group": "Watch", "order": 11, "meta": {"atc": "J01XA", "aware": "Watch"}},
+    {"code": "AMINOG", "name": {"zh-TW": "胺基醣苷類", "en": "Aminoglycosides", "ja": "アミノグリコシド系"}, "group": "Access", "order": 12, "meta": {"atc": "J01GB", "aware": "Access"}},
+    {"code": "MACRO", "name": {"zh-TW": "巨環類", "en": "Macrolides", "ja": "マクロライド系"}, "group": "Watch", "order": 13, "meta": {"atc": "J01FA", "aware": "Watch"}},
+    {"code": "LINCO", "name": {"zh-TW": "林可醯胺類（克林黴素）", "en": "Lincosamides (clindamycin)", "ja": "リンコサミド系（クリンダマイシン）"}, "group": "Access", "order": 14, "meta": {"atc": "J01FF", "aware": "Access"}},
+    {"code": "TETRA", "name": {"zh-TW": "四環黴素類", "en": "Tetracyclines", "ja": "テトラサイクリン系"}, "group": "Access", "order": 15, "meta": {"atc": "J01AA (excl. J01AA12)", "aware": "Access", "note": "doxycycline Access; minocycline Watch"}},
+    {"code": "GLYCYL", "name": {"zh-TW": "甘胺醯環素類（老虎黴素）", "en": "Glycylcyclines (tigecycline)", "ja": "グリシルサイクリン系（チゲサイクリン）"}, "group": "Reserve", "order": 16, "meta": {"atc": "J01AA12", "aware": "Reserve"}},
+    {"code": "POLY", "name": {"zh-TW": "多黏菌素類", "en": "Polymyxins", "ja": "ポリミキシン系"}, "group": "Reserve", "order": 17, "meta": {"atc": "J01XB", "aware": "Reserve"}},
+    {"code": "OXAZ", "name": {"zh-TW": "噁唑烷酮類", "en": "Oxazolidinones", "ja": "オキサゾリジノン系"}, "group": "Reserve", "order": 18, "meta": {"atc": "J01XX08/J01XX11", "aware": "Reserve"}},
+    {"code": "LIPO", "name": {"zh-TW": "脂肽類（達托黴素）", "en": "Lipopeptides (daptomycin)", "ja": "リポペプチド系（ダプトマイシン）"}, "group": "Reserve", "order": 19, "meta": {"atc": "J01XX09", "aware": "Reserve"}},
+    {"code": "SXT", "name": {"zh-TW": "磺胺類／甲氧苄啶", "en": "Sulfonamides/trimethoprim", "ja": "スルホンアミド・トリメトプリム"}, "group": "Access", "order": 20, "meta": {"atc": "J01EE", "aware": "Access"}},
+    {"code": "NITRO", "name": {"zh-TW": "硝基咪唑類（注射用 metronidazole）", "en": "Nitroimidazoles (IV metronidazole)", "ja": "ニトロイミダゾール系（注射用メトロニダゾール）"}, "group": "Access", "order": 21, "meta": {"atc": "J01XD", "aware": "Access"}},
+    {"code": "OTHER", "name": {"zh-TW": "其他抗菌劑", "en": "Other antibacterials", "ja": "その他の抗菌薬"}, "group": "Unclassified", "order": 22, "meta": {"atc": "J01 (other)", "aware": "Unclassified"}},
+    {"code": "TOTAL", "name": {"zh-TW": "全身性抗菌劑總計（J01）", "en": "Total systemic antibacterials (J01)", "ja": "全身用抗菌薬合計（J01）"}, "group": "Total", "order": 23, "meta": {"atc": "J01", "aware": "Unclassified", "isTotal": true}}
+  ],
+  "aware": [
+    {"code": "Access", "name": {"zh-TW": "可用類（Access）", "en": "Access", "ja": "Access（アクセス）"}, "order": 1, "meta": {"color": "#1a9c6b"}},
+    {"code": "Watch", "name": {"zh-TW": "管制類（Watch）", "en": "Watch", "ja": "Watch（ウォッチ）"}, "order": 2, "meta": {"color": "#f2a93b"}},
+    {"code": "Reserve", "name": {"zh-TW": "保留類（Reserve）", "en": "Reserve", "ja": "Reserve（リザーブ）"}, "order": 3, "meta": {"color": "#d43d51"}},
+    {"code": "Not recommended", "name": {"zh-TW": "不建議使用", "en": "Not recommended", "ja": "非推奨"}, "order": 4, "meta": {"color": "#8b6cf6"}},
+    {"code": "Unclassified", "name": {"zh-TW": "未分類", "en": "Unclassified", "ja": "未分類"}, "order": 5, "meta": {"color": "#8a958f"}}
+  ],
+  "settings": [
+    {"code": "inpatient", "name": {"zh-TW": "住院", "en": "Inpatient", "ja": "入院"}, "order": 1},
+    {"code": "outpatient", "name": {"zh-TW": "門診", "en": "Outpatient", "ja": "外来"}, "order": 2},
+    {"code": "all", "name": {"zh-TW": "全部", "en": "All", "ja": "全体"}, "order": 3}
+  ],
+  "metrics": [
+    {"code": "DID", "name": {"zh-TW": "每千住院人日之 DDD 數", "en": "DDD per 1,000 patient-days", "ja": "1,000患者日あたりDDD"}, "order": 1, "meta": {"unit": "DDD/1000 patient-days"}},
+    {"code": "DDD_per_1000_inhabitants_day", "name": {"zh-TW": "每千人每日 DDD 數", "en": "DDD per 1,000 inhabitants per day", "ja": "1,000人・日あたりDDD"}, "order": 2},
+    {"code": "DOT", "name": {"zh-TW": "治療日數（DOT）", "en": "Days of therapy (DOT)", "ja": "治療日数（DOT）"}, "order": 3}
+  ]
+}

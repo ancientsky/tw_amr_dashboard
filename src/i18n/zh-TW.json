@@ -209,7 +209,7 @@
     },
     "kpiStrip": {
       "title": "重點抗藥性指標",
-      "subtitle": "加護病房，{year} 年・與前一年比較"
+      "subtitle": "{ward}，{year} 年・與前一年比較"
     }
   },
   "embed": {

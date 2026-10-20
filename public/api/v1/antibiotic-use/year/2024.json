@@ -1,0 +1,624 @@
+{
+  "dataset": "antibiotic_use",
+  "version": "1.0.0-provisional",
+  "generatedAt": "2026-10-20T06:42:41Z",
+  "provisional": true,
+  "sources": [
+    {
+      "id": "tw-amr-watch-model",
+      "title": {
+        "zh-TW": "TW-AMR Watch 暫定估計模型（非官方數據）",
+        "en": "TW-AMR Watch provisional estimates (not official data)",
+        "ja": "TW-AMR Watch 暫定推計モデル（公式データではありません）"
+      },
+      "publisher": "TW-AMR Watch",
+      "year": 2026,
+      "kind": "curated"
+    },
+    {
+      "id": "tw-cdc-amu-ref",
+      "title": {
+        "zh-TW": "臺灣抗生素使用量監視年報（尚未提供，僅作為暫定估計之參考架構）",
+        "en": "Taiwan Antimicrobial Use Surveillance Annual Report (not yet supplied; reference framework for the provisional estimates only)",
+        "ja": "台湾抗菌薬使用量監視年報（未提供・暫定推計の参照枠組みとしてのみ使用）"
+      },
+      "publisher": "衛生福利部疾病管制署 Taiwan CDC",
+      "year": 2025,
+      "url": "https://www.cdc.gov.tw/Category/MPage/4G8HuDdUN1k4xaBJhbPzKQ",
+      "kind": "annual-report"
+    }
+  ],
+  "notes": {
+    "zh-TW": "暫定估計：本資料集之原始年報（Taiwan Antimicrobial Use Surveillance Annual Report）尚未提供，數值為依臺灣疾管署已發表趨勢建立之模型估計，並非官方數據。請將年報 PDF 放入 raw/ 以更新。",
+    "en": "Provisional estimates: the source report (Taiwan Antimicrobial Use Surveillance Annual Report) has not been supplied. Figures are model estimates shaped on published Taiwan CDC trends and are NOT official data. Add the report PDF to raw/ to replace them.",
+    "ja": "暫定推計：本データセットの元となる年報（Taiwan Antimicrobial Use Surveillance Annual Report）は未提供です。数値は台湾CDCの公表傾向に基づくモデル推計であり、公式データではありません。年報PDFを raw/ に追加すると置き換えられます。"
+  },
+  "slice": {
+    "by": "year",
+    "value": 2024,
+    "of": "antibiotic_use"
+  },
+  "dims": {
+    "classes": [
+      {
+        "code": "PEN",
+        "name": {
+          "zh-TW": "青黴素類（窄效／廣效）",
+          "en": "Penicillins (narrow/extended-spectrum)",
+          "ja": "ペニシリン系（狭域・広域）"
+        },
+        "group": "Access",
+        "order": 1,
+        "meta": {
+          "atc": "J01CA/J01CE/J01CF",
+          "aware": "Access"
+        }
+      },
+      {
+        "code": "AMC_SAM",
+        "name": {
+          "zh-TW": "胺基青黴素＋β-內醯胺酶抑制劑",
+          "en": "Aminopenicillin + β-lactamase inhibitor",
+          "ja": "アミノペニシリン＋β-ラクタマーゼ阻害薬"
+        },
+        "group": "Access",
+        "order": 2,
+        "meta": {
+          "atc": "J01CR01/J01CR02",
+          "aware": "Access"
+        }
+      },
+      {
+        "code": "PIP_TAZ",
+        "name": {
+          "zh-TW": "哌拉西林／他唑巴坦",
+          "en": "Piperacillin-tazobactam",
+          "ja": "ピペラシリン・タゾバクタム"
+        },
+        "group": "Watch",
+        "order": 3,
+        "meta": {
+          "atc": "J01CR05",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "CEPH1",
+        "name": {
+          "zh-TW": "第一代頭孢菌素",
+          "en": "1st-gen cephalosporins",
+          "ja": "第1世代セファロスポリン"
+        },
+        "group": "Access",
+        "order": 4,
+        "meta": {
+          "atc": "J01DB",
+          "aware": "Access"
+        }
+      },
+      {
+        "code": "CEPH2",
+        "name": {
+          "zh-TW": "第二代頭孢菌素",
+          "en": "2nd-gen cephalosporins",
+          "ja": "第2世代セファロスポリン"
+        },
+        "group": "Watch",
+        "order": 5,
+        "meta": {
+          "atc": "J01DC",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "CEPH3",
+        "name": {
+          "zh-TW": "第三代頭孢菌素",
+          "en": "3rd-gen cephalosporins",
+          "ja": "第3世代セファロスポリン"
+        },
+        "group": "Watch",
+        "order": 6,
+        "meta": {
+          "atc": "J01DD",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "CEPH4",
+        "name": {
+          "zh-TW": "第四代頭孢菌素",
+          "en": "4th-gen cephalosporins",
+          "ja": "第4世代セファロスポリン"
+        },
+        "group": "Watch",
+        "order": 7,
+        "meta": {
+          "atc": "J01DE",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "BL_NOVEL",
+        "name": {
+          "zh-TW": "新型 β-內醯胺複方（ceftazidime-avibactam 等）",
+          "en": "Novel β-lactam combinations (ceftazidime-avibactam etc.)",
+          "ja": "新規β-ラクタム配合剤（セフタジジム・アビバクタム等）"
+        },
+        "group": "Reserve",
+        "order": 8,
+        "meta": {
+          "atc": "J01DD52/J01DI54/J01DI02",
+          "aware": "Reserve"
+        }
+      },
+      {
+        "code": "CARB",
+        "name": {
+          "zh-TW": "碳青黴烯類",
+          "en": "Carbapenems",
+          "ja": "カルバペネム系"
+        },
+        "group": "Watch",
+        "order": 9,
+        "meta": {
+          "atc": "J01DH",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "FQ",
+        "name": {
+          "zh-TW": "氟喹諾酮類",
+          "en": "Fluoroquinolones",
+          "ja": "フルオロキノロン系"
+        },
+        "group": "Watch",
+        "order": 10,
+        "meta": {
+          "atc": "J01MA",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "GLYCO",
+        "name": {
+          "zh-TW": "醣肽類（萬古黴素、泰考拉寧）",
+          "en": "Glycopeptides (vancomycin, teicoplanin)",
+          "ja": "グリコペプチド系（バンコマイシン、テイコプラニン）"
+        },
+        "group": "Watch",
+        "order": 11,
+        "meta": {
+          "atc": "J01XA",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "AMINOG",
+        "name": {
+          "zh-TW": "胺基醣苷類",
+          "en": "Aminoglycosides",
+          "ja": "アミノグリコシド系"
+        },
+        "group": "Access",
+        "order": 12,
+        "meta": {
+          "atc": "J01GB",
+          "aware": "Access"
+        }
+      },
+      {
+        "code": "MACRO",
+        "name": {
+          "zh-TW": "巨環類",
+          "en": "Macrolides",
+          "ja": "マクロライド系"
+        },
+        "group": "Watch",
+        "order": 13,
+        "meta": {
+          "atc": "J01FA",
+          "aware": "Watch"
+        }
+      },
+      {
+        "code": "LINCO",
+        "name": {
+          "zh-TW": "林可醯胺類（克林黴素）",
+          "en": "Lincosamides (clindamycin)",
+          "ja": "リンコサミド系（クリンダマイシン）"
+        },
+        "group": "Access",
+        "order": 14,
+        "meta": {
+          "atc": "J01FF",
+          "aware": "Access"
+        }
+      },
+      {
+        "code": "TETRA",
+        "name": {
+          "zh-TW": "四環黴素類",
+          "en": "Tetracyclines",
+          "ja": "テトラサイクリン系"
+        },
+        "group": "Access",
+        "order": 15,
+        "meta": {
+          "atc": "J01AA (excl. J01AA12)",
+          "aware": "Access",
+          "note": "doxycycline Access; minocycline Watch"
+        }
+      },
+      {
+        "code": "GLYCYL",
+        "name": {
+          "zh-TW": "甘胺醯環素類（老虎黴素）",
+          "en": "Glycylcyclines (tigecycline)",
+          "ja": "グリシルサイクリン系（チゲサイクリン）"
+        },
+        "group": "Reserve",
+        "order": 16,
+        "meta": {
+          "atc": "J01AA12",
+          "aware": "Reserve"
+        }
+      },
+      {
+        "code": "POLY",
+        "name": {
+          "zh-TW": "多黏菌素類",
+          "en": "Polymyxins",
+          "ja": "ポリミキシン系"
+        },
+        "group": "Reserve",
+        "order": 17,
+        "meta": {
+          "atc": "J01XB",
+          "aware": "Reserve"
+        }
+      },
+      {
+        "code": "OXAZ",
+        "name": {
+          "zh-TW": "噁唑烷酮類",
+          "en": "Oxazolidinones",
+          "ja": "オキサゾリジノン系"
+        },
+        "group": "Reserve",
+        "order": 18,
+        "meta": {
+          "atc": "J01XX08/J01XX11",
+          "aware": "Reserve"
+        }
+      },
+      {
+        "code": "LIPO",
+        "name": {
+          "zh-TW": "脂肽類（達托黴素）",
+          "en": "Lipopeptides (daptomycin)",
+          "ja": "リポペプチド系（ダプトマイシン）"
+        },
+        "group": "Reserve",
+        "order": 19,
+        "meta": {
+          "atc": "J01XX09",
+          "aware": "Reserve"
+        }
+      },
+      {
+        "code": "SXT",
+        "name": {
+          "zh-TW": "磺胺類／甲氧苄啶",
+          "en": "Sulfonamides/trimethoprim",
+          "ja": "スルホンアミド・トリメトプリム"
+        },
+        "group": "Access",
+        "order": 20,
+        "meta": {
+          "atc": "J01EE",
+          "aware": "Access"
+        }
+      },
+      {
+        "code": "NITRO",
+        "name": {
+          "zh-TW": "硝基咪唑類（注射用 metronidazole）",
+          "en": "Nitroimidazoles (IV metronidazole)",
+          "ja": "ニトロイミダゾール系（注射用メトロニダゾール）"
+        },
+        "group": "Access",
+        "order": 21,
+        "meta": {
+          "atc": "J01XD",
+          "aware": "Access"
+        }
+      },
+      {
+        "code": "OTHER",
+        "name": {
+          "zh-TW": "其他抗菌劑",
+          "en": "Other antibacterials",
+          "ja": "その他の抗菌薬"
+        },
+        "group": "Unclassified",
+        "order": 22,
+        "meta": {
+          "atc": "J01 (other)",
+          "aware": "Unclassified"
+        }
+      },
+      {
+        "code": "TOTAL",
+        "name": {
+          "zh-TW": "全身性抗菌劑總計（J01）",
+          "en": "Total systemic antibacterials (J01)",
+          "ja": "全身用抗菌薬合計（J01）"
+        },
+        "group": "Total",
+        "order": 23,
+        "meta": {
+          "atc": "J01",
+          "aware": "Unclassified",
+          "isTotal": true
+        }
+      }
+    ],
+    "aware": [
+      {
+        "code": "Access",
+        "name": {
+          "zh-TW": "可用類（Access）",
+          "en": "Access",
+          "ja": "Access（アクセス）"
+        },
+        "order": 1,
+        "meta": {
+          "color": "#1a9c6b"
+        }
+      },
+      {
+        "code": "Watch",
+        "name": {
+          "zh-TW": "管制類（Watch）",
+          "en": "Watch",
+          "ja": "Watch（ウォッチ）"
+        },
+        "order": 2,
+        "meta": {
+          "color": "#f2a93b"
+        }
+      },
+      {
+        "code": "Reserve",
+        "name": {
+          "zh-TW": "保留類（Reserve）",
+          "en": "Reserve",
+          "ja": "Reserve（リザーブ）"
+        },
+        "order": 3,
+        "meta": {
+          "color": "#d43d51"
+        }
+      },
+      {
+        "code": "Not recommended",
+        "name": {
+          "zh-TW": "不建議使用",
+          "en": "Not recommended",
+          "ja": "非推奨"
+        },
+        "order": 4,
+        "meta": {
+          "color": "#8b6cf6"
+        }
+      },
+      {
+        "code": "Unclassified",
+        "name": {
+          "zh-TW": "未分類",
+          "en": "Unclassified",
+          "ja": "未分類"
+        },
+        "order": 5,
+        "meta": {
+          "color": "#8a958f"
+        }
+      }
+    ],
+    "levels": [
+      {
+        "code": "all",
+        "name": {
+          "zh-TW": "全國（全部層級）",
+          "en": "National (all levels)",
+          "ja": "全国（全病院）"
+        },
+        "order": 0
+      },
+      {
+        "code": "medical_center",
+        "name": {
+          "zh-TW": "醫學中心",
+          "en": "Medical centres",
+          "ja": "医学センター"
+        },
+        "order": 1
+      },
+      {
+        "code": "regional",
+        "name": {
+          "zh-TW": "區域醫院",
+          "en": "Regional hospitals",
+          "ja": "地域病院"
+        },
+        "order": 2
+      },
+      {
+        "code": "district",
+        "name": {
+          "zh-TW": "地區醫院",
+          "en": "District hospitals",
+          "ja": "地区病院"
+        },
+        "order": 3
+      }
+    ],
+    "settings": [
+      {
+        "code": "inpatient",
+        "name": {
+          "zh-TW": "住院",
+          "en": "Inpatient",
+          "ja": "入院"
+        },
+        "order": 1
+      },
+      {
+        "code": "outpatient",
+        "name": {
+          "zh-TW": "門診",
+          "en": "Outpatient",
+          "ja": "外来"
+        },
+        "order": 2
+      },
+      {
+        "code": "all",
+        "name": {
+          "zh-TW": "全部",
+          "en": "All",
+          "ja": "全体"
+        },
+        "order": 3
+      }
+    ],
+    "metrics": [
+      {
+        "code": "DID",
+        "name": {
+          "zh-TW": "每千住院人日之 DDD 數",
+          "en": "DDD per 1,000 patient-days",
+          "ja": "1,000患者日あたりDDD"
+        },
+        "order": 1,
+        "meta": {
+          "unit": "DDD/1000 patient-days"
+        }
+      },
+      {
+        "code": "DDD_per_1000_inhabitants_day",
+        "name": {
+          "zh-TW": "每千人每日 DDD 數",
+          "en": "DDD per 1,000 inhabitants per day",
+          "ja": "1,000人・日あたりDDD"
+        },
+        "order": 2
+      },
+      {
+        "code": "DOT",
+        "name": {
+          "zh-TW": "治療日數（DOT）",
+          "en": "Days of therapy (DOT)",
+          "ja": "治療日数（DOT）"
+        },
+        "order": 3
+      }
+    ]
+  },
+  "records": [
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01CA/J01CE/J01CF","className":"PEN","aware":"Access","metric":"DID","value":26.5},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01CR01/J01CR02","className":"AMC_SAM","aware":"Access","metric":"DID","value":104.6},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01CR05","className":"PIP_TAZ","aware":"Watch","metric":"DID","value":45.8},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01DB","className":"CEPH1","aware":"Access","metric":"DID","value":84.7},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01DC","className":"CEPH2","aware":"Watch","metric":"DID","value":42.3},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01DD","className":"CEPH3","aware":"Watch","metric":"DID","value":128.5},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01DE","className":"CEPH4","aware":"Watch","metric":"DID","value":29.9},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01DD52/J01DI54/J01DI02","className":"BL_NOVEL","aware":"Reserve","metric":"DID","value":3.6},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01DH","className":"CARB","aware":"Watch","metric":"DID","value":70.8},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01MA","className":"FQ","aware":"Watch","metric":"DID","value":83.4},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01XA","className":"GLYCO","aware":"Watch","metric":"DID","value":45.4},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01GB","className":"AMINOG","aware":"Access","metric":"DID","value":17.6},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01FA","className":"MACRO","aware":"Watch","metric":"DID","value":15.7},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01FF","className":"LINCO","aware":"Access","metric":"DID","value":17.7},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01AA (excl. J01AA12)","className":"TETRA","aware":"Access","metric":"DID","value":14.3},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01AA12","className":"GLYCYL","aware":"Reserve","metric":"DID","value":5.7},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01XB","className":"POLY","aware":"Reserve","metric":"DID","value":8.0},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01XX08/J01XX11","className":"OXAZ","aware":"Reserve","metric":"DID","value":6.3},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01XX09","className":"LIPO","aware":"Reserve","metric":"DID","value":4.3},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01EE","className":"SXT","aware":"Access","metric":"DID","value":15.7},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01XD","className":"NITRO","aware":"Access","metric":"DID","value":21.9},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01 (other)","className":"OTHER","aware":"Unclassified","metric":"DID","value":11.4},
+    {"year":2024,"level":"all","setting":"inpatient","atc":"J01","className":"TOTAL","aware":"Unclassified","metric":"DID","value":804.1},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01CA/J01CE/J01CF","className":"PEN","aware":"Access","metric":"DID","value":24.5},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01CR01/J01CR02","className":"AMC_SAM","aware":"Access","metric":"DID","value":97.3},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01CR05","className":"PIP_TAZ","aware":"Watch","metric":"DID","value":55.6},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01DB","className":"CEPH1","aware":"Access","metric":"DID","value":77.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01DC","className":"CEPH2","aware":"Watch","metric":"DID","value":39.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01DD","className":"CEPH3","aware":"Watch","metric":"DID","value":126.1},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01DE","className":"CEPH4","aware":"Watch","metric":"DID","value":36.2},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01DD52/J01DI54/J01DI02","className":"BL_NOVEL","aware":"Reserve","metric":"DID","value":6.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01DH","className":"CARB","aware":"Watch","metric":"DID","value":94.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01MA","className":"FQ","aware":"Watch","metric":"DID","value":78.9},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01XA","className":"GLYCO","aware":"Watch","metric":"DID","value":56.8},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01GB","className":"AMINOG","aware":"Access","metric":"DID","value":15.9},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01FA","className":"MACRO","aware":"Watch","metric":"DID","value":14.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01FF","className":"LINCO","aware":"Access","metric":"DID","value":15.9},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01AA (excl. J01AA12)","className":"TETRA","aware":"Access","metric":"DID","value":16.4},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01AA12","className":"GLYCYL","aware":"Reserve","metric":"DID","value":7.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01XB","className":"POLY","aware":"Reserve","metric":"DID","value":11.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01XX08/J01XX11","className":"OXAZ","aware":"Reserve","metric":"DID","value":8.9},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01XX09","className":"LIPO","aware":"Reserve","metric":"DID","value":6.0},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01EE","className":"SXT","aware":"Access","metric":"DID","value":17.5},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01XD","className":"NITRO","aware":"Access","metric":"DID","value":22.9},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01 (other)","className":"OTHER","aware":"Unclassified","metric":"DID","value":11.9},
+    {"year":2024,"level":"medical_center","setting":"inpatient","atc":"J01","className":"TOTAL","aware":"Unclassified","metric":"DID","value":838.8},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01CA/J01CE/J01CF","className":"PEN","aware":"Access","metric":"DID","value":25.9},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01CR01/J01CR02","className":"AMC_SAM","aware":"Access","metric":"DID","value":105.8},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01CR05","className":"PIP_TAZ","aware":"Watch","metric":"DID","value":45.0},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01DB","className":"CEPH1","aware":"Access","metric":"DID","value":88.2},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01DC","className":"CEPH2","aware":"Watch","metric":"DID","value":42.6},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01DD","className":"CEPH3","aware":"Watch","metric":"DID","value":131.4},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01DE","className":"CEPH4","aware":"Watch","metric":"DID","value":30.2},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01DD52/J01DI54/J01DI02","className":"BL_NOVEL","aware":"Reserve","metric":"DID","value":3.0},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01DH","className":"CARB","aware":"Watch","metric":"DID","value":68.0},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01MA","className":"FQ","aware":"Watch","metric":"DID","value":89.0},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01XA","className":"GLYCO","aware":"Watch","metric":"DID","value":44.7},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01GB","className":"AMINOG","aware":"Access","metric":"DID","value":18.2},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01FA","className":"MACRO","aware":"Watch","metric":"DID","value":16.0},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01FF","className":"LINCO","aware":"Access","metric":"DID","value":18.4},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01AA (excl. J01AA12)","className":"TETRA","aware":"Access","metric":"DID","value":14.0},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01AA12","className":"GLYCYL","aware":"Reserve","metric":"DID","value":6.0},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01XB","className":"POLY","aware":"Reserve","metric":"DID","value":7.8},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01XX08/J01XX11","className":"OXAZ","aware":"Reserve","metric":"DID","value":5.9},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01XX09","className":"LIPO","aware":"Reserve","metric":"DID","value":4.1},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01EE","className":"SXT","aware":"Access","metric":"DID","value":15.3},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01XD","className":"NITRO","aware":"Access","metric":"DID","value":22.2},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01 (other)","className":"OTHER","aware":"Unclassified","metric":"DID","value":11.4},
+    {"year":2024,"level":"regional","setting":"inpatient","atc":"J01","className":"TOTAL","aware":"Unclassified","metric":"DID","value":813.1},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01CA/J01CE/J01CF","className":"PEN","aware":"Access","metric":"DID","value":32.2},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01CR01/J01CR02","className":"AMC_SAM","aware":"Access","metric":"DID","value":116.6},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01CR05","className":"PIP_TAZ","aware":"Watch","metric":"DID","value":27.8},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01DB","className":"CEPH1","aware":"Access","metric":"DID","value":91.4},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01DC","className":"CEPH2","aware":"Watch","metric":"DID","value":48.7},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01DD","className":"CEPH3","aware":"Watch","metric":"DID","value":126.1},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01DE","className":"CEPH4","aware":"Watch","metric":"DID","value":16.1},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01DD52/J01DI54/J01DI02","className":"BL_NOVEL","aware":"Reserve","metric":"DID","value":0.5},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01DH","className":"CARB","aware":"Watch","metric":"DID","value":30.4},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01MA","className":"FQ","aware":"Watch","metric":"DID","value":78.7},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01XA","className":"GLYCO","aware":"Watch","metric":"DID","value":23.7},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01GB","className":"AMINOG","aware":"Access","metric":"DID","value":19.5},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01FA","className":"MACRO","aware":"Watch","metric":"DID","value":18.6},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01FF","className":"LINCO","aware":"Access","metric":"DID","value":20.0},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01AA (excl. J01AA12)","className":"TETRA","aware":"Access","metric":"DID","value":10.8},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01AA12","className":"GLYCYL","aware":"Reserve","metric":"DID","value":2.5},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01XB","className":"POLY","aware":"Reserve","metric":"DID","value":2.5},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01XX08/J01XX11","className":"OXAZ","aware":"Reserve","metric":"DID","value":2.0},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01XX09","className":"LIPO","aware":"Reserve","metric":"DID","value":1.2},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01EE","className":"SXT","aware":"Access","metric":"DID","value":13.0},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01XD","className":"NITRO","aware":"Access","metric":"DID","value":19.3},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01 (other)","className":"OTHER","aware":"Unclassified","metric":"DID","value":10.1},
+    {"year":2024,"level":"district","setting":"inpatient","atc":"J01","className":"TOTAL","aware":"Unclassified","metric":"DID","value":711.7}
+  ]
+}

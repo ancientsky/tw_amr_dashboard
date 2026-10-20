@@ -34,7 +34,8 @@ export type IconName =
   | 'arrow-down'
   | 'sort'
   | 'search'
-  | 'send';
+  | 'send'
+  | 'file-csv';
 
 const stroke = {
   fill: 'none',
@@ -226,6 +227,13 @@ const PATHS: Record<IconName, JSX.Element> = {
     <g {...stroke}>
       <circle cx="11" cy="11" r="6.5" />
       <path d="m20 20-4.2-4.2" />
+    </g>
+  ),
+  'file-csv': (
+    <g {...stroke}>
+      <path d="M14 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5l-5-5Z" />
+      <path d="M14 3.5v5h5" />
+      <path d="M8.5 12.5h7M8.5 16h7M12 12.5V19" />
     </g>
   ),
   send: (

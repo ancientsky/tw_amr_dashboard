@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/common.schema.json",
+  "title": "TW-AMR Watch shared definitions",
+  "$defs": {
+    "LocalizedText": {
+      "type": "object",
+      "required": [
+        "zh-TW",
+        "en",
+        "ja"
+      ],
+      "properties": {
+        "zh-TW": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        },
+        "ja": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SourceRef": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "publisher",
+        "year",
+        "kind"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "$ref": "#/$defs/LocalizedText"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://"
+        },
+        "kind": {
+          "enum": [
+            "annual-report",
+            "open-data",
+            "glass",
+            "curated"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "Dim": {
+      "type": "object",
+      "required": [
+        "code",
+        "name"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "$ref": "#/$defs/LocalizedText"
+        },
+        "group": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "meta": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Envelope": {
+      "type": "object",
+      "required": [
+        "dataset",
+        "version",
+        "generatedAt",
+        "provisional",
+        "sources",
+        "records"
+      ],
+      "properties": {
+        "dataset": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "generatedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+        },
+        "provisional": {
+          "type": "boolean"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SourceRef"
+          }
+        },
+        "notes": {
+          "$ref": "#/$defs/LocalizedText"
+        },
+        "dims": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/Dim"
+            }
+          }
+        },
+        "meta": {
+          "type": "object"
+        },
+        "slice": {
+          "type": "object"
+        },
+        "records": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}

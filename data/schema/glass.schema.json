@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/glass.schema.json",
+  "title": "International comparison (WHO GLASS-style indicators)",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "glass"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "iso3",
+              "country",
+              "whoRegion",
+              "year",
+              "indicator",
+              "resistant_pct",
+              "isolates",
+              "source"
+            ],
+            "properties": {
+              "iso3": {
+                "type": "string",
+                "pattern": "^[A-Z]{3}$"
+              },
+              "country": {
+                "$ref": "common.schema.json#/$defs/LocalizedText"
+              },
+              "whoRegion": {
+                "enum": [
+                  "AFR",
+                  "AMR",
+                  "SEAR",
+                  "EUR",
+                  "EMR",
+                  "WPR"
+                ]
+              },
+              "year": {
+                "type": "integer",
+                "minimum": 2000,
+                "maximum": 2100
+              },
+              "indicator": {
+                "enum": [
+                  "MRSA_BLOOD",
+                  "3GC_R_ECO_BLOOD",
+                  "CR_ECO_BLOOD",
+                  "3GC_R_KPN_BLOOD",
+                  "CR_KPN_BLOOD",
+                  "CR_ABA_BLOOD",
+                  "CR_PAE_BLOOD",
+                  "VRE_EFM_BLOOD",
+                  "FQ_R_ECO_BLOOD",
+                  "PNSP_BLOOD"
+                ]
+              },
+              "resistant_pct": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "isolates": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "meta": {
+          "type": "object",
+          "required": [
+            "comparability"
+          ]
+        }
+      }
+    }
+  ]
+}

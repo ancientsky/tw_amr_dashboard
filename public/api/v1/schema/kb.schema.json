@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/kb.schema.json",
+  "title": "Chatbot knowledge base",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "kb"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "lang",
+              "q",
+              "a"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "lang": {
+                "enum": [
+                  "zh-TW",
+                  "en",
+                  "ja"
+                ]
+              },
+              "q": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "a": {
+                "type": "string",
+                "minLength": 1
+              },
+              "chart": {
+                "type": "object"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/glossary.schema.json",
+  "title": "Glossary",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "glossary"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "term",
+              "definition"
+            ],
+            "properties": {
+              "term": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "$ref": "common.schema.json#/$defs/LocalizedText"
+                  }
+                ]
+              },
+              "abbr": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "definition": {
+                "$ref": "common.schema.json#/$defs/LocalizedText"
+              },
+              "related": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/hai.schema.json",
+  "title": "Healthcare-associated infections (provisional)",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "hai"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "year",
+              "level",
+              "icu_type",
+              "metric",
+              "value",
+              "unit"
+            ],
+            "properties": {
+              "year": {
+                "type": "integer",
+                "minimum": 2000,
+                "maximum": 2100
+              },
+              "level": {
+                "enum": [
+                  "all",
+                  "medical_center",
+                  "regional",
+                  "district"
+                ]
+              },
+              "icu_type": {
+                "enum": [
+                  "all",
+                  "medical",
+                  "surgical",
+                  "mixed",
+                  "cardiac",
+                  "neuro",
+                  "pediatric",
+                  "neonatal",
+                  "burn"
+                ]
+              },
+              "metric": {
+                "enum": [
+                  "hai_density",
+                  "clabsi",
+                  "cauti",
+                  "vap",
+                  "central_line_util",
+                  "urinary_cath_util",
+                  "ventilator_util",
+                  "bsi_density",
+                  "uti_density",
+                  "pneu_density"
+                ]
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "enum": [
+                  "per_1000_patient_days",
+                  "per_1000_device_days",
+                  "ratio"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

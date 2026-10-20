@@ -1,0 +1,5 @@
+# TW-AMR Watch data pipeline (Python 3.13). build_data.py runs on the stdlib alone;
+# jsonschema is preferred for validation (a built-in fallback validator is used if it is missing).
+jsonschema>=4.21
+# PDF ingestion (scripts/ingest/extract_tables.py); parse_isolate_tables.py uses poppler's pdftotext.
+pdfplumber>=0.11

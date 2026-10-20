@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/meta.schema.json",
+  "title": "Site-level metadata",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "meta"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "dataset",
+              "records",
+              "provisional"
+            ],
+            "properties": {
+              "dataset": {
+                "type": "string"
+              },
+              "file": {
+                "type": "string"
+              },
+              "records": {
+                "type": "integer"
+              },
+              "provisional": {
+                "type": "boolean"
+              },
+              "yearMin": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "yearMax": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "latestYear": {
+          "type": "integer",
+          "minimum": 2000,
+          "maximum": 2100
+        },
+        "yearsAvailable": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 2000,
+            "maximum": 2100
+          }
+        },
+        "provisionalDatasets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ingestion": {
+          "type": "object",
+          "required": [
+            "status",
+            "pdfs"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "provisional",
+                "ingested"
+              ]
+            },
+            "pdfs": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "lastBuild": {
+          "type": "string"
+        },
+        "contentDigest": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "latestYear",
+        "yearsAvailable",
+        "ingestion",
+        "lastBuild"
+      ]
+    }
+  ]
+}

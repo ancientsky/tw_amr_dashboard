@@ -1,0 +1,825 @@
+{
+  "api": "TW-AMR Watch static data API",
+  "version": "v1",
+  "baseUrl": "https://ancientsky.github.io/tw_amr_dashboard/api/v1",
+  "generatedAt": "2026-10-20T06:42:41Z",
+  "provisionalDatasets": [
+    "antibiotic_use",
+    "hai",
+    "hai_pathogens",
+    "glass"
+  ],
+  "cors": "Served by GitHub Pages with Access-Control-Allow-Origin: * - fetch from any origin; read-only GET; no auth, no rate-limit guarantees.",
+  "openapi": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/openapi.yaml",
+  "docs": "https://github.com/ancientsky/tw_amr_dashboard/blob/main/docs/API.md",
+  "datasets": [
+    {
+      "id": "meta",
+      "dataset": "meta",
+      "records": 9,
+      "provisional": false,
+      "version": "1.0.0",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/meta.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/meta.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/meta.schema.json",
+      "slices": []
+    },
+    {
+      "id": "resistance",
+      "dataset": "resistance",
+      "records": 5703,
+      "provisional": false,
+      "version": "1.0.0",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/resistance.schema.json",
+      "slices": [
+        {
+          "by": "pathogen",
+          "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance/pathogen/{pathogen}.json",
+          "values": [
+            "ABA",
+            "BCC",
+            "BFR",
+            "CDI",
+            "CIN",
+            "CIT",
+            "ECL",
+            "ECO",
+            "EFA",
+            "EFM",
+            "ELI",
+            "ENB",
+            "ENC",
+            "GAS",
+            "GBS",
+            "HIN",
+            "HPY",
+            "KPN",
+            "MOR",
+            "NGO",
+            "NTS",
+            "PAE",
+            "PMI",
+            "PRV",
+            "SAL",
+            "SAU",
+            "SHI",
+            "SMA",
+            "SMR",
+            "SPN"
+          ]
+        },
+        {
+          "by": "phenotype",
+          "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance/phenotype/{phenotype}.json",
+          "values": [
+            "CR-ECO",
+            "CRAB",
+            "CRE",
+            "CRKP",
+            "CRPA",
+            "MRSA",
+            "VR-EFA",
+            "VR-EFM",
+            "VRE"
+          ]
+        },
+        {
+          "by": "year",
+          "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance/year/{year}.json",
+          "values": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ]
+        }
+      ]
+    },
+    {
+      "id": "isolates",
+      "dataset": "isolates",
+      "records": 1254,
+      "provisional": false,
+      "version": "1.0.0",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/isolates.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/isolates.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/isolates.schema.json",
+      "slices": []
+    },
+    {
+      "id": "antibiotic-use",
+      "dataset": "antibiotic_use",
+      "records": 736,
+      "provisional": true,
+      "version": "1.0.0-provisional",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/antibiotic-use.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/antibiotic-use.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/antibiotic_use.schema.json",
+      "slices": [
+        {
+          "by": "year",
+          "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/antibiotic-use/year/{year}.json",
+          "values": [
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hai",
+      "dataset": "hai",
+      "records": 2080,
+      "provisional": true,
+      "version": "1.0.0-provisional",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/hai.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/hai.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/hai.schema.json",
+      "slices": [
+        {
+          "by": "year",
+          "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/hai/year/{year}.json",
+          "values": [
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hai-pathogens",
+      "dataset": "hai_pathogens",
+      "records": 960,
+      "provisional": true,
+      "version": "1.0.0-provisional",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/hai-pathogens.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/hai-pathogens.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/hai_pathogens.schema.json",
+      "slices": []
+    },
+    {
+      "id": "glass",
+      "dataset": "glass",
+      "records": 402,
+      "provisional": true,
+      "version": "1.0.0-provisional",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/glass.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/glass.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/glass.schema.json",
+      "slices": [
+        {
+          "by": "indicator",
+          "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/glass/indicator/{indicator}.json",
+          "values": [
+            "3GC_R_ECO_BLOOD",
+            "3GC_R_KPN_BLOOD",
+            "CR_ABA_BLOOD",
+            "CR_ECO_BLOOD",
+            "CR_KPN_BLOOD",
+            "CR_PAE_BLOOD",
+            "FQ_R_ECO_BLOOD",
+            "MRSA_BLOOD",
+            "PNSP_BLOOD",
+            "VRE_EFM_BLOOD"
+          ]
+        },
+        {
+          "by": "country",
+          "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/glass/country/{country}.json",
+          "values": [
+            "ARG",
+            "AUS",
+            "BGD",
+            "BRA",
+            "CAN",
+            "CHL",
+            "CHN",
+            "DEU",
+            "EGY",
+            "ESP",
+            "ETH",
+            "FRA",
+            "GBR",
+            "GRC",
+            "IDN",
+            "IND",
+            "IRN",
+            "ITA",
+            "JOR",
+            "JPN",
+            "KEN",
+            "KOR",
+            "MEX",
+            "MYS",
+            "NGA",
+            "NLD",
+            "NOR",
+            "NPL",
+            "NZL",
+            "PAK",
+            "PHL",
+            "POL",
+            "ROU",
+            "SAU",
+            "SWE",
+            "THA",
+            "TUR",
+            "TWN",
+            "UGA",
+            "USA",
+            "VNM",
+            "ZAF"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "links",
+      "dataset": "links",
+      "records": 60,
+      "provisional": false,
+      "version": "1.0.0",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/links.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/links.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/links.schema.json",
+      "slices": []
+    },
+    {
+      "id": "glossary",
+      "dataset": "glossary",
+      "records": 70,
+      "provisional": false,
+      "version": "1.0.0",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/glossary.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/glossary.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/glossary.schema.json",
+      "slices": []
+    },
+    {
+      "id": "kb",
+      "dataset": "kb",
+      "records": 138,
+      "provisional": false,
+      "version": "1.0.0",
+      "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/kb.json",
+      "csv": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/kb.csv",
+      "schema": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/kb.schema.json",
+      "slices": []
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/meta.json",
+      "records": 9
+    },
+    {
+      "path": "/meta.csv",
+      "records": 9
+    },
+    {
+      "path": "/resistance.json",
+      "records": 5703
+    },
+    {
+      "path": "/resistance.csv",
+      "records": 5703
+    },
+    {
+      "path": "/isolates.json",
+      "records": 1254
+    },
+    {
+      "path": "/isolates.csv",
+      "records": 1254
+    },
+    {
+      "path": "/antibiotic-use.json",
+      "records": 736
+    },
+    {
+      "path": "/antibiotic-use.csv",
+      "records": 736
+    },
+    {
+      "path": "/hai.json",
+      "records": 2080
+    },
+    {
+      "path": "/hai.csv",
+      "records": 2080
+    },
+    {
+      "path": "/hai-pathogens.json",
+      "records": 960
+    },
+    {
+      "path": "/hai-pathogens.csv",
+      "records": 960
+    },
+    {
+      "path": "/glass.json",
+      "records": 402
+    },
+    {
+      "path": "/glass.csv",
+      "records": 402
+    },
+    {
+      "path": "/links.json",
+      "records": 60
+    },
+    {
+      "path": "/links.csv",
+      "records": 60
+    },
+    {
+      "path": "/glossary.json",
+      "records": 70
+    },
+    {
+      "path": "/glossary.csv",
+      "records": 70
+    },
+    {
+      "path": "/kb.json",
+      "records": 138
+    },
+    {
+      "path": "/kb.csv",
+      "records": 138
+    },
+    {
+      "path": "/resistance/pathogen/ABA.json",
+      "records": 321
+    },
+    {
+      "path": "/resistance/pathogen/BCC.json",
+      "records": 40
+    },
+    {
+      "path": "/resistance/pathogen/BFR.json",
+      "records": 58
+    },
+    {
+      "path": "/resistance/pathogen/CDI.json",
+      "records": 66
+    },
+    {
+      "path": "/resistance/pathogen/CIN.json",
+      "records": 71
+    },
+    {
+      "path": "/resistance/pathogen/CIT.json",
+      "records": 319
+    },
+    {
+      "path": "/resistance/pathogen/ECL.json",
+      "records": 308
+    },
+    {
+      "path": "/resistance/pathogen/ECO.json",
+      "records": 453
+    },
+    {
+      "path": "/resistance/pathogen/EFA.json",
+      "records": 278
+    },
+    {
+      "path": "/resistance/pathogen/EFM.json",
+      "records": 264
+    },
+    {
+      "path": "/resistance/pathogen/ELI.json",
+      "records": 53
+    },
+    {
+      "path": "/resistance/pathogen/ENB.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/pathogen/ENC.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/pathogen/GAS.json",
+      "records": 82
+    },
+    {
+      "path": "/resistance/pathogen/GBS.json",
+      "records": 108
+    },
+    {
+      "path": "/resistance/pathogen/HIN.json",
+      "records": 254
+    },
+    {
+      "path": "/resistance/pathogen/HPY.json",
+      "records": 30
+    },
+    {
+      "path": "/resistance/pathogen/KPN.json",
+      "records": 445
+    },
+    {
+      "path": "/resistance/pathogen/MOR.json",
+      "records": 288
+    },
+    {
+      "path": "/resistance/pathogen/NGO.json",
+      "records": 108
+    },
+    {
+      "path": "/resistance/pathogen/NTS.json",
+      "records": 125
+    },
+    {
+      "path": "/resistance/pathogen/PAE.json",
+      "records": 283
+    },
+    {
+      "path": "/resistance/pathogen/PMI.json",
+      "records": 312
+    },
+    {
+      "path": "/resistance/pathogen/PRV.json",
+      "records": 295
+    },
+    {
+      "path": "/resistance/pathogen/SAL.json",
+      "records": 84
+    },
+    {
+      "path": "/resistance/pathogen/SAU.json",
+      "records": 284
+    },
+    {
+      "path": "/resistance/pathogen/SHI.json",
+      "records": 57
+    },
+    {
+      "path": "/resistance/pathogen/SMA.json",
+      "records": 24
+    },
+    {
+      "path": "/resistance/pathogen/SMR.json",
+      "records": 311
+    },
+    {
+      "path": "/resistance/pathogen/SPN.json",
+      "records": 238
+    },
+    {
+      "path": "/resistance/phenotype/CR-ECO.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/CRAB.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/CRE.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/CRKP.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/CRPA.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/MRSA.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/VR-EFA.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/VR-EFM.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/phenotype/VRE.json",
+      "records": 72
+    },
+    {
+      "path": "/resistance/year/2018.json",
+      "records": 108
+    },
+    {
+      "path": "/resistance/year/2019.json",
+      "records": 108
+    },
+    {
+      "path": "/resistance/year/2020.json",
+      "records": 108
+    },
+    {
+      "path": "/resistance/year/2021.json",
+      "records": 108
+    },
+    {
+      "path": "/resistance/year/2022.json",
+      "records": 1578
+    },
+    {
+      "path": "/resistance/year/2023.json",
+      "records": 1979
+    },
+    {
+      "path": "/resistance/year/2024.json",
+      "records": 1714
+    },
+    {
+      "path": "/antibiotic-use/year/2017.json",
+      "records": 92
+    },
+    {
+      "path": "/antibiotic-use/year/2018.json",
+      "records": 92
+    },
+    {
+      "path": "/antibiotic-use/year/2019.json",
+      "records": 92
+    },
+    {
+      "path": "/antibiotic-use/year/2020.json",
+      "records": 92
+    },
+    {
+      "path": "/antibiotic-use/year/2021.json",
+      "records": 92
+    },
+    {
+      "path": "/antibiotic-use/year/2022.json",
+      "records": 92
+    },
+    {
+      "path": "/antibiotic-use/year/2023.json",
+      "records": 92
+    },
+    {
+      "path": "/antibiotic-use/year/2024.json",
+      "records": 92
+    },
+    {
+      "path": "/hai/year/2017.json",
+      "records": 260
+    },
+    {
+      "path": "/hai/year/2018.json",
+      "records": 260
+    },
+    {
+      "path": "/hai/year/2019.json",
+      "records": 260
+    },
+    {
+      "path": "/hai/year/2020.json",
+      "records": 260
+    },
+    {
+      "path": "/hai/year/2021.json",
+      "records": 260
+    },
+    {
+      "path": "/hai/year/2022.json",
+      "records": 260
+    },
+    {
+      "path": "/hai/year/2023.json",
+      "records": 260
+    },
+    {
+      "path": "/hai/year/2024.json",
+      "records": 260
+    },
+    {
+      "path": "/glass/indicator/3GC_R_ECO_BLOOD.json",
+      "records": 42
+    },
+    {
+      "path": "/glass/indicator/3GC_R_KPN_BLOOD.json",
+      "records": 42
+    },
+    {
+      "path": "/glass/indicator/CR_ABA_BLOOD.json",
+      "records": 41
+    },
+    {
+      "path": "/glass/indicator/CR_ECO_BLOOD.json",
+      "records": 42
+    },
+    {
+      "path": "/glass/indicator/CR_KPN_BLOOD.json",
+      "records": 42
+    },
+    {
+      "path": "/glass/indicator/CR_PAE_BLOOD.json",
+      "records": 42
+    },
+    {
+      "path": "/glass/indicator/FQ_R_ECO_BLOOD.json",
+      "records": 42
+    },
+    {
+      "path": "/glass/indicator/MRSA_BLOOD.json",
+      "records": 42
+    },
+    {
+      "path": "/glass/indicator/PNSP_BLOOD.json",
+      "records": 31
+    },
+    {
+      "path": "/glass/indicator/VRE_EFM_BLOOD.json",
+      "records": 36
+    },
+    {
+      "path": "/glass/country/ARG.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/AUS.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/BGD.json",
+      "records": 9
+    },
+    {
+      "path": "/glass/country/BRA.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/CAN.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/CHL.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/CHN.json",
+      "records": 9
+    },
+    {
+      "path": "/glass/country/DEU.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/EGY.json",
+      "records": 9
+    },
+    {
+      "path": "/glass/country/ESP.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/ETH.json",
+      "records": 8
+    },
+    {
+      "path": "/glass/country/FRA.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/GBR.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/GRC.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/IDN.json",
+      "records": 8
+    },
+    {
+      "path": "/glass/country/IND.json",
+      "records": 9
+    },
+    {
+      "path": "/glass/country/IRN.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/ITA.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/JOR.json",
+      "records": 9
+    },
+    {
+      "path": "/glass/country/JPN.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/KEN.json",
+      "records": 8
+    },
+    {
+      "path": "/glass/country/KOR.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/MEX.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/MYS.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/NGA.json",
+      "records": 8
+    },
+    {
+      "path": "/glass/country/NLD.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/NOR.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/NPL.json",
+      "records": 8
+    },
+    {
+      "path": "/glass/country/NZL.json",
+      "records": 9
+    },
+    {
+      "path": "/glass/country/PAK.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/PHL.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/POL.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/ROU.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/SAU.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/SWE.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/THA.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/TUR.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/TWN.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/UGA.json",
+      "records": 8
+    },
+    {
+      "path": "/glass/country/USA.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/VNM.json",
+      "records": 10
+    },
+    {
+      "path": "/glass/country/ZAF.json",
+      "records": 10
+    }
+  ]
+}

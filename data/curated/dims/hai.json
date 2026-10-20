@@ -1,0 +1,36 @@
+{
+  "icuTypes": [
+    {"code": "all", "name": {"zh-TW": "全部加護病房", "en": "All ICUs", "ja": "全ICU"}, "order": 0},
+    {"code": "medical", "name": {"zh-TW": "內科加護病房", "en": "Medical ICU", "ja": "内科系ICU"}, "order": 1},
+    {"code": "surgical", "name": {"zh-TW": "外科加護病房", "en": "Surgical ICU", "ja": "外科系ICU"}, "order": 2},
+    {"code": "mixed", "name": {"zh-TW": "內外科混合加護病房", "en": "Mixed medical–surgical ICU", "ja": "内科・外科混合ICU"}, "order": 3},
+    {"code": "cardiac", "name": {"zh-TW": "心臟加護病房", "en": "Cardiac ICU", "ja": "心臓ICU（CCU）"}, "order": 4},
+    {"code": "neuro", "name": {"zh-TW": "神經加護病房", "en": "Neuro ICU", "ja": "神経ICU"}, "order": 5},
+    {"code": "pediatric", "name": {"zh-TW": "兒科加護病房", "en": "Paediatric ICU", "ja": "小児ICU"}, "order": 6},
+    {"code": "neonatal", "name": {"zh-TW": "新生兒加護病房", "en": "Neonatal ICU", "ja": "新生児ICU（NICU）"}, "order": 7},
+    {"code": "burn", "name": {"zh-TW": "燒燙傷加護病房", "en": "Burn ICU", "ja": "熱傷ICU"}, "order": 8}
+  ],
+  "metrics": [
+    {"code": "hai_density", "name": {"zh-TW": "醫療照護相關感染密度", "en": "HAI density", "ja": "医療関連感染密度"}, "group": "density", "order": 1, "meta": {"unit": "per_1000_patient_days"}},
+    {"code": "bsi_density", "name": {"zh-TW": "血流感染密度", "en": "Bloodstream infection density", "ja": "血流感染密度"}, "group": "density", "order": 2, "meta": {"unit": "per_1000_patient_days"}},
+    {"code": "uti_density", "name": {"zh-TW": "泌尿道感染密度", "en": "Urinary tract infection density", "ja": "尿路感染密度"}, "group": "density", "order": 3, "meta": {"unit": "per_1000_patient_days"}},
+    {"code": "pneu_density", "name": {"zh-TW": "肺炎密度", "en": "Pneumonia density", "ja": "肺炎密度"}, "group": "density", "order": 4, "meta": {"unit": "per_1000_patient_days"}},
+    {"code": "clabsi", "name": {"zh-TW": "中心導管相關血流感染（CLABSI）", "en": "CLABSI", "ja": "中心ライン関連血流感染（CLABSI）"}, "group": "device", "order": 5, "meta": {"unit": "per_1000_device_days", "device": "central_line_util"}},
+    {"code": "cauti", "name": {"zh-TW": "導尿管相關泌尿道感染（CAUTI）", "en": "CAUTI", "ja": "カテーテル関連尿路感染（CAUTI）"}, "group": "device", "order": 6, "meta": {"unit": "per_1000_device_days", "device": "urinary_cath_util"}},
+    {"code": "vap", "name": {"zh-TW": "呼吸器相關肺炎（VAP）", "en": "VAP", "ja": "人工呼吸器関連肺炎（VAP）"}, "group": "device", "order": 7, "meta": {"unit": "per_1000_device_days", "device": "ventilator_util"}},
+    {"code": "central_line_util", "name": {"zh-TW": "中心導管使用率", "en": "Central-line utilisation ratio", "ja": "中心ライン使用比"}, "group": "utilization", "order": 8, "meta": {"unit": "ratio"}},
+    {"code": "urinary_cath_util", "name": {"zh-TW": "導尿管使用率", "en": "Urinary-catheter utilisation ratio", "ja": "尿道カテーテル使用比"}, "group": "utilization", "order": 9, "meta": {"unit": "ratio"}},
+    {"code": "ventilator_util", "name": {"zh-TW": "呼吸器使用率", "en": "Ventilator utilisation ratio", "ja": "人工呼吸器使用比"}, "group": "utilization", "order": 10, "meta": {"unit": "ratio"}}
+  ],
+  "units": [
+    {"code": "per_1000_patient_days", "name": {"zh-TW": "每千住院人日", "en": "per 1,000 patient-days", "ja": "1,000患者日あたり"}, "order": 1},
+    {"code": "per_1000_device_days", "name": {"zh-TW": "每千裝置使用人日", "en": "per 1,000 device-days", "ja": "1,000デバイス日あたり"}, "order": 2},
+    {"code": "ratio", "name": {"zh-TW": "比率（裝置日／住院人日）", "en": "ratio (device-days / patient-days)", "ja": "比（デバイス日／患者日）"}, "order": 3}
+  ],
+  "sites": [
+    {"code": "all", "name": {"zh-TW": "全部感染部位", "en": "All sites", "ja": "全部位"}, "order": 0},
+    {"code": "bsi", "name": {"zh-TW": "血流感染", "en": "Bloodstream infection", "ja": "血流感染"}, "order": 1},
+    {"code": "uti", "name": {"zh-TW": "泌尿道感染", "en": "Urinary tract infection", "ja": "尿路感染"}, "order": 2},
+    {"code": "pneu", "name": {"zh-TW": "肺炎", "en": "Pneumonia", "ja": "肺炎"}, "order": 3}
+  ]
+}

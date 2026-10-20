@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/antibiotic_use.schema.json",
+  "title": "Antibiotic use (provisional)",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "antibiotic_use"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "year",
+              "level",
+              "setting",
+              "atc",
+              "className",
+              "aware",
+              "metric",
+              "value"
+            ],
+            "properties": {
+              "year": {
+                "type": "integer",
+                "minimum": 2000,
+                "maximum": 2100
+              },
+              "level": {
+                "enum": [
+                  "all",
+                  "medical_center",
+                  "regional",
+                  "district"
+                ]
+              },
+              "setting": {
+                "enum": [
+                  "inpatient",
+                  "outpatient",
+                  "all"
+                ]
+              },
+              "atc": {
+                "type": "string",
+                "pattern": "^J01"
+              },
+              "className": {
+                "type": "string",
+                "pattern": "^[A-Z0-9][A-Za-z0-9_-]*$"
+              },
+              "aware": {
+                "enum": [
+                  "Access",
+                  "Watch",
+                  "Reserve",
+                  "Not recommended",
+                  "Unclassified"
+                ]
+              },
+              "metric": {
+                "enum": [
+                  "DID",
+                  "DDD_per_1000_inhabitants_day",
+                  "DOT"
+                ]
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

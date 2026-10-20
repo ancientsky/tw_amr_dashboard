@@ -1,0 +1,40 @@
+/* embed.html: no page chrome; card floats on the host page. */
+html,
+body {
+  min-height: 0;
+}
+body {
+  background: transparent;
+}
+:root[data-theme='dark'] body {
+  background: var(--paper);
+}
+body::before,
+body::after {
+  display: none !important;
+}
+#root {
+  min-height: 0;
+}
+.embed-root {
+  padding: 4px;
+}
+.embed-compact .embed-root {
+  padding: 0;
+}
+.embed-credit {
+  display: block;
+  margin: 8px 6px 2px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--ink-3);
+  text-decoration: none;
+}
+.embed-credit:hover {
+  color: var(--accent);
+}
+.embed-unknown {
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}

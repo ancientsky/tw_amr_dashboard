@@ -111,9 +111,14 @@ function isEmpty(data: unknown): boolean {
  * Re-renders once when the cached promise settles; subsequent mounts are synchronous.
  */
 export function useDataset<N extends DatasetName>(name: N, opts: LoadOptions = {}): DatasetState<N> {
+  return useOptionalDataset(name, opts) as DatasetState<N>;
+}
+
+/** Like useDataset but `null` skips loading (status stays 'loading', data null). */
+export function useOptionalDataset<N extends DatasetName>(name: N | null | undefined, opts: LoadOptions = {}): DatasetState<N> {
   const fixtureFallback = opts.fixtureFallback;
   const initial = (): DatasetState<N> => {
-    const hit = peekDataset(name, { fixtureFallback });
+    const hit = name ? peekDataset(name, { fixtureFallback }) : undefined;
     if (hit)
       return {
         status: isEmpty(hit.data) ? 'empty' : 'ready',
@@ -126,6 +131,7 @@ export function useDataset<N extends DatasetName>(name: N, opts: LoadOptions = {
   const [state, setState] = useState<DatasetState<N>>(initial);
 
   useEffect(() => {
+    if (!name) return;
     let alive = true;
     const hit = peekDataset(name, { fixtureFallback });
     if (hit) {

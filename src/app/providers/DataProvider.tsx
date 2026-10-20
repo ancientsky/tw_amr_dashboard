@@ -1,5 +1,5 @@
 import { createContext, useContext, useMemo, type ReactNode } from 'react';
-import { useDataset, type DatasetStatus } from '../../data/load';
+import { useDataset, useOptionalDataset, type DatasetStatus } from '../../data/load';
 import type { DatasetName, MetaData } from '../../data/types';
 
 interface DataCtx {
@@ -25,7 +25,7 @@ export function useMeta(): DataCtx {
  * Per-dataset provisional flag, read from that dataset's own envelope (not a global flag).
  * Returns undefined while loading / when the dataset is unavailable.
  */
-export function useDatasetProvisional(name: Exclude<DatasetName, 'meta'>): boolean | undefined {
-  const { data } = useDataset(name);
+export function useDatasetProvisional(name: Exclude<DatasetName, 'meta'> | null | undefined): boolean | undefined {
+  const { data } = useOptionalDataset(name);
   return data ? Boolean((data as { provisional?: boolean }).provisional) : undefined;
 }

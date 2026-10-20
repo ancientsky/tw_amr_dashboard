@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/schema/links.schema.json",
+  "title": "Directory of AMR / AMU / HAI dashboards",
+  "allOf": [
+    {
+      "$ref": "common.schema.json#/$defs/Envelope"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "const": "links"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "org",
+              "name",
+              "url",
+              "category",
+              "region",
+              "description",
+              "tags"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "org": {
+                "type": "string"
+              },
+              "name": {
+                "$ref": "common.schema.json#/$defs/LocalizedText"
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https?://"
+              },
+              "category": {
+                "enum": [
+                  "amr",
+                  "amu",
+                  "hai",
+                  "one-health",
+                  "data-portal",
+                  "guideline"
+                ]
+              },
+              "region": {
+                "type": "string"
+              },
+              "description": {
+                "$ref": "common.schema.json#/$defs/LocalizedText"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

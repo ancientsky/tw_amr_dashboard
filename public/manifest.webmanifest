@@ -1,0 +1,15 @@
+{
+  "name": "TW-AMR Watch — 臺灣抗藥性監測儀表板",
+  "short_name": "TW-AMR Watch",
+  "description": "Taiwan antimicrobial resistance surveillance dashboard",
+  "start_url": "/tw_amr_dashboard/",
+  "scope": "/tw_amr_dashboard/",
+  "display": "standalone",
+  "background_color": "#070b0a",
+  "theme_color": "#070b0a",
+  "lang": "zh-TW",
+  "icons": [
+    { "src": "/tw_amr_dashboard/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/tw_amr_dashboard/og/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

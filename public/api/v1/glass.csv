@@ -1,0 +1,403 @@
+iso3,country.zh-TW,country.en,country.ja,whoRegion,year,indicator,resistant_pct,isolates,source
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,MRSA_BLOOD,35.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,MRSA_BLOOD,35.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,MRSA_BLOOD,45.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,MRSA_BLOOD,40.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,MRSA_BLOOD,25.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,MRSA_BLOOD,40.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,MRSA_BLOOD,35.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,MRSA_BLOOD,18.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,MRSA_BLOOD,20.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,MRSA_BLOOD,30.0,,who-glass
+USA,美國,United States,米国,AMR,2021,MRSA_BLOOD,40.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,MRSA_BLOOD,50.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,MRSA_BLOOD,30.0,,who-glass
+IND,印度,India,インド,SEAR,2021,MRSA_BLOOD,45.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,MRSA_BLOOD,45.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,MRSA_BLOOD,18.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,MRSA_BLOOD,5.5,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,MRSA_BLOOD,22.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,MRSA_BLOOD,11.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,MRSA_BLOOD,6.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,MRSA_BLOOD,34.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,MRSA_BLOOD,30.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,MRSA_BLOOD,1.5,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,MRSA_BLOOD,1.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,MRSA_BLOOD,13.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,MRSA_BLOOD,41.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,MRSA_BLOOD,1.8,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,MRSA_BLOOD,26.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,MRSA_BLOOD,60.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,MRSA_BLOOD,45.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,MRSA_BLOOD,55.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,MRSA_BLOOD,55.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,MRSA_BLOOD,35.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,MRSA_BLOOD,15.0,,aura
+CHN,中國,China,中国,WPR,2021,MRSA_BLOOD,29.0,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,MRSA_BLOOD,46.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,MRSA_BLOOD,50.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,MRSA_BLOOD,18.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,MRSA_BLOOD,9.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,MRSA_BLOOD,55.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,MRSA_BLOOD,45.5,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,MRSA_BLOOD,70.0,,who-glass
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,3GC_R_ECO_BLOOD,65.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,3GC_R_ECO_BLOOD,55.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,3GC_R_ECO_BLOOD,60.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,3GC_R_ECO_BLOOD,70.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,3GC_R_ECO_BLOOD,22.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,3GC_R_ECO_BLOOD,25.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,3GC_R_ECO_BLOOD,35.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,3GC_R_ECO_BLOOD,15.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,3GC_R_ECO_BLOOD,25.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,3GC_R_ECO_BLOOD,60.0,,who-glass
+USA,美國,United States,米国,AMR,2021,3GC_R_ECO_BLOOD,20.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,3GC_R_ECO_BLOOD,75.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,3GC_R_ECO_BLOOD,62.0,,who-glass
+IND,印度,India,インド,SEAR,2021,3GC_R_ECO_BLOOD,80.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,3GC_R_ECO_BLOOD,65.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,3GC_R_ECO_BLOOD,48.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,3GC_R_ECO_BLOOD,10.0,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,3GC_R_ECO_BLOOD,14.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,3GC_R_ECO_BLOOD,10.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,3GC_R_ECO_BLOOD,14.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,3GC_R_ECO_BLOOD,21.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,3GC_R_ECO_BLOOD,24.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,3GC_R_ECO_BLOOD,7.0,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,3GC_R_ECO_BLOOD,6.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,3GC_R_ECO_BLOOD,14.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,3GC_R_ECO_BLOOD,27.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,3GC_R_ECO_BLOOD,9.0,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,3GC_R_ECO_BLOOD,48.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,3GC_R_ECO_BLOOD,70.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,3GC_R_ECO_BLOOD,60.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,3GC_R_ECO_BLOOD,55.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,3GC_R_ECO_BLOOD,78.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,3GC_R_ECO_BLOOD,40.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,3GC_R_ECO_BLOOD,14.0,,aura
+CHN,中國,China,中国,WPR,2021,3GC_R_ECO_BLOOD,52.0,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,3GC_R_ECO_BLOOD,30.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,3GC_R_ECO_BLOOD,33.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,3GC_R_ECO_BLOOD,26.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,3GC_R_ECO_BLOOD,11.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,3GC_R_ECO_BLOOD,40.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,3GC_R_ECO_BLOOD,32.0,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,3GC_R_ECO_BLOOD,65.0,,who-glass
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_ECO_BLOOD,5.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,CR_ECO_BLOOD,5.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,CR_ECO_BLOOD,10.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,CR_ECO_BLOOD,8.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,CR_ECO_BLOOD,1.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,CR_ECO_BLOOD,2.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,CR_ECO_BLOOD,3.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,CR_ECO_BLOOD,0.2,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,CR_ECO_BLOOD,0.5,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,CR_ECO_BLOOD,3.0,,who-glass
+USA,美國,United States,米国,AMR,2021,CR_ECO_BLOOD,0.5,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,CR_ECO_BLOOD,15.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,CR_ECO_BLOOD,6.0,,who-glass
+IND,印度,India,インド,SEAR,2021,CR_ECO_BLOOD,25.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,CR_ECO_BLOOD,12.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,CR_ECO_BLOOD,2.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,CR_ECO_BLOOD,0.1,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,CR_ECO_BLOOD,0.1,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,CR_ECO_BLOOD,0.1,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,CR_ECO_BLOOD,0.2,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,CR_ECO_BLOOD,0.6,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,CR_ECO_BLOOD,0.4,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,CR_ECO_BLOOD,0.05,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,CR_ECO_BLOOD,0.05,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,CR_ECO_BLOOD,0.2,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,CR_ECO_BLOOD,1.3,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,CR_ECO_BLOOD,0.1,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,CR_ECO_BLOOD,2.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,CR_ECO_BLOOD,20.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,CR_ECO_BLOOD,10.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,CR_ECO_BLOOD,6.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,CR_ECO_BLOOD,18.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,CR_ECO_BLOOD,3.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,CR_ECO_BLOOD,0.1,,aura
+CHN,中國,China,中国,WPR,2021,CR_ECO_BLOOD,1.5,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,CR_ECO_BLOOD,0.1,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_ECO_BLOOD,0.2,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_ECO_BLOOD,1.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,CR_ECO_BLOOD,0.1,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_ECO_BLOOD,4.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,CR_ECO_BLOOD,2.0,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_ECO_BLOOD,4.0,,who-glass
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,3GC_R_KPN_BLOOD,80.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,3GC_R_KPN_BLOOD,75.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,3GC_R_KPN_BLOOD,65.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,3GC_R_KPN_BLOOD,80.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,3GC_R_KPN_BLOOD,65.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,3GC_R_KPN_BLOOD,55.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,3GC_R_KPN_BLOOD,60.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,3GC_R_KPN_BLOOD,10.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,3GC_R_KPN_BLOOD,50.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,3GC_R_KPN_BLOOD,50.0,,who-glass
+USA,美國,United States,米国,AMR,2021,3GC_R_KPN_BLOOD,18.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,3GC_R_KPN_BLOOD,75.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,3GC_R_KPN_BLOOD,70.0,,who-glass
+IND,印度,India,インド,SEAR,2021,3GC_R_KPN_BLOOD,80.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,3GC_R_KPN_BLOOD,70.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,3GC_R_KPN_BLOOD,50.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,3GC_R_KPN_BLOOD,12.0,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,3GC_R_KPN_BLOOD,23.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,3GC_R_KPN_BLOOD,29.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,3GC_R_KPN_BLOOD,15.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,3GC_R_KPN_BLOOD,76.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,3GC_R_KPN_BLOOD,54.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,3GC_R_KPN_BLOOD,10.0,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,3GC_R_KPN_BLOOD,6.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,3GC_R_KPN_BLOOD,64.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,3GC_R_KPN_BLOOD,68.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,3GC_R_KPN_BLOOD,7.0,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,3GC_R_KPN_BLOOD,62.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,3GC_R_KPN_BLOOD,75.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,3GC_R_KPN_BLOOD,70.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,3GC_R_KPN_BLOOD,65.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,3GC_R_KPN_BLOOD,80.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,3GC_R_KPN_BLOOD,55.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,3GC_R_KPN_BLOOD,9.0,,aura
+CHN,中國,China,中国,WPR,2021,3GC_R_KPN_BLOOD,32.0,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,3GC_R_KPN_BLOOD,12.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,3GC_R_KPN_BLOOD,33.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,3GC_R_KPN_BLOOD,32.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,3GC_R_KPN_BLOOD,10.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,3GC_R_KPN_BLOOD,50.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,3GC_R_KPN_BLOOD,24.5,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,3GC_R_KPN_BLOOD,55.0,,who-glass
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_KPN_BLOOD,25.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,CR_KPN_BLOOD,20.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,CR_KPN_BLOOD,25.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,CR_KPN_BLOOD,30.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,CR_KPN_BLOOD,15.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,CR_KPN_BLOOD,25.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,CR_KPN_BLOOD,45.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,CR_KPN_BLOOD,1.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,CR_KPN_BLOOD,15.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,CR_KPN_BLOOD,15.0,,who-glass
+USA,美國,United States,米国,AMR,2021,CR_KPN_BLOOD,4.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,CR_KPN_BLOOD,45.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,CR_KPN_BLOOD,25.0,,who-glass
+IND,印度,India,インド,SEAR,2021,CR_KPN_BLOOD,55.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,CR_KPN_BLOOD,40.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,CR_KPN_BLOOD,20.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,CR_KPN_BLOOD,0.4,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,CR_KPN_BLOOD,3.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,CR_KPN_BLOOD,1.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,CR_KPN_BLOOD,0.8,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,CR_KPN_BLOOD,73.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,CR_KPN_BLOOD,25.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,CR_KPN_BLOOD,0.3,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,CR_KPN_BLOOD,0.1,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,CR_KPN_BLOOD,15.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,CR_KPN_BLOOD,45.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,CR_KPN_BLOOD,0.2,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,CR_KPN_BLOOD,45.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,CR_KPN_BLOOD,60.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,CR_KPN_BLOOD,45.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,CR_KPN_BLOOD,35.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,CR_KPN_BLOOD,50.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,CR_KPN_BLOOD,35.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,CR_KPN_BLOOD,0.5,,aura
+CHN,中國,China,中国,WPR,2021,CR_KPN_BLOOD,11.0,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,CR_KPN_BLOOD,0.3,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_KPN_BLOOD,2.5,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_KPN_BLOOD,6.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,CR_KPN_BLOOD,0.3,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_KPN_BLOOD,20.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,CR_KPN_BLOOD,12.0,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_KPN_BLOOD,30.0,,who-glass
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_ABA_BLOOD,75.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,CR_ABA_BLOOD,60.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,CR_ABA_BLOOD,70.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,CR_ABA_BLOOD,70.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,CR_ABA_BLOOD,80.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,CR_ABA_BLOOD,75.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,CR_ABA_BLOOD,80.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,CR_ABA_BLOOD,5.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,CR_ABA_BLOOD,75.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,CR_ABA_BLOOD,70.0,,who-glass
+USA,美國,United States,米国,AMR,2021,CR_ABA_BLOOD,40.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,CR_ABA_BLOOD,80.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,CR_ABA_BLOOD,65.0,,who-glass
+IND,印度,India,インド,SEAR,2021,CR_ABA_BLOOD,87.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,CR_ABA_BLOOD,80.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,CR_ABA_BLOOD,75.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,CR_ABA_BLOOD,5.0,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,CR_ABA_BLOOD,70.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,CR_ABA_BLOOD,7.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,CR_ABA_BLOOD,8.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,CR_ABA_BLOOD,95.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,CR_ABA_BLOOD,88.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,CR_ABA_BLOOD,2.0,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,CR_ABA_BLOOD,2.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,CR_ABA_BLOOD,85.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,CR_ABA_BLOOD,92.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,CR_ABA_BLOOD,3.0,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,CR_ABA_BLOOD,92.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,CR_ABA_BLOOD,85.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,CR_ABA_BLOOD,90.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,CR_ABA_BLOOD,85.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,CR_ABA_BLOOD,88.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,CR_ABA_BLOOD,80.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,CR_ABA_BLOOD,4.0,,aura
+CHN,中國,China,中国,WPR,2021,CR_ABA_BLOOD,72.0,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,CR_ABA_BLOOD,2.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_ABA_BLOOD,88.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_ABA_BLOOD,60.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_ABA_BLOOD,60.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,CR_ABA_BLOOD,60.5,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_ABA_BLOOD,85.0,,who-glass
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_PAE_BLOOD,30.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,CR_PAE_BLOOD,25.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,CR_PAE_BLOOD,30.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,CR_PAE_BLOOD,30.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,CR_PAE_BLOOD,20.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,CR_PAE_BLOOD,25.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,CR_PAE_BLOOD,35.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,CR_PAE_BLOOD,8.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,CR_PAE_BLOOD,30.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,CR_PAE_BLOOD,35.0,,who-glass
+USA,美國,United States,米国,AMR,2021,CR_PAE_BLOOD,15.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,CR_PAE_BLOOD,40.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,CR_PAE_BLOOD,30.0,,who-glass
+IND,印度,India,インド,SEAR,2021,CR_PAE_BLOOD,40.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,CR_PAE_BLOOD,35.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,CR_PAE_BLOOD,25.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,CR_PAE_BLOOD,11.0,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,CR_PAE_BLOOD,18.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,CR_PAE_BLOOD,16.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,CR_PAE_BLOOD,6.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,CR_PAE_BLOOD,41.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,CR_PAE_BLOOD,16.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,CR_PAE_BLOOD,4.0,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,CR_PAE_BLOOD,3.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,CR_PAE_BLOOD,30.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,CR_PAE_BLOOD,50.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,CR_PAE_BLOOD,6.0,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,CR_PAE_BLOOD,32.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,CR_PAE_BLOOD,50.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,CR_PAE_BLOOD,45.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,CR_PAE_BLOOD,35.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,CR_PAE_BLOOD,45.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,CR_PAE_BLOOD,30.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,CR_PAE_BLOOD,4.0,,aura
+CHN,中國,China,中国,WPR,2021,CR_PAE_BLOOD,20.0,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,CR_PAE_BLOOD,11.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_PAE_BLOOD,30.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_PAE_BLOOD,8.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,CR_PAE_BLOOD,4.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_PAE_BLOOD,22.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,CR_PAE_BLOOD,15.0,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_PAE_BLOOD,40.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,VRE_EFM_BLOOD,5.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,VRE_EFM_BLOOD,40.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,VRE_EFM_BLOOD,30.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,VRE_EFM_BLOOD,15.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,VRE_EFM_BLOOD,45.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,VRE_EFM_BLOOD,30.0,,who-glass
+USA,美國,United States,米国,AMR,2021,VRE_EFM_BLOOD,70.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,VRE_EFM_BLOOD,15.0,,who-glass
+IND,印度,India,インド,SEAR,2021,VRE_EFM_BLOOD,30.0,,icmr-amrsn
+THA,泰國,Thailand,タイ,SEAR,2021,VRE_EFM_BLOOD,5.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,VRE_EFM_BLOOD,23.0,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,VRE_EFM_BLOOD,1.5,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,VRE_EFM_BLOOD,0.5,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,VRE_EFM_BLOOD,20.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,VRE_EFM_BLOOD,38.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,VRE_EFM_BLOOD,30.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,VRE_EFM_BLOOD,1.0,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,VRE_EFM_BLOOD,1.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,VRE_EFM_BLOOD,45.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,VRE_EFM_BLOOD,35.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,VRE_EFM_BLOOD,0.4,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,VRE_EFM_BLOOD,17.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,VRE_EFM_BLOOD,25.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,VRE_EFM_BLOOD,30.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,VRE_EFM_BLOOD,20.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,VRE_EFM_BLOOD,20.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,VRE_EFM_BLOOD,8.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,VRE_EFM_BLOOD,40.0,,aura
+CHN,中國,China,中国,WPR,2021,VRE_EFM_BLOOD,1.5,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,VRE_EFM_BLOOD,1.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,VRE_EFM_BLOOD,38.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,VRE_EFM_BLOOD,1.5,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,VRE_EFM_BLOOD,2.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,VRE_EFM_BLOOD,3.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,VRE_EFM_BLOOD,54.0,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,VRE_EFM_BLOOD,5.0,,who-glass
+ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,FQ_R_ECO_BLOOD,50.0,,who-glass
+KEN,肯亞,Kenya,ケニア,AFR,2021,FQ_R_ECO_BLOOD,50.0,,who-glass
+NGA,奈及利亞,Nigeria,ナイジェリア,AFR,2021,FQ_R_ECO_BLOOD,60.0,,who-glass
+UGA,烏干達,Uganda,ウガンダ,AFR,2021,FQ_R_ECO_BLOOD,60.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,FQ_R_ECO_BLOOD,35.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,FQ_R_ECO_BLOOD,35.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,FQ_R_ECO_BLOOD,40.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,FQ_R_ECO_BLOOD,25.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,FQ_R_ECO_BLOOD,40.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,FQ_R_ECO_BLOOD,65.0,,who-glass
+USA,美國,United States,米国,AMR,2021,FQ_R_ECO_BLOOD,32.0,,cdc-ar-portal
+BGD,孟加拉,Bangladesh,バングラデシュ,SEAR,2021,FQ_R_ECO_BLOOD,75.0,,who-glass
+IDN,印尼,Indonesia,インドネシア,SEAR,2021,FQ_R_ECO_BLOOD,60.0,,who-glass
+IND,印度,India,インド,SEAR,2021,FQ_R_ECO_BLOOD,80.0,,icmr-amrsn
+NPL,尼泊爾,Nepal,ネパール,SEAR,2021,FQ_R_ECO_BLOOD,70.0,,who-glass
+THA,泰國,Thailand,タイ,SEAR,2021,FQ_R_ECO_BLOOD,50.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,FQ_R_ECO_BLOOD,17.0,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,FQ_R_ECO_BLOOD,30.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,FQ_R_ECO_BLOOD,16.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,FQ_R_ECO_BLOOD,20.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,FQ_R_ECO_BLOOD,33.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,FQ_R_ECO_BLOOD,34.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,FQ_R_ECO_BLOOD,13.0,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,FQ_R_ECO_BLOOD,11.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,FQ_R_ECO_BLOOD,30.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,FQ_R_ECO_BLOOD,33.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,FQ_R_ECO_BLOOD,13.0,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,FQ_R_ECO_BLOOD,50.0,,who-caesar
+EGY,埃及,Egypt,エジプト,EMR,2021,FQ_R_ECO_BLOOD,60.0,,who-glass
+IRN,伊朗,Iran,イラン,EMR,2021,FQ_R_ECO_BLOOD,60.0,,who-glass
+JOR,約旦,Jordan,ヨルダン,EMR,2021,FQ_R_ECO_BLOOD,55.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,FQ_R_ECO_BLOOD,75.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,FQ_R_ECO_BLOOD,45.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,FQ_R_ECO_BLOOD,15.0,,aura
+CHN,中國,China,中国,WPR,2021,FQ_R_ECO_BLOOD,53.0,,carss-cn
+JPN,日本,Japan,日本,WPR,2022,FQ_R_ECO_BLOOD,42.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,FQ_R_ECO_BLOOD,43.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,FQ_R_ECO_BLOOD,30.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,FQ_R_ECO_BLOOD,12.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,FQ_R_ECO_BLOOD,45.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,FQ_R_ECO_BLOOD,40.5,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,FQ_R_ECO_BLOOD,60.0,,who-glass
+ZAF,南非,South Africa,南アフリカ,AFR,2021,PNSP_BLOOD,25.0,,who-glass
+ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,PNSP_BLOOD,25.0,,who-glass
+BRA,巴西,Brazil,ブラジル,AMR,2021,PNSP_BLOOD,25.0,,who-glass
+CAN,加拿大,Canada,カナダ,AMR,2021,PNSP_BLOOD,10.0,,phac-carss
+CHL,智利,Chile,チリ,AMR,2021,PNSP_BLOOD,25.0,,who-glass
+MEX,墨西哥,Mexico,メキシコ,AMR,2021,PNSP_BLOOD,30.0,,who-glass
+USA,美國,United States,米国,AMR,2021,PNSP_BLOOD,30.0,,cdc-ar-portal
+THA,泰國,Thailand,タイ,SEAR,2021,PNSP_BLOOD,30.0,,narst
+DEU,德國,Germany,ドイツ,EUR,2022,PNSP_BLOOD,6.0,,ecdc-ears-net
+ESP,西班牙,Spain,スペイン,EUR,2022,PNSP_BLOOD,27.0,,ecdc-ears-net
+FRA,法國,France,フランス,EUR,2022,PNSP_BLOOD,28.0,,ecdc-ears-net
+GBR,英國,United Kingdom,英国,EUR,2022,PNSP_BLOOD,6.0,,ukhsa-espaur
+GRC,希臘,Greece,ギリシャ,EUR,2022,PNSP_BLOOD,25.0,,ecdc-ears-net
+ITA,義大利,Italy,イタリア,EUR,2022,PNSP_BLOOD,13.0,,ecdc-ears-net
+NLD,荷蘭,Netherlands,オランダ,EUR,2022,PNSP_BLOOD,3.0,,ecdc-ears-net
+NOR,挪威,Norway,ノルウェー,EUR,2022,PNSP_BLOOD,5.0,,ecdc-ears-net
+POL,波蘭,Poland,ポーランド,EUR,2022,PNSP_BLOOD,30.0,,ecdc-ears-net
+ROU,羅馬尼亞,Romania,ルーマニア,EUR,2022,PNSP_BLOOD,45.0,,ecdc-ears-net
+SWE,瑞典,Sweden,スウェーデン,EUR,2022,PNSP_BLOOD,7.0,,ecdc-ears-net
+TUR,土耳其,Türkiye,トルコ,EUR,2021,PNSP_BLOOD,30.0,,who-caesar
+IRN,伊朗,Iran,イラン,EMR,2021,PNSP_BLOOD,40.0,,who-glass
+PAK,巴基斯坦,Pakistan,パキスタン,EMR,2021,PNSP_BLOOD,40.0,,who-glass
+SAU,沙烏地阿拉伯,Saudi Arabia,サウジアラビア,EMR,2021,PNSP_BLOOD,30.0,,who-glass
+AUS,澳洲,Australia,オーストラリア,WPR,2022,PNSP_BLOOD,10.0,,aura
+JPN,日本,Japan,日本,WPR,2022,PNSP_BLOOD,40.0,,janis
+KOR,南韓,Republic of Korea,韓国,WPR,2021,PNSP_BLOOD,25.0,,kor-glass
+MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,PNSP_BLOOD,20.0,,who-glass
+NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,PNSP_BLOOD,15.0,,who-glass
+PHL,菲律賓,Philippines,フィリピン,WPR,2021,PNSP_BLOOD,3.0,,who-glass
+TWN,臺灣,Taiwan,台湾,WPR,2023,PNSP_BLOOD,25.0,,tw-cdc-amr-2023
+VNM,越南,Viet Nam,ベトナム,WPR,2021,PNSP_BLOOD,60.0,,who-glass

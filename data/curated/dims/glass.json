@@ -1,0 +1,32 @@
+{
+  "indicators": [
+    {"code": "MRSA_BLOOD", "name": {"zh-TW": "MRSA（血液）", "en": "MRSA (blood)", "ja": "MRSA（血液）"}, "group": "gram_positive", "order": 1,
+     "meta": {"pathogen": "SAU", "antibiotics": ["OXA", "FOX"], "phenotype": "MRSA", "measure": "resistant"}},
+    {"code": "3GC_R_ECO_BLOOD", "name": {"zh-TW": "第三代頭孢菌素抗藥性大腸桿菌（血液）", "en": "3GC-resistant E. coli (blood)", "ja": "第3世代セファロスポリン耐性大腸菌（血液）"}, "group": "gram_negative", "order": 2,
+     "meta": {"pathogen": "ECO", "antibiotics": ["CRO", "CTX", "CAZ"], "phenotype": "3GC-R-ECO", "measure": "resistant"}},
+    {"code": "CR_ECO_BLOOD", "name": {"zh-TW": "碳青黴烯抗藥性大腸桿菌（血液）", "en": "Carbapenem-resistant E. coli (blood)", "ja": "カルバペネム耐性大腸菌（血液）"}, "group": "gram_negative", "order": 3,
+     "meta": {"pathogen": "ECO", "antibiotics": ["MEM", "IPM", "ETP"], "phenotype": "CR-ECO", "measure": "resistant"}},
+    {"code": "3GC_R_KPN_BLOOD", "name": {"zh-TW": "第三代頭孢菌素抗藥性克雷伯氏肺炎桿菌（血液）", "en": "3GC-resistant K. pneumoniae (blood)", "ja": "第3世代セファロスポリン耐性肺炎桿菌（血液）"}, "group": "gram_negative", "order": 4,
+     "meta": {"pathogen": "KPN", "antibiotics": ["CRO", "CTX", "CAZ"], "phenotype": "3GC-R-KPN", "measure": "resistant"}},
+    {"code": "CR_KPN_BLOOD", "name": {"zh-TW": "碳青黴烯抗藥性克雷伯氏肺炎桿菌（血液）", "en": "Carbapenem-resistant K. pneumoniae (blood)", "ja": "カルバペネム耐性肺炎桿菌（血液）"}, "group": "gram_negative", "order": 5,
+     "meta": {"pathogen": "KPN", "antibiotics": ["MEM", "IPM", "ETP"], "phenotype": "CRKP", "measure": "resistant"}},
+    {"code": "CR_ABA_BLOOD", "name": {"zh-TW": "碳青黴烯抗藥性鮑氏不動桿菌（血液）", "en": "Carbapenem-resistant A. baumannii (blood)", "ja": "カルバペネム耐性アシネトバクター・バウマニ（血液）"}, "group": "gram_negative", "order": 6,
+     "meta": {"pathogen": "ABA", "antibiotics": ["MEM", "IPM"], "phenotype": "CRAB", "measure": "resistant"}},
+    {"code": "CR_PAE_BLOOD", "name": {"zh-TW": "碳青黴烯抗藥性綠膿桿菌（血液）", "en": "Carbapenem-resistant P. aeruginosa (blood)", "ja": "カルバペネム耐性緑膿菌（血液）"}, "group": "gram_negative", "order": 7,
+     "meta": {"pathogen": "PAE", "antibiotics": ["MEM", "IPM"], "phenotype": "CRPA", "measure": "resistant"}},
+    {"code": "VRE_EFM_BLOOD", "name": {"zh-TW": "萬古黴素抗藥性屎腸球菌（血液）", "en": "Vancomycin-resistant E. faecium (blood)", "ja": "バンコマイシン耐性E. faecium（血液）"}, "group": "gram_positive", "order": 8,
+     "meta": {"pathogen": "EFM", "antibiotics": ["VAN"], "phenotype": "VR-EFM", "measure": "resistant"}},
+    {"code": "FQ_R_ECO_BLOOD", "name": {"zh-TW": "氟喹諾酮抗藥性大腸桿菌（血液）", "en": "Fluoroquinolone-resistant E. coli (blood)", "ja": "フルオロキノロン耐性大腸菌（血液）"}, "group": "gram_negative", "order": 9,
+     "meta": {"pathogen": "ECO", "antibiotics": ["CIP", "LVX"], "phenotype": "FQ-R-ECO", "measure": "resistant"}},
+    {"code": "PNSP_BLOOD", "name": {"zh-TW": "青黴素不敏感肺炎鏈球菌（血液）", "en": "Penicillin-non-susceptible S. pneumoniae (blood)", "ja": "ペニシリン非感性肺炎球菌（血液）"}, "group": "gram_positive", "order": 10,
+     "meta": {"pathogen": "SPN", "antibiotics": ["PEN"], "phenotype": "PNSP", "measure": "non_susceptible"}}
+  ],
+  "whoRegions": [
+    {"code": "AFR", "name": {"zh-TW": "非洲區", "en": "African Region", "ja": "アフリカ地域"}, "order": 1},
+    {"code": "AMR", "name": {"zh-TW": "美洲區", "en": "Region of the Americas", "ja": "南北アメリカ地域"}, "order": 2},
+    {"code": "SEAR", "name": {"zh-TW": "東南亞區", "en": "South-East Asia Region", "ja": "東南アジア地域"}, "order": 3},
+    {"code": "EUR", "name": {"zh-TW": "歐洲區", "en": "European Region", "ja": "欧州地域"}, "order": 4},
+    {"code": "EMR", "name": {"zh-TW": "東地中海區", "en": "Eastern Mediterranean Region", "ja": "東地中海地域"}, "order": 5},
+    {"code": "WPR", "name": {"zh-TW": "西太平洋區", "en": "Western Pacific Region", "ja": "西太平洋地域"}, "order": 6}
+  ]
+}

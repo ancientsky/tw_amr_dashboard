@@ -1,0 +1,1112 @@
+{
+  "dataset": "glass",
+  "version": "1.0.0-provisional",
+  "generatedAt": "2026-10-20T06:42:41Z",
+  "provisional": true,
+  "sources": [
+    {
+      "id": "aura",
+      "title": {
+        "zh-TW": "澳洲 AURA 抗微生物製劑使用與抗藥性監測",
+        "en": "Antimicrobial Use and Resistance in Australia (AURA)",
+        "ja": "オーストラリア AURA 抗菌薬使用・耐性サーベイランス"
+      },
+      "publisher": "Australian Commission on Safety and Quality in Health Care",
+      "year": 2023,
+      "url": "https://www.safetyandquality.gov.au/our-work/antimicrobial-resistance/antimicrobial-use-and-resistance-australia-surveillance-system",
+      "kind": "annual-report"
+    },
+    {
+      "id": "carss-cn",
+      "title": {
+        "zh-TW": "中國細菌耐藥監測網（CARSS）",
+        "en": "China Antimicrobial Resistance Surveillance System (CARSS)",
+        "ja": "中国細菌耐性監視ネットワーク（CARSS）"
+      },
+      "publisher": "CARSS",
+      "year": 2022,
+      "url": "http://www.carss.cn/",
+      "kind": "annual-report"
+    },
+    {
+      "id": "cdc-ar-portal",
+      "title": {
+        "zh-TW": "美國 CDC 抗藥性與病人安全入口網",
+        "en": "US CDC Antibiotic Resistance & Patient Safety Portal",
+        "ja": "米国CDC 薬剤耐性・患者安全ポータル"
+      },
+      "publisher": "US Centers for Disease Control and Prevention",
+      "year": 2023,
+      "url": "https://arpsp.cdc.gov/",
+      "kind": "open-data"
+    },
+    {
+      "id": "ecdc-ears-net",
+      "title": {
+        "zh-TW": "ECDC 歐洲抗藥性監測網（EARS-Net）",
+        "en": "ECDC European Antimicrobial Resistance Surveillance Network (EARS-Net)",
+        "ja": "ECDC 欧州薬剤耐性サーベイランスネットワーク（EARS-Net）"
+      },
+      "publisher": "European Centre for Disease Prevention and Control",
+      "year": 2023,
+      "url": "https://www.ecdc.europa.eu/en/about-us/networks/disease-networks-and-laboratory-networks/ears-net-data",
+      "kind": "open-data"
+    },
+    {
+      "id": "icmr-amrsn",
+      "title": {
+        "zh-TW": "印度 ICMR 抗藥性監測網（AMRSN）",
+        "en": "ICMR Antimicrobial Resistance Surveillance Network (AMRSN), India",
+        "ja": "インド ICMR 薬剤耐性サーベイランスネットワーク（AMRSN）"
+      },
+      "publisher": "Indian Council of Medical Research",
+      "year": 2022,
+      "url": "https://iamrsn.icmr.org.in/",
+      "kind": "annual-report"
+    },
+    {
+      "id": "janis",
+      "title": {
+        "zh-TW": "日本院內感染對策監視（JANIS）",
+        "en": "Japan Nosocomial Infections Surveillance (JANIS)",
+        "ja": "厚生労働省院内感染対策サーベイランス（JANIS）"
+      },
+      "publisher": "Ministry of Health, Labour and Welfare, Japan",
+      "year": 2023,
+      "url": "https://janis.mhlw.go.jp/english/",
+      "kind": "open-data"
+    },
+    {
+      "id": "kor-glass",
+      "title": {
+        "zh-TW": "韓國 Kor-GLASS 抗藥性監測",
+        "en": "Korea Global Antimicrobial Resistance Surveillance System (Kor-GLASS)",
+        "ja": "韓国 Kor-GLASS 薬剤耐性サーベイランス"
+      },
+      "publisher": "Korea Disease Control and Prevention Agency",
+      "year": 2022,
+      "url": "https://www.kdca.go.kr/",
+      "kind": "annual-report"
+    },
+    {
+      "id": "narst",
+      "title": {
+        "zh-TW": "泰國國家抗藥性監測中心（NARST）",
+        "en": "National Antimicrobial Resistance Surveillance Center, Thailand (NARST)",
+        "ja": "タイ国立薬剤耐性サーベイランスセンター（NARST）"
+      },
+      "publisher": "Department of Medical Sciences, Thailand",
+      "year": 2022,
+      "url": "http://narst.dmsc.moph.go.th/",
+      "kind": "open-data"
+    },
+    {
+      "id": "phac-carss",
+      "title": {
+        "zh-TW": "加拿大抗藥性監測系統（CARSS）報告",
+        "en": "Canadian Antimicrobial Resistance Surveillance System (CARSS) report",
+        "ja": "カナダ薬剤耐性サーベイランスシステム（CARSS）報告書"
+      },
+      "publisher": "Public Health Agency of Canada",
+      "year": 2022,
+      "url": "https://www.canada.ca/en/public-health/services/publications/drugs-health-products/canadian-antimicrobial-resistance-surveillance-system-report.html",
+      "kind": "annual-report"
+    },
+    {
+      "id": "tw-cdc-amr-2023",
+      "title": {
+        "zh-TW": "臺灣抗生素抗藥性監視年報 2023",
+        "en": "Antimicrobial Resistance Surveillance Annual Report, Taiwan 2023",
+        "ja": "台湾抗菌薬耐性監視年報 2023"
+      },
+      "publisher": "衛生福利部疾病管制署 Taiwan CDC",
+      "year": 2023,
+      "url": "https://www.cdc.gov.tw/Category/MPage/4G8HuDdUN1k4xaBJhbPzKQ",
+      "kind": "annual-report"
+    },
+    {
+      "id": "ukhsa-espaur",
+      "title": {
+        "zh-TW": "英國 ESPAUR 報告",
+        "en": "UKHSA ESPAUR report",
+        "ja": "英国 ESPAUR 報告書"
+      },
+      "publisher": "UK Health Security Agency",
+      "year": 2023,
+      "url": "https://www.gov.uk/government/publications/english-surveillance-programme-antimicrobial-utilisation-and-resistance-espaur-report",
+      "kind": "annual-report"
+    },
+    {
+      "id": "who-caesar",
+      "title": {
+        "zh-TW": "WHO 歐洲區 CAESAR 監測網",
+        "en": "WHO/Europe Central Asian and European Surveillance of AMR (CAESAR)",
+        "ja": "WHO欧州 CAESAR サーベイランス"
+      },
+      "publisher": "WHO Regional Office for Europe",
+      "year": 2022,
+      "url": "https://www.who.int/europe/groups/central-asian-and-european-surveillance-of-antimicrobial-resistance-(caesar)",
+      "kind": "open-data"
+    },
+    {
+      "id": "who-glass",
+      "title": {
+        "zh-TW": "WHO 全球抗微生物製劑抗藥性與使用監測系統（GLASS）報告 2022",
+        "en": "WHO Global Antimicrobial Resistance and Use Surveillance System (GLASS) Report 2022",
+        "ja": "WHO 薬剤耐性・抗菌薬使用グローバルサーベイランスシステム（GLASS）報告書 2022"
+      },
+      "publisher": "World Health Organization",
+      "year": 2022,
+      "url": "https://www.who.int/publications/i/item/9789240062702",
+      "kind": "glass"
+    }
+  ],
+  "notes": {
+    "zh-TW": "國際比較：各國數值為依 WHO GLASS 2022 報告／GLASS 儀表板及各國監測系統（EARS-Net、JANIS、Kor-GLASS、CARSS、AURA 等）整理之近似值（血液檢體、約 2021–2022 年），屬暫定整理，請以原始來源為準。臺灣（TWN）列由本站之臺灣抗藥性資料自動計算（優先使用血液檢體、全國、CO+HO），推導方式見 meta.comparability。臺灣非 WHO 會員，未參與 GLASS；各國之檢驗標準（CLSI／EUCAST）、去重複規則與採檢策略不同，比較時請審慎解讀。",
+    "en": "International comparison: country values are approximate figures curated from the WHO GLASS 2022 report / GLASS dashboard and national systems (EARS-Net, JANIS, Kor-GLASS, CARSS, AURA, …) for bloodstream isolates (~2021–2022); they are provisional — consult the original sources. Taiwan (TWN) rows are computed automatically from this site's Taiwan resistance data (blood, national, CO+HO preferred); see meta.comparability for the derivation. Taiwan is not a WHO Member State and does not report to GLASS; breakpoints (CLSI vs EUCAST), de-duplication and sampling differ between systems, so interpret comparisons with caution.",
+    "ja": "国際比較：各国の値は WHO GLASS 2022 報告書／GLASSダッシュボードおよび各国サーベイランス（EARS-Net、JANIS、Kor-GLASS、CARSS、AURA 等）から整理した血液由来株の近似値（2021〜2022年頃）で、暫定的なものです。原典をご確認ください。台湾（TWN）の行は本サイトの台湾耐性データから自動算出しています（血液・全国・CO+HO を優先）。算出方法は meta.comparability を参照。台湾はWHO非加盟でGLASSに参加していません。判定基準（CLSI/EUCAST）、重複除去、検体採取方針が異なるため、比較は慎重に解釈してください。"
+  },
+  "slice": {
+    "by": "country",
+    "value": "PHL",
+    "of": "glass"
+  },
+  "meta": {
+    "comparability": {
+      "TWN": {
+        "MRSA_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "SAU",
+          "antibiotic": "OXA",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "3GC_R_ECO_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "ECO",
+          "antibiotic": "CRO",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "CR_ECO_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "ECO",
+          "antibiotic": "MEM",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "3GC_R_KPN_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "KPN",
+          "antibiotic": "CRO",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "CR_KPN_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "KPN",
+          "antibiotic": "MEM",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "CR_ABA_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "ABA",
+          "antibiotic": "MEM",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "CR_PAE_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "PAE",
+          "antibiotic": "MEM",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "VRE_EFM_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "EFM",
+          "antibiotic": "VAN",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "FQ_R_ECO_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "ECO",
+          "antibiotic": "CIP",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "text",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        },
+        "PNSP_BLOOD": {
+          "available": true,
+          "tier": "blood",
+          "pathogen": "SPN",
+          "antibiotic": "PEN",
+          "phenotype": null,
+          "specimen": "blood",
+          "level": "all",
+          "setting": "all",
+          "year": 2023,
+          "precision": "chart_estimate",
+          "reportYear": 2023,
+          "measure": "resistant (%R as printed)",
+          "fallback": false
+        }
+      },
+      "tiers": {
+        "blood": "blood isolates, national, CO+HO, drug-level (closest to GLASS)",
+        "phenotype": "THAS MDRO indicator, national, CO+HO, all specimens (fallback)",
+        "all_specimens": "antibiogram, national, all specimens (fallback)"
+      },
+      "caveats": [
+        "Taiwan is not a WHO Member State and does not report to GLASS; TWN rows are computed by this site from the THAS annual reports.",
+        "Taiwan's THAS uses CLSI breakpoints; many GLASS/EARS-Net countries use EUCAST.",
+        "THAS percentages count isolates (first-isolate rules per report); GLASS counts patients with positive blood cultures.",
+        "Antibiogram-derived values are non-susceptible (100 - %S, includes intermediate) and therefore slightly higher than %R.",
+        "Country values other than TWN are approximate curated figures (~2021-2022) - provisional."
+      ]
+    }
+  },
+  "dims": {
+    "indicators": [
+      {
+        "code": "MRSA_BLOOD",
+        "name": {
+          "zh-TW": "MRSA（血液）",
+          "en": "MRSA (blood)",
+          "ja": "MRSA（血液）"
+        },
+        "group": "gram_positive",
+        "order": 1,
+        "meta": {
+          "pathogen": "SAU",
+          "antibiotics": [
+            "OXA",
+            "FOX"
+          ],
+          "phenotype": "MRSA",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "3GC_R_ECO_BLOOD",
+        "name": {
+          "zh-TW": "第三代頭孢菌素抗藥性大腸桿菌（血液）",
+          "en": "3GC-resistant E. coli (blood)",
+          "ja": "第3世代セファロスポリン耐性大腸菌（血液）"
+        },
+        "group": "gram_negative",
+        "order": 2,
+        "meta": {
+          "pathogen": "ECO",
+          "antibiotics": [
+            "CRO",
+            "CTX",
+            "CAZ"
+          ],
+          "phenotype": "3GC-R-ECO",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "CR_ECO_BLOOD",
+        "name": {
+          "zh-TW": "碳青黴烯抗藥性大腸桿菌（血液）",
+          "en": "Carbapenem-resistant E. coli (blood)",
+          "ja": "カルバペネム耐性大腸菌（血液）"
+        },
+        "group": "gram_negative",
+        "order": 3,
+        "meta": {
+          "pathogen": "ECO",
+          "antibiotics": [
+            "MEM",
+            "IPM",
+            "ETP"
+          ],
+          "phenotype": "CR-ECO",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "3GC_R_KPN_BLOOD",
+        "name": {
+          "zh-TW": "第三代頭孢菌素抗藥性克雷伯氏肺炎桿菌（血液）",
+          "en": "3GC-resistant K. pneumoniae (blood)",
+          "ja": "第3世代セファロスポリン耐性肺炎桿菌（血液）"
+        },
+        "group": "gram_negative",
+        "order": 4,
+        "meta": {
+          "pathogen": "KPN",
+          "antibiotics": [
+            "CRO",
+            "CTX",
+            "CAZ"
+          ],
+          "phenotype": "3GC-R-KPN",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "CR_KPN_BLOOD",
+        "name": {
+          "zh-TW": "碳青黴烯抗藥性克雷伯氏肺炎桿菌（血液）",
+          "en": "Carbapenem-resistant K. pneumoniae (blood)",
+          "ja": "カルバペネム耐性肺炎桿菌（血液）"
+        },
+        "group": "gram_negative",
+        "order": 5,
+        "meta": {
+          "pathogen": "KPN",
+          "antibiotics": [
+            "MEM",
+            "IPM",
+            "ETP"
+          ],
+          "phenotype": "CRKP",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "CR_ABA_BLOOD",
+        "name": {
+          "zh-TW": "碳青黴烯抗藥性鮑氏不動桿菌（血液）",
+          "en": "Carbapenem-resistant A. baumannii (blood)",
+          "ja": "カルバペネム耐性アシネトバクター・バウマニ（血液）"
+        },
+        "group": "gram_negative",
+        "order": 6,
+        "meta": {
+          "pathogen": "ABA",
+          "antibiotics": [
+            "MEM",
+            "IPM"
+          ],
+          "phenotype": "CRAB",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "CR_PAE_BLOOD",
+        "name": {
+          "zh-TW": "碳青黴烯抗藥性綠膿桿菌（血液）",
+          "en": "Carbapenem-resistant P. aeruginosa (blood)",
+          "ja": "カルバペネム耐性緑膿菌（血液）"
+        },
+        "group": "gram_negative",
+        "order": 7,
+        "meta": {
+          "pathogen": "PAE",
+          "antibiotics": [
+            "MEM",
+            "IPM"
+          ],
+          "phenotype": "CRPA",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "VRE_EFM_BLOOD",
+        "name": {
+          "zh-TW": "萬古黴素抗藥性屎腸球菌（血液）",
+          "en": "Vancomycin-resistant E. faecium (blood)",
+          "ja": "バンコマイシン耐性E. faecium（血液）"
+        },
+        "group": "gram_positive",
+        "order": 8,
+        "meta": {
+          "pathogen": "EFM",
+          "antibiotics": [
+            "VAN"
+          ],
+          "phenotype": "VR-EFM",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "FQ_R_ECO_BLOOD",
+        "name": {
+          "zh-TW": "氟喹諾酮抗藥性大腸桿菌（血液）",
+          "en": "Fluoroquinolone-resistant E. coli (blood)",
+          "ja": "フルオロキノロン耐性大腸菌（血液）"
+        },
+        "group": "gram_negative",
+        "order": 9,
+        "meta": {
+          "pathogen": "ECO",
+          "antibiotics": [
+            "CIP",
+            "LVX"
+          ],
+          "phenotype": "FQ-R-ECO",
+          "measure": "resistant"
+        }
+      },
+      {
+        "code": "PNSP_BLOOD",
+        "name": {
+          "zh-TW": "青黴素不敏感肺炎鏈球菌（血液）",
+          "en": "Penicillin-non-susceptible S. pneumoniae (blood)",
+          "ja": "ペニシリン非感性肺炎球菌（血液）"
+        },
+        "group": "gram_positive",
+        "order": 10,
+        "meta": {
+          "pathogen": "SPN",
+          "antibiotics": [
+            "PEN"
+          ],
+          "phenotype": "PNSP",
+          "measure": "non_susceptible"
+        }
+      }
+    ],
+    "whoRegions": [
+      {
+        "code": "AFR",
+        "name": {
+          "zh-TW": "非洲區",
+          "en": "African Region",
+          "ja": "アフリカ地域"
+        },
+        "order": 1
+      },
+      {
+        "code": "AMR",
+        "name": {
+          "zh-TW": "美洲區",
+          "en": "Region of the Americas",
+          "ja": "南北アメリカ地域"
+        },
+        "order": 2
+      },
+      {
+        "code": "SEAR",
+        "name": {
+          "zh-TW": "東南亞區",
+          "en": "South-East Asia Region",
+          "ja": "東南アジア地域"
+        },
+        "order": 3
+      },
+      {
+        "code": "EUR",
+        "name": {
+          "zh-TW": "歐洲區",
+          "en": "European Region",
+          "ja": "欧州地域"
+        },
+        "order": 4
+      },
+      {
+        "code": "EMR",
+        "name": {
+          "zh-TW": "東地中海區",
+          "en": "Eastern Mediterranean Region",
+          "ja": "東地中海地域"
+        },
+        "order": 5
+      },
+      {
+        "code": "WPR",
+        "name": {
+          "zh-TW": "西太平洋區",
+          "en": "Western Pacific Region",
+          "ja": "西太平洋地域"
+        },
+        "order": 6
+      }
+    ],
+    "countries": [
+      {
+        "code": "ARG",
+        "name": {
+          "zh-TW": "阿根廷",
+          "en": "Argentina",
+          "ja": "アルゼンチン"
+        },
+        "group": "AMR",
+        "meta": {
+          "whoRegion": "AMR"
+        }
+      },
+      {
+        "code": "AUS",
+        "name": {
+          "zh-TW": "澳洲",
+          "en": "Australia",
+          "ja": "オーストラリア"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "BGD",
+        "name": {
+          "zh-TW": "孟加拉",
+          "en": "Bangladesh",
+          "ja": "バングラデシュ"
+        },
+        "group": "SEAR",
+        "meta": {
+          "whoRegion": "SEAR"
+        }
+      },
+      {
+        "code": "BRA",
+        "name": {
+          "zh-TW": "巴西",
+          "en": "Brazil",
+          "ja": "ブラジル"
+        },
+        "group": "AMR",
+        "meta": {
+          "whoRegion": "AMR"
+        }
+      },
+      {
+        "code": "CAN",
+        "name": {
+          "zh-TW": "加拿大",
+          "en": "Canada",
+          "ja": "カナダ"
+        },
+        "group": "AMR",
+        "meta": {
+          "whoRegion": "AMR"
+        }
+      },
+      {
+        "code": "CHL",
+        "name": {
+          "zh-TW": "智利",
+          "en": "Chile",
+          "ja": "チリ"
+        },
+        "group": "AMR",
+        "meta": {
+          "whoRegion": "AMR"
+        }
+      },
+      {
+        "code": "CHN",
+        "name": {
+          "zh-TW": "中國",
+          "en": "China",
+          "ja": "中国"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "DEU",
+        "name": {
+          "zh-TW": "德國",
+          "en": "Germany",
+          "ja": "ドイツ"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "EGY",
+        "name": {
+          "zh-TW": "埃及",
+          "en": "Egypt",
+          "ja": "エジプト"
+        },
+        "group": "EMR",
+        "meta": {
+          "whoRegion": "EMR"
+        }
+      },
+      {
+        "code": "ESP",
+        "name": {
+          "zh-TW": "西班牙",
+          "en": "Spain",
+          "ja": "スペイン"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "ETH",
+        "name": {
+          "zh-TW": "衣索比亞",
+          "en": "Ethiopia",
+          "ja": "エチオピア"
+        },
+        "group": "AFR",
+        "meta": {
+          "whoRegion": "AFR"
+        }
+      },
+      {
+        "code": "FRA",
+        "name": {
+          "zh-TW": "法國",
+          "en": "France",
+          "ja": "フランス"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "GBR",
+        "name": {
+          "zh-TW": "英國",
+          "en": "United Kingdom",
+          "ja": "英国"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "GRC",
+        "name": {
+          "zh-TW": "希臘",
+          "en": "Greece",
+          "ja": "ギリシャ"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "IDN",
+        "name": {
+          "zh-TW": "印尼",
+          "en": "Indonesia",
+          "ja": "インドネシア"
+        },
+        "group": "SEAR",
+        "meta": {
+          "whoRegion": "SEAR"
+        }
+      },
+      {
+        "code": "IND",
+        "name": {
+          "zh-TW": "印度",
+          "en": "India",
+          "ja": "インド"
+        },
+        "group": "SEAR",
+        "meta": {
+          "whoRegion": "SEAR"
+        }
+      },
+      {
+        "code": "IRN",
+        "name": {
+          "zh-TW": "伊朗",
+          "en": "Iran",
+          "ja": "イラン"
+        },
+        "group": "EMR",
+        "meta": {
+          "whoRegion": "EMR"
+        }
+      },
+      {
+        "code": "ITA",
+        "name": {
+          "zh-TW": "義大利",
+          "en": "Italy",
+          "ja": "イタリア"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "JOR",
+        "name": {
+          "zh-TW": "約旦",
+          "en": "Jordan",
+          "ja": "ヨルダン"
+        },
+        "group": "EMR",
+        "meta": {
+          "whoRegion": "EMR"
+        }
+      },
+      {
+        "code": "JPN",
+        "name": {
+          "zh-TW": "日本",
+          "en": "Japan",
+          "ja": "日本"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "KEN",
+        "name": {
+          "zh-TW": "肯亞",
+          "en": "Kenya",
+          "ja": "ケニア"
+        },
+        "group": "AFR",
+        "meta": {
+          "whoRegion": "AFR"
+        }
+      },
+      {
+        "code": "KOR",
+        "name": {
+          "zh-TW": "南韓",
+          "en": "Republic of Korea",
+          "ja": "韓国"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "MEX",
+        "name": {
+          "zh-TW": "墨西哥",
+          "en": "Mexico",
+          "ja": "メキシコ"
+        },
+        "group": "AMR",
+        "meta": {
+          "whoRegion": "AMR"
+        }
+      },
+      {
+        "code": "MYS",
+        "name": {
+          "zh-TW": "馬來西亞",
+          "en": "Malaysia",
+          "ja": "マレーシア"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "NGA",
+        "name": {
+          "zh-TW": "奈及利亞",
+          "en": "Nigeria",
+          "ja": "ナイジェリア"
+        },
+        "group": "AFR",
+        "meta": {
+          "whoRegion": "AFR"
+        }
+      },
+      {
+        "code": "NLD",
+        "name": {
+          "zh-TW": "荷蘭",
+          "en": "Netherlands",
+          "ja": "オランダ"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "NOR",
+        "name": {
+          "zh-TW": "挪威",
+          "en": "Norway",
+          "ja": "ノルウェー"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "NPL",
+        "name": {
+          "zh-TW": "尼泊爾",
+          "en": "Nepal",
+          "ja": "ネパール"
+        },
+        "group": "SEAR",
+        "meta": {
+          "whoRegion": "SEAR"
+        }
+      },
+      {
+        "code": "NZL",
+        "name": {
+          "zh-TW": "紐西蘭",
+          "en": "New Zealand",
+          "ja": "ニュージーランド"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "PAK",
+        "name": {
+          "zh-TW": "巴基斯坦",
+          "en": "Pakistan",
+          "ja": "パキスタン"
+        },
+        "group": "EMR",
+        "meta": {
+          "whoRegion": "EMR"
+        }
+      },
+      {
+        "code": "PHL",
+        "name": {
+          "zh-TW": "菲律賓",
+          "en": "Philippines",
+          "ja": "フィリピン"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "POL",
+        "name": {
+          "zh-TW": "波蘭",
+          "en": "Poland",
+          "ja": "ポーランド"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "ROU",
+        "name": {
+          "zh-TW": "羅馬尼亞",
+          "en": "Romania",
+          "ja": "ルーマニア"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "SAU",
+        "name": {
+          "zh-TW": "沙烏地阿拉伯",
+          "en": "Saudi Arabia",
+          "ja": "サウジアラビア"
+        },
+        "group": "EMR",
+        "meta": {
+          "whoRegion": "EMR"
+        }
+      },
+      {
+        "code": "SWE",
+        "name": {
+          "zh-TW": "瑞典",
+          "en": "Sweden",
+          "ja": "スウェーデン"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "THA",
+        "name": {
+          "zh-TW": "泰國",
+          "en": "Thailand",
+          "ja": "タイ"
+        },
+        "group": "SEAR",
+        "meta": {
+          "whoRegion": "SEAR"
+        }
+      },
+      {
+        "code": "TUR",
+        "name": {
+          "zh-TW": "土耳其",
+          "en": "Türkiye",
+          "ja": "トルコ"
+        },
+        "group": "EUR",
+        "meta": {
+          "whoRegion": "EUR"
+        }
+      },
+      {
+        "code": "TWN",
+        "name": {
+          "zh-TW": "臺灣",
+          "en": "Taiwan",
+          "ja": "台湾"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "UGA",
+        "name": {
+          "zh-TW": "烏干達",
+          "en": "Uganda",
+          "ja": "ウガンダ"
+        },
+        "group": "AFR",
+        "meta": {
+          "whoRegion": "AFR"
+        }
+      },
+      {
+        "code": "USA",
+        "name": {
+          "zh-TW": "美國",
+          "en": "United States",
+          "ja": "米国"
+        },
+        "group": "AMR",
+        "meta": {
+          "whoRegion": "AMR"
+        }
+      },
+      {
+        "code": "VNM",
+        "name": {
+          "zh-TW": "越南",
+          "en": "Viet Nam",
+          "ja": "ベトナム"
+        },
+        "group": "WPR",
+        "meta": {
+          "whoRegion": "WPR"
+        }
+      },
+      {
+        "code": "ZAF",
+        "name": {
+          "zh-TW": "南非",
+          "en": "South Africa",
+          "ja": "南アフリカ"
+        },
+        "group": "AFR",
+        "meta": {
+          "whoRegion": "AFR"
+        }
+      }
+    ]
+  },
+  "records": [
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"MRSA_BLOOD","resistant_pct":55.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"3GC_R_ECO_BLOOD","resistant_pct":40.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"CR_ECO_BLOOD","resistant_pct":4.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"3GC_R_KPN_BLOOD","resistant_pct":50.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"CR_KPN_BLOOD","resistant_pct":20.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"CR_ABA_BLOOD","resistant_pct":60.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"CR_PAE_BLOOD","resistant_pct":22.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"VRE_EFM_BLOOD","resistant_pct":3.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"FQ_R_ECO_BLOOD","resistant_pct":45.0,"isolates":null,"source":"who-glass"},
+    {"iso3":"PHL","country":{"zh-TW":"菲律賓","en":"Philippines","ja":"フィリピン"},"whoRegion":"WPR","year":2021,"indicator":"PNSP_BLOOD","resistant_pct":3.0,"isolates":null,"source":"who-glass"}
+  ]
+}
