@@ -1,7 +1,7 @@
 {
   "dataset": "meta",
   "version": "1.0.0",
-  "generatedAt": "2026-10-20T06:42:41Z",
+  "generatedAt": "2026-10-20T06:46:33Z",
   "provisional": false,
   "latestYear": 2024,
   "yearsAvailable": [
@@ -49,8 +49,8 @@
       }
     ]
   },
-  "lastBuild": "2026-10-20T06:42:41Z",
-  "contentDigest": "809053b53c3877e8fb36620823084af31ee7047b8b3ef392e42cd8616444b1d2",
+  "lastBuild": "2026-10-20T06:46:33Z",
+  "contentDigest": "b17bac998f124aaa7723449967ea3b70d79d3185d81b7d38a2940f576559db47",
   "sources": [
     {
       "id": "tw-cdc-amr-2022",
@@ -274,12 +274,12 @@
     "ja": "耐性・分離株数データはユーザー提供の台湾CDC薬剤耐性年報3冊に基づきます（暫定ではありません）。抗菌薬使用量、医療関連感染、国際比較データは暫定推計です。"
   },
   "records": [
-    {"dataset":"resistance","file":"data/resistance.json","records":5703,"provisional":false,"yearMin":2018,"yearMax":2024},
-    {"dataset":"isolates","file":"data/isolates.json","records":1254,"provisional":false,"yearMin":2017,"yearMax":2024},
+    {"dataset":"resistance","file":"data/resistance.json","records":6463,"provisional":false,"yearMin":2017,"yearMax":2024},
+    {"dataset":"isolates","file":"data/isolates.json","records":2114,"provisional":false,"yearMin":2017,"yearMax":2024},
     {"dataset":"antibiotic_use","file":"data/antibiotic_use.json","records":736,"provisional":true,"yearMin":2017,"yearMax":2024},
     {"dataset":"hai","file":"data/hai.json","records":2080,"provisional":true,"yearMin":2017,"yearMax":2024},
     {"dataset":"hai_pathogens","file":"data/hai_pathogens.json","records":960,"provisional":true,"yearMin":2017,"yearMax":2024},
-    {"dataset":"glass","file":"data/glass.json","records":402,"provisional":true,"yearMin":2021,"yearMax":2023},
+    {"dataset":"glass","file":"data/glass.json","records":402,"provisional":true,"yearMin":2021,"yearMax":2024},
     {"dataset":"links","file":"data/links.json","records":60,"provisional":false,"yearMin":null,"yearMax":null},
     {"dataset":"glossary","file":"data/glossary.json","records":70,"provisional":false,"yearMin":null,"yearMax":null},
     {"dataset":"kb","file":"data/kb.json","records":138,"provisional":false,"yearMin":null,"yearMax":null}

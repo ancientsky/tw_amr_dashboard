@@ -198,7 +198,7 @@
     "resistanceTrend": {
       "title": "{phenotype} resistance trend",
       "titleGeneric": "{pathogen} resistant to {antibiotic}",
-      "subtitle": "% resistant isolates by ward, {level}",
+      "subtitle": "% resistant isolates by hospital level · {scope}",
       "aria": "Line chart of percentage resistant over time"
     },
     "resistanceHeatmap": {

@@ -39,7 +39,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,MRSA_BLOOD,50.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,MRSA_BLOOD,18.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,MRSA_BLOOD,9.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,MRSA_BLOOD,55.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,MRSA_BLOOD,45.5,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,MRSA_BLOOD,46.5,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,MRSA_BLOOD,70.0,,who-glass
 ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,3GC_R_ECO_BLOOD,65.0,,who-glass
 KEN,肯亞,Kenya,ケニア,AFR,2021,3GC_R_ECO_BLOOD,55.0,,who-glass
@@ -81,7 +81,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,3GC_R_ECO_BLOOD,33.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,3GC_R_ECO_BLOOD,26.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,3GC_R_ECO_BLOOD,11.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,3GC_R_ECO_BLOOD,40.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,3GC_R_ECO_BLOOD,32.0,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,3GC_R_ECO_BLOOD,34.5,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,3GC_R_ECO_BLOOD,65.0,,who-glass
 ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_ECO_BLOOD,5.0,,who-glass
 KEN,肯亞,Kenya,ケニア,AFR,2021,CR_ECO_BLOOD,5.0,,who-glass
@@ -123,7 +123,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_ECO_BLOOD,0.2,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_ECO_BLOOD,1.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,CR_ECO_BLOOD,0.1,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_ECO_BLOOD,4.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,CR_ECO_BLOOD,2.0,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,CR_ECO_BLOOD,2.2,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_ECO_BLOOD,4.0,,who-glass
 ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,3GC_R_KPN_BLOOD,80.0,,who-glass
 KEN,肯亞,Kenya,ケニア,AFR,2021,3GC_R_KPN_BLOOD,75.0,,who-glass
@@ -165,7 +165,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,3GC_R_KPN_BLOOD,33.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,3GC_R_KPN_BLOOD,32.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,3GC_R_KPN_BLOOD,10.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,3GC_R_KPN_BLOOD,50.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,3GC_R_KPN_BLOOD,24.5,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,3GC_R_KPN_BLOOD,24.5,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,3GC_R_KPN_BLOOD,55.0,,who-glass
 ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_KPN_BLOOD,25.0,,who-glass
 KEN,肯亞,Kenya,ケニア,AFR,2021,CR_KPN_BLOOD,20.0,,who-glass
@@ -207,7 +207,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_KPN_BLOOD,2.5,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_KPN_BLOOD,6.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,CR_KPN_BLOOD,0.3,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_KPN_BLOOD,20.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,CR_KPN_BLOOD,12.0,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,CR_KPN_BLOOD,9.5,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_KPN_BLOOD,30.0,,who-glass
 ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_ABA_BLOOD,75.0,,who-glass
 KEN,肯亞,Kenya,ケニア,AFR,2021,CR_ABA_BLOOD,60.0,,who-glass
@@ -248,7 +248,7 @@ JPN,日本,Japan,日本,WPR,2022,CR_ABA_BLOOD,2.0,,janis
 KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_ABA_BLOOD,88.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_ABA_BLOOD,60.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_ABA_BLOOD,60.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,CR_ABA_BLOOD,60.5,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,CR_ABA_BLOOD,58.5,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_ABA_BLOOD,85.0,,who-glass
 ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,CR_PAE_BLOOD,30.0,,who-glass
 KEN,肯亞,Kenya,ケニア,AFR,2021,CR_PAE_BLOOD,25.0,,who-glass
@@ -290,7 +290,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,CR_PAE_BLOOD,30.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,CR_PAE_BLOOD,8.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,CR_PAE_BLOOD,4.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,CR_PAE_BLOOD,22.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,CR_PAE_BLOOD,15.0,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,CR_PAE_BLOOD,14.0,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,CR_PAE_BLOOD,40.0,,who-glass
 ZAF,南非,South Africa,南アフリカ,AFR,2021,VRE_EFM_BLOOD,5.0,,who-glass
 ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,VRE_EFM_BLOOD,40.0,,who-glass
@@ -326,7 +326,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,VRE_EFM_BLOOD,38.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,VRE_EFM_BLOOD,1.5,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,VRE_EFM_BLOOD,2.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,VRE_EFM_BLOOD,3.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,VRE_EFM_BLOOD,54.0,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,VRE_EFM_BLOOD,50.0,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,VRE_EFM_BLOOD,5.0,,who-glass
 ETH,衣索比亞,Ethiopia,エチオピア,AFR,2021,FQ_R_ECO_BLOOD,50.0,,who-glass
 KEN,肯亞,Kenya,ケニア,AFR,2021,FQ_R_ECO_BLOOD,50.0,,who-glass
@@ -368,7 +368,7 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,FQ_R_ECO_BLOOD,43.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,FQ_R_ECO_BLOOD,30.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,FQ_R_ECO_BLOOD,12.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,FQ_R_ECO_BLOOD,45.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,FQ_R_ECO_BLOOD,40.5,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,FQ_R_ECO_BLOOD,41.5,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,FQ_R_ECO_BLOOD,60.0,,who-glass
 ZAF,南非,South Africa,南アフリカ,AFR,2021,PNSP_BLOOD,25.0,,who-glass
 ARG,阿根廷,Argentina,アルゼンチン,AMR,2021,PNSP_BLOOD,25.0,,who-glass
@@ -399,5 +399,5 @@ KOR,南韓,Republic of Korea,韓国,WPR,2021,PNSP_BLOOD,25.0,,kor-glass
 MYS,馬來西亞,Malaysia,マレーシア,WPR,2021,PNSP_BLOOD,20.0,,who-glass
 NZL,紐西蘭,New Zealand,ニュージーランド,WPR,2021,PNSP_BLOOD,15.0,,who-glass
 PHL,菲律賓,Philippines,フィリピン,WPR,2021,PNSP_BLOOD,3.0,,who-glass
-TWN,臺灣,Taiwan,台湾,WPR,2023,PNSP_BLOOD,25.0,,tw-cdc-amr-2023
+TWN,臺灣,Taiwan,台湾,WPR,2024,PNSP_BLOOD,42.1,,tw-cdc-amr-2024
 VNM,越南,Viet Nam,ベトナム,WPR,2021,PNSP_BLOOD,60.0,,who-glass

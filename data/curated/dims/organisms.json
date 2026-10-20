@@ -531,7 +531,8 @@
      "Acinetobacter baumannii complex",
      "Acinetobacter calcoaceticus-Acinetobacter baumannii complex",
      "Acinetobacter calcoaceticus-baumannii complex",
-     "ACB complex"
+     "ACB complex",
+     "Acinetobacter baumannii-calcoaceticus complex"
     ],
     "note": "2022 edition labels this organism 'A. calcoaceticus–A. baumannii complex'; 2023+ editions 'A. baumannii'. Both are mapped to ABA."
    }

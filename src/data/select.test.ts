@@ -5,6 +5,8 @@ import type { Envelope, IsolateRecord, ResistanceRecord } from './types';
 import {
   buildSeries,
   clampYearRange,
+  dedupeResistance,
+  isBetterRecord,
   extentYears,
   filterIsolates,
   filterResistance,
@@ -188,5 +190,33 @@ describe('isolates', () => {
     const tr = isolateTrend(iso, { organism: ['ECO', 'KPN'] });
     expect(tr.series).toHaveLength(2);
     expect(tr.years).toHaveLength(8);
+  });
+});
+
+describe('dedupe across report editions', () => {
+  const base = { pathogen: 'KPN', antibiotic: 'MEM', level: 'all', ward: 'all', setting: 'all', specimen: 'all', isolates: null } as const;
+  const rows: ResistanceRecord[] = [
+    { ...base, year: 2022, resistant_pct: 14, precision: 'chart_estimate', reportYear: 2022 },
+    { ...base, year: 2022, resistant_pct: 13, precision: 'table', reportYear: 2023 },
+    { ...base, year: 2023, resistant_pct: 15, precision: 'chart_estimate', reportYear: 2024 },
+    { ...base, year: 2023, resistant_pct: 12, precision: 'table', reportYear: 2023 },
+    { ...base, year: 2024, resistant_pct: 11, precision: 'table', reportYear: 2024 },
+  ];
+  it('prefers table over chart estimates, then newer edition', () => {
+    expect(isBetterRecord(rows[1], rows[0])).toBe(true);
+    expect(isBetterRecord(rows[2], rows[3])).toBe(false);
+    const d = dedupeResistance(rows);
+    expect(d.map((r) => r.resistant_pct)).toEqual([13, 12, 11]);
+  });
+  it('series builders and latestValue use the best record per year', () => {
+    const set = resistanceTrend(rows, { pathogen: 'KPN' }, 'level');
+    expect(set.series[0].data).toEqual([13, 12, 11]);
+    const lv = latestValue(rows, () => true)!;
+    expect(lv).toMatchObject({ year: 2024, value: 11, prevYear: 2023, prevValue: 12, delta: -1 });
+  });
+  it('pivot restricts rows/cols', () => {
+    const pv = pivotPathogenAntibiotic(recs, { pathogens: ['KPN', 'ABA'], antibiotics: ['MEM'] });
+    expect(pv.pathogens.sort()).toEqual(['ABA', 'KPN']);
+    expect(pv.antibiotics).toEqual(['MEM']);
   });
 });

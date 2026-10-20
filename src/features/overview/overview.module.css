@@ -5,11 +5,7 @@
 }
 @media (min-width: 1100px) {
   .grid {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: start;
   }
-}
-.wide,
-.side {
-  min-width: 0;
 }

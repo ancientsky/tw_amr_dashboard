@@ -20,13 +20,12 @@ export default function OverviewPage() {
       <KpiStrip level={p.level} />
       <Section>
         <div className={s.grid}>
-          <div className={s.wide}>
-            <ResistanceTrend pathogen={p.pathogen} antibiotic={p.antibiotic} level={p.level} ward={p.ward} years={p.years} />
-          </div>
-          <div className={s.side}>
-            <ResistanceHeatmap level={p.level} />
-          </div>
+          <ResistanceTrend pathogen={p.pathogen ?? 'ABA'} antibiotic={p.antibiotic ?? 'MEM'} level={p.level} years={p.years} />
+          <ResistanceTrend pathogen="KPN" antibiotic="MEM" level={p.level} years={p.years} />
         </div>
+      </Section>
+      <Section>
+        <ResistanceHeatmap level={p.level} />
       </Section>
     </PlaceholderPage>
   );

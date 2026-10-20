@@ -18,8 +18,8 @@ export const KPI_INDICATORS: readonly [string, string][] = [
   ['EFM', 'VAN'],
 ];
 
-/** Four stat tiles: latest ICU % resistant for MRSA / CRKP / CRAB / VRE with Δ vs previous year + sparkline. */
-export function KpiStrip({ level = 'all', ward = 'icu', setting = 'all', compact, link, fixtureFallback }: ChartParams) {
+/** Four stat tiles: latest % resistant for MRSA / CRKP / CRAB / VRE with Δ vs previous year + sparkline. */
+export function KpiStrip({ level = 'all', ward = 'all', setting = 'all', compact, link, fixtureFallback }: ChartParams) {
   const t = useT();
   const ct = useChartTheme();
   const { data: env, status, isFixture } = useDataset('resistance', { fixtureFallback });
@@ -33,13 +33,13 @@ export function KpiStrip({ level = 'all', ward = 'icu', setting = 'all', compact
       const lv = latestValue(recs, () => true);
       const trend = buildSeries(recs, () => 'x', (r) => r.resistant_pct).series[0]?.data ?? [];
       const pheno = phenotypeFor(env, p, a);
-      return { p, a, i, lv, trend, recs, label: pheno ? namePh(pheno) : `${nameP(p)} × ${a}` };
+      return { p, a, i, lv, trend, recs, code: pheno ?? `${p}·${a}`, label: pheno ? namePh(pheno) : `${nameP(p)} × ${a}` };
     }).filter((x) => x.lv);
   }, [env, level, ward, setting, namePh, nameP]);
 
   const year = items[0]?.lv?.year;
   const title = t('charts.kpiStrip.title');
-  const subtitle = t('charts.kpiStrip.subtitle', { year: year ?? '—', ward: t(`wards.${ward}`) });
+  const subtitle = t('charts.kpiStrip.subtitle', { year: year ?? '—', ward: `${t(`levels.${level}`)}${ward !== 'all' ? ` · ${t(`wards.${ward}`)}` : ''}` });
   const rows = items.map((x) => ({
     [t('common.phenotype')]: x.label,
     [t('common.year')]: x.lv!.year,
@@ -70,7 +70,8 @@ export function KpiStrip({ level = 'all', ward = 'icu', setting = 'all', compact
         {items.map((x) => (
           <Kpi
             key={`${x.p}-${x.a}`}
-            label={x.label}
+            label={x.code}
+            caption={x.label}
             value={x.lv!.value}
             format={(v) => v.toFixed(1)}
             unit="%"

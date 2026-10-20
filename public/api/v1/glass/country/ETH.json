@@ -1,7 +1,7 @@
 {
   "dataset": "glass",
   "version": "1.0.0-provisional",
-  "generatedAt": "2026-10-20T06:42:41Z",
+  "generatedAt": "2026-10-20T06:46:33Z",
   "provisional": true,
   "sources": [
     {
@@ -113,14 +113,14 @@
       "kind": "annual-report"
     },
     {
-      "id": "tw-cdc-amr-2023",
+      "id": "tw-cdc-amr-2024",
       "title": {
-        "zh-TW": "臺灣抗生素抗藥性監視年報 2023",
-        "en": "Antimicrobial Resistance Surveillance Annual Report, Taiwan 2023",
-        "ja": "台湾抗菌薬耐性監視年報 2023"
+        "zh-TW": "臺灣抗生素抗藥性監視年報 2024",
+        "en": "Antimicrobial Resistance Surveillance Annual Report, Taiwan 2024",
+        "ja": "台湾抗菌薬耐性監視年報 2024"
       },
       "publisher": "衛生福利部疾病管制署 Taiwan CDC",
-      "year": 2023,
+      "year": 2024,
       "url": "https://www.cdc.gov.tw/Category/MPage/4G8HuDdUN1k4xaBJhbPzKQ",
       "kind": "annual-report"
     },
@@ -183,9 +183,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -198,9 +198,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -213,9 +213,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -228,9 +228,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -243,9 +243,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -258,9 +258,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -273,9 +273,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -288,9 +288,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
+          "year": 2024,
           "precision": "chart_estimate",
-          "reportYear": 2023,
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -303,9 +303,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
-          "precision": "text",
-          "reportYear": 2023,
+          "year": 2024,
+          "precision": "chart_estimate",
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         },
@@ -318,9 +318,9 @@
           "specimen": "blood",
           "level": "all",
           "setting": "all",
-          "year": 2023,
-          "precision": "chart_estimate",
-          "reportYear": 2023,
+          "year": 2024,
+          "precision": "text",
+          "reportYear": 2024,
           "measure": "resistant (%R as printed)",
           "fallback": false
         }

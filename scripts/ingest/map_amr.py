@@ -26,6 +26,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -40,7 +41,9 @@ RAW = ROOT / "raw"
 
 RES_COLS = ["year", "pathogen", "antibiotic", "phenotype", "level", "ward", "setting", "specimen",
             "isolates", "resistant_pct", "susceptible_pct", "ci_low", "ci_high", "precision", "reportYear", "source_ref"]
-ISO_COLS = ["year", "organism", "scope", "level", "rank", "isolates", "precision", "reportYear", "source_ref"]
+ISO_COLS = ["year", "organism", "scope", "level", "subset", "rank", "isolates", "precision", "reportYear", "source_ref"]
+# MDRO count charts split bars into susceptible / non-susceptible: "<organism> (I+R)" / "[I+R]" and "(S)" / "[S]"
+SUBSET_SUFFIX = re.compile(r"\s*[\(\[]\s*(I\s*\+\s*R|S)\s*[\)\]]\s*$", re.I)
 DEDUP_COLS = ["dataset", "key", "kept_value", "kept_reportYear", "kept_precision", "kept_ref",
               "dropped_value", "dropped_reportYear", "dropped_precision", "dropped_ref", "delta"]
 
@@ -141,6 +144,8 @@ class Mapper:
             year = self._year(r.get("data_year"), w)
             lv = self._level(r.get("level"), w)
             path = self.v.organism(r.get("pathogen", ""), self.warn)
+            if path == "SAL":  # 2022 edition prints the NTS antibiogram row as "Salmonella spp."
+                path = "NTS"
             abx = self.v.antibiotic(r.get("antibiotic_abbr"), r.get("antibiotic"), self.warn)
             s = to_float(r.get("susceptible_pct"))
             if None in (year, lv, path, abx) or s is None:
@@ -211,13 +216,17 @@ class Mapper:
                 self.skipped[where] += 1
                 continue
             year = self._year(r.get("data_year"), w)
-            org = self.v.organism(r.get("organism", ""), self.warn)
+            name = r.get("organism", "")
+            m = SUBSET_SUFFIX.search(name)  # "(I+R)"/"[S]" rows are subset counts, NOT totals
+            subset = None if not m else ("I+R" if "R" in m.group(1).upper() else "S")
+            org = self.v.organism(SUBSET_SUFFIX.sub("", name), self.warn)
             st = self._setting(r.get("infection_setting"), w)
             lv = self._level(r.get("level"), w)
             if None in (year, org, st, lv):
                 self.skipped[where] += 1
                 continue
-            self.iso.append({"year": year, "organism": org, "scope": st, "level": lv, "rank": None, "isolates": n,
+            self.iso.append({"year": year, "organism": org, "scope": st, "level": lv, "subset": subset,
+                             "rank": None, "isolates": n,
                              "precision": prec, "reportYear": ry, "source_ref": self._ref(ry, r)})
 
     def read_isolate_counts(self, ry, rows, where):
@@ -233,7 +242,7 @@ class Mapper:
                 self.skipped[where] += 1
                 continue
             self.iso.append({"year": year, "organism": org, "scope": scope, "level": "all", "rank": to_int(r.get("rank")),
-                             "isolates": n, "precision": "table", "reportYear": ry,
+                             "isolates": n, "precision": "table", "reportYear": ry, "subset": None,
                              "source_ref": self._ref(ry, r, "table"), "_table": True})
 
     def apply_overrides(self):
@@ -307,10 +316,10 @@ class Mapper:
         res = self.dedup(self.res, lambda r: (r["year"], r["pathogen"], r["antibiotic"], r["phenotype"] or "", r["level"],
                                               r["ward"], r["setting"], r["specimen"]),
                          lambda r: r["resistant_pct"], "resistance", log)
-        iso = self.dedup(self.iso, lambda r: (r["year"], r["organism"], r["scope"], r["level"]),
+        iso = self.dedup(self.iso, lambda r: (r["year"], r["organism"], r["scope"], r["level"], r.get("subset") or ""),
                          lambda r: r["isolates"], "isolates", log)
-        # fill MDRO phenotype denominators from the MDRO count charts (same organism/setting/level/year)
-        counts = {(r["year"], r["organism"], r["scope"], r["level"]): r["isolates"] for r in iso}
+        # fill MDRO phenotype denominators from total (never I+R / S subset) organism counts of the same organism/setting/level/year
+        counts = {(r["year"], r["organism"], r["scope"], r["level"]): r["isolates"] for r in iso if not r.get("subset")}
         for r in res:
             if r["phenotype"] and r["isolates"] is None and r["specimen"] == "all":
                 r["isolates"] = counts.get((r["year"], r["pathogen"], r["setting"], r["level"]))
@@ -328,7 +337,7 @@ class Mapper:
                                 ao.get(r["antibiotic"], 999), r["antibiotic"], lo[r["level"]], so[r["setting"]],
                                 spo.get(r["specimen"], 99), r["year"]))
         scope_o = {s: i for i, s in enumerate(["all", "blood", "urine", "sputum", "pus", "stool", "co", "ho"])}
-        iso.sort(key=lambda r: (scope_o[r["scope"]], lo[r["level"]], r["year"], r["rank"] if r["rank"] else 99,
+        iso.sort(key=lambda r: (scope_o[r["scope"]], lo[r["level"]], r.get("subset") or "", r["year"], r["rank"] if r["rank"] else 99,
                                 po.get(r["organism"], 999), r["organism"]))
         log.sort(key=lambda r: (r["dataset"], r["key"], str(r["dropped_reportYear"])))
         return res, iso, log

@@ -36,7 +36,15 @@ to its printed 總計. Values are transcribed **as printed**, never corrected or
 
 ### Mapping rules (`scripts/ingest/map_amr.py`)
 * Organism names → codes via `data/curated/dims/organisms.json` aliases. The 2022 edition's
-  "A. calcoaceticus–A. baumannii complex" and the 2023+ "A. baumannii" both map to `ABA`.
+  "A. calcoaceticus–A. baumannii complex" and the 2023+ "A. baumannii" both map to `ABA`. The 2022 antibiogram row
+  "Salmonella spp." is the NTS row, so it maps to `NTS`; in the 表 2-x isolate tables "Salmonella spp." stays `SAL`.
+* MDRO count charts: organisms with an "(I+R)" / "[I+R]" suffix are **non-susceptible isolate counts**, and "(S)" / "[S]"
+  are susceptible counts. They become isolate records with `subset: "I+R"` or `subset: "S"` and are never added to totals
+  or used as denominators. Setting `all` rows come
+  from the CO+HO chart; `co`/`ho` rows come from the setting-specific charts. As a QC check, (I+R)/total reproduces the
+  independently transcribed MDRO %R (median difference ≈ 0 pts; see `isolates.json → meta.qc`).
+* Antibiogram class headers vary by edition ("4rd GCs", "1st GC"). The mapper ignores them and takes the class from
+  `dims/antibiotics.json`. Colistin is `CL` (2022) or `CS` (2023+), both mapped to `COL`; `LZD` maps to `LNZ`.
 * Antibiotic abbreviations → canonical codes via the report's 附錄 2 table (`dims/antibiotics.json → meta.thas`).
   Note `FUR` (cefuroxime sodium) → `CXM`, while the printed abbreviation `CXM` (cefuroxime axetil) → `CXA`.
 * Antibiogram rows: `resistant_pct = 100 − susceptible_pct`. This is the **non-susceptible** share (it includes
@@ -82,7 +90,8 @@ filter `phenotype === undefined && specimen === 'all' && setting === 'all'` for 
 CO/HO bar charts: `phenotype === undefined && level === 'all'` with `specimen !== 'all' || setting !== 'all'`.
 
 ### `isolates.json` — `IsolateRecord`
-`{year, organism, scope, level, rank?, isolates, precision, reportYear}`. `scope` is `all` (all specimens),
+`{year, organism, scope, level, subset?, rank?, isolates, precision, reportYear}`. `subset: "I+R"` (non-susceptible)
+or `"S"` (susceptible) marks the split counts from the MDRO charts (by level × CO/HO). Records without `subset` are totals. `scope` is `all` (all specimens),
 `blood|urine|sputum|pus|stool` (specimen) or `co|ho` (setting). Organism codes `TOTAL` and `OTHER` are the printed
 總計/其他 rows. Ranks are as printed: ties exist, and one apparent source typo (2019 CO, rank 8 printed twice).
 

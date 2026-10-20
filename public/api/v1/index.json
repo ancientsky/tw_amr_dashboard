@@ -2,7 +2,7 @@
   "api": "TW-AMR Watch static data API",
   "version": "v1",
   "baseUrl": "https://ancientsky.github.io/tw_amr_dashboard/api/v1",
-  "generatedAt": "2026-10-20T06:42:41Z",
+  "generatedAt": "2026-10-20T06:46:33Z",
   "provisionalDatasets": [
     "antibiotic_use",
     "hai",
@@ -27,7 +27,7 @@
     {
       "id": "resistance",
       "dataset": "resistance",
-      "records": 5703,
+      "records": 6463,
       "provisional": false,
       "version": "1.0.0",
       "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance.json",
@@ -89,6 +89,7 @@
           "by": "year",
           "urlTemplate": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/resistance/year/{year}.json",
           "values": [
+            2017,
             2018,
             2019,
             2020,
@@ -103,7 +104,7 @@
     {
       "id": "isolates",
       "dataset": "isolates",
-      "records": 1254,
+      "records": 2114,
       "provisional": false,
       "version": "1.0.0",
       "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/isolates.json",
@@ -295,19 +296,19 @@
     },
     {
       "path": "/resistance.json",
-      "records": 5703
+      "records": 6463
     },
     {
       "path": "/resistance.csv",
-      "records": 5703
+      "records": 6463
     },
     {
       "path": "/isolates.json",
-      "records": 1254
+      "records": 2114
     },
     {
       "path": "/isolates.csv",
-      "records": 1254
+      "records": 2114
     },
     {
       "path": "/antibiotic-use.json",
@@ -367,7 +368,7 @@
     },
     {
       "path": "/resistance/pathogen/ABA.json",
-      "records": 321
+      "records": 387
     },
     {
       "path": "/resistance/pathogen/BCC.json",
@@ -395,15 +396,15 @@
     },
     {
       "path": "/resistance/pathogen/ECO.json",
-      "records": 453
+      "records": 573
     },
     {
       "path": "/resistance/pathogen/EFA.json",
-      "records": 278
+      "records": 338
     },
     {
       "path": "/resistance/pathogen/EFM.json",
-      "records": 264
+      "records": 326
     },
     {
       "path": "/resistance/pathogen/ELI.json",
@@ -411,11 +412,11 @@
     },
     {
       "path": "/resistance/pathogen/ENB.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/pathogen/ENC.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/pathogen/GAS.json",
@@ -427,7 +428,7 @@
     },
     {
       "path": "/resistance/pathogen/HIN.json",
-      "records": 254
+      "records": 288
     },
     {
       "path": "/resistance/pathogen/HPY.json",
@@ -435,7 +436,7 @@
     },
     {
       "path": "/resistance/pathogen/KPN.json",
-      "records": 445
+      "records": 557
     },
     {
       "path": "/resistance/pathogen/MOR.json",
@@ -443,15 +444,15 @@
     },
     {
       "path": "/resistance/pathogen/NGO.json",
-      "records": 108
+      "records": 118
     },
     {
       "path": "/resistance/pathogen/NTS.json",
-      "records": 125
+      "records": 242
     },
     {
       "path": "/resistance/pathogen/PAE.json",
-      "records": 283
+      "records": 369
     },
     {
       "path": "/resistance/pathogen/PMI.json",
@@ -463,15 +464,15 @@
     },
     {
       "path": "/resistance/pathogen/SAL.json",
-      "records": 84
+      "records": 40
     },
     {
       "path": "/resistance/pathogen/SAU.json",
-      "records": 284
+      "records": 322
     },
     {
       "path": "/resistance/pathogen/SHI.json",
-      "records": 57
+      "records": 74
     },
     {
       "path": "/resistance/pathogen/SMA.json",
@@ -483,43 +484,47 @@
     },
     {
       "path": "/resistance/pathogen/SPN.json",
-      "records": 238
+      "records": 272
     },
     {
       "path": "/resistance/phenotype/CR-ECO.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/CRAB.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/CRE.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/CRKP.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/CRPA.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/MRSA.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/VR-EFA.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/VR-EFM.json",
-      "records": 72
+      "records": 96
     },
     {
       "path": "/resistance/phenotype/VRE.json",
-      "records": 72
+      "records": 96
+    },
+    {
+      "path": "/resistance/year/2017.json",
+      "records": 108
     },
     {
       "path": "/resistance/year/2018.json",
@@ -539,7 +544,7 @@
     },
     {
       "path": "/resistance/year/2022.json",
-      "records": 1578
+      "records": 1850
     },
     {
       "path": "/resistance/year/2023.json",
@@ -547,7 +552,7 @@
     },
     {
       "path": "/resistance/year/2024.json",
-      "records": 1714
+      "records": 2094
     },
     {
       "path": "/antibiotic-use/year/2017.json",

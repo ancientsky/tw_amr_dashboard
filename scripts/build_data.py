@@ -104,12 +104,13 @@ def load_isolates():
     out = []
     for i, r in enumerate(read_csv(CUR / "isolates.csv"), 2):
         rec = {"year": num(r.get("year"), int), "organism": r.get("organism"), "scope": r.get("scope"),
-               "level": r.get("level") or "all", "rank": num(r.get("rank"), int), "isolates": num(r.get("isolates"), int),
+               "level": r.get("level") or "all", "subset": r.get("subset") or None,
+               "rank": num(r.get("rank"), int), "isolates": num(r.get("isolates"), int),
                "precision": r.get("precision") or None, "reportYear": num(r.get("reportYear"), int)}
         if "__bad__" in rec.values():
             err(f"isolates.csv:{i}: non-numeric value")
             continue
-        out.append(strip_none(rec, {"rank", "precision", "reportYear"}))
+        out.append(strip_none(rec, {"subset", "rank", "precision", "reportYear"}))
     return out
 
 
@@ -459,7 +460,7 @@ def build(args):
     # ---------------------------------------------------------------- isolates
     iso = load_isolates()
     check_codes("isolates", iso, "organism", allow_auto(org_codes, iso, "organism"))
-    check_unique("isolates", iso, lambda r: (r["year"], r["organism"], r["scope"], r["level"]))
+    check_unique("isolates", iso, lambda r: (r["year"], r["organism"], r["scope"], r["level"], r.get("subset", "")))
     ranks = defaultdict(list)
     for r in iso:
         if "rank" in r:
@@ -467,6 +468,25 @@ def build(args):
     for k, rs in ranks.items():
         if len(rs) != len(set(rs)):
             warn(f"isolates: tied/duplicate ranks {sorted(rs)} for {k} (as printed)")
+    # QC: (I+R) count / total count should reproduce the MDRO trend %R read independently from 圖 4-x-y-2
+    pheno_of = {pm["meta"]["pathogen"]: pm["code"] for pm in v.phenotypes if pm["meta"]["antibiotic"] in ("MEM", "OXA", "VAN")
+                and pm["code"] not in ("CR-ENT",)}
+    totals = {(r["year"], r["organism"], r["scope"], r["level"]): r["isolates"] for r in iso if not r.get("subset")}
+    mdro_pct = {(r["year"], r["phenotype"], r["setting"], r["level"]): r["resistant_pct"] for r in res if "phenotype" in r}
+    qc = []
+    for r in iso:
+        if r.get("subset") == "I+R":
+            t = totals.get((r["year"], r["organism"], r["scope"], r["level"]))
+            p = mdro_pct.get((r["year"], pheno_of.get(r["organism"]), r["scope"], r["level"]))
+            if t and p is not None:
+                d = round(100 * r["isolates"] / t - p, 1)
+                qc.append(d)
+                if abs(d) > 10:
+                    warn(f"isolates QC: (I+R)/total differs from MDRO %R by {d} pts for {r['organism']} {r['scope']} {r['level']} {r['year']}")
+    qc_meta = {"pairs": len(qc), "medianDiffPts": sorted(qc)[len(qc) // 2] if qc else None,
+               "maxAbsDiffPts": max((abs(x) for x in qc), default=None),
+               "within2Pts": sum(1 for x in qc if abs(x) <= 2),
+               "description": "100 x (I+R count) / total count minus the MDRO %R transcribed independently (same organism, setting, level, year)"}
     ip = prov.get("isolates", {})
     iso_ingested = ip.get("status") == "ingested" and len(iso) > 0
     iso_years = sorted({r["year"] for r in iso})
@@ -478,10 +498,11 @@ def build(args):
         "dataset": "isolates", "version": version if iso_ingested else version + "-pending", "generatedAt": PLACEHOLDER_TS,
         "provisional": not iso_ingested, "sources": [srcs[report_src[str(y)]] for y in (iso_reports or [int(y) for y in report_src])],
         "notes": fill(notes["isolates"], years=year_range_text(iso_years)),
-        "meta": {"coverage": {"dataYears": iso_years, "reportYears": iso_reports},
+        "meta": {"coverage": {"dataYears": iso_years, "reportYears": iso_reports}, "qc": qc_meta,
                  "precisionSummary": dict(sorted(Counter(r.get("precision", "table") for r in iso).items())),
                  "definitions": {"scope": "all = all specimens (CO+HO); blood/urine/sputum/pus/stool = specimen (CO+HO); co/ho = infection setting (all specimens)",
-                                 "TOTAL/OTHER": "organism codes TOTAL and OTHER are the printed 總計 / 其他 rows"}},
+                                 "TOTAL/OTHER": "organism codes TOTAL and OTHER are the printed 總計 / 其他 rows",
+                                 "subset": "'I+R' = non-susceptible isolates, 'S' = susceptible isolates (section-4 MDRO count charts, by level x CO/HO); absent = total isolates. Never add subsets to totals."}},
         "dims": {"organisms": dimlist(subset(v.organisms, {r["organism"] for r in iso}, autos_org)),
                  "scopes": scope_dims, "levels": dimlist(v.levels), "precisions": dimlist(v.precisions)},
         "records": iso}
@@ -715,7 +736,7 @@ API_NAMES = {"meta": "meta", "resistance": "resistance", "isolates": "isolates",
 CSV_COLS = {
     "resistance": ["year", "pathogen", "antibiotic", "phenotype", "level", "ward", "setting", "specimen", "isolates", "resistant_pct",
                    "susceptible_pct", "ci_low", "ci_high", "precision", "reportYear"],
-    "isolates": ["year", "organism", "scope", "level", "rank", "isolates", "precision", "reportYear"],
+    "isolates": ["year", "organism", "scope", "level", "subset", "rank", "isolates", "precision", "reportYear"],
 }
 SLICES = [  # (dataset, by, field, path-segment)
     ("resistance", "pathogen", "pathogen", "resistance/pathogen"),

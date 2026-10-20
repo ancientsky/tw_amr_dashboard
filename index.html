@@ -28,11 +28,11 @@
         try {
           var h = location.hash, i = h.indexOf("?"), q = new URLSearchParams(i >= 0 ? h.slice(i + 1) : "");
           var t = q.get("theme");
-          if (t !== "light" && t !== "dark") t = true ? localStorage.getItem("twamr.theme") : null;
+          if (t !== "light" && t !== "dark") t = localStorage.getItem("twamr.theme");
           if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
           document.documentElement.setAttribute("data-theme", t);
           document.documentElement.style.colorScheme = t;
-          var l = q.get("lang") || (true ? localStorage.getItem("twamr.lang") : null);
+          var l = q.get("lang") || (localStorage.getItem("twamr.lang"));
           if (l === "en" || l === "ja" || l === "zh-TW") document.documentElement.lang = l;
         } catch (e) {
           document.documentElement.setAttribute("data-theme", "light");

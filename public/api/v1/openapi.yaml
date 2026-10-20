@@ -48,7 +48,7 @@ paths:
                 type: "string"
   "/resistance.json":
     get:
-      summary: "resistance dataset envelope (5703 records)."
+      summary: "resistance dataset envelope (6463 records)."
       operationId: "get_resistance_json"
       tags:
         - "resistance"
@@ -168,6 +168,7 @@ paths:
           schema:
             type: "integer"
             enum:
+              - 2017
               - 2018
               - 2019
               - 2020
@@ -186,7 +187,7 @@ paths:
           description: "No such slice"
   "/isolates.json":
     get:
-      summary: "isolates dataset envelope (1254 records)."
+      summary: "isolates dataset envelope (2114 records)."
       operationId: "get_isolates_json"
       tags:
         - "isolates"

@@ -2,7 +2,7 @@ import type { EChartsOption } from 'echarts';
 import { useMemo, useRef } from 'react';
 import { ChartCard } from '../../components/chart/ChartCard';
 import { EChart, type EChartHandle } from '../../components/chart/EChart';
-import { WARD_ORDER, colorMap } from '../../components/chart/palette';
+import { LEVEL_ORDER, colorMap } from '../../components/chart/palette';
 import { useChartTheme } from '../../components/chart/useChartTheme';
 import { useDataset } from '../../data/load';
 import { dimNamer, fmtPct } from '../../data/format';
@@ -11,8 +11,11 @@ import type { ResistanceRecord } from '../../data/types';
 import { useT } from '../../i18n';
 import { phenotypeFor, sourceLine, type ChartParams } from './common';
 
-/** % resistant over time for one pathogen × antibiotic, one line per ward (all / ICU / non-ICU). */
-export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level = 'all', ward, setting = 'all', years, compact, link, fixtureFallback }: ChartParams) {
+/**
+ * % resistant over time for one pathogen × antibiotic, one line per hospital level
+ * (all / medical centers / regional / district). `level` highlights one line; `ward`/`setting` filter.
+ */
+export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level, ward = 'all', setting = 'all', years, compact, link, fixtureFallback }: ChartParams) {
   const t = useT();
   const ct = useChartTheme();
   const ref = useRef<EChartHandle>(null);
@@ -20,34 +23,35 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level = 
 
   const model = useMemo(() => {
     if (!env) return null;
-    const set = resistanceTrend(env.records, { pathogen, antibiotic, level, setting, specimen: 'all', years }, 'ward', { keyOrder: [...WARD_ORDER] });
+    const set = resistanceTrend(env.records, { pathogen, antibiotic, ward, setting, specimen: 'all', years }, 'level', { keyOrder: [...LEVEL_ORDER] });
     const recs = env.records.filter(
-      (r: ResistanceRecord) => r.pathogen === pathogen && r.antibiotic === antibiotic && r.level === level && (r.setting ?? 'all') === setting && r.specimen === 'all',
+      (r: ResistanceRecord) => r.pathogen === pathogen && r.antibiotic === antibiotic && r.ward === ward && (r.setting ?? 'all') === setting && r.specimen === 'all',
     );
     const pheno = phenotypeFor(env, pathogen, antibiotic);
-    const kpiWard = ward ?? 'icu';
-    const kv = latestValue(recs, (r) => r.ward === kpiWard) ?? latestValue(recs, (r) => r.ward === 'all');
-    return { set, recs, pheno, kv, kpiWard };
+    const kpiLevel = level ?? 'all';
+    const kv = latestValue(recs, (r) => r.level === kpiLevel) ?? latestValue(recs, (r) => r.level === 'all');
+    return { set, recs, pheno, kv, kpiLevel };
   }, [env, pathogen, antibiotic, level, setting, years, ward]);
 
   const nameP = dimNamer(env?.dims?.pathogens, t.locale);
   const nameA = dimNamer(env?.dims?.antibiotics, t.locale);
   const namePh = dimNamer(env?.dims?.phenotypes, t.locale);
-  const wardLabel = (w: string) => t(`wards.${w}`);
+  const levelLabel = (l: string) => t(`levels.${l}`);
 
   const title = model?.pheno
     ? t('charts.resistanceTrend.title', { phenotype: namePh(model.pheno) })
     : t('charts.resistanceTrend.titleGeneric', { pathogen: nameP(pathogen), antibiotic: nameA(antibiotic) });
-  const subtitle = t('charts.resistanceTrend.subtitle', { level: t(`levels.${level}`) });
+  const scope = [t(`wards.${ward}`), setting !== 'all' ? t(`settings.${setting}`) : null].filter(Boolean).join(' · ');
+  const subtitle = t('charts.resistanceTrend.subtitle', { scope });
 
   const option = useMemo<EChartsOption>(() => {
     if (!model) return {};
-    const color = colorMap([...WARD_ORDER], ct.theme);
+    const color = colorMap([...LEVEL_ORDER], ct.theme);
     const { set } = model;
-    const emphasis = ward && ward !== 'all' ? ward : undefined;
+    const emphasis = level && level !== 'all' ? level : undefined;
     return {
       grid: { left: 4, right: compact ? 56 : 72, top: 40, bottom: 4, containLabel: true },
-      legend: { top: 0, left: 0, data: set.series.map((s) => wardLabel(s.key)) },
+      legend: { top: 0, left: 0, data: set.series.map((s) => levelLabel(s.key)) },
       tooltip: {
         trigger: 'axis',
         valueFormatter: (v) => fmtPct(v as number, t.locale),
@@ -59,7 +63,7 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level = 
         const c = color(s.key);
         const dim = emphasis && s.key !== emphasis;
         return {
-          name: wardLabel(s.key),
+          name: levelLabel(s.key),
           type: 'line',
           data: s.data,
           connectNulls: false,
@@ -67,7 +71,7 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level = 
           symbolSize: 8,
           lineStyle: { width: 2, color: c, opacity: dim ? 0.45 : 1 },
           itemStyle: { color: c, borderColor: ct.tokens.surface, borderWidth: 2 },
-          areaStyle: s.key === (emphasis ?? 'icu') ? { color: c, opacity: 0.08 } : undefined,
+          areaStyle: s.key === (emphasis ?? 'all') ? { color: c, opacity: 0.08 } : undefined,
           endLabel: {
             show: set.series.length <= 4,
             formatter: (p: { value: unknown }) => fmtPct(Number(p.value), t.locale),
@@ -81,9 +85,9 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level = 
       }),
     } as EChartsOption;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [model, ct.theme, ct.tokens, t, compact, ward]);
+  }, [model, ct.theme, ct.tokens, t, compact, level]);
 
-  const tableRows = useMemo(() => (model ? seriesToRows(model.set, wardLabel) : undefined), [model, t]); // eslint-disable-line react-hooks/exhaustive-deps
+  const tableRows = useMemo(() => (model ? seriesToRows(model.set, levelLabel) : undefined), [model, t]); // eslint-disable-line react-hooks/exhaustive-deps
   const empty = status === 'ready' && model && model.set.series.length === 0;
 
   return (
@@ -98,10 +102,10 @@ export function ResistanceTrend({ pathogen = 'KPN', antibiotic = 'MEM', level = 
       status={empty ? 'empty' : status}
       chartRef={ref}
       tableRows={tableRows}
-      fileName={`twamr-${pathogen}-${antibiotic}-${level}`.toLowerCase()}
+      fileName={`twamr-${pathogen}-${antibiotic}-${ward}-${setting}`.toLowerCase()}
       link={link}
       embed={{ chart: 'resistance-trend', params: { pathogen, antibiotic, level, ward } }}
-      keyNumber={model?.kv ? { value: fmtPct(model.kv.value, t.locale), label: `${wardLabel(model.kpiWard)} · ${model.kv.year}` } : undefined}
+      keyNumber={model?.kv ? { value: fmtPct(model.kv.value, t.locale), label: `${levelLabel(model.kpiLevel)} · ${model.kv.year}` } : undefined}
       compact={compact}
       height={compact ? 260 : 340}
     >

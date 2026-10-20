@@ -22,10 +22,16 @@ export function useMeta(): DataCtx {
 }
 
 /**
- * Per-dataset provisional flag, read from that dataset's own envelope (not a global flag).
- * Returns undefined while loading / when the dataset is unavailable.
+ * Per-dataset provisional flag (not a global flag). Uses meta.provisionalDatasets when the
+ * pipeline provides it (no extra fetch); otherwise reads that dataset's own envelope.
+ * Returns undefined while unknown.
  */
 export function useDatasetProvisional(name: Exclude<DatasetName, 'meta'> | null | undefined): boolean | undefined {
-  const { data } = useOptionalDataset(name);
+  const { meta, status } = useMeta();
+  const list = meta?.provisionalDatasets;
+  const needEnvelope = Boolean(name) && !list && status !== 'loading';
+  const { data } = useOptionalDataset(needEnvelope ? name : null);
+  if (!name) return undefined;
+  if (list) return list.includes(name);
   return data ? Boolean((data as { provisional?: boolean }).provisional) : undefined;
 }

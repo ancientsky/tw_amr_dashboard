@@ -10,13 +10,17 @@ import { pivotPathogenAntibiotic } from '../../data/select';
 import { useT } from '../../i18n';
 import { sourceLine, type ChartParams } from './common';
 
+/** Default rows/columns: WHO-priority bacteria × the drugs that define their key phenotypes. */
+export const HEATMAP_PATHOGENS = ['SAU', 'EFM', 'EFA', 'SPN', 'ECO', 'KPN', 'ECL', 'PAE', 'ABA'];
+export const HEATMAP_ANTIBIOTICS = ['OXA', 'VAN', 'PEN', 'AMP', 'CRO', 'CAZ', 'FEP', 'TZP', 'IPM', 'MEM', 'ETP', 'CIP', 'LVX', 'GEN', 'AMK', 'SXT', 'TGC', 'COL', 'LNZ', 'DAP'];
+
 /** Pathogen × antibiotic % resistant matrix for the latest year (semantic heat scale with legend). */
 export function ResistanceHeatmap({ level = 'all', ward = 'all', setting = 'all', compact, link, fixtureFallback }: ChartParams) {
   const t = useT();
   const ct = useChartTheme();
   const ref = useRef<EChartHandle>(null);
   const { data: env, status, isFixture } = useDataset('resistance', { fixtureFallback });
-  const pv = useMemo(() => (env ? pivotPathogenAntibiotic(env.records, { level, ward, setting, dims: env.dims }) : null), [env, level, ward, setting]);
+  const pv = useMemo(() => (env ? pivotPathogenAntibiotic(env.records, { level, ward, setting, dims: env.dims, pathogens: HEATMAP_PATHOGENS, antibiotics: HEATMAP_ANTIBIOTICS }) : null), [env, level, ward, setting]);
   const nameP = dimNamer(env?.dims?.pathogens, t.locale);
   const nameA = dimNamer(env?.dims?.antibiotics, t.locale);
 

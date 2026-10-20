@@ -198,7 +198,7 @@
     "resistanceTrend": {
       "title": "{phenotype} 抗藥性趨勢",
       "titleGeneric": "{pathogen} 對 {antibiotic} 抗藥",
-      "subtitle": "依病房別之抗藥菌株比率，{level}",
+      "subtitle": "依醫院層級之抗藥菌株比率・{scope}",
       "aria": "抗藥率逐年變化折線圖"
     },
     "resistanceHeatmap": {

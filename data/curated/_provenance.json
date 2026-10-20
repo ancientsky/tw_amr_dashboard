@@ -9,8 +9,9 @@
         "臺灣抗生素抗藥性監視年報(2023年).pdf",
         "臺灣抗生素抗藥性監視年報(2024年).pdf"
       ],
-      "rows": 5703,
+      "rows": 6463,
       "dataYears": [
+        2017,
         2018,
         2019,
         2020,
@@ -26,8 +27,8 @@
       ],
       "precisionSummary": {
         "table": 4790,
-        "text": 15,
-        "chart_estimate": 898
+        "text": 52,
+        "chart_estimate": 1621
       },
       "byKind": {
         "antibiogram": {
@@ -36,15 +37,19 @@
           "2024": 1714
         },
         "mdro_trend": {
+          "2017": 108,
           "2018": 108,
           "2019": 108,
           "2020": 108,
           "2021": 108,
           "2022": 108,
-          "2023": 108
+          "2023": 108,
+          "2024": 108
         },
         "pathogen_resistance": {
-          "2023": 265
+          "2022": 272,
+          "2023": 265,
+          "2024": 272
         }
       },
       "phenotypes": [
@@ -64,6 +69,24 @@
           "rows": 1470,
           "mapped": 1470,
           "sha256": "85464df6527a82826a81f38875b0f2de42c1c8c8213f26fb009e6d7a34ca1977"
+        },
+        {
+          "file": "data/source/transcribed/2022/pathogen_resistance.csv",
+          "rows": 340,
+          "mapped": 340,
+          "sha256": "a96613b594371afb384c1745fccc5fe02107226cc5b30127c8631f240698d4aa"
+        },
+        {
+          "file": "data/source/transcribed/2022/mdro_trends.csv",
+          "rows": 648,
+          "mapped": 648,
+          "sha256": "075aaa648fd60590dc9f88f719d9f3718e654c33d53ff9003a7e500c88cdf5e1"
+        },
+        {
+          "file": "data/source/transcribed/2022/mdro_counts.csv",
+          "rows": 486,
+          "mapped": 486,
+          "sha256": "9d738f5285dd20d05bbc9275ea2937da6ddf234b8c7bb060fa0e538d51660175"
         },
         {
           "file": "data/source/transcribed/2022/isolate_counts.csv",
@@ -108,13 +131,34 @@
           "sha256": "9b7c27130442a3a829557e4bcffe3a3231bf77d9e18fba7dd5c4c893e2155aea"
         },
         {
+          "file": "data/source/transcribed/2024/pathogen_resistance.csv",
+          "rows": 384,
+          "mapped": 348,
+          "sha256": "3ad39fd2268a3c34220bc6580c90453a1ef34f9bb41220fa9f5617253e063f43"
+        },
+        {
+          "file": "data/source/transcribed/2024/mdro_trends.csv",
+          "rows": 648,
+          "mapped": 648,
+          "sha256": "b157298f60a1aca7c4cfe3d6db198dd70b165b6e9f1858afba368708a33101bb"
+        },
+        {
+          "file": "data/source/transcribed/2024/mdro_counts.csv",
+          "rows": 1134,
+          "mapped": 1109,
+          "sha256": "5a52db2d9539e05c2b6ebd4f39fc99d4135f8e5302318c36ed40ebd91c4714a5"
+        },
+        {
           "file": "data/source/transcribed/2024/isolate_counts.csv",
           "rows": 576,
           "mapped": 576,
           "sha256": "760c7d8abddcfee16264202ec2dd5175cfd3d3892a91117c822bec853e7595bb"
         }
       ],
-      "skippedRows": {},
+      "skippedRows": {
+        "2024/mdro_counts.csv": 25,
+        "2024/pathogen_resistance.csv": 36
+      },
       "autoCodes": {
         "organisms": [],
         "antibiotics": []
@@ -128,7 +172,7 @@
         "臺灣抗生素抗藥性監視年報(2023年).pdf",
         "臺灣抗生素抗藥性監視年報(2024年).pdf"
       ],
-      "rows": 1254,
+      "rows": 2114,
       "dataYears": [
         2017,
         2018,
@@ -145,7 +189,7 @@
         2024
       ],
       "precisionSummary": {
-        "chart_estimate": 486,
+        "chart_estimate": 1346,
         "table": 768
       }
     }

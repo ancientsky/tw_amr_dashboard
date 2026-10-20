@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { REPO_URL } from '../../app/url';
-import { useOptionalDataset } from '../../data/load';
+import { useDatasetProvisional } from '../../app/providers/DataProvider';
 import type { DatasetName } from '../../data/types';
 import { useT } from '../../i18n';
 import { IconButton } from '../ui/IconButton';
@@ -10,12 +10,12 @@ import s from './layout.module.css';
 
 type Name = Exclude<DatasetName, 'meta'>;
 
-/** True if any of the (up to 3) datasets' envelopes says provisional. Hooks are fixed-count. */
+/** True if any of the (up to 3) datasets is provisional. Fixed hook count. */
 function useAnyProvisional(datasets: readonly Name[]): boolean {
-  const a = useOptionalDataset(datasets[0]);
-  const b = useOptionalDataset(datasets[1]);
-  const c = useOptionalDataset(datasets[2]);
-  return [a, b, c].some((d) => Boolean(d.data && (d.data as { provisional?: boolean }).provisional));
+  const a = useDatasetProvisional(datasets[0]);
+  const b = useDatasetProvisional(datasets[1]);
+  const c = useDatasetProvisional(datasets[2]);
+  return [a, b, c].some(Boolean);
 }
 
 /**

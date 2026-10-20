@@ -198,7 +198,7 @@
     "resistanceTrend": {
       "title": "{phenotype} の耐性率推移",
       "titleGeneric": "{pathogen} の {antibiotic} 耐性",
-      "subtitle": "病棟別の耐性株割合、{level}",
+      "subtitle": "病院区分別の耐性株割合・{scope}",
       "aria": "耐性率の経年推移を示す折れ線グラフ"
     },
     "resistanceHeatmap": {

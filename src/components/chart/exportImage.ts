@@ -48,7 +48,7 @@ export function loadImage(src: string): Promise<HTMLImageElement> {
   });
 }
 
-const CJK = /[　-鿿가-힯＀-￯]/;
+const CJK = /[\u3000-\u9fff\uac00-\ud7af\uff00-\uffef]/;
 
 /** Word-wrap that also breaks between CJK characters. */
 export function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number, maxLines = 3): string[] {

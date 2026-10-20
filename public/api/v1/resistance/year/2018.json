@@ -1,7 +1,7 @@
 {
   "dataset": "resistance",
   "version": "1.0.0",
-  "generatedAt": "2026-10-20T06:42:41Z",
+  "generatedAt": "2026-10-20T06:46:33Z",
   "provisional": false,
   "sources": [
     {
@@ -42,9 +42,9 @@
     }
   ],
   "notes": {
-    "zh-TW": "資料來源：衛生福利部疾病管制署《臺灣抗生素抗藥性監視年報》2022、2023、2024 年版（THAS 抗生素抗藥性管理通報模組），涵蓋資料年 2018–2024。數值由 PDF 轉錄：敏感性圖譜（表格，精確）4790 筆；報告內文明列 15 筆；由圖表判讀（約 ±1–2 個百分點）898 筆。敏感性圖譜之抗藥性百分比 = 100 − 敏感百分比（即不敏感比率，含中間型）。同一數據點出現於多個年版時，採用最新年版，其次採用較精確者。有 phenotype 欄位者為「肆、多重抗藥菌」趨勢指標。",
-    "en": "Source: Taiwan CDC, Antimicrobial Resistance Surveillance Annual Report, Taiwan — 2022, 2023 and 2024 editions (THAS AR module), data years 2018–2024. Values were transcribed from the PDFs: 4790 antibiogram table values (exact), 15 values stated in the report text, and 898 values read from charts (≈ ±1–2 points). For antibiogram rows, resistant_pct = 100 − %susceptible (i.e. non-susceptible, including intermediate). Where a data point appears in several editions, the newest edition wins, then the more precise value. Rows with a `phenotype` are the section-4 MDRO trend indicators.",
-    "ja": "出典：台湾CDC『台湾抗菌薬耐性監視年報』2022・2023・2024年版（THAS 薬剤耐性モジュール）、データ年 2018–2024。PDFから転記：アンチバイオグラム表の数値（正確）4790件、本文記載の数値 15件、グラフからの読み取り（約±1〜2ポイント）898件。アンチバイオグラム由来の耐性率 = 100 − 感性率（中間を含む非感性率）。同じデータ点が複数の版にある場合は最新版を優先し、次に精度の高い値を採用。phenotype 付きの行は第4章「多剤耐性菌」の推移指標です。"
+    "zh-TW": "資料來源：衛生福利部疾病管制署《臺灣抗生素抗藥性監視年報》2022、2023、2024 年版（THAS 抗生素抗藥性管理通報模組），涵蓋資料年 2017–2024。數值由 PDF 轉錄：敏感性圖譜（表格，精確）4790 筆；報告內文明列 52 筆；由圖表判讀（約 ±1–2 個百分點）1621 筆。敏感性圖譜之抗藥性百分比 = 100 − 敏感百分比（即不敏感比率，含中間型）。同一數據點出現於多個年版時，採用最新年版，其次採用較精確者。有 phenotype 欄位者為「肆、多重抗藥菌」趨勢指標。",
+    "en": "Source: Taiwan CDC, Antimicrobial Resistance Surveillance Annual Report, Taiwan — 2022, 2023 and 2024 editions (THAS AR module), data years 2017–2024. Values were transcribed from the PDFs: 4790 antibiogram table values (exact), 52 values stated in the report text, and 1621 values read from charts (≈ ±1–2 points). For antibiogram rows, resistant_pct = 100 − %susceptible (i.e. non-susceptible, including intermediate). Where a data point appears in several editions, the newest edition wins, then the more precise value. Rows with a `phenotype` are the section-4 MDRO trend indicators.",
+    "ja": "出典：台湾CDC『台湾抗菌薬耐性監視年報』2022・2023・2024年版（THAS 薬剤耐性モジュール）、データ年 2017–2024。PDFから転記：アンチバイオグラム表の数値（正確）4790件、本文記載の数値 52件、グラフからの読み取り（約±1〜2ポイント）1621件。アンチバイオグラム由来の耐性率 = 100 − 感性率（中間を含む非感性率）。同じデータ点が複数の版にある場合は最新版を優先し、次に精度の高い値を採用。phenotype 付きの行は第4章「多剤耐性菌」の推移指標です。"
   },
   "slice": {
     "by": "year",
@@ -54,6 +54,7 @@
   "meta": {
     "coverage": {
       "dataYears": [
+        2017,
         2018,
         2019,
         2020,
@@ -74,24 +75,28 @@
           "2024": 1714
         },
         "mdro_trend": {
+          "2017": 108,
           "2018": 108,
           "2019": 108,
           "2020": 108,
           "2021": 108,
           "2022": 108,
-          "2023": 108
+          "2023": 108,
+          "2024": 108
         },
         "pathogen_resistance": {
-          "2023": 265
+          "2022": 272,
+          "2023": 265,
+          "2024": 272
         }
       }
     },
     "precisionSummary": {
       "table": 4790,
-      "text": 15,
-      "chart_estimate": 898
+      "text": 52,
+      "chart_estimate": 1621
     },
-    "dedupDropped": 74,
+    "dedupDropped": 1298,
     "definitions": {
       "resistant_pct": "table rows: 100 - %susceptible (non-susceptible incl. intermediate); text/chart rows: %resistant as printed",
       "phenotype": "present only on section-4 MDRO trend indicators; absent on drug-level rows (antibiogram 圖3-1-x, pathogen charts 圖3-2-x)",

@@ -114,9 +114,47 @@ export function sliceResistance(
   return filterResistance(records, { level: 'all', ward: 'all', setting: 'all', specimen: 'all', ...f });
 }
 
+const PRECISION_RANK: Record<Precision, number> = { table: 0, text: 1, chart_estimate: 2 };
+
+/* ---------------- de-duplication across report editions ---------------- */
+
+type Rankable = { year: number; precision?: Precision; reportYear?: number };
+
+/**
+ * True when `a` should win over `b` for the same stratum-year. The same data year can
+ * appear in several report editions (e.g. a chart estimate in the 2022 report and a
+ * table in the 2023 report). Rule: better precision wins (table > text > chart_estimate),
+ * then the newer reportYear.
+ */
+export function isBetterRecord(a: Rankable, b: Rankable): boolean {
+  const pa = a.precision ? PRECISION_RANK[a.precision] : 1;
+  const pb = b.precision ? PRECISION_RANK[b.precision] : 1;
+  if (pa !== pb) return pa < pb;
+  return (a.reportYear ?? 0) > (b.reportYear ?? 0);
+}
+
+/** Keep one record per `keyOf(record)` (default: year) using isBetterRecord. Order preserved by first key occurrence. */
+export function dedupeRecords<T extends Rankable>(records: readonly T[], keyOf: (r: T) => string = (r) => String(r.year)): T[] {
+  const best = new Map<string, T>();
+  for (const r of records) {
+    const k = keyOf(r);
+    const cur = best.get(k);
+    if (!cur || isBetterRecord(r, cur)) best.set(k, r);
+  }
+  return [...best.values()];
+}
+
+/** Stratum key for resistance records (everything except year/value/provenance). */
+export const resistanceKey = (r: ResistanceRecord): string =>
+  `${r.pathogen}|${r.antibiotic}|${r.level}|${r.ward}|${r.setting ?? 'all'}|${r.specimen}|${r.year}`;
+
+/** Remove duplicate stratum-years from overlapping report editions. */
+export function dedupeResistance(records: readonly ResistanceRecord[]): ResistanceRecord[] {
+  return dedupeRecords(records, resistanceKey);
+}
+
 /* ---------------- precision ---------------- */
 
-const PRECISION_RANK: Record<Precision, number> = { table: 0, text: 1, chart_estimate: 2 };
 
 /** The least exact precision among records (table < text < chart_estimate). */
 export function worstPrecision(records: readonly { precision?: Precision }[]): Precision | undefined {
@@ -190,7 +228,7 @@ export function latestValue<T extends { year: number }>(
   pred: (r: T) => boolean,
   pick: (r: T) => number = (r) => (r as unknown as { resistant_pct: number }).resistant_pct,
 ): LatestValue | undefined {
-  const rows = records.filter(pred).sort((a, b) => b.year - a.year);
+  const rows = dedupeRecords(records.filter(pred) as unknown as Rankable[]).sort((a, b) => b.year - a.year) as unknown as T[];
   if (!rows.length) return undefined;
   const [cur, prev] = rows;
   const out: LatestValue = { year: cur.year, value: pick(cur) };
@@ -234,6 +272,9 @@ export function pivotPathogenAntibiotic(
     setting?: OnsetSetting;
     specimen?: Specimen;
     dims?: Record<string, Dim[]>;
+    /** restrict rows / columns (and their order when dims are absent) */
+    pathogens?: readonly string[];
+    antibiotics?: readonly string[];
   } = {},
 ): Pivot {
   const stratum = sliceResistance(records, {
@@ -242,8 +283,11 @@ export function pivotPathogenAntibiotic(
     setting: opts.setting ?? 'all',
     specimen: opts.specimen ?? 'all',
   });
-  const year = opts.year ?? latestYear(stratum);
-  const rows = stratum.filter((r) => r.year === year);
+  const scoped = stratum.filter(
+    (r) => (!opts.pathogens || opts.pathogens.includes(r.pathogen)) && (!opts.antibiotics || opts.antibiotics.includes(r.antibiotic)),
+  );
+  const year = opts.year ?? latestYear(scoped);
+  const rows = dedupeResistance(scoped.filter((r) => r.year === year));
   const pathogens = sortByDimOrder(
     [...new Set(rows.map((r) => r.pathogen))],
     opts.dims?.pathogens,
@@ -280,7 +324,8 @@ export interface SeriesSet {
 
 /**
  * Generic long → wide: one series per `keyOf(record)`, aligned on a shared year axis.
- * Missing years are `null` (ECharts renders gaps). Duplicate (key, year) → last wins.
+ * Missing years are `null` (ECharts renders gaps). Duplicate (key, year) → best precision /
+ * newest reportYear wins (see isBetterRecord).
  */
 export function buildSeries<T extends { year: number }>(
   records: readonly T[],
@@ -291,6 +336,7 @@ export function buildSeries<T extends { year: number }>(
   const years = opts.years ?? yearsOf(records);
   const yi = new Map(years.map((y, i) => [y, i]));
   const map = new Map<string, (number | null)[]>();
+  const winners = new Map<string, T>();
   for (const r of records) {
     const i = yi.get(r.year);
     if (i === undefined) continue;
@@ -300,6 +346,9 @@ export function buildSeries<T extends { year: number }>(
       arr = years.map(() => null);
       map.set(k, arr);
     }
+    const prev = winners.get(`${k}|${i}`);
+    if (prev && !isBetterRecord(r as unknown as Rankable, prev as unknown as Rankable)) continue;
+    winners.set(`${k}|${i}`, r);
     arr[i] = valueOf(r);
   }
   let keys = [...map.keys()];

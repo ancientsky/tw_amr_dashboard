@@ -72,6 +72,13 @@
                 "type": "integer",
                 "minimum": 2000,
                 "maximum": 2100
+              },
+              "subset": {
+                "enum": [
+                  "I+R",
+                  "S"
+                ],
+                "description": "I+R = non-susceptible, S = susceptible isolate counts from the MDRO count charts; absent = total isolates"
               }
             }
           }

@@ -94,6 +94,8 @@ export interface IsolateRecord {
   level?: Level;
   rank?: number;
   isolates: number;
+  precision?: Precision;
+  reportYear?: number;
 }
 
 /* ---------- 3. antibiotic_use.json ---------- */
@@ -253,6 +255,10 @@ export interface MetaData {
   /** optional extras the pipeline may emit (e.g. comparability notes) */
   comparability?: Record<string, unknown>;
   datasets?: string[];
+  /** datasets whose envelopes are provisional (pipeline convenience; envelopes remain authoritative) */
+  provisionalDatasets?: string[];
+  contentDigest?: string;
+  notes?: LocalizedText;
   [k: string]: unknown;
 }
 
