@@ -1,0 +1,31 @@
+{
+  "_comment": "MDRO phenotype indicators (肆 多重抗藥菌抗藥性趨勢監測). Rows carrying `phenotype` in resistance.json are the THAS MDRO trend indicators; `pathogen`/`antibiotic` give the organism and the class-representative antibiotic code.",
+  "phenotypes": [
+    {"code": "CRAB", "name": {"zh-TW": "抗碳青黴烯類鮑氏不動桿菌（CRAB）", "en": "Carbapenem-resistant A. baumannii (CRAB)", "ja": "カルバペネム耐性アシネトバクター・バウマニ（CRAB）"}, "group": "gram_negative", "order": 1,
+     "meta": {"pathogen": "ABA", "antibiotic": "MEM", "drugClass": "carbapenems", "glassIndicator": "CR_ABA_BLOOD", "aliases": ["CRAB"]}},
+    {"code": "CRE", "name": {"zh-TW": "抗碳青黴烯類腸道菌（CRE）", "en": "Carbapenem-resistant Enterobacterales (CRE)", "ja": "カルバペネム耐性腸内細菌目細菌（CRE）"}, "group": "gram_negative", "order": 2,
+     "meta": {"pathogen": "ENB", "antibiotic": "MEM", "drugClass": "carbapenems", "aliases": ["CRE"]}},
+    {"code": "CR-ECO", "name": {"zh-TW": "抗碳青黴烯類大腸桿菌（CR E. coli）", "en": "Carbapenem-resistant E. coli", "ja": "カルバペネム耐性大腸菌"}, "group": "gram_negative", "order": 3,
+     "meta": {"pathogen": "ECO", "antibiotic": "MEM", "drugClass": "carbapenems", "glassIndicator": "CR_ECO_BLOOD", "aliases": ["CR-ECO", "CR E. coli", "CRECO", "CR-E. coli", "CR E.coli"]}},
+    {"code": "CRKP", "name": {"zh-TW": "抗碳青黴烯類克雷伯氏肺炎桿菌（CRKP）", "en": "Carbapenem-resistant K. pneumoniae (CRKP)", "ja": "カルバペネム耐性肺炎桿菌（CRKP）"}, "group": "gram_negative", "order": 4,
+     "meta": {"pathogen": "KPN", "antibiotic": "MEM", "drugClass": "carbapenems", "glassIndicator": "CR_KPN_BLOOD", "aliases": ["CRKP"]}},
+    {"code": "CR-ENT", "name": {"zh-TW": "抗碳青黴烯類腸桿菌屬", "en": "Carbapenem-resistant Enterobacter spp.", "ja": "カルバペネム耐性エンテロバクター属"}, "group": "gram_negative", "order": 5,
+     "meta": {"pathogen": "ENT", "antibiotic": "MEM", "drugClass": "carbapenems", "aliases": ["CR-ENT", "CR Enterobacter"]}},
+    {"code": "CRPA", "name": {"zh-TW": "抗碳青黴烯類綠膿桿菌（CRPA）", "en": "Carbapenem-resistant P. aeruginosa (CRPA)", "ja": "カルバペネム耐性緑膿菌（CRPA）"}, "group": "gram_negative", "order": 6,
+     "meta": {"pathogen": "PAE", "antibiotic": "MEM", "drugClass": "carbapenems", "glassIndicator": "CR_PAE_BLOOD", "aliases": ["CRPA"]}},
+    {"code": "3GC-R-ECO", "name": {"zh-TW": "第三代頭孢菌素抗藥性大腸桿菌", "en": "3rd-gen cephalosporin-resistant E. coli", "ja": "第3世代セファロスポリン耐性大腸菌"}, "group": "gram_negative", "order": 7,
+     "meta": {"pathogen": "ECO", "antibiotic": "CRO", "drugClass": "ceph3", "glassIndicator": "3GC_R_ECO_BLOOD", "aliases": ["3GC-R-ECO", "3GCR-ECO"]}},
+    {"code": "3GC-R-KPN", "name": {"zh-TW": "第三代頭孢菌素抗藥性克雷伯氏肺炎桿菌", "en": "3rd-gen cephalosporin-resistant K. pneumoniae", "ja": "第3世代セファロスポリン耐性肺炎桿菌"}, "group": "gram_negative", "order": 8,
+     "meta": {"pathogen": "KPN", "antibiotic": "CRO", "drugClass": "ceph3", "glassIndicator": "3GC_R_KPN_BLOOD", "aliases": ["3GC-R-KPN", "3GCR-KPN"]}},
+    {"code": "MRSA", "name": {"zh-TW": "抗甲氧西林金黃色葡萄球菌（MRSA）", "en": "Methicillin-resistant S. aureus (MRSA)", "ja": "メチシリン耐性黄色ブドウ球菌（MRSA）"}, "group": "gram_positive", "order": 9,
+     "meta": {"pathogen": "SAU", "antibiotic": "OXA", "drugClass": "penicillins", "glassIndicator": "MRSA_BLOOD", "aliases": ["MRSA"]}},
+    {"code": "VRE", "name": {"zh-TW": "抗萬古黴素腸球菌（VRE）", "en": "Vancomycin-resistant enterococci (VRE)", "ja": "バンコマイシン耐性腸球菌（VRE）"}, "group": "gram_positive", "order": 10,
+     "meta": {"pathogen": "ENC", "antibiotic": "VAN", "drugClass": "glycopeptides", "aliases": ["VRE"]}},
+    {"code": "VR-EFA", "name": {"zh-TW": "抗萬古黴素糞腸球菌", "en": "Vancomycin-resistant E. faecalis", "ja": "バンコマイシン耐性E. faecalis"}, "group": "gram_positive", "order": 11,
+     "meta": {"pathogen": "EFA", "antibiotic": "VAN", "drugClass": "glycopeptides", "aliases": ["VR-EFA", "VRE-EFA", "VR E. faecalis", "VR Enterococcus faecalis", "VREfa"]}},
+    {"code": "VR-EFM", "name": {"zh-TW": "抗萬古黴素屎腸球菌", "en": "Vancomycin-resistant E. faecium", "ja": "バンコマイシン耐性E. faecium"}, "group": "gram_positive", "order": 12,
+     "meta": {"pathogen": "EFM", "antibiotic": "VAN", "drugClass": "glycopeptides", "glassIndicator": "VRE_EFM_BLOOD", "aliases": ["VR-EFM", "VRE-EFM", "VR E. faecium", "VR Enterococcus faecium", "VREfm"]}},
+    {"code": "PNSP", "name": {"zh-TW": "青黴素不敏感肺炎鏈球菌（PNSP）", "en": "Penicillin-non-susceptible S. pneumoniae (PNSP)", "ja": "ペニシリン非感性肺炎球菌（PNSP）"}, "group": "gram_positive", "order": 13,
+     "meta": {"pathogen": "SPN", "antibiotic": "PEN", "drugClass": "penicillins", "glassIndicator": "PNSP_BLOOD", "aliases": ["PNSP"]}}
+  ]
+}

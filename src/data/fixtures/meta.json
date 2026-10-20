@@ -1,0 +1,45 @@
+{
+ "latestYear": 2024,
+ "yearsAvailable": [
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024
+ ],
+ "provisional": false,
+ "sources": [
+  {
+   "id": "twcdc-amr-annual",
+   "title": {
+    "zh-TW": "臺灣抗生素抗藥性監視年報",
+    "en": "Taiwan Antimicrobial Resistance Surveillance Annual Report",
+    "ja": "台湾抗菌薬耐性監視年報"
+   },
+   "publisher": "Taiwan CDC",
+   "year": 2024,
+   "kind": "annual-report"
+  },
+  {
+   "id": "fixture",
+   "title": {
+    "zh-TW": "前端開發用測試資料（非官方）",
+    "en": "Front-end development fixture (not official)",
+    "ja": "フロントエンド開発用フィクスチャ（非公式）"
+   },
+   "publisher": "TW-AMR Watch",
+   "year": 2026,
+   "kind": "curated"
+  }
+ ],
+ "ingestion": {
+  "status": "ingested",
+  "pdfs": [
+   "臺灣抗生素抗藥性監視年報(2024年).pdf"
+  ]
+ },
+ "lastBuild": "2026-10-20T00:00:00Z"
+}

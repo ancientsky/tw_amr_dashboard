@@ -1,0 +1,577 @@
+report_year,scope,organism,data_year,rank,isolates,pdf_page,table
+2024,all,Escherichia coli,2019,1,205245,22,表2-1
+2024,all,Klebsiella pneumoniae,2019,2,78599,22,表2-1
+2024,all,Staphylococcus aureus,2019,3,71943,22,表2-1
+2024,all,Pseudomonas aeruginosa,2019,4,60166,22,表2-1
+2024,all,Enterococcus faecalis,2019,5,37662,22,表2-1
+2024,all,Proteus spp.,2019,6,34543,22,表2-1
+2024,all,Enterococcus faecium,2019,7,19497,22,表2-1
+2024,all,Acinetobacter baumannii,2019,8,19133,22,表2-1
+2024,all,Enterobacter spp.,2019,9,16912,22,表2-1
+2024,all,Citrobacter spp.,2019,10,15456,22,表2-1
+2024,all,Other,2019,,44307,22,表2-1
+2024,all,Total,2019,,603463,22,表2-1
+2024,all,Escherichia coli,2020,1,201209,22,表2-1
+2024,all,Klebsiella pneumoniae,2020,2,78493,22,表2-1
+2024,all,Staphylococcus aureus,2020,3,68935,22,表2-1
+2024,all,Pseudomonas aeruginosa,2020,4,58411,22,表2-1
+2024,all,Enterococcus faecalis,2020,5,37044,22,表2-1
+2024,all,Proteus spp.,2020,6,34402,22,表2-1
+2024,all,Enterococcus faecium,2020,7,20441,22,表2-1
+2024,all,Acinetobacter baumannii,2020,8,18673,22,表2-1
+2024,all,Enterobacter spp.,2020,9,16539,22,表2-1
+2024,all,Citrobacter spp.,2020,10,15393,22,表2-1
+2024,all,Other,2020,,41661,22,表2-1
+2024,all,Total,2020,,591201,22,表2-1
+2024,all,Escherichia coli,2021,1,211152,22,表2-1
+2024,all,Klebsiella pneumoniae,2021,2,85279,22,表2-1
+2024,all,Staphylococcus aureus,2021,3,71100,22,表2-1
+2024,all,Pseudomonas aeruginosa,2021,4,64798,22,表2-1
+2024,all,Enterococcus faecalis,2021,5,40139,22,表2-1
+2024,all,Proteus spp.,2021,6,37942,22,表2-1
+2024,all,Enterococcus faecium,2021,7,22995,22,表2-1
+2024,all,Acinetobacter baumannii,2021,8,19153,22,表2-1
+2024,all,Enterobacter spp.,2021,9,17114,22,表2-1
+2024,all,Citrobacter spp.,2021,10,16640,22,表2-1
+2024,all,Other,2021,,42347,22,表2-1
+2024,all,Total,2021,,628659,22,表2-1
+2024,all,Escherichia coli,2022,1,215889,22,表2-1
+2024,all,Klebsiella pneumoniae,2022,2,89876,22,表2-1
+2024,all,Staphylococcus aureus,2022,3,72109,22,表2-1
+2024,all,Pseudomonas aeruginosa,2022,4,67284,22,表2-1
+2024,all,Enterococcus faecalis,2022,5,42249,22,表2-1
+2024,all,Proteus spp.,2022,6,40127,22,表2-1
+2024,all,Enterococcus faecium,2022,7,26390,22,表2-1
+2024,all,Acinetobacter baumannii,2022,8,20441,22,表2-1
+2024,all,Citrobacter spp.,2022,9,17586,22,表2-1
+2024,all,Enterobacter spp.,2022,10,17297,22,表2-1
+2024,all,Other,2022,,44167,22,表2-1
+2024,all,Total,2022,,653415,22,表2-1
+2024,all,Escherichia coli,2023,1,246054,22,表2-1
+2024,all,Klebsiella pneumoniae,2023,2,99114,22,表2-1
+2024,all,Staphylococcus aureus,2023,3,79133,22,表2-1
+2024,all,Pseudomonas aeruginosa,2023,4,71805,22,表2-1
+2024,all,Enterococcus faecalis,2023,5,47377,22,表2-1
+2024,all,Proteus spp.,2023,6,43662,22,表2-1
+2024,all,Enterococcus faecium,2023,7,30590,22,表2-1
+2024,all,Acinetobacter baumannii,2023,8,21432,22,表2-1
+2024,all,Enterobacter spp.,2023,9,19177,22,表2-1
+2024,all,Citrobacter spp.,2023,10,19098,22,表2-1
+2024,all,Other,2023,,52370,22,表2-1
+2024,all,Total,2023,,729812,22,表2-1
+2024,all,Escherichia coli,2024,1,255861,22,表2-1
+2024,all,Klebsiella pneumoniae,2024,2,103189,22,表2-1
+2024,all,Staphylococcus aureus,2024,3,84176,22,表2-1
+2024,all,Pseudomonas aeruginosa,2024,4,76463,22,表2-1
+2024,all,Enterococcus faecalis,2024,5,47647,22,表2-1
+2024,all,Proteus spp.,2024,6,45990,22,表2-1
+2024,all,Enterococcus faecium,2024,7,30929,22,表2-1
+2024,all,Acinetobacter baumannii,2024,8,19911,22,表2-1
+2024,all,Enterobacter spp.,2024,9,19878,22,表2-1
+2024,all,Citrobacter spp.,2024,10,19340,22,表2-1
+2024,all,Other,2024,,52449,22,表2-1
+2024,all,Total,2024,,755833,22,表2-1
+2024,blood,Escherichia coli,2019,1,30984,24,表2-2-1
+2024,blood,Klebsiella pneumoniae,2019,2,11527,24,表2-2-1
+2024,blood,Staphylococcus aureus,2019,3,9948,24,表2-2-1
+2024,blood,Pseudomonas aeruginosa,2019,4,3951,24,表2-2-1
+2024,blood,Enterococcus faecalis,2019,5,2542,24,表2-2-1
+2024,blood,Proteus spp.,2019,6,2306,24,表2-2-1
+2024,blood,Enterococcus faecium,2019,7,2273,24,表2-2-1
+2024,blood,Enterobacter spp.,2019,8,1923,24,表2-2-1
+2024,blood,Acinetobacter baumannii,2019,9,1570,24,表2-2-1
+2024,blood,Serratia spp.,2019,10,1039,24,表2-2-1
+2024,blood,Other,2019,,3046,24,表2-2-1
+2024,blood,Total,2019,,71109,24,表2-2-1
+2024,blood,Escherichia coli,2020,1,30945,24,表2-2-1
+2024,blood,Klebsiella pneumoniae,2020,2,11921,24,表2-2-1
+2024,blood,Staphylococcus aureus,2020,3,10116,24,表2-2-1
+2024,blood,Pseudomonas aeruginosa,2020,4,3999,24,表2-2-1
+2024,blood,Enterococcus faecalis,2020,5,2632,24,表2-2-1
+2024,blood,Proteus spp.,2020,6,2515,24,表2-2-1
+2024,blood,Enterococcus faecium,2020,7,2438,24,表2-2-1
+2024,blood,Acinetobacter baumannii,2020,8,1648,24,表2-2-1
+2024,blood,Enterobacter spp.,2020,9,1832,24,表2-2-1
+2024,blood,Serratia spp.,2020,10,1112,24,表2-2-1
+2024,blood,Other,2020,,2850,24,表2-2-1
+2024,blood,Total,2020,,72008,24,表2-2-1
+2024,blood,Escherichia coli,2021,1,32585,24,表2-2-1
+2024,blood,Klebsiella pneumoniae,2021,2,12928,24,表2-2-1
+2024,blood,Staphylococcus aureus,2021,3,11211,24,表2-2-1
+2024,blood,Pseudomonas aeruginosa,2021,4,4457,24,表2-2-1
+2024,blood,Proteus spp.,2021,5,2901,24,表2-2-1
+2024,blood,Enterococcus faecalis,2021,6,2877,24,表2-2-1
+2024,blood,Enterococcus faecium,2021,7,2759,24,表2-2-1
+2024,blood,Enterobacter spp.,2021,8,1915,24,表2-2-1
+2024,blood,Acinetobacter baumannii,2021,9,1719,24,表2-2-1
+2024,blood,Serratia spp.,2021,10,1197,24,表2-2-1
+2024,blood,Other,2021,,3227,24,表2-2-1
+2024,blood,Total,2021,,77776,24,表2-2-1
+2024,blood,Escherichia coli,2022,1,31622,24,表2-2-1
+2024,blood,Klebsiella pneumoniae,2022,2,13308,24,表2-2-1
+2024,blood,Staphylococcus aureus,2022,3,11820,24,表2-2-1
+2024,blood,Pseudomonas aeruginosa,2022,4,4394,24,表2-2-1
+2024,blood,Enterococcus faecium,2022,5,3278,24,表2-2-1
+2024,blood,Enterococcus faecalis,2022,6,3106,24,表2-2-1
+2024,blood,Proteus spp.,2022,7,3029,24,表2-2-1
+2024,blood,Enterobacter spp.,2022,8,1996,24,表2-2-1
+2024,blood,Acinetobacter baumannii,2022,9,1914,24,表2-2-1
+2024,blood,Serratia spp.,2022,10,1239,24,表2-2-1
+2024,blood,Other,2022,,3482,24,表2-2-1
+2024,blood,Total,2022,,79188,24,表2-2-1
+2024,blood,Escherichia coli,2023,1,35443,24,表2-2-1
+2024,blood,Klebsiella pneumoniae,2023,2,14269,24,表2-2-1
+2024,blood,Staphylococcus aureus,2023,3,12495,24,表2-2-1
+2024,blood,Pseudomonas aeruginosa,2023,4,4812,24,表2-2-1
+2024,blood,Enterococcus faecium,2023,5,3743,24,表2-2-1
+2024,blood,Enterococcus faecalis,2023,6,3305,24,表2-2-1
+2024,blood,Proteus spp.,2023,7,3192,24,表2-2-1
+2024,blood,Enterobacter spp.,2023,8,2170,24,表2-2-1
+2024,blood,Acinetobacter baumannii,2023,9,1903,24,表2-2-1
+2024,blood,Serratia spp.,2023,11,1318,24,表2-2-1
+2024,blood,Other,2023,,4021,24,表2-2-1
+2024,blood,Total,2023,,86671,24,表2-2-1
+2024,blood,Escherichia coli,2024,1,37929,24,表2-2-1
+2024,blood,Klebsiella pneumoniae,2024,2,14503,24,表2-2-1
+2024,blood,Staphylococcus aureus,2024,3,13073,24,表2-2-1
+2024,blood,Pseudomonas aeruginosa,2024,4,5156,24,表2-2-1
+2024,blood,Enterococcus faecium,2024,5,3860,24,表2-2-1
+2024,blood,Proteus spp.,2024,6,3617,24,表2-2-1
+2024,blood,Enterococcus faecalis,2024,7,3413,24,表2-2-1
+2024,blood,Enterobacter spp.,2024,8,2267,24,表2-2-1
+2024,blood,Acinetobacter baumannii,2024,9,1791,24,表2-2-1
+2024,blood,Serratia spp.,2024,10,1436,24,表2-2-1
+2024,blood,Other,2024,,3692,24,表2-2-1
+2024,blood,Total,2024,,90737,24,表2-2-1
+2024,urine,Escherichia coli,2019,1,159181,26,表2-2-2
+2024,urine,Klebsiella pneumoniae,2019,2,31318,26,表2-2-2
+2024,urine,Enterococcus faecalis,2019,3,23141,26,表2-2-2
+2024,urine,Proteus spp.,2019,4,20593,26,表2-2-2
+2024,urine,Pseudomonas aeruginosa,2019,5,20507,26,表2-2-2
+2024,urine,Enterococcus faecium,2019,6,11865,26,表2-2-2
+2024,urine,Citrobacter spp.,2019,7,6369,26,表2-2-2
+2024,urine,Morganella spp.,2019,8,5586,26,表2-2-2
+2024,urine,Staphylococcus aureus,2019,9,4827,26,表2-2-2
+2024,urine,Acinetobacter baumannii,2019,10,3422,26,表2-2-2
+2024,urine,Other,2019,,9102,26,表2-2-2
+2024,urine,Total,2019,,295911,26,表2-2-2
+2024,urine,Escherichia coli,2020,1,157283,26,表2-2-2
+2024,urine,Klebsiella pneumoniae,2020,2,32529,26,表2-2-2
+2024,urine,Enterococcus faecalis,2020,3,22709,26,表2-2-2
+2024,urine,Proteus spp.,2020,4,20985,26,表2-2-2
+2024,urine,Pseudomonas aeruginosa,2020,5,20493,26,表2-2-2
+2024,urine,Enterococcus faecium,2020,6,12630,26,表2-2-2
+2024,urine,Citrobacter spp.,2020,7,6461,26,表2-2-2
+2024,urine,Morganella spp.,2020,8,5342,26,表2-2-2
+2024,urine,Staphylococcus aureus,2020,9,5015,26,表2-2-2
+2024,urine,Acinetobacter baumannii,2020,10,3634,26,表2-2-2
+2024,urine,Other,2020,,9796,26,表2-2-2
+2024,urine,Total,2020,,296877,26,表2-2-2
+2024,urine,Escherichia coli,2021,1,163488,26,表2-2-2
+2024,urine,Klebsiella pneumoniae,2021,2,36171,26,表2-2-2
+2024,urine,Enterococcus faecalis,2021,3,24287,26,表2-2-2
+2024,urine,Proteus spp.,2021,4,23219,26,表2-2-2
+2024,urine,Pseudomonas aeruginosa,2021,5,22711,26,表2-2-2
+2024,urine,Enterococcus faecium,2021,6,13989,26,表2-2-2
+2024,urine,Citrobacter spp.,2021,7,7113,26,表2-2-2
+2024,urine,Morganella spp.,2021,8,5977,26,表2-2-2
+2024,urine,Staphylococcus aureus,2021,9,5575,26,表2-2-2
+2024,urine,Acinetobacter baumannii,2021,10,3785,26,表2-2-2
+2024,urine,Other,2021,,10888,26,表2-2-2
+2024,urine,Total,2021,,317203,26,表2-2-2
+2024,urine,Escherichia coli,2022,1,167613,26,表2-2-2
+2024,urine,Klebsiella pneumoniae,2022,2,38215,26,表2-2-2
+2024,urine,Enterococcus faecalis,2022,3,26296,26,表2-2-2
+2024,urine,Proteus spp.,2022,4,24704,26,表2-2-2
+2024,urine,Pseudomonas aeruginosa,2022,5,22922,26,表2-2-2
+2024,urine,Enterococcus faecium,2022,6,16685,26,表2-2-2
+2024,urine,Citrobacter spp.,2022,7,7655,26,表2-2-2
+2024,urine,Morganella spp.,2022,8,6343,26,表2-2-2
+2024,urine,Staphylococcus aureus,2022,9,5927,26,表2-2-2
+2024,urine,Acinetobacter baumannii,2022,10,3814,26,表2-2-2
+2024,urine,Other,2022,,11586,26,表2-2-2
+2024,urine,Total,2022,,331760,26,表2-2-2
+2024,urine,Escherichia coli,2023,1,191319,26,表2-2-2
+2024,urine,Klebsiella pneumoniae,2023,2,41689,26,表2-2-2
+2024,urine,Enterococcus faecalis,2023,3,29665,26,表2-2-2
+2024,urine,Proteus spp.,2023,4,27027,26,表2-2-2
+2024,urine,Pseudomonas aeruginosa,2023,5,24099,26,表2-2-2
+2024,urine,Enterococcus faecium,2023,6,19783,26,表2-2-2
+2024,urine,Citrobacter spp.,2023,7,8105,26,表2-2-2
+2024,urine,Morganella spp.,2023,8,6680,26,表2-2-2
+2024,urine,Staphylococcus aureus,2023,9,6544,26,表2-2-2
+2024,urine,Acinetobacter baumannii,2023,10,3765,26,表2-2-2
+2024,urine,Other,2023,,12269,26,表2-2-2
+2024,urine,Total,2023,,370945,26,表2-2-2
+2024,urine,Escherichia coli,2024,1,198631,26,表2-2-2
+2024,urine,Klebsiella pneumoniae,2024,2,43439,26,表2-2-2
+2024,urine,Enterococcus faecalis,2024,3,29886,26,表2-2-2
+2024,urine,Proteus spp.,2024,4,28230,26,表2-2-2
+2024,urine,Pseudomonas aeruginosa,2024,5,25369,26,表2-2-2
+2024,urine,Enterococcus faecium,2024,6,19690,26,表2-2-2
+2024,urine,Citrobacter spp.,2024,7,8160,26,表2-2-2
+2024,urine,Staphylococcus aureus,2024,8,6878,26,表2-2-2
+2024,urine,Morganella spp.,2024,9,6557,26,表2-2-2
+2024,urine,Acinetobacter baumannii,2024,10,3584,26,表2-2-2
+2024,urine,Other,2024,,12189,26,表2-2-2
+2024,urine,Total,2024,,382613,26,表2-2-2
+2024,sputum,Klebsiella pneumoniae,2019,1,24935,28,表2-2-3
+2024,sputum,Pseudomonas aeruginosa,2019,2,24367,28,表2-2-3
+2024,sputum,Staphylococcus aureus,2019,3,15038,28,表2-2-3
+2024,sputum,Acinetobacter baumannii,2019,4,11270,28,表2-2-3
+2024,sputum,Escherichia coli,2019,5,9853,28,表2-2-3
+2024,sputum,Enterobacter spp.,2019,6,4406,28,表2-2-3
+2024,sputum,Serratia spp.,2019,7,3970,28,表2-2-3
+2024,sputum,Proteus spp.,2019,8,3048,28,表2-2-3
+2024,sputum,Haemophilus influenzae,2019,9,2807,28,表2-2-3
+2024,sputum,Citrobacter spp.,2019,11,1246,28,表2-2-3
+2024,sputum,Other,2019,,4306,28,表2-2-3
+2024,sputum,Total,2019,,105246,28,表2-2-3
+2024,sputum,Klebsiella pneumoniae,2020,1,24348,28,表2-2-3
+2024,sputum,Pseudomonas aeruginosa,2020,2,23478,28,表2-2-3
+2024,sputum,Staphylococcus aureus,2020,3,14165,28,表2-2-3
+2024,sputum,Acinetobacter baumannii,2020,4,10610,28,表2-2-3
+2024,sputum,Escherichia coli,2020,5,9613,28,表2-2-3
+2024,sputum,Enterobacter spp.,2020,6,4197,28,表2-2-3
+2024,sputum,Serratia spp.,2020,7,4011,28,表2-2-3
+2024,sputum,Proteus spp.,2020,8,3149,28,表2-2-3
+2024,sputum,Haemophilus influenzae,2020,9,1777,28,表2-2-3
+2024,sputum,Citrobacter spp.,2020,11,1259,28,表2-2-3
+2024,sputum,Other,2020,,3513,28,表2-2-3
+2024,sputum,Total,2020,,100120,28,表2-2-3
+2024,sputum,Pseudomonas aeruginosa,2021,1,26206,28,表2-2-3
+2024,sputum,Klebsiella pneumoniae,2021,2,25840,28,表2-2-3
+2024,sputum,Staphylococcus aureus,2021,3,14144,28,表2-2-3
+2024,sputum,Acinetobacter baumannii,2021,4,10505,28,表2-2-3
+2024,sputum,Escherichia coli,2021,5,10076,28,表2-2-3
+2024,sputum,Serratia spp.,2021,6,4341,28,表2-2-3
+2024,sputum,Enterobacter spp.,2021,7,3992,28,表2-2-3
+2024,sputum,Proteus spp.,2021,8,3858,28,表2-2-3
+2024,sputum,Citrobacter spp.,2021,9,1408,28,表2-2-3
+2024,sputum,Haemophilus influenzae,2021,10,1402,28,表2-2-3
+2024,sputum,Other,2021,,3277,28,表2-2-3
+2024,sputum,Total,2021,,105049,28,表2-2-3
+2024,sputum,Klebsiella pneumoniae,2022,1,28739,28,表2-2-3
+2024,sputum,Pseudomonas aeruginosa,2022,2,28611,28,表2-2-3
+2024,sputum,Staphylococcus aureus,2022,3,15731,28,表2-2-3
+2024,sputum,Acinetobacter baumannii,2022,4,11383,28,表2-2-3
+2024,sputum,Escherichia coli,2022,5,11330,28,表2-2-3
+2024,sputum,Serratia spp.,2022,6,4767,28,表2-2-3
+2024,sputum,Enterobacter spp.,2022,7,4466,28,表2-2-3
+2024,sputum,Proteus spp.,2022,8,4267,28,表2-2-3
+2024,sputum,Citrobacter spp.,2022,9,1540,28,表2-2-3
+2024,sputum,Haemophilus influenzae,2022,10,1189,28,表2-2-3
+2024,sputum,Other,2022,,3728,28,表2-2-3
+2024,sputum,Total,2022,,115751,28,表2-2-3
+2024,sputum,Klebsiella pneumoniae,2023,1,32170,28,表2-2-3
+2024,sputum,Pseudomonas aeruginosa,2023,2,31109,28,表2-2-3
+2024,sputum,Staphylococcus aureus,2023,3,17400,28,表2-2-3
+2024,sputum,Escherichia coli,2023,4,12557,28,表2-2-3
+2024,sputum,Acinetobacter baumannii,2023,5,12220,28,表2-2-3
+2024,sputum,Serratia spp.,2023,6,5107,28,表2-2-3
+2024,sputum,Enterobacter spp.,2023,7,4983,28,表2-2-3
+2024,sputum,Proteus spp.,2023,8,4505,28,表2-2-3
+2024,sputum,Haemophilus influenzae,2023,9,2773,28,表2-2-3
+2024,sputum,Citrobacter spp.,2023,10,1806,28,表2-2-3
+2024,sputum,Other,2023,,4485,28,表2-2-3
+2024,sputum,Total,2023,,129115,28,表2-2-3
+2024,sputum,Pseudomonas aeruginosa,2024,1,33662,28,表2-2-3
+2024,sputum,Klebsiella pneumoniae,2024,2,33519,28,表2-2-3
+2024,sputum,Staphylococcus aureus,2024,3,18718,28,表2-2-3
+2024,sputum,Escherichia coli,2024,4,13896,28,表2-2-3
+2024,sputum,Acinetobacter baumannii,2024,5,11361,28,表2-2-3
+2024,sputum,Serratia spp.,2024,6,5775,28,表2-2-3
+2024,sputum,Proteus spp.,2024,7,5313,28,表2-2-3
+2024,sputum,Enterobacter spp.,2024,8,5244,28,表2-2-3
+2024,sputum,Haemophilus influenzae,2024,9,3840,28,表2-2-3
+2024,sputum,Citrobacter spp.,2024,10,1818,28,表2-2-3
+2024,sputum,Other,2024,,4746,28,表2-2-3
+2024,sputum,Total,2024,,137892,28,表2-2-3
+2024,pus,Staphylococcus aureus,2019,1,38546,30,表2-2-4
+2024,pus,Escherichia coli,2019,2,15815,30,表2-2-4
+2024,pus,Klebsiella pneumoniae,2019,3,11643,30,表2-2-4
+2024,pus,Pseudomonas aeruginosa,2019,4,11422,30,表2-2-4
+2024,pus,Enterococcus faecalis,2019,5,8335,30,表2-2-4
+2024,pus,Proteus spp.,2019,6,6005,30,表2-2-4
+2024,pus,Enterobacter spp.,2019,7,3344,30,表2-2-4
+2024,pus,Acinetobacter baumannii,2019,8,3001,30,表2-2-4
+2024,pus,Enterococcus faecium,2019,9,2816,30,表2-2-4
+2024,pus,Citrobacter spp.,2019,10,2610,30,表2-2-4
+2024,pus,Other,2019,,6004,30,表2-2-4
+2024,pus,Total,2019,,109541,30,表2-2-4
+2024,pus,Staphylococcus aureus,2020,1,37686,30,表2-2-4
+2024,pus,Escherichia coli,2020,2,15871,30,表2-2-4
+2024,pus,Klebsiella pneumoniae,2020,3,11823,30,表2-2-4
+2024,pus,Pseudomonas aeruginosa,2020,4,11257,30,表2-2-4
+2024,pus,Enterococcus faecalis,2020,5,8296,30,表2-2-4
+2024,pus,Proteus spp.,2020,6,6106,30,表2-2-4
+2024,pus,Enterobacter spp.,2020,7,3232,30,表2-2-4
+2024,pus,Acinetobacter baumannii,2020,8,3089,30,表2-2-4
+2024,pus,Enterococcus faecium,2020,9,2947,30,表2-2-4
+2024,pus,Citrobacter spp.,2020,10,2516,30,表2-2-4
+2024,pus,Other,2020,,5611,30,表2-2-4
+2024,pus,Total,2020,,108434,30,表2-2-4
+2024,pus,Staphylococcus aureus,2021,1,38096,30,表2-2-4
+2024,pus,Escherichia coli,2021,2,17365,30,表2-2-4
+2024,pus,Klebsiella pneumoniae,2021,3,12538,30,表2-2-4
+2024,pus,Pseudomonas aeruginosa,2021,4,11975,30,表2-2-4
+2024,pus,Enterococcus faecalis,2021,5,9101,30,表2-2-4
+2024,pus,Proteus spp.,2021,6,6983,30,表2-2-4
+2024,pus,Enterococcus faecium,2021,7,3480,30,表2-2-4
+2024,pus,Enterobacter spp.,2021,8,3377,30,表2-2-4
+2024,pus,Acinetobacter baumannii,2021,9,3245,30,表2-2-4
+2024,pus,Citrobacter spp.,2021,10,2735,30,表2-2-4
+2024,pus,Other,2021,,5899,30,表2-2-4
+2024,pus,Total,2021,,114794,30,表2-2-4
+2024,pus,Staphylococcus aureus,2022,1,36907,30,表2-2-4
+2024,pus,Escherichia coli,2022,2,17264,30,表2-2-4
+2024,pus,Klebsiella pneumoniae,2022,3,12404,30,表2-2-4
+2024,pus,Pseudomonas aeruginosa,2022,4,12180,30,表2-2-4
+2024,pus,Enterococcus faecalis,2022,5,9302,30,表2-2-4
+2024,pus,Proteus spp.,2022,6,7033,30,表2-2-4
+2024,pus,Enterococcus faecium,2022,7,3810,30,表2-2-4
+2024,pus,Acinetobacter baumannii,2022,8,3313,30,表2-2-4
+2024,pus,Enterobacter spp.,2022,9,3275,30,表2-2-4
+2024,pus,Citrobacter spp.,2022,10,2809,30,表2-2-4
+2024,pus,Other,2022,,6184,30,表2-2-4
+2024,pus,Total,2022,,114481,30,表2-2-4
+2024,pus,Staphylococcus aureus,2023,1,40235,30,表2-2-4
+2024,pus,Escherichia coli,2023,2,18739,30,表2-2-4
+2024,pus,Klebsiella pneumoniae,2023,3,13322,30,表2-2-4
+2024,pus,Pseudomonas aeruginosa,2023,4,12639,30,表2-2-4
+2024,pus,Enterococcus faecalis,2023,5,10047,30,表2-2-4
+2024,pus,Proteus spp.,2023,6,7446,30,表2-2-4
+2024,pus,Enterococcus faecium,2023,7,4233,30,表2-2-4
+2024,pus,Enterobacter spp.,2023,8,3575,30,表2-2-4
+2024,pus,Acinetobacter baumannii,2023,9,3319,30,表2-2-4
+2024,pus,Citrobacter spp.,2023,10,3171,30,表2-2-4
+2024,pus,Other,2023,,6777,30,表2-2-4
+2024,pus,Total,2023,,123503,30,表2-2-4
+2024,pus,Staphylococcus aureus,2024,1,43300,30,表2-2-4
+2024,pus,Escherichia coli,2024,2,19248,30,表2-2-4
+2024,pus,Klebsiella pneumoniae,2024,3,13473,30,表2-2-4
+2024,pus,Pseudomonas aeruginosa,2024,4,12992,30,表2-2-4
+2024,pus,Enterococcus faecalis,2024,5,9913,30,表2-2-4
+2024,pus,Proteus spp.,2024,6,7781,30,表2-2-4
+2024,pus,Enterococcus faecium,2024,7,4195,30,表2-2-4
+2024,pus,Enterobacter spp.,2024,8,3508,30,表2-2-4
+2024,pus,Citrobacter spp.,2024,9,3208,30,表2-2-4
+2024,pus,Acinetobacter baumannii,2024,10,3091,30,表2-2-4
+2024,pus,Other,2024,,6901,30,表2-2-4
+2024,pus,Total,2024,,127610,30,表2-2-4
+2024,stool,Salmonella spp.,2019,1,3480,32,表2-2-5
+2024,stool,Enterococcus faecium,2019,2,1155,32,表2-2-5
+2024,stool,Klebsiella pneumoniae,2019,3,472,32,表2-2-5
+2024,stool,Pseudomonas aeruginosa,2019,4,438,32,表2-2-5
+2024,stool,Staphylococcus aureus,2019,5,302,32,表2-2-5
+2024,stool,Escherichia coli,2019,6,158,32,表2-2-5
+2024,stool,Shigella spp.,2019,7,80,32,表2-2-5
+2024,stool,Enterococcus faecalis,2019,8,38,32,表2-2-5
+2024,stool,Acinetobacter baumannii,2019,10,19,32,表2-2-5
+2024,stool,Citrobacter spp.,2019,13,7,32,表2-2-5
+2024,stool,Other,2019,,64,32,表2-2-5
+2024,stool,Total,2019,,6213,32,表2-2-5
+2024,stool,Salmonella spp.,2020,1,3833,32,表2-2-5
+2024,stool,Enterococcus faecium,2020,2,1536,32,表2-2-5
+2024,stool,Klebsiella pneumoniae,2020,3,506,32,表2-2-5
+2024,stool,Pseudomonas aeruginosa,2020,4,411,32,表2-2-5
+2024,stool,Staphylococcus aureus,2020,5,287,32,表2-2-5
+2024,stool,Escherichia coli,2020,6,195,32,表2-2-5
+2024,stool,Shigella spp.,2020,7,95,32,表2-2-5
+2024,stool,Enterococcus faecalis,2020,8,80,32,表2-2-5
+2024,stool,Acinetobacter baumannii,2020,9,26,32,表2-2-5
+2024,stool,Citrobacter spp.,2020,11,15,32,表2-2-5
+2024,stool,Other,2020,,54,32,表2-2-5
+2024,stool,Total,2020,,7038,32,表2-2-5
+2024,stool,Salmonella spp.,2021,1,3687,32,表2-2-5
+2024,stool,Enterococcus faecium,2021,2,1529,32,表2-2-5
+2024,stool,Klebsiella pneumoniae,2021,3,485,32,表2-2-5
+2024,stool,Pseudomonas aeruginosa,2021,4,459,32,表2-2-5
+2024,stool,Staphylococcus aureus,2021,5,320,32,表2-2-5
+2024,stool,Escherichia coli,2021,6,282,32,表2-2-5
+2024,stool,Enterococcus faecalis,2021,7,82,32,表2-2-5
+2024,stool,Shigella spp.,2021,7,82,32,表2-2-5
+2024,stool,Acinetobacter baumannii,2021,9,31,32,表2-2-5
+2024,stool,Citrobacter spp.,2021,11,18,32,表2-2-5
+2024,stool,Other,2021,,73,32,表2-2-5
+2024,stool,Total,2021,,7048,32,表2-2-5
+2024,stool,Salmonella spp.,2022,1,3870,32,表2-2-5
+2024,stool,Enterococcus faecium,2022,2,1712,32,表2-2-5
+2024,stool,Klebsiella pneumoniae,2022,3,484,32,表2-2-5
+2024,stool,Pseudomonas aeruginosa,2022,4,456,32,表2-2-5
+2024,stool,Staphylococcus aureus,2022,5,296,32,表2-2-5
+2024,stool,Escherichia coli,2022,6,279,32,表2-2-5
+2024,stool,Enterococcus faecalis,2022,7,121,32,表2-2-5
+2024,stool,Shigella spp.,2022,8,65,32,表2-2-5
+2024,stool,Acinetobacter baumannii,2022,9,42,32,表2-2-5
+2024,stool,Citrobacter spp.,2022,13,10,32,表2-2-5
+2024,stool,Other,2022,,84,32,表2-2-5
+2024,stool,Total,2022,,7419,32,表2-2-5
+2024,stool,Salmonella spp.,2023,1,4580,32,表2-2-5
+2024,stool,Enterococcus faecium,2023,2,1713,32,表2-2-5
+2024,stool,Pseudomonas aeruginosa,2023,3,588,32,表2-2-5
+2024,stool,Klebsiella pneumoniae,2023,4,465,32,表2-2-5
+2024,stool,Escherichia coli,2023,5,335,32,表2-2-5
+2024,stool,Staphylococcus aureus,2023,6,311,32,表2-2-5
+2024,stool,Enterococcus faecalis,2023,7,129,32,表2-2-5
+2024,stool,Shigella spp.,2023,8,49,32,表2-2-5
+2024,stool,Acinetobacter baumannii,2023,9,42,32,表2-2-5
+2024,stool,Citrobacter spp.,2023,13,12,32,表2-2-5
+2024,stool,Other,2023,,86,32,表2-2-5
+2024,stool,Total,2023,,8310,32,表2-2-5
+2024,stool,Salmonella spp.,2024,1,3581,32,表2-2-5
+2024,stool,Enterococcus faecium,2024,2,1576,32,表2-2-5
+2024,stool,Pseudomonas aeruginosa,2024,3,589,32,表2-2-5
+2024,stool,Klebsiella pneumoniae,2024,4,567,32,表2-2-5
+2024,stool,Escherichia coli,2024,5,338,32,表2-2-5
+2024,stool,Staphylococcus aureus,2024,6,252,32,表2-2-5
+2024,stool,Enterococcus faecalis,2024,7,119,32,表2-2-5
+2024,stool,Acinetobacter baumannii,2024,8,56,32,表2-2-5
+2024,stool,Shigella spp.,2024,9,42,32,表2-2-5
+2024,stool,Citrobacter spp.,2024,10,22,32,表2-2-5
+2024,stool,Other,2024,,85,32,表2-2-5
+2024,stool,Total,2024,,7227,32,表2-2-5
+2024,co,Escherichia coli,2019,1,183459,34,表2-3-1
+2024,co,Staphylococcus aureus,2019,2,59851,34,表2-3-1
+2024,co,Klebsiella pneumoniae,2019,3,58656,34,表2-3-1
+2024,co,Pseudomonas aeruginosa,2019,4,39989,34,表2-3-1
+2024,co,Enterococcus faecalis,2019,5,29149,34,表2-3-1
+2024,co,Proteus spp.,2019,6,26500,34,表2-3-1
+2024,co,Acinetobacter baumannii,2019,8,8465,34,表2-3-1
+2024,co,Citrobacter spp.,2019,8,9858,34,表2-3-1
+2024,co,Enterobacter spp.,2019,9,8453,34,表2-3-1
+2024,co,Enterococcus faecium,2019,10,7930,34,表2-3-1
+2024,co,Other,2019,,30124,34,表2-3-1
+2024,co,Total,2019,,462434,34,表2-3-1
+2024,co,Escherichia coli,2020,1,182556,34,表2-3-1
+2024,co,Klebsiella pneumoniae,2020,2,59162,34,表2-3-1
+2024,co,Staphylococcus aureus,2020,3,58037,34,表2-3-1
+2024,co,Pseudomonas aeruginosa,2020,4,39074,34,表2-3-1
+2024,co,Enterococcus faecalis,2020,5,29017,34,表2-3-1
+2024,co,Proteus spp.,2020,6,27018,34,表2-3-1
+2024,co,Citrobacter spp.,2020,7,9871,34,表2-3-1
+2024,co,Enterococcus faecium,2020,8,8215,34,表2-3-1
+2024,co,Enterobacter spp.,2020,9,8141,34,表2-3-1
+2024,co,Acinetobacter baumannii,2020,10,8116,34,表2-3-1
+2024,co,Other,2020,,28016,34,表2-3-1
+2024,co,Total,2020,,457223,34,表2-3-1
+2024,co,Escherichia coli,2021,1,190663,34,表2-3-1
+2024,co,Klebsiella pneumoniae,2021,2,63464,34,表2-3-1
+2024,co,Staphylococcus aureus,2021,3,59501,34,表2-3-1
+2024,co,Pseudomonas aeruginosa,2021,4,42947,34,表2-3-1
+2024,co,Enterococcus faecalis,2021,5,31279,34,表2-3-1
+2024,co,Proteus spp.,2021,6,29939,34,表2-3-1
+2024,co,Citrobacter spp.,2021,7,10714,34,表2-3-1
+2024,co,Enterococcus faecium,2021,8,8916,34,表2-3-1
+2024,co,Enterobacter spp.,2021,9,8552,34,表2-3-1
+2024,co,Acinetobacter baumannii,2021,10,8446,34,表2-3-1
+2024,co,Other,2021,,28264,34,表2-3-1
+2024,co,Total,2021,,482685,34,表2-3-1
+2024,co,Escherichia coli,2022,1,196107,34,表2-3-1
+2024,co,Klebsiella pneumoniae,2022,2,67718,34,表2-3-1
+2024,co,Staphylococcus aureus,2022,3,60466,34,表2-3-1
+2024,co,Pseudomonas aeruginosa,2022,4,45081,34,表2-3-1
+2024,co,Enterococcus faecalis,2022,5,33494,34,表2-3-1
+2024,co,Proteus spp.,2022,6,31622,34,表2-3-1
+2024,co,Citrobacter spp.,2022,7,11389,34,表2-3-1
+2024,co,Enterococcus faecium,2022,8,10248,34,表2-3-1
+2024,co,Acinetobacter baumannii,2022,9,8712,34,表2-3-1
+2024,co,Enterobacter spp.,2022,10,8701,34,表2-3-1
+2024,co,Other,2022,,29781,34,表2-3-1
+2024,co,Total,2022,,503319,34,表2-3-1
+2024,co,Escherichia coli,2023,1,222449,34,表2-3-1
+2024,co,Klebsiella pneumoniae,2023,2,74187,34,表2-3-1
+2024,co,Staphylococcus aureus,2023,3,66991,34,表2-3-1
+2024,co,Pseudomonas aeruginosa,2023,4,48259,34,表2-3-1
+2024,co,Enterococcus faecalis,2023,5,37732,34,表2-3-1
+2024,co,Proteus spp.,2023,6,34477,34,表2-3-1
+2024,co,Citrobacter spp.,2023,7,12513,34,表2-3-1
+2024,co,Enterococcus faecium,2023,8,12213,34,表2-3-1
+2024,co,Enterobacter spp.,2023,9,9701,34,表2-3-1
+2024,co,Acinetobacter baumannii,2023,10,9462,34,表2-3-1
+2024,co,Other,2023,,35775,34,表2-3-1
+2024,co,Total,2023,,563759,34,表2-3-1
+2024,co,Escherichia coli,2024,1,230769,34,表2-3-1
+2024,co,Klebsiella pneumoniae,2024,2,77693,34,表2-3-1
+2024,co,Staphylococcus aureus,2024,3,71427,34,表2-3-1
+2024,co,Pseudomonas aeruginosa,2024,4,51743,34,表2-3-1
+2024,co,Enterococcus faecalis,2024,5,37763,34,表2-3-1
+2024,co,Proteus spp.,2024,6,36472,34,表2-3-1
+2024,co,Citrobacter spp.,2024,7,12789,34,表2-3-1
+2024,co,Enterococcus faecium,2024,8,12470,34,表2-3-1
+2024,co,Enterobacter spp.,2024,9,9778,34,表2-3-1
+2024,co,Acinetobacter baumannii,2024,10,9101,34,表2-3-1
+2024,co,Other,2024,,35197,34,表2-3-1
+2024,co,Total,2024,,585202,34,表2-3-1
+2024,ho,Escherichia coli,2019,1,22322,36,表2-3-2
+2024,ho,Pseudomonas aeruginosa,2019,2,21551,36,表2-3-2
+2024,ho,Klebsiella pneumoniae,2019,3,21499,36,表2-3-2
+2024,ho,Acinetobacter baumannii,2019,4,11227,36,表2-3-2
+2024,ho,Staphylococcus aureus,2019,5,12971,36,表2-3-2
+2024,ho,Enterococcus faecium,2019,6,11985,36,表2-3-2
+2024,ho,Enterococcus faecalis,2019,7,8369,36,表2-3-2
+2024,ho,Enterobacter spp.,2019,8,6352,36,表2-3-2
+2024,ho,Proteus spp.,2019,9,4855,36,表2-3-2
+2024,ho,Serratia spp.,2019,10,3626,36,表2-3-2
+2024,ho,Other,2019,,5124,36,表2-3-2
+2024,ho,Total,2019,,129881,36,表2-3-2
+2024,ho,Klebsiella pneumoniae,2020,1,22000,36,表2-3-2
+2024,ho,Escherichia coli,2020,2,21475,36,表2-3-2
+2024,ho,Pseudomonas aeruginosa,2020,3,21405,36,表2-3-2
+2024,ho,Acinetobacter baumannii,2020,4,11173,36,表2-3-2
+2024,ho,Enterococcus faecium,2020,5,12938,36,表2-3-2
+2024,ho,Staphylococcus aureus,2020,6,12691,36,表2-3-2
+2024,ho,Enterococcus faecalis,2020,7,8407,36,表2-3-2
+2024,ho,Enterobacter spp.,2020,8,6117,36,表2-3-2
+2024,ho,Proteus spp.,2020,9,4876,36,表2-3-2
+2024,ho,Serratia spp.,2020,10,3757,36,表2-3-2
+2024,ho,Other,2020,,4766,36,表2-3-2
+2024,ho,Total,2020,,129605,36,表2-3-2
+2024,ho,Klebsiella pneumoniae,2021,1,24168,36,表2-3-2
+2024,ho,Pseudomonas aeruginosa,2021,2,23511,36,表2-3-2
+2024,ho,Escherichia coli,2021,3,22630,36,表2-3-2
+2024,ho,Enterococcus faecium,2021,4,14506,36,表2-3-2
+2024,ho,Acinetobacter baumannii,2021,5,11281,36,表2-3-2
+2024,ho,Staphylococcus aureus,2021,6,13097,36,表2-3-2
+2024,ho,Enterococcus faecalis,2021,7,8935,36,表2-3-2
+2024,ho,Enterobacter spp.,2021,8,6080,36,表2-3-2
+2024,ho,Proteus spp.,2021,9,5695,36,表2-3-2
+2024,ho,Serratia spp.,2021,10,4093,36,表2-3-2
+2024,ho,Other,2021,,5336,36,表2-3-2
+2024,ho,Total,2021,,139332,36,表2-3-2
+2024,ho,Klebsiella pneumoniae,2022,1,25100,36,表2-3-2
+2024,ho,Pseudomonas aeruginosa,2022,2,24394,36,表2-3-2
+2024,ho,Escherichia coli,2022,3,22870,36,表2-3-2
+2024,ho,Enterococcus faecium,2022,4,17010,36,表2-3-2
+2024,ho,Staphylococcus aureus,2022,5,13229,36,表2-3-2
+2024,ho,Acinetobacter baumannii,2022,6,12338,36,表2-3-2
+2024,ho,Enterococcus faecalis,2022,7,9215,36,表2-3-2
+2024,ho,Enterobacter spp.,2022,8,6270,36,表2-3-2
+2024,ho,Proteus spp.,2022,9,6045,36,表2-3-2
+2024,ho,Serratia spp.,2022,10,4422,36,表2-3-2
+2024,ho,Other,2022,,5568,36,表2-3-2
+2024,ho,Total,2022,,146461,36,表2-3-2
+2024,ho,Klebsiella pneumoniae,2023,1,27587,36,表2-3-2
+2024,ho,Pseudomonas aeruginosa,2023,2,25727,36,表2-3-2
+2024,ho,Escherichia coli,2023,3,25140,36,表2-3-2
+2024,ho,Enterococcus faecium,2023,4,19194,36,表2-3-2
+2024,ho,Staphylococcus aureus,2023,5,13615,36,表2-3-2
+2024,ho,Acinetobacter baumannii,2023,6,12625,36,表2-3-2
+2024,ho,Enterococcus faecalis,2023,7,9871,36,表2-3-2
+2024,ho,Enterobacter spp.,2023,8,7072,36,表2-3-2
+2024,ho,Proteus spp.,2023,9,6195,36,表2-3-2
+2024,ho,Serratia spp.,2023,10,4503,36,表2-3-2
+2024,ho,Other,2023,,6128,36,表2-3-2
+2024,ho,Total,2023,,157657,36,表2-3-2
+2024,ho,Klebsiella pneumoniae,2024,1,28057,36,表2-3-2
+2024,ho,Escherichia coli,2024,2,27512,36,表2-3-2
+2024,ho,Pseudomonas aeruginosa,2024,3,26853,36,表2-3-2
+2024,ho,Enterococcus faecium,2024,4,19038,36,表2-3-2
+2024,ho,Staphylococcus aureus,2024,5,14295,36,表2-3-2
+2024,ho,Acinetobacter baumannii,2024,6,11352,36,表2-3-2
+2024,ho,Enterococcus faecalis,2024,7,10038,36,表2-3-2
+2024,ho,Enterobacter spp.,2024,8,7156,36,表2-3-2
+2024,ho,Proteus spp.,2024,9,6727,36,表2-3-2
+2024,ho,Serratia spp.,2024,10,4990,36,表2-3-2
+2024,ho,Other,2024,,6475,36,表2-3-2
+2024,ho,Total,2024,,162493,36,表2-3-2

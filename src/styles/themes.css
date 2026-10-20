@@ -1,0 +1,37 @@
+/*
+ * Theme-level decorative layers (backgrounds, glass, glow) that sit on top of tokens.
+ * Kept separate so tokens.css stays a pure variable sheet.
+ */
+
+/* Page-level ambient wash */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--hero-wash);
+}
+
+/* Dark: faint scanline grid for a "phosphor terminal" feel, very subtle. */
+:root[data-theme='dark'] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgb(0 227 140 / 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(0 227 140 / 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 70%);
+}
+
+/* Shared glass surface used by cards/popovers */
+.glass {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
+}

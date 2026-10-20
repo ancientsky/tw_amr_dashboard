@@ -1,0 +1,91 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.scroller {
+  overflow: auto;
+  max-height: var(--table-max-h, 440px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+:root[data-theme='dark'] .scroller {
+  background: rgb(14 21 18 / 0.6);
+}
+.table {
+  width: 100%;
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
+.table caption {
+  caption-side: top;
+  text-align: left;
+}
+.th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-weight: 600;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.02em;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--line-strong);
+  padding: 0;
+}
+.sortBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 10px 12px;
+  text-align: inherit;
+  justify-content: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+.sortBtn:hover {
+  color: var(--ink);
+}
+.sortIcon {
+  opacity: 0.35;
+}
+.sorted .sortIcon {
+  opacity: 1;
+  color: var(--accent);
+}
+.num {
+  text-align: right;
+}
+.num .sortBtn {
+  justify-content: flex-end;
+}
+.td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  color: var(--ink);
+}
+.table tbody tr:last-child .td {
+  border-bottom: 0;
+}
+.table tbody tr:hover .td {
+  background: var(--accent-soft);
+}
+.empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--ink-3);
+}

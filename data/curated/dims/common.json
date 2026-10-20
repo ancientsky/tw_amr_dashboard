@@ -1,0 +1,33 @@
+{
+  "levels": [
+    {"code": "all", "name": {"zh-TW": "全國（全部層級）", "en": "National (all levels)", "ja": "全国（全病院）"}, "order": 0, "meta": {"aliases": ["national", "全國", "全国", "total"]}},
+    {"code": "medical_center", "name": {"zh-TW": "醫學中心", "en": "Medical centres", "ja": "医学センター"}, "order": 1, "meta": {"aliases": ["mc", "medical center", "醫學中心"]}},
+    {"code": "regional", "name": {"zh-TW": "區域醫院", "en": "Regional hospitals", "ja": "地域病院"}, "order": 2, "meta": {"aliases": ["rh", "regional hospital", "區域醫院"]}},
+    {"code": "district", "name": {"zh-TW": "地區醫院", "en": "District hospitals", "ja": "地区病院"}, "order": 3, "meta": {"aliases": ["dh", "district hospital", "地區醫院"]}}
+  ],
+  "wards": [
+    {"code": "all", "name": {"zh-TW": "全部病房", "en": "All wards", "ja": "全病棟"}, "order": 0},
+    {"code": "icu", "name": {"zh-TW": "加護病房", "en": "ICU", "ja": "集中治療室（ICU）"}, "order": 1},
+    {"code": "non_icu", "name": {"zh-TW": "一般病房", "en": "Non-ICU wards", "ja": "一般病棟"}, "order": 2}
+  ],
+  "settings": [
+    {"code": "all", "name": {"zh-TW": "社區與醫療相關感染（CO+HO）", "en": "Community- and hospital-onset (CO+HO)", "ja": "市中および医療関連感染（CO+HO）"}, "order": 0, "meta": {"aliases": ["co+ho", "co_ho", "both", "社區與醫療相關感染"]}},
+    {"code": "co", "name": {"zh-TW": "社區相關感染（CO）", "en": "Community-onset (CO)", "ja": "市中関連感染（CO）"}, "order": 1, "meta": {"aliases": ["community", "社區相關感染"]}},
+    {"code": "ho", "name": {"zh-TW": "醫療相關感染（HO）", "en": "Hospital-onset (HO)", "ja": "医療関連感染（HO）"}, "order": 2, "meta": {"aliases": ["hospital", "healthcare", "醫療相關感染"]}}
+  ],
+  "specimens": [
+    {"code": "all", "name": {"zh-TW": "全部檢體", "en": "All specimens", "ja": "全検体"}, "order": 0, "meta": {"aliases": ["全部檢體", "any"]}},
+    {"code": "blood", "name": {"zh-TW": "血液", "en": "Blood", "ja": "血液"}, "order": 1, "meta": {"aliases": ["血液", "血液檢體"]}},
+    {"code": "urine", "name": {"zh-TW": "尿液", "en": "Urine", "ja": "尿"}, "order": 2, "meta": {"aliases": ["尿液", "尿液檢體"]}},
+    {"code": "sputum", "name": {"zh-TW": "痰液", "en": "Sputum", "ja": "喀痰"}, "order": 3, "meta": {"aliases": ["痰液", "respiratory", "痰液檢體"]}},
+    {"code": "pus", "name": {"zh-TW": "膿或傷口", "en": "Pus / wound", "ja": "膿・創部"}, "order": 4, "meta": {"aliases": ["wound", "pus/wound", "膿或傷口", "膿"]}},
+    {"code": "stool", "name": {"zh-TW": "糞便", "en": "Stool", "ja": "便"}, "order": 5, "meta": {"aliases": ["糞便", "feces"]}},
+    {"code": "csf", "name": {"zh-TW": "腦脊髓液", "en": "Cerebrospinal fluid", "ja": "髄液"}, "order": 6, "meta": {"aliases": ["腦脊髓液"], "extension": true}},
+    {"code": "genital", "name": {"zh-TW": "生殖道檢體", "en": "Genital", "ja": "生殖器検体"}, "order": 7, "meta": {"aliases": ["生殖道"], "extension": true}}
+  ],
+  "precisions": [
+    {"code": "table", "name": {"zh-TW": "表格數值（精確）", "en": "Table value (exact)", "ja": "表の数値（正確）"}, "order": 0, "meta": {"rank": 3}},
+    {"code": "text", "name": {"zh-TW": "內文明列數值", "en": "Value stated in report text", "ja": "本文記載の数値"}, "order": 1, "meta": {"rank": 2}},
+    {"code": "chart_estimate", "name": {"zh-TW": "由圖表判讀（約 ±1–2 個百分點）", "en": "Read from chart (≈ ±1–2 points)", "ja": "グラフから読み取り（約±1〜2ポイント）"}, "order": 2, "meta": {"rank": 1}}
+  ]
+}

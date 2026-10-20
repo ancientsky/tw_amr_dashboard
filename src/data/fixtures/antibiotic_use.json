@@ -1,0 +1,308 @@
+{
+ "dataset": "antibiotic_use",
+ "version": "fixture-0.2",
+ "generatedAt": "2026-10-20T00:00:00Z",
+ "provisional": true,
+ "sources": [
+  {
+   "id": "twcdc-amr-annual",
+   "title": {
+    "zh-TW": "臺灣抗生素抗藥性監視年報",
+    "en": "Taiwan Antimicrobial Resistance Surveillance Annual Report",
+    "ja": "台湾抗菌薬耐性監視年報"
+   },
+   "publisher": "Taiwan CDC",
+   "year": 2024,
+   "kind": "annual-report"
+  },
+  {
+   "id": "fixture",
+   "title": {
+    "zh-TW": "前端開發用測試資料（非官方）",
+    "en": "Front-end development fixture (not official)",
+    "ja": "フロントエンド開発用フィクスチャ（非公式）"
+   },
+   "publisher": "TW-AMR Watch",
+   "year": 2026,
+   "kind": "curated"
+  }
+ ],
+ "notes": {
+  "zh-TW": "開發用暫定測試資料，非官方數據。",
+  "en": "Provisional development fixture — not official figures.",
+  "ja": "開発用の暫定フィクスチャ — 公式データではありません。"
+ },
+ "dims": {
+  "aware": [
+   {
+    "code": "Access",
+    "name": {
+     "zh-TW": "可用類",
+     "en": "Access",
+     "ja": "Access（アクセス）"
+    },
+    "order": 1
+   },
+   {
+    "code": "Watch",
+    "name": {
+     "zh-TW": "觀察類",
+     "en": "Watch",
+     "ja": "Watch（要注意）"
+    },
+    "order": 2
+   },
+   {
+    "code": "Reserve",
+    "name": {
+     "zh-TW": "保留類",
+     "en": "Reserve",
+     "ja": "Reserve（温存）"
+    },
+    "order": 3
+   }
+  ]
+ },
+ "records": [
+  {
+   "year": 2017,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 308.6
+  },
+  {
+   "year": 2017,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 521.1
+  },
+  {
+   "year": 2017,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 37.1
+  },
+  {
+   "year": 2018,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 312.4
+  },
+  {
+   "year": 2018,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 525
+  },
+  {
+   "year": 2018,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 39.9
+  },
+  {
+   "year": 2019,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 316.3
+  },
+  {
+   "year": 2019,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 531.7
+  },
+  {
+   "year": 2019,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 46
+  },
+  {
+   "year": 2020,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 317.1
+  },
+  {
+   "year": 2020,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 534.6
+  },
+  {
+   "year": 2020,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 45.5
+  },
+  {
+   "year": 2021,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 317.9
+  },
+  {
+   "year": 2021,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 539.6
+  },
+  {
+   "year": 2021,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 51
+  },
+  {
+   "year": 2022,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 325.2
+  },
+  {
+   "year": 2022,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 547
+  },
+  {
+   "year": 2022,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 53.1
+  },
+  {
+   "year": 2023,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 325.1
+  },
+  {
+   "year": 2023,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 547
+  },
+  {
+   "year": 2023,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 57.9
+  },
+  {
+   "year": 2024,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Access",
+   "metric": "DID",
+   "value": 327.8
+  },
+  {
+   "year": 2024,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Watch",
+   "metric": "DID",
+   "value": 553.2
+  },
+  {
+   "year": 2024,
+   "level": "all",
+   "setting": "inpatient",
+   "atc": "J01",
+   "className": "ALL",
+   "aware": "Reserve",
+   "metric": "DID",
+   "value": 59.6
+  }
+ ]
+}

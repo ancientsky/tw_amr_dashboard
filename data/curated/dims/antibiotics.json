@@ -1,0 +1,1795 @@
+{
+ "_comment": "Antibiotic vocabulary. `code` = canonical (WHONET-style) code used in resistance.json; `meta.thas` = abbreviations printed in the THAS annual report antibiograms (附錄2 抗生素名稱與簡稱對照表); `meta.aliases` = generic names (lower-case) used when a CSV gives a full name. Groups = antibiotic classes.",
+ "groups": [
+  {
+   "code": "penicillins",
+   "name": {
+    "zh-TW": "青黴素類",
+    "en": "Penicillins",
+    "ja": "ペニシリン系"
+   },
+   "order": 0
+  },
+  {
+   "code": "bl_bli",
+   "name": {
+    "zh-TW": "β-內醯胺／β-內醯胺酶抑制劑",
+    "en": "β-lactam/β-lactamase inhibitors",
+    "ja": "β-ラクタム／β-ラクタマーゼ阻害薬"
+   },
+   "order": 1
+  },
+  {
+   "code": "ceph1",
+   "name": {
+    "zh-TW": "第一代頭孢菌素",
+    "en": "1st-gen cephalosporins",
+    "ja": "第1世代セファロスポリン"
+   },
+   "order": 2
+  },
+  {
+   "code": "ceph2",
+   "name": {
+    "zh-TW": "第二代頭孢菌素",
+    "en": "2nd-gen cephalosporins",
+    "ja": "第2世代セファロスポリン"
+   },
+   "order": 3
+  },
+  {
+   "code": "ceph3",
+   "name": {
+    "zh-TW": "第三代頭孢菌素",
+    "en": "3rd-gen cephalosporins",
+    "ja": "第3世代セファロスポリン"
+   },
+   "order": 4
+  },
+  {
+   "code": "ceph4",
+   "name": {
+    "zh-TW": "第四代頭孢菌素",
+    "en": "4th-gen cephalosporins",
+    "ja": "第4世代セファロスポリン"
+   },
+   "order": 5
+  },
+  {
+   "code": "ceph5",
+   "name": {
+    "zh-TW": "第五代／新型頭孢菌素",
+    "en": "5th-gen / novel cephalosporins",
+    "ja": "第5世代・新規セファロスポリン"
+   },
+   "order": 6
+  },
+  {
+   "code": "monobactams",
+   "name": {
+    "zh-TW": "單環β-內醯胺類",
+    "en": "Monobactams",
+    "ja": "モノバクタム系"
+   },
+   "order": 7
+  },
+  {
+   "code": "carbapenems",
+   "name": {
+    "zh-TW": "碳青黴烯類",
+    "en": "Carbapenems",
+    "ja": "カルバペネム系"
+   },
+   "order": 8
+  },
+  {
+   "code": "aminoglycosides",
+   "name": {
+    "zh-TW": "胺基醣苷類",
+    "en": "Aminoglycosides",
+    "ja": "アミノグリコシド系"
+   },
+   "order": 9
+  },
+  {
+   "code": "fluoroquinolones",
+   "name": {
+    "zh-TW": "氟喹諾酮類",
+    "en": "Fluoroquinolones",
+    "ja": "フルオロキノロン系"
+   },
+   "order": 10
+  },
+  {
+   "code": "quinolones",
+   "name": {
+    "zh-TW": "喹諾酮類",
+    "en": "Quinolones",
+    "ja": "キノロン系"
+   },
+   "order": 11
+  },
+  {
+   "code": "macrolides",
+   "name": {
+    "zh-TW": "巨環類",
+    "en": "Macrolides",
+    "ja": "マクロライド系"
+   },
+   "order": 12
+  },
+  {
+   "code": "lincosamides",
+   "name": {
+    "zh-TW": "林可醯胺類",
+    "en": "Lincosamides",
+    "ja": "リンコサミド系"
+   },
+   "order": 13
+  },
+  {
+   "code": "tetracyclines",
+   "name": {
+    "zh-TW": "四環黴素類",
+    "en": "Tetracyclines",
+    "ja": "テトラサイクリン系"
+   },
+   "order": 14
+  },
+  {
+   "code": "glycylcyclines",
+   "name": {
+    "zh-TW": "甘胺醯環素類",
+    "en": "Glycylcyclines",
+    "ja": "グリシルサイクリン系"
+   },
+   "order": 15
+  },
+  {
+   "code": "glycopeptides",
+   "name": {
+    "zh-TW": "醣肽類",
+    "en": "Glycopeptides",
+    "ja": "グリコペプチド系"
+   },
+   "order": 16
+  },
+  {
+   "code": "lipopeptides",
+   "name": {
+    "zh-TW": "脂肽類",
+    "en": "Lipopeptides",
+    "ja": "リポペプチド系"
+   },
+   "order": 17
+  },
+  {
+   "code": "oxazolidinones",
+   "name": {
+    "zh-TW": "噁唑烷酮類",
+    "en": "Oxazolidinones",
+    "ja": "オキサゾリジノン系"
+   },
+   "order": 18
+  },
+  {
+   "code": "streptogramins",
+   "name": {
+    "zh-TW": "鏈陽菌素類",
+    "en": "Streptogramins",
+    "ja": "ストレプトグラミン系"
+   },
+   "order": 19
+  },
+  {
+   "code": "polymyxins",
+   "name": {
+    "zh-TW": "多黏菌素類",
+    "en": "Polymyxins",
+    "ja": "ポリミキシン系"
+   },
+   "order": 20
+  },
+  {
+   "code": "folate_inhibitors",
+   "name": {
+    "zh-TW": "葉酸合成抑制劑",
+    "en": "Folate pathway inhibitors",
+    "ja": "葉酸代謝阻害薬"
+   },
+   "order": 21
+  },
+  {
+   "code": "phenicols",
+   "name": {
+    "zh-TW": "氯黴素類",
+    "en": "Phenicols",
+    "ja": "フェニコール系"
+   },
+   "order": 22
+  },
+  {
+   "code": "rifamycins",
+   "name": {
+    "zh-TW": "立汎黴素類",
+    "en": "Rifamycins",
+    "ja": "リファマイシン系"
+   },
+   "order": 23
+  },
+  {
+   "code": "nitrofurans",
+   "name": {
+    "zh-TW": "硝基呋喃類",
+    "en": "Nitrofurans",
+    "ja": "ニトロフラン系"
+   },
+   "order": 24
+  },
+  {
+   "code": "phosphonics",
+   "name": {
+    "zh-TW": "磷酸類",
+    "en": "Phosphonic acids",
+    "ja": "ホスホマイシン系"
+   },
+   "order": 25
+  },
+  {
+   "code": "nitroimidazoles",
+   "name": {
+    "zh-TW": "硝基咪唑類",
+    "en": "Nitroimidazoles",
+    "ja": "ニトロイミダゾール系"
+   },
+   "order": 26
+  },
+  {
+   "code": "aminocyclitols",
+   "name": {
+    "zh-TW": "胺基環醇類",
+    "en": "Aminocyclitols",
+    "ja": "アミノシクリトール系"
+   },
+   "order": 27
+  }
+ ],
+ "antibiotics": [
+  {
+   "code": "OXA",
+   "name": {
+    "zh-TW": "苯唑西林（甲氧西林）",
+    "en": "Oxacillin (methicillin)",
+    "ja": "オキサシリン（メチシリン）"
+   },
+   "group": "penicillins",
+   "order": 1,
+   "meta": {
+    "atc": "J01CF04",
+    "aware": "Access",
+    "thas": [
+     "OX",
+     "OXA"
+    ],
+    "aliases": [
+     "oxacillin",
+     "methicillin"
+    ]
+   }
+  },
+  {
+   "code": "PEN",
+   "name": {
+    "zh-TW": "青黴素 G",
+    "en": "Penicillin G",
+    "ja": "ベンジルペニシリン（ペニシリンG）"
+   },
+   "group": "penicillins",
+   "order": 2,
+   "meta": {
+    "atc": "J01CE01",
+    "aware": "Access",
+    "thas": [
+     "P-G",
+     "PG",
+     "P",
+     "PEN"
+    ],
+    "aliases": [
+     "penicillin",
+     "penicillin g",
+     "benzylpenicillin"
+    ]
+   }
+  },
+  {
+   "code": "PEV",
+   "name": {
+    "zh-TW": "青黴素 V",
+    "en": "Penicillin V",
+    "ja": "フェノキシメチルペニシリン（ペニシリンV）"
+   },
+   "group": "penicillins",
+   "order": 3,
+   "meta": {
+    "atc": "J01CE02",
+    "aware": "Access",
+    "thas": [
+     "P-V",
+     "PV"
+    ],
+    "aliases": [
+     "penicillin v"
+    ]
+   }
+  },
+  {
+   "code": "AMP",
+   "name": {
+    "zh-TW": "安比西林",
+    "en": "Ampicillin",
+    "ja": "アンピシリン"
+   },
+   "group": "penicillins",
+   "order": 4,
+   "meta": {
+    "atc": "J01CA01",
+    "aware": "Access",
+    "thas": [
+     "AM",
+     "AMP"
+    ],
+    "aliases": [
+     "ampicillin"
+    ]
+   }
+  },
+  {
+   "code": "AMX",
+   "name": {
+    "zh-TW": "安莫西林",
+    "en": "Amoxicillin",
+    "ja": "アモキシシリン"
+   },
+   "group": "penicillins",
+   "order": 5,
+   "meta": {
+    "atc": "J01CA04",
+    "aware": "Access",
+    "thas": [
+     "AMX"
+    ],
+    "aliases": [
+     "amoxicillin"
+    ]
+   }
+  },
+  {
+   "code": "NAF",
+   "name": {
+    "zh-TW": "乃夫西林",
+    "en": "Nafcillin",
+    "ja": "ナフシリン"
+   },
+   "group": "penicillins",
+   "order": 6,
+   "meta": {
+    "atc": "J01CF06",
+    "aware": "Access",
+    "thas": [
+     "NF"
+    ],
+    "aliases": [
+     "nafcillin"
+    ]
+   }
+  },
+  {
+   "code": "PIP",
+   "name": {
+    "zh-TW": "哌拉西林",
+    "en": "Piperacillin",
+    "ja": "ピペラシリン"
+   },
+   "group": "penicillins",
+   "order": 7,
+   "meta": {
+    "atc": "J01CA12",
+    "aware": "Watch",
+    "thas": [
+     "PIP"
+    ],
+    "aliases": [
+     "piperacillin"
+    ]
+   }
+  },
+  {
+   "code": "TIC",
+   "name": {
+    "zh-TW": "替卡西林",
+    "en": "Ticarcillin",
+    "ja": "チカルシリン"
+   },
+   "group": "penicillins",
+   "order": 8,
+   "meta": {
+    "atc": "J01CA13",
+    "aware": "Watch",
+    "thas": [
+     "TIC"
+    ],
+    "aliases": [
+     "ticarcillin"
+    ]
+   }
+  },
+  {
+   "code": "AMC",
+   "name": {
+    "zh-TW": "安莫西林／克拉維酸",
+    "en": "Amoxicillin/clavulanate",
+    "ja": "アモキシシリン・クラブラン酸"
+   },
+   "group": "bl_bli",
+   "order": 9,
+   "meta": {
+    "atc": "J01CR02",
+    "aware": "Access",
+    "thas": [
+     "AMC"
+    ],
+    "aliases": [
+     "amoxicillin/clavulanate",
+     "amoxicillin-clavulanate",
+     "amoxicillin/clavulanic acid",
+     "co-amoxiclav"
+    ]
+   }
+  },
+  {
+   "code": "SAM",
+   "name": {
+    "zh-TW": "安比西林／舒巴坦",
+    "en": "Ampicillin/sulbactam",
+    "ja": "アンピシリン・スルバクタム"
+   },
+   "group": "bl_bli",
+   "order": 10,
+   "meta": {
+    "atc": "J01CR01",
+    "aware": "Access",
+    "thas": [
+     "SAM"
+    ],
+    "aliases": [
+     "ampicillin/sulbactam",
+     "ampicillin-sulbactam"
+    ]
+   }
+  },
+  {
+   "code": "TZP",
+   "name": {
+    "zh-TW": "哌拉西林／他唑巴坦",
+    "en": "Piperacillin/tazobactam",
+    "ja": "ピペラシリン・タゾバクタム"
+   },
+   "group": "bl_bli",
+   "order": 11,
+   "meta": {
+    "atc": "J01CR05",
+    "aware": "Watch",
+    "thas": [
+     "TZP",
+     "PIP-TZP"
+    ],
+    "aliases": [
+     "piperacillin/tazobactam",
+     "piperacillin-tazobactam",
+     "pip-tazo"
+    ]
+   }
+  },
+  {
+   "code": "TIM",
+   "name": {
+    "zh-TW": "替卡西林／克拉維酸",
+    "en": "Ticarcillin/clavulanate",
+    "ja": "チカルシリン・クラブラン酸"
+   },
+   "group": "bl_bli",
+   "order": 12,
+   "meta": {
+    "atc": "J01CR03",
+    "aware": "Watch",
+    "thas": [
+     "TIM"
+    ],
+    "aliases": [
+     "ticarcillin/clavulanate",
+     "ticarcillin/clavulanic acid"
+    ]
+   }
+  },
+  {
+   "code": "CZO",
+   "name": {
+    "zh-TW": "頭孢唑林（cefazolin）",
+    "en": "Cefazolin",
+    "ja": "セファゾリン"
+   },
+   "group": "ceph1",
+   "order": 13,
+   "meta": {
+    "atc": "J01DB04",
+    "aware": "Access",
+    "thas": [
+     "CZ",
+     "CFZ"
+    ],
+    "aliases": [
+     "cefazolin"
+    ]
+   }
+  },
+  {
+   "code": "LEX",
+   "name": {
+    "zh-TW": "頭孢氨苄（cephalexin）",
+    "en": "Cephalexin",
+    "ja": "セファレキシン"
+   },
+   "group": "ceph1",
+   "order": 14,
+   "meta": {
+    "atc": "J01DB01",
+    "aware": "Access",
+    "thas": [
+     "CN"
+    ],
+    "aliases": [
+     "cephalexin",
+     "cefalexin"
+    ]
+   }
+  },
+  {
+   "code": "CFR",
+   "name": {
+    "zh-TW": "頭孢羥氨苄（cefadroxil）",
+    "en": "Cefadroxil",
+    "ja": "セファドロキシル"
+   },
+   "group": "ceph1",
+   "order": 15,
+   "meta": {
+    "atc": "J01DB05",
+    "aware": "Access",
+    "thas": [
+     "CFR"
+    ],
+    "aliases": [
+     "cefadroxil"
+    ]
+   }
+  },
+  {
+   "code": "CXM",
+   "name": {
+    "zh-TW": "頭孢呋辛（cefuroxime）",
+    "en": "Cefuroxime (sodium)",
+    "ja": "セフロキシム"
+   },
+   "group": "ceph2",
+   "order": 16,
+   "meta": {
+    "atc": "J01DC02",
+    "aware": "Watch",
+    "thas": [
+     "FUR"
+    ],
+    "aliases": [
+     "cefuroxime",
+     "cefuroxime sodium"
+    ]
+   }
+  },
+  {
+   "code": "CXA",
+   "name": {
+    "zh-TW": "頭孢呋辛酯（cefuroxime axetil）",
+    "en": "Cefuroxime axetil",
+    "ja": "セフロキシム アキセチル"
+   },
+   "group": "ceph2",
+   "order": 17,
+   "meta": {
+    "atc": "J01DC02",
+    "aware": "Watch",
+    "thas": [
+     "CXM"
+    ],
+    "aliases": [
+     "cefuroxime axetil"
+    ]
+   }
+  },
+  {
+   "code": "FOX",
+   "name": {
+    "zh-TW": "頭孢西丁（cefoxitin）",
+    "en": "Cefoxitin",
+    "ja": "セフォキシチン"
+   },
+   "group": "ceph2",
+   "order": 18,
+   "meta": {
+    "atc": "J01DC01",
+    "aware": "Watch",
+    "thas": [
+     "FOX"
+    ],
+    "aliases": [
+     "cefoxitin"
+    ]
+   }
+  },
+  {
+   "code": "CTT",
+   "name": {
+    "zh-TW": "頭孢替坦（cefotetan）",
+    "en": "Cefotetan",
+    "ja": "セフォテタン"
+   },
+   "group": "ceph2",
+   "order": 19,
+   "meta": {
+    "atc": "J01DC05",
+    "aware": "Watch",
+    "thas": [
+     "CTT"
+    ],
+    "aliases": [
+     "cefotetan"
+    ]
+   }
+  },
+  {
+   "code": "CEC",
+   "name": {
+    "zh-TW": "頭孢克洛（cefaclor）",
+    "en": "Cefaclor",
+    "ja": "セファクロル"
+   },
+   "group": "ceph2",
+   "order": 20,
+   "meta": {
+    "atc": "J01DC04",
+    "aware": "Watch",
+    "thas": [
+     "CEC"
+    ],
+    "aliases": [
+     "cefaclor"
+    ]
+   }
+  },
+  {
+   "code": "CPR",
+   "name": {
+    "zh-TW": "頭孢丙烯（cefprozil）",
+    "en": "Cefprozil",
+    "ja": "セフプロジル"
+   },
+   "group": "ceph2",
+   "order": 21,
+   "meta": {
+    "atc": "J01DC10",
+    "aware": "Watch",
+    "thas": [
+     "CPR"
+    ],
+    "aliases": [
+     "cefprozil"
+    ]
+   }
+  },
+  {
+   "code": "LOR",
+   "name": {
+    "zh-TW": "氯碳頭孢（loracarbef）",
+    "en": "Loracarbef",
+    "ja": "ロラカルベフ"
+   },
+   "group": "ceph2",
+   "order": 22,
+   "meta": {
+    "atc": "J01DC08",
+    "aware": "Watch",
+    "thas": [
+     "LOR"
+    ],
+    "aliases": [
+     "loracarbef"
+    ]
+   }
+  },
+  {
+   "code": "FLO",
+   "name": {
+    "zh-TW": "氟氧頭孢（flomoxef）",
+    "en": "Flomoxef",
+    "ja": "フロモキセフ"
+   },
+   "group": "ceph2",
+   "order": 23,
+   "meta": {
+    "atc": "J01DC14",
+    "aware": "Watch",
+    "thas": [
+     "FLO",
+     "FMX"
+    ],
+    "aliases": [
+     "flomoxef"
+    ]
+   }
+  },
+  {
+   "code": "CTX",
+   "name": {
+    "zh-TW": "頭孢噻肟（cefotaxime）",
+    "en": "Cefotaxime",
+    "ja": "セフォタキシム"
+   },
+   "group": "ceph3",
+   "order": 24,
+   "meta": {
+    "atc": "J01DD01",
+    "aware": "Watch",
+    "thas": [
+     "CTX"
+    ],
+    "aliases": [
+     "cefotaxime"
+    ]
+   }
+  },
+  {
+   "code": "CRO",
+   "name": {
+    "zh-TW": "頭孢曲松（ceftriaxone）",
+    "en": "Ceftriaxone",
+    "ja": "セフトリアキソン"
+   },
+   "group": "ceph3",
+   "order": 25,
+   "meta": {
+    "atc": "J01DD04",
+    "aware": "Watch",
+    "thas": [
+     "CRO"
+    ],
+    "aliases": [
+     "ceftriaxone"
+    ]
+   }
+  },
+  {
+   "code": "CAZ",
+   "name": {
+    "zh-TW": "頭孢他啶（ceftazidime）",
+    "en": "Ceftazidime",
+    "ja": "セフタジジム"
+   },
+   "group": "ceph3",
+   "order": 26,
+   "meta": {
+    "atc": "J01DD02",
+    "aware": "Watch",
+    "thas": [
+     "CAZ"
+    ],
+    "aliases": [
+     "ceftazidime"
+    ]
+   }
+  },
+  {
+   "code": "CFP",
+   "name": {
+    "zh-TW": "頭孢哌酮（cefoperazone）",
+    "en": "Cefoperazone",
+    "ja": "セフォペラゾン"
+   },
+   "group": "ceph3",
+   "order": 27,
+   "meta": {
+    "atc": "J01DD12",
+    "aware": "Watch",
+    "thas": [
+     "CFP"
+    ],
+    "aliases": [
+     "cefoperazone"
+    ]
+   }
+  },
+  {
+   "code": "ZOX",
+   "name": {
+    "zh-TW": "頭孢唑肟（ceftizoxime）",
+    "en": "Ceftizoxime",
+    "ja": "セフチゾキシム"
+   },
+   "group": "ceph3",
+   "order": 28,
+   "meta": {
+    "atc": "J01DD07",
+    "aware": "Watch",
+    "thas": [
+     "ZOX"
+    ],
+    "aliases": [
+     "ceftizoxime"
+    ]
+   }
+  },
+  {
+   "code": "CFM",
+   "name": {
+    "zh-TW": "頭孢克肟（cefixime）",
+    "en": "Cefixime",
+    "ja": "セフィキシム"
+   },
+   "group": "ceph3",
+   "order": 29,
+   "meta": {
+    "atc": "J01DD08",
+    "aware": "Watch",
+    "thas": [
+     "CFM"
+    ],
+    "aliases": [
+     "cefixime"
+    ]
+   }
+  },
+  {
+   "code": "CPD",
+   "name": {
+    "zh-TW": "頭孢泊肟（cefpodoxime）",
+    "en": "Cefpodoxime",
+    "ja": "セフポドキシム"
+   },
+   "group": "ceph3",
+   "order": 30,
+   "meta": {
+    "atc": "J01DD13",
+    "aware": "Watch",
+    "thas": [
+     "CPD"
+    ],
+    "aliases": [
+     "cefpodoxime"
+    ]
+   }
+  },
+  {
+   "code": "CDR",
+   "name": {
+    "zh-TW": "頭孢地尼（cefdinir）",
+    "en": "Cefdinir",
+    "ja": "セフジニル"
+   },
+   "group": "ceph3",
+   "order": 31,
+   "meta": {
+    "atc": "J01DD15",
+    "aware": "Watch",
+    "thas": [
+     "CDR"
+    ],
+    "aliases": [
+     "cefdinir"
+    ]
+   }
+  },
+  {
+   "code": "CDN",
+   "name": {
+    "zh-TW": "頭孢妥侖（cefditoren）",
+    "en": "Cefditoren",
+    "ja": "セフジトレン"
+   },
+   "group": "ceph3",
+   "order": 32,
+   "meta": {
+    "atc": "J01DD16",
+    "aware": "Watch",
+    "thas": [
+     "CDN"
+    ],
+    "aliases": [
+     "cefditoren"
+    ]
+   }
+  },
+  {
+   "code": "CTB",
+   "name": {
+    "zh-TW": "頭孢布烯（ceftibuten）",
+    "en": "Ceftibuten",
+    "ja": "セフチブテン"
+   },
+   "group": "ceph3",
+   "order": 33,
+   "meta": {
+    "atc": "J01DD14",
+    "aware": "Watch",
+    "thas": [
+     "CTB"
+    ],
+    "aliases": [
+     "ceftibuten"
+    ]
+   }
+  },
+  {
+   "code": "FEP",
+   "name": {
+    "zh-TW": "頭孢吡肟（cefepime）",
+    "en": "Cefepime",
+    "ja": "セフェピム"
+   },
+   "group": "ceph4",
+   "order": 34,
+   "meta": {
+    "atc": "J01DE01",
+    "aware": "Watch",
+    "thas": [
+     "FEP"
+    ],
+    "aliases": [
+     "cefepime"
+    ]
+   }
+  },
+  {
+   "code": "CPT",
+   "name": {
+    "zh-TW": "頭孢洛林（ceftaroline）",
+    "en": "Ceftaroline",
+    "ja": "セフタロリン"
+   },
+   "group": "ceph5",
+   "order": 35,
+   "meta": {
+    "atc": "J01DI02",
+    "aware": "Reserve",
+    "thas": [
+     "CPT"
+    ],
+    "aliases": [
+     "ceftaroline"
+    ]
+   }
+  },
+  {
+   "code": "CZA",
+   "name": {
+    "zh-TW": "頭孢他啶／阿維巴坦",
+    "en": "Ceftazidime/avibactam",
+    "ja": "セフタジジム・アビバクタム"
+   },
+   "group": "ceph5",
+   "order": 36,
+   "meta": {
+    "atc": "J01DD52",
+    "aware": "Reserve",
+    "thas": [
+     "CZA"
+    ],
+    "aliases": [
+     "ceftazidime/avibactam",
+     "ceftazidime-avibactam"
+    ]
+   }
+  },
+  {
+   "code": "CZT",
+   "name": {
+    "zh-TW": "頭孢洛扎／他唑巴坦",
+    "en": "Ceftolozane/tazobactam",
+    "ja": "セフトロザン・タゾバクタム"
+   },
+   "group": "ceph5",
+   "order": 37,
+   "meta": {
+    "atc": "J01DI54",
+    "aware": "Reserve",
+    "thas": [
+     "C/T",
+     "CZT"
+    ],
+    "aliases": [
+     "ceftolozane/tazobactam",
+     "ceftolozane-tazobactam"
+    ]
+   }
+  },
+  {
+   "code": "ATM",
+   "name": {
+    "zh-TW": "胺曲南（aztreonam）",
+    "en": "Aztreonam",
+    "ja": "アズトレオナム"
+   },
+   "group": "monobactams",
+   "order": 38,
+   "meta": {
+    "atc": "J01DF01",
+    "aware": "Reserve",
+    "thas": [
+     "ATM"
+    ],
+    "aliases": [
+     "aztreonam"
+    ]
+   }
+  },
+  {
+   "code": "IPM",
+   "name": {
+    "zh-TW": "亞胺培南（imipenem）",
+    "en": "Imipenem",
+    "ja": "イミペネム"
+   },
+   "group": "carbapenems",
+   "order": 39,
+   "meta": {
+    "atc": "J01DH51",
+    "aware": "Watch",
+    "thas": [
+     "IPM",
+     "IMP"
+    ],
+    "aliases": [
+     "imipenem"
+    ]
+   }
+  },
+  {
+   "code": "MEM",
+   "name": {
+    "zh-TW": "美羅培南（meropenem）",
+    "en": "Meropenem",
+    "ja": "メロペネム"
+   },
+   "group": "carbapenems",
+   "order": 40,
+   "meta": {
+    "atc": "J01DH02",
+    "aware": "Watch",
+    "thas": [
+     "MEM"
+    ],
+    "aliases": [
+     "meropenem"
+    ]
+   }
+  },
+  {
+   "code": "ETP",
+   "name": {
+    "zh-TW": "厄他培南（ertapenem）",
+    "en": "Ertapenem",
+    "ja": "エルタペネム"
+   },
+   "group": "carbapenems",
+   "order": 41,
+   "meta": {
+    "atc": "J01DH03",
+    "aware": "Watch",
+    "thas": [
+     "ETP"
+    ],
+    "aliases": [
+     "ertapenem"
+    ]
+   }
+  },
+  {
+   "code": "DOR",
+   "name": {
+    "zh-TW": "多利培南（doripenem）",
+    "en": "Doripenem",
+    "ja": "ドリペネム"
+   },
+   "group": "carbapenems",
+   "order": 42,
+   "meta": {
+    "atc": "J01DH04",
+    "aware": "Watch",
+    "thas": [
+     "DOR"
+    ],
+    "aliases": [
+     "doripenem"
+    ]
+   }
+  },
+  {
+   "code": "GEN",
+   "name": {
+    "zh-TW": "健他黴素（gentamicin）",
+    "en": "Gentamicin",
+    "ja": "ゲンタマイシン"
+   },
+   "group": "aminoglycosides",
+   "order": 43,
+   "meta": {
+    "atc": "J01GB03",
+    "aware": "Access",
+    "thas": [
+     "GM",
+     "GEN"
+    ],
+    "aliases": [
+     "gentamicin"
+    ]
+   }
+  },
+  {
+   "code": "GEH",
+   "name": {
+    "zh-TW": "高濃度健他黴素",
+    "en": "Gentamicin (high-level)",
+    "ja": "ゲンタマイシン（高濃度）"
+   },
+   "group": "aminoglycosides",
+   "order": 44,
+   "meta": {
+    "atc": "J01GB03",
+    "aware": "Access",
+    "thas": [
+     "HLG"
+    ],
+    "aliases": [
+     "gentamicin-high",
+     "gentamicin high level",
+     "high-level gentamicin",
+     "gentamicin (high level)"
+    ]
+   }
+  },
+  {
+   "code": "AMK",
+   "name": {
+    "zh-TW": "阿米卡星（amikacin）",
+    "en": "Amikacin",
+    "ja": "アミカシン"
+   },
+   "group": "aminoglycosides",
+   "order": 45,
+   "meta": {
+    "atc": "J01GB06",
+    "aware": "Access",
+    "thas": [
+     "AN",
+     "AK",
+     "AMK"
+    ],
+    "aliases": [
+     "amikacin"
+    ]
+   }
+  },
+  {
+   "code": "TOB",
+   "name": {
+    "zh-TW": "妥布黴素（tobramycin）",
+    "en": "Tobramycin",
+    "ja": "トブラマイシン"
+   },
+   "group": "aminoglycosides",
+   "order": 46,
+   "meta": {
+    "atc": "J01GB01",
+    "aware": "Watch",
+    "thas": [
+     "NN",
+     "TOB"
+    ],
+    "aliases": [
+     "tobramycin"
+    ]
+   }
+  },
+  {
+   "code": "CIP",
+   "name": {
+    "zh-TW": "環丙沙星（ciprofloxacin）",
+    "en": "Ciprofloxacin",
+    "ja": "シプロフロキサシン"
+   },
+   "group": "fluoroquinolones",
+   "order": 47,
+   "meta": {
+    "atc": "J01MA02",
+    "aware": "Watch",
+    "thas": [
+     "CIP"
+    ],
+    "aliases": [
+     "ciprofloxacin"
+    ]
+   }
+  },
+  {
+   "code": "LVX",
+   "name": {
+    "zh-TW": "左氧氟沙星（levofloxacin）",
+    "en": "Levofloxacin",
+    "ja": "レボフロキサシン"
+   },
+   "group": "fluoroquinolones",
+   "order": 48,
+   "meta": {
+    "atc": "J01MA12",
+    "aware": "Watch",
+    "thas": [
+     "LVX",
+     "LEV"
+    ],
+    "aliases": [
+     "levofloxacin"
+    ]
+   }
+  },
+  {
+   "code": "MFX",
+   "name": {
+    "zh-TW": "莫西沙星（moxifloxacin）",
+    "en": "Moxifloxacin",
+    "ja": "モキシフロキサシン"
+   },
+   "group": "fluoroquinolones",
+   "order": 49,
+   "meta": {
+    "atc": "J01MA14",
+    "aware": "Watch",
+    "thas": [
+     "MXF",
+     "MFX"
+    ],
+    "aliases": [
+     "moxifloxacin"
+    ]
+   }
+  },
+  {
+   "code": "NAL",
+   "name": {
+    "zh-TW": "萘啶酸（nalidixic acid）",
+    "en": "Nalidixic acid",
+    "ja": "ナリジクス酸"
+   },
+   "group": "quinolones",
+   "order": 50,
+   "meta": {
+    "atc": "J01MB02",
+    "aware": "Watch",
+    "thas": [
+     "NA",
+     "NAL"
+    ],
+    "aliases": [
+     "nalidixic acid"
+    ]
+   }
+  },
+  {
+   "code": "ERY",
+   "name": {
+    "zh-TW": "紅黴素",
+    "en": "Erythromycin",
+    "ja": "エリスロマイシン"
+   },
+   "group": "macrolides",
+   "order": 51,
+   "meta": {
+    "atc": "J01FA01",
+    "aware": "Watch",
+    "thas": [
+     "E",
+     "ERY"
+    ],
+    "aliases": [
+     "erythromycin"
+    ]
+   }
+  },
+  {
+   "code": "AZM",
+   "name": {
+    "zh-TW": "阿奇黴素",
+    "en": "Azithromycin",
+    "ja": "アジスロマイシン"
+   },
+   "group": "macrolides",
+   "order": 52,
+   "meta": {
+    "atc": "J01FA10",
+    "aware": "Watch",
+    "thas": [
+     "AZM"
+    ],
+    "aliases": [
+     "azithromycin"
+    ]
+   }
+  },
+  {
+   "code": "CLR",
+   "name": {
+    "zh-TW": "克拉黴素",
+    "en": "Clarithromycin",
+    "ja": "クラリスロマイシン"
+   },
+   "group": "macrolides",
+   "order": 53,
+   "meta": {
+    "atc": "J01FA09",
+    "aware": "Watch",
+    "thas": [
+     "CLR"
+    ],
+    "aliases": [
+     "clarithromycin"
+    ]
+   }
+  },
+  {
+   "code": "TEL",
+   "name": {
+    "zh-TW": "泰利黴素（telithromycin）",
+    "en": "Telithromycin",
+    "ja": "テリスロマイシン"
+   },
+   "group": "macrolides",
+   "order": 54,
+   "meta": {
+    "atc": "J01FA15",
+    "aware": "Watch",
+    "thas": [
+     "TEL"
+    ],
+    "aliases": [
+     "telithromycin"
+    ]
+   }
+  },
+  {
+   "code": "CLI",
+   "name": {
+    "zh-TW": "克林黴素",
+    "en": "Clindamycin",
+    "ja": "クリンダマイシン"
+   },
+   "group": "lincosamides",
+   "order": 55,
+   "meta": {
+    "atc": "J01FF01",
+    "aware": "Access",
+    "thas": [
+     "CC",
+     "CLI"
+    ],
+    "aliases": [
+     "clindamycin"
+    ]
+   }
+  },
+  {
+   "code": "TCY",
+   "name": {
+    "zh-TW": "四環黴素",
+    "en": "Tetracycline",
+    "ja": "テトラサイクリン"
+   },
+   "group": "tetracyclines",
+   "order": 56,
+   "meta": {
+    "atc": "J01AA07",
+    "aware": "Access",
+    "thas": [
+     "TE",
+     "TCY"
+    ],
+    "aliases": [
+     "tetracycline"
+    ]
+   }
+  },
+  {
+   "code": "DOX",
+   "name": {
+    "zh-TW": "去氧羥四環黴素（doxycycline）",
+    "en": "Doxycycline",
+    "ja": "ドキシサイクリン"
+   },
+   "group": "tetracyclines",
+   "order": 57,
+   "meta": {
+    "atc": "J01AA02",
+    "aware": "Access",
+    "thas": [
+     "DOX"
+    ],
+    "aliases": [
+     "doxycycline"
+    ]
+   }
+  },
+  {
+   "code": "MNO",
+   "name": {
+    "zh-TW": "美諾四環黴素（minocycline）",
+    "en": "Minocycline",
+    "ja": "ミノサイクリン"
+   },
+   "group": "tetracyclines",
+   "order": 58,
+   "meta": {
+    "atc": "J01AA08",
+    "aware": "Watch",
+    "thas": [
+     "MI",
+     "MNO"
+    ],
+    "aliases": [
+     "minocycline"
+    ]
+   }
+  },
+  {
+   "code": "TGC",
+   "name": {
+    "zh-TW": "老虎黴素（tigecycline）",
+    "en": "Tigecycline",
+    "ja": "チゲサイクリン"
+   },
+   "group": "glycylcyclines",
+   "order": 59,
+   "meta": {
+    "atc": "J01AA12",
+    "aware": "Reserve",
+    "thas": [
+     "TGC"
+    ],
+    "aliases": [
+     "tigecycline"
+    ]
+   }
+  },
+  {
+   "code": "VAN",
+   "name": {
+    "zh-TW": "萬古黴素",
+    "en": "Vancomycin",
+    "ja": "バンコマイシン"
+   },
+   "group": "glycopeptides",
+   "order": 60,
+   "meta": {
+    "atc": "J01XA01",
+    "aware": "Watch",
+    "thas": [
+     "VA",
+     "VAN"
+    ],
+    "aliases": [
+     "vancomycin"
+    ]
+   }
+  },
+  {
+   "code": "TEC",
+   "name": {
+    "zh-TW": "泰考拉寧（teicoplanin）",
+    "en": "Teicoplanin",
+    "ja": "テイコプラニン"
+   },
+   "group": "glycopeptides",
+   "order": 61,
+   "meta": {
+    "atc": "J01XA02",
+    "aware": "Watch",
+    "thas": [
+     "TEC"
+    ],
+    "aliases": [
+     "teicoplanin"
+    ]
+   }
+  },
+  {
+   "code": "TLV",
+   "name": {
+    "zh-TW": "替拉萬星（telavancin）",
+    "en": "Telavancin",
+    "ja": "テラバンシン"
+   },
+   "group": "glycopeptides",
+   "order": 62,
+   "meta": {
+    "atc": "J01XA03",
+    "aware": "Reserve",
+    "thas": [
+     "TLV"
+    ],
+    "aliases": [
+     "telavancin"
+    ]
+   }
+  },
+  {
+   "code": "DAP",
+   "name": {
+    "zh-TW": "達托黴素（daptomycin）",
+    "en": "Daptomycin",
+    "ja": "ダプトマイシン"
+   },
+   "group": "lipopeptides",
+   "order": 63,
+   "meta": {
+    "atc": "J01XX09",
+    "aware": "Reserve",
+    "thas": [
+     "DAP"
+    ],
+    "aliases": [
+     "daptomycin"
+    ]
+   }
+  },
+  {
+   "code": "LNZ",
+   "name": {
+    "zh-TW": "利奈唑胺（linezolid）",
+    "en": "Linezolid",
+    "ja": "リネゾリド"
+   },
+   "group": "oxazolidinones",
+   "order": 64,
+   "meta": {
+    "atc": "J01XX08",
+    "aware": "Reserve",
+    "thas": [
+     "LNZ",
+     "LZD"
+    ],
+    "aliases": [
+     "linezolid"
+    ]
+   }
+  },
+  {
+   "code": "QDA",
+   "name": {
+    "zh-TW": "奎奴普丁／達福普丁",
+    "en": "Quinupristin/dalfopristin",
+    "ja": "キヌプリスチン・ダルホプリスチン"
+   },
+   "group": "streptogramins",
+   "order": 65,
+   "meta": {
+    "atc": "J01FG02",
+    "aware": "Reserve",
+    "thas": [
+     "SYN",
+     "QDA"
+    ],
+    "aliases": [
+     "quinupristin/dalfopristin",
+     "synercid"
+    ]
+   }
+  },
+  {
+   "code": "COL",
+   "name": {
+    "zh-TW": "可利斯汀（colistin）",
+    "en": "Colistin",
+    "ja": "コリスチン"
+   },
+   "group": "polymyxins",
+   "order": 66,
+   "meta": {
+    "atc": "J01XB01",
+    "aware": "Reserve",
+    "thas": [
+     "CL",
+     "CS",
+     "COL"
+    ],
+    "aliases": [
+     "colistin",
+     "polymyxin e"
+    ]
+   }
+  },
+  {
+   "code": "POL",
+   "name": {
+    "zh-TW": "多黏菌素 B",
+    "en": "Polymyxin B",
+    "ja": "ポリミキシンB"
+   },
+   "group": "polymyxins",
+   "order": 67,
+   "meta": {
+    "atc": "J01XB02",
+    "aware": "Reserve",
+    "thas": [
+     "PB"
+    ],
+    "aliases": [
+     "polymyxin b"
+    ]
+   }
+  },
+  {
+   "code": "SXT",
+   "name": {
+    "zh-TW": "磺胺甲基異噁唑／甲氧苄啶（TMP-SMX）",
+    "en": "Trimethoprim/sulfamethoxazole",
+    "ja": "スルファメトキサゾール・トリメトプリム"
+   },
+   "group": "folate_inhibitors",
+   "order": 68,
+   "meta": {
+    "atc": "J01EE01",
+    "aware": "Access",
+    "thas": [
+     "SXT",
+     "TMP-SMX"
+    ],
+    "aliases": [
+     "tmp-smx",
+     "trimethoprim/sulfamethoxazole",
+     "trimethoprim-sulfamethoxazole",
+     "co-trimoxazole",
+     "sulfamethoxazole/trimethoprim"
+    ]
+   }
+  },
+  {
+   "code": "CHL",
+   "name": {
+    "zh-TW": "氯黴素",
+    "en": "Chloramphenicol",
+    "ja": "クロラムフェニコール"
+   },
+   "group": "phenicols",
+   "order": 69,
+   "meta": {
+    "atc": "J01BA01",
+    "aware": "Access",
+    "thas": [
+     "C",
+     "CHL"
+    ],
+    "aliases": [
+     "chloramphenicol"
+    ]
+   }
+  },
+  {
+   "code": "RIF",
+   "name": {
+    "zh-TW": "立汎黴素（rifampin）",
+    "en": "Rifampin",
+    "ja": "リファンピシン"
+   },
+   "group": "rifamycins",
+   "order": 70,
+   "meta": {
+    "atc": "J04AB02",
+    "aware": "Watch",
+    "thas": [
+     "RA",
+     "RIF"
+    ],
+    "aliases": [
+     "rifampin",
+     "rifampicin"
+    ]
+   }
+  },
+  {
+   "code": "NIT",
+   "name": {
+    "zh-TW": "呋喃妥因（nitrofurantoin）",
+    "en": "Nitrofurantoin",
+    "ja": "ニトロフラントイン"
+   },
+   "group": "nitrofurans",
+   "order": 71,
+   "meta": {
+    "atc": "J01XE01",
+    "aware": "Access",
+    "thas": [
+     "F/M",
+     "NIT"
+    ],
+    "aliases": [
+     "nitrofurantoin"
+    ]
+   }
+  },
+  {
+   "code": "FOS",
+   "name": {
+    "zh-TW": "磷黴素（fosfomycin）",
+    "en": "Fosfomycin",
+    "ja": "ホスホマイシン"
+   },
+   "group": "phosphonics",
+   "order": 72,
+   "meta": {
+    "atc": "J01XX01",
+    "aware": "Watch",
+    "thas": [
+     "FOS"
+    ],
+    "aliases": [
+     "fosfomycin"
+    ]
+   }
+  },
+  {
+   "code": "MTR",
+   "name": {
+    "zh-TW": "甲硝唑（metronidazole）",
+    "en": "Metronidazole",
+    "ja": "メトロニダゾール"
+   },
+   "group": "nitroimidazoles",
+   "order": 73,
+   "meta": {
+    "atc": "J01XD01",
+    "aware": "Access",
+    "thas": [
+     "MTZ",
+     "MTR"
+    ],
+    "aliases": [
+     "metronidazole"
+    ]
+   }
+  },
+  {
+   "code": "SPT",
+   "name": {
+    "zh-TW": "觀黴素（spectinomycin）",
+    "en": "Spectinomycin",
+    "ja": "スペクチノマイシン"
+   },
+   "group": "aminocyclitols",
+   "order": 74,
+   "meta": {
+    "atc": "J01XX04",
+    "aware": "Watch",
+    "thas": [
+     "SPT"
+    ],
+    "aliases": [
+     "spectinomycin"
+    ]
+   }
+  }
+ ]
+}

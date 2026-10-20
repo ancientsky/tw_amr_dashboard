@@ -1,0 +1,281 @@
+{
+  "app": {
+    "name": "TW-AMR Watch",
+    "fullName": "臺灣抗藥性監測儀表板",
+    "tagline": "臺灣全國抗生素抗藥性、抗生素使用量與醫療照護相關感染監測，一站掌握。",
+    "home": "TW-AMR Watch 首頁"
+  },
+  "nav": {
+    "overview": "總覽",
+    "resistance": "抗藥性",
+    "antibioticUse": "抗生素使用",
+    "hai": "醫療照護感染",
+    "international": "國際比較",
+    "data": "資料與 API",
+    "resources": "資源",
+    "about": "方法說明",
+    "chat": "AMR 問答",
+    "menu": "選單",
+    "openMenu": "開啟導覽選單",
+    "closeMenu": "關閉導覽選單",
+    "skip": "跳至主要內容",
+    "primary": "主要導覽",
+    "search": "搜尋"
+  },
+  "actions": {
+    "close": "關閉",
+    "open": "開啟",
+    "retry": "重試",
+    "reset": "重設",
+    "apply": "套用",
+    "cancel": "取消",
+    "back": "返回",
+    "more": "更多",
+    "copy": "複製",
+    "copied": "已複製",
+    "download": "下載",
+    "selectAll": "全選",
+    "clear": "清除"
+  },
+  "toolbar": {
+    "label": "圖表工具",
+    "fullscreen": "全螢幕",
+    "exitFullscreen": "離開全螢幕",
+    "showTable": "顯示資料表",
+    "hideTable": "顯示圖表",
+    "png": "下載 PNG",
+    "csv": "下載 CSV",
+    "link": "複製此圖表連結",
+    "linkCopied": "連結已複製",
+    "share": "分享",
+    "pngFailed": "無法產生圖片"
+  },
+  "share": {
+    "title": "分享此圖表",
+    "social": "社群平台",
+    "x": "X（Twitter）",
+    "threads": "Threads",
+    "facebook": "Facebook",
+    "line": "LINE",
+    "webShare": "透過裝置分享…",
+    "copyImage": "複製圖片",
+    "imageCopied": "圖片已複製到剪貼簿",
+    "copyImageUnsupported": "此瀏覽器無法複製圖片，已改為下載",
+    "instagram": "Instagram 圖卡",
+    "embed": "複製嵌入碼",
+    "embedCopied": "嵌入碼已複製",
+    "text": "{title}｜{site}",
+    "hashtags": "抗藥性,AMR,臺灣",
+    "cardTitle": "Instagram 分享圖卡",
+    "cardHint": "產生品牌化圖卡後，從手機發佈。正方形適用貼文，9:16 適用限時動態／Reels。",
+    "square": "正方形 1080 × 1080",
+    "story": "限時動態 1080 × 1920",
+    "rendering": "產生中…",
+    "downloadCard": "下載 PNG",
+    "keyNumber": "關鍵數字",
+    "readMore": "互動圖表請見"
+  },
+  "theme": {
+    "label": "主題",
+    "light": "淺色",
+    "dark": "深色",
+    "toLight": "切換為淺色主題",
+    "toDark": "切換為深色主題"
+  },
+  "lang": {
+    "label": "語言",
+    "zh-TW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "short": {
+      "zh-TW": "中",
+      "en": "EN",
+      "ja": "日"
+    }
+  },
+  "footer": {
+    "sources": "資料來源",
+    "sourcesBody": "衛生福利部疾病管制署年度監視報告（台灣醫院感染管制與抗藥性監測管理系統 THAS）及世界衛生組織 GLASS。數值係由已出版報告轉錄，精確度說明請見「方法說明」。",
+    "disclaimer": "免責聲明",
+    "disclaimerBody": "TW-AMR Watch 為獨立的資料視覺化專案，並非疾病管制署或世界衛生組織之官方出版品，亦不構成醫療建議。引用數據前請務必查閱原始報告。",
+    "explore": "探索",
+    "developers": "開發者",
+    "api": "靜態 JSON API",
+    "embed": "嵌入式小工具",
+    "github": "GitHub 原始碼",
+    "lastBuild": "最後建置 {date}",
+    "license": "程式碼 MIT 授權・資料依原始來源條款"
+  },
+  "provisional": {
+    "chip": "暫定",
+    "chipHint": "依已發表趨勢建模之整理估計值，非官方數據。",
+    "title": "暫定估計值",
+    "body": "在加入官方年報之前，本區使用依疾管署已發表趨勢建模之整理估計值，請勿作為官方數據引用。",
+    "howTo": "如何加入年報",
+    "siteBody": "部分區塊（抗生素使用量、醫療照護相關感染、國際比較）仍為暫定估計值；抗藥性數據則轉錄自疾管署年報。",
+    "dismiss": "關閉提示"
+  },
+  "precision": {
+    "label": "精確度",
+    "table": "取自表格",
+    "text": "取自內文",
+    "chart_estimate": "圖表判讀",
+    "tableHint": "自報告中的數值表格逐一轉錄。",
+    "textHint": "引用自報告內文敘述。",
+    "chart_estimateHint": "由報告印刷圖表判讀估計，誤差約 ±1–2 個百分點。"
+  },
+  "fixture": {
+    "chip": "開發測試資料",
+    "hint": "無法載入 public/data，目前顯示內建的開發測試資料。"
+  },
+  "common": {
+    "loading": "載入中…",
+    "error": "發生錯誤",
+    "errorBody": "無法載入資料，請檢查網路連線後再試一次。",
+    "empty": "此條件下沒有資料",
+    "emptyBody": "請試著放寬年份範圍或調整篩選條件。",
+    "source": "資料來源",
+    "sourceLine": "資料來源：{source}",
+    "year": "年份",
+    "years": "年份範圍",
+    "level": "醫院層級",
+    "ward": "病房別",
+    "specimen": "檢體",
+    "setting": "感染起源",
+    "pathogen": "菌種",
+    "antibiotic": "抗生素",
+    "phenotype": "抗藥表型",
+    "value": "數值",
+    "isolates": "菌株數",
+    "resistantPct": "抗藥率（%）",
+    "all": "全部",
+    "selected": "已選 {n} 項",
+    "unknown": "未知",
+    "latest": "最新（{year}）",
+    "comingOnline": "即將上線",
+    "comingOnlineBody": "本區正在建置中，圖表與篩選器將很快在此呈現。"
+  },
+  "levels": {
+    "all": "全部醫院",
+    "medical_center": "醫學中心",
+    "regional": "區域醫院",
+    "district": "地區醫院"
+  },
+  "wards": {
+    "all": "全部病房",
+    "icu": "加護病房",
+    "non_icu": "一般病房"
+  },
+  "settings": {
+    "all": "全部起源",
+    "co": "社區起源",
+    "ho": "醫院起源"
+  },
+  "specimens": {
+    "all": "全部檢體",
+    "blood": "血液",
+    "urine": "尿液",
+    "sputum": "痰液",
+    "pus": "膿／傷口",
+    "stool": "糞便"
+  },
+  "table": {
+    "caption": "{title} 資料表",
+    "sortBy": "依「{col}」排序",
+    "exportCsv": "匯出 CSV",
+    "rows": "{n} 列",
+    "empty": "沒有資料列"
+  },
+  "kpi": {
+    "vsPrev": "相較 {year}",
+    "pp": "個百分點",
+    "up": "較 {year} 上升 {value}",
+    "down": "較 {year} 下降 {value}",
+    "flat": "與 {year} 持平",
+    "trend": "{from}–{to} 趨勢"
+  },
+  "charts": {
+    "resistanceTrend": {
+      "title": "{phenotype} 抗藥性趨勢",
+      "titleGeneric": "{pathogen} 對 {antibiotic} 抗藥",
+      "subtitle": "依病房別之抗藥菌株比率，{level}",
+      "aria": "抗藥率逐年變化折線圖"
+    },
+    "resistanceHeatmap": {
+      "title": "抗藥性地圖：菌種 × 抗生素",
+      "subtitle": "抗藥率，{level}，{year} 年",
+      "aria": "依菌種與抗生素之抗藥率熱圖",
+      "notTested": "未提報"
+    },
+    "kpiStrip": {
+      "title": "重點抗藥性指標",
+      "subtitle": "加護病房，{year} 年・與前一年比較"
+    }
+  },
+  "embed": {
+    "unknownTitle": "未知的圖表",
+    "unknownBody": "找不到圖表代碼「{id}」。可用代碼：{ids}。",
+    "openFull": "在 TW-AMR Watch 開啟",
+    "poweredBy": "由 TW-AMR Watch 提供"
+  },
+  "chat": {
+    "launcher": "詢問 AMR 小幫手",
+    "title": "AMR 小幫手",
+    "placeholder": "詢問抗藥性趨勢、抗生素或名詞定義…",
+    "comingSoon": "小幫手準備中，將以離線知識庫回答臺灣抗藥性資料相關問題。",
+    "send": "送出"
+  },
+  "notFound": {
+    "title": "找不到頁面",
+    "body": "您要找的頁面不存在或已移動。",
+    "home": "回到總覽",
+    "code": "404"
+  },
+  "pages": {
+    "overview": {
+      "eyebrow": "全國概況",
+      "title": "臺灣抗生素抗藥性一覽",
+      "subtitle": "疾管署監測系統的重點抗藥性指標，搭配趨勢、醫院層級分析與國際比較。"
+    },
+    "resistance": {
+      "eyebrow": "THAS・抗生素抗藥性",
+      "title": "抗藥性趨勢",
+      "subtitle": "依菌種、抗生素、醫院層級、病房別、感染起源與檢體，探索疾管署年報中的抗藥率。"
+    },
+    "antibioticUse": {
+      "eyebrow": "抗生素使用量",
+      "title": "抗生素使用量",
+      "subtitle": "住院抗生素使用量，依藥物類別與 WHO AWaRe 分類，以每千住院人日 DDD 表示。"
+    },
+    "hai": {
+      "eyebrow": "TNIS・醫療照護相關感染",
+      "title": "醫療照護相關感染",
+      "subtitle": "加護病房感染密度、醫療裝置相關感染（CLABSI、CAUTI、VAP）、裝置使用率與主要致病菌。"
+    },
+    "international": {
+      "eyebrow": "WHO GLASS",
+      "title": "國際比較",
+      "subtitle": "臺灣血流感染抗藥率與向 WHO GLASS 通報國家之比較。"
+    },
+    "data": {
+      "eyebrow": "開放資料",
+      "title": "資料、API 與嵌入",
+      "subtitle": "以 JSON 或 CSV 下載所有資料集、查詢靜態 API，並為醫院網站產生嵌入式小工具。"
+    },
+    "resources": {
+      "eyebrow": "資源目錄",
+      "title": "全球 AMR 資源",
+      "subtitle": "精選國際抗藥性、抗生素使用與醫療照護相關感染儀表板、資料入口與指引。"
+    },
+    "about": {
+      "eyebrow": "方法說明",
+      "title": "關於資料",
+      "subtitle": "資料來源、名詞定義、轉錄精確度、可比較性限制，以及本網站的建置方式。"
+    },
+    "chat": {
+      "eyebrow": "小幫手",
+      "title": "AMR 問答",
+      "subtitle": "在瀏覽器端運作的小幫手，回答臺灣抗藥性監測相關問題，並連結到對應圖表。"
+    }
+  }
+}

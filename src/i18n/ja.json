@@ -1,0 +1,281 @@
+{
+  "app": {
+    "name": "TW-AMR Watch",
+    "fullName": "台湾AMRサーベイランス・ダッシュボード",
+    "tagline": "台湾全国の薬剤耐性・抗菌薬使用量・医療関連感染のサーベイランスを、ひとつの場所で。",
+    "home": "TW-AMR Watch ホーム"
+  },
+  "nav": {
+    "overview": "概要",
+    "resistance": "薬剤耐性",
+    "antibioticUse": "抗菌薬使用",
+    "hai": "医療関連感染",
+    "international": "国際比較",
+    "data": "データ・API",
+    "resources": "リソース",
+    "about": "方法論",
+    "chat": "AMR Q&A",
+    "menu": "メニュー",
+    "openMenu": "ナビゲーションメニューを開く",
+    "closeMenu": "ナビゲーションメニューを閉じる",
+    "skip": "本文へスキップ",
+    "primary": "メインナビゲーション",
+    "search": "検索"
+  },
+  "actions": {
+    "close": "閉じる",
+    "open": "開く",
+    "retry": "再試行",
+    "reset": "リセット",
+    "apply": "適用",
+    "cancel": "キャンセル",
+    "back": "戻る",
+    "more": "その他",
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "download": "ダウンロード",
+    "selectAll": "すべて選択",
+    "clear": "クリア"
+  },
+  "toolbar": {
+    "label": "グラフツール",
+    "fullscreen": "全画面表示",
+    "exitFullscreen": "全画面を終了",
+    "showTable": "データ表を表示",
+    "hideTable": "グラフを表示",
+    "png": "PNG をダウンロード",
+    "csv": "CSV をダウンロード",
+    "link": "このグラフへのリンクをコピー",
+    "linkCopied": "リンクをコピーしました",
+    "share": "共有",
+    "pngFailed": "画像を生成できませんでした"
+  },
+  "share": {
+    "title": "このグラフを共有",
+    "social": "SNS",
+    "x": "X（Twitter）",
+    "threads": "Threads",
+    "facebook": "Facebook",
+    "line": "LINE",
+    "webShare": "端末の共有機能で送る…",
+    "copyImage": "画像をコピー",
+    "imageCopied": "画像をクリップボードにコピーしました",
+    "copyImageUnsupported": "このブラウザでは画像をコピーできないため、ダウンロードしました",
+    "instagram": "Instagram 用カード",
+    "embed": "埋め込みコードをコピー",
+    "embedCopied": "埋め込みコードをコピーしました",
+    "text": "{title}｜{site}",
+    "hashtags": "薬剤耐性,AMR,台湾",
+    "cardTitle": "Instagram 用シェアカード",
+    "cardHint": "ブランド入りの画像を生成し、スマートフォンから投稿できます。正方形はフィード用、9:16 はストーリーズ／リール用です。",
+    "square": "正方形 1080 × 1080",
+    "story": "ストーリーズ 1080 × 1920",
+    "rendering": "生成中…",
+    "downloadCard": "PNG をダウンロード",
+    "keyNumber": "注目の数値",
+    "readMore": "インタラクティブなグラフはこちら"
+  },
+  "theme": {
+    "label": "テーマ",
+    "light": "ライト",
+    "dark": "ダーク",
+    "toLight": "ライトテーマに切り替え",
+    "toDark": "ダークテーマに切り替え"
+  },
+  "lang": {
+    "label": "言語",
+    "zh-TW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "short": {
+      "zh-TW": "中",
+      "en": "EN",
+      "ja": "日"
+    }
+  },
+  "footer": {
+    "sources": "データ出典",
+    "sourcesBody": "台湾衛生福利部疾病管制署（台湾CDC）の年次サーベイランス報告書（院内感染・薬剤耐性監視システム THAS）および WHO GLASS。数値は公表済み報告書から転記したもので、精度については「方法論」をご覧ください。",
+    "disclaimer": "免責事項",
+    "disclaimerBody": "TW-AMR Watch は独立したデータ可視化プロジェクトであり、台湾CDC や WHO の公式刊行物ではありません。医療上の助言でもありません。数値を引用する際は必ず原典の報告書をご確認ください。",
+    "explore": "探索",
+    "developers": "開発者向け",
+    "api": "静的 JSON API",
+    "embed": "埋め込みウィジェット",
+    "github": "GitHub のソースコード",
+    "lastBuild": "最終ビルド {date}",
+    "license": "コードは MIT・データは各出典の規約に準拠"
+  },
+  "provisional": {
+    "chip": "暫定値",
+    "chipHint": "公表済みの傾向に基づいて推計した値であり、公式統計ではありません。",
+    "title": "暫定推計値",
+    "body": "公式の年次報告書が追加されるまで、このセクションでは台湾CDCの公表傾向に基づく推計値を表示しています。公式な数値として引用しないでください。",
+    "howTo": "報告書の追加方法",
+    "siteBody": "一部のセクション（抗菌薬使用量、医療関連感染、国際比較）は暫定推計値です。薬剤耐性データは台湾CDCの年次報告書から転記しています。",
+    "dismiss": "お知らせを閉じる"
+  },
+  "precision": {
+    "label": "精度",
+    "table": "表から転記",
+    "text": "本文から引用",
+    "chart_estimate": "グラフから読取",
+    "tableHint": "報告書の数値表から正確に転記した値です。",
+    "textHint": "報告書の本文から引用した値です。",
+    "chart_estimateHint": "印刷されたグラフから読み取った推定値で、誤差は約 ±1〜2 ポイントです。"
+  },
+  "fixture": {
+    "chip": "開発用データ",
+    "hint": "public/data を読み込めなかったため、同梱の開発用データを表示しています。"
+  },
+  "common": {
+    "loading": "読み込み中…",
+    "error": "エラーが発生しました",
+    "errorBody": "データを読み込めませんでした。接続を確認して再度お試しください。",
+    "empty": "この条件に該当するデータはありません",
+    "emptyBody": "年の範囲を広げるか、別のフィルターを選択してください。",
+    "source": "出典",
+    "sourceLine": "出典：{source}",
+    "year": "年",
+    "years": "期間",
+    "level": "病院区分",
+    "ward": "病棟",
+    "specimen": "検体",
+    "setting": "発症場所",
+    "pathogen": "菌種",
+    "antibiotic": "抗菌薬",
+    "phenotype": "耐性表現型",
+    "value": "値",
+    "isolates": "分離株数",
+    "resistantPct": "耐性率（%）",
+    "all": "すべて",
+    "selected": "{n} 件選択中",
+    "unknown": "不明",
+    "latest": "最新（{year}年）",
+    "comingOnline": "準備中",
+    "comingOnlineBody": "このセクションは現在構築中です。まもなくグラフとフィルターが表示されます。"
+  },
+  "levels": {
+    "all": "全病院",
+    "medical_center": "医学センター",
+    "regional": "地域病院",
+    "district": "地区病院"
+  },
+  "wards": {
+    "all": "全病棟",
+    "icu": "ICU",
+    "non_icu": "一般病棟"
+  },
+  "settings": {
+    "all": "全発症場所",
+    "co": "市中発症",
+    "ho": "院内発症"
+  },
+  "specimens": {
+    "all": "全検体",
+    "blood": "血液",
+    "urine": "尿",
+    "sputum": "喀痰",
+    "pus": "膿・創部",
+    "stool": "便"
+  },
+  "table": {
+    "caption": "{title} のデータ表",
+    "sortBy": "「{col}」で並べ替え",
+    "exportCsv": "CSV を出力",
+    "rows": "{n} 行",
+    "empty": "行がありません"
+  },
+  "kpi": {
+    "vsPrev": "{year}年比",
+    "pp": "ポイント",
+    "up": "{year}年から {value} 上昇",
+    "down": "{year}年から {value} 低下",
+    "flat": "{year}年から横ばい",
+    "trend": "{from}〜{to}年の推移"
+  },
+  "charts": {
+    "resistanceTrend": {
+      "title": "{phenotype} の耐性率推移",
+      "titleGeneric": "{pathogen} の {antibiotic} 耐性",
+      "subtitle": "病棟別の耐性株割合、{level}",
+      "aria": "耐性率の経年推移を示す折れ線グラフ"
+    },
+    "resistanceHeatmap": {
+      "title": "耐性マップ：菌種 × 抗菌薬",
+      "subtitle": "耐性率、{level}、{year}年",
+      "aria": "菌種と抗菌薬ごとの耐性率ヒートマップ",
+      "notTested": "報告なし"
+    },
+    "kpiStrip": {
+      "title": "主要な薬剤耐性指標",
+      "subtitle": "ICU、{year}年・前年比"
+    }
+  },
+  "embed": {
+    "unknownTitle": "不明なグラフ",
+    "unknownBody": "グラフ ID「{id}」は利用できません。有効な ID：{ids}。",
+    "openFull": "TW-AMR Watch で開く",
+    "poweredBy": "提供：TW-AMR Watch"
+  },
+  "chat": {
+    "launcher": "AMR アシスタントに質問",
+    "title": "AMR アシスタント",
+    "placeholder": "耐性の傾向、抗菌薬、用語の定義などを質問…",
+    "comingSoon": "アシスタントは準備中です。オフラインの知識ベースを使って台湾の AMR データに関する質問に答えます。",
+    "send": "送信"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "body": "お探しのページは存在しないか、移動した可能性があります。",
+    "home": "概要に戻る",
+    "code": "404"
+  },
+  "pages": {
+    "overview": {
+      "eyebrow": "全国の概況",
+      "title": "台湾の薬剤耐性を一目で",
+      "subtitle": "台湾CDC サーベイランスの主要な耐性指標を、推移・病院区分別の内訳・国際比較とともに紹介します。"
+    },
+    "resistance": {
+      "eyebrow": "THAS・薬剤耐性",
+      "title": "耐性率の推移",
+      "subtitle": "台湾CDC 年次報告書の耐性率を、菌種・抗菌薬・病院区分・病棟・発症場所・検体別に探索できます。"
+    },
+    "antibioticUse": {
+      "eyebrow": "抗菌薬使用量",
+      "title": "抗菌薬の使用量",
+      "subtitle": "入院患者の抗菌薬使用量を薬剤クラス別・WHO AWaRe 分類別に、1,000 患者日あたり DDD で示します。"
+    },
+    "hai": {
+      "eyebrow": "TNIS・医療関連感染",
+      "title": "医療関連感染",
+      "subtitle": "ICU の感染密度、デバイス関連感染（CLABSI・CAUTI・VAP）、デバイス使用比、主な原因菌。"
+    },
+    "international": {
+      "eyebrow": "WHO GLASS",
+      "title": "国際比較",
+      "subtitle": "台湾の血流感染における耐性率を、WHO GLASS に報告している国々と比較します。"
+    },
+    "data": {
+      "eyebrow": "オープンデータ",
+      "title": "データ・API・埋め込み",
+      "subtitle": "すべてのデータセットを JSON / CSV でダウンロードし、静的 API を利用し、病院サイト向けの埋め込みウィジェットを作成できます。"
+    },
+    "resources": {
+      "eyebrow": "リンク集",
+      "title": "世界の AMR リソース",
+      "subtitle": "国際的な薬剤耐性・抗菌薬使用・医療関連感染のダッシュボード、データポータル、ガイドラインを厳選して紹介します。"
+    },
+    "about": {
+      "eyebrow": "方法論",
+      "title": "データについて",
+      "subtitle": "出典、用語の定義、転記精度、比較可能性の注意点、そしてこのサイトの構築方法。"
+    },
+    "chat": {
+      "eyebrow": "アシスタント",
+      "title": "AMR について質問する",
+      "subtitle": "ブラウザ上で動作するアシスタントが、台湾の薬剤耐性サーベイランスに関する質問に答え、関連するグラフへ案内します。"
+    }
+  }
+}

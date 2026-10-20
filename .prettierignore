@@ -1,0 +1,7 @@
+dist
+node_modules
+public/data
+public/api
+data
+screenshots
+package-lock.json

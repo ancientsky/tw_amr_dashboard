@@ -1,0 +1,770 @@
+{
+ "_comment": "Organism vocabulary shared by resistance, isolates and hai_pathogens. `aliases` (case/space-insensitive) are matched against names printed in the PDFs / transcription CSVs.",
+ "organisms": [
+  {
+   "code": "SAU",
+   "name": {
+    "zh-TW": "金黃色葡萄球菌",
+    "en": "Staphylococcus aureus",
+    "ja": "黄色ブドウ球菌"
+   },
+   "group": "gram_positive",
+   "order": 1,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": "high",
+    "keyPhenotype": "MRSA",
+    "short": "S. aureus",
+    "aliases": [
+     "S. aureus",
+     "Staphylococcus aureus",
+     "金黃色葡萄球菌"
+    ]
+   }
+  },
+  {
+   "code": "CNS",
+   "name": {
+    "zh-TW": "凝固酶陰性葡萄球菌",
+    "en": "Coagulase-negative staphylococci",
+    "ja": "コアグラーゼ陰性ブドウ球菌"
+   },
+   "group": "gram_positive",
+   "order": 2,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": null,
+    "short": "CoNS",
+    "aliases": [
+     "CoNS",
+     "Coagulase-negative Staphylococcus",
+     "Coagulase-negative staphylococci",
+     "Staphylococcus, coagulase negative"
+    ]
+   }
+  },
+  {
+   "code": "ENC",
+   "name": {
+    "zh-TW": "腸球菌屬",
+    "en": "Enterococcus spp.",
+    "ja": "腸球菌属"
+   },
+   "group": "gram_positive",
+   "order": 3,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": null,
+    "keyPhenotype": "VRE",
+    "short": "Enterococcus spp.",
+    "aliases": [
+     "Enterococcus spp.",
+     "Enterococcus spp",
+     "Enterococci",
+     "Enterococcus"
+    ]
+   }
+  },
+  {
+   "code": "EFM",
+   "name": {
+    "zh-TW": "屎腸球菌",
+    "en": "Enterococcus faecium",
+    "ja": "エンテロコッカス・フェシウム"
+   },
+   "group": "gram_positive",
+   "order": 4,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": "high",
+    "keyPhenotype": "VR-EFM",
+    "short": "E. faecium",
+    "aliases": [
+     "E. faecium",
+     "Enterococcus faecium"
+    ]
+   }
+  },
+  {
+   "code": "EFA",
+   "name": {
+    "zh-TW": "糞腸球菌",
+    "en": "Enterococcus faecalis",
+    "ja": "エンテロコッカス・フェカーリス"
+   },
+   "group": "gram_positive",
+   "order": 5,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": null,
+    "keyPhenotype": "VR-EFA",
+    "short": "E. faecalis",
+    "aliases": [
+     "E. faecalis",
+     "Enterococcus faecalis",
+     "E. faecials"
+    ]
+   }
+  },
+  {
+   "code": "SPN",
+   "name": {
+    "zh-TW": "肺炎鏈球菌",
+    "en": "Streptococcus pneumoniae",
+    "ja": "肺炎球菌"
+   },
+   "group": "gram_positive",
+   "order": 6,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": "medium",
+    "keyPhenotype": "PNSP",
+    "short": "S. pneumoniae",
+    "aliases": [
+     "S. pneumoniae",
+     "Streptococcus pneumoniae",
+     "Streptococcus pneumonia"
+    ]
+   }
+  },
+  {
+   "code": "GAS",
+   "name": {
+    "zh-TW": "A 群鏈球菌",
+    "en": "Group A Streptococci",
+    "ja": "A群レンサ球菌"
+   },
+   "group": "gram_positive",
+   "order": 7,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": "medium",
+    "short": "GAS",
+    "aliases": [
+     "Group A Streptococci",
+     "Group A Streptococcus",
+     "Streptococcus pyogenes",
+     "GAS"
+    ]
+   }
+  },
+  {
+   "code": "GBS",
+   "name": {
+    "zh-TW": "B 群鏈球菌",
+    "en": "Group B Streptococci",
+    "ja": "B群レンサ球菌"
+   },
+   "group": "gram_positive",
+   "order": 8,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": "medium",
+    "short": "GBS",
+    "aliases": [
+     "Group B Streptococci",
+     "Group B Streptococcus",
+     "Streptococcus agalactiae",
+     "GBS"
+    ]
+   }
+  },
+  {
+   "code": "CDI",
+   "name": {
+    "zh-TW": "困難梭狀桿菌",
+    "en": "Clostridioides difficile",
+    "ja": "クロストリディオイデス・ディフィシル"
+   },
+   "group": "anaerobe",
+   "order": 9,
+   "meta": {
+    "gram": "positive",
+    "whoPriority": null,
+    "short": "C. difficile",
+    "aliases": [
+     "Clostridioides difficile",
+     "Clostridium difficile",
+     "C. difficile"
+    ]
+   }
+  },
+  {
+   "code": "ENB",
+   "name": {
+    "zh-TW": "腸道菌目",
+    "en": "Enterobacterales",
+    "ja": "腸内細菌目"
+   },
+   "group": "gram_negative",
+   "order": 10,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "keyPhenotype": "CRE",
+    "short": "Enterobacterales",
+    "aliases": [
+     "Enterobacterales",
+     "Enterobacteriaceae",
+     "腸道菌",
+     "腸桿菌目"
+    ]
+   }
+  },
+  {
+   "code": "ECO",
+   "name": {
+    "zh-TW": "大腸桿菌",
+    "en": "Escherichia coli",
+    "ja": "大腸菌"
+   },
+   "group": "gram_negative",
+   "order": 11,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "keyPhenotype": "CR-ECO",
+    "short": "E. coli",
+    "aliases": [
+     "E. coli",
+     "Escherichia coli"
+    ]
+   }
+  },
+  {
+   "code": "KPN",
+   "name": {
+    "zh-TW": "克雷伯氏肺炎桿菌",
+    "en": "Klebsiella pneumoniae",
+    "ja": "肺炎桿菌（クレブシエラ・ニューモニエ）"
+   },
+   "group": "gram_negative",
+   "order": 12,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "keyPhenotype": "CRKP",
+    "short": "K. pneumoniae",
+    "aliases": [
+     "K. pneumoniae",
+     "Klebsiella pneumoniae"
+    ]
+   }
+  },
+  {
+   "code": "ENT",
+   "name": {
+    "zh-TW": "腸桿菌屬",
+    "en": "Enterobacter spp.",
+    "ja": "エンテロバクター属"
+   },
+   "group": "gram_negative",
+   "order": 13,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "Enterobacter spp.",
+    "aliases": [
+     "Enterobacter spp.",
+     "Enterobacter spp",
+     "Enterobacter"
+    ]
+   }
+  },
+  {
+   "code": "ECL",
+   "name": {
+    "zh-TW": "腸桿菌（E. cloacae complex）",
+    "en": "Enterobacter cloacae (complex)",
+    "ja": "エンテロバクター・クロアカ（complex）"
+   },
+   "group": "gram_negative",
+   "order": 14,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "E. cloacae",
+    "aliases": [
+     "Enterobacter cloacae",
+     "Enterobacter cloacae complex",
+     "E. cloacae"
+    ]
+   }
+  },
+  {
+   "code": "PRO",
+   "name": {
+    "zh-TW": "變形桿菌屬",
+    "en": "Proteus spp.",
+    "ja": "プロテウス属"
+   },
+   "group": "gram_negative",
+   "order": 15,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "Proteus spp.",
+    "aliases": [
+     "Proteus spp.",
+     "Proteus spp",
+     "Proteus"
+    ]
+   }
+  },
+  {
+   "code": "PMI",
+   "name": {
+    "zh-TW": "奇異變形桿菌",
+    "en": "Proteus mirabilis",
+    "ja": "プロテウス・ミラビリス"
+   },
+   "group": "gram_negative",
+   "order": 16,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "P. mirabilis",
+    "aliases": [
+     "Proteus mirabilis",
+     "P. mirabilis"
+    ]
+   }
+  },
+  {
+   "code": "CIT",
+   "name": {
+    "zh-TW": "檸檬酸桿菌屬",
+    "en": "Citrobacter spp.",
+    "ja": "シトロバクター属"
+   },
+   "group": "gram_negative",
+   "order": 17,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "Citrobacter spp.",
+    "aliases": [
+     "Citrobacter spp.",
+     "Citrobacter spp",
+     "Citrobacter"
+    ]
+   }
+  },
+  {
+   "code": "SER",
+   "name": {
+    "zh-TW": "沙雷氏菌屬",
+    "en": "Serratia spp.",
+    "ja": "セラチア属"
+   },
+   "group": "gram_negative",
+   "order": 18,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "Serratia spp.",
+    "aliases": [
+     "Serratia spp.",
+     "Serratia spp",
+     "Serratia"
+    ]
+   }
+  },
+  {
+   "code": "SMR",
+   "name": {
+    "zh-TW": "黏質沙雷氏菌",
+    "en": "Serratia marcescens",
+    "ja": "セラチア・マルセッセンス"
+   },
+   "group": "gram_negative",
+   "order": 19,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "S. marcescens",
+    "aliases": [
+     "Serratia marcescens",
+     "S. marcescens"
+    ]
+   }
+  },
+  {
+   "code": "MOR",
+   "name": {
+    "zh-TW": "摩根氏菌屬",
+    "en": "Morganella spp.",
+    "ja": "モルガネラ属"
+   },
+   "group": "gram_negative",
+   "order": 20,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "Morganella spp.",
+    "aliases": [
+     "Morganella spp.",
+     "Morganella spp",
+     "Morganella",
+     "Morganella morganii"
+    ]
+   }
+  },
+  {
+   "code": "PRV",
+   "name": {
+    "zh-TW": "普羅威登斯菌屬",
+    "en": "Providencia spp.",
+    "ja": "プロビデンシア属"
+   },
+   "group": "gram_negative",
+   "order": 21,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "short": "Providencia spp.",
+    "aliases": [
+     "Providencia spp.",
+     "Providencia spp",
+     "Providencia"
+    ]
+   }
+  },
+  {
+   "code": "SAL",
+   "name": {
+    "zh-TW": "沙門氏菌屬",
+    "en": "Salmonella spp.",
+    "ja": "サルモネラ属"
+   },
+   "group": "gram_negative",
+   "order": 22,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "high",
+    "short": "Salmonella spp.",
+    "aliases": [
+     "Salmonella spp.",
+     "Salmonella spp",
+     "Salmonella"
+    ]
+   }
+  },
+  {
+   "code": "NTS",
+   "name": {
+    "zh-TW": "非傷寒沙門氏菌",
+    "en": "Non-typhoidal Salmonella",
+    "ja": "非チフス性サルモネラ"
+   },
+   "group": "gram_negative",
+   "order": 23,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "high",
+    "short": "NTS",
+    "aliases": [
+     "Non-typhoidal Salmonella",
+     "Nontyphoidal Salmonella",
+     "NTS",
+     "Salmonella, non-typhoidal"
+    ]
+   }
+  },
+  {
+   "code": "SHI",
+   "name": {
+    "zh-TW": "志賀氏桿菌屬",
+    "en": "Shigella spp.",
+    "ja": "赤痢菌属"
+   },
+   "group": "gram_negative",
+   "order": 24,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "high",
+    "short": "Shigella spp.",
+    "aliases": [
+     "Shigella spp.",
+     "Shigella spp",
+     "Shigella"
+    ]
+   }
+  },
+  {
+   "code": "PAE",
+   "name": {
+    "zh-TW": "綠膿桿菌",
+    "en": "Pseudomonas aeruginosa",
+    "ja": "緑膿菌"
+   },
+   "group": "gram_negative",
+   "order": 25,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "high",
+    "keyPhenotype": "CRPA",
+    "short": "P. aeruginosa",
+    "aliases": [
+     "P. aeruginosa",
+     "Pseudomonas aeruginosa"
+    ]
+   }
+  },
+  {
+   "code": "ABA",
+   "name": {
+    "zh-TW": "鮑氏不動桿菌",
+    "en": "Acinetobacter baumannii",
+    "ja": "アシネトバクター・バウマニ"
+   },
+   "group": "gram_negative",
+   "order": 26,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "critical",
+    "keyPhenotype": "CRAB",
+    "short": "A. baumannii",
+    "aliases": [
+     "A. baumannii",
+     "Acinetobacter baumannii",
+     "Acinetobacter baumannii complex",
+     "Acinetobacter calcoaceticus-Acinetobacter baumannii complex",
+     "Acinetobacter calcoaceticus-baumannii complex",
+     "ACB complex"
+    ],
+    "note": "2022 edition labels this organism 'A. calcoaceticus–A. baumannii complex'; 2023+ editions 'A. baumannii'. Both are mapped to ABA."
+   }
+  },
+  {
+   "code": "SMA",
+   "name": {
+    "zh-TW": "嗜麥芽窄食單胞菌",
+    "en": "Stenotrophomonas maltophilia",
+    "ja": "ステノトロホモナス・マルトフィリア"
+   },
+   "group": "gram_negative",
+   "order": 27,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": null,
+    "short": "S. maltophilia",
+    "aliases": [
+     "S. maltophilia",
+     "Stenotrophomonas maltophilia"
+    ]
+   }
+  },
+  {
+   "code": "BCC",
+   "name": {
+    "zh-TW": "洋蔥伯克氏菌複合群",
+    "en": "Burkholderia cepacia complex",
+    "ja": "バークホルデリア・セパシア complex"
+   },
+   "group": "gram_negative",
+   "order": 28,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": null,
+    "short": "B. cepacia complex",
+    "aliases": [
+     "Burkholderia cepacia complex",
+     "Burkholderia cepacia",
+     "B. cepacia complex"
+    ]
+   }
+  },
+  {
+   "code": "CIN",
+   "name": {
+    "zh-TW": "產吲哚金黃桿菌",
+    "en": "Chryseobacterium indologenes",
+    "ja": "クリセオバクテリウム・インドロゲネス"
+   },
+   "group": "gram_negative",
+   "order": 29,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": null,
+    "short": "C. indologenes",
+    "aliases": [
+     "Chryseobacterium indologenes",
+     "C. indologenes"
+    ]
+   }
+  },
+  {
+   "code": "ELI",
+   "name": {
+    "zh-TW": "伊莉莎白金菌屬",
+    "en": "Elizabethkingia spp.",
+    "ja": "エリザベトキンギア属"
+   },
+   "group": "gram_negative",
+   "order": 30,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": null,
+    "short": "Elizabethkingia spp.",
+    "aliases": [
+     "Elizabethkingia spp.",
+     "Elizabethkingia spp",
+     "Elizabethkingia",
+     "Elizabethkingia meningoseptica"
+    ]
+   }
+  },
+  {
+   "code": "HIN",
+   "name": {
+    "zh-TW": "流行性感冒嗜血桿菌",
+    "en": "Haemophilus influenzae",
+    "ja": "インフルエンザ菌"
+   },
+   "group": "gram_negative",
+   "order": 31,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "medium",
+    "short": "H. influenzae",
+    "aliases": [
+     "H. influenzae",
+     "Haemophilus influenzae"
+    ]
+   }
+  },
+  {
+   "code": "NGO",
+   "name": {
+    "zh-TW": "淋病雙球菌",
+    "en": "Neisseria gonorrhoeae",
+    "ja": "淋菌"
+   },
+   "group": "gram_negative",
+   "order": 32,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "high",
+    "short": "N. gonorrhoeae",
+    "aliases": [
+     "N. gonorrhoeae",
+     "Neisseria gonorrhoeae"
+    ]
+   }
+  },
+  {
+   "code": "HPY",
+   "name": {
+    "zh-TW": "幽門螺旋桿菌",
+    "en": "Helicobacter pylori",
+    "ja": "ヘリコバクター・ピロリ"
+   },
+   "group": "gram_negative",
+   "order": 33,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": "high",
+    "short": "H. pylori",
+    "aliases": [
+     "Helicobacter pylori",
+     "H. pylori"
+    ]
+   }
+  },
+  {
+   "code": "BFR",
+   "name": {
+    "zh-TW": "脆弱擬桿菌",
+    "en": "Bacteroides fragilis",
+    "ja": "バクテロイデス・フラジリス"
+   },
+   "group": "anaerobe",
+   "order": 34,
+   "meta": {
+    "gram": "negative",
+    "whoPriority": null,
+    "short": "B. fragilis",
+    "aliases": [
+     "Bacteroides fragilis",
+     "B. fragilis"
+    ]
+   }
+  },
+  {
+   "code": "CAL",
+   "name": {
+    "zh-TW": "白色念珠菌",
+    "en": "Candida albicans",
+    "ja": "カンジダ・アルビカンス"
+   },
+   "group": "fungi",
+   "order": 35,
+   "meta": {
+    "gram": null,
+    "whoPriority": null,
+    "short": "C. albicans",
+    "aliases": [
+     "Candida albicans",
+     "C. albicans"
+    ]
+   }
+  },
+  {
+   "code": "CSP",
+   "name": {
+    "zh-TW": "其他念珠菌屬（非白色念珠菌）",
+    "en": "Candida spp. (non-albicans)",
+    "ja": "カンジダ属（非アルビカンス）"
+   },
+   "group": "fungi",
+   "order": 36,
+   "meta": {
+    "gram": null,
+    "whoPriority": null,
+    "short": "Candida spp.",
+    "aliases": [
+     "Candida spp.",
+     "Candida spp",
+     "Candida non-albicans"
+    ]
+   }
+  },
+  {
+   "code": "OTHER",
+   "name": {
+    "zh-TW": "其他",
+    "en": "Other organisms",
+    "ja": "その他"
+   },
+   "group": "aggregate",
+   "order": 37,
+   "meta": {
+    "aggregate": true,
+    "aliases": [
+     "Other",
+     "Others",
+     "其他"
+    ]
+   }
+  },
+  {
+   "code": "TOTAL",
+   "name": {
+    "zh-TW": "總計",
+    "en": "Total",
+    "ja": "合計"
+   },
+   "group": "aggregate",
+   "order": 38,
+   "meta": {
+    "aggregate": true,
+    "aliases": [
+     "Total",
+     "總計",
+     "合計"
+    ]
+   }
+  }
+ ]
+}

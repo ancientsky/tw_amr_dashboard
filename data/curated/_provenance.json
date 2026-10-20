@@ -1,0 +1,109 @@
+{
+  "_comment": "Per-dataset ingestion status written by scripts/ingest/map_*.py and read by scripts/build_data.py. A dataset is published with provisional=false only when status == 'ingested'.",
+  "datasets": {
+    "resistance": {
+      "status": "ingested",
+      "mapper": "scripts/ingest/map_amr.py",
+      "pdfs": [
+        "台灣抗生素抗藥性監視年報2022年.pdf",
+        "臺灣抗生素抗藥性監視年報(2023年).pdf",
+        "臺灣抗生素抗藥性監視年報(2024年).pdf"
+      ],
+      "rows": 4790,
+      "dataYears": [
+        2022,
+        2023,
+        2024
+      ],
+      "reportYears": [
+        2022,
+        2023,
+        2024
+      ],
+      "precisionSummary": {
+        "table": 4790,
+        "text": 0,
+        "chart_estimate": 0
+      },
+      "byKind": {
+        "antibiogram": {
+          "2022": 1470,
+          "2023": 1606,
+          "2024": 1714
+        }
+      },
+      "phenotypes": [],
+      "inputs": [
+        {
+          "file": "data/source/transcribed/2022/antibiogram.csv",
+          "rows": 1470,
+          "mapped": 1470,
+          "sha256": "85464df6527a82826a81f38875b0f2de42c1c8c8213f26fb009e6d7a34ca1977"
+        },
+        {
+          "file": "data/source/transcribed/2022/isolate_counts.csv",
+          "rows": 576,
+          "mapped": 576,
+          "sha256": "54c2c100b8117e0a4a7d097686706cf29ce6a6b82208231fa8a5d9471a0c97af"
+        },
+        {
+          "file": "data/source/transcribed/2023/antibiogram.csv",
+          "rows": 1606,
+          "mapped": 1606,
+          "sha256": "70a4185e30c5488e53e05675e34fe9ec3224e52786037239c63cfc902b896888"
+        },
+        {
+          "file": "data/source/transcribed/2023/isolate_counts.csv",
+          "rows": 576,
+          "mapped": 576,
+          "sha256": "451239ffd7c6067170051d97f1b9213aebd93c3093a2e9b8fefc0dd3ba2bb66f"
+        },
+        {
+          "file": "data/source/transcribed/2024/antibiogram.csv",
+          "rows": 1714,
+          "mapped": 1714,
+          "sha256": "9b7c27130442a3a829557e4bcffe3a3231bf77d9e18fba7dd5c4c893e2155aea"
+        },
+        {
+          "file": "data/source/transcribed/2024/isolate_counts.csv",
+          "rows": 576,
+          "mapped": 576,
+          "sha256": "760c7d8abddcfee16264202ec2dd5175cfd3d3892a91117c822bec853e7595bb"
+        }
+      ],
+      "skippedRows": {},
+      "autoCodes": {
+        "organisms": [],
+        "antibiotics": []
+      }
+    },
+    "isolates": {
+      "status": "ingested",
+      "mapper": "scripts/ingest/map_amr.py",
+      "pdfs": [
+        "台灣抗生素抗藥性監視年報2022年.pdf",
+        "臺灣抗生素抗藥性監視年報(2023年).pdf",
+        "臺灣抗生素抗藥性監視年報(2024年).pdf"
+      ],
+      "rows": 799,
+      "dataYears": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "reportYears": [
+        2022,
+        2023,
+        2024
+      ],
+      "precisionSummary": {
+        "table": 799
+      }
+    }
+  }
+}

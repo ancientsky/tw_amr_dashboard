@@ -1,0 +1,43 @@
+iso3,whoRegion,name_zh-TW,name_en,name_ja
+GBR,EUR,英國,United Kingdom,英国
+FRA,EUR,法國,France,フランス
+DEU,EUR,德國,Germany,ドイツ
+ITA,EUR,義大利,Italy,イタリア
+ESP,EUR,西班牙,Spain,スペイン
+NLD,EUR,荷蘭,Netherlands,オランダ
+SWE,EUR,瑞典,Sweden,スウェーデン
+NOR,EUR,挪威,Norway,ノルウェー
+POL,EUR,波蘭,Poland,ポーランド
+GRC,EUR,希臘,Greece,ギリシャ
+ROU,EUR,羅馬尼亞,Romania,ルーマニア
+TUR,EUR,土耳其,Türkiye,トルコ
+JPN,WPR,日本,Japan,日本
+KOR,WPR,南韓,Republic of Korea,韓国
+CHN,WPR,中國,China,中国
+AUS,WPR,澳洲,Australia,オーストラリア
+NZL,WPR,紐西蘭,New Zealand,ニュージーランド
+PHL,WPR,菲律賓,Philippines,フィリピン
+VNM,WPR,越南,Viet Nam,ベトナム
+MYS,WPR,馬來西亞,Malaysia,マレーシア
+THA,SEAR,泰國,Thailand,タイ
+IND,SEAR,印度,India,インド
+IDN,SEAR,印尼,Indonesia,インドネシア
+NPL,SEAR,尼泊爾,Nepal,ネパール
+BGD,SEAR,孟加拉,Bangladesh,バングラデシュ
+PAK,EMR,巴基斯坦,Pakistan,パキスタン
+SAU,EMR,沙烏地阿拉伯,Saudi Arabia,サウジアラビア
+EGY,EMR,埃及,Egypt,エジプト
+IRN,EMR,伊朗,Iran,イラン
+JOR,EMR,約旦,Jordan,ヨルダン
+ZAF,AFR,南非,South Africa,南アフリカ
+NGA,AFR,奈及利亞,Nigeria,ナイジェリア
+KEN,AFR,肯亞,Kenya,ケニア
+ETH,AFR,衣索比亞,Ethiopia,エチオピア
+UGA,AFR,烏干達,Uganda,ウガンダ
+USA,AMR,美國,United States,米国
+CAN,AMR,加拿大,Canada,カナダ
+BRA,AMR,巴西,Brazil,ブラジル
+ARG,AMR,阿根廷,Argentina,アルゼンチン
+CHL,AMR,智利,Chile,チリ
+MEX,AMR,墨西哥,Mexico,メキシコ
+TWN,WPR,臺灣,Taiwan,台湾

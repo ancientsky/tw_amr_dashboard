@@ -1,0 +1,294 @@
+{
+ "dataset": "hai",
+ "version": "fixture-0.2",
+ "generatedAt": "2026-10-20T00:00:00Z",
+ "provisional": true,
+ "sources": [
+  {
+   "id": "twcdc-amr-annual",
+   "title": {
+    "zh-TW": "臺灣抗生素抗藥性監視年報",
+    "en": "Taiwan Antimicrobial Resistance Surveillance Annual Report",
+    "ja": "台湾抗菌薬耐性監視年報"
+   },
+   "publisher": "Taiwan CDC",
+   "year": 2024,
+   "kind": "annual-report"
+  },
+  {
+   "id": "fixture",
+   "title": {
+    "zh-TW": "前端開發用測試資料（非官方）",
+    "en": "Front-end development fixture (not official)",
+    "ja": "フロントエンド開発用フィクスチャ（非公式）"
+   },
+   "publisher": "TW-AMR Watch",
+   "year": 2026,
+   "kind": "curated"
+  }
+ ],
+ "notes": {
+  "zh-TW": "開發用暫定測試資料，非官方數據。",
+  "en": "Provisional development fixture — not official figures.",
+  "ja": "開発用の暫定フィクスチャ — 公式データではありません。"
+ },
+ "dims": {},
+ "records": [
+  {
+   "year": 2017,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 8.9,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2017,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 5.2,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2017,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 3.5,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2017,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.6,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2018,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 8.7,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2018,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 5.1,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2018,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 3.2,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2018,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.5,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2019,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 8.5,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2019,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 4.8,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2019,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 3,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2019,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.4,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2020,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 8.5,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2020,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 4.6,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2020,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 2.8,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2020,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.4,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2021,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 8.3,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2021,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 4.4,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2021,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 2.8,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2021,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.3,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2022,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 8,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2022,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 4.4,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2022,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 2.7,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2022,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.2,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2023,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 7.9,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2023,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 4.1,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2023,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 2.4,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2023,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.2,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2024,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "hai_density",
+   "value": 7.5,
+   "unit": "per_1000_patient_days"
+  },
+  {
+   "year": 2024,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "clabsi",
+   "value": 4,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2024,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "cauti",
+   "value": 2.3,
+   "unit": "per_1000_device_days"
+  },
+  {
+   "year": 2024,
+   "level": "all",
+   "icu_type": "all",
+   "metric": "vap",
+   "value": 1.1,
+   "unit": "per_1000_device_days"
+  }
+ ]
+}

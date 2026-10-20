@@ -1,0 +1,281 @@
+{
+  "app": {
+    "name": "TW-AMR Watch",
+    "fullName": "Taiwan Antimicrobial Resistance Surveillance Dashboard",
+    "tagline": "Taiwan's national antimicrobial-resistance, antibiotic-use and healthcare-associated infection surveillance — in one place.",
+    "home": "TW-AMR Watch home"
+  },
+  "nav": {
+    "overview": "Overview",
+    "resistance": "Resistance",
+    "antibioticUse": "Antibiotic use",
+    "hai": "HAI",
+    "international": "International",
+    "data": "Data & API",
+    "resources": "Resources",
+    "about": "Methodology",
+    "chat": "Ask AMR",
+    "menu": "Menu",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "skip": "Skip to content",
+    "primary": "Primary navigation",
+    "search": "Search"
+  },
+  "actions": {
+    "close": "Close",
+    "open": "Open",
+    "retry": "Retry",
+    "reset": "Reset",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "back": "Back",
+    "more": "More",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "selectAll": "Select all",
+    "clear": "Clear"
+  },
+  "toolbar": {
+    "label": "Chart tools",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "showTable": "Show data table",
+    "hideTable": "Show chart",
+    "png": "Download PNG",
+    "csv": "Download CSV",
+    "link": "Copy link to this chart",
+    "linkCopied": "Link copied",
+    "share": "Share",
+    "pngFailed": "Could not render image"
+  },
+  "share": {
+    "title": "Share this chart",
+    "social": "Social",
+    "x": "X (Twitter)",
+    "threads": "Threads",
+    "facebook": "Facebook",
+    "line": "LINE",
+    "webShare": "Share via device…",
+    "copyImage": "Copy image",
+    "imageCopied": "Image copied to clipboard",
+    "copyImageUnsupported": "Your browser can't copy images — downloaded instead",
+    "instagram": "Instagram card",
+    "embed": "Copy embed code",
+    "embedCopied": "Embed code copied",
+    "text": "{title} — {site}",
+    "hashtags": "AMR,Taiwan,AntimicrobialResistance",
+    "cardTitle": "Instagram-ready card",
+    "cardHint": "Render a branded image, then post it from your phone. Square for feed, 9:16 for Stories/Reels.",
+    "square": "Square 1080 × 1080",
+    "story": "Story 1080 × 1920",
+    "rendering": "Rendering…",
+    "downloadCard": "Download PNG",
+    "keyNumber": "Key figure",
+    "readMore": "Explore the interactive chart at"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "lang": {
+    "label": "Language",
+    "zh-TW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "short": {
+      "zh-TW": "中",
+      "en": "EN",
+      "ja": "日"
+    }
+  },
+  "footer": {
+    "sources": "Data sources",
+    "sourcesBody": "Taiwan CDC annual surveillance reports (Taiwan Healthcare-associated infection and Antimicrobial resistance Surveillance System, THAS) and WHO GLASS. Values are transcribed from the published reports; see Methodology for precision notes.",
+    "disclaimer": "Disclaimer",
+    "disclaimerBody": "TW-AMR Watch is an independent visualization project and is not an official publication of Taiwan CDC or WHO. It is not medical advice. Always consult the original reports before citing figures.",
+    "explore": "Explore",
+    "developers": "Developers",
+    "api": "Static JSON API",
+    "embed": "Embed widgets",
+    "github": "Source on GitHub",
+    "lastBuild": "Last build {date}",
+    "license": "Code MIT · Data per original source terms"
+  },
+  "provisional": {
+    "chip": "Provisional",
+    "chipHint": "Curated estimate modelled on published trends — not official figures.",
+    "title": "Provisional estimates",
+    "body": "This section uses curated estimates modelled on published Taiwan CDC trends until the official annual report is added. Do not cite these numbers as official.",
+    "howTo": "How to add the report",
+    "siteBody": "Some sections (antibiotic use, HAI, international comparison) still show provisional estimates. Resistance data are transcribed from the Taiwan CDC annual reports.",
+    "dismiss": "Dismiss notice"
+  },
+  "precision": {
+    "label": "Precision",
+    "table": "From table",
+    "text": "From report text",
+    "chart_estimate": "Read from chart",
+    "tableHint": "Transcribed exactly from a numeric table in the report.",
+    "textHint": "Quoted from the report narrative.",
+    "chart_estimateHint": "Estimated from a printed chart; accurate to about ±1–2 percentage points."
+  },
+  "fixture": {
+    "chip": "Dev fixture",
+    "hint": "Showing bundled development data because public/data could not be loaded."
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "errorBody": "We couldn't load this data. Check your connection and try again.",
+    "empty": "No data for this selection",
+    "emptyBody": "Try widening the year range or choosing a different filter.",
+    "source": "Source",
+    "sourceLine": "Source: {source}",
+    "year": "Year",
+    "years": "Years",
+    "level": "Hospital level",
+    "ward": "Ward",
+    "specimen": "Specimen",
+    "setting": "Onset",
+    "pathogen": "Pathogen",
+    "antibiotic": "Antibiotic",
+    "phenotype": "Phenotype",
+    "value": "Value",
+    "isolates": "Isolates",
+    "resistantPct": "% resistant",
+    "all": "All",
+    "selected": "{n} selected",
+    "unknown": "Unknown",
+    "latest": "Latest ({year})",
+    "comingOnline": "Coming online",
+    "comingOnlineBody": "This section is being assembled. Charts and filters will appear here shortly."
+  },
+  "levels": {
+    "all": "All hospitals",
+    "medical_center": "Medical centers",
+    "regional": "Regional hospitals",
+    "district": "District hospitals"
+  },
+  "wards": {
+    "all": "All wards",
+    "icu": "ICU",
+    "non_icu": "Non-ICU"
+  },
+  "settings": {
+    "all": "All onset",
+    "co": "Community-onset",
+    "ho": "Hospital-onset"
+  },
+  "specimens": {
+    "all": "All specimens",
+    "blood": "Blood",
+    "urine": "Urine",
+    "sputum": "Sputum",
+    "pus": "Pus / wound",
+    "stool": "Stool"
+  },
+  "table": {
+    "caption": "Data table for {title}",
+    "sortBy": "Sort by {col}",
+    "exportCsv": "Export CSV",
+    "rows": "{n} rows",
+    "empty": "No rows"
+  },
+  "kpi": {
+    "vsPrev": "vs {year}",
+    "pp": "pp",
+    "up": "Up {value} from {year}",
+    "down": "Down {value} from {year}",
+    "flat": "Unchanged from {year}",
+    "trend": "Trend {from}–{to}"
+  },
+  "charts": {
+    "resistanceTrend": {
+      "title": "{phenotype} resistance trend",
+      "titleGeneric": "{pathogen} resistant to {antibiotic}",
+      "subtitle": "% resistant isolates by ward, {level}",
+      "aria": "Line chart of percentage resistant over time"
+    },
+    "resistanceHeatmap": {
+      "title": "Resistance map: pathogen × antibiotic",
+      "subtitle": "% resistant, {level}, {year}",
+      "aria": "Heatmap of percentage resistant by pathogen and antibiotic",
+      "notTested": "Not reported"
+    },
+    "kpiStrip": {
+      "title": "Key resistance indicators",
+      "subtitle": "ICU, {year} · change vs previous year"
+    }
+  },
+  "embed": {
+    "unknownTitle": "Unknown chart",
+    "unknownBody": "The chart id “{id}” isn't available. Valid ids: {ids}.",
+    "openFull": "Open in TW-AMR Watch",
+    "poweredBy": "Powered by TW-AMR Watch"
+  },
+  "chat": {
+    "launcher": "Ask the AMR assistant",
+    "title": "AMR assistant",
+    "placeholder": "Ask about resistance trends, antibiotics or definitions…",
+    "comingSoon": "The assistant is warming up. It will answer questions about Taiwan AMR data using an offline knowledge base.",
+    "send": "Send"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has moved.",
+    "home": "Back to overview",
+    "code": "404"
+  },
+  "pages": {
+    "overview": {
+      "eyebrow": "National snapshot",
+      "title": "Antimicrobial resistance in Taiwan, at a glance",
+      "subtitle": "Headline resistance indicators from the Taiwan CDC surveillance system, with trends, hospital-level breakdowns and international context."
+    },
+    "resistance": {
+      "eyebrow": "THAS · Antimicrobial resistance",
+      "title": "Resistance trends",
+      "subtitle": "Explore % resistant by pathogen, antibiotic, hospital level, ward, onset and specimen from the Taiwan CDC annual reports."
+    },
+    "antibioticUse": {
+      "eyebrow": "Antimicrobial use",
+      "title": "Antibiotic consumption",
+      "subtitle": "Inpatient antibiotic use by class and WHO AWaRe category, in DDD per 1,000 patient-days."
+    },
+    "hai": {
+      "eyebrow": "TNIS · Healthcare-associated infections",
+      "title": "Healthcare-associated infections",
+      "subtitle": "ICU infection densities, device-associated infections (CLABSI, CAUTI, VAP), device utilisation and leading pathogens."
+    },
+    "international": {
+      "eyebrow": "WHO GLASS",
+      "title": "International comparison",
+      "subtitle": "How Taiwan's bloodstream-infection resistance compares with countries reporting to WHO GLASS."
+    },
+    "data": {
+      "eyebrow": "Open data",
+      "title": "Data, API & embeds",
+      "subtitle": "Download every dataset as JSON or CSV, query the static API, and build embeddable widgets for your hospital site."
+    },
+    "resources": {
+      "eyebrow": "Directory",
+      "title": "AMR resources worldwide",
+      "subtitle": "A curated directory of international AMR, antibiotic-use and HAI dashboards, data portals and guidelines."
+    },
+    "about": {
+      "eyebrow": "Methodology",
+      "title": "About the data",
+      "subtitle": "Sources, definitions, transcription precision, comparability caveats and how this site is built."
+    },
+    "chat": {
+      "eyebrow": "Assistant",
+      "title": "Ask about AMR",
+      "subtitle": "A client-side assistant that answers questions about Taiwan's AMR surveillance and links to the relevant charts."
+    }
+  }
+}

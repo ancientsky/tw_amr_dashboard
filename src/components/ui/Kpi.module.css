@@ -1,0 +1,115 @@
+.kpi {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
+  min-width: 0;
+  overflow: hidden;
+  text-align: left;
+  color: inherit;
+  width: 100%;
+  transition:
+    box-shadow var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+.kpi::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--kpi-accent, var(--accent)), transparent 70%);
+  opacity: 0.85;
+}
+.interactive:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-1px);
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: 22px;
+}
+.label {
+  font-size: var(--fs-sm);
+  font-weight: 550;
+  color: var(--ink-2);
+  line-height: var(--lh-snug);
+}
+.valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.value {
+  font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.6rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  font-variant-numeric: proportional-nums;
+}
+:root[data-theme='dark'] .value {
+  text-shadow: 0 0 22px rgb(0 227 140 / 0.18);
+}
+.unit {
+  font-size: var(--fs-md);
+  font-weight: 550;
+  color: var(--ink-3);
+}
+.foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 32px;
+}
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px 2px 6px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.good {
+  color: var(--ok);
+  background: var(--accent-soft);
+}
+.bad {
+  color: var(--danger);
+  background: var(--danger-soft);
+}
+.neutral {
+  color: var(--ink-2);
+  background: var(--surface-2);
+}
+.deltaNote {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  margin-left: 6px;
+  font-weight: 500;
+}
+.spark {
+  flex: 0 1 120px;
+  min-width: 64px;
+  height: 32px;
+}
+.caption {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  line-height: var(--lh-snug);
+}

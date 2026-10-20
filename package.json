@@ -1,0 +1,50 @@
+{
+  "name": "tw-amr-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "description": "TW-AMR Watch — Taiwan antimicrobial-resistance surveillance dashboard",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\" \"*.{ts,js,json,md}\"",
+    "test": "vitest run",
+    "screenshot": "node scripts/screenshot.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "echarts": "^5.6.0",
+    "framer-motion": "^11.18.2",
+    "html-to-image": "^1.11.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.6",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/topojson-client": "^3.1.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^15.15.0",
+    "playwright": "^1.56.1",
+    "prettier": "^3.9.10",
+    "typescript": "~5.6.3",
+    "typescript-eslint": "^8.72.0",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}
