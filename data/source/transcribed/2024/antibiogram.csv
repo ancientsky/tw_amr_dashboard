@@ -1,0 +1,1715 @@
+report_year,data_year,level,pathogen,antibiotic_abbr,antibiotic,antibiotic_class,susceptible_pct,isolates,pdf_page,figure
+2024,2024,all,Enterococcus faecalis,P-G,penicillin G,Penicillins,97,13068,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,P-V,penicillin V,Penicillins,96,1391,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,AM,ampicillin,Penicillins,99,30707,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,E,erythromycin,Macrolides,8,12790,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,TE,tetracycline,Tetracyclines,11,17521,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,MI,minocycline,Tetracyclines,19,714,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,RA,rifampin,Miscellaneous (I),44,224,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,C,chloramphenicol,Miscellaneous (I),57,23,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,P-G,penicillin G,Penicillins,7,8805,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,P-V,penicillin V,Penicillins,4,999,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,AM,ampicillin,Penicillins,8,19260,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,E,erythromycin,Macrolides,6,8568,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,TE,tetracycline,Tetracyclines,47,10758,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,MI,minocycline,Tetracyclines,52,275,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,RA,rifampin,Miscellaneous (I),15,110,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,P-G,penicillin G,Penicillins,99,190,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,AM,ampicillin,Penicillins,100,343,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,E,erythromycin,Macrolides,66,476,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,TE,tetracycline,Tetracyclines,29,199,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,CC,clindamycin,Miscellaneous (I),68,484,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,C,chloramphenicol,Miscellaneous (I),95,40,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,P-G,penicillin G,Penicillins,99,3678,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,P-V,penicillin V,Penicillins,100,142,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,AM,ampicillin,Penicillins,100,8389,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,E,erythromycin,Macrolides,52,6510,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,TE,tetracycline,Tetracyclines,20,4002,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,CC,clindamycin,Miscellaneous (I),52,8007,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,C,chloramphenicol,Miscellaneous (I),95,1991,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,OX,oxacillin,Penicillins,53,82325,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,E,erythromycin,Macrolides,45,70548,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,TE,tetracycline,Tetracyclines,62,42814,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,MI,minocycline,Tetracyclines,95,11860,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,CC,clindamycin,Miscellaneous (I),73,78617,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,RA,rifampin,Miscellaneous (I),99,18443,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),93,77367,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,C,chloramphenicol,Miscellaneous (I),94,177,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,P-G,penicillin G,Penicillins,68,585,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,P-V,penicillin V,Penicillins,9,342,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,AMC,amoxicillin-clavulanate,Penicillins,53,355,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,E,erythromycin,Macrolides,7,2885,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,TE,tetracycline,Tetracyclines,13,1515,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,CC,clindamycin,Miscellaneous (I),19,2408,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,RA,rifampin,Miscellaneous (I),99,248,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),59,2769,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,C,chloramphenicol,Miscellaneous (I),89,1171,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,HLG,high-level gentamicin,Aminoglycosides,58,36406,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,CIP,ciprofloxacin,Fluoroquinolones,78,11303,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,LVX,levofloxacin,Fluoroquinolones,84,12779,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,HLG,high-level gentamicin,Aminoglycosides,68,23425,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,CIP,ciprofloxacin,Fluoroquinolones,8,7214,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,LVX,levofloxacin,Fluoroquinolones,11,8146,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,CTX,cefotaxime,3rd GCs,100,287,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,CRO,ceftriaxone,3rd GCs,100,285,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,FEP,cefepime,4th GCs,100,49,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,LVX,levofloxacin,Fluoroquinolones,93,357,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,CTX,cefotaxime,3rd GCs,100,5820,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,CRO,ceftriaxone,3rd GCs,100,5740,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,FEP,cefepime,4th GCs,99,1078,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,LVX,levofloxacin,Fluoroquinolones,92,7252,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,GM,gentamicin,Aminoglycosides,68,37952,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,CIP,ciprofloxacin,Fluoroquinolones,68,29725,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,LVX,levofloxacin,Fluoroquinolones,69,33575,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,FUR,cefuroxime sodium,2nd GCs,19,58,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,CTX,cefotaxime,3rd GCs,73,2269,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,CRO,ceftriaxone,3rd GCs,85,2185,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,FEP,cefepime,4th GCs,40,420,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,LVX,levofloxacin,Fluoroquinolones,94,3027,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,MXF,moxifloxacin,Fluoroquinolones,97,1676,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,TGC,tigecycline,Miscellaneous (II),99,6948,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,VA,vancomycin,Miscellaneous (II),100,47179,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,LZD,linezolid,Miscellaneous (II),90,32113,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,DAP,daptomycin,Miscellaneous (II),80,19222,41,圖 3-1-1
+2024,2024,all,Enterococcus faecalis,F/M,nitrofurantoin,Miscellaneous (II),97,557,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,TGC,tigecycline,Miscellaneous (II),99,7340,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,VA,vancomycin,Miscellaneous (II),52,30539,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,LZD,linezolid,Miscellaneous (II),97,24008,41,圖 3-1-1
+2024,2024,all,Enterococcus faecium,F/M,nitrofurantoin,Miscellaneous (II),15,365,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,VA,vancomycin,Miscellaneous (II),100,485,41,圖 3-1-1
+2024,2024,all,Group A Streptococci,LZD,linezolid,Miscellaneous (II),100,193,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,MEM,meropenem,Carbapenems,99,424,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,ETP,ertapenem,Carbapenems,100,71,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,VA,vancomycin,Miscellaneous (II),100,10359,41,圖 3-1-1
+2024,2024,all,Group B Streptococci,LZD,linezolid,Miscellaneous (II),100,4138,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,TGC,tigecycline,Miscellaneous (II),100,29832,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,VA,vancomycin,Miscellaneous (II),100,75527,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,SYN,quinupristin-dalfopristin,Miscellaneous (II),100,413,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,LZD,linezolid,Miscellaneous (II),100,63025,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,DAP,daptomycin,Miscellaneous (II),100,35037,41,圖 3-1-1
+2024,2024,all,Staphylococcus aureus,F/M,nitrofurantoin,Miscellaneous (II),99,193,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,IPM,imipenem,Carbapenems,48,151,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,MEM,meropenem,Carbapenems,12,138,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,VA,vancomycin,Miscellaneous (II),100,3363,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,SYN,quinupristin-dalfopristin,Miscellaneous (II),96,113,41,圖 3-1-1
+2024,2024,all,Streptococcus pneumoniae,LZD,linezolid,Miscellaneous (II),100,756,41,圖 3-1-1
+2024,2024,all,Citrobacter spp.,AM,ampicillin,Penicillins,2,6884,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,SAM,ampicillin-sulbactam,Penicillins,56,8197,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,AMC,amoxicillin-clavulanate,Penicillins,66,2743,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,83,15528,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,TE,tetracycline,Tetracyclines,42,57,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,MI,minocycline,Tetracyclines,88,1073,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),88,16338,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,AM,ampicillin,Penicillins,0,4865,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,SAM,ampicillin-sulbactam,Penicillins,1,6107,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,AMC,amoxicillin-clavulanate,Penicillins,0,1719,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,63,8571,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,TE,tetracycline,Tetracyclines,57,68,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,MI,minocycline,Tetracyclines,63,310,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),75,8557,42,圖 3-1-1
+2024,2024,all,Escherichia coli,AM,ampicillin,Penicillins,24,106577,42,圖 3-1-1
+2024,2024,all,Escherichia coli,SAM,ampicillin-sulbactam,Penicillins,43,174905,42,圖 3-1-1
+2024,2024,all,Escherichia coli,AMC,amoxicillin-clavulanate,Penicillins,64,44474,42,圖 3-1-1
+2024,2024,all,Escherichia coli,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,87,201812,42,圖 3-1-1
+2024,2024,all,Escherichia coli,TE,tetracycline,Tetracyclines,42,1733,42,圖 3-1-1
+2024,2024,all,Escherichia coli,MI,minocycline,Tetracyclines,78,13723,42,圖 3-1-1
+2024,2024,all,Escherichia coli,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),54,226085,42,圖 3-1-1
+2024,2024,all,Escherichia coli,C,chloramphenicol,Miscellaneous (I),81,54,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,AM,ampicillin,Penicillins,1,38846,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,SAM,ampicillin-sulbactam,Penicillins,55,75846,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,AMC,amoxicillin-clavulanate,Penicillins,55,14154,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,69,81581,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,TE,tetracycline,Tetracyclines,56,513,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,MI,minocycline,Tetracyclines,66,5920,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),62,85317,42,圖 3-1-1
+2024,2024,all,Morganella spp.,AM,ampicillin,Penicillins,1,4021,42,圖 3-1-1
+2024,2024,all,Morganella spp.,SAM,ampicillin-sulbactam,Penicillins,16,7814,42,圖 3-1-1
+2024,2024,all,Morganella spp.,AMC,amoxicillin-clavulanate,Penicillins,1,1827,42,圖 3-1-1
+2024,2024,all,Morganella spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,93,8891,42,圖 3-1-1
+2024,2024,all,Morganella spp.,MI,minocycline,Tetracyclines,36,716,42,圖 3-1-1
+2024,2024,all,Morganella spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),63,9554,42,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,AM,ampicillin,Penicillins,51,7426,42,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,MI,minocycline,Tetracyclines,52,158,42,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),60,9369,42,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,C,chloramphenicol,Miscellaneous (I),55,1495,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,AM,ampicillin,Penicillins,40,17697,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,SAM,ampicillin-sulbactam,Penicillins,59,28957,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,AMC,amoxicillin-clavulanate,Penicillins,74,6395,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,94,32633,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,TE,tetracycline,Tetracyclines,4,387,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,MI,minocycline,Tetracyclines,1,2573,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),45,35301,42,圖 3-1-1
+2024,2024,all,Providencia spp.,AM,ampicillin,Penicillins,1,2414,42,圖 3-1-1
+2024,2024,all,Providencia spp.,SAM,ampicillin-sulbactam,Penicillins,22,4049,42,圖 3-1-1
+2024,2024,all,Providencia spp.,AMC,amoxicillin-clavulanate,Penicillins,4,943,42,圖 3-1-1
+2024,2024,all,Providencia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,85,4411,42,圖 3-1-1
+2024,2024,all,Providencia spp.,MI,minocycline,Tetracyclines,1,488,42,圖 3-1-1
+2024,2024,all,Providencia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),41,5097,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,AM,ampicillin,Penicillins,0,4009,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,SAM,ampicillin-sulbactam,Penicillins,1,7196,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,AMC,amoxicillin-clavulanate,Penicillins,0,1349,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,74,7632,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,TE,tetracycline,Tetracyclines,11,61,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,MI,minocycline,Tetracyclines,45,696,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),79,10066,42,圖 3-1-1
+2024,2024,all,Shigella spp.,AM,ampicillin,Penicillins,66,70,42,圖 3-1-1
+2024,2024,all,Shigella spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),60,81,42,圖 3-1-1
+2024,2024,all,Shigella spp.,C,chloramphenicol,Miscellaneous (I),74,31,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CZ,cefazolin,1st GC,53,15598,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,FOX,cefoxitin,2nd GCs,69,4724,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,FUR,cefuroxime sodium,2nd GCs,68,5008,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CXM,cefuroxime axetil,2nd GCs,48,2481,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CTX,cefotaxime,3rd GCs,80,7273,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CRO,ceftriaxone,3rd GCs,83,10113,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CFM,cefixime,3rd GCs,80,981,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,90,766,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,84,14551,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,FEP,cefepime,4th GCs,93,14505,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CZ,cefazolin,1st GC,0,10452,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,FOX,cefoxitin,2nd GCs,1,1834,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,FUR,cefuroxime sodium,2nd GCs,37,3846,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CXM,cefuroxime axetil,2nd GCs,6,1417,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CTX,cefotaxime,3rd GCs,52,3737,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CRO,ceftriaxone,3rd GCs,59,6522,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CFM,cefixime,3rd GCs,31,75,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,81,88,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,61,8581,42,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,FEP,cefepime,4th GCs,79,7903,42,圖 3-1-1
+2024,2024,all,Escherichia coli,CZ,cefazolin,1st GC,49,215396,42,圖 3-1-1
+2024,2024,all,Escherichia coli,FOX,cefoxitin,2nd GCs,77,59692,42,圖 3-1-1
+2024,2024,all,Escherichia coli,FUR,cefuroxime sodium,2nd GCs,64,73595,42,圖 3-1-1
+2024,2024,all,Escherichia coli,CXM,cefuroxime axetil,2nd GCs,58,32768,42,圖 3-1-1
+2024,2024,all,Escherichia coli,CTX,cefotaxime,3rd GCs,66,94985,42,圖 3-1-1
+2024,2024,all,Escherichia coli,CRO,ceftriaxone,3rd GCs,68,141053,42,圖 3-1-1
+2024,2024,all,Escherichia coli,CFM,cefixime,3rd GCs,62,10721,42,圖 3-1-1
+2024,2024,all,Escherichia coli,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,92,6816,42,圖 3-1-1
+2024,2024,all,Escherichia coli,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,75,182107,42,圖 3-1-1
+2024,2024,all,Escherichia coli,FEP,cefepime,4th GCs,80,191745,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CZ,cefazolin,1st GC,49,86394,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,FOX,cefoxitin,2nd GCs,64,25844,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,FUR,cefuroxime sodium,2nd GCs,62,26767,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CXM,cefuroxime axetil,2nd GCs,55,12561,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CTX,cefotaxime,3rd GCs,64,39158,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CRO,ceftriaxone,3rd GCs,72,56481,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CFM,cefixime,3rd GCs,62,5383,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,84,3247,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,66,78715,42,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,FEP,cefepime,4th GCs,78,79358,42,圖 3-1-1
+2024,2024,all,Morganella spp.,CZ,cefazolin,1st GC,0,9968,42,圖 3-1-1
+2024,2024,all,Morganella spp.,FOX,cefoxitin,2nd GCs,46,2502,42,圖 3-1-1
+2024,2024,all,Morganella spp.,FUR,cefuroxime sodium,2nd GCs,1,3396,42,圖 3-1-1
+2024,2024,all,Morganella spp.,CXM,cefuroxime axetil,2nd GCs,1,1619,42,圖 3-1-1
+2024,2024,all,Morganella spp.,CTX,cefotaxime,3rd GCs,73,4225,42,圖 3-1-1
+2024,2024,all,Morganella spp.,CRO,ceftriaxone,3rd GCs,88,6025,42,圖 3-1-1
+2024,2024,all,Morganella spp.,CFM,cefixime,3rd GCs,59,543,42,圖 3-1-1
+2024,2024,all,Morganella spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,89,338,42,圖 3-1-1
+2024,2024,all,Morganella spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,82,8007,42,圖 3-1-1
+2024,2024,all,Morganella spp.,FEP,cefepime,4th GCs,95,7844,42,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,CTX,cefotaxime,3rd GCs,76,3581,42,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,CRO,ceftriaxone,3rd GCs,82,5480,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CZ,cefazolin,1st GC,38,33856,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,FOX,cefoxitin,2nd GCs,82,10160,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,FUR,cefuroxime sodium,2nd GCs,79,10911,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CXM,cefuroxime axetil,2nd GCs,76,4973,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CTX,cefotaxime,3rd GCs,74,14793,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CRO,ceftriaxone,3rd GCs,80,23693,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CFM,cefixime,3rd GCs,77,1751,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,98,1062,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,85,29604,42,圖 3-1-1
+2024,2024,all,Proteus mirabilis,FEP,cefepime,4th GCs,88,30047,42,圖 3-1-1
+2024,2024,all,Providencia spp.,CZ,cefazolin,1st GC,1,4986,42,圖 3-1-1
+2024,2024,all,Providencia spp.,FOX,cefoxitin,2nd GCs,74,1292,42,圖 3-1-1
+2024,2024,all,Providencia spp.,FUR,cefuroxime sodium,2nd GCs,65,1288,42,圖 3-1-1
+2024,2024,all,Providencia spp.,CXM,cefuroxime axetil,2nd GCs,58,604,42,圖 3-1-1
+2024,2024,all,Providencia spp.,CTX,cefotaxime,3rd GCs,61,2154,42,圖 3-1-1
+2024,2024,all,Providencia spp.,CRO,ceftriaxone,3rd GCs,63,3337,42,圖 3-1-1
+2024,2024,all,Providencia spp.,CFM,cefixime,3rd GCs,69,283,42,圖 3-1-1
+2024,2024,all,Providencia spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,92,133,42,圖 3-1-1
+2024,2024,all,Providencia spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,65,4282,42,圖 3-1-1
+2024,2024,all,Providencia spp.,FEP,cefepime,4th GCs,90,4558,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,CZ,cefazolin,1st GC,0,11363,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,FOX,cefoxitin,2nd GCs,1,2874,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,FUR,cefuroxime sodium,2nd GCs,0,2992,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,CXM,cefuroxime axetil,2nd GCs,0,1482,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,CTX,cefotaxime,3rd GCs,59,4925,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,CRO,ceftriaxone,3rd GCs,69,7001,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,CFM,cefixime,3rd GCs,66,530,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,93,394,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,75,9718,42,圖 3-1-1
+2024,2024,all,Serratia marcescens,FEP,cefepime,4th GCs,84,9412,42,圖 3-1-1
+2024,2024,all,Shigella spp.,CTX,cefotaxime,3rd GCs,89,28,42,圖 3-1-1
+2024,2024,all,Shigella spp.,CRO,ceftriaxone,3rd GCs,85,53,42,圖 3-1-1
+2024,2024,all,Citrobacter spp.,GM,gentamicin,Aminoglycosides,92,18201,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,AN,amikacin,Aminoglycosides,97,17541,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,CIP,ciprofloxacin,Fluoroquinolones,87,14164,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,LVX,levofloxacin,Fluoroquinolones,88,14674,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,IPM,imipenem,Carbapenems,94,13983,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,MEM,meropenem,Carbapenems,96,7140,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,ETP,ertapenem,Carbapenems,96,16739,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,DOR,doripenem,Carbapenems,93,332,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,ATM,aztreonam,Miscellaneous (II),81,129,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,TGC,tigecycline,Miscellaneous (II),99,10131,43,圖 3-1-1
+2024,2024,all,Citrobacter spp.,F/M,nitrofurantoin,Miscellaneous (II),79,57,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,GM,gentamicin,Aminoglycosides,85,10959,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,AN,amikacin,Aminoglycosides,96,10498,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,CIP,ciprofloxacin,Fluoroquinolones,73,8453,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,LVX,levofloxacin,Fluoroquinolones,78,8916,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,IPM,imipenem,Carbapenems,85,8083,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,MEM,meropenem,Carbapenems,93,3967,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,ETP,ertapenem,Carbapenems,85,9428,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,DOR,doripenem,Carbapenems,82,532,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,ATM,aztreonam,Miscellaneous (II),60,186,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,TGC,tigecycline,Miscellaneous (II),88,5305,43,圖 3-1-1
+2024,2024,all,Enterobacter cloacae,F/M,nitrofurantoin,Miscellaneous (II),42,55,43,圖 3-1-1
+2024,2024,all,Escherichia coli,GM,gentamicin,Aminoglycosides,75,242161,43,圖 3-1-1
+2024,2024,all,Escherichia coli,AN,amikacin,Aminoglycosides,96,232527,43,圖 3-1-1
+2024,2024,all,Escherichia coli,CIP,ciprofloxacin,Fluoroquinolones,54,192016,43,圖 3-1-1
+2024,2024,all,Escherichia coli,LVX,levofloxacin,Fluoroquinolones,54,196556,43,圖 3-1-1
+2024,2024,all,Escherichia coli,IPM,imipenem,Carbapenems,97,181352,43,圖 3-1-1
+2024,2024,all,Escherichia coli,MEM,meropenem,Carbapenems,97,95979,43,圖 3-1-1
+2024,2024,all,Escherichia coli,ETP,ertapenem,Carbapenems,97,215910,43,圖 3-1-1
+2024,2024,all,Escherichia coli,DOR,doripenem,Carbapenems,97,5510,43,圖 3-1-1
+2024,2024,all,Escherichia coli,ATM,aztreonam,Miscellaneous (II),69,3483,43,圖 3-1-1
+2024,2024,all,Escherichia coli,TGC,tigecycline,Miscellaneous (II),99,136428,43,圖 3-1-1
+2024,2024,all,Escherichia coli,F/M,nitrofurantoin,Miscellaneous (II),98,2374,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,GM,gentamicin,Aminoglycosides,73,97178,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,AN,amikacin,Aminoglycosides,94,95329,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,CIP,ciprofloxacin,Fluoroquinolones,64,78631,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,LVX,levofloxacin,Fluoroquinolones,64,76322,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,IPM,imipenem,Carbapenems,85,77215,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,MEM,meropenem,Carbapenems,89,42391,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,ETP,ertapenem,Carbapenems,86,84334,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,DOR,doripenem,Carbapenems,88,2805,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,ATM,aztreonam,Miscellaneous (II),77,1232,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,TGC,tigecycline,Miscellaneous (II),90,57046,43,圖 3-1-1
+2024,2024,all,Klebsiella pneumoniae,F/M,nitrofurantoin,Miscellaneous (II),54,433,43,圖 3-1-1
+2024,2024,all,Morganella spp.,GM,gentamicin,Aminoglycosides,77,10476,43,圖 3-1-1
+2024,2024,all,Morganella spp.,AN,amikacin,Aminoglycosides,96,10015,43,圖 3-1-1
+2024,2024,all,Morganella spp.,CIP,ciprofloxacin,Fluoroquinolones,64,8322,43,圖 3-1-1
+2024,2024,all,Morganella spp.,LVX,levofloxacin,Fluoroquinolones,69,8270,43,圖 3-1-1
+2024,2024,all,Morganella spp.,IPM,imipenem,Carbapenems,100,3774,43,圖 3-1-1
+2024,2024,all,Morganella spp.,MEM,meropenem,Carbapenems,99,4419,43,圖 3-1-1
+2024,2024,all,Morganella spp.,ETP,ertapenem,Carbapenems,99,9484,43,圖 3-1-1
+2024,2024,all,Morganella spp.,DOR,doripenem,Carbapenems,93,59,43,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,CIP,ciprofloxacin,Fluoroquinolones,61,7700,43,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,LVX,levofloxacin,Fluoroquinolones,68,2528,43,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,IPM,imipenem,Carbapenems,99,2383,43,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,MEM,meropenem,Carbapenems,99,676,43,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,ETP,ertapenem,Carbapenems,100,3600,43,圖 3-1-1
+2024,2024,all,Non-typhoidal Salmonella,TGC,tigecycline,Miscellaneous (II),96,2403,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,GM,gentamicin,Aminoglycosides,58,39196,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,AN,amikacin,Aminoglycosides,91,37559,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,CIP,ciprofloxacin,Fluoroquinolones,59,30646,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,LVX,levofloxacin,Fluoroquinolones,63,30692,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,IPM,imipenem,Carbapenems,100,12103,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,MEM,meropenem,Carbapenems,98,17848,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,ETP,ertapenem,Carbapenems,97,32515,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,DOR,doripenem,Carbapenems,94,311,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,ATM,aztreonam,Miscellaneous (II),85,684,43,圖 3-1-1
+2024,2024,all,Proteus mirabilis,F/M,nitrofurantoin,Miscellaneous (II),0,408,43,圖 3-1-1
+2024,2024,all,Providencia spp.,GM,gentamicin,Aminoglycosides,29,5265,43,圖 3-1-1
+2024,2024,all,Providencia spp.,AN,amikacin,Aminoglycosides,73,5323,43,圖 3-1-1
+2024,2024,all,Providencia spp.,CIP,ciprofloxacin,Fluoroquinolones,42,4250,43,圖 3-1-1
+2024,2024,all,Providencia spp.,LVX,levofloxacin,Fluoroquinolones,38,4098,43,圖 3-1-1
+2024,2024,all,Providencia spp.,IPM,imipenem,Carbapenems,100,2459,43,圖 3-1-1
+2024,2024,all,Providencia spp.,MEM,meropenem,Carbapenems,96,2580,43,圖 3-1-1
+2024,2024,all,Providencia spp.,ETP,ertapenem,Carbapenems,92,4580,43,圖 3-1-1
+2024,2024,all,Providencia spp.,DOR,doripenem,Carbapenems,95,78,43,圖 3-1-1
+2024,2024,all,Providencia spp.,ATM,aztreonam,Miscellaneous (II),66,59,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,GM,gentamicin,Aminoglycosides,84,11845,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,AN,amikacin,Aminoglycosides,91,11359,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,CIP,ciprofloxacin,Fluoroquinolones,66,9558,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,LVX,levofloxacin,Fluoroquinolones,69,9016,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,IPM,imipenem,Carbapenems,82,5692,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,MEM,meropenem,Carbapenems,94,4775,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,ETP,ertapenem,Carbapenems,93,10028,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,DOR,doripenem,Carbapenems,80,474,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,ATM,aztreonam,Miscellaneous (II),55,133,43,圖 3-1-1
+2024,2024,all,Serratia marcescens,TGC,tigecycline,Miscellaneous (II),75,6210,43,圖 3-1-1
+2024,2024,all,Shigella spp.,CIP,ciprofloxacin,Fluoroquinolones,35,78,43,圖 3-1-1
+2024,2024,all,Shigella spp.,ETP,ertapenem,Carbapenems,100,24,43,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,SAM,ampicillin-sulbactam,Penicillins,48,20253,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,AMC,amoxicillin-clavulanate,Penicillins,31,346,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,PIP,piperacillin,Anti-Pseudomonal Penicillins,20,2197,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,34,20991,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,TE,tetracycline,Tetracyclines,31,150,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,MI,minocycline,Tetracyclines,80,5149,44,圖 3-1-1
+2024,2024,all,Burkholderia cepacia complex,MI,minocycline,Tetracyclines,71,232,44,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,14,1070,44,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,MI,minocycline,Tetracyclines,98,350,44,圖 3-1-1
+2024,2024,all,Elizabethkingia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,13,415,44,圖 3-1-1
+2024,2024,all,Elizabethkingia spp.,MI,minocycline,Tetracyclines,97,46,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,AM,ampicillin,Penicillins,33,5431,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,SAM,ampicillin-sulbactam,Penicillins,74,2577,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,AMX,amoxicillin,Penicillins,25,60,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,AMC,amoxicillin-clavulanate,Penicillins,78,1758,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,97,244,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,TE,tetracycline,Tetracyclines,78,465,44,圖 3-1-1
+2024,2024,all,Helicobacter pylori,AMX,amoxicillin,Penicillins,85,55,44,圖 3-1-1
+2024,2024,all,Helicobacter pylori,CLR,clarithromycin,Macrolides,48,69,44,圖 3-1-1
+2024,2024,all,Helicobacter pylori,TE,tetracycline,Tetracyclines,100,66,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,P-G,penicillin G,Penicillins,2,292,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,P-V,penicillin V,Penicillins,9,46,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,TE,tetracycline,Tetracyclines,4,1348,44,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,PIP,piperacillin,Anti-Pseudomonal Penicillins,80,11609,44,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,84,63354,44,圖 3-1-1
+2024,2024,all,Stenotrophomonas maltophilia,MI,minocycline,Tetracyclines,92,2501,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),38,19312,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,CTX,cefotaxime,3rd GCs,31,6314,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,CRO,ceftriaxone,3rd GCs,20,7512,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,39,24282,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,FEP,cefepime,4th GCs,39,22360,44,圖 3-1-1
+2024,2024,all,Burkholderia cepacia complex,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),89,707,44,圖 3-1-1
+2024,2024,all,Burkholderia cepacia complex,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,90,703,44,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),78,1361,44,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,5,1633,44,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,FEP,cefepime,4th GCs,12,1546,44,圖 3-1-1
+2024,2024,all,Elizabethkingia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),85,327,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),36,4187,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,C,chloramphenicol,Miscellaneous (I),95,1313,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,FUR,cefuroxime sodium,2nd GCs,61,2164,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,CXM,cefuroxime axetil,2nd GCs,66,1073,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,CTX,cefotaxime,3rd GCs,94,2670,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,CRO,ceftriaxone,3rd GCs,97,3123,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,CFM,cefixime,3rd GCs,79,250,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,96,2431,44,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,FEP,cefepime,4th GCs,95,1203,44,圖 3-1-1
+2024,2024,all,Helicobacter pylori,MTZ,metronidazole,Miscellaneous (I),63,80,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,FOX,cefoxitin,2nd GCs,99,625,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,CTX,cefotaxime,3rd GCs,100,702,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,CRO,ceftriaxone,3rd GCs,100,2004,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,CFM,cefixime,3rd GCs,99,80,44,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,FEP,cefepime,4th GCs,98,490,44,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,88,71733,44,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,FEP,cefepime,4th GCs,89,65196,44,圖 3-1-1
+2024,2024,all,Stenotrophomonas maltophilia,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),88,8779,44,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,GM,gentamicin,Aminoglycosides,42,23689,45,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,AN,amikacin,Aminoglycosides,46,16243,45,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,CIP,ciprofloxacin,Fluoroquinolones,37,20473,45,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,LVX,levofloxacin,Fluoroquinolones,39,17749,45,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,IPM,imipenem,Carbapenems,39,23266,45,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,MEM,meropenem,Carbapenems,39,15480,45,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,DOR,doripenem,Carbapenems,30,1037,45,圖 3-1-1
+2024,2024,all,Acinetobacter baumannii,TGC,tigecycline,Miscellaneous (II),77,13987,45,圖 3-1-1
+2024,2024,all,Burkholderia cepacia complex,LVX,levofloxacin,Fluoroquinolones,46,527,45,圖 3-1-1
+2024,2024,all,Burkholderia cepacia complex,MEM,meropenem,Carbapenems,83,216,45,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,GM,gentamicin,Aminoglycosides,1,1624,45,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,AN,amikacin,Aminoglycosides,2,1596,45,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,CIP,ciprofloxacin,Fluoroquinolones,28,1064,45,圖 3-1-1
+2024,2024,all,Chryseobacterium indologenes,LVX,levofloxacin,Fluoroquinolones,33,1469,45,圖 3-1-1
+2024,2024,all,Elizabethkingia spp.,GM,gentamicin,Aminoglycosides,4,422,45,圖 3-1-1
+2024,2024,all,Elizabethkingia spp.,AN,amikacin,Aminoglycosides,3,414,45,圖 3-1-1
+2024,2024,all,Elizabethkingia spp.,CIP,ciprofloxacin,Fluoroquinolones,63,370,45,圖 3-1-1
+2024,2024,all,Elizabethkingia spp.,LVX,levofloxacin,Fluoroquinolones,69,398,45,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,CIP,ciprofloxacin,Fluoroquinolones,73,1832,45,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,LVX,levofloxacin,Fluoroquinolones,68,1737,45,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,MXF,moxifloxacin,Fluoroquinolones,88,692,45,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,IPM,imipenem,Carbapenems,98,2067,45,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,MEM,meropenem,Carbapenems,98,1367,45,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,ETP,ertapenem,Carbapenems,96,445,45,圖 3-1-1
+2024,2024,all,Haemophilus influenzae,ATM,aztreonam,Miscellaneous (II),85,87,45,圖 3-1-1
+2024,2024,all,Helicobacter pylori,LVX,levofloxacin,Fluoroquinolones,51,81,45,圖 3-1-1
+2024,2024,all,Neisseria gonorrhoeae,CIP,ciprofloxacin,Fluoroquinolones,2,1963,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,AN,amikacin,Aminoglycosides,97,54857,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,CIP,ciprofloxacin,Fluoroquinolones,80,64025,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,LVX,levofloxacin,Fluoroquinolones,75,60651,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,IPM,imipenem,Carbapenems,87,67222,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,MEM,meropenem,Carbapenems,87,45654,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,DOR,doripenem,Carbapenems,91,10084,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,ATM,aztreonam,Miscellaneous (II),73,548,45,圖 3-1-1
+2024,2024,all,Pseudomonas aeruginosa,TGC,tigecycline,Miscellaneous (II),9,2371,45,圖 3-1-1
+2024,2024,all,Stenotrophomonas maltophilia,LVX,levofloxacin,Fluoroquinolones,84,8398,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,P-G,penicillin G,Penicillins,1,588,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,P-V,penicillin V,Penicillins,0,377,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,SAM,ampicillin-sulbactam,Penicillins,66,1594,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,94,975,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,CC,clindamycin,Miscellaneous (I),42,1635,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,MTZ,metronidazole,Miscellaneous (I),98,1625,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,C,chloramphenicol,Miscellaneous (I),95,1003,45,圖 3-1-1
+2024,2024,all,Bacteroides fragilis,FOX,cefoxitin,2nd GCs,67,722,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,P-G,penicillin G,Penicillins,16,69,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,P-V,penicillin V,Penicillins,20,211,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,SAM,ampicillin-sulbactam,Penicillins,95,712,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,96,482,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,CC,clindamycin,Miscellaneous (I),27,721,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,MTZ,metronidazole,Miscellaneous (I),99,916,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,C,chloramphenicol,Miscellaneous (I),99,339,45,圖 3-1-1
+2024,2024,all,Clostridioides difficile,FOX,cefoxitin,2nd GCs,9,186,45,圖 3-1-1
+2024,2024,medical_center,Enterococcus faecalis,P-G,penicillin G,Penicillins,97,7254,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,P-V,penicillin V,Penicillins,100,670,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,AM,ampicillin,Penicillins,99,15241,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,E,erythromycin,Macrolides,9,7852,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,TE,tetracycline,Tetracyclines,12,9836,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,MI,minocycline,Tetracyclines,81,21,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),57,23,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,P-G,penicillin G,Penicillins,7,5198,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,P-V,penicillin V,Penicillins,5,352,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,AM,ampicillin,Penicillins,8,10118,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,E,erythromycin,Macrolides,6,6004,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,TE,tetracycline,Tetracyclines,47,6780,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,P-G,penicillin G,Penicillins,100,56,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,AM,ampicillin,Penicillins,100,82,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,E,erythromycin,Macrolides,57,98,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,TE,tetracycline,Tetracyclines,29,59,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,CC,clindamycin,Miscellaneous (I),58,98,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,P-G,penicillin G,Penicillins,100,812,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,AM,ampicillin,Penicillins,100,2005,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,E,erythromycin,Macrolides,53,1229,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,TE,tetracycline,Tetracyclines,22,541,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,CC,clindamycin,Miscellaneous (I),52,1419,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,C,chloramphenicol,Miscellaneous (I),94,621,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,OX,oxacillin,Penicillins,59,34239,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,P-G,penicillin G,Penicillins,9,6273,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,P-V,penicillin V,Penicillins,16,534,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,AM,ampicillin,Penicillins,0,1224,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,E,erythromycin,Macrolides,48,30367,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,TE,tetracycline,Tetracyclines,62,16373,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,MI,minocycline,Tetracyclines,98,4810,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,CC,clindamycin,Miscellaneous (I),73,32875,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,RA,rifampin,Miscellaneous (I),100,7757,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),95,33059,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,P-G,penicillin G,Penicillins,65,346,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,E,erythromycin,Macrolides,5,1378,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,TE,tetracycline,Tetracyclines,12,761,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,CC,clindamycin,Miscellaneous (I),17,1216,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,RA,rifampin,Miscellaneous (I),98,120,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),62,1299,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,C,chloramphenicol,Miscellaneous (I),88,707,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,FEP,cefepime,4th GCs,90,21,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,GM,gentamicin,Aminoglycosides,73,22,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,HLG,high-level gentamicin,Aminoglycosides,61,18144,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,CIP,ciprofloxacin,Fluoroquinolones,82,7090,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,LVX,levofloxacin,Fluoroquinolones,87,7133,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,HLG,high-level gentamicin,Aminoglycosides,70,12504,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,CIP,ciprofloxacin,Fluoroquinolones,8,5036,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,LVX,levofloxacin,Fluoroquinolones,12,5091,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,CTX,cefotaxime,3rd GCs,100,96,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,CRO,ceftriaxone,3rd GCs,100,74,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,LVX,levofloxacin,Fluoroquinolones,90,96,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,CTX,cefotaxime,3rd GCs,100,1843,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,CRO,ceftriaxone,3rd GCs,100,1733,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,LVX,levofloxacin,Fluoroquinolones,93,1853,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,GM,gentamicin,Aminoglycosides,72,17925,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,HLG,high-level gentamicin,Aminoglycosides,63,1711,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,CIP,ciprofloxacin,Fluoroquinolones,75,13652,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,LVX,levofloxacin,Fluoroquinolones,75,17880,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,MXF,moxifloxacin,Fluoroquinolones,73,5906,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,CTX,cefotaxime,3rd GCs,73,1331,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,CRO,ceftriaxone,3rd GCs,86,1250,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,FEP,cefepime,4th GCs,35,302,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,LVX,levofloxacin,Fluoroquinolones,95,1523,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,MXF,moxifloxacin,Fluoroquinolones,98,994,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,TGC,tigecycline,Miscellaneous (II),100,2860,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,VA,vancomycin,Miscellaneous (II),100,23311,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,LZD,linezolid,Miscellaneous (II),89,16792,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecalis,DAP,daptomycin,Miscellaneous (II),80,11388,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,TGC,tigecycline,Miscellaneous (II),99,3906,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,VA,vancomycin,Miscellaneous (II),52,16225,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,LZD,linezolid,Miscellaneous (II),98,13632,46,圖 3-1-2
+2024,2024,medical_center,Enterococcus faecium,DAP,daptomycin,Miscellaneous (II),5,2279,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,VA,vancomycin,Miscellaneous (II),100,101,46,圖 3-1-2
+2024,2024,medical_center,Group A Streptococci,LZD,linezolid,Miscellaneous (II),100,29,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,VA,vancomycin,Miscellaneous (II),100,2055,46,圖 3-1-2
+2024,2024,medical_center,Group B Streptococci,LZD,linezolid,Miscellaneous (II),100,817,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,TGC,tigecycline,Miscellaneous (II),100,12528,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,VA,vancomycin,Miscellaneous (II),100,30415,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,LZD,linezolid,Miscellaneous (II),100,29278,46,圖 3-1-2
+2024,2024,medical_center,Staphylococcus aureus,DAP,daptomycin,Miscellaneous (II),100,17145,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,IPM,imipenem,Carbapenems,49,92,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,TGC,tigecycline,Miscellaneous (II),100,53,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,VA,vancomycin,Miscellaneous (II),100,1623,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,SYN,quinupristin-dalfopristin,Miscellaneous (II),96,93,46,圖 3-1-2
+2024,2024,medical_center,Streptococcus pneumoniae,LZD,linezolid,Miscellaneous (II),100,415,46,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,AM,ampicillin,Penicillins,0,2776,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,SAM,ampicillin-sulbactam,Penicillins,55,3741,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,AMC,amoxicillin-clavulanate,Penicillins,65,1417,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,PIP,piperacillin,Anti-Pseudomonal Penicillins,14,318,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,85,6803,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,MI,minocycline,Tetracyclines,87,631,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),92,7189,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,AM,ampicillin,Penicillins,0,2037,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,SAM,ampicillin-sulbactam,Penicillins,1,2064,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,AMC,amoxicillin-clavulanate,Penicillins,0,941,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,62,3199,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,MI,minocycline,Tetracyclines,53,169,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),75,3143,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,AM,ampicillin,Penicillins,24,34875,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,SAM,ampicillin-sulbactam,Penicillins,42,66510,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,AMC,amoxicillin-clavulanate,Penicillins,65,20706,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,PIP,piperacillin,Anti-Pseudomonal Penicillins,27,3078,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,90,76502,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,MI,minocycline,Tetracyclines,80,7616,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),54,86811,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,AM,ampicillin,Penicillins,0,14270,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,SAM,ampicillin-sulbactam,Penicillins,57,32019,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,AMC,amoxicillin-clavulanate,Penicillins,54,6397,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,PIP,piperacillin,Anti-Pseudomonal Penicillins,48,1462,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,73,33633,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,MI,minocycline,Tetracyclines,71,3295,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),63,36396,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,AM,ampicillin,Penicillins,0,1611,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,SAM,ampicillin-sulbactam,Penicillins,17,3407,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,AMC,amoxicillin-clavulanate,Penicillins,0,925,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,PIP,piperacillin,Anti-Pseudomonal Penicillins,60,154,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,96,3825,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,MI,minocycline,Tetracyclines,41,414,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),70,4059,47,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,AM,ampicillin,Penicillins,51,3370,47,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,C,chloramphenicol,Miscellaneous (I),54,929,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,AM,ampicillin,Penicillins,48,5275,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,SAM,ampicillin-sulbactam,Penicillins,67,9350,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,AMC,amoxicillin-clavulanate,Penicillins,78,2819,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,PIP,piperacillin,Anti-Pseudomonal Penicillins,63,496,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,97,10737,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,MI,minocycline,Tetracyclines,1,1243,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),50,12012,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,AM,ampicillin,Penicillins,0,545,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,SAM,ampicillin-sulbactam,Penicillins,32,927,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,AMC,amoxicillin-clavulanate,Penicillins,1,296,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,PIP,piperacillin,Anti-Pseudomonal Penicillins,67,51,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,90,1081,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,MI,minocycline,Tetracyclines,2,162,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),57,1173,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,AM,ampicillin,Penicillins,0,1899,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,SAM,ampicillin-sulbactam,Penicillins,0,3108,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,AMC,amoxicillin-clavulanate,Penicillins,0,775,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,PIP,piperacillin,Anti-Pseudomonal Penicillins,86,133,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,78,3718,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,MI,minocycline,Tetracyclines,46,407,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),83,4556,47,圖 3-1-2
+2024,2024,medical_center,Shigella spp.,AM,ampicillin,Penicillins,79,28,47,圖 3-1-2
+2024,2024,medical_center,Shigella spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),64,36,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CZ,cefazolin,1st GC,54,6500,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,FOX,cefoxitin,2nd GCs,67,2321,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,FUR,cefuroxime sodium,2nd GCs,72,2412,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CXM,cefuroxime axetil,2nd GCs,54,1067,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CTX,cefotaxime,3rd GCs,83,3160,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CRO,ceftriaxone,3rd GCs,86,4555,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CFM,cefixime,3rd GCs,78,699,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,91,639,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,86,6350,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,FEP,cefepime,4th GCs,95,6077,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,CZ,cefazolin,1st GC,0,4206,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,FOX,cefoxitin,2nd GCs,0,369,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,FUR,cefuroxime sodium,2nd GCs,47,1933,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,CXM,cefuroxime axetil,2nd GCs,0,429,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,CTX,cefotaxime,3rd GCs,52,1372,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,CRO,ceftriaxone,3rd GCs,56,2502,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,59,3349,47,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,FEP,cefepime,4th GCs,78,2625,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CZ,cefazolin,1st GC,48,79146,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,FOX,cefoxitin,2nd GCs,79,25593,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,FUR,cefuroxime sodium,2nd GCs,64,28557,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CXM,cefuroxime axetil,2nd GCs,60,10507,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CTX,cefotaxime,3rd GCs,68,38948,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CRO,ceftriaxone,3rd GCs,68,53505,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CFM,cefixime,3rd GCs,62,7175,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,95,4649,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,76,69521,47,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,FEP,cefepime,4th GCs,82,70243,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CZ,cefazolin,1st GC,49,33837,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,FOX,cefoxitin,2nd GCs,67,11500,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,FUR,cefuroxime sodium,2nd GCs,61,11298,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CXM,cefuroxime axetil,2nd GCs,58,5222,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CTX,cefotaxime,3rd GCs,68,16877,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CRO,ceftriaxone,3rd GCs,76,22897,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CFM,cefixime,3rd GCs,64,3645,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,86,2497,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,68,33757,47,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,FEP,cefepime,4th GCs,83,32523,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CZ,cefazolin,1st GC,0,4360,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,FOX,cefoxitin,2nd GCs,52,1132,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,FUR,cefuroxime sodium,2nd GCs,0,1493,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CXM,cefuroxime axetil,2nd GCs,0,567,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CTX,cefotaxime,3rd GCs,75,1799,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CRO,ceftriaxone,3rd GCs,92,2698,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CFM,cefixime,3rd GCs,65,391,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,90,272,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,86,3518,47,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,FEP,cefepime,4th GCs,97,3309,47,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,CTX,cefotaxime,3rd GCs,76,1735,47,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,CRO,ceftriaxone,3rd GCs,82,2574,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CZ,cefazolin,1st GC,45,10960,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,FOX,cefoxitin,2nd GCs,89,3730,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,FUR,cefuroxime sodium,2nd GCs,85,4120,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CXM,cefuroxime axetil,2nd GCs,82,1420,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CTX,cefotaxime,3rd GCs,83,4835,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CRO,ceftriaxone,3rd GCs,87,7741,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CFM,cefixime,3rd GCs,86,973,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,99,749,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,91,9858,47,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,FEP,cefepime,4th GCs,95,9358,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CZ,cefazolin,1st GC,0,1224,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,FOX,cefoxitin,2nd GCs,84,315,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,FUR,cefuroxime sodium,2nd GCs,70,392,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CXM,cefuroxime axetil,2nd GCs,67,130,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CTX,cefotaxime,3rd GCs,74,549,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CRO,ceftriaxone,3rd GCs,77,782,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CFM,cefixime,3rd GCs,82,112,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,90,69,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,76,1019,47,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,FEP,cefepime,4th GCs,94,950,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CZ,cefazolin,1st GC,0,5389,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,FOX,cefoxitin,2nd GCs,0,1260,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,FUR,cefuroxime sodium,2nd GCs,0,1411,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CXM,cefuroxime axetil,2nd GCs,0,606,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CTX,cefotaxime,3rd GCs,64,2219,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CRO,ceftriaxone,3rd GCs,73,3150,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CFM,cefixime,3rd GCs,80,334,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,96,299,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,77,4428,47,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,FEP,cefepime,4th GCs,85,4093,47,圖 3-1-2
+2024,2024,medical_center,Shigella spp.,CRO,ceftriaxone,3rd GCs,90,21,47,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,GM,gentamicin,Aminoglycosides,95,7792,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,AN,amikacin,Aminoglycosides,98,7465,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,CIP,ciprofloxacin,Fluoroquinolones,91,6969,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,LVX,levofloxacin,Fluoroquinolones,91,6125,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,IPM,imipenem,Carbapenems,95,6212,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,MEM,meropenem,Carbapenems,95,2599,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,ETP,ertapenem,Carbapenems,96,7700,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,DOR,doripenem,Carbapenems,93,232,48,圖 3-1-2
+2024,2024,medical_center,Citrobacter spp.,TGC,tigecycline,Miscellaneous (II),98,4690,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,GM,gentamicin,Aminoglycosides,87,4212,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,AN,amikacin,Aminoglycosides,97,3966,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,CIP,ciprofloxacin,Fluoroquinolones,77,3427,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,LVX,levofloxacin,Fluoroquinolones,79,3534,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,IPM,imipenem,Carbapenems,87,2937,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,MEM,meropenem,Carbapenems,90,1136,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,ETP,ertapenem,Carbapenems,86,3627,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,DOR,doripenem,Carbapenems,81,479,48,圖 3-1-2
+2024,2024,medical_center,Enterobacter cloacae,TGC,tigecycline,Miscellaneous (II),83,1951,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,GM,gentamicin,Aminoglycosides,76,89662,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,AN,amikacin,Aminoglycosides,98,87451,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,CIP,ciprofloxacin,Fluoroquinolones,56,81389,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,LVX,levofloxacin,Fluoroquinolones,55,72637,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,IPM,imipenem,Carbapenems,98,72025,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,MEM,meropenem,Carbapenems,99,32240,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,ETP,ertapenem,Carbapenems,98,87924,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,DOR,doripenem,Carbapenems,99,3490,48,圖 3-1-2
+2024,2024,medical_center,Escherichia coli,TGC,tigecycline,Miscellaneous (II),99,60283,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,GM,gentamicin,Aminoglycosides,74,38989,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,AN,amikacin,Aminoglycosides,96,38352,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,CIP,ciprofloxacin,Fluoroquinolones,68,35078,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,LVX,levofloxacin,Fluoroquinolones,66,31108,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,IPM,imipenem,Carbapenems,89,32859,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,MEM,meropenem,Carbapenems,90,15845,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,ETP,ertapenem,Carbapenems,89,38479,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,DOR,doripenem,Carbapenems,94,1898,48,圖 3-1-2
+2024,2024,medical_center,Klebsiella pneumoniae,TGC,tigecycline,Miscellaneous (II),89,28519,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,GM,gentamicin,Aminoglycosides,83,4387,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,AN,amikacin,Aminoglycosides,97,4174,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,CIP,ciprofloxacin,Fluoroquinolones,72,3803,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,LVX,levofloxacin,Fluoroquinolones,78,3440,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,IPM,imipenem,Carbapenems,100,1268,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,MEM,meropenem,Carbapenems,99,1785,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,ETP,ertapenem,Carbapenems,99,4326,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,DOR,doripenem,Carbapenems,96,24,48,圖 3-1-2
+2024,2024,medical_center,Morganella spp.,TGC,tigecycline,Miscellaneous (II),2,1817,48,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,CIP,ciprofloxacin,Fluoroquinolones,62,3798,48,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,LVX,levofloxacin,Fluoroquinolones,65,667,48,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,IPM,imipenem,Carbapenems,99,1158,48,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,MEM,meropenem,Carbapenems,100,330,48,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,ETP,ertapenem,Carbapenems,100,2160,48,圖 3-1-2
+2024,2024,medical_center,Non-typhoidal Salmonella,TGC,tigecycline,Miscellaneous (II),95,1231,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,GM,gentamicin,Aminoglycosides,69,12689,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,AN,amikacin,Aminoglycosides,97,12178,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,CIP,ciprofloxacin,Fluoroquinolones,71,10969,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,LVX,levofloxacin,Fluoroquinolones,74,10710,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,IPM,imipenem,Carbapenems,100,3273,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,MEM,meropenem,Carbapenems,99,4641,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,ETP,ertapenem,Carbapenems,97,12053,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,DOR,doripenem,Carbapenems,100,57,48,圖 3-1-2
+2024,2024,medical_center,Proteus mirabilis,TGC,tigecycline,Miscellaneous (II),1,5427,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,GM,gentamicin,Aminoglycosides,41,1272,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,AN,amikacin,Aminoglycosides,85,1212,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,CIP,ciprofloxacin,Fluoroquinolones,57,1102,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,LVX,levofloxacin,Fluoroquinolones,55,965,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,IPM,imipenem,Carbapenems,100,460,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,MEM,meropenem,Carbapenems,96,547,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,ETP,ertapenem,Carbapenems,93,1187,48,圖 3-1-2
+2024,2024,medical_center,Providencia spp.,TGC,tigecycline,Miscellaneous (II),2,607,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,GM,gentamicin,Aminoglycosides,87,5180,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,AN,amikacin,Aminoglycosides,91,5070,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,CIP,ciprofloxacin,Fluoroquinolones,72,4536,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,LVX,levofloxacin,Fluoroquinolones,72,4224,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,IPM,imipenem,Carbapenems,84,2788,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,MEM,meropenem,Carbapenems,94,2019,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,ETP,ertapenem,Carbapenems,93,4744,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,DOR,doripenem,Carbapenems,77,374,48,圖 3-1-2
+2024,2024,medical_center,Serratia marcescens,TGC,tigecycline,Miscellaneous (II),74,3360,48,圖 3-1-2
+2024,2024,medical_center,Shigella spp.,CIP,ciprofloxacin,Fluoroquinolones,11,35,48,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,AM,ampicillin,Penicillins,0,430,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,SAM,ampicillin-sulbactam,Penicillins,52,8182,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,PIP,piperacillin,Anti-Pseudomonal Penicillins,24,647,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,42,8948,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,MI,minocycline,Tetracyclines,84,2022,49,圖 3-1-2
+2024,2024,medical_center,Burkholderia cepacia complex,MI,minocycline,Tetracyclines,72,109,49,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,9,545,49,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,MI,minocycline,Tetracyclines,99,178,49,圖 3-1-2
+2024,2024,medical_center,Elizabethkingia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,5,406,49,圖 3-1-2
+2024,2024,medical_center,Elizabethkingia spp.,MI,minocycline,Tetracyclines,99,99,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,AM,ampicillin,Penicillins,34,1890,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,SAM,ampicillin-sulbactam,Penicillins,81,579,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,AMC,amoxicillin-clavulanate,Penicillins,74,318,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,TE,tetracycline,Tetracyclines,97,152,49,圖 3-1-2
+2024,2024,medical_center,Helicobacter pylori,AMX,amoxicillin,Penicillins,84,49,49,圖 3-1-2
+2024,2024,medical_center,Helicobacter pylori,CLR,clarithromycin,Macrolides,44,52,49,圖 3-1-2
+2024,2024,medical_center,Helicobacter pylori,TE,tetracycline,Tetracyclines,100,60,49,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,P-G,penicillin G,Penicillins,0,48,49,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,TE,tetracycline,Tetracyclines,7,405,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,SAM,ampicillin-sulbactam,Penicillins,44,34,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,PIP,piperacillin,Anti-Pseudomonal Penicillins,86,3880,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,87,27732,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,MI,minocycline,Tetracyclines,15,152,49,圖 3-1-2
+2024,2024,medical_center,Stenotrophomonas maltophilia,MI,minocycline,Tetracyclines,96,945,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),43,7229,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,CTX,cefotaxime,3rd GCs,39,2990,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,CRO,ceftriaxone,3rd GCs,22,2587,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,45,10060,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,FEP,cefepime,4th GCs,46,9255,49,圖 3-1-2
+2024,2024,medical_center,Burkholderia cepacia complex,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),92,323,49,圖 3-1-2
+2024,2024,medical_center,Burkholderia cepacia complex,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,92,324,49,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),79,814,49,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,5,1053,49,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,FEP,cefepime,4th GCs,12,1054,49,圖 3-1-2
+2024,2024,medical_center,Elizabethkingia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),88,532,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),43,1533,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,C,chloramphenicol,Miscellaneous (I),96,657,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,FUR,cefuroxime sodium,2nd GCs,70,846,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,CXM,cefuroxime axetil,2nd GCs,66,349,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,CTX,cefotaxime,3rd GCs,91,1386,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,CRO,ceftriaxone,3rd GCs,99,730,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,CFM,cefixime,3rd GCs,84,169,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,97,662,49,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,FEP,cefepime,4th GCs,89,36,49,圖 3-1-2
+2024,2024,medical_center,Helicobacter pylori,MTZ,metronidazole,Miscellaneous (I),56,63,49,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,CTX,cefotaxime,3rd GCs,100,103,49,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,CRO,ceftriaxone,3rd GCs,100,550,49,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,CFM,cefixime,3rd GCs,100,30,49,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,100,37,49,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,FEP,cefepime,4th GCs,98,132,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),1,3851,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,FOX,cefoxitin,2nd GCs,74,39,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,CTX,cefotaxime,3rd GCs,0,2274,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,CRO,ceftriaxone,3rd GCs,3,967,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,CFM,cefixime,3rd GCs,63,38,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,90,30725,49,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,FEP,cefepime,4th GCs,92,27894,49,圖 3-1-2
+2024,2024,medical_center,Stenotrophomonas maltophilia,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),89,4851,49,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,GM,gentamicin,Aminoglycosides,49,9197,50,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,AN,amikacin,Aminoglycosides,50,6329,50,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,CIP,ciprofloxacin,Fluoroquinolones,45,9199,50,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,LVX,levofloxacin,Fluoroquinolones,47,6412,50,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,IPM,imipenem,Carbapenems,47,9718,50,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,MEM,meropenem,Carbapenems,47,6834,50,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,DOR,doripenem,Carbapenems,34,686,50,圖 3-1-2
+2024,2024,medical_center,Acinetobacter baumannii,TGC,tigecycline,Miscellaneous (II),77,6795,50,圖 3-1-2
+2024,2024,medical_center,Burkholderia cepacia complex,LVX,levofloxacin,Fluoroquinolones,44,271,50,圖 3-1-2
+2024,2024,medical_center,Burkholderia cepacia complex,MEM,meropenem,Carbapenems,91,56,50,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,GM,gentamicin,Aminoglycosides,1,1043,50,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,AN,amikacin,Aminoglycosides,2,1042,50,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,CIP,ciprofloxacin,Fluoroquinolones,30,622,50,圖 3-1-2
+2024,2024,medical_center,Chryseobacterium indologenes,LVX,levofloxacin,Fluoroquinolones,32,935,50,圖 3-1-2
+2024,2024,medical_center,Elizabethkingia spp.,GM,gentamicin,Aminoglycosides,4,689,50,圖 3-1-2
+2024,2024,medical_center,Elizabethkingia spp.,AN,amikacin,Aminoglycosides,2,691,50,圖 3-1-2
+2024,2024,medical_center,Elizabethkingia spp.,CIP,ciprofloxacin,Fluoroquinolones,61,409,50,圖 3-1-2
+2024,2024,medical_center,Elizabethkingia spp.,LVX,levofloxacin,Fluoroquinolones,69,640,50,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,CIP,ciprofloxacin,Fluoroquinolones,86,500,50,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,LVX,levofloxacin,Fluoroquinolones,90,504,50,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,MXF,moxifloxacin,Fluoroquinolones,92,389,50,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,IPM,imipenem,Carbapenems,99,687,50,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,MEM,meropenem,Carbapenems,99,487,50,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,ETP,ertapenem,Carbapenems,100,34,50,圖 3-1-2
+2024,2024,medical_center,Haemophilus influenzae,ATM,aztreonam,Miscellaneous (II),100,38,50,圖 3-1-2
+2024,2024,medical_center,Helicobacter pylori,LVX,levofloxacin,Fluoroquinolones,48,63,50,圖 3-1-2
+2024,2024,medical_center,Neisseria gonorrhoeae,CIP,ciprofloxacin,Fluoroquinolones,2,527,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,GM,gentamicin,Aminoglycosides,83,14547,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,AN,amikacin,Aminoglycosides,98,21413,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,CIP,ciprofloxacin,Fluoroquinolones,86,27878,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,LVX,levofloxacin,Fluoroquinolones,81,25277,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,IPM,imipenem,Carbapenems,90,29431,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,MEM,meropenem,Carbapenems,90,20381,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,ETP,ertapenem,Carbapenems,95,39,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,DOR,doripenem,Carbapenems,92,5953,50,圖 3-1-2
+2024,2024,medical_center,Pseudomonas aeruginosa,TGC,tigecycline,Miscellaneous (II),5,712,50,圖 3-1-2
+2024,2024,medical_center,Stenotrophomonas maltophilia,LVX,levofloxacin,Fluoroquinolones,86,4615,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,P-G,penicillin G,Penicillins,1,588,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,P-V,penicillin V,Penicillins,0,377,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,SAM,ampicillin-sulbactam,Penicillins,66,1594,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,94,975,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,CC,clindamycin,Miscellaneous (I),42,1635,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,MTZ,metronidazole,Miscellaneous (I),98,1625,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,C,chloramphenicol,Miscellaneous (I),95,1003,50,圖 3-1-2
+2024,2024,medical_center,Bacteroides fragilis,FOX,cefoxitin,2nd GCs,67,722,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,P-G,penicillin G,Penicillins,9,54,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,P-V,penicillin V,Penicillins,19,176,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,SAM,ampicillin-sulbactam,Penicillins,96,526,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,97,366,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,CC,clindamycin,Miscellaneous (I),28,532,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,MTZ,metronidazole,Miscellaneous (I),100,748,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,C,chloramphenicol,Miscellaneous (I),99,283,50,圖 3-1-2
+2024,2024,medical_center,Clostridioides difficile,FOX,cefoxitin,2nd GCs,5,154,50,圖 3-1-2
+2024,2024,regional,Enterococcus faecalis,P-G,penicillin G,Penicillins,97,4078,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,P-V,penicillin V,Penicillins,92,599,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,AM,ampicillin,Penicillins,99,11447,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,E,erythromycin,Macrolides,7,2915,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,TE,tetracycline,Tetracyclines,10,5517,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,MI,minocycline,Tetracyclines,24,284,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,RA,rifampin,Miscellaneous (I),42,208,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),65,168,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,P-G,penicillin G,Penicillins,8,2599,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,P-V,penicillin V,Penicillins,3,557,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,AM,ampicillin,Penicillins,9,7380,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,E,erythromycin,Macrolides,7,1590,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,TE,tetracycline,Tetracyclines,48,3011,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,MI,minocycline,Tetracyclines,49,136,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,CC,clindamycin,Miscellaneous (I),7,27,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,RA,rifampin,Miscellaneous (I),15,99,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),32,50,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,P-G,penicillin G,Penicillins,98,99,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,AM,ampicillin,Penicillins,100,213,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,E,erythromycin,Macrolides,69,298,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,TE,tetracycline,Tetracyclines,21,91,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,CC,clindamycin,Miscellaneous (I),70,310,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,C,chloramphenicol,Miscellaneous (I),100,76,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,P-G,penicillin G,Penicillins,99,2332,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,P-V,penicillin V,Penicillins,100,58,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,AM,ampicillin,Penicillins,99,4624,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,E,erythromycin,Macrolides,51,4111,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,TE,tetracycline,Tetracyclines,18,2416,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,CC,clindamycin,Miscellaneous (I),51,5068,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,C,chloramphenicol,Miscellaneous (I),95,1055,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,OX,oxacillin,Penicillins,50,33734,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,E,erythromycin,Macrolides,43,28655,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,TE,tetracycline,Tetracyclines,63,19257,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,MI,minocycline,Tetracyclines,97,4557,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,CC,clindamycin,Miscellaneous (I),73,32346,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,RA,rifampin,Miscellaneous (I),99,8444,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),93,31708,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,C,chloramphenicol,Miscellaneous (I),97,30,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,P-G,penicillin G,Penicillins,68,185,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,P-V,penicillin V,Penicillins,6,322,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,E,erythromycin,Macrolides,8,1153,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,TE,tetracycline,Tetracyclines,13,588,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,CC,clindamycin,Miscellaneous (I),21,876,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,RA,rifampin,Miscellaneous (I),100,105,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),56,1109,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,C,chloramphenicol,Miscellaneous (I),91,369,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,CTX,cefotaxime,3rd GCs,91,22,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,FEP,cefepime,4th GCs,86,164,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,GM,gentamicin,Aminoglycosides,46,702,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,HLG,high-level gentamicin,Aminoglycosides,56,14363,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,CIP,ciprofloxacin,Fluoroquinolones,69,2283,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,LVX,levofloxacin,Fluoroquinolones,78,3220,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,MXF,moxifloxacin,Fluoroquinolones,89,219,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,FOX,cefoxitin,2nd GCs,0,25,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,FEP,cefepime,4th GCs,77,31,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,GM,gentamicin,Aminoglycosides,55,395,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,HLG,high-level gentamicin,Aminoglycosides,67,9036,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,CIP,ciprofloxacin,Fluoroquinolones,8,1252,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,LVX,levofloxacin,Fluoroquinolones,10,1996,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,CTX,cefotaxime,3rd GCs,100,154,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,CRO,ceftriaxone,3rd GCs,100,170,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,FEP,cefepime,4th GCs,100,37,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,LVX,levofloxacin,Fluoroquinolones,95,196,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,CTX,cefotaxime,3rd GCs,100,2786,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,CRO,ceftriaxone,3rd GCs,100,2957,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,FEP,cefepime,4th GCs,99,539,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,LVX,levofloxacin,Fluoroquinolones,92,3614,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,FOX,cefoxitin,2nd GCs,60,1767,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,CTX,cefotaxime,3rd GCs,77,84,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,CRO,ceftriaxone,3rd GCs,51,430,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,FEP,cefepime,4th GCs,69,112,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,GM,gentamicin,Aminoglycosides,68,11778,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,CIP,ciprofloxacin,Fluoroquinolones,65,9284,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,LVX,levofloxacin,Fluoroquinolones,66,8605,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,MXF,moxifloxacin,Fluoroquinolones,65,12507,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,CTX,cefotaxime,3rd GCs,74,805,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,CRO,ceftriaxone,3rd GCs,84,804,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,FEP,cefepime,4th GCs,63,63,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,LVX,levofloxacin,Fluoroquinolones,94,1165,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,MXF,moxifloxacin,Fluoroquinolones,94,498,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,IPM,imipenem,Carbapenems,96,134,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,MEM,meropenem,Carbapenems,36,39,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,ETP,ertapenem,Carbapenems,97,150,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,TGC,tigecycline,Miscellaneous (II),100,3245,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,VA,vancomycin,Miscellaneous (II),99,18057,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,SYN,quinupristin-dalfopristin,Miscellaneous (II),0,351,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,LZD,linezolid,Miscellaneous (II),91,12031,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,DAP,daptomycin,Miscellaneous (II),79,5113,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecalis,F/M,nitrofurantoin,Miscellaneous (II),99,411,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,IPM,imipenem,Carbapenems,80,30,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,MEM,meropenem,Carbapenems,44,27,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,TGC,tigecycline,Miscellaneous (II),100,2695,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,VA,vancomycin,Miscellaneous (II),54,11171,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,LZD,linezolid,Miscellaneous (II),95,8387,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,DAP,daptomycin,Miscellaneous (II),22,1480,51,圖 3-1-3
+2024,2024,regional,Enterococcus faecium,F/M,nitrofurantoin,Miscellaneous (II),20,229,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,VA,vancomycin,Miscellaneous (II),100,269,51,圖 3-1-3
+2024,2024,regional,Group A Streptococci,LZD,linezolid,Miscellaneous (II),100,133,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,MEM,meropenem,Carbapenems,100,24,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,ETP,ertapenem,Carbapenems,100,65,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,VA,vancomycin,Miscellaneous (II),100,5912,51,圖 3-1-3
+2024,2024,regional,Group B Streptococci,LZD,linezolid,Miscellaneous (II),100,2520,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,IPM,imipenem,Carbapenems,80,65,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,MEM,meropenem,Carbapenems,88,88,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,ETP,ertapenem,Carbapenems,87,103,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,TGC,tigecycline,Miscellaneous (II),100,14123,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,VA,vancomycin,Miscellaneous (II),100,31298,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,SYN,quinupristin-dalfopristin,Miscellaneous (II),100,406,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,LZD,linezolid,Miscellaneous (II),100,25116,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,DAP,daptomycin,Miscellaneous (II),100,12853,51,圖 3-1-3
+2024,2024,regional,Staphylococcus aureus,F/M,nitrofurantoin,Miscellaneous (II),99,155,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,MEM,meropenem,Carbapenems,13,72,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,TGC,tigecycline,Miscellaneous (II),100,129,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,VA,vancomycin,Miscellaneous (II),100,1319,51,圖 3-1-3
+2024,2024,regional,Streptococcus pneumoniae,LZD,linezolid,Miscellaneous (II),100,271,51,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,AM,ampicillin,Penicillins,1,2944,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,SAM,ampicillin-sulbactam,Penicillins,57,3668,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,AMC,amoxicillin-clavulanate,Penicillins,72,761,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,82,6075,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,TE,tetracycline,Tetracyclines,30,33,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,MI,minocycline,Tetracyclines,93,157,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),87,6422,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,AM,ampicillin,Penicillins,0,2258,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,SAM,ampicillin-sulbactam,Penicillins,1,3465,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,AMC,amoxicillin-clavulanate,Penicillins,0,582,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,64,4361,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,TE,tetracycline,Tetracyclines,65,49,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),77,4336,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,AM,ampicillin,Penicillins,25,53657,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,SAM,ampicillin-sulbactam,Penicillins,44,78828,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,AMC,amoxicillin-clavulanate,Penicillins,62,14207,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,86,89100,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,TE,tetracycline,Tetracyclines,42,1269,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,MI,minocycline,Tetracyclines,74,1788,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),54,98985,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,C,chloramphenicol,Miscellaneous (I),81,52,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,AM,ampicillin,Penicillins,0,17565,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,SAM,ampicillin-sulbactam,Penicillins,53,31071,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,AMC,amoxicillin-clavulanate,Penicillins,61,4473,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,67,33000,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,TE,tetracycline,Tetracyclines,64,330,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,MI,minocycline,Tetracyclines,59,935,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),61,34082,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,AM,ampicillin,Penicillins,2,1686,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,SAM,ampicillin-sulbactam,Penicillins,18,3053,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,AMC,amoxicillin-clavulanate,Penicillins,2,488,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,92,3414,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,MI,minocycline,Tetracyclines,38,61,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),61,3772,52,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,AM,ampicillin,Penicillins,50,3424,52,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,MI,minocycline,Tetracyclines,60,55,52,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),60,3948,52,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,C,chloramphenicol,Miscellaneous (I),57,512,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,AM,ampicillin,Penicillins,40,8684,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,SAM,ampicillin-sulbactam,Penicillins,59,13241,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,AMC,amoxicillin-clavulanate,Penicillins,76,1797,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,93,14372,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,TE,tetracycline,Tetracyclines,5,236,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,MI,minocycline,Tetracyclines,0,301,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),45,15625,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,AM,ampicillin,Penicillins,1,1094,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,SAM,ampicillin-sulbactam,Penicillins,22,1840,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,AMC,amoxicillin-clavulanate,Penicillins,7,268,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,82,1802,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,TE,tetracycline,Tetracyclines,4,26,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,MI,minocycline,Tetracyclines,0,57,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),40,2328,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,AM,ampicillin,Penicillins,0,1441,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,SAM,ampicillin-sulbactam,Penicillins,1,3078,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,AMC,amoxicillin-clavulanate,Penicillins,0,296,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,73,2909,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,TE,tetracycline,Tetracyclines,16,38,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,MI,minocycline,Tetracyclines,37,89,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),78,3973,52,圖 3-1-3
+2024,2024,regional,Shigella spp.,AM,ampicillin,Penicillins,59,39,52,圖 3-1-3
+2024,2024,regional,Shigella spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),59,41,52,圖 3-1-3
+2024,2024,regional,Shigella spp.,C,chloramphenicol,Miscellaneous (I),69,26,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,CZ,cefazolin,1st GC,55,6821,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,FOX,cefoxitin,2nd GCs,72,1907,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,FUR,cefuroxime sodium,2nd GCs,65,1927,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,CXM,cefuroxime axetil,2nd GCs,42,1254,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,CTX,cefotaxime,3rd GCs,80,2837,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,CRO,ceftriaxone,3rd GCs,83,4106,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,CFM,cefixime,3rd GCs,85,163,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,84,5667,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,FEP,cefepime,4th GCs,93,5876,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,CZ,cefazolin,1st GC,0,5077,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,FOX,cefoxitin,2nd GCs,1,1130,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,FUR,cefuroxime sodium,2nd GCs,26,1567,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,CXM,cefuroxime axetil,2nd GCs,8,924,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,CTX,cefotaxime,3rd GCs,51,2029,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,CRO,ceftriaxone,3rd GCs,62,3428,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,63,4330,52,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,FEP,cefepime,4th GCs,80,4234,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,CZ,cefazolin,1st GC,51,99574,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,FOX,cefoxitin,2nd GCs,78,26696,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,FUR,cefuroxime sodium,2nd GCs,65,34233,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,CXM,cefuroxime axetil,2nd GCs,58,19546,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,CTX,cefotaxime,3rd GCs,65,40224,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,CRO,ceftriaxone,3rd GCs,69,64892,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,CFM,cefixime,3rd GCs,62,2117,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,75,78314,52,圖 3-1-3
+2024,2024,regional,Escherichia coli,FEP,cefepime,4th GCs,79,84435,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,CZ,cefazolin,1st GC,51,37810,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,FOX,cefoxitin,2nd GCs,63,10995,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,FUR,cefuroxime sodium,2nd GCs,63,11222,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,CXM,cefuroxime axetil,2nd GCs,54,6561,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,CTX,cefotaxime,3rd GCs,58,16072,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,CRO,ceftriaxone,3rd GCs,72,23734,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,CFM,cefixime,3rd GCs,54,1074,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,64,30306,52,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,FEP,cefepime,4th GCs,74,32186,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,CZ,cefazolin,1st GC,0,3956,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,FOX,cefoxitin,2nd GCs,41,1089,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,FUR,cefuroxime sodium,2nd GCs,1,1444,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,CXM,cefuroxime axetil,2nd GCs,1,929,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,CTX,cefotaxime,3rd GCs,75,1623,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,CRO,ceftriaxone,3rd GCs,87,2353,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,CFM,cefixime,3rd GCs,40,82,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,83,2975,52,圖 3-1-3
+2024,2024,regional,Morganella spp.,FEP,cefepime,4th GCs,95,2980,52,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,CTX,cefotaxime,3rd GCs,76,1402,52,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,CRO,ceftriaxone,3rd GCs,81,2428,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,CZ,cefazolin,1st GC,36,15865,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,FOX,cefoxitin,2nd GCs,82,4703,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,FUR,cefuroxime sodium,2nd GCs,76,5008,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,CXM,cefuroxime axetil,2nd GCs,76,3051,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,CTX,cefotaxime,3rd GCs,71,6799,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,CRO,ceftriaxone,3rd GCs,80,10745,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,CFM,cefixime,3rd GCs,72,392,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,85,12712,52,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,FEP,cefepime,4th GCs,88,13178,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,CZ,cefazolin,1st GC,2,2361,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,FOX,cefoxitin,2nd GCs,73,624,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,FUR,cefuroxime sodium,2nd GCs,62,653,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,CXM,cefuroxime axetil,2nd GCs,58,378,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,CTX,cefotaxime,3rd GCs,58,941,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,CRO,ceftriaxone,3rd GCs,63,1437,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,CFM,cefixime,3rd GCs,67,73,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,66,1745,52,圖 3-1-3
+2024,2024,regional,Providencia spp.,FEP,cefepime,4th GCs,90,2021,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,CZ,cefazolin,1st GC,0,4418,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,FOX,cefoxitin,2nd GCs,1,1193,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,FUR,cefuroxime sodium,2nd GCs,0,1239,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,CXM,cefuroxime axetil,2nd GCs,0,804,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,CTX,cefotaxime,3rd GCs,54,1990,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,CRO,ceftriaxone,3rd GCs,69,2799,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,CFM,cefixime,3rd GCs,40,129,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,75,3743,52,圖 3-1-3
+2024,2024,regional,Serratia marcescens,FEP,cefepime,4th GCs,82,3754,52,圖 3-1-3
+2024,2024,regional,Shigella spp.,CRO,ceftriaxone,3rd GCs,83,30,52,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,GM,gentamicin,Aminoglycosides,91,7475,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,AN,amikacin,Aminoglycosides,97,7254,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,CIP,ciprofloxacin,Fluoroquinolones,84,4782,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,LVX,levofloxacin,Fluoroquinolones,87,6294,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,IPM,imipenem,Carbapenems,95,5444,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,MEM,meropenem,Carbapenems,97,2706,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,ETP,ertapenem,Carbapenems,96,6652,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,DOR,doripenem,Carbapenems,91,75,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,ATM,aztreonam,Miscellaneous (II),81,108,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,TGC,tigecycline,Miscellaneous (II),99,3966,53,圖 3-1-3
+2024,2024,regional,Citrobacter spp.,F/M,nitrofurantoin,Miscellaneous (II),79,57,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,GM,gentamicin,Aminoglycosides,85,5471,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,AN,amikacin,Aminoglycosides,96,5329,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,CIP,ciprofloxacin,Fluoroquinolones,71,4110,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,LVX,levofloxacin,Fluoroquinolones,79,4464,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,IPM,imipenem,Carbapenems,84,4278,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,MEM,meropenem,Carbapenems,94,2238,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,ETP,ertapenem,Carbapenems,84,4808,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,DOR,doripenem,Carbapenems,85,33,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,ATM,aztreonam,Miscellaneous (II),63,163,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,TGC,tigecycline,Miscellaneous (II),92,2847,53,圖 3-1-3
+2024,2024,regional,Enterobacter cloacae,F/M,nitrofurantoin,Miscellaneous (II),42,55,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,GM,gentamicin,Aminoglycosides,75,109530,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,AN,amikacin,Aminoglycosides,96,104166,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,CIP,ciprofloxacin,Fluoroquinolones,54,76621,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,LVX,levofloxacin,Fluoroquinolones,54,90721,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,IPM,imipenem,Carbapenems,97,77960,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,MEM,meropenem,Carbapenems,98,37320,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,ETP,ertapenem,Carbapenems,97,96356,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,DOR,doripenem,Carbapenems,95,1342,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,ATM,aztreonam,Miscellaneous (II),70,3150,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,TGC,tigecycline,Miscellaneous (II),99,56589,53,圖 3-1-3
+2024,2024,regional,Escherichia coli,F/M,nitrofurantoin,Miscellaneous (II),98,2372,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,GM,gentamicin,Aminoglycosides,73,40123,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,AN,amikacin,Aminoglycosides,94,39508,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,CIP,ciprofloxacin,Fluoroquinolones,62,29285,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,LVX,levofloxacin,Fluoroquinolones,63,31757,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,IPM,imipenem,Carbapenems,83,30413,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,MEM,meropenem,Carbapenems,88,15841,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,ETP,ertapenem,Carbapenems,85,33516,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,DOR,doripenem,Carbapenems,76,626,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,ATM,aztreonam,Miscellaneous (II),79,1141,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,TGC,tigecycline,Miscellaneous (II),90,20694,53,圖 3-1-3
+2024,2024,regional,Klebsiella pneumoniae,F/M,nitrofurantoin,Miscellaneous (II),54,432,53,圖 3-1-3
+2024,2024,regional,Morganella spp.,GM,gentamicin,Aminoglycosides,77,4285,53,圖 3-1-3
+2024,2024,regional,Morganella spp.,AN,amikacin,Aminoglycosides,96,4157,53,圖 3-1-3
+2024,2024,regional,Morganella spp.,CIP,ciprofloxacin,Fluoroquinolones,62,3063,53,圖 3-1-3
+2024,2024,regional,Morganella spp.,LVX,levofloxacin,Fluoroquinolones,68,3418,53,圖 3-1-3
+2024,2024,regional,Morganella spp.,IPM,imipenem,Carbapenems,100,1588,53,圖 3-1-3
+2024,2024,regional,Morganella spp.,MEM,meropenem,Carbapenems,99,1405,53,圖 3-1-3
+2024,2024,regional,Morganella spp.,ETP,ertapenem,Carbapenems,99,3732,53,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,CIP,ciprofloxacin,Fluoroquinolones,63,3246,53,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,LVX,levofloxacin,Fluoroquinolones,68,1276,53,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,IPM,imipenem,Carbapenems,99,1033,53,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,MEM,meropenem,Carbapenems,99,268,53,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,ETP,ertapenem,Carbapenems,100,1244,53,圖 3-1-3
+2024,2024,regional,Non-typhoidal Salmonella,TGC,tigecycline,Miscellaneous (II),97,1042,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,GM,gentamicin,Aminoglycosides,57,17531,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,AN,amikacin,Aminoglycosides,90,16937,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,CIP,ciprofloxacin,Fluoroquinolones,58,12577,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,LVX,levofloxacin,Fluoroquinolones,63,13618,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,IPM,imipenem,Carbapenems,100,5068,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,MEM,meropenem,Carbapenems,99,7361,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,ETP,ertapenem,Carbapenems,98,14439,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,DOR,doripenem,Carbapenems,78,91,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,ATM,aztreonam,Miscellaneous (II),87,632,53,圖 3-1-3
+2024,2024,regional,Proteus mirabilis,F/M,nitrofurantoin,Miscellaneous (II),0,408,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,GM,gentamicin,Aminoglycosides,29,2282,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,AN,amikacin,Aminoglycosides,71,2413,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,CIP,ciprofloxacin,Fluoroquinolones,40,1727,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,LVX,levofloxacin,Fluoroquinolones,37,1863,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,IPM,imipenem,Carbapenems,100,1104,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,MEM,meropenem,Carbapenems,96,829,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,ETP,ertapenem,Carbapenems,94,2066,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,DOR,doripenem,Carbapenems,88,24,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,ATM,aztreonam,Miscellaneous (II),71,48,53,圖 3-1-3
+2024,2024,regional,Providencia spp.,F/M,nitrofurantoin,Miscellaneous (II),15,27,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,GM,gentamicin,Aminoglycosides,85,4727,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,AN,amikacin,Aminoglycosides,91,4584,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,CIP,ciprofloxacin,Fluoroquinolones,63,3590,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,LVX,levofloxacin,Fluoroquinolones,69,3463,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,IPM,imipenem,Carbapenems,80,2088,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,MEM,meropenem,Carbapenems,94,1694,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,ETP,ertapenem,Carbapenems,94,3815,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,DOR,doripenem,Carbapenems,90,96,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,ATM,aztreonam,Miscellaneous (II),60,106,53,圖 3-1-3
+2024,2024,regional,Serratia marcescens,TGC,tigecycline,Miscellaneous (II),76,2048,53,圖 3-1-3
+2024,2024,regional,Shigella spp.,CIP,ciprofloxacin,Fluoroquinolones,55,40,53,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,P-G,penicillin G,Penicillins,15,27,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,AM,ampicillin,Penicillins,8,96,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,SAM,ampicillin-sulbactam,Penicillins,47,8498,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,AMC,amoxicillin-clavulanate,Penicillins,50,208,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,PIP,piperacillin,Anti-Pseudomonal Penicillins,17,1270,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,33,7984,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,TE,tetracycline,Tetracyclines,59,68,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,MI,minocycline,Tetracyclines,79,2192,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),37,8101,54,圖 3-1-3
+2024,2024,regional,Burkholderia cepacia complex,MI,minocycline,Tetracyclines,69,91,54,圖 3-1-3
+2024,2024,regional,Burkholderia cepacia complex,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),88,309,54,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,20,434,54,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,MI,minocycline,Tetracyclines,96,147,54,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),74,459,54,圖 3-1-3
+2024,2024,regional,Elizabethkingia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,19,259,54,圖 3-1-3
+2024,2024,regional,Elizabethkingia spp.,MI,minocycline,Tetracyclines,99,96,54,圖 3-1-3
+2024,2024,regional,Elizabethkingia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),88,278,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,AM,ampicillin,Penicillins,35,2592,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,SAM,ampicillin-sulbactam,Penicillins,80,1465,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,AMC,amoxicillin-clavulanate,Penicillins,87,1102,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,98,57,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,TE,tetracycline,Tetracyclines,70,135,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),35,2107,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,C,chloramphenicol,Miscellaneous (I),94,560,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,P-G,penicillin G,Penicillins,0,203,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,TE,tetracycline,Tetracyclines,4,651,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,P-G,penicillin G,Penicillins,46,59,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,AM,ampicillin,Penicillins,25,190,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,SAM,ampicillin-sulbactam,Penicillins,32,167,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,AMC,amoxicillin-clavulanate,Penicillins,34,80,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,PIP,piperacillin,Anti-Pseudomonal Penicillins,77,5391,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,84,23914,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,TE,tetracycline,Tetracyclines,44,39,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),20,838,54,圖 3-1-3
+2024,2024,regional,Stenotrophomonas maltophilia,MI,minocycline,Tetracyclines,90,1369,54,圖 3-1-3
+2024,2024,regional,Stenotrophomonas maltophilia,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),88,3076,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,CTX,cefotaxime,3rd GCs,25,1973,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,CRO,ceftriaxone,3rd GCs,26,3190,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,39,9623,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,FEP,cefepime,4th GCs,39,8992,54,圖 3-1-3
+2024,2024,regional,Burkholderia cepacia complex,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,90,295,54,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,6,488,54,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,FEP,cefepime,4th GCs,11,400,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,FUR,cefuroxime sodium,2nd GCs,55,1037,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,CXM,cefuroxime axetil,2nd GCs,66,534,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,CTX,cefotaxime,3rd GCs,98,1048,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,CRO,ceftriaxone,3rd GCs,96,1812,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,CFM,cefixime,3rd GCs,63,63,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,96,1334,54,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,FEP,cefepime,4th GCs,97,1035,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,FOX,cefoxitin,2nd GCs,99,469,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,CTX,cefotaxime,3rd GCs,100,460,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,CRO,ceftriaxone,3rd GCs,100,1108,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,CFM,cefixime,3rd GCs,100,22,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,86,22,54,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,FEP,cefepime,4th GCs,98,290,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,CXM,cefuroxime axetil,2nd GCs,55,22,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,CTX,cefotaxime,3rd GCs,8,692,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,CRO,ceftriaxone,3rd GCs,4,961,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,88,27741,54,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,FEP,cefepime,4th GCs,89,25013,54,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,GM,gentamicin,Aminoglycosides,41,9701,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,AN,amikacin,Aminoglycosides,49,6470,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,CIP,ciprofloxacin,Fluoroquinolones,36,7419,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,LVX,levofloxacin,Fluoroquinolones,38,7784,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,IPM,imipenem,Carbapenems,38,9459,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,MEM,meropenem,Carbapenems,36,5517,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,ETP,ertapenem,Carbapenems,66,50,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,DOR,doripenem,Carbapenems,21,188,55,圖 3-1-3
+2024,2024,regional,Acinetobacter baumannii,TGC,tigecycline,Miscellaneous (II),77,5672,55,圖 3-1-3
+2024,2024,regional,Burkholderia cepacia complex,LVX,levofloxacin,Fluoroquinolones,52,204,55,圖 3-1-3
+2024,2024,regional,Burkholderia cepacia complex,MEM,meropenem,Carbapenems,80,118,55,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,GM,gentamicin,Aminoglycosides,2,490,55,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,AN,amikacin,Aminoglycosides,3,463,55,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,CIP,ciprofloxacin,Fluoroquinolones,21,373,55,圖 3-1-3
+2024,2024,regional,Chryseobacterium indologenes,LVX,levofloxacin,Fluoroquinolones,35,460,55,圖 3-1-3
+2024,2024,regional,Elizabethkingia spp.,GM,gentamicin,Aminoglycosides,11,293,55,圖 3-1-3
+2024,2024,regional,Elizabethkingia spp.,AN,amikacin,Aminoglycosides,12,290,55,圖 3-1-3
+2024,2024,regional,Elizabethkingia spp.,CIP,ciprofloxacin,Fluoroquinolones,55,258,55,圖 3-1-3
+2024,2024,regional,Elizabethkingia spp.,LVX,levofloxacin,Fluoroquinolones,67,260,55,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,CIP,ciprofloxacin,Fluoroquinolones,82,985,55,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,LVX,levofloxacin,Fluoroquinolones,73,661,55,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,MXF,moxifloxacin,Fluoroquinolones,85,278,55,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,IPM,imipenem,Carbapenems,98,1076,55,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,MEM,meropenem,Carbapenems,97,503,55,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,ETP,ertapenem,Carbapenems,99,229,55,圖 3-1-3
+2024,2024,regional,Haemophilus influenzae,ATM,aztreonam,Miscellaneous (II),74,31,55,圖 3-1-3
+2024,2024,regional,Neisseria gonorrhoeae,CIP,ciprofloxacin,Fluoroquinolones,2,1065,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,GM,gentamicin,Aminoglycosides,78,16856,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,AN,amikacin,Aminoglycosides,97,22066,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,CIP,ciprofloxacin,Fluoroquinolones,79,24430,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,LVX,levofloxacin,Fluoroquinolones,74,24167,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,IPM,imipenem,Carbapenems,87,25955,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,MEM,meropenem,Carbapenems,88,15533,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,ETP,ertapenem,Carbapenems,88,256,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,DOR,doripenem,Carbapenems,90,3152,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,ATM,aztreonam,Miscellaneous (II),78,463,55,圖 3-1-3
+2024,2024,regional,Pseudomonas aeruginosa,TGC,tigecycline,Miscellaneous (II),15,1179,55,圖 3-1-3
+2024,2024,regional,Stenotrophomonas maltophilia,LVX,levofloxacin,Fluoroquinolones,84,2967,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,P-G,penicillin G,Penicillins,1,325,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,P-V,penicillin V,Penicillins,0,142,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,SAM,ampicillin-sulbactam,Penicillins,63,735,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,94,420,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,CC,clindamycin,Miscellaneous (I),43,767,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,MTZ,metronidazole,Miscellaneous (I),99,761,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,C,chloramphenicol,Miscellaneous (I),92,488,55,圖 3-1-3
+2024,2024,regional,Bacteroides fragilis,FOX,cefoxitin,2nd GCs,64,424,55,圖 3-1-3
+2024,2024,regional,Clostridioides difficile,P-V,penicillin V,Penicillins,19,28,55,圖 3-1-3
+2024,2024,regional,Clostridioides difficile,SAM,ampicillin-sulbactam,Penicillins,92,167,55,圖 3-1-3
+2024,2024,regional,Clostridioides difficile,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,93,113,55,圖 3-1-3
+2024,2024,regional,Clostridioides difficile,CC,clindamycin,Miscellaneous (I),24,170,55,圖 3-1-3
+2024,2024,regional,Clostridioides difficile,MTZ,metronidazole,Miscellaneous (I),98,155,55,圖 3-1-3
+2024,2024,regional,Clostridioides difficile,C,chloramphenicol,Miscellaneous (I),100,50,55,圖 3-1-3
+2024,2024,regional,Clostridioides difficile,FOX,cefoxitin,2nd GCs,33,25,55,圖 3-1-3
+2024,2024,district,Enterococcus faecalis,P-G,penicillin G,Penicillins,96,1736,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,P-V,penicillin V,Penicillins,94,122,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,AM,ampicillin,Penicillins,99,4019,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,E,erythromycin,Macrolides,6,2023,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,TE,tetracycline,Tetracyclines,12,2168,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,MI,minocycline,Tetracyclines,12,409,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,C,chloramphenicol,Miscellaneous (I),55,22,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,P-G,penicillin G,Penicillins,6,1008,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,P-V,penicillin V,Penicillins,9,90,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,AM,ampicillin,Penicillins,7,1762,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,E,erythromycin,Macrolides,5,974,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,TE,tetracycline,Tetracyclines,44,967,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,MI,minocycline,Tetracyclines,55,126,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,P-G,penicillin G,Penicillins,100,35,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,AM,ampicillin,Penicillins,100,48,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,E,erythromycin,Macrolides,66,80,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,TE,tetracycline,Tetracyclines,45,49,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,CC,clindamycin,Miscellaneous (I),71,76,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,C,chloramphenicol,Miscellaneous (I),92,24,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,P-G,penicillin G,Penicillins,99,174,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,P-V,penicillin V,Penicillins,100,36,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,AM,ampicillin,Penicillins,100,1008,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,E,erythromycin,Macrolides,52,579,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,TE,tetracycline,Tetracyclines,20,446,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,CC,clindamycin,Miscellaneous (I),50,777,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,C,chloramphenicol,Miscellaneous (I),94,118,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,OX,oxacillin,Penicillins,43,14352,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,E,erythromycin,Macrolides,41,11526,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,TE,tetracycline,Tetracyclines,61,7184,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,MI,minocycline,Tetracyclines,87,2493,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,CC,clindamycin,Miscellaneous (I),71,13396,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,RA,rifampin,Miscellaneous (I),99,2242,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),90,12600,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,C,chloramphenicol,Miscellaneous (I),94,147,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,P-G,penicillin G,Penicillins,87,54,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,AMC,amoxicillin-clavulanate,Penicillins,46,50,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,E,erythromycin,Macrolides,9,354,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,TE,tetracycline,Tetracyclines,14,166,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,CC,clindamycin,Miscellaneous (I),22,316,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,RA,rifampin,Miscellaneous (I),100,23,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),58,361,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,C,chloramphenicol,Miscellaneous (I),84,95,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,HLG,high-level gentamicin,Aminoglycosides,51,3899,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,CIP,ciprofloxacin,Fluoroquinolones,77,1930,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,LVX,levofloxacin,Fluoroquinolones,79,2426,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,HLG,high-level gentamicin,Aminoglycosides,66,1885,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,CIP,ciprofloxacin,Fluoroquinolones,7,926,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,LVX,levofloxacin,Fluoroquinolones,10,1059,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,CTX,cefotaxime,3rd GCs,100,37,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,CRO,ceftriaxone,3rd GCs,100,41,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,LVX,levofloxacin,Fluoroquinolones,92,65,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,CTX,cefotaxime,3rd GCs,100,569,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,CRO,ceftriaxone,3rd GCs,100,456,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,FEP,cefepime,4th GCs,100,349,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,LVX,levofloxacin,Fluoroquinolones,91,889,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,GM,gentamicin,Aminoglycosides,61,8249,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,CIP,ciprofloxacin,Fluoroquinolones,56,6789,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,LVX,levofloxacin,Fluoroquinolones,58,7090,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,FUR,cefuroxime sodium,2nd GCs,8,50,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,CTX,cefotaxime,3rd GCs,74,133,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,CRO,ceftriaxone,3rd GCs,77,131,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,FEP,cefepime,4th GCs,40,55,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,LVX,levofloxacin,Fluoroquinolones,90,339,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,MXF,moxifloxacin,Fluoroquinolones,96,184,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,TGC,tigecycline,Miscellaneous (II),95,843,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,VA,vancomycin,Miscellaneous (II),99,5811,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,LZD,linezolid,Miscellaneous (II),89,3290,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,DAP,daptomycin,Miscellaneous (II),78,2721,56,圖 3-1-4
+2024,2024,district,Enterococcus faecalis,F/M,nitrofurantoin,Miscellaneous (II),92,146,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,TGC,tigecycline,Miscellaneous (II),96,739,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,VA,vancomycin,Miscellaneous (II),49,3143,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,LZD,linezolid,Miscellaneous (II),96,1989,56,圖 3-1-4
+2024,2024,district,Enterococcus faecium,F/M,nitrofurantoin,Miscellaneous (II),6,136,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,VA,vancomycin,Miscellaneous (II),99,115,56,圖 3-1-4
+2024,2024,district,Group A Streptococci,LZD,linezolid,Miscellaneous (II),100,31,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,MEM,meropenem,Carbapenems,91,355,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,VA,vancomycin,Miscellaneous (II),100,1077,56,圖 3-1-4
+2024,2024,district,Group B Streptococci,LZD,linezolid,Miscellaneous (II),100,201,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,TGC,tigecycline,Miscellaneous (II),98,3181,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,VA,vancomycin,Miscellaneous (II),100,13814,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,LZD,linezolid,Miscellaneous (II),100,8631,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,DAP,daptomycin,Miscellaneous (II),98,5039,56,圖 3-1-4
+2024,2024,district,Staphylococcus aureus,F/M,nitrofurantoin,Miscellaneous (II),100,38,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,IPM,imipenem,Carbapenems,49,39,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,MEM,meropenem,Carbapenems,9,57,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,VA,vancomycin,Miscellaneous (II),99,421,56,圖 3-1-4
+2024,2024,district,Streptococcus pneumoniae,LZD,linezolid,Miscellaneous (II),100,70,56,圖 3-1-4
+2024,2024,district,Citrobacter spp.,AM,ampicillin,Penicillins,10,1164,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,SAM,ampicillin-sulbactam,Penicillins,56,788,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,AMC,amoxicillin-clavulanate,Penicillins,63,565,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,78,2650,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,TE,tetracycline,Tetracyclines,58,24,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,MI,minocycline,Tetracyclines,90,285,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),83,2727,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,AM,ampicillin,Penicillins,2,570,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,SAM,ampicillin-sulbactam,Penicillins,3,578,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,AMC,amoxicillin-clavulanate,Penicillins,2,196,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,64,1011,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,MI,minocycline,Tetracyclines,74,141,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),71,1078,57,圖 3-1-4
+2024,2024,district,Escherichia coli,AM,ampicillin,Penicillins,24,18045,57,圖 3-1-4
+2024,2024,district,Escherichia coli,SAM,ampicillin-sulbactam,Penicillins,44,29567,57,圖 3-1-4
+2024,2024,district,Escherichia coli,AMC,amoxicillin-clavulanate,Penicillins,65,9561,57,圖 3-1-4
+2024,2024,district,Escherichia coli,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,82,36210,57,圖 3-1-4
+2024,2024,district,Escherichia coli,TE,tetracycline,Tetracyclines,44,461,57,圖 3-1-4
+2024,2024,district,Escherichia coli,MI,minocycline,Tetracyclines,78,4319,57,圖 3-1-4
+2024,2024,district,Escherichia coli,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),54,40289,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,AM,ampicillin,Penicillins,3,7011,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,SAM,ampicillin-sulbactam,Penicillins,55,12756,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,AMC,amoxicillin-clavulanate,Penicillins,49,3284,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,67,14948,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,TE,tetracycline,Tetracyclines,42,170,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,MI,minocycline,Tetracyclines,60,1690,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),60,14839,57,圖 3-1-4
+2024,2024,district,Morganella spp.,AM,ampicillin,Penicillins,1,724,57,圖 3-1-4
+2024,2024,district,Morganella spp.,SAM,ampicillin-sulbactam,Penicillins,12,1354,57,圖 3-1-4
+2024,2024,district,Morganella spp.,AMC,amoxicillin-clavulanate,Penicillins,1,414,57,圖 3-1-4
+2024,2024,district,Morganella spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,89,1652,57,圖 3-1-4
+2024,2024,district,Morganella spp.,TE,tetracycline,Tetracyclines,27,26,57,圖 3-1-4
+2024,2024,district,Morganella spp.,MI,minocycline,Tetracyclines,27,241,57,圖 3-1-4
+2024,2024,district,Morganella spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),51,1723,57,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,AM,ampicillin,Penicillins,44,632,57,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),61,1061,57,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,C,chloramphenicol,Miscellaneous (I),44,54,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,AM,ampicillin,Penicillins,28,3738,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,SAM,ampicillin-sulbactam,Penicillins,47,6366,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,AMC,amoxicillin-clavulanate,Penicillins,66,1779,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,92,7524,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,TE,tetracycline,Tetracyclines,1,151,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,MI,minocycline,Tetracyclines,2,1029,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),37,7664,57,圖 3-1-4
+2024,2024,district,Providencia spp.,AM,ampicillin,Penicillins,2,775,57,圖 3-1-4
+2024,2024,district,Providencia spp.,SAM,ampicillin-sulbactam,Penicillins,13,1282,57,圖 3-1-4
+2024,2024,district,Providencia spp.,AMC,amoxicillin-clavulanate,Penicillins,3,379,57,圖 3-1-4
+2024,2024,district,Providencia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,85,1528,57,圖 3-1-4
+2024,2024,district,Providencia spp.,TE,tetracycline,Tetracyclines,3,60,57,圖 3-1-4
+2024,2024,district,Providencia spp.,MI,minocycline,Tetracyclines,1,269,57,圖 3-1-4
+2024,2024,district,Providencia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),31,1596,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,AM,ampicillin,Penicillins,0,669,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,SAM,ampicillin-sulbactam,Penicillins,1,1010,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,AMC,amoxicillin-clavulanate,Penicillins,0,278,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,65,1005,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,TE,tetracycline,Tetracyclines,4,23,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,MI,minocycline,Tetracyclines,47,200,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),73,1537,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CZ,cefazolin,1st GC,46,2277,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,FOX,cefoxitin,2nd GCs,63,496,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,FUR,cefuroxime sodium,2nd GCs,63,669,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CXM,cefuroxime axetil,2nd GCs,56,160,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CTX,cefotaxime,3rd GCs,75,1276,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CRO,ceftriaxone,3rd GCs,76,1452,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CFM,cefixime,3rd GCs,87,119,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,88,127,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,80,2534,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,FEP,cefepime,4th GCs,89,2552,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CZ,cefazolin,1st GC,1,1169,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,FOX,cefoxitin,2nd GCs,2,335,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,FUR,cefuroxime sodium,2nd GCs,33,346,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CXM,cefuroxime axetil,2nd GCs,8,64,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CTX,cefotaxime,3rd GCs,54,336,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CRO,ceftriaxone,3rd GCs,55,592,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CFM,cefixime,3rd GCs,41,44,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,81,88,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,58,902,57,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,FEP,cefepime,4th GCs,78,1044,57,圖 3-1-4
+2024,2024,district,Escherichia coli,CZ,cefazolin,1st GC,45,36676,57,圖 3-1-4
+2024,2024,district,Escherichia coli,FOX,cefoxitin,2nd GCs,70,7403,57,圖 3-1-4
+2024,2024,district,Escherichia coli,FUR,cefuroxime sodium,2nd GCs,64,10805,57,圖 3-1-4
+2024,2024,district,Escherichia coli,CXM,cefuroxime axetil,2nd GCs,53,2715,57,圖 3-1-4
+2024,2024,district,Escherichia coli,CTX,cefotaxime,3rd GCs,65,15813,57,圖 3-1-4
+2024,2024,district,Escherichia coli,CRO,ceftriaxone,3rd GCs,64,22656,57,圖 3-1-4
+2024,2024,district,Escherichia coli,CFM,cefixime,3rd GCs,64,1429,57,圖 3-1-4
+2024,2024,district,Escherichia coli,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,86,2164,57,圖 3-1-4
+2024,2024,district,Escherichia coli,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,74,34272,57,圖 3-1-4
+2024,2024,district,Escherichia coli,FEP,cefepime,4th GCs,79,37067,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CZ,cefazolin,1st GC,43,14747,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,FOX,cefoxitin,2nd GCs,58,3349,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,FUR,cefuroxime sodium,2nd GCs,63,4247,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CXM,cefuroxime axetil,2nd GCs,39,778,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CTX,cefotaxime,3rd GCs,66,6209,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CRO,ceftriaxone,3rd GCs,64,9850,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CFM,cefixime,3rd GCs,61,664,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,77,748,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,64,14652,57,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,FEP,cefepime,4th GCs,73,14649,57,圖 3-1-4
+2024,2024,district,Morganella spp.,CZ,cefazolin,1st GC,0,1652,57,圖 3-1-4
+2024,2024,district,Morganella spp.,FOX,cefoxitin,2nd GCs,41,281,57,圖 3-1-4
+2024,2024,district,Morganella spp.,FUR,cefuroxime sodium,2nd GCs,2,459,57,圖 3-1-4
+2024,2024,district,Morganella spp.,CXM,cefuroxime axetil,2nd GCs,1,123,57,圖 3-1-4
+2024,2024,district,Morganella spp.,CTX,cefotaxime,3rd GCs,65,803,57,圖 3-1-4
+2024,2024,district,Morganella spp.,CRO,ceftriaxone,3rd GCs,79,974,57,圖 3-1-4
+2024,2024,district,Morganella spp.,CFM,cefixime,3rd GCs,43,70,57,圖 3-1-4
+2024,2024,district,Morganella spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,82,66,57,圖 3-1-4
+2024,2024,district,Morganella spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,72,1514,57,圖 3-1-4
+2024,2024,district,Morganella spp.,FEP,cefepime,4th GCs,92,1555,57,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,CTX,cefotaxime,3rd GCs,79,444,57,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,CRO,ceftriaxone,3rd GCs,81,487,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CZ,cefazolin,1st GC,29,7031,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,FOX,cefoxitin,2nd GCs,71,1727,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,FUR,cefuroxime sodium,2nd GCs,74,1783,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CXM,cefuroxime axetil,2nd GCs,61,502,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CTX,cefotaxime,3rd GCs,67,3159,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CRO,ceftriaxone,3rd GCs,69,5207,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CFM,cefixime,3rd GCs,62,386,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,94,313,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,74,7034,57,圖 3-1-4
+2024,2024,district,Proteus mirabilis,FEP,cefepime,4th GCs,81,7511,57,圖 3-1-4
+2024,2024,district,Providencia spp.,CZ,cefazolin,1st GC,2,1401,57,圖 3-1-4
+2024,2024,district,Providencia spp.,FOX,cefoxitin,2nd GCs,68,353,57,圖 3-1-4
+2024,2024,district,Providencia spp.,FUR,cefuroxime sodium,2nd GCs,65,243,57,圖 3-1-4
+2024,2024,district,Providencia spp.,CXM,cefuroxime axetil,2nd GCs,46,96,57,圖 3-1-4
+2024,2024,district,Providencia spp.,CTX,cefotaxime,3rd GCs,53,664,57,圖 3-1-4
+2024,2024,district,Providencia spp.,CRO,ceftriaxone,3rd GCs,53,1118,57,圖 3-1-4
+2024,2024,district,Providencia spp.,CFM,cefixime,3rd GCs,55,98,57,圖 3-1-4
+2024,2024,district,Providencia spp.,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,94,64,57,圖 3-1-4
+2024,2024,district,Providencia spp.,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,58,1518,57,圖 3-1-4
+2024,2024,district,Providencia spp.,FEP,cefepime,4th GCs,87,1587,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,CZ,cefazolin,1st GC,0,1556,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,FOX,cefoxitin,2nd GCs,3,421,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,FUR,cefuroxime sodium,2nd GCs,0,342,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,CXM,cefuroxime axetil,2nd GCs,0,72,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,CTX,cefotaxime,3rd GCs,54,716,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,CRO,ceftriaxone,3rd GCs,58,1052,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,CFM,cefixime,3rd GCs,45,67,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,CFP,cefoperazone,Anti-Pseudomonal 3rd GCs,84,95,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,71,1547,57,圖 3-1-4
+2024,2024,district,Serratia marcescens,FEP,cefepime,4th GCs,83,1565,57,圖 3-1-4
+2024,2024,district,Citrobacter spp.,GM,gentamicin,Aminoglycosides,85,2934,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,AN,amikacin,Aminoglycosides,94,2822,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,CIP,ciprofloxacin,Fluoroquinolones,80,2413,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,LVX,levofloxacin,Fluoroquinolones,81,2255,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,IPM,imipenem,Carbapenems,92,2327,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,MEM,meropenem,Carbapenems,96,1835,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,ETP,ertapenem,Carbapenems,94,2387,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,DOR,doripenem,Carbapenems,100,25,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,ATM,aztreonam,Miscellaneous (II),81,21,58,圖 3-1-4
+2024,2024,district,Citrobacter spp.,TGC,tigecycline,Miscellaneous (II),99,1475,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,GM,gentamicin,Aminoglycosides,81,1276,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,AN,amikacin,Aminoglycosides,96,1203,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,CIP,ciprofloxacin,Fluoroquinolones,70,916,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,LVX,levofloxacin,Fluoroquinolones,73,918,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,IPM,imipenem,Carbapenems,84,868,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,MEM,meropenem,Carbapenems,92,593,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,ETP,ertapenem,Carbapenems,86,993,58,圖 3-1-4
+2024,2024,district,Enterobacter cloacae,TGC,tigecycline,Miscellaneous (II),90,507,58,圖 3-1-4
+2024,2024,district,Escherichia coli,GM,gentamicin,Aminoglycosides,73,42969,58,圖 3-1-4
+2024,2024,district,Escherichia coli,AN,amikacin,Aminoglycosides,95,40910,58,圖 3-1-4
+2024,2024,district,Escherichia coli,CIP,ciprofloxacin,Fluoroquinolones,52,34006,58,圖 3-1-4
+2024,2024,district,Escherichia coli,LVX,levofloxacin,Fluoroquinolones,52,33198,58,圖 3-1-4
+2024,2024,district,Escherichia coli,IPM,imipenem,Carbapenems,95,31367,58,圖 3-1-4
+2024,2024,district,Escherichia coli,MEM,meropenem,Carbapenems,96,26419,58,圖 3-1-4
+2024,2024,district,Escherichia coli,ETP,ertapenem,Carbapenems,95,31630,58,圖 3-1-4
+2024,2024,district,Escherichia coli,DOR,doripenem,Carbapenems,94,678,58,圖 3-1-4
+2024,2024,district,Escherichia coli,ATM,aztreonam,Miscellaneous (II),68,333,58,圖 3-1-4
+2024,2024,district,Escherichia coli,TGC,tigecycline,Miscellaneous (II),99,19556,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,GM,gentamicin,Aminoglycosides,70,18066,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,AN,amikacin,Aminoglycosides,92,17469,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,CIP,ciprofloxacin,Fluoroquinolones,61,14268,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,LVX,levofloxacin,Fluoroquinolones,62,13457,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,IPM,imipenem,Carbapenems,82,13943,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,MEM,meropenem,Carbapenems,87,10705,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,ETP,ertapenem,Carbapenems,82,12339,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,DOR,doripenem,Carbapenems,76,281,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,ATM,aztreonam,Miscellaneous (II),47,89,58,圖 3-1-4
+2024,2024,district,Klebsiella pneumoniae,TGC,tigecycline,Miscellaneous (II),92,7833,58,圖 3-1-4
+2024,2024,district,Morganella spp.,GM,gentamicin,Aminoglycosides,64,1804,58,圖 3-1-4
+2024,2024,district,Morganella spp.,AN,amikacin,Aminoglycosides,93,1684,58,圖 3-1-4
+2024,2024,district,Morganella spp.,CIP,ciprofloxacin,Fluoroquinolones,45,1456,58,圖 3-1-4
+2024,2024,district,Morganella spp.,LVX,levofloxacin,Fluoroquinolones,51,1412,58,圖 3-1-4
+2024,2024,district,Morganella spp.,IPM,imipenem,Carbapenems,100,918,58,圖 3-1-4
+2024,2024,district,Morganella spp.,MEM,meropenem,Carbapenems,98,1229,58,圖 3-1-4
+2024,2024,district,Morganella spp.,ETP,ertapenem,Carbapenems,98,1426,58,圖 3-1-4
+2024,2024,district,Morganella spp.,DOR,doripenem,Carbapenems,95,22,58,圖 3-1-4
+2024,2024,district,Morganella spp.,TGC,tigecycline,Miscellaneous (II),4,575,58,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,CIP,ciprofloxacin,Fluoroquinolones,48,656,58,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,LVX,levofloxacin,Fluoroquinolones,70,585,58,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,IPM,imipenem,Carbapenems,97,192,58,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,MEM,meropenem,Carbapenems,95,78,58,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,ETP,ertapenem,Carbapenems,97,196,58,圖 3-1-4
+2024,2024,district,Non-typhoidal Salmonella,TGC,tigecycline,Miscellaneous (II),98,130,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,GM,gentamicin,Aminoglycosides,44,8976,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,AN,amikacin,Aminoglycosides,84,8444,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,CIP,ciprofloxacin,Fluoroquinolones,43,7100,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,LVX,levofloxacin,Fluoroquinolones,47,6364,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,IPM,imipenem,Carbapenems,100,3762,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,MEM,meropenem,Carbapenems,97,5846,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,ETP,ertapenem,Carbapenems,92,6023,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,DOR,doripenem,Carbapenems,100,163,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,ATM,aztreonam,Miscellaneous (II),63,52,58,圖 3-1-4
+2024,2024,district,Proteus mirabilis,TGC,tigecycline,Miscellaneous (II),1,2707,58,圖 3-1-4
+2024,2024,district,Providencia spp.,GM,gentamicin,Aminoglycosides,19,1711,58,圖 3-1-4
+2024,2024,district,Providencia spp.,AN,amikacin,Aminoglycosides,65,1698,58,圖 3-1-4
+2024,2024,district,Providencia spp.,CIP,ciprofloxacin,Fluoroquinolones,32,1421,58,圖 3-1-4
+2024,2024,district,Providencia spp.,LVX,levofloxacin,Fluoroquinolones,28,1270,58,圖 3-1-4
+2024,2024,district,Providencia spp.,IPM,imipenem,Carbapenems,100,895,58,圖 3-1-4
+2024,2024,district,Providencia spp.,MEM,meropenem,Carbapenems,95,1204,58,圖 3-1-4
+2024,2024,district,Providencia spp.,ETP,ertapenem,Carbapenems,89,1327,58,圖 3-1-4
+2024,2024,district,Providencia spp.,DOR,doripenem,Carbapenems,98,48,58,圖 3-1-4
+2024,2024,district,Providencia spp.,TGC,tigecycline,Miscellaneous (II),4,443,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,GM,gentamicin,Aminoglycosides,78,1938,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,AN,amikacin,Aminoglycosides,92,1705,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,CIP,ciprofloxacin,Fluoroquinolones,53,1432,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,LVX,levofloxacin,Fluoroquinolones,59,1329,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,IPM,imipenem,Carbapenems,79,816,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,MEM,meropenem,Carbapenems,95,1062,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,ETP,ertapenem,Carbapenems,92,1469,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,ATM,aztreonam,Miscellaneous (II),39,23,58,圖 3-1-4
+2024,2024,district,Serratia marcescens,TGC,tigecycline,Miscellaneous (II),80,802,58,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,AM,ampicillin,Penicillins,3,158,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,SAM,ampicillin-sulbactam,Penicillins,38,3573,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,AMC,amoxicillin-clavulanate,Penicillins,2,138,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,PIP,piperacillin,Anti-Pseudomonal Penicillins,23,280,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,20,4059,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,TE,tetracycline,Tetracyclines,9,80,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,MI,minocycline,Tetracyclines,72,935,59,圖 3-1-4
+2024,2024,district,Burkholderia cepacia complex,MI,minocycline,Tetracyclines,72,32,59,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,13,91,59,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,MI,minocycline,Tetracyclines,100,25,59,圖 3-1-4
+2024,2024,district,Elizabethkingia spp.,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,17,46,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,AM,ampicillin,Penicillins,24,949,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,SAM,ampicillin-sulbactam,Penicillins,51,533,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,AMX,amoxicillin,Penicillins,25,60,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,AMC,amoxicillin-clavulanate,Penicillins,53,338,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,97,186,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,TE,tetracycline,Tetracyclines,69,178,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,P-G,penicillin G,Penicillins,12,41,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,P-V,penicillin V,Penicillins,6,33,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,TE,tetracycline,Tetracyclines,2,292,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,AM,ampicillin,Penicillins,24,75,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,SAM,ampicillin-sulbactam,Penicillins,12,116,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,PIP,piperacillin,Anti-Pseudomonal Penicillins,78,2338,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,79,11708,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,TE,tetracycline,Tetracyclines,1,86,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,MI,minocycline,Tetracyclines,19,131,59,圖 3-1-4
+2024,2024,district,Stenotrophomonas maltophilia,MI,minocycline,Tetracyclines,87,187,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),27,3982,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,FUR,cefuroxime sodium,2nd GCs,22,89,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,CTX,cefotaxime,3rd GCs,22,1351,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,CRO,ceftriaxone,3rd GCs,8,1735,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,25,4599,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,FEP,cefepime,4th GCs,24,4113,59,圖 3-1-4
+2024,2024,district,Burkholderia cepacia complex,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),85,75,59,圖 3-1-4
+2024,2024,district,Burkholderia cepacia complex,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,80,84,59,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),86,88,59,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,6,92,59,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,FEP,cefepime,4th GCs,11,92,59,圖 3-1-4
+2024,2024,district,Elizabethkingia spp.,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),82,49,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),18,547,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,C,chloramphenicol,Miscellaneous (I),85,96,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,FUR,cefuroxime sodium,2nd GCs,57,281,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,CXM,cefuroxime axetil,2nd GCs,66,190,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,CTX,cefotaxime,3rd GCs,96,236,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,CRO,ceftriaxone,3rd GCs,97,581,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,92,435,59,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,FEP,cefepime,4th GCs,77,132,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,FOX,cefoxitin,2nd GCs,100,156,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,FUR,cefuroxime sodium,2nd GCs,97,39,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,CTX,cefotaxime,3rd GCs,100,139,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,CRO,ceftriaxone,3rd GCs,100,346,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,CFM,cefixime,3rd GCs,96,28,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,93,27,59,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,FEP,cefepime,4th GCs,99,68,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),5,856,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,CTX,cefotaxime,3rd GCs,1,114,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,CRO,ceftriaxone,3rd GCs,35,858,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,CAZ,ceftazidime,Anti-Pseudomonal 3rd GCs,83,13267,59,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,FEP,cefepime,4th GCs,84,12289,59,圖 3-1-4
+2024,2024,district,Stenotrophomonas maltophilia,SXT,trimethoprim-sulfamethoxazole,Miscellaneous (I),83,852,59,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,GM,gentamicin,Aminoglycosides,29,4791,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,AN,amikacin,Aminoglycosides,32,3444,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,CIP,ciprofloxacin,Fluoroquinolones,22,3855,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,LVX,levofloxacin,Fluoroquinolones,25,3553,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,IPM,imipenem,Carbapenems,25,4089,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,MEM,meropenem,Carbapenems,24,3129,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,ETP,ertapenem,Carbapenems,11,57,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,DOR,doripenem,Carbapenems,22,163,60,圖 3-1-4
+2024,2024,district,Acinetobacter baumannii,TGC,tigecycline,Miscellaneous (II),74,1520,60,圖 3-1-4
+2024,2024,district,Burkholderia cepacia complex,LVX,levofloxacin,Fluoroquinolones,31,52,60,圖 3-1-4
+2024,2024,district,Burkholderia cepacia complex,MEM,meropenem,Carbapenems,81,42,60,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,GM,gentamicin,Aminoglycosides,2,91,60,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,AN,amikacin,Aminoglycosides,4,91,60,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,CIP,ciprofloxacin,Fluoroquinolones,42,69,60,圖 3-1-4
+2024,2024,district,Chryseobacterium indologenes,LVX,levofloxacin,Fluoroquinolones,49,74,60,圖 3-1-4
+2024,2024,district,Elizabethkingia spp.,GM,gentamicin,Aminoglycosides,8,51,60,圖 3-1-4
+2024,2024,district,Elizabethkingia spp.,AN,amikacin,Aminoglycosides,9,46,60,圖 3-1-4
+2024,2024,district,Elizabethkingia spp.,CIP,ciprofloxacin,Fluoroquinolones,55,31,60,圖 3-1-4
+2024,2024,district,Elizabethkingia spp.,LVX,levofloxacin,Fluoroquinolones,58,33,60,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,CIP,ciprofloxacin,Fluoroquinolones,29,347,60,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,LVX,levofloxacin,Fluoroquinolones,43,572,60,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,MXF,moxifloxacin,Fluoroquinolones,68,25,60,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,IPM,imipenem,Carbapenems,97,304,60,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,MEM,meropenem,Carbapenems,97,377,60,圖 3-1-4
+2024,2024,district,Haemophilus influenzae,ETP,ertapenem,Carbapenems,92,182,60,圖 3-1-4
+2024,2024,district,Neisseria gonorrhoeae,CIP,ciprofloxacin,Fluoroquinolones,2,371,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,GM,gentamicin,Aminoglycosides,73,9021,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,AN,amikacin,Aminoglycosides,93,11378,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,CIP,ciprofloxacin,Fluoroquinolones,67,11717,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,LVX,levofloxacin,Fluoroquinolones,63,11207,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,IPM,imipenem,Carbapenems,82,11836,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,MEM,meropenem,Carbapenems,81,9740,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,ETP,ertapenem,Carbapenems,61,71,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,DOR,doripenem,Carbapenems,87,979,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,ATM,aztreonam,Miscellaneous (II),54,80,60,圖 3-1-4
+2024,2024,district,Pseudomonas aeruginosa,TGC,tigecycline,Miscellaneous (II),2,480,60,圖 3-1-4
+2024,2024,district,Stenotrophomonas maltophilia,LVX,levofloxacin,Fluoroquinolones,76,816,60,圖 3-1-4
+2024,2024,district,Bacteroides fragilis,SAM,ampicillin-sulbactam,Penicillins,72,61,60,圖 3-1-4
+2024,2024,district,Bacteroides fragilis,TZP,piperacillin-tazobactam,Anti-Pseudomonal Penicillins,96,26,60,圖 3-1-4
+2024,2024,district,Bacteroides fragilis,CC,clindamycin,Miscellaneous (I),38,68,60,圖 3-1-4
+2024,2024,district,Bacteroides fragilis,MTZ,metronidazole,Miscellaneous (I),98,64,60,圖 3-1-4
+2024,2024,district,Bacteroides fragilis,C,chloramphenicol,Miscellaneous (I),96,26,60,圖 3-1-4
+2024,2024,district,Bacteroides fragilis,FOX,cefoxitin,2nd GCs,64,22,60,圖 3-1-4
