@@ -1,15 +1,12 @@
 name: Ingest data (PDFs / transcriptions -> public/data + public/api)
 
 on:
+  # Only new/changed PDFs trigger an automatic rebuild; transcription and curated
+  # edits are rebuilt locally with `python3 scripts/build_data.py` and committed.
   push:
     branches: [main]
     paths:
       - "raw/*.pdf"
-      - "data/source/transcribed/**"
-      - "data/curated/**"
-      - "data/schema/**"
-      - "scripts/build_data.py"
-      - "scripts/ingest/**"
   workflow_dispatch:
 
 permissions:

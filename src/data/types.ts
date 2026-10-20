@@ -96,6 +96,8 @@ export interface IsolateRecord {
   isolates: number;
   precision?: Precision;
   reportYear?: number;
+  /** MDRO split counts: 'I+R' | 'S'; absent = totals */
+  subset?: string;
 }
 
 /* ---------- 3. antibiotic_use.json ---------- */
