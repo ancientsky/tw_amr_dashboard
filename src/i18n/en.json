@@ -1,4 +1,601 @@
 {
+  "overview": {
+    "hero": {
+      "eyebrow": "THAS national surveillance · {from}–{to}",
+      "title": "Antimicrobial resistance in Taiwan, at a glance",
+      "thesis": "Nine multidrug-resistant organisms, eight years of national surveillance, one clear signal: resistance concentrates where care is most intensive — for every MDRO, hospital-onset isolates are more often resistant than community-onset ones.",
+      "ctaResistance": "Explore resistance",
+      "ctaInternational": "International comparison",
+      "ctaData": "Data & API",
+      "latestYear": "Latest data year",
+      "latestYearNote": "Series from {from} · annual reports 2022–2024",
+      "hospitals": "Reporting hospitals",
+      "hospitalsNote": "Hospitals reporting to the THAS AR module, {from}–{to} (2024 report)",
+      "isolates": "Clinical isolates, {year}",
+      "isolatesNote": "First isolates reported nationally, all specimens"
+    },
+    "pulse": {
+      "eyebrow": "MDRO pulse",
+      "title": "Nine resistance indicators, nationally",
+      "subtitle": "% non-susceptible, all hospitals, CO+HO, {year} · change vs previous year · sparkline {from}–{year}. Select a tile to explore.",
+      "gramNeg": "Gram-negative · carbapenem resistance",
+      "gramPos": "Gram-positive · methicillin / vancomycin resistance",
+      "band": {
+        "low": "< 10%",
+        "moderate": "10–25%",
+        "high": "25–50%",
+        "veryHigh": "≥ 50%"
+      }
+    },
+    "headlines": {
+      "title": "What the data say",
+      "aside": "Generated from the datasets — updates with every data release",
+      "explore": "Explore",
+      "coho": "{phenotype}: hospital-onset {ho} vs community-onset {co} in {year} — {ratio}× higher in hospital-acquired isolates.",
+      "peak": "{phenotype} peaked at {peak} in {peakYear} and has fallen to {latest} in {year}.",
+      "rise": "{phenotype} rose from {first} in {firstYear} to {latest} in {year} ({change}, a {rel} relative increase).",
+      "levels": "{phenotype} varies most by hospital level: {high} {highV} vs {low} {lowV} in {year}.",
+      "isolates": "Reported clinical isolates grew from {from} in {fromYear} to {to} in {year} ({rel}).",
+      "range": "In {year}, {high} remains the most resistant MDRO at {highV}; {low} the least at {lowV}.",
+      "kicker": {
+        "coho": "Onset gap",
+        "peak": "Turning point",
+        "rise": "Long-run rise",
+        "levels": "Hospital level",
+        "isolates": "Surveillance volume",
+        "range": "Spread"
+      }
+    },
+    "sections": {
+      "trends": "Where is resistance rising?",
+      "burden": "Where the burden sits",
+      "antibiogram": "Antibiogram at a glance"
+    },
+    "rising": {
+      "eyebrow": "Small multiples",
+      "title": "MDRO trends by hospital level, 2017–2024",
+      "subtitle": "% non-susceptible · {setting} · each panel keeps its own fixed y-axis so switching onset never rescales it",
+      "changeSince": "Change since {year} (national)",
+      "miniAria": "Line chart of {phenotype} percentage non-susceptible by hospital level, 2017–2024"
+    },
+    "coho": {
+      "eyebrow": "The infection-control signal"
+    },
+    "landscape": {
+      "eyebrow": "Pathogen landscape",
+      "title": "Which organisms dominate the caseload",
+      "subtitle": "Clinical isolates by organism, all specimens, {year} (total {total}) · colour = WHO bacterial priority",
+      "keyLabel": "of isolates are {pathogen} ({year})",
+      "topNs": "Highest non-susceptibility, {year}",
+      "who": "WHO priority: {p}",
+      "unlisted": "Not on WHO list / other",
+      "aria": "Treemap of clinical isolate counts by organism, coloured by WHO priority"
+    },
+    "glance": {
+      "eyebrow": "Antibiogram",
+      "title": "Key pathogens × key agents",
+      "subtitle": "% non-susceptible (I+R), national, all specimens, {year} · select a cell for detail",
+      "openExplorer": "Open the full antibiogram",
+      "notReported": "Not reported (not tested, n < 20 or not CLSI-recommended)"
+    },
+    "provisional": {
+      "lead": "Resistance data on this page are transcribed from the official reports. Antibiotic use, HAI and international comparisons still use provisional curated estimates:"
+    },
+    "sources": {
+      "title": "Sources",
+      "body": "Taiwan CDC, Antimicrobial Resistance Surveillance Annual Report (THAS AR module), 2022–2024 editions. Values are transcribed from the PDFs; each figure carries its precision (table, report text or read from chart).",
+      "download": "Download the data",
+      "api": "Static JSON API",
+      "method": "Methodology"
+    }
+  },
+  "resistance": {
+    "page": {
+      "subtitle": "Explore THAS antimicrobial-resistance surveillance by MDRO, pathogen, antibiotic, hospital level, onset setting and specimen — every view is a shareable link."
+    },
+    "views": {
+      "label": "Explorer views",
+      "trend": "Trends",
+      "antibiogram": "Antibiogram",
+      "pathogen": "Pathogen",
+      "compare": "Compare",
+      "trendIntro": "MDRO trends 2017–2024 by hospital level. Choose up to four phenotypes to compare them on one chart; drag the brush under the chart to zoom years.",
+      "antibiogramIntro": "The national cumulative antibiogram (% non-susceptible = 100 − %S) for one year and hospital level. Select a cell to open that pathogen.",
+      "pathogenIntro": "One pathogen in depth: resistance by onset setting and specimen, its three-year antibiogram change, and isolate volume over time.",
+      "compareIntro": "Put 2–4 phenotypes or pathogen × antibiotic pairs on one chart, then compare hospital levels for the latest year."
+    },
+    "levelShort": {
+      "all": "All",
+      "medical_center": "MC",
+      "regional": "RH",
+      "district": "DH"
+    },
+    "settingShort": {
+      "all": "All",
+      "co": "CO",
+      "ho": "HO"
+    },
+    "priority": {
+      "critical": "critical",
+      "high": "high",
+      "medium": "medium"
+    },
+    "common": {
+      "ci": "95% CI",
+      "latest": "Latest",
+      "otherClass": "Other"
+    },
+    "rail": {
+      "label": "Explorer filters",
+      "filters": "Filters",
+      "maxN": "up to {n}",
+      "levels": "Hospital levels",
+      "overlay": "Overlay CO / HO",
+      "overlayHint": "National community- vs hospital-onset lines",
+      "norm": "Index to first year = 100",
+      "normHint": "Compare relative change, not level",
+      "drugLevel": "Drug-level trend (antibiogram, 2022–2024):",
+      "compareLevels": "Compare levels",
+      "cmpNone": "Off",
+      "cmpGrid": "4 levels",
+      "cmpDiff": "MC − DH",
+      "cellHint": "Cells show % non-susceptible; hover for isolates tested. Blank = not reported."
+    },
+    "trend": {
+      "title": "{phenotype}",
+      "subtitle": "% non-susceptible by hospital level · {setting} · {from}–{to}",
+      "compareTitle": "Phenotypes compared: {list}",
+      "compareSubtitle": "% non-susceptible · {level} · {setting}",
+      "compareSubtitleNorm": "Index, first year in range = 100 · {level} · {setting}",
+      "indexAxis": "Index",
+      "summary": "Auto-summary",
+      "narrativePeak": "{name}: {first} in {firstYear}, peaked at {peak} in {peakYear}, {latest} in {latestYear} ({change} pp since {firstYear}; {fromPeak} pp from peak).",
+      "narrativeRising": "{name}: rose from {first} in {firstYear} to a series high of {latest} in {latestYear} ({change} pp).",
+      "narrativeFalling": "{name}: highest at the start ({first} in {firstYear}); {latest} in {latestYear} ({change} pp).",
+      "narrativeLevels": "In {year}, {high} were highest ({highV}) and {low} lowest ({lowV}).",
+      "narrativeCoHo": "{phenotype} in {year}: hospital-onset {ho} vs community-onset {co} ({ratio}×).",
+      "aria": "Line chart of percentage non-susceptible over time; hollow markers are values read from charts"
+    },
+    "coho": {
+      "title": "Community-onset vs hospital-onset",
+      "subtitle": "% non-susceptible per MDRO, {level}, {year} · sorted by gap",
+      "gap": "Gap (HO − CO)",
+      "ratio": "HO / CO",
+      "keyLabel": "{phenotype}: HO {ho} vs CO {co}, {year}",
+      "aria": "Dumbbell chart comparing community-onset and hospital-onset resistance for nine MDROs"
+    },
+    "antibiogram": {
+      "title": "Cumulative antibiogram",
+      "subtitle": "% non-susceptible (I+R), {level}, {year} · all specimens",
+      "levelTitle": "Antibiogram — {level}",
+      "diffTitle": "Medical centres minus district hospitals",
+      "diffSubtitle": "Difference in % non-susceptible (percentage points), {year} · red = higher in medical centres",
+      "diffLegend": "MC − DH (pp)",
+      "legend": "% non-susceptible",
+      "sortRows": "Sort rows",
+      "sortCols": "Sort columns",
+      "sortOrder": "Report order",
+      "sortClass": "By drug class",
+      "sortName": "By name",
+      "sortMean": "By mean resistance",
+      "clickHint": "Select to open this pathogen",
+      "note": "Values are 100 − %S from the printed antibiogram tables (exact). Cells are blank when fewer than 20 isolates were tested or the agent is not CLSI-recommended for the organism."
+    },
+    "pathogen": {
+      "who": "WHO {p} priority",
+      "bySettingTitle": "{pathogen}: resistance by onset",
+      "bySpecimenTitle": "{pathogen}: resistance by specimen",
+      "barsSubtitle": "% non-susceptible per antibiotic, national, {year} · whiskers = 95% CI where printed",
+      "barsAria": "Grouped horizontal bar chart of percentage non-susceptible per antibiotic",
+      "slopeTitle": "Antibiogram change {from} → {to}",
+      "slopeSubtitle": "{pathogen}, {level} · arrow = direction of change (red ≥ +2 pp, green ≤ −2 pp)",
+      "slopeAria": "Arrow chart of percentage non-susceptible per antibiotic across three antibiogram years",
+      "isolatesTitle": "{pathogen}: isolates over time",
+      "isolatesSubtitle": "Clinical isolates by specimen (stacked) with the all-specimen total (line)",
+      "isolatesAria": "Stacked bar chart of isolate counts by specimen with a total line",
+      "otherSpecimens": "Other specimens"
+    },
+    "compare": {
+      "title": "Compare resistance indicators",
+      "subtitle": "% non-susceptible · {level} · {setting} · {from}–{to}",
+      "subtitleNorm": "Index (first year = 100) · {level} · {setting} · {from}–{to}",
+      "items": "On the chart",
+      "item": "Indicator",
+      "remove": "Remove {item}",
+      "addPhenotype": "Add phenotype",
+      "addPair": "Add pathogen × antibiotic",
+      "choose": "Choose…",
+      "add": "Add pair",
+      "pairNote": "Pathogen × antibiotic pairs come from the antibiogram tables (2022–2024, all onset).",
+      "bulletTitle": "Hospital levels, latest year",
+      "bulletSubtitle": "Bar = national; ticks = medical centres, regional and district hospitals · {setting}",
+      "aria": "Line chart comparing resistance indicators over time",
+      "bulletAria": "Bullet chart of the latest value by hospital level for each indicator"
+    },
+    "method": {
+      "title": "Methodology — how to read these numbers",
+      "more": "Full methodology and sources",
+      "thas": {
+        "term": "THAS AR module",
+        "body": "Data come from the Taiwan Healthcare-associated infection and Antimicrobial resistance Surveillance system (THAS) antimicrobial-resistance module, as published in Taiwan CDC's annual reports (2022–2024 editions, data years 2017–2024)."
+      },
+      "sir": {
+        "term": "Hospital-reported S/I/R",
+        "body": "Each laboratory reports its own susceptible / intermediate / resistant interpretation. No single CLSI breakpoint edition is imposed, so breakpoint and method differences between hospitals carry into the national figures."
+      },
+      "ns": {
+        "term": "Non-susceptible = I + R",
+        "body": "Antibiogram values are 100 − %S, i.e. intermediate plus resistant. MDRO phenotypes (e.g. CRKP = carbapenem non-susceptible K. pneumoniae) follow the report's definitions."
+      },
+      "suppress": {
+        "term": "n < 20 suppressed",
+        "body": "Percentages based on fewer than 20 tested isolates, and agents not recommended by CLSI for the organism, are not printed and appear blank."
+      },
+      "precision": {
+        "term": "Precision of transcribed values",
+        "body": "Table values are exact; values quoted in report text are exact to the printed decimal; values read from printed charts are accurate to about ±1–2 percentage points and are drawn with hollow markers."
+      },
+      "coho": {
+        "term": "Community- vs hospital-onset",
+        "body": "Following THAS, isolates from outpatients, the emergency department or the first two days of admission are community-onset (CO); isolates collected from hospital day 3 onward are hospital-onset (HO)."
+      },
+      "dedup": {
+        "term": "Overlapping report editions",
+        "body": "When a data year appears in more than one edition, the more precise value is used, then the newest edition (historical counts are revised as reporting hospitals change)."
+      },
+      "firstIsolate": {
+        "term": "First-isolate rule",
+        "body": "Antibiograms count the first isolate per patient, species and year in each hospital (worst result on the same day), limiting duplicate-isolate bias."
+      }
+    }
+  },
+  "international": {
+    "filters": "Comparison filters",
+    "indicator": "Indicator",
+    "region": "WHO region",
+    "allRegions": "All WHO regions",
+    "dataYear": "Data year",
+    "latestAvailable": "Latest available",
+    "country": "Country",
+    "compareWith": "Compare with (up to {n})",
+    "glassDashboard": "WHO GLASS dashboard",
+    "glassReport": "GLASS report 2022",
+    "notice": {
+      "title": "Provisional comparison — read the comparability notes first",
+      "body": "Country values are approximate figures curated from the WHO GLASS 2022 report, the GLASS dashboard and national surveillance systems (bloodstream isolates, ~2021–2022). Taiwan is not a WHO Member State and does not report to GLASS: its values are computed by this site from the Taiwan CDC THAS annual reports, which use different specimens, breakpoints and counting rules.",
+      "update": "To update the country figures, edit the curated table",
+      "compLink": "Comparability notes"
+    },
+    "map": {
+      "title": "{indicator}: % resistant worldwide",
+      "subtitle": "{region} · {year} · bloodstream isolates",
+      "legend": "Colour = % resistant among bloodstream isolates, latest year available per country (GLASS ~2021–2022; Taiwan 2024 THAS). The outlined marker is Taiwan.",
+      "noDataLegend": "No data reported",
+      "noData": "No data for this indicator",
+      "clickHint": "Click a country to add it to the comparison.",
+      "aria": "World choropleth map coloured by percent resistant; Taiwan highlighted with a marker"
+    },
+    "bars": {
+      "title": "Taiwan vs the world: {indicator}",
+      "subtitle": "Countries sorted by % resistant; the vertical line is the median of reporting countries",
+      "subtitleRank": "Taiwan ranks #{rank} of {total} ({value}); vertical line = median of reporting countries",
+      "median": "Median {value}",
+      "nCountries": "Countries",
+      "viewLabel": "Bars show",
+      "allCountries": "All countries",
+      "regionMedians": "WHO region medians only"
+    },
+    "radar": {
+      "title": "Resistance profile across 10 indicators",
+      "subtitleAbs": "Taiwan vs selected countries, % resistant on a common 0–100% scale",
+      "subtitleRank": "Taiwan vs selected countries, percentile rank among reporting countries (0 = lowest, 100 = highest)",
+      "scaleLabel": "Scale",
+      "abs": "% resistant",
+      "rank": "Percentile",
+      "aria": "Radar chart comparing Taiwan with selected countries on ten resistance indicators"
+    },
+    "strip": {
+      "title": "Where Taiwan sits on each indicator",
+      "subtitle": "Every dot is a country; Taiwan and the comparison set are highlighted",
+      "others": "Other countries",
+      "min": "Lowest",
+      "max": "Highest",
+      "pct": "Taiwan percentile",
+      "n": "Countries reporting"
+    },
+    "toast": {
+      "added": "{country} added to the comparison",
+      "already": "{country} is already in the comparison"
+    },
+    "comp": {
+      "section": "Comparability: GLASS vs Taiwan THAS",
+      "title": "Methodological differences",
+      "subtitle": "Why Taiwan's numbers are not strictly comparable with GLASS country values",
+      "aspect": "Aspect",
+      "thasCol": "Taiwan THAS (this site)",
+      "rows": {
+        "system": {
+          "label": "Surveillance system",
+          "glass": "WHO Global Antimicrobial Resistance and Use Surveillance System; national AMR coordinating centres report annually",
+          "thas": "Taiwan CDC Taiwan Healthcare-associated infection and Antimicrobial resistance Surveillance (THAS) annual reports"
+        },
+        "scope": {
+          "label": "Participating laboratories",
+          "glass": "Per-country national lab networks; coverage and sentinel-site selection vary widely",
+          "thas": "Hospital laboratories reporting to THAS (134 hospitals in 2017 → 329 in 2024)"
+        },
+        "specimen": {
+          "label": "Specimen",
+          "glass": "Bloodstream isolates (blood cultures) for these indicators",
+          "thas": "Blood subset where the report prints it; otherwise all specimens (MDRO indicators, antibiograms)"
+        },
+        "unit": {
+          "label": "Unit of count",
+          "glass": "Patients with a positive blood culture (de-duplicated per patient)",
+          "thas": "Isolates, using each report's first-isolate rules"
+        },
+        "measure": {
+          "label": "Measure",
+          "glass": "% resistant (R); PNSP = non-susceptible",
+          "thas": "Hospital-reported S/I/R; antibiogram values are non-susceptible (I+R = 100 − %S), slightly higher than %R"
+        },
+        "breakpoints": {
+          "label": "Breakpoints",
+          "glass": "Mostly EUCAST (Europe), CLSI elsewhere — as reported by each country",
+          "thas": "CLSI"
+        },
+        "network": {
+          "label": "Reporting",
+          "glass": "Aggregated national data submitted to WHO",
+          "thas": "Hospital-reported data aggregated by Taiwan CDC"
+        },
+        "years": {
+          "label": "Years",
+          "glass": "Specific reporting years (~2021–2022 here); latest year differs by country",
+          "thas": "2024 (latest report) for Taiwan rows"
+        },
+        "precision": {
+          "label": "Precision on this site",
+          "glass": "Curated approximations from the GLASS report / dashboard and national reports (provisional)",
+          "thas": "Transcribed from printed tables, text or charts; chart-read values are ±1–2 points"
+        }
+      },
+      "caveatsTitle": "Caveats",
+      "caveats": {
+        "member": "Taiwan is not a WHO Member State and does not report to GLASS; Taiwan rows are computed by this site from the THAS annual reports.",
+        "breakpoints": "THAS uses CLSI breakpoints; many GLASS / EARS-Net countries use EUCAST, which can shift % resistant for some drug–bug pairs.",
+        "unit": "THAS percentages count isolates; GLASS counts patients with positive blood cultures.",
+        "nonsusceptible": "Antibiogram-derived values are non-susceptible (100 − %S, includes intermediate) and therefore slightly higher than %R.",
+        "curated": "Country values other than Taiwan are approximate curated figures (~2021–2022) and are provisional — check the original sources."
+      },
+      "derivTitle": "How each Taiwan value was derived",
+      "derivSubtitle": "Generated from glass.meta.comparability: the THAS series behind each GLASS-style indicator",
+      "basis": "THAS series (pathogen × drug)",
+      "tier": "Basis",
+      "tiers": {
+        "blood": "Blood isolates, national (closest to GLASS)",
+        "phenotype": "MDRO indicator, all specimens (fallback)",
+        "all_specimens": "Antibiogram, all specimens (fallback)"
+      },
+      "fallback": "Fallback",
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "amu": {
+    "filters": "Antibiotic-use filters",
+    "metricLabel": "Measure",
+    "metric": {
+      "DID": "DDD / 1,000 patient-days",
+      "share": "% share"
+    },
+    "classesLabel": "Antibiotic classes",
+    "class": "Class",
+    "awareLabel": "AWaRe group",
+    "aware": {
+      "Access": "Access",
+      "Watch": "Watch",
+      "Reserve": "Reserve",
+      "Unclassified": "Other / unclassified"
+    },
+    "notice": {
+      "title": "Model estimates — not official Taiwan CDC figures",
+      "body": "The Taiwan antimicrobial use surveillance annual report (抗生素使用量監視年報) has not been added to this site yet. Every number on this page is a provisional model estimate shaped on published Taiwan CDC trends. Use it to explore the dashboard's views, not to cite consumption levels.",
+      "how": "To replace the model, add the official annual report PDF to",
+      "cdcLink": "Taiwan CDC reports"
+    },
+    "sectionDeeper": "Class mix and use vs resistance",
+    "kpi": {
+      "title": "Inpatient antibiotic use at a glance",
+      "subtitle": "{level} · {year} · DDD per 1,000 patient-days",
+      "metric": "Indicator",
+      "total": "Total use (J01)",
+      "totalCaption": "All systemic antibacterials",
+      "accessShare": "Access share",
+      "watchShare": "Watch share",
+      "reserveShare": "Reserve share",
+      "carb": "Carbapenems",
+      "targetCaption": "WHO 2030 target ≥ {target}%"
+    },
+    "target": {
+      "title": "WHO 2030 target: ≥70% Access",
+      "subtitle": "Access share of total inpatient use by hospital level, latest year (target line at {target}%)",
+      "line": "Target {target}%",
+      "short": "WHO target",
+      "gap": "Gap to target"
+    },
+    "stacked": {
+      "title": "Use by antibiotic class over time",
+      "titleShare": "Class mix over time (100% share)",
+      "subtitle": "{level} · {n} of {total} classes · colour families follow AWaRe",
+      "sumSelected": "Selected classes",
+      "soloHint": "Show only this AWaRe group (click again to reset)"
+    },
+    "awareBars": {
+      "title": "AWaRe mix by hospital level",
+      "subtitle": "Share of inpatient DDD by AWaRe group per year; line = WHO 70% Access target"
+    },
+    "slope": {
+      "title": "{group} share: first vs last year",
+      "subtitle": "{span} · one line per hospital level",
+      "groupLabel": "AWaRe group"
+    },
+    "treemap": {
+      "title": "Class mix in {year}",
+      "subtitle": "{level} · area = DID (total {total}) · colour = AWaRe group",
+      "share": "Share of total",
+      "aria": "Treemap of antibiotic classes sized by use and coloured by AWaRe group"
+    },
+    "scatter": {
+      "title": "Use vs resistance (exploratory)",
+      "subtitle": "Each point is one hospital level in one year; trails connect years",
+      "exploratory": "Exploratory",
+      "caveat": "Ecological correlation ≠ causation: use is a provisional model estimate, resistance is real THAS data, and both change with case mix, testing and reporting coverage.",
+      "pairLabel": "Pair",
+      "pairs": {
+        "crkp": "Carbapenems × CRKP",
+        "crab": "Carbapenems × CRAB",
+        "fq": "Fluoroquinolones × E. coli"
+      },
+      "x": {
+        "crkp": "Carbapenem use (DID)",
+        "crab": "Carbapenem use (DID)",
+        "fq": "Fluoroquinolone use (DID)"
+      },
+      "y": {
+        "crkp": "CRKP (% resistant)",
+        "crab": "CRAB (% resistant)",
+        "fq": "E. coli ciprofloxacin non-susceptible (%)"
+      }
+    },
+    "method": {
+      "button": "Methodology",
+      "title": "How antibiotic use is measured",
+      "dddTitle": "DDD and DID",
+      "ddd": "Defined Daily Dose — the assumed average maintenance dose per day for a drug used for its main indication in adults, set by the WHO Collaborating Centre for Drug Statistics Methodology.",
+      "did": "DDD per 1,000 patient-days — the standard hospital consumption density (inpatient). Population-level data instead use DDD per 1,000 inhabitants per day.",
+      "didFormula": "DID = (total grams dispensed ÷ DDD in grams) ÷ patient-days × 1,000. DDDs make different drugs comparable, but do not reflect actual prescribed doses (e.g. paediatric or renal dosing).",
+      "awareTitle": "WHO AWaRe classification (2023)",
+      "aware": "The WHO AWaRe antibiotic book groups antibiotics by their resistance potential to guide stewardship:",
+      "awareAccess": "first- or second-choice drugs for common infections, lower resistance potential.",
+      "awareWatch": "higher resistance potential; priority targets for stewardship.",
+      "awareReserve": "last-resort options for confirmed or suspected multidrug-resistant infections.",
+      "target": "The UN General Assembly (2024) and WHO's 13th General Programme of Work set a target that at least 70% of total antibiotic use should be Access antibiotics by 2030.",
+      "atcTitle": "ATC classes on this page",
+      "provTitle": "About these numbers",
+      "prov": "The dataset is a provisional model with plausible magnitudes and trends, generated so that the views work before the official report is transcribed. It is flagged provisional in its data envelope and on every chart.",
+      "provHow": "Add the official 抗生素使用量監視年報 PDF to the repository folder below and re-run the ingestion pipeline to replace the model:",
+      "linksTitle": "References",
+      "linkAware": "WHO AWaRe classification 2023",
+      "linkAtc": "WHO ATC/DDD index",
+      "linkCdc": "Taiwan CDC surveillance reports"
+    }
+  },
+  "hai": {
+    "filters": "HAI filters",
+    "icu": "ICU type",
+    "metric": "Metric",
+    "unit": "Unit",
+    "notice": {
+      "title": "Model estimates — not official TNIS figures",
+      "body": "The Taiwan healthcare-associated infection surveillance annual report (醫療照護相關感染監視年報, TNIS) has not been added to this site yet. Every number on this page is a provisional model estimate shaped on published Taiwan CDC trends — useful for exploring the views, not for citing infection rates.",
+      "how": "To replace the model, add the official annual report PDF to",
+      "cdcLink": "Taiwan CDC TNIS reports"
+    },
+    "short": {
+      "hai_density": "HAI density",
+      "bsi_density": "BSI",
+      "uti_density": "UTI",
+      "pneu_density": "Pneumonia",
+      "clabsi": "CLABSI",
+      "cauti": "CAUTI",
+      "vap": "VAP",
+      "central_line_util": "CL util.",
+      "urinary_cath_util": "UC util.",
+      "ventilator_util": "Vent. util."
+    },
+    "sites": {
+      "all": "All sites",
+      "bsi": "Bloodstream",
+      "uti": "Urinary tract",
+      "pneu": "Pneumonia"
+    },
+    "kpi": {
+      "title": "ICU infections at a glance",
+      "subtitle": "{level} · {icu} · {year}",
+      "hai_density": "HAI density",
+      "clabsi": "CLABSI",
+      "cauti": "CAUTI",
+      "vap": "VAP"
+    },
+    "trend": {
+      "title": "{metric} by ICU type",
+      "subtitle": "{level} · {unit} · grey line = all ICUs",
+      "yLabel": "Y axis",
+      "sharedY": "Shared",
+      "freeY": "Independent"
+    },
+    "util": {
+      "title": "Device utilisation ratios",
+      "subtitle": "{level} · {icu} · device-days ÷ patient-days"
+    },
+    "heat": {
+      "title": "ICU type × metric, {year}",
+      "subtitleRaw": "{level} · raw values; colour scaled within each column (units differ)",
+      "subtitleZ": "{level} · z-score vs the ICU-type mean of each column (blue = lower, red = higher)",
+      "modeLabel": "Colour",
+      "raw": "Raw",
+      "z": "Z-score",
+      "zLabel": "z-score"
+    },
+    "sectionPathogens": "Leading pathogens",
+    "districtFallback": "District hospitals have no pathogen ranking in this dataset — showing all hospitals.",
+    "bump": {
+      "title": "Pathogen ranking over time: {site}",
+      "subtitle": "{level} · top 10 by share of HAI isolates · hover to highlight an organism",
+      "rank": "rank",
+      "share": "Share of isolates",
+      "organism": "Organism",
+      "siteLabel": "Infection site"
+    },
+    "share": {
+      "title": "Pathogen mix by site, {year}",
+      "subtitle": "{level} · share of HAI isolates; the rest of the bar is other organisms",
+      "other": "Other organisms"
+    },
+    "links": {
+      "title": "Which of these organisms are resistant?",
+      "hint": "Top HAI organisms, all sites — open their resistance profile from THAS (real data)",
+      "share": "{pct} of HAI isolates",
+      "pheno": "{value} nationally ({year})",
+      "noPheno": "No headline MDRO indicator",
+      "notInThas": "Not covered by THAS resistance tables",
+      "cta": "Resistance of {org}",
+      "unavailable": "No resistance data"
+    },
+    "method": {
+      "button": "Methodology",
+      "title": "How HAIs are measured",
+      "tnisTitle": "TNIS surveillance",
+      "tnis": "The Taiwan Healthcare-associated infection Surveillance system (TNIS) collects ICU infection events from participating hospitals using definitions adapted from the US CDC NHSN.",
+      "defsTitle": "Definitions",
+      "density": "HAI events per 1,000 patient-days in the ICU (all infection sites).",
+      "clabsi": "Central line-associated bloodstream infections per 1,000 central-line days.",
+      "cauti": "Catheter-associated urinary tract infections per 1,000 urinary-catheter days.",
+      "vap": "Ventilator-associated pneumonia (or ventilator-associated events) per 1,000 ventilator days.",
+      "dur": "Device utilisation ratio = device-days ÷ patient-days (0–1).",
+      "denomTitle": "Denominators",
+      "denom": "Densities use patient-days; device-associated rates use device-days, so a unit with fewer devices can have a low CLABSI count but a high rate. Read rates together with utilisation ratios.",
+      "sirTitle": "SIR",
+      "sir": "The standardised infection ratio (observed ÷ predicted infections, risk-adjusted by unit type and hospital characteristics) is the preferred benchmark in NHSN. It is not shown here because the model data do not include predicted counts.",
+      "provTitle": "About these numbers",
+      "prov": "The hai and hai_pathogens datasets are provisional models with plausible magnitudes and trends so that the views work before the official report is transcribed.",
+      "provHow": "Add the official 醫療照護相關感染監視年報 PDF to the repository folder below and re-run the ingestion pipeline to replace the model:",
+      "linksTitle": "References",
+      "linkCdc": "Taiwan CDC surveillance reports",
+      "linkNhsn": "US CDC NHSN patient-safety definitions"
+    }
+  },
   "app": {
     "name": "TW-AMR Watch",
     "fullName": "Taiwan Antimicrobial Resistance Surveillance Dashboard",
@@ -223,7 +820,222 @@
     "title": "AMR assistant",
     "placeholder": "Ask about resistance trends, antibiotics or definitions…",
     "comingSoon": "The assistant is warming up. It will answer questions about Taiwan AMR data using an offline knowledge base.",
-    "send": "Send"
+    "send": "Send",
+    "launcherTooltip": "Ask about Taiwan AMR data — works offline",
+    "aiBadge": "AI",
+    "loading": "Loading the surveillance data…",
+    "unsure": "I'm not sure I understood that. Here are some related topics:",
+    "fallback": "I can't answer that yet. Try a data question such as “CRKP in medical centres in 2024?” or a concept such as “What is CRAB?”.",
+    "paren": " ({x})",
+    "sep": ", ",
+    "listSep": ", ",
+    "lv": {
+      "all": "nationally",
+      "medical_center": "in medical centres",
+      "regional": "in regional hospitals",
+      "district": "in district hospitals"
+    },
+    "lvn": {
+      "all": "National",
+      "medical_center": "Medical centres",
+      "regional": "Regional hospitals",
+      "district": "District hospitals"
+    },
+    "st": {
+      "co": "community-onset",
+      "ho": "hospital-onset"
+    },
+    "stShort": {
+      "co": "Community-onset (CO)",
+      "ho": "Hospital-onset (HO)"
+    },
+    "sp": {
+      "blood": "blood isolates",
+      "urine": "urine isolates",
+      "sputum": "sputum isolates",
+      "pus": "pus/wound isolates",
+      "stool": "stool isolates"
+    },
+    "prec": {
+      "table": "Exact value from the report's antibiogram table (non-susceptible = 100 − %susceptible).",
+      "text": "The value is stated in the report text.",
+      "chart_estimate": "This value was read from a chart in the annual report (≈ ±1–2 points).",
+      "chartShort": "Read from report charts (≈ ±1–2 points)",
+      "glassShort": "Provisional curated estimates; not directly comparable"
+    },
+    "basis": {
+      "blood": "national blood isolates",
+      "fallback": "the all-specimen MDRO indicator, as no blood value was published",
+      "unknown": "the closest available Taiwan indicator",
+      "mixed": "blood isolates or the closest available indicator"
+    },
+    "ans": {
+      "source": "Source: Taiwan CDC AMR surveillance annual report, {report} edition.",
+      "drugName": "{pathogen} resistance to {antibiotic}",
+      "value": "In {year}, **{name}** was **{value}** {where}.",
+      "isolatesTested": "({n} isolates tested.)",
+      "deltaUp": "That is up {delta} points from {prev} in {prevYear}.",
+      "deltaDown": "That is down {delta} points from {prev} in {prevYear}.",
+      "deltaFlat": "Unchanged from {prev} in {prevYear}.",
+      "trend": "**{name}** {where} went from {v0} in {y0} to **{v1}** in {y1} ({delta} points){peak}.",
+      "peak": ", peaking at {value} in {year}",
+      "compareYears": "**{name}** {where}: {v0} in {y0} vs **{v1}** in {y1} ({delta} points).",
+      "rankLevels": "In {year}, **{name}**{extra} was highest in **{top}** ({topValue}), followed by {rest}.",
+      "nationalRef": "The national figure was {value}.",
+      "item": "{label}: {value}",
+      "labelYear": "{label} ({year})",
+      "bySetting": "In {year}, **{name}** {where} was **{ho}** for hospital-onset (HO) vs **{co}** for community-onset (CO) infections{ratio}.",
+      "ratio": " — about {x}× higher in HO",
+      "profile": "In {year}, {where}, **{pathogen}** was most often non-susceptible to {top}; the lowest rates were for {low}.",
+      "keyPheno": "Its key resistance indicator, {pheno}, was {value} in {year}.",
+      "notAvailableYear": "There is no {year} value for {name} (available: {range}), so here is {used}.",
+      "notAvailableYears": "No data for {years} (available: {range}).",
+      "rangeClamped": "Data are only available for {range}.",
+      "relaxed": "No data for that exact combination — showing {where} instead.",
+      "noData": "I understood the question, but the annual reports have no data for {name} with those filters. Related topics:",
+      "isoValue": "In {year}, **{count}** isolates of **{organism}** were reported {where}{rank}.",
+      "isoRank": " (rank #{rank})",
+      "isoDelta": "Change vs {prevYear} ({prev}): {pct}.",
+      "isoTrend": "Reported isolates of **{organism}** {where} went from {c0} in {y0} to **{c1}** in {y1} ({pct}).",
+      "isoTop": "Top organisms by isolate count {where} in {year}: {list}.",
+      "isoNote": "Counts are isolates reported by participating THAS hospitals, which grew from 134 hospitals in 2017 to 329 in 2024 — read changes with that in mind.",
+      "allOrganisms": "all organisms",
+      "glassCaveat": "International values are provisional curated estimates; Taiwan's value is derived from the annual-report data ({basis}). Specimens and de-duplication rules differ, so compare with care.",
+      "glassCompare": "**{indicator}**: Taiwan **{twn}** ({twnYear}) vs {others}.",
+      "glassHigher": "Taiwan is {delta} points higher than {country}.",
+      "glassLower": "Taiwan is {delta} points lower than {country}.",
+      "glassRank": "Among {n} countries/areas with data, Taiwan's **{indicator}** ({twn}) ranks #{rank} from the highest. Highest: {top}.",
+      "glassMissing": "No {indicator} value is available for {country}.",
+      "glassPairIntro": "Taiwan vs {country} across {n} bloodstream-infection resistance indicators:",
+      "glassPairItem": "{indicator}: Taiwan {twn}, {country} {other}"
+    },
+    "ct": {
+      "trend": "{name} — {where}",
+      "byLevel": "{name} by hospital level{extra}",
+      "rank": "{name} by hospital level, {year}",
+      "bySetting": "{name}: HO vs CO — {where}",
+      "profile": "{name}: % non-susceptible by antibiotic, {year}",
+      "glass": "{indicator}: Taiwan and other countries",
+      "glassPair": "Taiwan vs {country} (bloodstream infections)",
+      "isoTop": "Top organisms by isolates, {year}",
+      "isoTrend": "{organism} isolates — {where}",
+      "isolates": "Isolates"
+    },
+    "chip": {
+      "rankLevels": "Which hospital level has the highest {name}?",
+      "trend": "{name} trend over time",
+      "bySetting": "{name} community- vs hospital-onset",
+      "vsJapan": "Compare Taiwan's {name} with Japan",
+      "vsCountry": "Compare Taiwan's {name} with {country}",
+      "what": "What is {name}?",
+      "isolates": "{name} isolate count trend",
+      "profile": "{name} resistance profile",
+      "glassRank": "How does Taiwan's {name} rank internationally?",
+      "isoTop": "Top 10 organisms by isolates",
+      "isoTotal": "Total isolates trend"
+    },
+    "link": {
+      "explorer": "Open in the resistance explorer",
+      "international": "Open in the International view",
+      "isolates": "Open isolate counts",
+      "related": "Open the related page"
+    },
+    "topics": {
+      "data": "Resistance data",
+      "compare": "International comparison",
+      "counts": "Isolate counts",
+      "concepts": "Concepts & infection control",
+      "site": "Using this site"
+    },
+    "q": {
+      "crkpMc": "CRKP in medical centres in 2024?",
+      "mrsaHo": "MRSA trend hospital-onset",
+      "ecoCip": "E. coli resistance to ciprofloxacin",
+      "crabLevel": "Which hospital level has the highest CRAB?",
+      "vreYears": "Compare VRE 2017 vs 2024",
+      "crkpSetting": "CRKP community- vs hospital-onset",
+      "crabJapan": "Compare Taiwan's CRAB with Japan",
+      "mrsaWorld": "How does Taiwan's MRSA rank internationally?",
+      "twnKor": "Taiwan vs Korea",
+      "isoTotal": "How many isolates were reported in 2024?",
+      "isoTop": "Top 10 organisms by isolates in 2024",
+      "ecoBlood": "E. coli blood isolate count trend",
+      "whatCrab": "What is CRAB?",
+      "carbapenemase": "What are KPC, NDM and OXA-48?",
+      "aware": "What is AWaRe?",
+      "contact": "Do CRAB, CRE and VRE need contact precautions?",
+      "download": "How do I download the data?",
+      "api": "Is there an API?",
+      "embed": "How do I embed a chart?",
+      "provisional": "What does provisional data mean?"
+    },
+    "ui": {
+      "offline": "Offline mode",
+      "offlineHint": "Answers come from the built-in knowledge base and the dashboard data, computed entirely in your browser. Add your own Anthropic API key in Settings for free-form answers.",
+      "upgrade": "Upgrade",
+      "claude": "Claude mode",
+      "claudeHint": "Answers are written by Claude ({model}) from the dashboard's facts. Your key stays in this browser.",
+      "settings": "Assistant settings",
+      "clear": "Clear chat",
+      "clearDone": "Chat cleared",
+      "copy": "Copy answer",
+      "copied": "Answer copied",
+      "share": "Share this answer",
+      "shareX": "Share on X",
+      "shareThreads": "Share on Threads",
+      "shareFacebook": "Share on Facebook",
+      "shareLine": "Share on LINE",
+      "copyLink": "Copy link",
+      "linkCopied": "Link copied",
+      "stop": "Stop",
+      "thinking": "Thinking…",
+      "welcomeTitle": "Ask about antimicrobial resistance in Taiwan",
+      "welcomeBody": "I answer with real figures from the Taiwan CDC annual reports (2017–2024), draw a mini chart and link to the explorer. Try:",
+      "you": "You",
+      "assistant": "Assistant",
+      "viaOffline": "Offline engine",
+      "viaClaude": "Written by Claude",
+      "suggested": "Suggested questions",
+      "openFull": "Open full page",
+      "followUps": "Follow-up questions",
+      "messages": "Conversation",
+      "composerHint": "Enter to send · Shift+Enter for a new line",
+      "chartFallback": "Mini chart",
+      "showTopics": "Show suggested questions",
+      "hideTopics": "Hide suggested questions",
+      "shareText": "TW-AMR Watch assistant: {text}",
+      "moreActions": "Answer actions"
+    },
+    "settings": {
+      "title": "Claude mode (optional)",
+      "intro": "Paste your own Anthropic API key to have answers written by Claude ({model}). The assistant still computes every number from the dashboard data and hands them to the model, so it cites real figures.",
+      "keyLabel": "Anthropic API key",
+      "keyPlaceholder": "sk-ant-…",
+      "save": "Save key",
+      "forget": "Forget key",
+      "saved": "Key saved in this browser",
+      "forgotten": "Key removed",
+      "privacy": "Privacy: the key is stored only in this browser's localStorage (twamr.anthropicKey) and sent only to api.anthropic.com, directly from your browser. Your questions and the related dashboard facts are sent with it. Avoid shared computers and never enter patient-identifiable information.",
+      "invalid": "That doesn't look like an Anthropic API key (it should start with “sk-ant-”).",
+      "show": "Show",
+      "hide": "Hide",
+      "getKey": "Get a key from the Anthropic Console",
+      "active": "Claude mode is on",
+      "inactive": "Offline mode is on — no key stored",
+      "close": "Done"
+    },
+    "err": {
+      "auth": "Claude rejected the API key (401). Check or replace it in Settings.",
+      "permission": "This API key isn't allowed to use {model} (403).",
+      "rateLimit": "Claude is rate-limiting this key right now (429). Try again in a moment.",
+      "overloaded": "Claude is temporarily overloaded. Try again shortly.",
+      "network": "Couldn't reach the Anthropic API (network problem or a browser/CORS block).",
+      "badRequest": "The request was rejected ({detail}).",
+      "refusal": "Claude declined to answer this one.",
+      "generic": "Claude returned an error ({detail}).",
+      "fallbackNote": "Showing the offline answer instead:",
+      "truncated": "(answer truncated)"
+    }
   },
   "notFound": {
     "title": "Page not found",
@@ -276,6 +1088,418 @@
       "eyebrow": "Assistant",
       "title": "Ask about AMR",
       "subtitle": "A client-side assistant that answers questions about Taiwan's AMR surveillance and links to the relevant charts."
+    }
+  },
+  "data": {
+    "nav": {
+      "label": "Sections on this page",
+      "downloads": "Downloads",
+      "api": "API explorer",
+      "embed": "Embed builder",
+      "cite": "Cite & licence"
+    },
+    "dl": {
+      "title": "Dataset downloads",
+      "lead": "Every dataset is available as JSON, CSV and a JSON Schema. Check the provenance chip first: “From Taiwan CDC reports” means transcribed from the official reports, while “Provisional” values are model estimates, not official data.",
+      "records": "Records",
+      "years": "Data years",
+      "size": "File size",
+      "json": "Download JSON",
+      "csv": "Download CSV",
+      "schema": "Schema",
+      "copyUrl": "Copy API URL",
+      "kind": {
+        "real": "From Taiwan CDC reports",
+        "realHint": "Values transcribed from the Taiwan CDC AMR annual reports, with per-record precision.",
+        "provisional": "Provisional",
+        "provisionalHint": "Model estimate based on published trends; not official data.",
+        "content": "Curated content",
+        "contentHint": "Reference content compiled for this site (not surveillance data)."
+      },
+      "everything": {
+        "title": "Download everything",
+        "body": "The whole repository (source code, every data file and the transcription CSVs) is available as one zip from GitHub.",
+        "zip": "Download zip (main branch)",
+        "repo": "Open the GitHub repository"
+      },
+      "pdfs": {
+        "title": "Source report PDFs",
+        "body": "The three Taiwan CDC annual-report PDFs as supplied, kept in the repository’s raw/ folder with SHA-256 checksums for verification.",
+        "edition": "{year} edition (PDF)"
+      }
+    },
+    "ds": {
+      "meta": {
+        "name": "Site metadata",
+        "desc": "Latest data year, available years, the list of provisional datasets and the SHA-256 of each ingested PDF."
+      },
+      "resistance": {
+        "name": "Resistance (pathogen × antibiotic)",
+        "desc": "% resistant by year, pathogen, antibiotic, hospital level, onset and specimen, plus MDRO trends and per-record precision."
+      },
+      "isolates": {
+        "name": "Isolate counts",
+        "desc": "Isolate counts and ranks per organism (tables 2-x) and MDRO counts by hospital level and community/hospital onset."
+      },
+      "antibiotic_use": {
+        "name": "Antibiotic use",
+        "desc": "Inpatient antibiotic use (DDD per 1,000 patient-days) by class, hospital level and WHO AWaRe category. Provisional."
+      },
+      "hai": {
+        "name": "Healthcare-associated infections",
+        "desc": "Infection densities, CLABSI/CAUTI/VAP and device utilisation by hospital level and ICU type. Provisional."
+      },
+      "hai_pathogens": {
+        "name": "Leading HAI pathogens",
+        "desc": "Top-10 pathogens by infection site (bloodstream, urinary tract, pneumonia). Provisional."
+      },
+      "glass": {
+        "name": "International comparison (WHO GLASS)",
+        "desc": "Ten bloodstream-infection resistance indicators for 41 countries plus Taiwan; Taiwan values are computed from the real report data. External values are approximate and provisional."
+      },
+      "links": {
+        "name": "Resource directory",
+        "desc": "60 international and Taiwanese AMR/AMU/HAI dashboards, data portals and guidelines (trilingual)."
+      },
+      "glossary": {
+        "name": "Glossary",
+        "desc": "70 AMR terms with trilingual definitions and related terms."
+      },
+      "kb": {
+        "name": "Chatbot knowledge base",
+        "desc": "Question-and-answer entries that power the AMR assistant (trilingual)."
+      }
+    },
+    "api": {
+      "title": "Static data API",
+      "lead": "A read-only static-file API (v1) with no key and no sign-in. Pick an endpoint on the left, choose its parameters, try it live, then copy a curl, JavaScript, Python or R example.",
+      "version": "Version",
+      "endpoints": "Endpoints",
+      "filter": "Filter endpoints…",
+      "noSummary": "No description for this endpoint.",
+      "tryIt": "Try it",
+      "idle": "Press “Try it” to fetch a response.",
+      "first50": "Arrays show the first 50 items.",
+      "moreItems": "… {n} more items not shown",
+      "snippets": "Code examples",
+      "count": "{n} endpoints in total. The full description is in openapi.yaml.",
+      "groups": {
+        "index": "Catalogue",
+        "schema": "Schemas",
+        "spec": "Specification",
+        "meta": "Site metadata",
+        "resistance": "Resistance",
+        "isolates": "Isolates",
+        "antibiotic_use": "Antibiotic use (provisional)",
+        "hai": "HAI (provisional)",
+        "hai_pathogens": "HAI pathogens (provisional)",
+        "glass": "International (provisional)",
+        "links": "Resource directory",
+        "glossary": "Glossary",
+        "kb": "Knowledge base"
+      },
+      "param": {
+        "pathogen": "Pathogen code",
+        "phenotype": "Phenotype (MDRO) code",
+        "year": "Year",
+        "indicator": "GLASS indicator",
+        "country": "Country (ISO3)",
+        "name": "Dataset name"
+      },
+      "facts": {
+        "cors": {
+          "t": "CORS enabled",
+          "d": "GitHub Pages sends Access-Control-Allow-Origin: *, so any web page can call fetch() directly."
+        },
+        "caching": {
+          "t": "Caching",
+          "d": "Files change only when their content changes; GitHub Pages caches for about 10 minutes. Use generatedAt to detect a new build."
+        },
+        "versioning": {
+          "t": "Versioning (v1)",
+          "d": "v1 paths are stable: fields may be added, but existing fields are never renamed or removed."
+        },
+        "licence": {
+          "t": "Licence & citation",
+          "d": "Cite the original source listed in each envelope’s sources[] (the Taiwan CDC reports) and credit TW-AMR Watch as transcriber. Details under “Cite & licence” below."
+        }
+      }
+    },
+    "embed": {
+      "title": "Embed builder",
+      "lead": "Choose a chart and its parameters and watch the live preview on the right. Copy the one-line <script> or the <iframe> into your hospital website, intranet portal or slides.",
+      "formLabel": "Embed chart settings",
+      "chart": "Chart",
+      "showsOn": "Matching page: {page}",
+      "yearFrom": "From year",
+      "yearTo": "To year",
+      "lang": "Language",
+      "theme": "Theme",
+      "themeAuto": "Auto",
+      "compact": "Compact mode (tighter padding)",
+      "height": "Initial height",
+      "preview": "Live preview",
+      "previewTitle": "Embedded chart preview",
+      "autoHeight": "Auto-height {px}px",
+      "scriptTitle": "One-line <script> snippet",
+      "scriptBody": "The loader replaces itself with an auto-height iframe. This is the recommended option.",
+      "iframeTitle": "<iframe> snippet",
+      "iframeBody": "Use this where scripts are not allowed. Set the height yourself, or resize automatically with the postMessage listener below.",
+      "heightTitle": "Auto-height (postMessage)",
+      "heightBody": "Whenever its content height changes, the embed page posts { type: 'twamr:resize', id, height } to the parent page. embed.js handles this for you; with a plain iframe add the listener below.",
+      "useTitle": "Hospital use cases",
+      "use": {
+        "intranet": {
+          "t": "Intranet portal",
+          "d": "Show national CRAB/CRKP/MRSA trends on the infection-control page for comparison with your own data."
+        },
+        "committee": {
+          "t": "Infection-control committee slides",
+          "d": "Embed with fixed level/years parameters so the figure follows the latest report before each meeting."
+        },
+        "stewardship": {
+          "t": "Stewardship (AMS) teaching",
+          "d": "Put the pathogen × antibiotic heatmap on training pages to inform empirical-therapy choices."
+        },
+        "public": {
+          "t": "Public website",
+          "d": "A hospital website or patient-education page can show headline indicators; keep the source line and provisional chips visible."
+        }
+      },
+      "provNote": "Embedded cards behave like the site: provisional datasets carry a “Provisional” chip and chart-read values a precision badge. Please do not hide them.",
+      "charts": {
+        "resistance-trend": "Resistance trend (pathogen × antibiotic)",
+        "resistance-heatmap": "Resistance heatmap (pathogen × antibiotic)",
+        "kpi-strip": "Headline KPI strip (MRSA/CRKP/CRAB/VRE)"
+      }
+    },
+    "cite": {
+      "title": "Cite & licence",
+      "lead": "When you use charts or data from this site, please cite both the dashboard and the original Taiwan CDC reports.",
+      "dashboard": "Cite the dashboard",
+      "dashboardBody": "Suggested format (APA-style):",
+      "dashboardText": "TW-AMR Watch contributors. ({year}). TW-AMR Watch: Taiwan antimicrobial resistance surveillance dashboard [Data visualization]. {url} (accessed {date})",
+      "cdc": "Cite the Taiwan CDC reports",
+      "cdcBody": "When a figure comes from one of these editions, cite that edition:",
+      "cdcText": "{publisher}. ({year}). {title} {year} [Annual report].",
+      "cdcPublisher": "Taiwan Centers for Disease Control",
+      "licence": "Data licence statement",
+      "tbc": "To be confirmed",
+      "licenceData": "The source reports are © Taiwan CDC (Ministry of Health and Welfare, Taiwan). Values transcribed here remain subject to the original source’s terms of use; please credit the source when reusing them.",
+      "licenceCode": "The dashboard code is MIT-licensed (as stated in the README). The repository does not yet include a LICENSE file, so the exact licence text is to be confirmed.",
+      "licenceProv": "Provisional datasets (antibiotic use, HAI, international comparison) are model estimates; do not cite them as official data.",
+      "licenceNotOfficial": "TW-AMR Watch is an independent project, not an official publication of Taiwan CDC or WHO, and not medical advice."
+    }
+  },
+  "resources": {
+    "opensNew": "opens in a new tab",
+    "tags": "Tags",
+    "cat": {
+      "amr": "AMR",
+      "amu": "Antibiotic use",
+      "hai": "HAI",
+      "one-health": "One Health",
+      "data-portal": "Data portal",
+      "guideline": "Guidelines & policy"
+    },
+    "region": {
+      "taiwan": "Taiwan",
+      "global": "Global",
+      "western-pacific": "Western Pacific",
+      "europe": "Europe",
+      "americas": "Americas",
+      "south-east-asia": "South-East Asia",
+      "africa": "Africa"
+    },
+    "col": {
+      "name": "Name",
+      "org": "Organisation",
+      "category": "Category",
+      "region": "Region",
+      "domain": "Domain"
+    },
+    "disclaimer": "External links have not been verified automatically; content and addresses may have changed.",
+    "report": "Report a broken link",
+    "featured": "Featured",
+    "taiwan": "Taiwan",
+    "taiwanLead": "Taiwan CDC surveillance portals, open data and national action plans.",
+    "all": "Full directory",
+    "search": "Search resources",
+    "searchPlaceholder": "Search name, description or tags…",
+    "view": "View",
+    "viewCards": "Cards",
+    "viewTable": "Cheat sheet",
+    "category": "Category",
+    "regionLabel": "Region",
+    "showing": "Showing {n} of {total}",
+    "noMatch": "No matching resources",
+    "noMatchBody": "Try a shorter keyword or clear the category and region filters.",
+    "tableCaption": "AMR resources cheat sheet"
+  },
+  "about": {
+    "nav": {
+      "label": "Methodology contents"
+    },
+    "toc": {
+      "purpose": "Purpose & audience",
+      "sources": "Data sources",
+      "produced": "How numbers were produced",
+      "definitions": "Definitions",
+      "provisional": "Provisional datasets",
+      "glossary": "Glossary",
+      "changelog": "Changelog",
+      "credits": "Credits & contact",
+      "accessibility": "Accessibility",
+      "privacy": "Privacy"
+    },
+    "purpose": {
+      "lead": "TW-AMR Watch turns the Taiwan CDC’s published annual AMR surveillance reports into an interactive, downloadable and embeddable dashboard, so front-line staff can see trends without digging through PDFs.",
+      "body": "It also offers an international comparison with WHO GLASS, layouts for antibiotic use and healthcare-associated infections, a static data API and a trilingual AMR assistant. Every value carries its source and precision so it can be read and cited correctly.",
+      "audienceTitle": "Who it is for",
+      "audience": {
+        "ic": {
+          "t": "Infection-control staff",
+          "d": "National and hospital-level benchmarks for your own surveillance."
+        },
+        "micro": {
+          "t": "Clinical microbiologists",
+          "d": "Antibiograms and trends by organism and drug."
+        },
+        "id": {
+          "t": "ID physicians & pharmacists",
+          "d": "Evidence for empirical therapy and stewardship."
+        },
+        "epi": {
+          "t": "Hospital epidemiologists",
+          "d": "JSON/CSV and API access for further analysis."
+        }
+      },
+      "notice": "This is an independent project, not an official publication of Taiwan CDC or WHO, and not medical advice. Check the original reports before citing any figure."
+    },
+    "sources": {
+      "lead": "The resistance and isolate-count data are transcribed from three editions of the Taiwan CDC Antimicrobial Resistance Surveillance Annual Report (the AR module of the THAS surveillance system), covering data years 2017–2024. Use the SHA-256 values to confirm that your PDF is the same file.",
+      "hospitals": "Reporting hospitals",
+      "hospitalsNote": "From {from} to {to}, as stated in the reports; the 2022 edition lists 210 in 2022.",
+      "dataYears": "Data years",
+      "dataYearsNote": "Each of the {n} reports covers about six years; overlapping years use the newest edition.",
+      "isolates": "Isolates per year",
+      "isolatesNote": "All-specimen totals for {from} and {to} (tables 2-x).",
+      "edition": "{year} edition",
+      "ingested": "Ingested",
+      "coverage": "Data years",
+      "size": "File size",
+      "verify": "To verify, download the PDF and run sha256sum (or shasum -a 256), then compare with the hash above."
+    },
+    "produced": {
+      "lead": "The reports are PDFs that mix text-layer tables with image charts, so three transcription methods were used and each value records its method (the precision field); the interface shows the matching badge.",
+      "values": "{n} values",
+      "table": {
+        "badge": "From table",
+        "t": "Text-layer tables",
+        "d": "Antibiograms (figures 3-1-x) and isolate-count tables (tables 2-x) are read straight from the PDF text layer and checked against the printed totals. Grey cells (n<20) are excluded.",
+        "err": "Error: none (as printed)"
+      },
+      "text": {
+        "badge": "From report text",
+        "t": "Narrative text",
+        "d": "Values stated in the report narrative or captions, e.g. “national CRAB rose from 55.1% in 2019 to 58.4% in 2024”, are recorded as printed.",
+        "err": "Error: none (1 decimal as printed)"
+      },
+      "chart": {
+        "badge": "Read from chart",
+        "t": "Chart reading",
+        "d": "Bar and line charts (figures 3-2-x, 4-x-y) carry no value labels, so transcribers read the printed charts by eye and rounded to 0.5.",
+        "err": "Error: about ±1–2 percentage points"
+      },
+      "dedupTitle": "De-duplication rule",
+      "dedupAria": "Priority: table over text over chart estimate, then newest edition",
+      "dedup1": "table",
+      "dedup2": "text",
+      "dedup3": "chart",
+      "dedupThen": "ties → newest edition",
+      "dedupBody": "When a data point appears in several editions, the more exact value wins (table > text > chart estimate), and between equals the newest edition wins. Isolate-count tables are taken whole from the newest edition so rankings are never mixed. Reports revise history, so one trend line can mix points from different editions.",
+      "mapping": "Organism and drug names are mapped to stable codes using the report appendix; for MDRO charts (I+R) is the non-susceptible count and (S) the susceptible count, and neither is ever added to totals. The full rules are in docs/DATA.md."
+    },
+    "defs": {
+      "nonsus": {
+        "t": "Resistance = non-susceptible (I+R)",
+        "d": "In antibiograms “% resistant” is 100 − %S, i.e. the non-susceptible share including intermediate (I); MDRO trends use the %R as printed in the report."
+      },
+      "onset": {
+        "t": "Community-onset (CO) vs hospital-onset (HO)",
+        "d": "Infections are split by the onset setting reported to THAS. Hospital-onset resistance is almost always higher than community-onset, so keep onset fixed when comparing."
+      },
+      "levels": {
+        "t": "Hospital levels",
+        "d": "Medical centres (醫學中心), regional hospitals (區域醫院) and district hospitals (地區醫院), as accredited by the Ministry of Health and Welfare. “All” pools every reporting hospital; case mix differs by level, so do not rely on the national average alone."
+      },
+      "suppress": {
+        "t": "n<20 suppression",
+        "d": "The reports hide results when fewer than 20 isolates were tested or when CLSI does not recommend the drug for that organism (grey cells or *). This site does not fill them in, so a gap means “not shown”."
+      },
+      "first": {
+        "t": "First-isolate rule",
+        "d": "Per report notes: one result per hospital, patient, year, species and antibiotic, using the first specimen date; if that date has several results the worst is kept in the order NS > R > I > SDD > S."
+      },
+      "precision": {
+        "t": "Precision badges",
+        "d": "“Read from chart” values carry roughly ±1–2 points of error and should not be used to judge differences smaller than 2 points; a card shows the badge of its least exact value."
+      }
+    },
+    "prov": {
+      "lead": "The Antibiotic Use and Healthcare-associated Infection annual reports have not been supplied yet, so the datasets below are provisional estimates modelled on published trends, not official data:",
+      "why": "These sections show a “Provisional” chip and a notice. In the international comparison the other countries’ values are approximate, while the Taiwan values are computed from the real resistance data. The labels disappear automatically once the official reports are ingested.",
+      "howTitle": "How to add the AMU / HAI report PDFs",
+      "s1": "Put the PDF in the repository’s raw/ folder; the file name must contain the Gregorian year and 「使用量」 or 「感染」, e.g. 臺灣抗生素使用量監視年報(2024年).pdf.",
+      "s2": "Push to GitHub; the ingest workflow regenerates public/data and public/api/v1 (locally run scripts/ingest/run_all.sh).",
+      "s3": "The mappers map_amu.py / map_hai.py are skeletons that must be adapted to the real table layout; once done, the dataset’s provisional flag becomes false.",
+      "readme": "README: adding reports"
+    },
+    "glossary": {
+      "title": "Glossary",
+      "lead": "Sorted by abbreviation. Search the names in all three languages and the definitions in the current language; click a related term to jump to it.",
+      "search": "Search abbreviation, name or definition…",
+      "count": "{n} of {total} terms",
+      "letters": "Filter by letter",
+      "related": "Related"
+    },
+    "changelog": {
+      "first": "First release",
+      "v01": {
+        "c1": "Launched nine pages: overview, resistance, antibiotic use, HAI, international, data & API, resources, methodology and the AMR assistant.",
+        "c2": "Transcribed the 2022, 2023 and 2024 resistance reports (data years 2017–2024) with a precision label on every record.",
+        "c3": "Static data API v1 (JSON/CSV/Schema/OpenAPI) and embeddable charts (embed.js).",
+        "c4": "Directory of 60 international and Taiwanese AMR resources and a 70-term glossary.",
+        "c5": "Antibiotic use, HAI and the international comparison use clearly labelled provisional estimates.",
+        "c6": "Traditional Chinese, English and Japanese interface with light and “black-green” dark themes."
+      }
+    },
+    "credits": {
+      "body": "TW-AMR Watch is an independent project built on open data and open-source tools.",
+      "data": "Data: Taiwan CDC (Ministry of Health and Welfare), Antimicrobial Resistance Surveillance Annual Reports 2022–2024; the THAS surveillance system and the hospitals and laboratories that report to it.",
+      "who": "The international comparison draws on WHO GLASS and national surveillance reports; terminology follows WHO AWaRe, CLSI and EUCAST.",
+      "oss": "Open-source tools: React, Vite, Apache ECharts, Framer Motion, html-to-image, world-atlas and topojson-client.",
+      "contactTitle": "Contact",
+      "contactBody": "Report data errors, transcription problems, broken links or feature ideas as a GitHub issue. For questions about the official statistics, contact Taiwan CDC.",
+      "issues": "Open an issue",
+      "citeLink": "How to cite →"
+    },
+    "access": {
+      "lead": "We aim for the spirit of WCAG 2.2 AA and keep improving:",
+      "kbd": "Every control works with the keyboard, focus rings are visible, and a “skip to content” link is provided.",
+      "sr": "Every chart has a text label (aria-label) and a toggleable data table, so screen-reader users get the same values.",
+      "contrast": "Text contrast is at least 4.5:1, and colour is never the only carrier of meaning (labels and numbers accompany it).",
+      "motion": "Motion is reduced automatically when your system asks for reduced motion.",
+      "lang": "The interface is available in Traditional Chinese, English and Japanese, and the page language attribute follows your choice.",
+      "limits": "Known limitations: hover details of the interactive map and some charts are available only through the data-table view. If you hit a barrier, please tell us."
+    },
+    "privacy": {
+      "lead": "This is a static site with no back-end server and no accounts, and it does not track you.",
+      "none": "No analytics, advertising or third-party cookies are used.",
+      "local": "Only interface preferences (language, theme) are stored locally in your browser and never sent anywhere.",
+      "key": "The optional Claude API key for the AMR assistant stays in your browser and is sent only directly to the Anthropic API, never through this site.",
+      "external": "External links and social-share buttons lead to third-party sites, which have their own privacy policies.",
+      "host": "The site is hosted on GitHub Pages, which may keep ordinary server access logs under GitHub’s own policy."
     }
   }
 }

@@ -1,4 +1,601 @@
 {
+  "overview": {
+    "hero": {
+      "eyebrow": "THAS 全國監測 · {from}–{to}",
+      "title": "臺灣抗生素抗藥性，一眼掌握",
+      "thesis": "九種多重抗藥性細菌、八年全國監測，一個清楚的訊號：抗藥性集中在照護最密集之處——每一種多重抗藥菌，醫療照護相關（HO）菌株的抗藥比率都高於社區相關（CO）菌株。",
+      "ctaResistance": "探索抗藥性",
+      "ctaInternational": "國際比較",
+      "ctaData": "資料與 API",
+      "latestYear": "最新資料年",
+      "latestYearNote": "時間序列自 {from} 年起 · 2022–2024 年報",
+      "hospitals": "通報醫院數",
+      "hospitalsNote": "{from}–{to} 年曾通報 THAS 抗藥性模組之醫院（2024 年報）",
+      "isolates": "臨床分離菌株數（{year}）",
+      "isolatesNote": "全國通報之首株菌株，全部檢體"
+    },
+    "pulse": {
+      "eyebrow": "多重抗藥菌脈動",
+      "title": "全國九項抗藥性指標",
+      "subtitle": "不敏感比率（%），全部醫院，CO+HO，{year} 年 · 與前一年比較 · 走勢線 {from}–{year}。點選指標以深入探索。",
+      "gramNeg": "革蘭氏陰性菌 · 碳青黴烯類抗藥",
+      "gramPos": "革蘭氏陽性菌 · 甲氧西林／萬古黴素抗藥",
+      "band": {
+        "low": "< 10%",
+        "moderate": "10–25%",
+        "high": "25–50%",
+        "veryHigh": "≥ 50%"
+      }
+    },
+    "headlines": {
+      "title": "數據告訴我們什麼",
+      "aside": "由資料集自動產生——隨每次資料更新而更新",
+      "explore": "深入探索",
+      "coho": "{phenotype}：{year} 年醫療照護相關（HO）{ho}，社區相關（CO）{co}——HO 為 CO 的 {ratio} 倍。",
+      "peak": "{phenotype} 於 {peakYear} 年達高峰 {peak}，{year} 年已降至 {latest}。",
+      "rise": "{phenotype} 由 {firstYear} 年的 {first} 上升至 {year} 年的 {latest}（{change}，相對增加 {rel}）。",
+      "levels": "{phenotype} 的醫院層級差異最大：{year} 年{high} {highV}，{low} {lowV}。",
+      "isolates": "通報之臨床分離菌株由 {fromYear} 年 {from} 株增至 {year} 年 {to} 株（{rel}）。",
+      "range": "{year} 年抗藥比率最高的多重抗藥菌仍為 {high}（{highV}）；最低為 {low}（{lowV}）。",
+      "kicker": {
+        "coho": "感染來源差距",
+        "peak": "轉折點",
+        "rise": "長期上升",
+        "levels": "醫院層級",
+        "isolates": "監測規模",
+        "range": "高低分布"
+      }
+    },
+    "sections": {
+      "trends": "抗藥性在哪裡上升？",
+      "burden": "負擔集中在哪裡",
+      "antibiogram": "抗生素敏感性圖譜速覽"
+    },
+    "rising": {
+      "eyebrow": "小倍數圖",
+      "title": "各醫院層級多重抗藥菌趨勢，2017–2024",
+      "subtitle": "不敏感比率（%）· {setting} · 每張小圖固定各自的縱軸，切換感染來源時不會重新縮放",
+      "changeSince": "自 {year} 年以來的變化（全國）",
+      "miniAria": "{phenotype} 各醫院層級不敏感比率折線圖，2017–2024"
+    },
+    "coho": {
+      "eyebrow": "感染管制關鍵訊號"
+    },
+    "landscape": {
+      "eyebrow": "菌種分布",
+      "title": "哪些菌種占多數",
+      "subtitle": "各菌種臨床分離菌株數，全部檢體，{year} 年（總計 {total} 株）· 顏色 = WHO 細菌優先等級",
+      "keyLabel": "的分離菌株為 {pathogen}（{year}）",
+      "topNs": "不敏感比率最高的藥物（{year}）",
+      "who": "WHO 優先等級：{p}",
+      "unlisted": "未列於 WHO 清單／其他",
+      "aria": "各菌種臨床分離菌株數矩形樹狀圖，依 WHO 優先等級著色"
+    },
+    "glance": {
+      "eyebrow": "敏感性圖譜",
+      "title": "重點菌種 × 重點藥物",
+      "subtitle": "不敏感比率（I+R），全國，全部檢體，{year} 年 · 點選方格查看細節",
+      "openExplorer": "開啟完整敏感性圖譜",
+      "notReported": "未呈現（未檢測、n < 20 或非 CLSI 建議藥物）"
+    },
+    "provisional": {
+      "lead": "本頁抗藥性數據轉錄自官方年報。抗生素使用量、醫療照護相關感染與國際比較仍為暫定之整理估計："
+    },
+    "sources": {
+      "title": "資料來源",
+      "body": "衛生福利部疾病管制署《臺灣抗生素抗藥性監視年報》（THAS 抗藥性模組）2022–2024 年版。數值由 PDF 轉錄，每筆皆標示精確度（表格、報告內文或由圖表判讀）。",
+      "download": "下載資料",
+      "api": "靜態 JSON API",
+      "method": "方法學"
+    }
+  },
+  "resistance": {
+    "page": {
+      "subtitle": "依多重抗藥菌、菌種、抗生素、醫院層級、感染來源與檢體探索 THAS 抗藥性監測資料——每個檢視都是可分享的連結。"
+    },
+    "views": {
+      "label": "探索檢視",
+      "trend": "趨勢",
+      "antibiogram": "敏感性圖譜",
+      "pathogen": "菌種",
+      "compare": "比較",
+      "trendIntro": "2017–2024 年各醫院層級多重抗藥菌趨勢。最多可選四種表現型於同一圖比較；拖曳圖下方的時間軸可縮放年份。",
+      "antibiogramIntro": "指定年份與醫院層級的全國累積敏感性圖譜（不敏感比率 = 100 − %S）。點選方格即可開啟該菌種。",
+      "pathogenIntro": "深入單一菌種：依感染來源與檢體的抗藥比率、三年敏感性圖譜變化，以及歷年分離菌株數。",
+      "compareIntro": "將 2–4 個表現型或「菌種 × 抗生素」組合放在同一張圖，並比較最新年度各醫院層級。"
+    },
+    "levelShort": {
+      "all": "全部",
+      "medical_center": "醫中",
+      "regional": "區域",
+      "district": "地區"
+    },
+    "settingShort": {
+      "all": "全部",
+      "co": "CO",
+      "ho": "HO"
+    },
+    "priority": {
+      "critical": "極重要",
+      "high": "高度",
+      "medium": "中度"
+    },
+    "common": {
+      "ci": "95% 信賴區間",
+      "latest": "最新",
+      "otherClass": "其他"
+    },
+    "rail": {
+      "label": "探索篩選條件",
+      "filters": "篩選",
+      "maxN": "最多 {n} 項",
+      "levels": "醫院層級",
+      "overlay": "疊加 CO／HO",
+      "overlayHint": "全國社區相關與醫療照護相關趨勢線",
+      "norm": "以首年 = 100 指數化",
+      "normHint": "比較相對變化而非絕對水準",
+      "drugLevel": "藥物層級趨勢（敏感性圖譜，2022–2024）：",
+      "compareLevels": "比較醫院層級",
+      "cmpNone": "關閉",
+      "cmpGrid": "四層級",
+      "cmpDiff": "醫中 − 地區",
+      "cellHint": "方格為不敏感比率；滑鼠移入可見檢測菌株數。空白 = 未呈現。"
+    },
+    "trend": {
+      "title": "{phenotype}",
+      "subtitle": "各醫院層級不敏感比率（%）· {setting} · {from}–{to}",
+      "compareTitle": "表現型比較：{list}",
+      "compareSubtitle": "不敏感比率（%）· {level} · {setting}",
+      "compareSubtitleNorm": "指數（區間首年 = 100）· {level} · {setting}",
+      "indexAxis": "指數",
+      "summary": "自動摘要",
+      "narrativePeak": "{name}：{firstYear} 年 {first}，於 {peakYear} 年達高峰 {peak}，{latestYear} 年為 {latest}（較 {firstYear} 年 {change} 個百分點；較高峰 {fromPeak} 個百分點）。",
+      "narrativeRising": "{name}：由 {firstYear} 年 {first} 上升至 {latestYear} 年的期間最高 {latest}（{change} 個百分點）。",
+      "narrativeFalling": "{name}：期初最高（{firstYear} 年 {first}）；{latestYear} 年為 {latest}（{change} 個百分點）。",
+      "narrativeLevels": "{year} 年以{high}最高（{highV}），{low}最低（{lowV}）。",
+      "narrativeCoHo": "{phenotype}（{year}）：醫療照護相關 {ho}，社區相關 {co}（{ratio} 倍）。",
+      "aria": "不敏感比率隨時間變化折線圖；空心標記為由圖表判讀之數值"
+    },
+    "coho": {
+      "title": "社區相關 vs 醫療照護相關",
+      "subtitle": "各多重抗藥菌不敏感比率（%），{level}，{year} 年 · 依差距排序",
+      "gap": "差距（HO − CO）",
+      "ratio": "HO／CO",
+      "keyLabel": "{phenotype}：HO {ho}，CO {co}，{year}",
+      "aria": "比較九種多重抗藥菌社區相關與醫療照護相關抗藥比率的啞鈴圖"
+    },
+    "antibiogram": {
+      "title": "累積抗生素敏感性圖譜",
+      "subtitle": "不敏感比率（I+R），{level}，{year} 年 · 全部檢體",
+      "levelTitle": "敏感性圖譜——{level}",
+      "diffTitle": "醫學中心減地區醫院",
+      "diffSubtitle": "不敏感比率差異（百分點），{year} 年 · 紅色 = 醫學中心較高",
+      "diffLegend": "醫中 − 地區（百分點）",
+      "legend": "不敏感比率",
+      "sortRows": "列排序",
+      "sortCols": "欄排序",
+      "sortOrder": "年報順序",
+      "sortClass": "依藥物類別",
+      "sortName": "依名稱",
+      "sortMean": "依平均抗藥比率",
+      "clickHint": "點選以開啟此菌種",
+      "note": "數值為年報敏感性圖譜表格之 100 − %S（精確值）。檢測菌株數少於 20 株或該藥物非 CLSI 建議用於此菌種時，方格為空白。"
+    },
+    "pathogen": {
+      "who": "WHO {p}優先",
+      "bySettingTitle": "{pathogen}：依感染來源之抗藥比率",
+      "bySpecimenTitle": "{pathogen}：依檢體之抗藥比率",
+      "barsSubtitle": "各抗生素不敏感比率（%），全國，{year} 年 · 誤差線 = 年報所列 95% 信賴區間",
+      "barsAria": "各抗生素不敏感比率分組橫條圖",
+      "slopeTitle": "敏感性圖譜變化 {from} → {to}",
+      "slopeSubtitle": "{pathogen}，{level} · 箭頭 = 變化方向（紅 ≥ +2 百分點，綠 ≤ −2 百分點）",
+      "slopeAria": "三個年度各抗生素不敏感比率變化箭頭圖",
+      "isolatesTitle": "{pathogen}：歷年分離菌株數",
+      "isolatesSubtitle": "依檢體別之臨床分離菌株數（堆疊）及全部檢體總數（折線）",
+      "isolatesAria": "依檢體別分離菌株數堆疊長條圖與總數折線",
+      "otherSpecimens": "其他檢體"
+    },
+    "compare": {
+      "title": "比較抗藥性指標",
+      "subtitle": "不敏感比率（%）· {level} · {setting} · {from}–{to}",
+      "subtitleNorm": "指數（首年 = 100）· {level} · {setting} · {from}–{to}",
+      "items": "圖上項目",
+      "item": "指標",
+      "remove": "移除 {item}",
+      "addPhenotype": "加入表現型",
+      "addPair": "加入「菌種 × 抗生素」",
+      "choose": "請選擇…",
+      "add": "加入組合",
+      "pairNote": "「菌種 × 抗生素」組合取自敏感性圖譜表格（2022–2024，全部感染來源）。",
+      "bulletTitle": "各醫院層級，最新年度",
+      "bulletSubtitle": "長條 = 全國；刻度 = 醫學中心、區域醫院、地區醫院 · {setting}",
+      "aria": "比較各抗藥性指標歷年變化之折線圖",
+      "bulletAria": "各指標最新年度依醫院層級之子彈圖"
+    },
+    "method": {
+      "title": "方法學——如何解讀這些數字",
+      "more": "完整方法學與資料來源",
+      "thas": {
+        "term": "THAS 抗藥性模組",
+        "body": "資料來自「臺灣醫療照護相關感染及抗藥性監測系統」（THAS）抗生素抗藥性管理通報模組，依疾病管制署年報（2022–2024 年版，資料年 2017–2024）公布之數值整理。"
+      },
+      "sir": {
+        "term": "醫院自行判讀 S/I/R",
+        "body": "各實驗室依其自身判讀標準通報敏感／中間／抗藥結果，並未統一 CLSI 判讀版本，因此醫院間之折點與檢驗方法差異會反映於全國數據。"
+      },
+      "ns": {
+        "term": "不敏感 = I + R",
+        "body": "敏感性圖譜數值為 100 − %S，即中間型加抗藥。多重抗藥菌表現型（如 CRKP = 碳青黴烯類不敏感克雷伯氏肺炎桿菌）依年報定義。"
+      },
+      "suppress": {
+        "term": "n < 20 不呈現",
+        "body": "檢測菌株數少於 20 株之比率，以及非 CLSI 建議用於該菌種之藥物，年報不列出，本站以空白呈現。"
+      },
+      "precision": {
+        "term": "轉錄數值之精確度",
+        "body": "表格數值為精確值；報告內文數值精確至所列小數位；由圖表判讀之數值約有 ±1–2 個百分點誤差，於圖中以空心標記呈現。"
+      },
+      "coho": {
+        "term": "社區相關 vs 醫療照護相關",
+        "body": "依 THAS 定義，門診、急診或住院前兩日採檢之菌株為社區相關（CO）；住院第三日（含）以後採檢者為醫療照護相關（HO）。"
+      },
+      "dedup": {
+        "term": "年報版本重疊",
+        "body": "同一資料年出現在多個年報版本時，優先採用較精確之數值，其次採用較新版本（歷史菌株數會隨通報醫院變動而修正）。"
+      },
+      "firstIsolate": {
+        "term": "首株原則",
+        "body": "敏感性圖譜以各醫院每位病人、每菌種、每年之首株計算（同日多筆取最差結果），以降低重複菌株偏差。"
+      }
+    }
+  },
+  "international": {
+    "filters": "比較篩選",
+    "indicator": "指標",
+    "region": "WHO 區域",
+    "allRegions": "全部 WHO 區域",
+    "dataYear": "資料年",
+    "latestAvailable": "最新可得年份",
+    "country": "國家",
+    "compareWith": "比較對象（最多 {n} 國）",
+    "glassDashboard": "WHO GLASS 儀表板",
+    "glassReport": "GLASS 2022 報告",
+    "notice": {
+      "title": "暫定比較：請先閱讀可比較性說明",
+      "body": "各國數值為依 WHO GLASS 2022 報告、GLASS 儀表板及各國監測系統整理之近似值（血流檢體，約 2021–2022 年）。臺灣非 WHO 會員、未參與 GLASS，臺灣數值由本站依疾管署 THAS 年報計算，其檢體、判讀標準與計數規則均與 GLASS 不同。",
+      "update": "如需更新各國數值，請編輯整理表",
+      "compLink": "可比較性說明"
+    },
+    "map": {
+      "title": "{indicator}：全球抗藥性比率",
+      "subtitle": "{region} · {year} · 血流檢體",
+      "legend": "顏色＝血流檢體抗藥比率（各國最新可得年份；GLASS 約 2021–2022 年，臺灣為 2024 年 THAS）。外框標記為臺灣。",
+      "noDataLegend": "無資料",
+      "noData": "此指標無資料",
+      "clickHint": "點選國家即可加入比較。",
+      "aria": "依抗藥比率著色的世界地圖，臺灣以標記突顯"
+    },
+    "bars": {
+      "title": "臺灣與世界：{indicator}",
+      "subtitle": "各國依抗藥比率排序；縱線為通報國家中位數",
+      "subtitleRank": "臺灣在 {total} 國中排第 {rank}（{value}）；縱線為通報國家中位數",
+      "median": "中位數 {value}",
+      "nCountries": "國家數",
+      "viewLabel": "長條顯示",
+      "allCountries": "全部國家",
+      "regionMedians": "僅 WHO 區域中位數"
+    },
+    "radar": {
+      "title": "十項指標的抗藥性輪廓",
+      "subtitleAbs": "臺灣與所選國家，抗藥比率以共同 0–100% 刻度呈現",
+      "subtitleRank": "臺灣與所選國家，於通報國家中的百分位排名（0＝最低、100＝最高）",
+      "scaleLabel": "刻度",
+      "abs": "抗藥比率",
+      "rank": "百分位",
+      "aria": "比較臺灣與所選國家十項抗藥性指標的雷達圖"
+    },
+    "strip": {
+      "title": "臺灣在各指標中的位置",
+      "subtitle": "每個點代表一個國家；臺灣與比較對象以顏色突顯",
+      "others": "其他國家",
+      "min": "最低",
+      "max": "最高",
+      "pct": "臺灣百分位",
+      "n": "通報國家數"
+    },
+    "toast": {
+      "added": "已將{country}加入比較",
+      "already": "{country}已在比較清單中"
+    },
+    "comp": {
+      "section": "可比較性：GLASS 與臺灣 THAS",
+      "title": "方法學差異",
+      "subtitle": "為何臺灣數值無法與 GLASS 各國數值直接比較",
+      "aspect": "面向",
+      "thasCol": "臺灣 THAS（本站）",
+      "rows": {
+        "system": {
+          "label": "監測系統",
+          "glass": "WHO 全球抗微生物製劑抗藥性與使用監測系統；各國 AMR 協調中心每年通報",
+          "thas": "疾管署「台灣醫院感染管制與抗藥性監測管理系統」（THAS）年報"
+        },
+        "scope": {
+          "label": "參與實驗室",
+          "glass": "各國國家實驗室網絡；涵蓋率與哨點選擇差異大",
+          "thas": "向 THAS 通報之醫院實驗室（2017 年 134 家 → 2024 年 329 家）"
+        },
+        "specimen": {
+          "label": "檢體",
+          "glass": "上述指標皆為血流檢體（血液培養）",
+          "thas": "報告有列出時採血液檢體；否則為全部檢體（MDRO 指標、敏感性圖譜）"
+        },
+        "unit": {
+          "label": "計數單位",
+          "glass": "血液培養陽性之病人（以病人去重複）",
+          "thas": "菌株數，依各年報之首株規則"
+        },
+        "measure": {
+          "label": "量測",
+          "glass": "抗藥（R）比率；PNSP 為非敏感",
+          "thas": "醫院通報 S/I/R；敏感性圖譜值為非敏感（I+R＝100 − %S），略高於 %R"
+        },
+        "breakpoints": {
+          "label": "判讀標準",
+          "glass": "歐洲多採 EUCAST，其他地區多採 CLSI，依各國通報",
+          "thas": "CLSI"
+        },
+        "network": {
+          "label": "通報方式",
+          "glass": "各國彙整之全國資料提交 WHO",
+          "thas": "醫院通報資料由疾管署彙整"
+        },
+        "years": {
+          "label": "年份",
+          "glass": "特定通報年（本站約 2021–2022 年）；各國最新年份不同",
+          "thas": "臺灣列採 2024 年（最新年報）"
+        },
+        "precision": {
+          "label": "本站資料精確度",
+          "glass": "依 GLASS 報告／儀表板及各國報告整理之近似值（暫定）",
+          "thas": "轉錄自報告表格、內文或圖表；圖表判讀值誤差約 ±1–2 個百分點"
+        }
+      },
+      "caveatsTitle": "注意事項",
+      "caveats": {
+        "member": "臺灣非 WHO 會員，未向 GLASS 通報；臺灣列由本站依 THAS 年報計算。",
+        "breakpoints": "THAS 採 CLSI 判讀標準；許多 GLASS／EARS-Net 國家採 EUCAST，部分菌種－藥物組合之抗藥比率可能因此不同。",
+        "unit": "THAS 百分比以菌株計；GLASS 以血液培養陽性之病人計。",
+        "nonsusceptible": "由敏感性圖譜推得之數值為非敏感（100 − %S，含中間），因此略高於 %R。",
+        "curated": "除臺灣外之各國數值為整理之近似值（約 2021–2022 年），屬暫定，請以原始來源為準。"
+      },
+      "derivTitle": "臺灣各指標數值的推導方式",
+      "derivSubtitle": "由 glass.meta.comparability 產生：各 GLASS 類指標所對應之 THAS 資料序列",
+      "basis": "THAS 序列（菌種 × 藥物）",
+      "tier": "依據",
+      "tiers": {
+        "blood": "血液檢體、全國（最接近 GLASS）",
+        "phenotype": "MDRO 指標、全部檢體（替代）",
+        "all_specimens": "敏感性圖譜、全部檢體（替代）"
+      },
+      "fallback": "替代來源",
+      "yes": "是",
+      "no": "否"
+    }
+  },
+  "amu": {
+    "filters": "抗生素使用量篩選",
+    "metricLabel": "量測方式",
+    "metric": {
+      "DID": "每千住院人日 DDD",
+      "share": "占比（%）"
+    },
+    "classesLabel": "抗生素類別",
+    "class": "類別",
+    "awareLabel": "AWaRe 分類",
+    "aware": {
+      "Access": "可用類（Access）",
+      "Watch": "管制類（Watch）",
+      "Reserve": "保留類（Reserve）",
+      "Unclassified": "其他／未分類"
+    },
+    "notice": {
+      "title": "模型估計值，並非疾管署官方數據",
+      "body": "本站尚未收錄疾管署「抗生素使用量監視年報」。本頁所有數字皆為依疾管署已發表趨勢建立之暫定模型估計，可用於探索各項圖表，請勿引用為實際使用量。",
+      "how": "如需以官方數據取代模型，請將年報 PDF 放入",
+      "cdcLink": "疾管署監測年報"
+    },
+    "sectionDeeper": "類別組成與使用量－抗藥性關係",
+    "kpi": {
+      "title": "住院抗生素使用量概覽",
+      "subtitle": "{level} · {year} · 每千住院人日 DDD",
+      "metric": "指標",
+      "total": "總使用量（J01）",
+      "totalCaption": "全身性抗菌劑合計",
+      "accessShare": "可用類占比",
+      "watchShare": "管制類占比",
+      "reserveShare": "保留類占比",
+      "carb": "碳青黴烯類",
+      "targetCaption": "WHO 2030 目標 ≥ {target}%"
+    },
+    "target": {
+      "title": "WHO 2030 目標：可用類 ≥70%",
+      "subtitle": "各醫院層級最新年度可用類占住院總使用量之比率（目標線 {target}%）",
+      "line": "目標 {target}%",
+      "short": "WHO 目標",
+      "gap": "與目標差距"
+    },
+    "stacked": {
+      "title": "各類抗生素使用量趨勢",
+      "titleShare": "類別組成趨勢（100% 占比）",
+      "subtitle": "{level} · 已選 {n}／{total} 類 · 色系依 AWaRe 分類",
+      "sumSelected": "所選類別合計",
+      "soloHint": "僅顯示此 AWaRe 分類（再點一次還原）"
+    },
+    "awareBars": {
+      "title": "各醫院層級 AWaRe 組成",
+      "subtitle": "每年住院 DDD 之 AWaRe 分類占比；橫線為 WHO 可用類 70% 目標"
+    },
+    "slope": {
+      "title": "{group}占比：起訖年比較",
+      "subtitle": "{span} · 每條線代表一個醫院層級",
+      "groupLabel": "AWaRe 分類"
+    },
+    "treemap": {
+      "title": "{year} 年類別組成",
+      "subtitle": "{level} · 面積＝DID（合計 {total}）· 顏色＝AWaRe 分類",
+      "share": "占總量比率",
+      "aria": "依使用量大小、以 AWaRe 分類著色的抗生素類別矩形樹狀圖"
+    },
+    "scatter": {
+      "title": "使用量與抗藥性（探索性）",
+      "subtitle": "每點代表某醫院層級某一年；軌跡連接各年份",
+      "exploratory": "探索性分析",
+      "caveat": "生態相關不等於因果：使用量為暫定模型估計、抗藥性為 THAS 實際資料，兩者皆受病人組成、檢驗與通報涵蓋率影響。",
+      "pairLabel": "組合",
+      "pairs": {
+        "crkp": "碳青黴烯類 × CRKP",
+        "crab": "碳青黴烯類 × CRAB",
+        "fq": "氟喹諾酮類 × 大腸桿菌"
+      },
+      "x": {
+        "crkp": "碳青黴烯類使用量（DID）",
+        "crab": "碳青黴烯類使用量（DID）",
+        "fq": "氟喹諾酮類使用量（DID）"
+      },
+      "y": {
+        "crkp": "CRKP（抗藥比率 %）",
+        "crab": "CRAB（抗藥比率 %）",
+        "fq": "大腸桿菌對 ciprofloxacin 非敏感（%）"
+      }
+    },
+    "method": {
+      "button": "方法說明",
+      "title": "抗生素使用量如何計算",
+      "dddTitle": "DDD 與 DID",
+      "ddd": "每日定義劑量（Defined Daily Dose）：由 WHO 藥物統計方法學合作中心訂定，成人主要適應症之平均每日維持劑量。",
+      "did": "每千住院人日之 DDD 數：醫院（住院）使用密度的標準指標；全人口資料則使用每千人每日 DDD。",
+      "didFormula": "DID ＝（總使用公克數 ÷ 每 DDD 公克數）÷ 住院人日 × 1,000。DDD 讓不同藥物可以比較，但不等於實際處方劑量（如兒科或腎功能調整劑量）。",
+      "awareTitle": "WHO AWaRe 分類（2023）",
+      "aware": "WHO AWaRe 抗生素手冊依抗藥性風險將抗生素分組，以利抗生素管理：",
+      "awareAccess": "常見感染的第一或第二線用藥，抗藥性風險較低。",
+      "awareWatch": "抗藥性風險較高，為抗生素管理的優先標的。",
+      "awareReserve": "用於確診或疑似多重抗藥菌感染的最後防線藥物。",
+      "target": "聯合國大會（2024）與 WHO 第 13 期工作總規劃訂定目標：2030 年前，抗生素總使用量中至少 70% 應為可用類（Access）。",
+      "atcTitle": "本頁 ATC 類別",
+      "provTitle": "關於這些數字",
+      "prov": "此資料集為暫定模型，數量級與趨勢合理，目的是在官方年報轉錄前讓各項圖表可正常運作；其資料封包與每張圖表皆標示為暫定。",
+      "provHow": "將官方「抗生素使用量監視年報」PDF 放入以下資料夾並重新執行資料匯入流程，即可取代模型：",
+      "linksTitle": "參考資料",
+      "linkAware": "WHO AWaRe 分類 2023",
+      "linkAtc": "WHO ATC/DDD 索引",
+      "linkCdc": "疾管署監測年報"
+    }
+  },
+  "hai": {
+    "filters": "醫療照護相關感染篩選",
+    "icu": "加護病房類型",
+    "metric": "指標",
+    "unit": "單位",
+    "notice": {
+      "title": "模型估計值，並非 TNIS 官方數據",
+      "body": "本站尚未收錄疾管署「醫療照護相關感染監視年報」（TNIS）。本頁所有數字皆為依疾管署已發表趨勢建立之暫定模型估計，可用於探索圖表，請勿引用為實際感染率。",
+      "how": "如需以官方數據取代模型，請將年報 PDF 放入",
+      "cdcLink": "疾管署 TNIS 年報"
+    },
+    "short": {
+      "hai_density": "感染密度",
+      "bsi_density": "血流感染",
+      "uti_density": "泌尿道感染",
+      "pneu_density": "肺炎",
+      "clabsi": "CLABSI",
+      "cauti": "CAUTI",
+      "vap": "VAP",
+      "central_line_util": "中心導管使用率",
+      "urinary_cath_util": "導尿管使用率",
+      "ventilator_util": "呼吸器使用率"
+    },
+    "sites": {
+      "all": "全部部位",
+      "bsi": "血流感染",
+      "uti": "泌尿道感染",
+      "pneu": "肺炎"
+    },
+    "kpi": {
+      "title": "加護病房感染概覽",
+      "subtitle": "{level} · {icu} · {year} 年",
+      "hai_density": "醫療照護相關感染密度",
+      "clabsi": "CLABSI 中心導管血流感染",
+      "cauti": "CAUTI 導尿管泌尿道感染",
+      "vap": "VAP 呼吸器相關肺炎"
+    },
+    "trend": {
+      "title": "各類加護病房之{metric}",
+      "subtitle": "{level} · {unit} · 灰線＝全部加護病房",
+      "yLabel": "縱軸",
+      "sharedY": "共用",
+      "freeY": "各自"
+    },
+    "util": {
+      "title": "醫療裝置使用率",
+      "subtitle": "{level} · {icu} · 裝置使用人日 ÷ 住院人日"
+    },
+    "heat": {
+      "title": "加護病房類型 × 指標（{year}）",
+      "subtitleRaw": "{level} · 原始數值；顏色於各欄內縮放（單位不同）",
+      "subtitleZ": "{level} · 相對各欄加護病房平均值之 z 分數（藍＝較低、紅＝較高）",
+      "modeLabel": "著色",
+      "raw": "原始值",
+      "z": "Z 分數",
+      "zLabel": "z 分數"
+    },
+    "sectionPathogens": "主要致病菌",
+    "districtFallback": "本資料集未提供地區醫院之致病菌排名，以下顯示全部醫院。",
+    "bump": {
+      "title": "致病菌排名變化：{site}",
+      "subtitle": "{level} · 依占醫療照護相關感染菌株比率之前 10 名 · 滑過可突顯菌種",
+      "rank": "名次",
+      "share": "占菌株比率",
+      "organism": "菌種",
+      "siteLabel": "感染部位"
+    },
+    "share": {
+      "title": "各感染部位致病菌組成（{year}）",
+      "subtitle": "{level} · 占醫療照護相關感染菌株比率；其餘為其他菌種",
+      "other": "其他菌種"
+    },
+    "links": {
+      "title": "這些菌種的抗藥性如何？",
+      "hint": "全部感染部位之主要菌種，開啟其 THAS 抗藥性資料（實際數據）",
+      "share": "占感染菌株 {pct}",
+      "pheno": "全國 {value}（{year}）",
+      "noPheno": "無代表性 MDRO 指標",
+      "notInThas": "THAS 抗藥性表未涵蓋",
+      "cta": "查看{org}抗藥性",
+      "unavailable": "無抗藥性資料"
+    },
+    "method": {
+      "button": "方法說明",
+      "title": "醫療照護相關感染如何計算",
+      "tnisTitle": "TNIS 監測",
+      "tnis": "台灣醫院感染管制與抗藥性監測管理系統（TNIS）蒐集參與醫院加護病房之感染事件，定義參考美國 CDC NHSN。",
+      "defsTitle": "定義",
+      "density": "加護病房每千住院人日之醫療照護相關感染人次（所有感染部位）。",
+      "clabsi": "每千中心導管使用人日之中心導管相關血流感染數。",
+      "cauti": "每千導尿管使用人日之導尿管相關泌尿道感染數。",
+      "vap": "每千呼吸器使用人日之呼吸器相關肺炎（或呼吸器相關事件）數。",
+      "dur": "裝置使用率＝裝置使用人日 ÷ 住院人日（0–1）。",
+      "denomTitle": "分母",
+      "denom": "感染密度以住院人日為分母；裝置相關感染率以裝置使用人日為分母，因此裝置較少的單位可能感染人數少但感染率高，請搭配使用率一併判讀。",
+      "sirTitle": "SIR",
+      "sir": "標準化感染比（實際 ÷ 預期感染數，依單位類型與醫院特性做風險校正）是 NHSN 建議的比較基準。因模型資料不含預期感染數，本頁未呈現。",
+      "provTitle": "關於這些數字",
+      "prov": "hai 與 hai_pathogens 資料集為暫定模型，數量級與趨勢合理，目的是在官方年報轉錄前讓各項圖表可正常運作。",
+      "provHow": "將官方「醫療照護相關感染監視年報」PDF 放入以下資料夾並重新執行資料匯入流程，即可取代模型：",
+      "linksTitle": "參考資料",
+      "linkCdc": "疾管署監測年報",
+      "linkNhsn": "美國 CDC NHSN 病人安全定義"
+    }
+  },
   "app": {
     "name": "TW-AMR Watch",
     "fullName": "臺灣抗藥性監測儀表板",
@@ -223,7 +820,222 @@
     "title": "AMR 小幫手",
     "placeholder": "詢問抗藥性趨勢、抗生素或名詞定義…",
     "comingSoon": "小幫手準備中，將以離線知識庫回答臺灣抗藥性資料相關問題。",
-    "send": "送出"
+    "send": "送出",
+    "launcherTooltip": "詢問臺灣抗藥性數據（可離線使用）",
+    "aiBadge": "AI",
+    "loading": "正在載入監測資料…",
+    "unsure": "我不太確定您想問的是什麼。以下是可能相關的主題：",
+    "fallback": "我目前無法回答這個問題。您可以試著問數據問題，例如「2024 年 CRKP 在醫學中心多少？」，或名詞解釋，例如「CRAB 是什麼？」。",
+    "paren": "（{x}）",
+    "sep": "，",
+    "listSep": "、",
+    "lv": {
+      "all": "全國",
+      "medical_center": "醫學中心",
+      "regional": "區域醫院",
+      "district": "地區醫院"
+    },
+    "lvn": {
+      "all": "全國",
+      "medical_center": "醫學中心",
+      "regional": "區域醫院",
+      "district": "地區醫院"
+    },
+    "st": {
+      "co": "社區相關感染",
+      "ho": "醫療相關感染"
+    },
+    "stShort": {
+      "co": "社區相關（CO）",
+      "ho": "醫療相關（HO）"
+    },
+    "sp": {
+      "blood": "血液檢體",
+      "urine": "尿液檢體",
+      "sputum": "痰液檢體",
+      "pus": "膿／傷口檢體",
+      "stool": "糞便檢體"
+    },
+    "prec": {
+      "table": "數值取自年報敏感性圖譜表格（不敏感比率 = 100 − 敏感百分比）。",
+      "text": "數值為年報內文明列。",
+      "chart_estimate": "此值由年報圖表判讀，誤差約 ±1–2 個百分點。",
+      "chartShort": "由年報圖表判讀（約 ±1–2 個百分點）",
+      "glassShort": "暫定整理估計，跨國不可直接比較"
+    },
+    "basis": {
+      "blood": "全國血液檢體",
+      "fallback": "全部檢體的多重抗藥菌指標（年報未公布血液數值）",
+      "unknown": "最接近的臺灣指標",
+      "mixed": "血液檢體或最接近的指標"
+    },
+    "ans": {
+      "source": "資料來源：疾管署《臺灣抗生素抗藥性監視年報》{report} 年版。",
+      "drugName": "{pathogen}對 {antibiotic} 的抗藥性",
+      "value": "{year} 年{where}的 **{name}** 為 **{value}**。",
+      "isolatesTested": "（共檢測 {n} 株）",
+      "deltaUp": "較 {prevYear} 年（{prev}）上升 {delta} 個百分點。",
+      "deltaDown": "較 {prevYear} 年（{prev}）下降 {delta} 個百分點。",
+      "deltaFlat": "與 {prevYear} 年（{prev}）持平。",
+      "trend": "{where}的 **{name}** 由 {y0} 年的 {v0} 變為 {y1} 年的 **{v1}**（{delta} 個百分點）{peak}。",
+      "peak": "，最高點為 {year} 年的 {value}",
+      "compareYears": "{where}的 **{name}**：{y0} 年為 {v0}，{y1} 年為 **{v1}**（{delta} 個百分點）。",
+      "rankLevels": "{year} 年 **{name}**{extra}以**{top}**最高（{topValue}），其次為{rest}。",
+      "nationalRef": "全國為 {value}。",
+      "item": "{label} {value}",
+      "labelYear": "{label}（{year}）",
+      "bySetting": "{year} 年{where}的 **{name}**：醫療相關感染（HO）為 **{ho}**，社區相關感染（CO）為 **{co}**{ratio}。",
+      "ratio": "，HO 約為 CO 的 {x} 倍",
+      "profile": "{year} 年{where}的 **{pathogen}** 不敏感比率最高的藥物為 {top}；最低的為 {low}。",
+      "keyPheno": "其重點抗藥指標 {pheno} 在 {year} 年為 {value}。",
+      "notAvailableYear": "資料中沒有 {year} 年的 {name}（可用年份：{range}），以下改用 {used} 年。",
+      "notAvailableYears": "{years} 年沒有資料（可用年份：{range}）。",
+      "rangeClamped": "資料僅涵蓋 {range} 年。",
+      "relaxed": "此組合沒有直接資料，改用{where}的數值。",
+      "noData": "我理解您的問題，但年報中沒有 {name} 在這些條件下的資料。相關主題：",
+      "isoValue": "{year} 年{where}通報的 **{organism}** 菌株數為 **{count}** 株{rank}。",
+      "isoRank": "（排名第 {rank}）",
+      "isoDelta": "較 {prevYear} 年（{prev} 株）變化 {pct}。",
+      "isoTrend": "{where}通報的 **{organism}** 菌株數由 {y0} 年的 {c0} 株變為 {y1} 年的 **{c1}** 株（{pct}）。",
+      "isoTop": "{year} 年{where}菌株數最多的菌種：{list}。",
+      "isoNote": "菌株數為參與 THAS 通報醫院的通報量，通報醫院數由 2017 年的 134 家增至 2024 年的 329 家，解讀增減時請留意。",
+      "allOrganisms": "全部菌種",
+      "glassCaveat": "國際比較數值為暫定的整理估計；臺灣數值由本站年報資料推導（{basis}）。各國檢體與去重規則不同，請謹慎比較。",
+      "glassCompare": "**{indicator}**：臺灣 **{twn}**（{twnYear}），{others}。",
+      "glassHigher": "臺灣比{country}高 {delta} 個百分點。",
+      "glassLower": "臺灣比{country}低 {delta} 個百分點。",
+      "glassRank": "在 {n} 個有資料的國家／地區中，臺灣的 **{indicator}**（{twn}）由高至低排名第 {rank}。最高為 {top}。",
+      "glassMissing": "{country}沒有 {indicator} 的資料。",
+      "glassPairIntro": "臺灣與{country}在 {n} 項血流感染抗藥性指標的比較：",
+      "glassPairItem": "{indicator}：臺灣 {twn}，{country} {other}"
+    },
+    "ct": {
+      "trend": "{name}｜{where}",
+      "byLevel": "{name} 各層級趨勢{extra}",
+      "rank": "{name} 各層級比較（{year}）",
+      "bySetting": "{name}：醫療相關 vs 社區相關｜{where}",
+      "profile": "{name} 各藥物不敏感比率（{year}）",
+      "glass": "{indicator}：臺灣與各國",
+      "glassPair": "臺灣 vs {country}（血流感染）",
+      "isoTop": "{year} 年菌株數前十名",
+      "isoTrend": "{organism} 菌株數｜{where}",
+      "isolates": "菌株數"
+    },
+    "chip": {
+      "rankLevels": "{name} 哪個層級最高？",
+      "trend": "{name} 歷年趨勢",
+      "bySetting": "{name} 社區 vs 醫療相關感染",
+      "vsJapan": "臺灣的 {name} 跟日本比",
+      "vsCountry": "臺灣的 {name} 跟{country}比",
+      "what": "{name} 是什麼？",
+      "isolates": "{name} 菌株數趨勢",
+      "profile": "{name} 的抗藥性概況",
+      "glassRank": "臺灣的 {name} 國際排名",
+      "isoTop": "菌株數前十名的菌種",
+      "isoTotal": "總菌株數趨勢"
+    },
+    "link": {
+      "explorer": "在抗藥性探索器開啟",
+      "international": "在國際比較開啟",
+      "isolates": "查看菌株數",
+      "related": "開啟相關頁面"
+    },
+    "topics": {
+      "data": "抗藥性數據",
+      "compare": "國際比較",
+      "counts": "菌株數",
+      "concepts": "觀念與感染管制",
+      "site": "網站使用"
+    },
+    "q": {
+      "crkpMc": "2024 年 CRKP 在醫學中心多少？",
+      "mrsaHo": "MRSA 醫療相關感染的趨勢",
+      "ecoCip": "大腸桿菌對 ciprofloxacin 的抗藥性",
+      "crabLevel": "CRAB 哪個層級最高？",
+      "vreYears": "比較 VRE 2017 和 2024",
+      "crkpSetting": "CRKP 社區 vs 醫療相關感染",
+      "crabJapan": "台灣的 CRAB 跟日本比",
+      "mrsaWorld": "臺灣的 MRSA 國際排名",
+      "twnKor": "台灣跟韓國比較",
+      "isoTotal": "2024 年總菌株數是多少？",
+      "isoTop": "2024 年菌株數前十名的菌種",
+      "ecoBlood": "大腸桿菌血液檢體菌株數趨勢",
+      "whatCrab": "CRAB 是什麼？",
+      "carbapenemase": "KPC、NDM、OXA-48 有什麼不同？",
+      "aware": "AWaRe 是什麼？",
+      "contact": "CRAB、CRE、VRE 需要接觸隔離嗎？",
+      "download": "如何下載資料？",
+      "api": "有沒有 API？",
+      "embed": "如何嵌入圖表到醫院網站？",
+      "provisional": "暫定資料是什麼意思？"
+    },
+    "ui": {
+      "offline": "離線模式",
+      "offlineHint": "答案來自內建知識庫與儀表板資料，完全在您的瀏覽器中運算。可在「設定」加入您自己的 Anthropic API 金鑰，以獲得更自由的回答。",
+      "upgrade": "升級",
+      "claude": "Claude 模式",
+      "claudeHint": "答案由 Claude（{model}）依據儀表板提供的事實撰寫，金鑰僅存在此瀏覽器。",
+      "settings": "小幫手設定",
+      "clear": "清除對話",
+      "clearDone": "已清除對話",
+      "copy": "複製答案",
+      "copied": "已複製答案",
+      "share": "分享這個答案",
+      "shareX": "分享到 X",
+      "shareThreads": "分享到 Threads",
+      "shareFacebook": "分享到 Facebook",
+      "shareLine": "分享到 LINE",
+      "copyLink": "複製連結",
+      "linkCopied": "已複製連結",
+      "stop": "停止",
+      "thinking": "思考中…",
+      "welcomeTitle": "詢問臺灣的抗藥性問題",
+      "welcomeBody": "我會以疾管署年報（2017–2024）的真實數據回答，附上小圖表與探索器連結。試試看：",
+      "you": "您",
+      "assistant": "小幫手",
+      "viaOffline": "離線引擎",
+      "viaClaude": "由 Claude 撰寫",
+      "suggested": "建議問題",
+      "openFull": "開啟完整頁面",
+      "followUps": "延伸問題",
+      "messages": "對話內容",
+      "composerHint": "Enter 送出 · Shift+Enter 換行",
+      "chartFallback": "小圖表",
+      "showTopics": "顯示建議問題",
+      "hideTopics": "隱藏建議問題",
+      "shareText": "TW-AMR Watch 問答小幫手：{text}",
+      "moreActions": "答案操作"
+    },
+    "settings": {
+      "title": "Claude 模式（選用）",
+      "intro": "貼上您自己的 Anthropic API 金鑰，即可由 Claude（{model}）撰寫回答。所有數字仍由小幫手從儀表板資料計算後提供給模型，確保引用真實數據。",
+      "keyLabel": "Anthropic API 金鑰",
+      "keyPlaceholder": "sk-ant-…",
+      "save": "儲存金鑰",
+      "forget": "忘記金鑰",
+      "saved": "金鑰已儲存在此瀏覽器",
+      "forgotten": "已移除金鑰",
+      "privacy": "隱私說明：金鑰只存放在此瀏覽器的 localStorage（twamr.anthropicKey），並僅由您的瀏覽器直接傳送至 api.anthropic.com；您的問題與相關儀表板事實會一併傳送。請避免在共用電腦使用，也絕不要輸入可識別病人的資訊。",
+      "invalid": "這看起來不像 Anthropic API 金鑰（應以「sk-ant-」開頭）。",
+      "show": "顯示",
+      "hide": "隱藏",
+      "getKey": "前往 Anthropic Console 取得金鑰",
+      "active": "Claude 模式已啟用",
+      "inactive": "目前為離線模式，未儲存金鑰",
+      "close": "完成"
+    },
+    "err": {
+      "auth": "Claude 拒絕了此 API 金鑰（401），請在設定中檢查或更換。",
+      "permission": "此 API 金鑰無權使用 {model}（403）。",
+      "rateLimit": "此金鑰目前被 Claude 限流（429），請稍後再試。",
+      "overloaded": "Claude 暫時忙碌，請稍後再試。",
+      "network": "無法連線到 Anthropic API（網路問題或瀏覽器／CORS 阻擋）。",
+      "badRequest": "請求被拒絕（{detail}）。",
+      "refusal": "Claude 婉拒回答這個問題。",
+      "generic": "Claude 回傳錯誤（{detail}）。",
+      "fallbackNote": "以下改為顯示離線答案：",
+      "truncated": "（回答已截斷）"
+    }
   },
   "notFound": {
     "title": "找不到頁面",
@@ -276,6 +1088,418 @@
       "eyebrow": "小幫手",
       "title": "AMR 問答",
       "subtitle": "在瀏覽器端運作的小幫手，回答臺灣抗藥性監測相關問題，並連結到對應圖表。"
+    }
+  },
+  "data": {
+    "nav": {
+      "label": "本頁區段",
+      "downloads": "資料下載",
+      "api": "API 瀏覽器",
+      "embed": "嵌入產生器",
+      "cite": "引用與授權"
+    },
+    "dl": {
+      "title": "資料集下載",
+      "lead": "每個資料集都提供 JSON、CSV 與 JSON Schema。請先確認資料來源標籤：「轉錄自年報」為取自疾管署報告，「暫定估計」不是官方數據。",
+      "records": "筆數",
+      "years": "資料年",
+      "size": "檔案大小",
+      "json": "下載 JSON",
+      "csv": "下載 CSV",
+      "schema": "結構",
+      "copyUrl": "複製 API 網址",
+      "kind": {
+        "real": "轉錄自年報",
+        "realHint": "數值轉錄自疾管署《抗生素抗藥性監視年報》，每筆皆標示精確度。",
+        "provisional": "暫定估計",
+        "provisionalHint": "依已發表趨勢建模之估計值，不是官方數據。",
+        "content": "整理內容",
+        "contentHint": "站內整理的參考內容（非監測數據）。"
+      },
+      "everything": {
+        "title": "一次下載全部",
+        "body": "整個儲存庫（原始碼、所有資料檔與轉錄用 CSV）可從 GitHub 下載為單一 zip 檔。",
+        "zip": "下載 zip（main 分支）",
+        "repo": "前往 GitHub 儲存庫"
+      },
+      "pdfs": {
+        "title": "來源報告 PDF",
+        "body": "三份疾管署年報 PDF 原檔，位於儲存庫的 raw/ 資料夾，附 SHA-256 以供核對。",
+        "edition": "{year} 年版（PDF）"
+      }
+    },
+    "ds": {
+      "meta": {
+        "name": "站台中繼資料",
+        "desc": "最新資料年、可用年份、暫定資料集清單，以及已匯入 PDF 的 SHA-256。"
+      },
+      "resistance": {
+        "name": "抗藥性（菌種 × 抗生素）",
+        "desc": "依年份、菌種、抗生素、醫院層級、感染起源與檢體的抗藥率，含多重抗藥菌（MDRO）趨勢與每筆精確度。"
+      },
+      "isolates": {
+        "name": "菌株數",
+        "desc": "各菌種檢出株數與排名（表 2-x），以及多重抗藥菌在各院別、社區／院內起源的株數。"
+      },
+      "antibiotic_use": {
+        "name": "抗生素使用量",
+        "desc": "住院抗生素使用密度（每千住院人日 DDD），依藥物類別、院別與 WHO AWaRe 分類。暫定估計。"
+      },
+      "hai": {
+        "name": "醫療照護相關感染",
+        "desc": "感染密度、CLABSI／CAUTI／VAP 與裝置使用率，依院別與加護病房類型。暫定估計。"
+      },
+      "hai_pathogens": {
+        "name": "HAI 主要致病菌",
+        "desc": "各感染部位（血流、泌尿道、肺炎）前十大致病菌排名。暫定估計。"
+      },
+      "glass": {
+        "name": "國際比較（WHO GLASS）",
+        "desc": "41 個國家加臺灣的十項血流感染抗藥指標；臺灣數值由真實年報資料計算。外部數值為近似的暫定值。"
+      },
+      "links": {
+        "name": "資源目錄",
+        "desc": "60 個國際與臺灣的 AMR／AMU／HAI 儀表板、資料入口與指引連結（三語）。"
+      },
+      "glossary": {
+        "name": "名詞解釋",
+        "desc": "70 則 AMR 術語，附三語定義與相關詞彙。"
+      },
+      "kb": {
+        "name": "問答知識庫",
+        "desc": "AMR 問答小幫手使用的問答條目（三語）。"
+      }
+    },
+    "api": {
+      "title": "靜態資料 API",
+      "lead": "不需金鑰、不需登入的唯讀靜態檔案 API（v1）。從左側挑選端點，選擇參數後直接試打，並複製 curl、JavaScript、Python 或 R 範例。",
+      "version": "版本",
+      "endpoints": "端點",
+      "filter": "篩選端點…",
+      "noSummary": "此端點沒有說明。",
+      "tryIt": "試打",
+      "idle": "按「試打」取得回應。",
+      "first50": "陣列只顯示前 50 筆。",
+      "moreItems": "… 另有 {n} 筆未顯示",
+      "snippets": "程式範例",
+      "count": "共 {n} 個端點。完整描述見 openapi.yaml。",
+      "groups": {
+        "index": "目錄",
+        "schema": "結構",
+        "spec": "規格",
+        "meta": "站台中繼資料",
+        "resistance": "抗藥性",
+        "isolates": "菌株數",
+        "antibiotic_use": "抗生素使用量（暫定）",
+        "hai": "醫療照護相關感染（暫定）",
+        "hai_pathogens": "HAI 致病菌（暫定）",
+        "glass": "國際比較（暫定）",
+        "links": "資源目錄",
+        "glossary": "名詞解釋",
+        "kb": "問答知識庫"
+      },
+      "param": {
+        "pathogen": "菌種代碼",
+        "phenotype": "表型（MDRO）代碼",
+        "year": "年份",
+        "indicator": "GLASS 指標",
+        "country": "國家（ISO3）",
+        "name": "資料集名稱"
+      },
+      "facts": {
+        "cors": {
+          "t": "CORS 開放",
+          "d": "GitHub Pages 會送出 Access-Control-Allow-Origin: *，任何網頁都能直接 fetch()。"
+        },
+        "caching": {
+          "t": "快取",
+          "d": "檔案僅在內容改變時更新；GitHub Pages 約快取 10 分鐘。可用 generatedAt 判斷是否有新版本。"
+        },
+        "versioning": {
+          "t": "版本管理（v1）",
+          "d": "v1 路徑保持穩定：可新增欄位，但不會更名或移除既有欄位。"
+        },
+        "licence": {
+          "t": "授權與引用",
+          "d": "請引用各封包 sources[] 列出的原始來源（疾管署年報）並註明 TW-AMR Watch 為轉錄者。授權細節見下方「引用與授權」。"
+        }
+      }
+    },
+    "embed": {
+      "title": "嵌入產生器",
+      "lead": "挑選圖表與參數，右側會即時預覽。複製一行 <script> 或 <iframe> 貼到醫院網站、院內入口或簡報即可。",
+      "formLabel": "嵌入圖表設定",
+      "chart": "圖表",
+      "showsOn": "對應頁面：{page}",
+      "yearFrom": "起始年",
+      "yearTo": "結束年",
+      "lang": "語言",
+      "theme": "主題",
+      "themeAuto": "自動",
+      "compact": "精簡模式（較小邊距）",
+      "height": "初始高度",
+      "preview": "即時預覽",
+      "previewTitle": "嵌入圖表預覽",
+      "autoHeight": "自動高度 {px}px",
+      "scriptTitle": "一行 <script> 嵌入碼",
+      "scriptBody": "載入器會把自己換成自動調整高度的 iframe，建議優先使用。",
+      "iframeTitle": "<iframe> 嵌入碼",
+      "iframeBody": "網站不允許執行腳本時使用。高度需自行設定，或用下方的 postMessage 自動調整。",
+      "heightTitle": "自動高度（postMessage）",
+      "heightBody": "嵌入頁在內容高度改變時，會向外層頁面送出 { type: 'twamr:resize', id, height }。embed.js 已自動處理；自行使用 iframe 時可加入以下監聽。",
+      "useTitle": "醫院使用情境",
+      "use": {
+        "intranet": {
+          "t": "院內入口網站",
+          "d": "在感染管制專區放上全國 CRAB／CRKP／MRSA 趨勢，對照本院數據。"
+        },
+        "committee": {
+          "t": "感染管制委員會簡報",
+          "d": "以固定 level／years 參數嵌入，會議前自動更新至最新年報。"
+        },
+        "stewardship": {
+          "t": "抗生素管理（AMS）教育",
+          "d": "在教學頁面放入菌種 × 抗生素熱圖，協助處方者了解經驗性治療選擇。"
+        },
+        "public": {
+          "t": "對外公開網頁",
+          "d": "醫院官網或衛教頁面可嵌入重點指標；請保留圖卡上的來源與暫定標示。"
+        }
+      },
+      "provNote": "嵌入圖卡與站內相同：暫定資料集會顯示「暫定」標籤，圖表判讀值會顯示精確度標籤，請勿移除。",
+      "charts": {
+        "resistance-trend": "抗藥率趨勢（菌種 × 抗生素）",
+        "resistance-heatmap": "抗藥率熱圖（菌種 × 抗生素）",
+        "kpi-strip": "重點指標列（MRSA／CRKP／CRAB／VRE）"
+      }
+    },
+    "cite": {
+      "title": "引用與授權",
+      "lead": "使用本站圖表或資料時，請同時引用儀表板與原始的疾管署報告。",
+      "dashboard": "引用本儀表板",
+      "dashboardBody": "建議格式（APA 風格）：",
+      "dashboardText": "TW-AMR Watch 貢獻者（{year}）。TW-AMR Watch：臺灣抗生素抗藥性監測儀表板［資料視覺化］。{url}（存取日期：{date}）",
+      "cdc": "引用疾管署報告",
+      "cdcBody": "數值出自下列年報時，請引用該版年報：",
+      "cdcText": "{publisher}（{year}）。{title} {year} ［年度報告］。",
+      "cdcPublisher": "衛生福利部疾病管制署",
+      "licence": "資料授權聲明",
+      "tbc": "待確認",
+      "licenceData": "原始報告內容 © 衛生福利部疾病管制署（Taiwan CDC）。本站轉錄的數值仍適用原始來源的使用條款，再利用時請標示出處。",
+      "licenceCode": "儀表板原始碼採 MIT 授權（README 所述）。儲存庫尚未附上 LICENSE 檔，正式授權條文待確認。",
+      "licenceProv": "暫定資料集（抗生素使用量、HAI、國際比較）為模型估計，請勿當作官方數據引用。",
+      "licenceNotOfficial": "TW-AMR Watch 為獨立專案，並非疾管署或 WHO 的官方出版品，也不構成醫療建議。"
+    }
+  },
+  "resources": {
+    "opensNew": "在新分頁開啟",
+    "tags": "標籤",
+    "cat": {
+      "amr": "抗藥性",
+      "amu": "抗生素使用",
+      "hai": "院內感染",
+      "one-health": "One Health",
+      "data-portal": "資料入口",
+      "guideline": "指引與政策"
+    },
+    "region": {
+      "taiwan": "臺灣",
+      "global": "全球",
+      "western-pacific": "西太平洋",
+      "europe": "歐洲",
+      "americas": "美洲",
+      "south-east-asia": "東南亞",
+      "africa": "非洲"
+    },
+    "col": {
+      "name": "名稱",
+      "org": "機構",
+      "category": "類別",
+      "region": "地區",
+      "domain": "網域"
+    },
+    "disclaimer": "外部連結並未自動驗證，內容與網址可能已變更。",
+    "report": "回報失效連結",
+    "featured": "精選",
+    "taiwan": "臺灣",
+    "taiwanLead": "疾管署的監測入口、開放資料與國家行動計畫。",
+    "all": "完整目錄",
+    "search": "搜尋資源",
+    "searchPlaceholder": "搜尋名稱、說明或標籤…",
+    "view": "檢視方式",
+    "viewCards": "卡片",
+    "viewTable": "速查表",
+    "category": "類別",
+    "regionLabel": "地區",
+    "showing": "顯示 {n} / {total} 項",
+    "noMatch": "沒有符合的資源",
+    "noMatchBody": "請試著縮短關鍵字，或清除類別與地區篩選。",
+    "tableCaption": "AMR 資源速查表"
+  },
+  "about": {
+    "nav": {
+      "label": "方法說明目錄"
+    },
+    "toc": {
+      "purpose": "目的與對象",
+      "sources": "資料來源",
+      "produced": "數值如何產生",
+      "definitions": "定義",
+      "provisional": "暫定資料集",
+      "glossary": "名詞解釋",
+      "changelog": "更新紀錄",
+      "credits": "致謝與聯絡",
+      "accessibility": "無障礙聲明",
+      "privacy": "隱私"
+    },
+    "purpose": {
+      "lead": "TW-AMR Watch 把疾管署公開的年度抗生素抗藥性監視報告，整理成可互動、可下載、可嵌入的儀表板，讓第一線人員不必翻 PDF 就能看到趨勢。",
+      "body": "本站同時提供與 WHO GLASS 的國際比較、抗生素使用量與醫療照護相關感染的版面、靜態資料 API，以及三語的 AMR 問答小幫手。每個數值都標示來源與精確度，以便判讀與引用。",
+      "audienceTitle": "主要使用者",
+      "audience": {
+        "ic": {
+          "t": "感染管制人員",
+          "d": "掌握全國與各院別基準，評估院內數據。"
+        },
+        "micro": {
+          "t": "臨床微生物師",
+          "d": "查閱菌種 × 抗生素敏感性圖譜與趨勢。"
+        },
+        "id": {
+          "t": "感染科醫師與藥師",
+          "d": "為經驗性治療與抗生素管理提供依據。"
+        },
+        "epi": {
+          "t": "醫院流行病學專家",
+          "d": "取得 JSON／CSV 與 API 做進一步分析。"
+        }
+      },
+      "notice": "本站為獨立專案，並非疾管署或 WHO 的官方出版品，也不構成醫療建議。引用數值前請查閱原始報告。"
+    },
+    "sources": {
+      "lead": "抗藥性與菌株數資料轉錄自三份《臺灣抗生素抗藥性監視年報》（臺灣醫療照護相關感染與抗藥性監視系統 THAS 之抗藥性模組），涵蓋資料年 2017–2024。下列 SHA-256 可用來核對手上的 PDF 是否為同一版本。",
+      "hospitals": "通報醫院數",
+      "hospitalsNote": "{from} 年至 {to} 年，依年報所載；2022 年版記載 2022 年為 210 家。",
+      "dataYears": "資料年",
+      "dataYearsNote": "三份年報各涵蓋約六年，重疊年份以新版為準。",
+      "isolates": "年度分離株總數",
+      "isolatesNote": "{from} 與 {to} 年全部檢體的總計（表 2-x）。",
+      "edition": "{year} 年版",
+      "ingested": "已匯入",
+      "coverage": "資料年",
+      "size": "檔案大小",
+      "verify": "驗證方式：下載 PDF 後執行 sha256sum（或 shasum -a 256）並比對上列雜湊值。"
+    },
+    "produced": {
+      "lead": "年報是文字層表格與影像圖表混合的 PDF，因此依來源採用三種轉錄方式，每個數值都記錄其方式（precision 欄位），介面會顯示對應標籤。",
+      "values": "{n} 筆",
+      "table": {
+        "badge": "取自表格",
+        "t": "文字層表格",
+        "d": "敏感性圖譜（圖 3-1-x）與菌株數表（表 2-x）直接由 PDF 文字層取出，並逐表核對印刷的總計。灰色（n<20）的格子不收錄。",
+        "err": "誤差：無（與印刷值相同）"
+      },
+      "text": {
+        "badge": "取自內文",
+        "t": "內文敘述",
+        "d": "報告內文或圖說直接寫出的數值，例如「全國 CRAB 由 108 年 55.1% 上升至 113 年 58.4%」，照印刷值收錄。",
+        "err": "誤差：無（取到小數一位）"
+      },
+      "chart": {
+        "badge": "圖表判讀",
+        "t": "圖表判讀",
+        "d": "長條圖與折線圖（圖 3-2-x、圖 4-x-y）沒有數值標示，由轉錄者目視判讀印刷圖表，四捨五入至 0.5。",
+        "err": "誤差：約 ±1–2 個百分點"
+      },
+      "dedupTitle": "去重規則",
+      "dedupAria": "優先順序：表格大於內文大於圖表判讀，其次取最新年版",
+      "dedup1": "表格",
+      "dedup2": "內文",
+      "dedup3": "圖表判讀",
+      "dedupThen": "同精確度時取最新年版",
+      "dedupBody": "同一資料點若出現在多個年版，採用精確度較高者（表格 > 內文 > 圖表判讀），精確度相同則採用較新的年版；菌株數表則整張取自最新年版，避免混用不同排名。年報會修訂歷史數據，因此同一條趨勢線可能包含不同年版的點。",
+      "mapping": "菌名與抗生素依年報附錄對照至統一代碼；MDRO 的 (I+R) 為不敏感株數、(S) 為敏感株數，兩者不會被加進總數。完整規則見 docs/DATA.md。"
+    },
+    "defs": {
+      "nonsus": {
+        "t": "抗藥率 ＝ 不敏感（I＋R）",
+        "d": "敏感性圖譜的「抗藥率」為 100 − %S，即包含中間型（I）的不敏感比例；MDRO 趨勢則為報告印刷的 %R。"
+      },
+      "onset": {
+        "t": "社區起源（CO）與院內起源（HO）",
+        "d": "依 THAS 通報的感染發生情境區分。院內起源的抗藥率幾乎都高於社區起源，比較時請固定起源別。"
+      },
+      "levels": {
+        "t": "醫院層級",
+        "d": "醫學中心、區域醫院、地區醫院三層（依衛福部醫院評鑑分級）。「全部」為所有通報醫院合計；各層級的病人組成不同，不宜只看全國平均。"
+      },
+      "suppress": {
+        "t": "n<20 不呈現",
+        "d": "檢測株數少於 20，或該抗生素不被 CLSI 建議用於該菌種時，年報不顯示（以灰色或＊標示）。本站不補值，圖表中缺值即代表未呈現。"
+      },
+      "first": {
+        "t": "首株規則（歸人）",
+        "d": "同一醫院、同一病人、同一年度、同一菌種與同一抗生素只取第一次採檢日的結果；同日有多筆結果時，依 NS > R > I > SDD > S 取最差者（依各年報方法說明）。"
+      },
+      "precision": {
+        "t": "精確度標籤",
+        "d": "「圖表判讀」的值有約 ±1–2 個百分點誤差，不適合用來判斷小於 2 點的差異；圖卡會顯示最不精確的值的標籤。"
+      }
+    },
+    "prov": {
+      "lead": "尚未取得《抗生素使用量監視年報》與《醫療照護相關感染監視年報》，因此以下資料集是依已發表趨勢建模的暫定估計，並非官方數據：",
+      "why": "這些區塊會顯示「暫定」標籤與提示；國際比較中的外部國家數值為近似值，臺灣數值則由真實的抗藥性資料計算。官方報告匯入後，標籤會自動消失。",
+      "howTitle": "如何加入 AMU／HAI 年報 PDF",
+      "s1": "將 PDF 放入儲存庫的 raw/ 資料夾，檔名需含西元年與「使用量」或「感染」，例如 臺灣抗生素使用量監視年報(2024年).pdf。",
+      "s2": "推送到 GitHub；ingest 工作流程會重新產生 public/data 與 public/api/v1（本機可執行 scripts/ingest/run_all.sh）。",
+      "s3": "匯入程式 map_amu.py／map_hai.py 目前是骨架，需依實際表格版面調整；完成後資料集的 provisional 旗標轉為 false。",
+      "readme": "README：如何加入年報"
+    },
+    "glossary": {
+      "title": "名詞解釋",
+      "lead": "依縮寫字母排序，可搜尋三語名稱與當前語言的定義；點選相關詞彙可跳到該條目。",
+      "search": "搜尋縮寫、名稱或定義…",
+      "count": "{n} / {total} 則",
+      "letters": "依字母篩選",
+      "related": "相關詞彙"
+    },
+    "changelog": {
+      "first": "首個版本",
+      "v01": {
+        "c1": "上線 9 個頁面：總覽、抗藥性、抗生素使用量、HAI、國際比較、資料與 API、資源、方法說明、AMR 問答。",
+        "c2": "轉錄 2022、2023、2024 年版抗藥性年報（資料年 2017–2024），每筆附精確度標籤。",
+        "c3": "靜態資料 API v1（JSON／CSV／Schema／OpenAPI）與可嵌入圖表（embed.js）。",
+        "c4": "60 項國際與臺灣的 AMR 資源目錄、70 則名詞解釋。",
+        "c5": "抗生素使用量、HAI 與國際比較採暫定估計，並明確標示。",
+        "c6": "繁體中文、English、日本語三語介面，淺色與「黑綠」深色主題。"
+      }
+    },
+    "credits": {
+      "body": "TW-AMR Watch 是以開放資料與開源工具完成的獨立專案。",
+      "data": "資料：衛生福利部疾病管制署（Taiwan CDC）《臺灣抗生素抗藥性監視年報》2022–2024；THAS 監視系統與參與通報的醫院與檢驗室。",
+      "who": "國際比較參考 WHO GLASS 及各國監測系統的公開報告；名詞與分類參考 WHO AWaRe、CLSI 與 EUCAST。",
+      "oss": "開源工具：React、Vite、Apache ECharts、Framer Motion、html-to-image、world-atlas 與 topojson-client。",
+      "contactTitle": "聯絡方式",
+      "contactBody": "發現數據錯誤、轉錄問題、失效連結或有功能建議，請在 GitHub 開 Issue；有關官方統計的疑問請洽疾管署。",
+      "issues": "回報問題",
+      "citeLink": "如何引用 →"
+    },
+    "access": {
+      "lead": "我們的目標是讓介面符合 WCAG 2.2 AA 的精神，並持續改善：",
+      "kbd": "所有控制項都可用鍵盤操作，焦點框清楚可見，並提供「跳到主要內容」連結。",
+      "sr": "每張圖表都有文字說明（aria-label）與可切換的資料表，螢幕閱讀器可讀取同樣的數值。",
+      "contrast": "文字對比至少 4.5:1，色彩不是傳達資訊的唯一方式（另有標籤與數字）。",
+      "motion": "尊重「減少動態效果」的系統設定，動畫會自動縮減。",
+      "lang": "提供繁體中文、英文與日文介面，語言屬性會隨介面切換。",
+      "limits": "已知限制：互動式地圖與部分圖表的滑鼠懸停細節，需改用資料表檢視；若遇到障礙請回報給我們。"
+    },
+    "privacy": {
+      "lead": "本站是靜態網站，沒有後端伺服器、沒有帳號，也不追蹤使用者。",
+      "none": "不使用分析工具、廣告或第三方 Cookie。",
+      "local": "僅在瀏覽器本機儲存介面偏好（語言、主題），不會傳送到任何地方。",
+      "key": "AMR 問答的 Claude API 金鑰（選用）只儲存在你的瀏覽器中，且只會直接傳給 Anthropic API，不經過本站。",
+      "external": "外部連結與社群分享會前往第三方網站，適用其隱私政策。",
+      "host": "網站由 GitHub Pages 代管，GitHub 可能依其政策記錄一般的伺服器存取日誌。"
     }
   }
 }

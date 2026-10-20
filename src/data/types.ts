@@ -208,7 +208,7 @@ export interface LinkRecord {
 /* ---------- 7. glossary.json ---------- */
 
 export interface GlossaryRecord {
-  term: string;
+  term: LocalizedText;
   abbr: string;
   definition: LocalizedText;
   related: string[];

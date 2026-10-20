@@ -3,6 +3,14 @@ import { KpiStrip } from './charts/KpiStrip';
 import { ResistanceHeatmap } from './charts/ResistanceHeatmap';
 import { ResistanceTrend } from './charts/ResistanceTrend';
 import type { ChartParams } from './charts/common';
+import { GlassMap } from '../features/international/GlassMap';
+import { GlassBars } from '../features/international/GlassBars';
+import { AmuStacked } from '../features/antibiotic-use/AmuStacked';
+import { AmuAware } from '../features/antibiotic-use/AmuAware';
+import { HaiTrend } from '../features/hai/HaiTrend';
+import { HaiBump } from '../features/hai/HaiBump';
+import { PathogenBarsChart } from '../features/resistance/charts/PathogenBarsChart';
+import { CoHoGapChart } from '../features/resistance/charts/CoHoGapChart';
 
 /**
  * Embeddable chart registry: `chart` id → component (+ the app route it deep-links to).
@@ -43,3 +51,20 @@ export function registerEmbedChart(def: EmbedChartDef): void {
 }
 
 export const EMBED_IDS = (): string[] => Object.keys(EMBED_REGISTRY);
+
+/* ---- international / antibiotic-use / HAI (feature agent: international+amu+hai) ----
+ * Extra params (indicator, region, year, bars, metric, classes, icu, site) are read by the
+ * components from the embed hash; they are listed here so "Open in TW-AMR Watch" keeps them. */
+const extraParams = (...keys: string[]) => keys as unknown as (keyof ChartParams)[];
+registerEmbedChart({ id: 'glass-map', route: '/international', params: extraParams('indicator', 'region', 'year'), Component: GlassMap });
+registerEmbedChart({ id: 'glass-bars', route: '/international', params: extraParams('indicator', 'region', 'year', 'bars'), Component: GlassBars });
+registerEmbedChart({ id: 'amu-stacked', route: '/antibiotic-use', params: extraParams('level', 'metric', 'classes', 'years'), Component: AmuStacked });
+registerEmbedChart({ id: 'amu-aware', route: '/antibiotic-use', params: extraParams('level', 'years'), Component: AmuAware });
+registerEmbedChart({ id: 'hai-trend', route: '/hai', params: extraParams('level', 'icu', 'metric', 'years'), Component: HaiTrend });
+registerEmbedChart({ id: 'hai-bump', route: '/hai', params: extraParams('level', 'site', 'years'), Component: HaiBump });
+
+/* ---- resistance explorer / overview (feature agent: overview+resistance) ----
+ * resistance-pathogen-bars: % non-susceptible per antibiotic by onset (all/CO/HO) for one pathogen (years=YYYY picks the data year).
+ * resistance-co-ho: community- vs hospital-onset % for the nine MDROs (level, years=YYYY). */
+registerEmbedChart({ id: 'resistance-pathogen-bars', route: '/resistance', params: ['pathogen', 'years'], Component: PathogenBarsChart });
+registerEmbedChart({ id: 'resistance-co-ho', route: '/resistance', params: ['level', 'years'], Component: CoHoGapChart });

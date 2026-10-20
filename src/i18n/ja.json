@@ -1,4 +1,601 @@
 {
+  "overview": {
+    "hero": {
+      "eyebrow": "THAS 全国サーベイランス · {from}–{to}",
+      "title": "台湾の薬剤耐性をひと目で",
+      "thesis": "9つの多剤耐性菌、8年間の全国サーベイランス、ひとつの明確なシグナル——耐性はケアが最も集中する場所に集まる。すべての多剤耐性菌で、医療関連（HO）株の耐性率は市中（CO）株を上回っています。",
+      "ctaResistance": "耐性を詳しく見る",
+      "ctaInternational": "国際比較",
+      "ctaData": "データと API",
+      "latestYear": "最新データ年",
+      "latestYearNote": "{from}年からの時系列 · 2022–2024年版年報",
+      "hospitals": "報告医療機関数",
+      "hospitalsNote": "{from}–{to}年に THAS 薬剤耐性モジュールへ報告した病院（2024年版年報）",
+      "isolates": "臨床分離株数（{year}年）",
+      "isolatesNote": "全国で報告された初回分離株、全検体"
+    },
+    "pulse": {
+      "eyebrow": "MDRO パルス",
+      "title": "全国の9つの耐性指標",
+      "subtitle": "非感性率（%）、全病院、CO+HO、{year}年 · 前年比 · スパークライン {from}–{year}。タイルを選ぶと詳細へ移動します。",
+      "gramNeg": "グラム陰性菌 · カルバペネム耐性",
+      "gramPos": "グラム陽性菌 · メチシリン／バンコマイシン耐性",
+      "band": {
+        "low": "< 10%",
+        "moderate": "10–25%",
+        "high": "25–50%",
+        "veryHigh": "≥ 50%"
+      }
+    },
+    "headlines": {
+      "title": "データが示すこと",
+      "aside": "データセットから自動生成——データ更新のたびに更新されます",
+      "explore": "詳しく見る",
+      "coho": "{phenotype}：{year}年の医療関連（HO）は {ho}、市中（CO）は {co}——HO は CO の {ratio} 倍。",
+      "peak": "{phenotype} は {peakYear}年に {peak} でピークに達し、{year}年には {latest} まで低下しました。",
+      "rise": "{phenotype} は {firstYear}年の {first} から {year}年の {latest} へ上昇しました（{change}、相対的に {rel}）。",
+      "levels": "{phenotype} は病院種別による差が最も大きい：{year}年、{high} {highV}、{low} {lowV}。",
+      "isolates": "報告された臨床分離株は {fromYear}年の {from} 株から {year}年の {to} 株へ増加しました（{rel}）。",
+      "range": "{year}年、最も耐性率が高い多剤耐性菌は引き続き {high}（{highV}）、最も低いのは {low}（{lowV}）です。",
+      "kicker": {
+        "coho": "発症区分の差",
+        "peak": "転換点",
+        "rise": "長期的な上昇",
+        "levels": "病院種別",
+        "isolates": "サーベイランス規模",
+        "range": "分布の幅"
+      }
+    },
+    "sections": {
+      "trends": "耐性はどこで上昇しているか",
+      "burden": "負担はどこに集中しているか",
+      "antibiogram": "アンチバイオグラム概観"
+    },
+    "rising": {
+      "eyebrow": "スモールマルチプル",
+      "title": "病院種別ごとの多剤耐性菌の推移、2017–2024",
+      "subtitle": "非感性率（%）· {setting} · 各パネルは固定の縦軸を持ち、発症区分を切り替えても縮尺は変わりません",
+      "changeSince": "{year}年からの変化（全国）",
+      "miniAria": "{phenotype} の病院種別ごとの非感性率の折れ線グラフ、2017–2024"
+    },
+    "coho": {
+      "eyebrow": "感染対策の重要シグナル"
+    },
+    "landscape": {
+      "eyebrow": "菌種の構成",
+      "title": "どの菌種が多くを占めるか",
+      "subtitle": "菌種別の臨床分離株数、全検体、{year}年（合計 {total} 株）· 色 = WHO 細菌優先度",
+      "keyLabel": "の分離株が {pathogen}（{year}年）",
+      "topNs": "非感性率が最も高い薬剤（{year}年）",
+      "who": "WHO 優先度：{p}",
+      "unlisted": "WHO リスト外／その他",
+      "aria": "菌種別臨床分離株数のツリーマップ（WHO 優先度で色分け）"
+    },
+    "glance": {
+      "eyebrow": "アンチバイオグラム",
+      "title": "主要菌種 × 主要薬剤",
+      "subtitle": "非感性率（I+R）、全国、全検体、{year}年 · セルを選ぶと詳細を表示",
+      "openExplorer": "アンチバイオグラム全体を開く",
+      "notReported": "掲載なし（未検査、n < 20、または CLSI 非推奨）"
+    },
+    "provisional": {
+      "lead": "このページの耐性データは公式年報から転記したものです。抗菌薬使用量、医療関連感染、国際比較は引き続き暫定的な推計値を使用しています："
+    },
+    "sources": {
+      "title": "出典",
+      "body": "台湾CDC『台湾抗菌薬耐性監視年報』（THAS 薬剤耐性モジュール）2022–2024年版。数値は PDF から転記し、各値に精度（表・本文・グラフ読み取り）を付しています。",
+      "download": "データをダウンロード",
+      "api": "静的 JSON API",
+      "method": "方法論"
+    }
+  },
+  "resistance": {
+    "page": {
+      "subtitle": "THAS の薬剤耐性サーベイランスを、多剤耐性菌・菌種・抗菌薬・病院種別・発症区分・検体別に探索できます。すべての表示は共有可能なリンクです。"
+    },
+    "views": {
+      "label": "表示の切り替え",
+      "trend": "推移",
+      "antibiogram": "アンチバイオグラム",
+      "pathogen": "菌種",
+      "compare": "比較",
+      "trendIntro": "2017–2024年の病院種別ごとの多剤耐性菌の推移。最大4つの表現型を同じグラフで比較できます。グラフ下のブラシをドラッグすると年を絞り込めます。",
+      "antibiogramIntro": "指定した年と病院種別の全国累積アンチバイオグラム（非感性率 = 100 − %S）。セルを選ぶとその菌種を開きます。",
+      "pathogenIntro": "1つの菌種を深掘り：発症区分・検体別の耐性率、3年間のアンチバイオグラムの変化、分離株数の推移。",
+      "compareIntro": "2〜4つの表現型または「菌種 × 抗菌薬」を1つのグラフで比較し、最新年の病院種別を比べます。"
+    },
+    "levelShort": {
+      "all": "全体",
+      "medical_center": "医療C",
+      "regional": "地域",
+      "district": "地区"
+    },
+    "settingShort": {
+      "all": "全体",
+      "co": "CO",
+      "ho": "HO"
+    },
+    "priority": {
+      "critical": "最重要",
+      "high": "高",
+      "medium": "中"
+    },
+    "common": {
+      "ci": "95% 信頼区間",
+      "latest": "最新",
+      "otherClass": "その他"
+    },
+    "rail": {
+      "label": "探索フィルター",
+      "filters": "フィルター",
+      "maxN": "最大 {n} 件",
+      "levels": "病院種別",
+      "overlay": "CO／HO を重ねる",
+      "overlayHint": "全国の市中・医療関連の推移線",
+      "norm": "初年 = 100 で指数化",
+      "normHint": "水準ではなく相対的な変化を比較",
+      "drugLevel": "薬剤レベルの推移（アンチバイオグラム、2022–2024）：",
+      "compareLevels": "病院種別を比較",
+      "cmpNone": "オフ",
+      "cmpGrid": "4種別",
+      "cmpDiff": "医療C − 地区",
+      "cellHint": "セルは非感性率。ホバーで検査株数を表示。空欄 = 掲載なし。"
+    },
+    "trend": {
+      "title": "{phenotype}",
+      "subtitle": "病院種別ごとの非感性率（%）· {setting} · {from}–{to}",
+      "compareTitle": "表現型の比較：{list}",
+      "compareSubtitle": "非感性率（%）· {level} · {setting}",
+      "compareSubtitleNorm": "指数（期間の初年 = 100）· {level} · {setting}",
+      "indexAxis": "指数",
+      "summary": "自動サマリー",
+      "narrativePeak": "{name}：{firstYear}年 {first}、{peakYear}年に {peak} でピーク、{latestYear}年は {latest}（{firstYear}年比 {change} ポイント、ピーク比 {fromPeak} ポイント）。",
+      "narrativeRising": "{name}：{firstYear}年の {first} から {latestYear}年の期間最高値 {latest} へ上昇（{change} ポイント）。",
+      "narrativeFalling": "{name}：期初が最高（{firstYear}年 {first}）、{latestYear}年は {latest}（{change} ポイント）。",
+      "narrativeLevels": "{year}年は{high}が最も高く（{highV}）、{low}が最も低い（{lowV}）。",
+      "narrativeCoHo": "{phenotype}（{year}年）：医療関連 {ho}、市中 {co}（{ratio} 倍）。",
+      "aria": "非感性率の推移を示す折れ線グラフ。白抜きのマーカーはグラフから読み取った値"
+    },
+    "coho": {
+      "title": "市中発症 vs 医療関連発症",
+      "subtitle": "多剤耐性菌ごとの非感性率（%）、{level}、{year}年 · 差の大きい順",
+      "gap": "差（HO − CO）",
+      "ratio": "HO／CO",
+      "keyLabel": "{phenotype}：HO {ho}、CO {co}、{year}年",
+      "aria": "9つの多剤耐性菌について市中発症と医療関連発症の耐性率を比べるダンベルチャート"
+    },
+    "antibiogram": {
+      "title": "累積アンチバイオグラム",
+      "subtitle": "非感性率（I+R）、{level}、{year}年 · 全検体",
+      "levelTitle": "アンチバイオグラム——{level}",
+      "diffTitle": "医学センター − 地区病院",
+      "diffSubtitle": "非感性率の差（ポイント）、{year}年 · 赤 = 医学センターの方が高い",
+      "diffLegend": "医療C − 地区（ポイント）",
+      "legend": "非感性率",
+      "sortRows": "行の並べ替え",
+      "sortCols": "列の並べ替え",
+      "sortOrder": "年報の順",
+      "sortClass": "薬剤クラス別",
+      "sortName": "名前順",
+      "sortMean": "平均耐性率順",
+      "clickHint": "選択するとこの菌種を開きます",
+      "note": "値は年報アンチバイオグラム表の 100 − %S（正確値）。検査株数が20株未満、または CLSI がその菌種に推奨しない薬剤の場合は空欄です。"
+    },
+    "pathogen": {
+      "who": "WHO 優先度：{p}",
+      "bySettingTitle": "{pathogen}：発症区分別の耐性率",
+      "bySpecimenTitle": "{pathogen}：検体別の耐性率",
+      "barsSubtitle": "抗菌薬ごとの非感性率（%）、全国、{year}年 · ひげ = 年報記載の 95% 信頼区間",
+      "barsAria": "抗菌薬ごとの非感性率を示すグループ化横棒グラフ",
+      "slopeTitle": "アンチバイオグラムの変化 {from} → {to}",
+      "slopeSubtitle": "{pathogen}、{level} · 矢印 = 変化の方向（赤 ≥ +2 ポイント、緑 ≤ −2 ポイント）",
+      "slopeAria": "3年間の抗菌薬ごとの非感性率の変化を示す矢印チャート",
+      "isolatesTitle": "{pathogen}：分離株数の推移",
+      "isolatesSubtitle": "検体別の臨床分離株数（積み上げ）と全検体の合計（線）",
+      "isolatesAria": "検体別分離株数の積み上げ棒グラフと合計の折れ線",
+      "otherSpecimens": "その他の検体"
+    },
+    "compare": {
+      "title": "耐性指標を比較",
+      "subtitle": "非感性率（%）· {level} · {setting} · {from}–{to}",
+      "subtitleNorm": "指数（初年 = 100）· {level} · {setting} · {from}–{to}",
+      "items": "グラフ上の項目",
+      "item": "指標",
+      "remove": "{item} を削除",
+      "addPhenotype": "表現型を追加",
+      "addPair": "「菌種 × 抗菌薬」を追加",
+      "choose": "選択…",
+      "add": "組み合わせを追加",
+      "pairNote": "「菌種 × 抗菌薬」はアンチバイオグラム表（2022–2024、全発症区分）から取得しています。",
+      "bulletTitle": "病院種別、最新年",
+      "bulletSubtitle": "棒 = 全国、目盛り = 医学センター・地域病院・地区病院 · {setting}",
+      "aria": "耐性指標の推移を比較する折れ線グラフ",
+      "bulletAria": "各指標の最新値を病院種別で示すブレットチャート"
+    },
+    "method": {
+      "title": "方法論——数値の読み方",
+      "more": "方法論と出典の詳細",
+      "thas": {
+        "term": "THAS 薬剤耐性モジュール",
+        "body": "データは台湾医療関連感染・薬剤耐性サーベイランスシステム（THAS）の薬剤耐性モジュールに基づき、台湾CDC年報（2022–2024年版、データ年 2017–2024）で公表された数値です。"
+      },
+      "sir": {
+        "term": "病院報告の S/I/R",
+        "body": "各検査室が独自の判定で感性／中間／耐性を報告しており、CLSI のブレイクポイント版は統一されていません。そのため病院間の判定基準や検査法の違いが全国値に反映されます。"
+      },
+      "ns": {
+        "term": "非感性 = I + R",
+        "body": "アンチバイオグラムの値は 100 − %S（中間＋耐性）です。多剤耐性菌の表現型（例：CRKP = カルバペネム非感性肺炎桿菌）は年報の定義に従います。"
+      },
+      "suppress": {
+        "term": "n < 20 は非表示",
+        "body": "検査株数が20株未満の割合、および CLSI がその菌種に推奨しない薬剤は年報に記載されず、空欄で表示しています。"
+      },
+      "precision": {
+        "term": "転記値の精度",
+        "body": "表の値は正確値、本文記載の値は記載桁まで正確です。グラフから読み取った値は約 ±1〜2 ポイントの誤差があり、白抜きマーカーで示しています。"
+      },
+      "coho": {
+        "term": "市中発症 vs 医療関連発症",
+        "body": "THAS の定義に従い、外来・救急または入院2日目までに採取された株を市中発症（CO）、入院3日目以降に採取された株を医療関連発症（HO）とします。"
+      },
+      "dedup": {
+        "term": "年報版の重複",
+        "body": "同じデータ年が複数の版に掲載されている場合は、より精度の高い値を優先し、次に新しい版を採用します（報告病院の変動により過去の株数は改訂されます）。"
+      },
+      "firstIsolate": {
+        "term": "初回分離株ルール",
+        "body": "アンチバイオグラムは病院ごとに患者・菌種・年あたりの初回分離株を集計し（同日複数の場合は最も悪い結果）、重複株によるバイアスを抑えています。"
+      }
+    }
+  },
+  "international": {
+    "filters": "比較フィルター",
+    "indicator": "指標",
+    "region": "WHO地域",
+    "allRegions": "全WHO地域",
+    "dataYear": "データ年",
+    "latestAvailable": "利用可能な最新年",
+    "country": "国",
+    "compareWith": "比較対象（最大{n}か国）",
+    "glassDashboard": "WHO GLASSダッシュボード",
+    "glassReport": "GLASS 2022年報告書",
+    "notice": {
+      "title": "暫定的な比較です。まず比較可能性の注記をお読みください",
+      "body": "各国の値は WHO GLASS 2022年報告書、GLASSダッシュボードおよび各国サーベイランスから整理した近似値です（血流由来株、2021〜2022年頃）。台湾はWHO非加盟でGLASSに参加していないため、台湾の値は台湾CDCのTHAS年報から本サイトが算出しており、検体・判定基準・集計方法がGLASSと異なります。",
+      "update": "各国の値を更新するには、整理済みの表を編集してください",
+      "compLink": "比較可能性の注記"
+    },
+    "map": {
+      "title": "{indicator}：世界の耐性率",
+      "subtitle": "{region} · {year} · 血流由来株",
+      "legend": "色＝血流由来株の耐性率（各国の利用可能な最新年。GLASSは2021〜2022年頃、台湾は2024年THAS）。枠付きのマーカーが台湾です。",
+      "noDataLegend": "データなし",
+      "noData": "この指標のデータはありません",
+      "clickHint": "国をクリックすると比較に追加されます。",
+      "aria": "耐性率で色分けした世界地図。台湾はマーカーで強調表示"
+    },
+    "bars": {
+      "title": "台湾と世界の比較：{indicator}",
+      "subtitle": "耐性率の高い順に並べた各国。縦線は報告国の中央値",
+      "subtitleRank": "台湾は{total}か国中{rank}位（{value}）。縦線は報告国の中央値",
+      "median": "中央値 {value}",
+      "nCountries": "国数",
+      "viewLabel": "表示",
+      "allCountries": "全ての国",
+      "regionMedians": "WHO地域の中央値のみ"
+    },
+    "radar": {
+      "title": "10指標の耐性プロファイル",
+      "subtitleAbs": "台湾と選択国、耐性率（共通の0〜100%目盛）",
+      "subtitleRank": "台湾と選択国、報告国内でのパーセンタイル順位（0＝最低、100＝最高）",
+      "scaleLabel": "目盛",
+      "abs": "耐性率",
+      "rank": "パーセンタイル",
+      "aria": "10の耐性指標で台湾と選択国を比較するレーダーチャート"
+    },
+    "strip": {
+      "title": "各指標における台湾の位置",
+      "subtitle": "各点が1か国。台湾と比較対象を強調表示",
+      "others": "その他の国",
+      "min": "最低",
+      "max": "最高",
+      "pct": "台湾のパーセンタイル",
+      "n": "報告国数"
+    },
+    "toast": {
+      "added": "{country}を比較に追加しました",
+      "already": "{country}はすでに比較対象です"
+    },
+    "comp": {
+      "section": "比較可能性：GLASSと台湾THAS",
+      "title": "方法論の違い",
+      "subtitle": "台湾の値がGLASSの各国値と厳密に比較できない理由",
+      "aspect": "項目",
+      "thasCol": "台湾THAS（本サイト）",
+      "rows": {
+        "system": {
+          "label": "サーベイランス体制",
+          "glass": "WHO 薬剤耐性・抗菌薬使用グローバルサーベイランスシステム。各国のAMR調整機関が毎年報告",
+          "thas": "台湾CDCの院内感染・薬剤耐性サーベイランス（THAS）年報"
+        },
+        "scope": {
+          "label": "参加検査室",
+          "glass": "各国の国内検査室ネットワーク。カバー率や定点の選定は国により大きく異なる",
+          "thas": "THASに報告する病院検査室（2017年134施設 → 2024年329施設）"
+        },
+        "specimen": {
+          "label": "検体",
+          "glass": "これらの指標はすべて血流由来株（血液培養）",
+          "thas": "報告書に記載がある場合は血液検体、ない場合は全検体（MDRO指標、アンチバイオグラム）"
+        },
+        "unit": {
+          "label": "集計単位",
+          "glass": "血液培養陽性の患者（患者単位で重複除去）",
+          "thas": "分離株数（各年報の初回分離株ルール）"
+        },
+        "measure": {
+          "label": "指標の定義",
+          "glass": "耐性（R）の割合。PNSPは非感性",
+          "thas": "病院報告のS/I/R。アンチバイオグラム値は非感性（I+R＝100 − %S）で、%Rよりやや高い"
+        },
+        "breakpoints": {
+          "label": "判定基準",
+          "glass": "欧州は主にEUCAST、その他は主にCLSI（各国の報告による）",
+          "thas": "CLSI"
+        },
+        "network": {
+          "label": "報告方式",
+          "glass": "各国が集計した全国データをWHOに提出",
+          "thas": "病院報告データを台湾CDCが集計"
+        },
+        "years": {
+          "label": "年",
+          "glass": "特定の報告年（本サイトでは2021〜2022年頃）。最新年は国により異なる",
+          "thas": "台湾の行は2024年（最新年報）"
+        },
+        "precision": {
+          "label": "本サイトでの精度",
+          "glass": "GLASS報告書／ダッシュボードおよび各国報告から整理した近似値（暫定）",
+          "thas": "報告書の表・本文・グラフから転記。グラフ読取値は ±1〜2 ポイント"
+        }
+      },
+      "caveatsTitle": "注意事項",
+      "caveats": {
+        "member": "台湾はWHO非加盟でGLASSに報告していません。台湾の行はTHAS年報から本サイトが算出しています。",
+        "breakpoints": "THASはCLSI基準を使用しています。GLASS／EARS-Netの多くの国はEUCASTを使用しており、一部の菌・薬剤の組み合わせでは耐性率が変わり得ます。",
+        "unit": "THASの割合は分離株数、GLASSは血液培養陽性の患者数に基づきます。",
+        "nonsusceptible": "アンチバイオグラム由来の値は非感性（100 − %S、中間を含む）のため、%Rよりやや高くなります。",
+        "curated": "台湾以外の各国の値は整理した近似値（2021〜2022年頃）で暫定的なものです。原典をご確認ください。"
+      },
+      "derivTitle": "台湾の各値の算出方法",
+      "derivSubtitle": "glass.meta.comparability から生成：GLASS型指標ごとに対応するTHASの系列",
+      "basis": "THAS系列（菌種 × 薬剤）",
+      "tier": "根拠",
+      "tiers": {
+        "blood": "血液検体・全国（GLASSに最も近い）",
+        "phenotype": "MDRO指標・全検体（代替）",
+        "all_specimens": "アンチバイオグラム・全検体（代替）"
+      },
+      "fallback": "代替データ",
+      "yes": "はい",
+      "no": "いいえ"
+    }
+  },
+  "amu": {
+    "filters": "抗菌薬使用量フィルター",
+    "metricLabel": "指標",
+    "metric": {
+      "DID": "1,000患者日あたりDDD",
+      "share": "構成比（%）"
+    },
+    "classesLabel": "抗菌薬クラス",
+    "class": "クラス",
+    "awareLabel": "AWaRe分類",
+    "aware": {
+      "Access": "Access（アクセス）",
+      "Watch": "Watch（ウォッチ）",
+      "Reserve": "Reserve（リザーブ）",
+      "Unclassified": "その他・未分類"
+    },
+    "notice": {
+      "title": "モデル推計値です。台湾CDCの公式値ではありません",
+      "body": "台湾CDCの抗菌薬使用量監視年報（抗生素使用量監視年報）はまだ本サイトに取り込まれていません。このページの数値はすべて、台湾CDCの公表傾向に基づく暫定モデル推計です。画面の確認には使えますが、使用量として引用しないでください。",
+      "how": "モデルを公式値に置き換えるには、年報PDFを次のフォルダに追加してください：",
+      "cdcLink": "台湾CDCの年報"
+    },
+    "sectionDeeper": "クラス構成と使用量・耐性の関係",
+    "kpi": {
+      "title": "入院抗菌薬使用量の概要",
+      "subtitle": "{level} · {year} · 1,000患者日あたりDDD",
+      "metric": "指標",
+      "total": "総使用量（J01）",
+      "totalCaption": "全身用抗菌薬の合計",
+      "accessShare": "Access比率",
+      "watchShare": "Watch比率",
+      "reserveShare": "Reserve比率",
+      "carb": "カルバペネム系",
+      "targetCaption": "WHO 2030年目標 ≥ {target}%"
+    },
+    "target": {
+      "title": "WHO 2030年目標：Access ≥70%",
+      "subtitle": "病院種別ごとの最新年における入院総使用量に占めるAccessの比率（目標線 {target}%）",
+      "line": "目標 {target}%",
+      "short": "WHO目標",
+      "gap": "目標との差"
+    },
+    "stacked": {
+      "title": "抗菌薬クラス別使用量の推移",
+      "titleShare": "クラス構成の推移（100%積み上げ）",
+      "subtitle": "{level} · {total}クラス中{n}クラス選択 · 色系統はAWaRe分類",
+      "sumSelected": "選択クラスの合計",
+      "soloHint": "このAWaRe分類のみ表示（再クリックで元に戻す）"
+    },
+    "awareBars": {
+      "title": "病院種別ごとのAWaRe構成",
+      "subtitle": "年ごとの入院DDDに占めるAWaRe分類の割合。線はWHOのAccess 70%目標"
+    },
+    "slope": {
+      "title": "{group}比率：初年と最終年の比較",
+      "subtitle": "{span} · 病院種別ごとに1本の線",
+      "groupLabel": "AWaRe分類"
+    },
+    "treemap": {
+      "title": "{year}年のクラス構成",
+      "subtitle": "{level} · 面積＝DID（合計 {total}）· 色＝AWaRe分類",
+      "share": "総量に占める割合",
+      "aria": "使用量の大きさで描き、AWaRe分類で色分けした抗菌薬クラスのツリーマップ"
+    },
+    "scatter": {
+      "title": "使用量と耐性（探索的）",
+      "subtitle": "各点は1つの病院種別の1年分。軌跡で年をつないでいます",
+      "exploratory": "探索的分析",
+      "caveat": "生態学的相関は因果関係を意味しません。使用量は暫定モデル推計、耐性はTHASの実データで、いずれも患者構成・検査・報告範囲の影響を受けます。",
+      "pairLabel": "組み合わせ",
+      "pairs": {
+        "crkp": "カルバペネム系 × CRKP",
+        "crab": "カルバペネム系 × CRAB",
+        "fq": "フルオロキノロン系 × 大腸菌"
+      },
+      "x": {
+        "crkp": "カルバペネム系使用量（DID）",
+        "crab": "カルバペネム系使用量（DID）",
+        "fq": "フルオロキノロン系使用量（DID）"
+      },
+      "y": {
+        "crkp": "CRKP（耐性率 %）",
+        "crab": "CRAB（耐性率 %）",
+        "fq": "大腸菌のシプロフロキサシン非感性（%）"
+      }
+    },
+    "method": {
+      "button": "方法論",
+      "title": "抗菌薬使用量の測り方",
+      "dddTitle": "DDDとDID",
+      "ddd": "規定1日用量（Defined Daily Dose）：WHO医薬品統計方法論協力センターが定める、成人の主な適応における1日あたりの平均維持量。",
+      "did": "1,000患者日あたりDDD：病院（入院）における使用密度の標準指標。人口ベースのデータでは1,000人・日あたりDDDを用います。",
+      "didFormula": "DID ＝（総使用量g ÷ DDDのg数）÷ 患者日 × 1,000。DDDにより異なる薬剤を比較できますが、実際の処方量（小児や腎機能に応じた用量など）を反映するものではありません。",
+      "awareTitle": "WHO AWaRe分類（2023年）",
+      "aware": "WHO AWaRe抗菌薬ブックは、適正使用を促すため耐性化リスクに応じて抗菌薬を分類しています：",
+      "awareAccess": "一般的な感染症の第一・第二選択薬で、耐性化リスクが低い。",
+      "awareWatch": "耐性化リスクが高く、適正使用の重点対象。",
+      "awareReserve": "多剤耐性菌感染症（確定・疑い）に用いる最後の手段。",
+      "target": "国連総会（2024年）とWHO第13次総合事業計画は、2030年までに抗菌薬総使用量の70%以上をAccess薬とする目標を掲げています。",
+      "atcTitle": "このページのATCクラス",
+      "provTitle": "これらの数値について",
+      "prov": "このデータセットは、公式年報の転記前でも画面が機能するよう作成した、妥当な規模と傾向を持つ暫定モデルです。データ本体と各グラフに暫定である旨を表示しています。",
+      "provHow": "公式の抗生素使用量監視年報PDFを次のリポジトリフォルダに追加し、取り込み処理を再実行するとモデルが置き換わります：",
+      "linksTitle": "参考資料",
+      "linkAware": "WHO AWaRe分類 2023",
+      "linkAtc": "WHO ATC/DDDインデックス",
+      "linkCdc": "台湾CDCのサーベイランス年報"
+    }
+  },
+  "hai": {
+    "filters": "医療関連感染フィルター",
+    "icu": "ICUの種類",
+    "metric": "指標",
+    "unit": "単位",
+    "notice": {
+      "title": "モデル推計値です。TNISの公式値ではありません",
+      "body": "台湾CDCの医療関連感染監視年報（醫療照護相關感染監視年報、TNIS）はまだ本サイトに取り込まれていません。このページの数値はすべて、台湾CDCの公表傾向に基づく暫定モデル推計です。画面の確認には使えますが、感染率として引用しないでください。",
+      "how": "モデルを公式値に置き換えるには、年報PDFを次のフォルダに追加してください：",
+      "cdcLink": "台湾CDCのTNIS年報"
+    },
+    "short": {
+      "hai_density": "感染密度",
+      "bsi_density": "血流感染",
+      "uti_density": "尿路感染",
+      "pneu_density": "肺炎",
+      "clabsi": "CLABSI",
+      "cauti": "CAUTI",
+      "vap": "VAP",
+      "central_line_util": "中心ライン使用比",
+      "urinary_cath_util": "尿道カテ使用比",
+      "ventilator_util": "人工呼吸器使用比"
+    },
+    "sites": {
+      "all": "全部位",
+      "bsi": "血流感染",
+      "uti": "尿路感染",
+      "pneu": "肺炎"
+    },
+    "kpi": {
+      "title": "ICU感染の概要",
+      "subtitle": "{level} · {icu} · {year}年",
+      "hai_density": "医療関連感染密度",
+      "clabsi": "CLABSI（中心ライン関連血流感染）",
+      "cauti": "CAUTI（カテーテル関連尿路感染）",
+      "vap": "VAP（人工呼吸器関連肺炎）"
+    },
+    "trend": {
+      "title": "ICUの種類別：{metric}",
+      "subtitle": "{level} · {unit} · 灰色の線＝全ICU",
+      "yLabel": "縦軸",
+      "sharedY": "共通",
+      "freeY": "個別"
+    },
+    "util": {
+      "title": "デバイス使用比",
+      "subtitle": "{level} · {icu} · デバイス日 ÷ 患者日"
+    },
+    "heat": {
+      "title": "ICUの種類 × 指標（{year}年）",
+      "subtitleRaw": "{level} · 実数値。色は列ごとに調整（単位が異なるため）",
+      "subtitleZ": "{level} · 各列のICU平均に対するzスコア（青＝低い、赤＝高い）",
+      "modeLabel": "色分け",
+      "raw": "実数値",
+      "z": "Zスコア",
+      "zLabel": "zスコア"
+    },
+    "sectionPathogens": "主な原因菌",
+    "districtFallback": "このデータセットには地区病院の原因菌順位がないため、全病院を表示しています。",
+    "bump": {
+      "title": "原因菌の順位の推移：{site}",
+      "subtitle": "{level} · 医療関連感染分離株に占める割合の上位10菌種 · ホバーで強調表示",
+      "rank": "順位",
+      "share": "分離株に占める割合",
+      "organism": "菌種",
+      "siteLabel": "感染部位"
+    },
+    "share": {
+      "title": "感染部位別の原因菌構成（{year}年）",
+      "subtitle": "{level} · 医療関連感染分離株に占める割合。残りはその他の菌種",
+      "other": "その他の菌種"
+    },
+    "links": {
+      "title": "これらの菌の耐性は？",
+      "hint": "全部位の主な医療関連感染菌。THASの耐性データ（実データ）を開きます",
+      "share": "感染分離株の {pct}",
+      "pheno": "全国 {value}（{year}年）",
+      "noPheno": "代表的なMDRO指標なし",
+      "notInThas": "THASの耐性表の対象外",
+      "cta": "{org}の耐性を見る",
+      "unavailable": "耐性データなし"
+    },
+    "method": {
+      "button": "方法論",
+      "title": "医療関連感染の測り方",
+      "tnisTitle": "TNISサーベイランス",
+      "tnis": "台湾院内感染サーベイランスシステム（TNIS）は、参加病院のICUにおける感染事例を、米国CDC NHSNの定義を参考に収集しています。",
+      "defsTitle": "定義",
+      "density": "ICUにおける1,000患者日あたりの医療関連感染件数（全感染部位）。",
+      "clabsi": "1,000中心ライン日あたりの中心ライン関連血流感染件数。",
+      "cauti": "1,000尿道カテーテル日あたりのカテーテル関連尿路感染件数。",
+      "vap": "1,000人工呼吸器日あたりの人工呼吸器関連肺炎（または人工呼吸器関連イベント）件数。",
+      "dur": "デバイス使用比＝デバイス日 ÷ 患者日（0〜1）。",
+      "denomTitle": "分母",
+      "denom": "感染密度は患者日、デバイス関連感染率はデバイス日を分母とします。そのためデバイスの少ない病棟では件数が少なくても率が高くなることがあり、使用比と合わせて解釈してください。",
+      "sirTitle": "SIR",
+      "sir": "標準化感染比（実測 ÷ 予測感染数。病棟種別や病院特性でリスク調整）はNHSNが推奨する比較指標です。モデルデータに予測件数が含まれないため、このページでは表示していません。",
+      "provTitle": "これらの数値について",
+      "prov": "hai と hai_pathogens のデータセットは、公式年報の転記前でも画面が機能するよう作成した、妥当な規模と傾向を持つ暫定モデルです。",
+      "provHow": "公式の醫療照護相關感染監視年報PDFを次のリポジトリフォルダに追加し、取り込み処理を再実行するとモデルが置き換わります：",
+      "linksTitle": "参考資料",
+      "linkCdc": "台湾CDCのサーベイランス年報",
+      "linkNhsn": "米国CDC NHSN 患者安全の定義"
+    }
+  },
   "app": {
     "name": "TW-AMR Watch",
     "fullName": "台湾AMRサーベイランス・ダッシュボード",
@@ -223,7 +820,222 @@
     "title": "AMR アシスタント",
     "placeholder": "耐性の傾向、抗菌薬、用語の定義などを質問…",
     "comingSoon": "アシスタントは準備中です。オフラインの知識ベースを使って台湾の AMR データに関する質問に答えます。",
-    "send": "送信"
+    "send": "送信",
+    "launcherTooltip": "台湾の AMR データについて質問（オフライン対応）",
+    "aiBadge": "AI",
+    "loading": "サーベイランスデータを読み込み中…",
+    "unsure": "ご質問の意図がよく分かりませんでした。関連しそうなトピックはこちらです：",
+    "fallback": "その質問にはまだお答えできません。「2024年の医学センターのCRKPは？」のようなデータの質問や、「CRAB とは？」のような用語の質問をお試しください。",
+    "paren": "（{x}）",
+    "sep": "・",
+    "listSep": "、",
+    "lv": {
+      "all": "全国",
+      "medical_center": "医学センター",
+      "regional": "地域病院",
+      "district": "地区病院"
+    },
+    "lvn": {
+      "all": "全国",
+      "medical_center": "医学センター",
+      "regional": "地域病院",
+      "district": "地区病院"
+    },
+    "st": {
+      "co": "市中関連感染",
+      "ho": "医療関連感染"
+    },
+    "stShort": {
+      "co": "市中関連（CO）",
+      "ho": "医療関連（HO）"
+    },
+    "sp": {
+      "blood": "血液検体",
+      "urine": "尿検体",
+      "sputum": "喀痰検体",
+      "pus": "膿・創部検体",
+      "stool": "便検体"
+    },
+    "prec": {
+      "table": "年報のアンチバイオグラム表の正確な値です（非感性率 = 100 − 感性率）。",
+      "text": "数値は年報本文に記載されたものです。",
+      "chart_estimate": "この値は年報のグラフから読み取ったもので、誤差は約±1〜2ポイントです。",
+      "chartShort": "年報のグラフから読み取り（約±1〜2ポイント）",
+      "glassShort": "暫定の整理推計。国際比較は参考値"
+    },
+    "basis": {
+      "blood": "全国の血液検体",
+      "fallback": "全検体の多剤耐性菌指標（血液の値が未公表のため）",
+      "unknown": "最も近い台湾の指標",
+      "mixed": "血液検体または最も近い指標"
+    },
+    "ans": {
+      "source": "出典：台湾CDC『台湾抗菌薬耐性監視年報』{report}年版。",
+      "drugName": "{pathogen}の{antibiotic}耐性",
+      "value": "{year}年の{where}における **{name}** は **{value}** でした。",
+      "isolatesTested": "（検査株数 {n}）",
+      "deltaUp": "{prevYear}年（{prev}）から {delta}ポイント上昇しました。",
+      "deltaDown": "{prevYear}年（{prev}）から {delta}ポイント低下しました。",
+      "deltaFlat": "{prevYear}年（{prev}）と同水準です。",
+      "trend": "{where}の **{name}** は {y0}年の {v0} から {y1}年には **{v1}**（{delta}ポイント）になりました{peak}。",
+      "peak": "。最も高かったのは {year}年の {value} です",
+      "compareYears": "{where}の **{name}**：{y0}年 {v0}、{y1}年 **{v1}**（{delta}ポイント）。",
+      "rankLevels": "{year}年の **{name}**{extra}は **{top}** が最も高く（{topValue}）、次いで{rest}でした。",
+      "nationalRef": "全国は {value} でした。",
+      "item": "{label} {value}",
+      "labelYear": "{label}（{year}年）",
+      "bySetting": "{year}年の{where}における **{name}** は、医療関連感染（HO）**{ho}**、市中関連感染（CO）**{co}** でした{ratio}。",
+      "ratio": "（HO は CO の約 {x} 倍）",
+      "profile": "{year}年の{where}データで、**{pathogen}** の非感性率が高い薬剤は {top}、低い薬剤は {low} です。",
+      "keyPheno": "主要な耐性指標である {pheno} は {year}年に {value} でした。",
+      "notAvailableYear": "{name} の {year}年のデータはありません（利用可能：{range}）。{used}年の値を示します。",
+      "notAvailableYears": "{years}年のデータはありません（利用可能：{range}）。",
+      "rangeClamped": "データは {range}年のみです。",
+      "relaxed": "その組み合わせのデータはないため、{where}の値を示します。",
+      "noData": "ご質問は理解しましたが、年報にはその条件での {name} のデータがありません。関連トピック：",
+      "isoValue": "{year}年に{where}で報告された **{organism}** の分離株数は **{count}** 株でした{rank}。",
+      "isoRank": "（第{rank}位）",
+      "isoDelta": "{prevYear}年（{prev}株）比 {pct}。",
+      "isoTrend": "{where}で報告された **{organism}** の分離株数は {y0}年の {c0} 株から {y1}年には **{c1}** 株（{pct}）になりました。",
+      "isoTop": "{year}年の{where}における分離株数の多い菌種：{list}。",
+      "isoNote": "分離株数は THAS に参加する病院の報告数で、報告病院は2017年の134施設から2024年には329施設に増えています。増減の解釈にご注意ください。",
+      "allOrganisms": "全菌種",
+      "glassCaveat": "国際比較の数値は暫定の整理推計です。台湾の値は本サイトの年報データから算出しています（{basis}）。検体や重複除外のルールが異なるため、比較には注意してください。",
+      "glassCompare": "**{indicator}**：台湾 **{twn}**（{twnYear}年）、{others}。",
+      "glassHigher": "台湾は{country}より {delta}ポイント高い値です。",
+      "glassLower": "台湾は{country}より {delta}ポイント低い値です。",
+      "glassRank": "データのある {n} の国・地域のうち、台湾の **{indicator}**（{twn}）は高い方から {rank} 位です。最高は {top}。",
+      "glassMissing": "{country}の {indicator} のデータはありません。",
+      "glassPairIntro": "台湾と{country}の血流感染耐性指標（{n}項目）の比較：",
+      "glassPairItem": "{indicator}：台湾 {twn}、{country} {other}"
+    },
+    "ct": {
+      "trend": "{name}｜{where}",
+      "byLevel": "{name} 病院種別の推移{extra}",
+      "rank": "{name} 病院種別の比較（{year}年）",
+      "bySetting": "{name}：医療関連 vs 市中関連｜{where}",
+      "profile": "{name} 薬剤別の非感性率（{year}年）",
+      "glass": "{indicator}：台湾と各国",
+      "glassPair": "台湾 vs {country}（血流感染）",
+      "isoTop": "{year}年 分離株数の上位菌種",
+      "isoTrend": "{organism} 分離株数｜{where}",
+      "isolates": "分離株数"
+    },
+    "chip": {
+      "rankLevels": "{name} はどの病院種別で最も高い？",
+      "trend": "{name} の推移",
+      "bySetting": "{name} の市中関連と医療関連の比較",
+      "vsJapan": "台湾の {name} を日本と比較",
+      "vsCountry": "台湾の {name} を{country}と比較",
+      "what": "{name} とは？",
+      "isolates": "{name} の分離株数の推移",
+      "profile": "{name} の耐性プロファイル",
+      "glassRank": "台湾の {name} の国際的な順位",
+      "isoTop": "分離株数の上位10菌種",
+      "isoTotal": "総分離株数の推移"
+    },
+    "link": {
+      "explorer": "耐性エクスプローラーで開く",
+      "international": "国際比較で開く",
+      "isolates": "分離株数を開く",
+      "related": "関連ページを開く"
+    },
+    "topics": {
+      "data": "耐性データ",
+      "compare": "国際比較",
+      "counts": "分離株数",
+      "concepts": "概念と感染対策",
+      "site": "サイトの使い方"
+    },
+    "q": {
+      "crkpMc": "2024年の医学センターの CRKP は？",
+      "mrsaHo": "MRSA の医療関連感染の推移",
+      "ecoCip": "大腸菌のシプロフロキサシン耐性率",
+      "crabLevel": "CRAB はどの病院種別で最も高い？",
+      "vreYears": "VRE の2017年と2024年を比較",
+      "crkpSetting": "CRKP の市中関連と医療関連の比較",
+      "crabJapan": "台湾の CRAB を日本と比較",
+      "mrsaWorld": "台湾の MRSA の国際的な順位",
+      "twnKor": "台湾と韓国を比較",
+      "isoTotal": "2024年の分離株数は？",
+      "isoTop": "2024年の分離株数の上位10菌種",
+      "ecoBlood": "大腸菌の血液検体の分離株数の推移",
+      "whatCrab": "CRAB とは？",
+      "carbapenemase": "KPC・NDM・OXA-48 の違いは？",
+      "aware": "AWaRe とは？",
+      "contact": "CRAB・CRE・VRE に接触予防策は必要？",
+      "download": "データのダウンロード方法は？",
+      "api": "API はありますか？",
+      "embed": "グラフを病院サイトに埋め込むには？",
+      "provisional": "暫定データとはどういう意味？"
+    },
+    "ui": {
+      "offline": "オフラインモード",
+      "offlineHint": "回答は内蔵のナレッジベースとダッシュボードのデータから、すべてブラウザ内で生成されます。設定でご自身の Anthropic API キーを追加すると、より自由な回答が得られます。",
+      "upgrade": "アップグレード",
+      "claude": "Claude モード",
+      "claudeHint": "回答はダッシュボードの事実に基づき Claude（{model}）が作成します。キーはこのブラウザにのみ保存されます。",
+      "settings": "アシスタント設定",
+      "clear": "会話を消去",
+      "clearDone": "会話を消去しました",
+      "copy": "回答をコピー",
+      "copied": "回答をコピーしました",
+      "share": "この回答を共有",
+      "shareX": "X で共有",
+      "shareThreads": "Threads で共有",
+      "shareFacebook": "Facebook で共有",
+      "shareLine": "LINE で共有",
+      "copyLink": "リンクをコピー",
+      "linkCopied": "リンクをコピーしました",
+      "stop": "停止",
+      "thinking": "考え中…",
+      "welcomeTitle": "台湾の薬剤耐性について質問する",
+      "welcomeBody": "台湾CDC年報（2017〜2024年）の実データで回答し、ミニグラフとエクスプローラーへのリンクを表示します。例：",
+      "you": "あなた",
+      "assistant": "アシスタント",
+      "viaOffline": "オフラインエンジン",
+      "viaClaude": "Claude による回答",
+      "suggested": "質問の例",
+      "openFull": "全画面で開く",
+      "followUps": "関連する質問",
+      "messages": "会話",
+      "composerHint": "Enter で送信 · Shift+Enter で改行",
+      "chartFallback": "ミニグラフ",
+      "showTopics": "質問の例を表示",
+      "hideTopics": "質問の例を隠す",
+      "shareText": "TW-AMR Watch アシスタント：{text}",
+      "moreActions": "回答の操作"
+    },
+    "settings": {
+      "title": "Claude モード（任意）",
+      "intro": "ご自身の Anthropic API キーを貼り付けると、Claude（{model}）が回答を作成します。数値はすべてアシスタントがダッシュボードのデータから計算してモデルに渡すため、実データに基づいて回答します。",
+      "keyLabel": "Anthropic API キー",
+      "keyPlaceholder": "sk-ant-…",
+      "save": "キーを保存",
+      "forget": "キーを削除",
+      "saved": "キーをこのブラウザに保存しました",
+      "forgotten": "キーを削除しました",
+      "privacy": "プライバシー：キーはこのブラウザの localStorage（twamr.anthropicKey）にのみ保存され、ブラウザから api.anthropic.com に直接送信されます。質問と関連するダッシュボードの事実も送信されます。共用のコンピューターでは使用せず、患者を特定できる情報は入力しないでください。",
+      "invalid": "Anthropic API キーの形式ではないようです（「sk-ant-」で始まります）。",
+      "show": "表示",
+      "hide": "隠す",
+      "getKey": "Anthropic Console でキーを取得",
+      "active": "Claude モードが有効です",
+      "inactive": "オフラインモードです（キー未保存）",
+      "close": "完了"
+    },
+    "err": {
+      "auth": "Claude が API キーを拒否しました（401）。設定でキーを確認または変更してください。",
+      "permission": "この API キーでは {model} を利用できません（403）。",
+      "rateLimit": "現在このキーはレート制限中です（429）。しばらくしてから再試行してください。",
+      "overloaded": "Claude が一時的に混雑しています。しばらくしてから再試行してください。",
+      "network": "Anthropic API に接続できませんでした（ネットワークの問題、またはブラウザ／CORS によるブロック）。",
+      "badRequest": "リクエストが拒否されました（{detail}）。",
+      "refusal": "Claude はこの質問への回答を控えました。",
+      "generic": "Claude がエラーを返しました（{detail}）。",
+      "fallbackNote": "代わりにオフラインの回答を表示します：",
+      "truncated": "（回答は途中で切れています）"
+    }
   },
   "notFound": {
     "title": "ページが見つかりません",
@@ -276,6 +1088,418 @@
       "eyebrow": "アシスタント",
       "title": "AMR について質問する",
       "subtitle": "ブラウザ上で動作するアシスタントが、台湾の薬剤耐性サーベイランスに関する質問に答え、関連するグラフへ案内します。"
+    }
+  },
+  "data": {
+    "nav": {
+      "label": "このページのセクション",
+      "downloads": "ダウンロード",
+      "api": "APIエクスプローラー",
+      "embed": "埋め込みビルダー",
+      "cite": "引用とライセンス"
+    },
+    "dl": {
+      "title": "データセットのダウンロード",
+      "lead": "各データセットはJSON、CSV、JSONスキーマで入手できます。まず由来のタグをご確認ください。「年報から転記」は台湾CDCの報告書に基づく値、「暫定」はモデルによる推計で公式データではありません。",
+      "records": "レコード数",
+      "years": "データ年",
+      "size": "ファイルサイズ",
+      "json": "JSONをダウンロード",
+      "csv": "CSVをダウンロード",
+      "schema": "スキーマ",
+      "copyUrl": "API URLをコピー",
+      "kind": {
+        "real": "年報から転記",
+        "realHint": "台湾CDC『薬剤耐性監視年報』から転記した値で、レコードごとに精度を表示します。",
+        "provisional": "暫定推計",
+        "provisionalHint": "公表済みの傾向に基づくモデル推計で、公式データではありません。",
+        "content": "編集コンテンツ",
+        "contentHint": "本サイトで編集した参照コンテンツ（サーベイランスデータではありません）。"
+      },
+      "everything": {
+        "title": "すべてをまとめて入手",
+        "body": "リポジトリ全体（ソースコード、全データ、転記用CSV）をGitHubから1つのzipファイルとして入手できます。",
+        "zip": "zipをダウンロード（mainブランチ）",
+        "repo": "GitHubリポジトリを開く"
+      },
+      "pdfs": {
+        "title": "出典の報告書PDF",
+        "body": "台湾CDC年報の3つのPDFを原本のまま、リポジトリのraw/フォルダに保管しています。検証用にSHA-256を併記します。",
+        "edition": "{year}年版（PDF）"
+      }
+    },
+    "ds": {
+      "meta": {
+        "name": "サイトのメタデータ",
+        "desc": "最新のデータ年、利用可能な年、暫定データセットの一覧、取り込んだPDFのSHA-256。"
+      },
+      "resistance": {
+        "name": "薬剤耐性（菌種×抗菌薬）",
+        "desc": "年・菌種・抗菌薬・病院区分・発症場所・検体別の耐性率。多剤耐性菌（MDRO）の推移とレコードごとの精度を含みます。"
+      },
+      "isolates": {
+        "name": "分離株数",
+        "desc": "菌種別の分離株数と順位（表2-x）、病院区分・市中／院内発症別のMDRO株数。"
+      },
+      "antibiotic_use": {
+        "name": "抗菌薬使用量",
+        "desc": "入院患者の抗菌薬使用密度（1,000患者日あたりDDD）。薬剤クラス・病院区分・WHO AWaRe別。暫定推計。"
+      },
+      "hai": {
+        "name": "医療関連感染",
+        "desc": "感染密度、CLABSI／CAUTI／VAP、デバイス使用比を病院区分・ICU種別に集計。暫定推計。"
+      },
+      "hai_pathogens": {
+        "name": "HAIの主要病原体",
+        "desc": "感染部位（血流・尿路・肺炎）別の上位10病原体。暫定推計。"
+      },
+      "glass": {
+        "name": "国際比較（WHO GLASS）",
+        "desc": "41か国と台湾の血流感染における10の耐性指標。台湾の値は実際の年報データから算出。外部の値は近似の暫定値です。"
+      },
+      "links": {
+        "name": "リソースディレクトリ",
+        "desc": "国際・台湾のAMR／AMU／HAIダッシュボード、データポータル、ガイドライン60件（3言語）。"
+      },
+      "glossary": {
+        "name": "用語集",
+        "desc": "AMR用語70件。3言語の定義と関連用語付き。"
+      },
+      "kb": {
+        "name": "チャットボット知識ベース",
+        "desc": "AMRアシスタントが使うQ&Aエントリ（3言語）。"
+      }
+    },
+    "api": {
+      "title": "静的データAPI",
+      "lead": "キーもサインインも不要の、読み取り専用の静的ファイルAPI（v1）です。左側からエンドポイントを選び、パラメータを指定して実行し、curl・JavaScript・Python・Rのコード例をコピーできます。",
+      "version": "バージョン",
+      "endpoints": "エンドポイント",
+      "filter": "エンドポイントを絞り込み…",
+      "noSummary": "このエンドポイントの説明はありません。",
+      "tryIt": "実行",
+      "idle": "「実行」を押すとレスポンスを取得します。",
+      "first50": "配列は先頭50件のみ表示します。",
+      "moreItems": "…ほか{n}件は表示していません",
+      "snippets": "コード例",
+      "count": "全{n}エンドポイント。詳細はopenapi.yamlをご覧ください。",
+      "groups": {
+        "index": "カタログ",
+        "schema": "スキーマ",
+        "spec": "仕様",
+        "meta": "サイトのメタデータ",
+        "resistance": "薬剤耐性",
+        "isolates": "分離株数",
+        "antibiotic_use": "抗菌薬使用量（暫定）",
+        "hai": "医療関連感染（暫定）",
+        "hai_pathogens": "HAI病原体（暫定）",
+        "glass": "国際比較（暫定）",
+        "links": "リソースディレクトリ",
+        "glossary": "用語集",
+        "kb": "知識ベース"
+      },
+      "param": {
+        "pathogen": "菌種コード",
+        "phenotype": "表現型（MDRO）コード",
+        "year": "年",
+        "indicator": "GLASS指標",
+        "country": "国（ISO3）",
+        "name": "データセット名"
+      },
+      "facts": {
+        "cors": {
+          "t": "CORS対応",
+          "d": "GitHub PagesはAccess-Control-Allow-Origin: *を返すため、どのWebページからでもfetch()で直接取得できます。"
+        },
+        "caching": {
+          "t": "キャッシュ",
+          "d": "ファイルは内容が変わったときだけ更新され、GitHub Pagesは約10分間キャッシュします。新しいビルドかどうかはgeneratedAtで判断できます。"
+        },
+        "versioning": {
+          "t": "バージョン管理（v1）",
+          "d": "v1のパスは安定しています。フィールドの追加はありますが、既存フィールドの名称変更や削除は行いません。"
+        },
+        "licence": {
+          "t": "ライセンスと引用",
+          "d": "各エンベロープのsources[]に記載された原典（台湾CDC年報）を引用し、転記者としてTW-AMR Watchを明記してください。詳細は下の「引用とライセンス」をご覧ください。"
+        }
+      }
+    },
+    "embed": {
+      "title": "埋め込みビルダー",
+      "lead": "グラフとパラメータを選ぶと、右側にライブプレビューが表示されます。1行の<script>または<iframe>をコピーして、病院のWebサイト、院内ポータル、スライドに貼り付けてください。",
+      "formLabel": "埋め込みグラフの設定",
+      "chart": "グラフ",
+      "showsOn": "対応ページ：{page}",
+      "yearFrom": "開始年",
+      "yearTo": "終了年",
+      "lang": "言語",
+      "theme": "テーマ",
+      "themeAuto": "自動",
+      "compact": "コンパクト表示（余白を小さく）",
+      "height": "初期の高さ",
+      "preview": "ライブプレビュー",
+      "previewTitle": "埋め込みグラフのプレビュー",
+      "autoHeight": "自動の高さ {px}px",
+      "scriptTitle": "1行の<script>埋め込みコード",
+      "scriptBody": "ローダーが自身を高さ自動調整のiframeに置き換えます。推奨の方法です。",
+      "iframeTitle": "<iframe>埋め込みコード",
+      "iframeBody": "スクリプトの実行が許可されていない場合に使います。高さは自分で指定するか、下のpostMessageリスナーで自動調整してください。",
+      "heightTitle": "高さの自動調整（postMessage）",
+      "heightBody": "埋め込みページは内容の高さが変わるたびに、親ページへ { type: 'twamr:resize', id, height } を送信します。embed.jsは自動で処理しますが、素のiframeを使う場合は下のリスナーを追加してください。",
+      "useTitle": "病院での活用例",
+      "use": {
+        "intranet": {
+          "t": "院内ポータル",
+          "d": "感染対策ページに全国のCRAB／CRKP／MRSA推移を掲載し、自院のデータと比較します。"
+        },
+        "committee": {
+          "t": "感染対策委員会のスライド",
+          "d": "levelやyearsを固定して埋め込めば、会議前に最新の年報へ自動で更新されます。"
+        },
+        "stewardship": {
+          "t": "抗菌薬適正使用支援（AMS）教育",
+          "d": "研修ページに菌種×抗菌薬ヒートマップを掲載し、経験的治療の選択に役立てます。"
+        },
+        "public": {
+          "t": "公開Webサイト",
+          "d": "病院の公式サイトや啓発ページに主要指標を掲載できます。出典表示と「暫定」表示は残してください。"
+        }
+      },
+      "provNote": "埋め込みカードもサイトと同じ挙動です。暫定データには「暫定」タグ、グラフ読み取り値には精度バッジが付きます。非表示にしないでください。",
+      "charts": {
+        "resistance-trend": "耐性率の推移（菌種×抗菌薬）",
+        "resistance-heatmap": "耐性率ヒートマップ（菌種×抗菌薬）",
+        "kpi-strip": "主要指標ストリップ（MRSA／CRKP／CRAB／VRE）"
+      }
+    },
+    "cite": {
+      "title": "引用とライセンス",
+      "lead": "本サイトのグラフやデータを使う際は、ダッシュボードと台湾CDCの原典報告書の両方を引用してください。",
+      "dashboard": "ダッシュボードの引用",
+      "dashboardBody": "推奨形式（APAスタイル）：",
+      "dashboardText": "TW-AMR Watch contributors（{year}）. TW-AMR Watch：台湾薬剤耐性サーベイランス・ダッシュボード［データ可視化］. {url}（アクセス日：{date}）",
+      "cdc": "台湾CDC報告書の引用",
+      "cdcBody": "数値が以下のいずれかの版に由来する場合は、その版を引用してください：",
+      "cdcText": "{publisher}（{year}）. {title} {year} ［年次報告書］.",
+      "cdcPublisher": "台湾衛生福利部疾病管制署（台湾CDC）",
+      "licence": "データのライセンス表示",
+      "tbc": "確認中",
+      "licenceData": "原典の報告書の著作権は台湾CDC（衛生福利部疾病管制署）に帰属します。本サイトで転記した値にも原典の利用条件が適用されます。再利用の際は出典を明記してください。",
+      "licenceCode": "ダッシュボードのコードはMITライセンスです（READMEに記載）。リポジトリにはまだLICENSEファイルがなく、正式なライセンス文は確認中です。",
+      "licenceProv": "暫定データセット（抗菌薬使用量、HAI、国際比較）はモデル推計です。公式データとして引用しないでください。",
+      "licenceNotOfficial": "TW-AMR Watchは独立したプロジェクトであり、台湾CDCやWHOの公式刊行物ではなく、医療上の助言でもありません。"
+    }
+  },
+  "resources": {
+    "opensNew": "新しいタブで開きます",
+    "tags": "タグ",
+    "cat": {
+      "amr": "薬剤耐性",
+      "amu": "抗菌薬使用",
+      "hai": "医療関連感染",
+      "one-health": "ワンヘルス",
+      "data-portal": "データポータル",
+      "guideline": "ガイドライン・政策"
+    },
+    "region": {
+      "taiwan": "台湾",
+      "global": "グローバル",
+      "western-pacific": "西太平洋",
+      "europe": "欧州",
+      "americas": "米州",
+      "south-east-asia": "東南アジア",
+      "africa": "アフリカ"
+    },
+    "col": {
+      "name": "名称",
+      "org": "組織",
+      "category": "カテゴリ",
+      "region": "地域",
+      "domain": "ドメイン"
+    },
+    "disclaimer": "外部リンクは自動検証していません。内容やURLが変更されている可能性があります。",
+    "report": "リンク切れを報告",
+    "featured": "注目のリソース",
+    "taiwan": "台湾",
+    "taiwanLead": "台湾CDCのサーベイランスポータル、オープンデータ、国家行動計画。",
+    "all": "全ディレクトリ",
+    "search": "リソースを検索",
+    "searchPlaceholder": "名称・説明・タグで検索…",
+    "view": "表示形式",
+    "viewCards": "カード",
+    "viewTable": "早見表",
+    "category": "カテゴリ",
+    "regionLabel": "地域",
+    "showing": "{total}件中{n}件を表示",
+    "noMatch": "該当するリソースがありません",
+    "noMatchBody": "キーワードを短くするか、カテゴリと地域の絞り込みを解除してください。",
+    "tableCaption": "AMRリソース早見表"
+  },
+  "about": {
+    "nav": {
+      "label": "方法論の目次"
+    },
+    "toc": {
+      "purpose": "目的と対象",
+      "sources": "データソース",
+      "produced": "数値の作成方法",
+      "definitions": "定義",
+      "provisional": "暫定データセット",
+      "glossary": "用語集",
+      "changelog": "変更履歴",
+      "credits": "謝辞と連絡先",
+      "accessibility": "アクセシビリティ",
+      "privacy": "プライバシー"
+    },
+    "purpose": {
+      "lead": "TW-AMR Watchは、台湾CDCが公表する年次の薬剤耐性サーベイランス報告書を、操作・ダウンロード・埋め込みができるダッシュボードにまとめ、PDFをめくらなくても推移を確認できるようにします。",
+      "body": "あわせて、WHO GLASSとの国際比較、抗菌薬使用量と医療関連感染のページ、静的データAPI、3言語のAMRアシスタントを提供します。すべての値に出典と精度を表示し、正しく読み取り・引用できるようにしています。",
+      "audienceTitle": "主な利用者",
+      "audience": {
+        "ic": {
+          "t": "感染管理担当者",
+          "d": "全国・病院区分別のベンチマークで自院のデータを評価します。"
+        },
+        "micro": {
+          "t": "臨床微生物検査担当者",
+          "d": "菌種×抗菌薬のアンチバイオグラムと推移を参照できます。"
+        },
+        "id": {
+          "t": "感染症医・薬剤師",
+          "d": "経験的治療と抗菌薬適正使用支援の根拠になります。"
+        },
+        "epi": {
+          "t": "病院疫学者",
+          "d": "JSON／CSVとAPIで詳細な解析ができます。"
+        }
+      },
+      "notice": "本サイトは独立したプロジェクトであり、台湾CDCやWHOの公式刊行物ではなく、医療上の助言でもありません。数値を引用する前に原典の報告書を確認してください。"
+    },
+    "sources": {
+      "lead": "薬剤耐性と分離株数のデータは、台湾CDC『薬剤耐性監視年報』の3つの版（THASサーベイランスシステムのARモジュール）から転記したもので、データ年は2017〜2024年です。下のSHA-256で、お手元のPDFが同一ファイルかを確認できます。",
+      "hospitals": "報告病院数",
+      "hospitalsNote": "{from}年から{to}年まで（年報の記載による）。2022年版では2022年が210施設です。",
+      "dataYears": "データ年",
+      "dataYearsNote": "{n}つの年報はそれぞれ約6年分を扱い、重複する年は新しい版を採用します。",
+      "isolates": "年間の分離株総数",
+      "isolatesNote": "{from}年と{to}年の全検体合計（表2-x）。",
+      "edition": "{year}年版",
+      "ingested": "取り込み済み",
+      "coverage": "データ年",
+      "size": "ファイルサイズ",
+      "verify": "検証方法：PDFをダウンロードし、sha256sum（またはshasum -a 256）を実行して上記のハッシュ値と比較します。"
+    },
+    "produced": {
+      "lead": "年報は文字レイヤーの表と画像のグラフが混在するPDFです。そのため3つの転記方法を使い分け、各値に方法（precisionフィールド）を記録し、画面に対応するバッジを表示します。",
+      "values": "{n}件",
+      "table": {
+        "badge": "表から転記",
+        "t": "文字レイヤーの表",
+        "d": "アンチバイオグラム（図3-1-x）と分離株数表（表2-x）はPDFの文字レイヤーから直接取得し、印刷された合計と照合しています。灰色（n<20）のセルは含めていません。",
+        "err": "誤差：なし（印刷値のとおり）"
+      },
+      "text": {
+        "badge": "本文から引用",
+        "t": "本文の記述",
+        "d": "本文や図の説明に明記された値（例：全国のCRABは2019年の55.1%から2024年の58.4%へ上昇）を、印刷どおりに記録します。",
+        "err": "誤差：なし（印刷どおり小数第1位）"
+      },
+      "chart": {
+        "badge": "グラフから読取",
+        "t": "グラフの読み取り",
+        "d": "棒グラフと折れ線グラフ（図3-2-x、図4-x-y）には数値ラベルがないため、転記者が印刷されたグラフを目視で読み取り、0.5単位に丸めています。",
+        "err": "誤差：約±1〜2ポイント"
+      },
+      "dedupTitle": "重複解消ルール",
+      "dedupAria": "優先順位：表、本文、グラフ推定の順。その後、最新版",
+      "dedup1": "表",
+      "dedup2": "本文",
+      "dedup3": "グラフ",
+      "dedupThen": "同精度なら最新版",
+      "dedupBody": "同じデータ点が複数の版に現れる場合は、より正確な値（表＞本文＞グラフ推定）を採用し、同じ精度なら新しい版を採用します。分離株数表は順位が混在しないよう、最新版から表ごと採用します。年報は過去の値を改訂するため、1本の推移線に異なる版の点が混ざることがあります。",
+      "mapping": "菌名と抗菌薬名は年報の付録に基づき共通コードに対応づけています。MDROグラフの(I+R)は非感性株数、(S)は感性株数で、合計には加算しません。詳細なルールはdocs/DATA.mdにあります。"
+    },
+    "defs": {
+      "nonsus": {
+        "t": "耐性率＝非感性（I＋R）",
+        "d": "アンチバイオグラムの「耐性率」は100−%S、つまり中間（I）を含む非感性の割合です。MDROの推移は報告書に印刷された%Rを使います。"
+      },
+      "onset": {
+        "t": "市中発症（CO）と院内発症（HO）",
+        "d": "THASに報告された感染の発症場所で区分します。院内発症の耐性率はほぼ常に市中発症より高いため、比較時は発症場所を固定してください。"
+      },
+      "levels": {
+        "t": "病院区分",
+        "d": "医学センター（醫學中心）、地域病院（區域醫院）、地区病院（地區醫院）の3区分（衛福部の病院評価による）。「全体」は報告した全病院の合計です。病院区分ごとに患者構成が異なるため、全国平均だけで判断しないでください。"
+      },
+      "suppress": {
+        "t": "n<20は非表示",
+        "d": "検査株数が20未満、またはCLSIがその菌種への使用を推奨しない抗菌薬の結果は、年報では灰色や＊で非表示です。本サイトは補完しないため、欠損は「非表示」を意味します。"
+      },
+      "first": {
+        "t": "初回分離株ルール",
+        "d": "各年報の方法説明のとおり、同一病院・同一患者・同一年・同一菌種・同一抗菌薬につき最初の検体採取日の結果のみを使い、同日に複数ある場合はNS＞R＞I＞SDD＞Sの順で最も悪い結果を採用します。"
+      },
+      "precision": {
+        "t": "精度バッジ",
+        "d": "「グラフから読取」の値には約±1〜2ポイントの誤差があり、2ポイント未満の差の判断には使えません。カードには最も精度の低い値のバッジが表示されます。"
+      }
+    },
+    "prov": {
+      "lead": "『抗菌薬使用量監視年報』と『医療関連感染監視年報』はまだ入手できていないため、以下のデータセットは公表済みの傾向に基づく暫定推計であり、公式データではありません。",
+      "why": "これらのセクションには「暫定」タグと注意書きが表示されます。国際比較では他国の値は近似値で、台湾の値は実際の耐性データから算出しています。公式報告書を取り込むとタグは自動的に消えます。",
+      "howTitle": "AMU／HAI年報PDFの追加方法",
+      "s1": "PDFをリポジトリのraw/フォルダに置きます。ファイル名には西暦年と「使用量」または「感染」を含めます（例：臺灣抗生素使用量監視年報(2024年).pdf）。",
+      "s2": "GitHubにプッシュすると、ingestワークフローがpublic/dataとpublic/api/v1を再生成します（ローカルではscripts/ingest/run_all.shを実行）。",
+      "s3": "取り込みプログラムmap_amu.py／map_hai.pyは骨組みの状態で、実際の表のレイアウトに合わせて調整が必要です。完了するとデータセットのprovisionalフラグがfalseになります。",
+      "readme": "README：年報の追加方法"
+    },
+    "glossary": {
+      "title": "用語集",
+      "lead": "略語のアルファベット順。3言語の名称と現在の言語の定義を検索でき、関連用語をクリックするとその項目へ移動します。",
+      "search": "略語・名称・定義で検索…",
+      "count": "{total}件中{n}件",
+      "letters": "頭文字で絞り込み",
+      "related": "関連用語"
+    },
+    "changelog": {
+      "first": "初回リリース",
+      "v01": {
+        "c1": "9つのページを公開：概要、薬剤耐性、抗菌薬使用量、HAI、国際比較、データ＆API、リソース、方法論、AMRアシスタント。",
+        "c2": "2022・2023・2024年版の薬剤耐性年報（データ年2017〜2024）を転記し、全レコードに精度ラベルを付与。",
+        "c3": "静的データAPI v1（JSON／CSV／スキーマ／OpenAPI）と埋め込みグラフ（embed.js）。",
+        "c4": "国際・台湾のAMRリソース60件のディレクトリと、70語の用語集。",
+        "c5": "抗菌薬使用量・HAI・国際比較は暫定推計で、その旨を明示。",
+        "c6": "繁体字中国語・英語・日本語のUIと、ライトおよび「黒緑」ダークテーマ。"
+      }
+    },
+    "credits": {
+      "body": "TW-AMR Watchは、オープンデータとオープンソースツールで作られた独立プロジェクトです。",
+      "data": "データ：衛生福利部疾病管制署（台湾CDC）『薬剤耐性監視年報』2022〜2024、THASサーベイランスシステム、報告に参加する病院と検査室。",
+      "who": "国際比較はWHO GLASSと各国のサーベイランス報告書を参照し、用語と分類はWHO AWaRe、CLSI、EUCASTに従っています。",
+      "oss": "オープンソースツール：React、Vite、Apache ECharts、Framer Motion、html-to-image、world-atlas、topojson-client。",
+      "contactTitle": "連絡先",
+      "contactBody": "データの誤り、転記の問題、リンク切れ、機能の提案はGitHubのIssueでお知らせください。公式統計に関するご質問は台湾CDCへお問い合わせください。",
+      "issues": "Issueを作成",
+      "citeLink": "引用方法 →"
+    },
+    "access": {
+      "lead": "WCAG 2.2 AAの趣旨に沿うことを目標に、継続的に改善しています。",
+      "kbd": "すべてのコントロールをキーボードで操作でき、フォーカスの枠は明確に表示され、「本文へスキップ」リンクもあります。",
+      "sr": "すべてのグラフにテキストの説明（aria-label）と切り替え可能なデータ表があり、スクリーンリーダーでも同じ数値を読めます。",
+      "contrast": "文字のコントラスト比は4.5:1以上で、色だけで情報を伝えることはありません（ラベルと数値を併記）。",
+      "motion": "システムの「視差効果を減らす」設定を尊重し、アニメーションは自動で抑えられます。",
+      "lang": "UIは繁体字中国語・英語・日本語に対応し、ページの言語属性も選択に合わせて切り替わります。",
+      "limits": "既知の制限：インタラクティブな地図や一部のグラフのホバー詳細は、データ表の表示でのみ確認できます。障壁に気づかれた場合はご連絡ください。"
+    },
+    "privacy": {
+      "lead": "本サイトは静的サイトで、バックエンドサーバーもアカウントもなく、利用者を追跡しません。",
+      "none": "アクセス解析、広告、サードパーティCookieは使用しません。",
+      "local": "言語やテーマなどのUI設定のみをブラウザ内に保存し、外部へは送信しません。",
+      "key": "AMRアシスタント用のClaude APIキー（任意）はブラウザ内にのみ保存され、Anthropic APIに直接送信されるだけで、本サイトを経由しません。",
+      "external": "外部リンクやSNSの共有ボタンは第三者のサイトへ移動し、そのサイトのプライバシーポリシーが適用されます。",
+      "host": "サイトはGitHub Pagesでホストされており、GitHubのポリシーに従って通常のサーバーアクセスログが記録される場合があります。"
     }
   }
 }
