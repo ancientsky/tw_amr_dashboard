@@ -88,7 +88,7 @@ function subjectFor(x: ExecCtx, intent: DataIntent, rows: ResistanceRecord[], st
   };
 }
 
-function lineChart(_x: ExecCtx, title: string, lines: { name: string; rows: ResistanceRecord[] }[], note?: string): MiniChartSpec {
+function lineChart(title: string, lines: { name: string; rows: ResistanceRecord[] }[], note?: string): MiniChartSpec {
   const years = [...new Set(lines.flatMap((l) => l.rows.map((r) => r.year)))].sort((a, b) => a - b);
   return {
     kind: 'line',
@@ -218,9 +218,7 @@ export function execResistance(x: ExecCtx, intent: DataIntent): EngineAnswer | n
         shownRows.push(...yearRows.map((v) => v.r));
       }
       if (intent.mode === 'byLevel' && (series.length > 1 || intent.yearRange)) {
-        chart = lineChart(
-          x,
-          tc(x.locale, 'ct.byLevel', { name: subj.chip || subj.name, extra: extraParen(x, stratum.setting, stratum.specimen) }),
+        chart = lineChart(tc(x.locale, 'ct.byLevel', { name: subj.chip || subj.name, extra: extraParen(x, stratum.setting, stratum.specimen) }),
           [
             ...(national.length ? [{ name: tc(x.locale, 'lvn.all'), rows: national }] : []),
             ...perLevel.map((v) => ({ name: tc(x.locale, `lvn.${v.lv}`), rows: v.rows })),
@@ -258,7 +256,7 @@ export function execResistance(x: ExecCtx, intent: DataIntent): EngineAnswer | n
       });
       shownRows.push(...[c, h].filter((v): v is ResistanceRecord => !!v));
       facts.push(seriesFact(subj, { ...stratum, setting: 'co' }, co), seriesFact(subj, { ...stratum, setting: 'ho' }, ho));
-      chart = lineChart(x, tc(x.locale, 'ct.bySetting', { name: subj.chip || subj.name, where: where(x, stratum.level, 'all', stratum.specimen, 'noun') }), [
+      chart = lineChart(tc(x.locale, 'ct.bySetting', { name: subj.chip || subj.name, where: where(x, stratum.level, 'all', stratum.specimen, 'noun') }), [
         { name: tc(x.locale, 'stShort.ho'), rows: ho },
         { name: tc(x.locale, 'stShort.co'), rows: co },
       ]);
@@ -287,7 +285,7 @@ export function execResistance(x: ExecCtx, intent: DataIntent): EngineAnswer | n
         });
         shownRows.push(ra, rb);
       }
-      chart = lineChart(x, tc(x.locale, 'ct.trend', { name: subj.chip || subj.name, where: wNoun }), [{ name: subj.chip || subj.name, rows: series }]);
+      chart = lineChart(tc(x.locale, 'ct.trend', { name: subj.chip || subj.name, where: wNoun }), [{ name: subj.chip || subj.name, rows: series }]);
       break;
     }
     case 'trend': {
@@ -315,7 +313,7 @@ export function execResistance(x: ExecCtx, intent: DataIntent): EngineAnswer | n
       if (rng.length === 1) text = tc(x.locale, 'ans.value', { year: last.year, where: w, name: subj.name, value: pct(x, last.resistant_pct) });
       shownRows.push(...rng);
       const lines = [{ name: subj.chip || subj.name, rows: rng }];
-      chart = lineChart(x, tc(x.locale, 'ct.trend', { name: subj.chip || subj.name, where: wNoun }), lines);
+      chart = lineChart(tc(x.locale, 'ct.trend', { name: subj.chip || subj.name, where: wNoun }), lines);
       break;
     }
     default: {
@@ -339,9 +337,7 @@ export function execResistance(x: ExecCtx, intent: DataIntent): EngineAnswer | n
         const nat = seriesFor(rows, { ...stratum, level: 'all' });
         if (nat.length) lines.push({ name: tc(x.locale, 'lvn.all'), rows: nat });
       }
-      chart = lineChart(
-        x,
-        stratum.level === 'all' ? tc(x.locale, 'ct.trend', { name: subj.chip || subj.name, where: wNoun }) : tc(x.locale, 'ct.byLevel', { name: subj.chip || subj.name, extra: extraParen(x, stratum.setting, stratum.specimen) }),
+      chart = lineChart(stratum.level === 'all' ? tc(x.locale, 'ct.trend', { name: subj.chip || subj.name, where: wNoun }) : tc(x.locale, 'ct.byLevel', { name: subj.chip || subj.name, extra: extraParen(x, stratum.setting, stratum.specimen) }),
         lines,
       );
       if (lines.length === 1) chart.series[0].name = subj.chip || subj.name;

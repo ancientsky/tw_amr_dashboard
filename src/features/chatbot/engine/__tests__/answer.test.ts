@@ -108,6 +108,28 @@ describe('suggested questions', () => {
   }
 });
 
+describe('KB routing for concept / site suggestions', () => {
+  const EXPECT: Record<string, string> = {
+    whatCrab: 'crab',
+    carbapenemase: 'carbapenemases',
+    aware: 'aware',
+    contact: 'contact-precautions',
+    download: 'download-data',
+    api: 'api',
+    embed: 'embed',
+    provisional: 'provisional',
+  };
+  for (const locale of ['zh-TW', 'en', 'ja'] as const) {
+    it(`routes to the right entry (${locale})`, () => {
+      for (const [k, group] of Object.entries(EXPECT)) {
+        let top: string | undefined;
+        answerQuestion(translate(locale, `chat.q.${k}`), { locale, data: DATA }, (d) => (top = d.hits[0]?.group));
+        expect([k, top]).toEqual([k, group]);
+      }
+    });
+  }
+});
+
 describe('text', () => {
   it('stems and bigrams', () => {
     expect(stem('resistance')).toBe(stem('resistant'));

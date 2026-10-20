@@ -63,7 +63,9 @@ export function buildKbIndex(records: readonly KbRecord[]): KbIndex {
       rec.tags.flatMap((t) => [t.toLowerCase(), ...tokenize(t.replace(/-/g, ' '))]),
       W_TAG,
     );
-    add(tokenize(rec.a), W_A);
+    // greeting/help answers quote example questions ("How do I download the data?") —
+    // index only their paraphrases so they don't steal those questions.
+    if (!rec.tags.includes('greeting') && !rec.tags.includes('help')) add(tokenize(rec.a), W_A);
     let len = 0;
     for (const v of tf.values()) len += v;
     total += len;

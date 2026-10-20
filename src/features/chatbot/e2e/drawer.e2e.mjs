@@ -115,6 +115,17 @@ async function main() {
     await ctx.close();
   }
 
+  // shared deep link #/chat?q=… re-asks the question
+  console.log('\n[#/chat?q= deep link]');
+  const dctx = await browser.newContext({ viewport: { width: 1366, height: 860 }, locale: 'ja', reducedMotion: 'reduce' });
+  const dp = await dctx.newPage();
+  dp.on('pageerror', (e) => errors.push(`deeplink: ${e.message}`));
+  await dp.goto(`${origin}${BASE}#/chat?lang=ja&q=${encodeURIComponent('CRKP 2024')}`, { waitUntil: 'networkidle' });
+  await dp.locator('main figure').first().waitFor({ timeout: 15000 });
+  check(/15\.6%/.test(await dp.locator('main').innerText()), '#/chat?q= answers on load (CRKP 2024 → 15.6%)');
+  check(!(await dp.evaluate(() => location.hash)).includes('q='), 'q param is removed from the URL after asking');
+  await dctx.close();
+
   // Claude mode with a mocked Messages API (streaming success, then a 401 → offline fallback)
   console.log('\n[claude mode, mocked API]');
   const cctx = await browser.newContext({ viewport: { width: 1366, height: 860 }, locale: 'en', reducedMotion: 'reduce' });

@@ -37,11 +37,17 @@ export function absoluteLink(href: string | undefined): string {
   return `${siteBase()}${href && href.startsWith('#/') ? href : '#/chat'}`;
 }
 
-function ShareMenu({ msg, onClose }: { msg: ChatMessage; onClose: () => void }) {
+/** Deep link that re-asks the question on #/chat (recipients get the same answer + chart in their language). */
+export function questionLink(question: string | undefined, fallbackHref?: string): string {
+  if (!question) return absoluteLink(fallbackHref);
+  return `${siteBase()}#/chat?q=${encodeURIComponent(question.slice(0, 200))}`;
+}
+
+function ShareMenu({ msg, question, onClose }: { msg: ChatMessage; question?: string; onClose: () => void }) {
   const t = useT();
   const toast = useToast();
   const ref = useRef<HTMLDivElement>(null);
-  const url = absoluteLink(msg.links?.[0]?.href);
+  const url = questionLink(question, msg.links?.[0]?.href);
   const plain = toPlain(msg.text).replace(/\s+/g, ' ');
   const text = t('chat.ui.shareText', { text: plain.length > 180 ? `${plain.slice(0, 177)}…` : plain });
   const target = { url, text, hashtags: ['AMR', 'TWAMRWatch'] };
@@ -100,13 +106,15 @@ function ShareMenu({ msg, onClose }: { msg: ChatMessage; onClose: () => void }) 
 
 export interface MessageViewProps {
   msg: ChatMessage;
+  /** the user question this answer replies to (for share deep links) */
+  question?: string;
   last: boolean;
   busy: boolean;
   onChip: (q: string) => void;
   onLink?: (e: MouseEvent<HTMLAnchorElement>, href: string) => void;
 }
 
-export function MessageView({ msg, last, busy, onChip, onLink }: MessageViewProps) {
+export function MessageView({ msg, question, last, busy, onChip, onLink }: MessageViewProps) {
   const t = useT();
   const toast = useToast();
   const [sharing, setSharing] = useState(false);
@@ -176,7 +184,7 @@ export function MessageView({ msg, last, busy, onChip, onLink }: MessageViewProp
                   >
                     <Icon name="share" size={15} />
                   </button>
-                  {sharing && <ShareMenu msg={msg} onClose={() => setSharing(false)} />}
+                  {sharing && <ShareMenu msg={msg} question={question} onClose={() => setSharing(false)} />}
                 </span>
               </span>
             </div>

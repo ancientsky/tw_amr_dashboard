@@ -135,7 +135,15 @@ export function ChatPanel({ variant = 'drawer', request, onNavigate, toolbarExtr
         ) : (
           <ol className={s.list}>
             {messages.map((m, i) => (
-              <MessageView key={m.id} msg={m} last={i === messages.length - 1} busy={busy} onChip={onChip} onLink={onLink} />
+              <MessageView
+                key={m.id}
+                msg={m}
+                question={m.role === 'assistant' && messages[i - 1]?.role === 'user' ? messages[i - 1].text : undefined}
+                last={i === messages.length - 1}
+                busy={busy}
+                onChip={onChip}
+                onLink={onLink}
+              />
             ))}
           </ol>
         )}

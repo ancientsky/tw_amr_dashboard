@@ -1347,7 +1347,8 @@
         "資料下載在哪",
         "原始資料可以取得嗎",
         "下載圖表資料",
-        "資料授權"
+        "資料授權",
+        "如何下載資料"
       ],
       "a": "到「資料與 API」頁可下載各資料集的 JSON 與 CSV；每張圖卡的工具列也可直接下載該圖資料（CSV）或圖片（PNG）。抗藥性與菌株數資料轉錄自疾管署 2022–2024 年版抗藥性年報，每筆附精確度標示（表格／內文／圖表判讀）；抗生素使用量、醫療照護相關感染與國際比較仍為暫定估計。再利用時請標註來源年報與資料狀態。",
       "chart": {
@@ -1416,7 +1417,8 @@
         "JSON API 網址",
         "OpenAPI 規格在哪",
         "API 要金鑰嗎",
-        "程式抓資料"
+        "程式抓資料",
+        "有沒有 API"
       ],
       "a": "本站提供靜態 JSON API（路徑為 api/v1/），無須金鑰，可用一般 HTTP GET 取得各資料集與 CSV，並附 openapi.yaml 規格。端點清單與範例程式碼請見「資料與 API」頁；由於是靜態檔案，更新頻率隨網站建置而定，且不支援伺服器端查詢參數。",
       "chart": {
@@ -1484,7 +1486,8 @@
         "醫院網站可以放這個圖嗎",
         "embed.js 怎麼用",
         "iframe 嵌入",
-        "分享圖表到自己網站"
+        "分享圖表到自己網站",
+        "如何嵌入圖表到醫院網站"
       ],
       "a": "在「資料與 API」頁的嵌入產生器選擇圖表、菌種、藥物、語言與主題，即可取得 embed.js 的 script 標籤或 iframe 程式碼貼到院內網站。嵌入圖表會沿用本站資料，並保留精確度標示（例如由圖表判讀的數值）以及抗生素使用量、HAI、國際比較等暫定資料的標示；請保留來源標註，並避免改動圖表標題造成誤導。",
       "chart": {
@@ -2193,7 +2196,8 @@
         "這些數字是官方的嗎",
         "資料有什麼限制",
         "可以用在正式報告嗎",
-        "暫定估計值"
+        "暫定估計值",
+        "哪些資料是暫定的"
       ],
       "a": "抗藥性與菌株數資料已由使用者提供的三份疾管署《臺灣抗生素抗藥性監視年報》（2022、2023、2024 年版，資料年 2017–2024）匯入，不是暫定資料；每個數值標示精確度：表格（精確）、內文明列，或由圖表判讀（約 ±1–2 個百分點）。目前仍為暫定估計的只有抗生素使用量、醫療照護相關感染（HAI）與國際（GLASS）比較，這些頁面會以橫幅標示，不代表官方數據；放入對應年報 PDF 後即可取代。",
       "chart": {
@@ -2217,7 +2221,8 @@
         "are these numbers official",
         "what are the data limitations",
         "can I use this in an official report",
-        "provisional estimates"
+        "provisional estimates",
+        "which data are provisional"
       ],
       "a": "The resistance and isolate data have been ingested from the three Taiwan CDC Antimicrobial Resistance Surveillance Annual Reports supplied (2022, 2023 and 2024 editions; data years 2017–2024), so they are not provisional; every value carries a precision flag: table (exact), stated in the text, or read from a chart (≈ ±1–2 points). Only antibiotic use, healthcare-associated infections (HAI) and the international (GLASS) comparison remain provisional estimates; those pages show a banner and are not official statistics until the corresponding reports are added.",
       "chart": {
@@ -2241,7 +2246,9 @@
         "この数字は公式？",
         "データの限界は？",
         "公式報告に使える？",
-        "暫定推計値"
+        "暫定推計値",
+        "暫定データとはどういう意味？",
+        "どのデータが暫定ですか"
       ],
       "a": "耐性と分離株数のデータは、提供された台湾CDC『台湾抗菌薬耐性監視年報』3冊（2022・2023・2024年版、データ年 2017〜2024）から取り込み済みで、暫定ではありません。各値には精度が付いています：表（正確）、本文記載、グラフからの読み取り（約±1〜2ポイント）。現在も暫定推計なのは抗菌薬使用量、医療関連感染（HAI）、国際（GLASS）比較のみで、これらのページにはバナーが表示され、該当する年報が追加されるまでは公式統計ではありません。",
       "chart": {
