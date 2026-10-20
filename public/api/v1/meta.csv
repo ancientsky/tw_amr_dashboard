@@ -1,6 +1,6 @@
 dataset,file,records,provisional,yearMin,yearMax
 resistance,data/resistance.json,6463,false,2017,2024
-isolates,data/isolates.json,2114,false,2017,2024
+isolates,data/isolates.json,2165,false,2017,2024
 antibiotic_use,data/antibiotic_use.json,736,true,2017,2024
 hai,data/hai.json,2080,true,2017,2024
 hai_pathogens,data/hai_pathogens.json,960,true,2017,2024

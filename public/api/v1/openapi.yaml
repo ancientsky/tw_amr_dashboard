@@ -187,7 +187,7 @@ paths:
           description: "No such slice"
   "/isolates.json":
     get:
-      summary: "isolates dataset envelope (2114 records)."
+      summary: "isolates dataset envelope (2165 records)."
       operationId: "get_isolates_json"
       tags:
         - "isolates"

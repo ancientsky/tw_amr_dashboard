@@ -1,7 +1,7 @@
 {
   "dataset": "meta",
   "version": "1.0.0",
-  "generatedAt": "2026-10-20T06:46:33Z",
+  "generatedAt": "2026-10-20T06:49:22Z",
   "provisional": false,
   "latestYear": 2024,
   "yearsAvailable": [
@@ -49,8 +49,8 @@
       }
     ]
   },
-  "lastBuild": "2026-10-20T06:46:33Z",
-  "contentDigest": "b17bac998f124aaa7723449967ea3b70d79d3185d81b7d38a2940f576559db47",
+  "lastBuild": "2026-10-20T06:49:22Z",
+  "contentDigest": "0cf9db997fca34102c1ffddbbf7239663d5b922f4a4b033970ab00e20d6b3b1b",
   "sources": [
     {
       "id": "tw-cdc-amr-2022",
@@ -275,7 +275,7 @@
   },
   "records": [
     {"dataset":"resistance","file":"data/resistance.json","records":6463,"provisional":false,"yearMin":2017,"yearMax":2024},
-    {"dataset":"isolates","file":"data/isolates.json","records":2114,"provisional":false,"yearMin":2017,"yearMax":2024},
+    {"dataset":"isolates","file":"data/isolates.json","records":2165,"provisional":false,"yearMin":2017,"yearMax":2024},
     {"dataset":"antibiotic_use","file":"data/antibiotic_use.json","records":736,"provisional":true,"yearMin":2017,"yearMax":2024},
     {"dataset":"hai","file":"data/hai.json","records":2080,"provisional":true,"yearMin":2017,"yearMax":2024},
     {"dataset":"hai_pathogens","file":"data/hai_pathogens.json","records":960,"provisional":true,"yearMin":2017,"yearMax":2024},

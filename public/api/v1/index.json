@@ -2,7 +2,7 @@
   "api": "TW-AMR Watch static data API",
   "version": "v1",
   "baseUrl": "https://ancientsky.github.io/tw_amr_dashboard/api/v1",
-  "generatedAt": "2026-10-20T06:46:33Z",
+  "generatedAt": "2026-10-20T06:49:22Z",
   "provisionalDatasets": [
     "antibiotic_use",
     "hai",
@@ -104,7 +104,7 @@
     {
       "id": "isolates",
       "dataset": "isolates",
-      "records": 2114,
+      "records": 2165,
       "provisional": false,
       "version": "1.0.0",
       "json": "https://ancientsky.github.io/tw_amr_dashboard/api/v1/isolates.json",
@@ -304,11 +304,11 @@
     },
     {
       "path": "/isolates.json",
-      "records": 2114
+      "records": 2165
     },
     {
       "path": "/isolates.csv",
-      "records": 2114
+      "records": 2165
     },
     {
       "path": "/antibiotic-use.json",
