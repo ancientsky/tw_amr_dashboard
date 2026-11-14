@@ -12,6 +12,18 @@ import { facebookIntent, lineIntent, openShareWindow, threadsIntent, xIntent } f
 import { ShareCardRenderer } from './ShareCardRenderer';
 import s from './share.module.css';
 
+/** One menu row. Module-level so React keeps the same component type across renders. */
+function Item({ icon, label, onClick }: { icon: IconName; label: string; onClick: () => void }) {
+  return (
+    <button type="button" role="menuitem" className={s.item} onClick={onClick}>
+      <span className={s.itemIcon}>
+        <Icon name={icon} size={16} />
+      </span>
+      {label}
+    </button>
+  );
+}
+
 export interface ShareMenuProps {
   /** localized chart title */
   title: string;
@@ -105,15 +117,6 @@ export function ShareMenu({ title, subtitle, url, getImage, getChartImage, embed
     { key: 'fb', icon: 'facebook', label: t('share.facebook'), href: facebookIntent(target) },
     { key: 'line', icon: 'line', label: t('share.line'), href: lineIntent(target) },
   ];
-
-  const Item = ({ icon, label, onClick }: { icon: IconName; label: string; onClick: () => void }) => (
-    <button type="button" role="menuitem" className={s.item} onClick={onClick}>
-      <span className={s.itemIcon}>
-        <Icon name={icon} size={16} />
-      </span>
-      {label}
-    </button>
-  );
 
   return (
     <div className={s.wrap} ref={ref}>

@@ -85,7 +85,7 @@ export function answerQuestion(question: string, opts: AnswerOptions, debug?: (d
   const passages = hits.slice(0, 3).map((h) => ({ id: h.rec.id, text: h.rec.a }));
 
   if (intent) {
-    let ans: EngineAnswer | null = null;
+    let ans: EngineAnswer | null;
     try {
       ans =
         intent.kind === 'glass'

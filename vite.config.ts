@@ -1,6 +1,6 @@
-/// <reference types="vitest" />
 import { resolve } from 'node:path';
-import { defineConfig, type Plugin } from 'vite';
+import type { Plugin } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
 const BASE = '/tw_amr_dashboard/';
@@ -35,10 +35,14 @@ export default defineConfig({
         embed: resolve(__dirname, 'embed.html'),
       },
       output: {
-        manualChunks: {
-          echarts: ['echarts'],
-          react: ['react', 'react-dom', 'react-router-dom'],
-          motion: ['framer-motion'],
+        // Vite 8 (Rolldown) only accepts the function form.
+        manualChunks(id: string) {
+          if (!id.includes('node_modules')) return null;
+          if (/[\\/]node_modules[\\/](echarts|zrender)[\\/]/.test(id)) return 'echarts';
+          if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|scheduler)[\\/]/.test(id))
+            return 'react';
+          if (/[\\/]node_modules[\\/](framer-motion|motion-dom|motion-utils)[\\/]/.test(id)) return 'motion';
+          return null;
         },
       },
     },

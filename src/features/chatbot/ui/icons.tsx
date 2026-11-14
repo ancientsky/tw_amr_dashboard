@@ -5,7 +5,7 @@ type Name = 'gear' | 'trash' | 'sparkle' | 'bot' | 'stop' | 'expand' | 'key' | '
 
 const stroke = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.75, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
 
-const PATHS: Record<Name, JSX.Element> = {
+const PATHS: Record<Name, React.JSX.Element> = {
   gear: (
     <g {...stroke}>
       <circle cx="12" cy="12" r="3" />

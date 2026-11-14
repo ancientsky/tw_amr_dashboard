@@ -45,7 +45,7 @@ const stroke = {
   strokeLinejoin: 'round' as const,
 };
 
-const PATHS: Record<IconName, JSX.Element> = {
+const PATHS: Record<IconName, React.JSX.Element> = {
   download: (
     <g {...stroke}>
       <path d="M12 4v11" />

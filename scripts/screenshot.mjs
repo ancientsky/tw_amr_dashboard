@@ -11,7 +11,7 @@ import { createReadStream, existsSync, mkdirSync, statSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { chromium } from 'playwright';
+import { launchChromium } from './launch-browser.mjs';
 
 const ROOT = resolve(fileURLToPath(import.meta.url), '../..');
 const DIST = join(ROOT, 'dist');
@@ -69,7 +69,7 @@ async function main() {
   mkdirSync(OUT, { recursive: true });
   const server = await serve();
   const origin = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch();
+  const browser = await launchChromium();
   const problems = [];
   let shots = 0;
   const viewport = flag('mobile') ? { width: 390, height: 844 } : { width: 1440, height: 900 };

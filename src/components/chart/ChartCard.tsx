@@ -42,7 +42,7 @@ export interface ChartCardProps {
   status?: DatasetStatus;
   onRetry?: () => void;
   /** ref to the EChart inside — enables crisp ECharts PNG export (else DOM snapshot) */
-  chartRef?: RefObject<EChartHandle>;
+  chartRef?: RefObject<EChartHandle | null>;
   /** rows for the table view + CSV (wide or long) */
   tableRows?: readonly Row[];
   tableColumns?: readonly Column[];
@@ -273,7 +273,7 @@ let handledTarget: string | null = null;
  * Deep links / embed "Open in" links carry `chart=<id>`: once the matching card's data is
  * ready, scroll it into view (below the sticky nav via scroll-margin) and flash a ring.
  */
-function useDeepLinkFocus(card: RefObject<HTMLElement>, id: string | undefined, aliases: readonly string[] | undefined, ready: boolean): boolean {
+function useDeepLinkFocus(card: RefObject<HTMLElement | null>, id: string | undefined, aliases: readonly string[] | undefined, ready: boolean): boolean {
   const [flash, setFlash] = useState(false);
   const aliasKey = aliases?.join(',') ?? '';
   useEffect(() => {

@@ -29,7 +29,7 @@ function Providers({ children }: { children: ReactNode }) {
 
 export function App() {
   return (
-    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <HashRouter>
       {/* honour prefers-reduced-motion for every framer-motion transform (§5) */}
       <MotionConfig reducedMotion="user">
         <Providers>

@@ -23,7 +23,7 @@ export function Tabs<V extends string>({ items, value, onChange, label, classNam
   const base = idBase ?? auto;
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
   const onKey = (e: KeyboardEvent, i: number) => {
-    let n = i;
+    let n: number;
     if (e.key === 'ArrowRight') n = (i + 1) % items.length;
     else if (e.key === 'ArrowLeft') n = (i - 1 + items.length) % items.length;
     else if (e.key === 'Home') n = 0;
@@ -40,7 +40,9 @@ export function Tabs<V extends string>({ items, value, onChange, label, classNam
         return (
           <button
             key={it.value}
-            ref={(el) => (refs.current[i] = el)}
+            ref={(el) => {
+              refs.current[i] = el;
+            }}
             role="tab"
             type="button"
             id={`${base}-tab-${it.value}`}

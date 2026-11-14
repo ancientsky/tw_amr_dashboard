@@ -5,7 +5,7 @@ import { useT } from '../../i18n';
 import { IconButton } from './IconButton';
 import s from './Feedback.module.css';
 
-function useDialogBehaviour(open: boolean, onClose: () => void, panel: React.RefObject<HTMLElement>) {
+function useDialogBehaviour(open: boolean, onClose: () => void, panel: React.RefObject<HTMLElement | null>) {
   useEffect(() => {
     if (!open) return;
     const prevFocus = document.activeElement as HTMLElement | null;

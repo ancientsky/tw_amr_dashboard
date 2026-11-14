@@ -22,7 +22,7 @@ export function SegmentedControl<V extends string>({ options, value, onChange, l
   const id = useId();
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
   const onKey = (e: KeyboardEvent, i: number) => {
-    let n = i;
+    let n: number;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (i + 1) % options.length;
     else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + options.length) % options.length;
     else return;
@@ -37,7 +37,9 @@ export function SegmentedControl<V extends string>({ options, value, onChange, l
         return (
           <button
             key={o.value}
-            ref={(el) => (refs.current[i] = el)}
+            ref={(el) => {
+              refs.current[i] = el;
+            }}
             type="button"
             role="radio"
             aria-checked={sel}

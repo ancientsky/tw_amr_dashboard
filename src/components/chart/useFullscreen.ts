@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState, type RefObject } from 'react';
  * Fullscreen API on an element with a graceful fallback flag: when the API is missing
  * (e.g. iOS Safari) `fallback` becomes true and the caller renders a full-viewport modal.
  */
-export function useFullscreen(ref: RefObject<HTMLElement>) {
+export function useFullscreen(ref: RefObject<HTMLElement | null>) {
   const [native, setNative] = useState(false);
   const [fallback, setFallback] = useState(false);
 

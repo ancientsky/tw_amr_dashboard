@@ -39,7 +39,7 @@ export const EChart = forwardRef<EChartHandle, EChartProps>(function EChart(
   ref,
 ) {
   const el = useRef<HTMLDivElement>(null);
-  const inst = useRef<ECharts>();
+  const inst = useRef<ECharts | undefined>(undefined);
   const { name } = useChartTheme();
   const reduced = usePrefersReducedMotion();
   const optRef = useRef(option);
@@ -56,8 +56,12 @@ export const EChart = forwardRef<EChartHandle, EChartProps>(function EChart(
     inst.current = chart;
     chart.setOption(withMotion(optRef.current, reduced), { notMerge: true });
     readyRef.current?.(chart);
-    const ro = new ResizeObserver(() => {
-      if (!chart.isDisposed()) chart.resize();
+    const ro = new ResizeObserver((entries) => {
+      if (chart.isDisposed()) return;
+      // ECharts 6 geo/map views cannot invert a degenerate transform: never resize to a 0-sized box.
+      const box = entries[entries.length - 1]?.contentRect;
+      if (box && (box.width < 1 || box.height < 1)) return;
+      chart.resize();
     });
     ro.observe(el.current);
     return () => {

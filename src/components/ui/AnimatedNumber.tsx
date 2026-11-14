@@ -23,7 +23,7 @@ export function AnimatedNumber({ value, format = (v) => String(Math.round(v)), d
   const target = value ?? 0;
   const [display, setDisplay] = useState<number>(reduced ? target : from);
   const prev = useRef<number>(reduced ? target : from);
-  const raf = useRef<number>();
+  const raf = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     if (value === null || value === undefined) return;

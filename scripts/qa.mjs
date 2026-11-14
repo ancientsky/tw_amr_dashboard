@@ -15,7 +15,7 @@ import { createReadStream, existsSync, statSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { chromium } from 'playwright';
+import { launchChromium } from './launch-browser.mjs';
 
 const ROOT = resolve(fileURLToPath(import.meta.url), '../..');
 const DIST = join(ROOT, 'dist');
@@ -38,7 +38,7 @@ function serve() {
     if (url.pathname === '/__host.html') {
       res.writeHead(200, { 'content-type': TYPES['.html'] });
       const frames = EMBEDS.map((id, i) => `<iframe src="${BASE}embed.html#/?chart=${id}&lang=ja&theme=dark&id=e${i}" style="width:640px;height:200px;border:0"></iframe>`).join('');
-      return res.end(`<!doctype html><meta charset="utf-8"><script>window.__m=[];addEventListener('message',e=>__m.push(e.data))</script>${frames}`);
+      return res.end(`<!doctype html><meta charset="utf-8"><link rel="icon" href="data:,"><script>window.__m=[];addEventListener('message',e=>__m.push(e.data))</script>${frames}`);
     }
     if (!url.pathname.startsWith(BASE)) {
       res.writeHead(404);
@@ -81,7 +81,7 @@ async function main() {
   }
   const server = await serve();
   const origin = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch();
+  const browser = await launchChromium();
   const issues = [];
   const titles = {};
 

@@ -210,7 +210,7 @@ function PhenotypeTrendCard({
   }, [ct.tokens, lines, years, startIdx, endIdx, norm, t, narrow]);
 
   // Year brush → URL (debounced)
-  const timer = useRef<number>();
+  const timer = useRef<number | undefined>(undefined);
   const rangeRef = useRef<YearRange>(range);
   rangeRef.current = range;
   const onEvents = useMemo(
