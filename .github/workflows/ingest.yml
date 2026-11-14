@@ -44,7 +44,7 @@ jobs:
 
       - name: Commit regenerated data
         id: commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "data: regenerate public/data and public/api from raw/ + transcriptions"
           file_pattern: "public/data/** public/api/** data/curated/*.csv data/curated/_provenance.json data/source/transcribed/*/isolate_counts.csv"
