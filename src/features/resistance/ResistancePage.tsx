@@ -16,6 +16,7 @@ import { PathogenView } from './PathogenView';
 import { TrendView } from './TrendView';
 import { useExplorerState, VIEWS, type View } from './useExplorerState';
 import s from './resistance.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 /** Route "/resistance" — URL-driven resistance explorer (trend · antibiogram · pathogen · compare). */
 export default function ResistancePage() {
@@ -63,7 +64,7 @@ export default function ResistancePage() {
             <motion.div
               key={state.view}
               initial={reduced ? false : { opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0, transition: { duration: 0.32, ease: [0.22, 1, 0.36, 1] } }}
+              animate={{ opacity: 1, y: 0, transition: { duration: 0.32, ease: EASE_OUT } }}
               exit={reduced ? { opacity: 1 } : { opacity: 0, y: -6, transition: { duration: 0.14 } }}
             >
               {state.view === 'trend' && <TrendView state={state} update={update} link={link} />}

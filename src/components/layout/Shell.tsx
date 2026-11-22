@@ -11,6 +11,7 @@ import { SkeletonGrid } from './PlaceholderPage';
 import { ProvisionalBanner } from './ProvisionalBanner';
 import { TopNav } from './TopNav';
 import s from './layout.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 function PageFallback() {
   return (
@@ -40,7 +41,7 @@ export function Shell({ children }: { children?: ReactNode }) {
     ? { initial: false as const, animate: { opacity: 1 }, exit: { opacity: 1 } }
     : {
         initial: { opacity: 0, y: 12 },
-        animate: { opacity: 1, y: 0, transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] } },
+        animate: { opacity: 1, y: 0, transition: { duration: 0.38, ease: EASE_OUT } },
         exit: { opacity: 0, y: -6, transition: { duration: 0.16 } },
       };
 

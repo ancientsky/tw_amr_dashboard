@@ -9,6 +9,7 @@ import { useT } from '../../i18n';
 import { isolateTotals } from '../resistance/lib';
 import { PetriCanvas } from './PetriCanvas';
 import s from './overview.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 /**
  * Hospitals reporting to the THAS AR module. Not carried in any dataset envelope, so it is
@@ -27,7 +28,7 @@ export function Hero() {
   const total = latestYear ? totals.find((r) => r.year === latestYear) ?? totals.at(-1) : totals.at(-1);
   const firstYear = meta?.yearsAvailable?.[0];
 
-  const fade = (d: number) => (reduced ? {} : { initial: { opacity: 0, y: 14 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay: d, ease: [0.22, 1, 0.36, 1] } });
+  const fade = (d: number) => (reduced ? {} : { initial: { opacity: 0, y: 14 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay: d, ease: EASE_OUT } });
 
   return (
     <section className={s.hero} aria-labelledby="ov-title">

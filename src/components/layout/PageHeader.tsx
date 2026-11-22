@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 import s from './layout.module.css';
 import { HeadingLevelContext } from '../ui/headingLevel';
+import { EASE_OUT } from '../../lib/motion';
 
 export interface PageHeaderProps {
   eyebrow?: ReactNode;
@@ -17,7 +18,7 @@ export function PageHeader({ eyebrow, title, subtitle, aside, hero }: PageHeader
     <header className={[s.pageHeader, hero ? s.hero : ''].join(' ')}>
       <div className={s.pageTitles}>
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-        <motion.h1 className={s.pageTitle} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
+        <motion.h1 className={s.pageTitle} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: EASE_OUT }}>
           {title}
         </motion.h1>
         {subtitle && <p className={s.pageSubtitle}>{subtitle}</p>}

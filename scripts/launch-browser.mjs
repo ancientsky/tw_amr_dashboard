@@ -15,8 +15,11 @@ function fallbackExecutable() {
     .sort()
     .reverse();
   for (const d of dirs) {
-    const bin = join(root, d, 'chrome-linux', 'chrome');
-    if (existsSync(bin)) return bin;
+    // Newer Chromium builds use chrome-linux64/, older ones chrome-linux/.
+    for (const sub of ['chrome-linux64', 'chrome-linux']) {
+      const bin = join(root, d, sub, 'chrome');
+      if (existsSync(bin)) return bin;
+    }
   }
   return undefined;
 }

@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom';
 import { useT } from '../../i18n';
 import { IconButton } from './IconButton';
 import s from './Feedback.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 function useDialogBehaviour(open: boolean, onClose: () => void, panel: React.RefObject<HTMLElement | null>) {
   useEffect(() => {
@@ -81,7 +82,7 @@ export function Modal({ open, onClose, title, children, width, full, actions }: 
               initial={{ opacity: 0, y: 12, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 8, scale: 0.98 }}
-              transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.22, ease: EASE_OUT }}
             >
               <div className={s.modalHead}>
                 <h2 id={`${id}-t`} className={s.modalTitle}>

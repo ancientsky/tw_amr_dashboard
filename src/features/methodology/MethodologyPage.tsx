@@ -13,6 +13,7 @@ import { useT } from '../../i18n';
 import { copyText } from '../../lib/download';
 import { GlossaryBrowser } from './GlossaryBrowser';
 import s from './methodology.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 const SECTIONS = [
   'purpose',
@@ -166,7 +167,7 @@ export default function MethodologyPage() {
           className={s.content}
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.4, ease: EASE_OUT }}
         >
           {/* 1 purpose */}
           <Block id="purpose" n={1}>

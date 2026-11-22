@@ -13,7 +13,7 @@ share-to-social chart cards, and a curated directory of international AMR / AMU 
 Audience: infection-control professionals, clinical microbiologists, ID physicians, hospital epidemiologists.
 
 ## 2. Tech stack (fixed — do not substitute)
-- Vite 5 + React 18 + TypeScript (strict). Package manager: npm. Node 22.
+- Vite 8 + React 19 + TypeScript 6 (strict). Package manager: npm. Node 26 (`.nvmrc`).
 - Routing: `react-router-dom` **HashRouter** (GitHub Pages has no server rewrites). `vite.config.ts` → `base: '/tw_amr_dashboard/'`.
 - Charts: **Apache ECharts 5** via `echarts` (import * as echarts from 'echarts'; use `echarts/core` tree-shaking is optional). One shared wrapper: `src/components/chart/EChart.tsx` (handles theme, resize, loading, toolbar).
 - Maps: `world-atlas` (countries-110m) + `topojson-client`, registered with `echarts.registerMap('world', geojson)`.

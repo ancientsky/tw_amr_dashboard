@@ -7,6 +7,11 @@ updates:
     groups:
       dev-dependencies:
         dependency-type: development
+    ignore:
+      # typescript-eslint (8.73) only supports typescript <6.1; TypeScript 7 breaks `npm ci`.
+      # Remove once typescript-eslint's peerDependencies allow 7.x.
+      - dependency-name: typescript
+        versions: [">=6.1.0"]
     open-pull-requests-limit: 5
   - package-ecosystem: pip
     directory: /scripts

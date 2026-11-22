@@ -19,6 +19,7 @@ import type { LinkCategory, LinkRecord } from '../../data/types';
 import { useT } from '../../i18n';
 import { hueFor, monogram } from './monogram';
 import s from './resources.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 const FEATURED = [
   'who-glass-dashboard',
@@ -77,7 +78,7 @@ function LinkCard({
       ].join(' ')}
       initial={reduced ? false : { opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: reduced ? 0 : Math.min(index, 8) * 0.03, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.3, delay: reduced ? 0 : Math.min(index, 8) * 0.03, ease: EASE_OUT }}
     >
       <div className={s.cardTop}>
         <Monogram org={r.org} large={variant === 'featured'} />

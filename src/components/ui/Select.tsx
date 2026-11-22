@@ -3,6 +3,7 @@ import { useEffect, useId, useRef, useState, type KeyboardEvent, type ReactNode 
 import { Icon } from './icons';
 import { usePopover } from './usePopover';
 import s from './Controls.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 export interface SelectOption<V extends string = string> {
   value: V;
@@ -29,7 +30,7 @@ const pop = {
   initial: { opacity: 0, y: -4, scale: 0.98 },
   animate: { opacity: 1, y: 0, scale: 1 },
   exit: { opacity: 0, y: -4, scale: 0.98 },
-  transition: { duration: 0.14, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.14, ease: EASE_OUT },
 };
 
 /** Styled single-select listbox (button + ARIA listbox, keyboard: arrows/Home/End/Enter/Esc/type-ahead). */

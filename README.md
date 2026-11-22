@@ -70,7 +70,7 @@ WHO GLASS 進行國際比較。對象為感染管制人員、臨床微生物師�
    [docs/TRANSCRIPTION.md](docs/TRANSCRIPTION.md)。資料集的 `provisional` 旗標轉為 `false` 後，暫定提示即自動消失。
 
 ### 開發
-需求：Node 22、npm。
+需求：Node 26（見 `.nvmrc`）、npm。
 
 ```bash
 npm ci
@@ -150,6 +150,8 @@ Drop PDFs into `raw/` keeping the CE year in the file name (e.g. `raw/臺灣抗�
 [data/source/README.md](data/source/README.md), [docs/DATA.md](docs/DATA.md) and [docs/TRANSCRIPTION.md](docs/TRANSCRIPTION.md).
 
 ### Development
+Requires Node 26 (see `.nvmrc`) and npm.
+
 ```bash
 npm ci && npm run dev    # http://localhost:5173/tw_amr_dashboard/
 npm run build            # dist/ with index.html + embed.html

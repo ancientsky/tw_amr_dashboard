@@ -10,6 +10,7 @@ import { DownloadsSection } from './DownloadsSection';
 import { EmbedBuilder } from './EmbedBuilder';
 import { ApiFacts } from './ApiFacts';
 import s from './dataApi.module.css';
+import { EASE_OUT } from '../../lib/motion';
 
 const SECTIONS: { id: string; key: 'downloads' | 'api' | 'embed' | 'cite'; icon: IconName }[] = [
   { id: 'data-downloads', key: 'downloads', icon: 'download' },
@@ -73,7 +74,7 @@ export default function DataApiPage() {
       <motion.div
         initial={reduced ? false : { opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.4, ease: EASE_OUT }}
       >
         <Section id="data-downloads" title={t('data.dl.title')}>
           <p className={s.sectionLead}>{t('data.dl.lead')}</p>
